@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Glass UI Kit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<style>
+/* =====================================================================================
+   GLASS UI KIT — the look only: theme tokens, the backdrop scene, frosted-glass boxes,
+   the page shell (nav, hero, main column + side column), and a few type/control styles
+   for what goes inside a box. Put your own content in the boxes.
+   ===================================================================================== */
+
+/* ---------- THEME (Stripe-inspired, light). Edit tokens only. ---------- */
+:root{
+  color-scheme:light;
+  --page:#F6F9FC;                                   /* canvas */
+  --scrim:linear-gradient(180deg,rgba(246,249,252,.18),rgba(246,249,252,.30)); /* wash over the scene */
+  --strong:#0A2540;                                 /* headings, big numbers */
+  --ink:#30313D;                                    /* body text */
+  --mute:#697386;                                   /* secondary text */
+  --mute-faint:#8792A2;
+  --hero-ink:#0A2540;                               /* text sitting directly on the scene */
+  --accent:#635BFF;                                 /* the one action colour */
+  --on-accent:#FFFFFF;
+  --label:#425466;                                  /* small-caps labels */
+  --c1:#0570DE; --c2:#D6007A; --c3:#1EA672; --alert:#DF1B41;   /* series + status */
+  /* glass */
+  --glass:rgba(255,255,255,.80);                    /* default box tint */
+  --glass-accent:rgba(246,245,255,.86);             /* highlighted box */
+  --glass-quiet:rgba(255,255,255,.62);              /* recessive box */
+  --glass-low:rgba(10,37,64,.045);                  /* hover fills inside boxes */
+  --glass-hi:rgba(255,255,255,.92);                 /* ghost buttons, current tab */
+  --field:#FFFFFF;                                  /* inputs */
+  --chrome:rgba(255,255,255,.74);                   /* nav once scrolled */
+  --hair:rgba(10,37,64,.10);
+  --hair-faint:rgba(10,37,64,.06);
+  --edge-glow:rgba(99,91,255,.6);                   /* rim light that follows the mouse */
+  --shadow:0 2px 5px -1px rgba(50,50,93,.18),0 1px 3px -1px rgba(0,0,0,.12);
+  --shadow-lg:0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3);
+  --blur:20px;                                      /* live blur used on touch screens */
+  /* shape + type */
+  --r-box:12px; --r-ctl:8px; --r-btn:99px;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:32px;
+}
+
+/* ---------- base ---------- */
+*{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased}
+body{margin:0;min-height:100vh;background:var(--page);color:var(--ink);font:400 15px/1.6 var(--f-body);font-feature-settings:"ss01","cv11"}
+h1,h2,h3,p{margin:0}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- the scene: one backdrop the whole page is seen through ---------- */
+.bg-scene{position:fixed;inset:0;z-index:-1;background:var(--scrim),url("bg.jpg") center/cover}
+
+/* ---------- glass boxes ----------
+   Frosted without live blur: each box paints its own slice of a pre-blurred copy of the scene
+   (bg-blur.jpg), pinned to the viewport with background-attachment:fixed, under a white tint.
+   Rule: never `transform` a glass box (or its parent), or its slice stops lining up;
+   animate top/height/opacity instead. */
+.glass{
+  --tint:var(--glass);
+  position:relative;border-radius:var(--r-box);box-shadow:var(--shadow);
+  background:linear-gradient(var(--tint),var(--tint)) fixed,var(--scrim) fixed,url("bg-blur.jpg") center/cover no-repeat fixed,var(--page);
+}
+.glass.accent{--tint:var(--glass-accent)}
+.glass.quiet{--tint:var(--glass-quiet);box-shadow:none}
+.box{padding:18px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.box.tight{padding:14px 16px}
+.box.flush{padding:0;overflow:hidden}
+/* edge glow: a 1px rim, lit where the pointer is (JS sets --mx/--my and .glow) */
+.glass::before,.tab::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;z-index:2;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),var(--edge-glow) 0%,transparent 45%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;
+  opacity:0;transition:opacity .25s ease;
+}
+.glow::before{opacity:1}
+
+/* ---------- shell: fixed nav (clear at the top, frosts in on scroll) ---------- */
+.chrome{position:fixed;top:0;left:0;right:0;z-index:100;transition:box-shadow .3s ease}
+.chrome.scrolled{box-shadow:0 1px 0 var(--hair)}
+.chrome-bg{position:absolute;inset:0;opacity:0;transition:opacity .3s ease;pointer-events:none;
+  background:linear-gradient(var(--chrome),var(--chrome)) fixed,var(--scrim) fixed,url("bg-blur.jpg") center/cover no-repeat fixed,var(--page)}
+.chrome.scrolled .chrome-bg{opacity:1}
+.chrome-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding-top:calc(16px + env(safe-area-inset-top,0px));padding-bottom:16px;
+  padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.brand{font:700 1.5rem/1 var(--f-body);letter-spacing:-.03em;color:var(--hero-ink);white-space:nowrap}
+.brand span{color:var(--accent)}
+.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{position:relative;padding:8px 15px;font-size:13.5px;font-weight:500;color:var(--hero-ink);opacity:.78;text-decoration:none;border-radius:var(--r-ctl);white-space:nowrap;transition:opacity .15s,background .15s}
+.tab:hover{opacity:1;background:var(--glass-low)}
+.tab[aria-current="page"]{opacity:1;font-weight:600;background:var(--glass-hi)}
+
+/* ---------- shell: hero ---------- */
+.hero{max-width:1200px;margin:70px auto 0;padding-block:24px 6px;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.headline{max-width:22em;font-size:clamp(2.1rem,5.2vw,3.1rem);font-weight:300;line-height:1.1;letter-spacing:-.035em;color:var(--hero-ink);text-wrap:balance}
+.headline strong{font-weight:600}
+.deck{margin-top:10px;max-width:36em;font-size:1.06rem;line-height:1.45;color:var(--hero-ink);opacity:.82;text-wrap:pretty}
+
+/* ---------- shell: main column + sticky side column ---------- */
+.page{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 284px;gap:24px;align-items:start;padding-block:24px 80px;
+  padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.page.wide{grid-template-columns:minmax(0,1fr)}                 /* no side column */
+main{min-width:0;display:flex;flex-direction:column;gap:12px}
+.side{position:sticky;top:calc(92px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:10px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:18px}
+.sh-label{font-size:15px;font-weight:600;letter-spacing:.02em;color:var(--accent)}
+.sh-meta{font-size:12px;color:var(--mute)}
+
+/* ---------- what goes inside a box ---------- */
+.lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--label)}
+.title{font-size:15px;font-weight:600;line-height:1.35;color:var(--strong);text-wrap:balance}
+.text{font-size:13px;color:var(--mute)}
+.big{font-size:1.9rem;font-weight:600;line-height:1;letter-spacing:-.02em;color:var(--strong);font-variant-numeric:tabular-nums}
+.divide > * + *{border-top:1px solid var(--hair-faint);padding-top:8px}
+.pair{display:flex;justify-content:space-between;gap:16px;font-size:12.5px}
+.pair > :first-child{color:var(--mute)}
+.pair > :last-child{color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{font-size:13.5px;font-weight:600;padding:8px 18px;border:0;border-radius:var(--r-btn);background:var(--accent);color:var(--on-accent);cursor:pointer;transition:filter .15s}
+.btn:hover{filter:brightness(.94)}
+.btn.ghost{background:var(--glass-hi);color:var(--strong);box-shadow:inset 0 0 0 1px var(--hair)}
+.pill{display:inline-block;padding:1px 10px;border-radius:99px;font-size:11.5px;font-weight:500;white-space:nowrap;
+  background:color-mix(in srgb,var(--c,var(--accent)) 13%,transparent);color:color-mix(in srgb,var(--c,var(--accent)) 88%,var(--strong))}
+.field{height:38px;font-size:13.5px;color:var(--ink);background:var(--field);border:1px solid var(--hair);border-radius:var(--r-ctl);padding:0 11px;min-width:0;flex:1 1 180px}
+.field::placeholder{color:var(--mute-faint)}
+.field:focus{outline:none;border-color:color-mix(in srgb,var(--accent) 60%,transparent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.table{width:100%;border-collapse:collapse;font-size:12.5px}
+.table th{padding:10px 20px;text-align:left;font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute-faint);border-bottom:1px solid var(--hair-faint)}
+.table td{padding:9px 20px;border-bottom:1px solid var(--hair-faint)}
+.table tr:last-child td{border-bottom:0}
+.table .num{text-align:right;font-variant-numeric:tabular-nums}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  :root{--gutter:16px}
+  .chrome-inner{flex-wrap:wrap;gap:8px;padding-bottom:10px}
+  .tabs{width:100%}
+  .hero{margin-top:104px}
+  .page{grid-template-columns:minmax(0,1fr)}
+  .side{position:static}
+  .grid2{grid-template-columns:minmax(0,1fr)}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* touch screens don't pin fixed backgrounds, so the glass blurs live there */
+@media (hover:none) and (pointer:coarse){
+  .glass{background:linear-gradient(var(--tint),var(--tint));backdrop-filter:blur(var(--blur)) saturate(160%);-webkit-backdrop-filter:blur(var(--blur)) saturate(160%)}
+  .chrome-bg{background:var(--chrome);backdrop-filter:blur(var(--blur)) saturate(160%);-webkit-backdrop-filter:blur(var(--blur)) saturate(160%)}
+}
+@media (prefers-reduced-motion:reduce){ *,*::before{transition:none!important} }
+</style>
+</head>
+<body>
+
+<div class="bg-scene"></div>
+
+<header class="chrome" id="chrome">
+  <div class="chrome-bg" aria-hidden="true"></div>
+  <div class="chrome-inner">
+    <span class="brand">Brand<span>.</span></span>
+    <nav class="tabs" aria-label="Sections">
+      <a class="tab" href="#boxes" aria-current="page">Boxes</a>
+      <a class="tab" href="#numbers">Numbers</a>
+      <a class="tab" href="#inside">Inside a box</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1 class="headline">Page headline, <strong>emphasised ending.</strong></h1>
+  <p class="deck">A one-line deck under the headline. Everything below is a frosted-glass box over the scene.</p>
+</section>
+
+<div class="page">
+  <main>
+    <div class="sh" id="boxes"><h2 class="sh-label">Boxes</h2></div>
+    <div class="grid2">
+      <article class="glass box"><p class="lbl">Default</p><h3 class="title">Standard glass box</h3><p class="text">White tint over the blurred scene, soft shadow, rim light on hover.</p></article>
+      <article class="glass accent box"><p class="lbl">Accent</p><h3 class="title">Highlighted box</h3><p class="text">A faint accent tint for the one or two boxes that should be seen first.</p></article>
+      <article class="glass quiet box"><p class="lbl">Quiet</p><h3 class="title">Recessive box</h3><p class="text">Lighter tint, no shadow. For forms, notes and secondary panels.</p></article>
+      <article class="glass box"><p class="lbl">With actions</p><h3 class="title">Box with a footer</h3><div class="btns"><button class="btn">Primary</button><button class="btn ghost">Secondary</button></div></article>
+    </div>
+
+    <div class="sh" id="numbers"><h2 class="sh-label">Numbers</h2><span class="sh-meta">stat boxes in a 4-up grid</span></div>
+    <div class="grid4">
+      <div class="glass box tight"><p class="lbl">Metric</p><p class="big">2,481</p><p class="text">vs last month</p></div>
+      <div class="glass box tight"><p class="lbl">Money</p><p class="big" style="color:var(--c1)">$19.2K</p><p class="text">of $25K</p></div>
+      <div class="glass box tight"><p class="lbl">Positive</p><p class="big" style="color:var(--c3)">98.4%</p><p class="text">success rate</p></div>
+      <div class="glass box tight"><p class="lbl">Needs attention</p><p class="big" style="color:var(--alert)">3</p><p class="text">failed</p></div>
+    </div>
+
+    <div class="sh" id="inside"><h2 class="sh-label">Inside a box</h2><span class="sh-meta">pairs, table, form</span></div>
+    <div class="grid2">
+      <div class="glass box divide"><div class="pair"><span>Label</span><span>Value</span></div><div class="pair"><span>Label</span><span>Longer value, right-aligned</span></div><div class="pair"><span>Status</span><span><span class="pill" style="--c:var(--c3)">Active</span></span></div></div>
+      <form class="glass quiet box" autocomplete="off" onsubmit="event.preventDefault()"><p class="lbl">Form box</p><div class="btns"><input id="kit-field" class="field" placeholder="Field" aria-label="Field"><button class="btn">Save</button></div></form>
+    </div>
+    <div class="glass box flush" style="overflow-x:auto">
+      <table class="table"><thead><tr><th>Name</th><th>Status</th><th class="num">Amount</th></tr></thead>
+        <tbody><tr><td>Row</td><td><span class="pill" style="--c:var(--c3)">Succeeded</span></td><td class="num">$4,800.00</td></tr>
+          <tr><td>Row</td><td><span class="pill" style="--c:var(--c1)">Pending</span></td><td class="num">$1,250.00</td></tr>
+          <tr><td>Row</td><td><span class="pill" style="--c:var(--alert)">Failed</span></td><td class="num">$320.00</td></tr></tbody></table>
+    </div>
+  </main>
+
+  <aside class="side" aria-label="Side column">
+    <div class="glass box tight"><p class="lbl">Side box</p><p class="big">46</p><p class="text">Small, glanceable boxes stack here and stay in view while the main column scrolls.</p></div>
+    <div class="glass accent box tight"><p class="lbl">Highlight</p><p style="font-weight:300;font-size:1.05rem;line-height:1.45;color:var(--strong)">A short note or pull-quote.</p></div>
+    <div class="glass box tight divide"><p class="lbl">List</p><div class="pair"><span>One</span><span>3</span></div><div class="pair"><span>Two</span><span>2</span></div><div class="pair"><span>Three</span><span>1</span></div></div>
+  </aside>
+</div>
+
+<script>
+"use strict";
+/* nav frosts in once the page scrolls */
+const chrome = document.getElementById("chrome");
+let ticking = false;
+addEventListener("scroll", () => {
+  if (ticking) return; ticking = true;
+  requestAnimationFrame(() => { chrome.classList.toggle("scrolled", scrollY > 10); ticking = false; });
+}, { passive: true });
+
+/* current tab follows the hash */
+function markTab() {
+  const h = location.hash || "#boxes";
+  document.querySelectorAll(".tab").forEach((t) => (t.getAttribute("href") === h ? t.setAttribute("aria-current", "page") : t.removeAttribute("aria-current")));
+}
+addEventListener("hashchange", markTab); markTab();
+
+/* rim light follows the mouse on glass boxes and tabs */
+let glowEl = null;
+document.addEventListener("pointermove", (e) => {
+  if (e.pointerType !== "mouse") return;
+  const el = e.target.closest(".glass,.tab");
+  if (glowEl && glowEl !== el) glowEl.classList.remove("glow");
+  glowEl = el;
+  if (!el) return;
+  const r = el.getBoundingClientRect();
+  el.style.setProperty("--mx", ((e.clientX - r.left) / r.width * 100).toFixed(1) + "%");
+  el.style.setProperty("--my", ((e.clientY - r.top) / r.height * 100).toFixed(1) + "%");
+  el.classList.add("glow");
+}, { passive: true });
+</script>
+</body>
+</html>
