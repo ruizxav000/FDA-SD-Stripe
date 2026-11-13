@@ -1,0 +1,1375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Atlas Launch HQ</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap">
+<style>
+/* =====================================================================================
+   LIQUID GLASS HQ — starter template
+   Layout: fixed glass chrome over a full-bleed photo; a main column beside a 284px sticky
+   widget rail, collapsing to one column under 860px. The dashboard tab drops the rail.
+   Retheme by editing THEME only. Everything below it reads tokens, never raw colours.
+   ===================================================================================== */
+
+/* ---------- THEME (edit me) ----------
+   Stripe-inspired light theme: navy ink on a #F6F9FC canvas, blurple (#635BFF) as the one action
+   colour, a magenta/sky/violet/amber gradient mesh across the top, frosted-white glass with Stripe's
+   layered blue-grey shadows. Other themes: references/themes.md. */
+:root{
+  color-scheme:light;
+  /* scene */
+  --page:#F6F9FC;
+  --page-grad:linear-gradient(#F6F9FC,#F6F9FC);
+  --scrim:linear-gradient(180deg,rgba(246,249,252,.18) 0%,rgba(246,249,252,.30) 100%);
+  --chrome:rgba(255,255,255,.74);
+  --chrome-touch:rgba(255,255,255,.92);
+  --menu:#FFFFFF;               /* <option> background: an opaque version of the page */
+  --tooltip:rgba(10,37,64,.96); /* tooltips + toasts stay dark on a light page */
+  --tooltip-ink:#FFFFFF;
+  --tooltip-mute:#ADBDCC;
+  /* text */
+  --strong:#0A2540;             /* titles, big numbers (Stripe navy) */
+  --ink:#30313D;                /* body text */
+  --ink-soft:#425466;
+  --mute:#697386;               /* meta text */
+  --mute-faint:#8792A2;
+  --on-accent:#FFFFFF;          /* text on any filled accent */
+  --hero-ink:#0A2540;           /* text that sits directly on the mesh */
+  /* accents: one job each */
+  --accent:#635BFF;             /* CTA buttons, section headings, focus ring, "soon" (blurple) */
+  --label:#425466;              /* eyebrow / small-caps labels */
+  --c1:#0570DE;                 /* person/series 1 · links · dates */
+  --c2:#D6007A;                 /* person/series 2 */
+  --c3:#1EA672;                 /* shared/series 3 · success · progress start */
+  --alert:#DF1B41;              /* late, over budget, errors */
+  /* glass */
+  --glass:rgba(255,255,255,.80);
+  --glass-hi:rgba(255,255,255,.92);
+  --glass-low:rgba(10,37,64,.045);
+  --glass-quiet:rgba(255,255,255,.66);
+  --tint-accent:rgba(246,245,255,.86);
+  --tint-accent-hi:rgba(246,245,255,.95);
+  --tint-c1:rgba(240,247,255,.86);
+  --hair:rgba(10,37,64,.10);
+  --hair-faint:rgba(10,37,64,.06);
+  --field:#FFFFFF;
+  --field-focus:#FFFFFF;
+  --track:#E3E8EE;
+  --tab-on:rgba(255,255,255,.62);
+  --edge-glow:rgba(99,91,255,.6);
+  --shadow:0 2px 5px -1px rgba(50,50,93,.18),0 1px 3px -1px rgba(0,0,0,.12);
+  --shadow-lg:0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3);
+  --focus-ring:0 0 0 3px rgba(99,91,255,.22);
+  /* badges: tinted fill + coloured text on light; on a dark theme use 100% / 0% / var(--on-accent) */
+  --pill-fill:13%;
+  --pill-text:88%;
+  --pill-text-base:#0A2540;
+  /* shape */
+  --r-card:12px;
+  --r-ctl:8px;
+  --r-btn:99px;                 /* Stripe's CTAs are pills */
+  /* type */
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-brand:"Inter",system-ui,sans-serif;
+  --f-deck:"Inter",system-ui,sans-serif;
+  --f-mono:"Source Code Pro",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --w-body:400;
+  --w-display:300;              /* big headlines run light, the emphasised half heavier */
+  /* cursor: swap for an SVG data-URI pair to give the page a signature cursor (see references/interaction.md) */
+  --cursor:auto;
+  --cursor-hand:pointer;
+  --gutter:32px;
+  --chevron:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* ---------- base ---------- */
+*{box-sizing:border-box}
+html{cursor:var(--cursor);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-padding-top:120px}
+:where(a[href],button,select,summary,label[for],[role=button],input[type=checkbox],input[type=radio]){cursor:var(--cursor-hand)}
+:where(input:not([type=checkbox],[type=radio],[type=range],[type=button]),textarea,[contenteditable=true]){cursor:text}
+:where(button,select,input):disabled{cursor:var(--cursor)}
+[hidden]{display:none!important}
+body{margin:0;min-height:100vh;background:var(--page-grad),var(--page);color:var(--ink);font:var(--w-body) 15px/1.6 var(--f-body);font-feature-settings:"ss01","cv11";overscroll-behavior-y:none}
+h1,h2,h3,p{margin:0}
+button,input,select{font:inherit;color:inherit}
+a{color:var(--c1)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+option{background:var(--menu);color:var(--ink)}
+
+.bg-scene{position:fixed;inset:0;z-index:-1;background-image:var(--scrim),url("bg.jpg");background-size:cover;background-position:center}
+
+/* ---------- chrome ---------- */
+.chrome{position:fixed;top:0;left:0;right:0;z-index:100;transition:box-shadow .3s ease}
+.chrome.scrolled{box-shadow:0 1px 0 var(--hair)}
+/* Frosted glass without live blur: each surface shows its slice of a pre-blurred copy of the photo,
+   pinned to the screen (background-attachment:fixed). Live backdrop-filter leaves repaint patches in
+   Chrome. Fixed backgrounds stop pinning on transformed elements, so glass is NEVER transformed. */
+.chrome-bg{position:absolute;inset:0;opacity:0;transition:opacity .3s ease;pointer-events:none;background:linear-gradient(var(--chrome),var(--chrome)) fixed,var(--scrim) fixed,url("bg-blur.jpg") center/cover no-repeat fixed,var(--page)}
+.chrome.scrolled .chrome-bg{opacity:1}
+.chrome-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:calc(16px + env(safe-area-inset-top,0px));padding-bottom:16px;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.brand{font:700 1.5rem/1 var(--f-brand);color:var(--hero-ink);white-space:nowrap;letter-spacing:-.03em}
+.brand span{color:var(--accent)}
+.app-tabs{display:flex;gap:4px;align-items:center;overflow-x:auto;scrollbar-width:none}
+.app-tabs::-webkit-scrollbar{display:none}
+.app-tab{position:relative;padding:8px 15px;font-size:13.5px;font-weight:500;letter-spacing:.01em;color:var(--hero-ink);opacity:.78;background:none;border:0;border-radius:var(--r-ctl);white-space:nowrap;transition:color .15s,background .15s}
+.app-tab:hover{opacity:1;background:var(--glass-low)}
+.app-tab[aria-current="page"]{opacity:1;color:var(--strong);background:var(--tab-on);font-weight:600}
+
+/* ---------- hero ---------- */
+.hero{max-width:1200px;margin:70px auto 0;padding-top:24px;padding-bottom:6px;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.greeting{max-width:22em;font-size:clamp(2.1rem,5.2vw,3.1rem);font-weight:var(--w-display);line-height:1.1;letter-spacing:-.035em;color:var(--hero-ink);text-wrap:balance;transition:opacity .25s ease}
+.greeting.long{font-size:clamp(1.65rem,3.6vw,2.3rem);line-height:1.18;letter-spacing:-.02em}
+.greeting strong{font-weight:600}
+.hero-deck{margin-top:10px;max-width:36em;font:400 1.06rem/1.45 var(--f-deck);color:var(--hero-ink);opacity:.82;text-wrap:pretty;transition:opacity .25s ease}
+.hero-sub{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:12px;font-size:12.5px;letter-spacing:.01em;color:var(--hero-ink)}
+.hero-sub > span:not(.viewing){opacity:.75}
+.viewing{display:inline-flex;align-items:center;gap:6px}
+.viewing.nudge .chip{animation:nudge .5s ease 2}
+@keyframes nudge{50%{transform:translateY(-3px)}}
+
+/* ---------- page grid ---------- */
+.page{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 284px;gap:24px;align-items:start;padding-block:10px 80px;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.page.wide{grid-template-columns:minmax(0,1fr)}
+main{min-width:0}
+.side{position:sticky;top:calc(92px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:10px}
+.side > *{position:relative}
+
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:30px 0 14px}
+main > .sh:first-child,main > .notice + .sh{margin-top:10px}
+.sh-label{font-size:15px;font-weight:600;letter-spacing:.03em;color:var(--accent)}
+.sh-meta{font-size:12px;color:var(--mute)}
+
+/* ---------- liquid glass ---------- */
+.glass,.kpi{--tint:var(--glass);position:relative;border-radius:var(--r-card);box-shadow:var(--shadow);background:linear-gradient(var(--tint),var(--tint)) fixed,var(--scrim) fixed,url("bg-blur.jpg") center/cover no-repeat fixed,var(--page)}
+.glass.accent{--tint:var(--tint-accent)}
+.glass.accent:hover{--tint:var(--tint-accent-hi)}
+.glass.c1{--tint:var(--tint-c1)}
+.glass.quiet{--tint:var(--glass-quiet)}
+/* edge glow: a 1px ring masked out of a radial highlight that follows the pointer (--mx/--my set in JS) */
+.glass::before,.kpi::before,.app-tab::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),var(--edge-glow) 0%,transparent 45%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;
+  opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:2;
+}
+.kpi::before,.app-tab::before{background:radial-gradient(circle 500px at var(--mx,50%) var(--my,50%),var(--edge-glow) 0%,transparent 45%)}
+.glow::before{opacity:1}
+
+/* ---------- shared bits ---------- */
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid2 > :last-child:nth-child(odd){grid-column:1/-1}
+.stack{display:flex;flex-direction:column;gap:8px}
+.empty{padding:16px 20px;font-size:13px;color:var(--mute);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.notice{padding:12px 18px;margin-top:10px;font-size:13px;color:var(--ink-soft)}
+.pill{display:inline-block;padding:1px 10px;border-radius:99px;font-size:11.5px;font-weight:500;background:color-mix(in srgb,var(--c) var(--pill-fill),transparent);color:color-mix(in srgb,var(--c) var(--pill-text),var(--pill-text-base));white-space:nowrap}
+.pill.out{background:none;border:1px solid var(--mute-faint);color:var(--mute)}
+.select{position:relative;display:inline-flex;flex:none;min-width:0}
+.select > select{width:100%;appearance:none;-webkit-appearance:none}
+.select > select.field{padding-right:34px}
+.select::after{content:"";position:absolute;top:50%;right:13px;width:10px;height:6px;transform:translateY(-50%);pointer-events:none;background:var(--c,var(--mute));-webkit-mask:var(--chevron) center/contain no-repeat;mask:var(--chevron) center/contain no-repeat}
+.select.is-pill::after{right:11px;width:8px;height:5px}
+.select:has(> select:disabled)::after{display:none}
+.select.status{align-self:flex-start}
+.pill-select{height:26px;padding:0 27px 0 12px;font-size:12px;font-weight:500;line-height:24px;border-radius:99px;border:1px solid color-mix(in srgb,var(--c) 45%,transparent);color:var(--c);background:color-mix(in srgb,var(--c) 7%,transparent)}
+.pill-select:disabled{opacity:.85;padding-right:12px}
+.icon-btn{flex:none;width:30px;height:30px;display:grid;place-items:center;border:0;border-radius:var(--r-ctl);background:none;color:var(--mute-faint);transition:background .15s,color .15s}
+.icon-btn:hover{background:var(--glass-low);color:var(--ink)}
+.icon-btn svg{width:14px;height:14px}
+.btn{font-size:13.5px;font-weight:600;letter-spacing:.01em;padding:8px 18px;border:0;border-radius:var(--r-btn);background:var(--accent);color:var(--on-accent);white-space:nowrap;transition:filter .15s,box-shadow .15s}
+.btn:hover{filter:brightness(.94)}
+.btn.ghost{background:var(--glass-hi);color:var(--strong);box-shadow:inset 0 0 0 1px var(--hair)}
+.btn.small{font-size:12px;padding:5px 12px}
+.link-btn{font-size:11.5px;color:var(--c1);background:none;border:0;padding:0}
+.link-btn:hover{text-decoration:underline}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.chip{font-size:12.5px;color:var(--ink-soft);background:var(--glass-low);border:1px solid var(--hair);border-radius:99px;padding:4px 12px;transition:background .15s}
+.chip:hover{background:var(--glass)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--on-accent);border-color:transparent}
+.chip .n{font-family:var(--f-mono);font-size:11px;opacity:.7;margin-left:5px}
+.bar{height:6px;border-radius:9px;background:var(--track);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--c3),var(--accent));transition:width .6s ease}
+.bar.over i{background:var(--alert)}
+
+/* ---------- forms ---------- */
+.composer{display:flex;flex-wrap:wrap;gap:8px;padding:12px;margin-bottom:12px}
+.field{height:38px;font-size:13.5px;line-height:20px;color:var(--ink);background:var(--field);border:1px solid var(--hair);border-radius:var(--r-ctl);padding:0 11px;min-width:0}
+.composer .btn{height:38px;padding-block:0}
+.field::placeholder{color:var(--mute-faint)}
+.field:focus{outline:none;border-color:color-mix(in srgb,var(--accent) 60%,transparent);background:var(--field-focus);box-shadow:var(--focus-ring)}
+.field.grow{flex:1 1 200px}
+.field.num{width:120px;font-family:var(--f-mono);font-size:13px}
+.field.date{width:150px}
+.composer .actions{display:flex;gap:8px;margin-left:auto}
+
+/* ---------- spotlight cards ---------- */
+.spot{padding:18px 20px;display:flex;flex-direction:column;gap:5px}
+.spot-title{font-size:15px;font-weight:600;line-height:1.35;letter-spacing:-.01em;color:var(--strong);padding-right:96px;text-wrap:balance;overflow-wrap:anywhere}
+.spot-badge{position:absolute;top:16px;right:16px;font:500 11px/1.6 var(--f-mono);padding:1px 9px;border-radius:99px;background:color-mix(in srgb,var(--accent) 10%,transparent);color:var(--accent)}
+.spot-badge.late{background:color-mix(in srgb,var(--alert) 10%,transparent)}
+.spot-badge.late{color:var(--alert)}
+.spot-deck{font-size:12px;color:var(--c1);letter-spacing:.01em}
+.spot-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}
+
+/* ---------- task rows ---------- */
+.task{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:11px 12px 11px 14px}
+.task-body{flex:1 1 220px;min-width:0}
+.task-title{font-size:14px;font-weight:400;color:var(--ink);overflow-wrap:anywhere}
+.task.is-done .task-title{text-decoration:line-through;color:var(--mute-faint)}
+.task-meta{display:flex;flex-wrap:wrap;gap:2px 10px;font-size:12px;color:var(--mute)}
+.due-late{color:var(--alert)}
+.due-soon{color:var(--accent)}
+.task-tools{display:flex;align-items:center;gap:2px;margin-left:auto}
+.task-tools .select{margin-right:6px}
+.check{flex:none;width:26px;height:26px;padding:0;display:grid;place-items:center;border-radius:50%;border:1.5px solid var(--c);background:none;color:transparent;transition:background .15s,color .15s}
+.check:hover{color:var(--c);background:var(--glass-low)}
+.check.on{background:var(--c);color:var(--on-accent)}
+.check svg{display:block;width:14px;height:14px}
+
+/* ---------- quiet list ---------- */
+.quiet-list{padding:4px 20px}
+.quiet-scroll{max-height:440px;overflow-y:auto;scrollbar-width:none}
+.quiet-scroll::-webkit-scrollbar{display:none}
+.q-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--hair-faint)}
+.q-row:last-child{border-bottom:0}
+.q-name{font-size:13px;font-weight:500;color:var(--strong);overflow-wrap:anywhere}
+.q-meta{font-size:11px;color:var(--label);white-space:nowrap}
+.q-note{grid-column:1/-1;font-size:12.5px;color:var(--mute);overflow-wrap:anywhere}
+
+/* ---------- record cards ---------- */
+.card{padding:18px 20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.card-head > div{min-width:0}
+.card-name{font-size:14px;font-weight:600;color:var(--strong);overflow-wrap:anywhere}
+.card-deck{font-size:12px;color:var(--label);margin-top:1px}
+.card-tools{display:flex;flex:none}
+.contact{display:flex;align-items:center;gap:4px;font:400 12px var(--f-mono);color:var(--c1);min-width:0}
+.contact span{overflow-wrap:anywhere;user-select:text}
+.contact .icon-btn{width:26px;height:26px}
+.figs{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--mute)}
+.figs b{font:400 13px var(--f-mono);color:var(--ink)}
+.figs label{display:flex;align-items:center;gap:8px}
+.card-note{font-size:12.5px;color:var(--mute);overflow-wrap:anywhere}
+
+/* ---------- summary + event panels ---------- */
+.summary{padding:20px 22px;display:flex;flex-direction:column;gap:14px;margin-top:10px}
+.summary-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.summary-name{font-size:14px;font-weight:600;color:var(--accent)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stat-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--label)}
+.stat-val{font-size:1.35rem;font-weight:600;letter-spacing:-.02em;color:var(--strong);font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+.stat-sub{font-size:11px;color:var(--mute-faint)}
+.event{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px 36px;align-items:center;padding:22px 24px;margin-top:10px}
+.eyebrow{font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--label);margin-bottom:6px}
+.count-n{font-size:3.4rem;font-weight:600;line-height:1;letter-spacing:-.04em;color:var(--strong);font-variant-numeric:tabular-nums}
+.count-l{font-size:12.5px;color:var(--mute);margin-top:4px}
+.facts{display:flex;flex-direction:column}
+.fact{display:flex;justify-content:space-between;gap:16px;font-size:12.5px;padding:6px 0;border-bottom:1px solid var(--hair-faint)}
+.fact:last-child{border-bottom:0}
+.fact-l{color:var(--mute);white-space:nowrap}
+.fact-v{color:var(--ink);text-align:right}
+
+/* ---------- rail widgets ---------- */
+.widget{padding:14px 16px}
+.wlabel{font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--label);margin-bottom:8px}
+.wdiv{border:0;border-top:1px solid var(--hair);margin:0 0 8px}
+.cd-row{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;padding:6px 0}
+.cd-row + .cd-row{border-top:1px solid var(--hair-faint)}
+.cd-n{font-size:1.7rem;font-weight:600;line-height:1;letter-spacing:-.02em;color:var(--strong);font-variant-numeric:tabular-nums}
+.cd-l{font-size:11px;color:var(--mute);margin-top:4px}
+.cd-date{font:400 11px var(--f-mono);color:var(--c1);white-space:nowrap}
+.now-label{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute-faint);margin-bottom:6px}
+.now-val{font-size:1.9rem;font-weight:600;line-height:1;letter-spacing:-.02em;color:var(--strong);font-variant-numeric:tabular-nums;margin-bottom:6px}
+.now-change{font:400 11px var(--f-mono);color:var(--c3)}
+.now-sub{font-size:10.5px;color:var(--mute-faint);margin-top:4px}
+.wk-row{display:flex;align-items:baseline;gap:8px;font-size:11.5px;color:var(--mute);padding:5px 0;border-bottom:1px solid var(--hair-faint)}
+.wk-row:last-child{border-bottom:0}
+.wk-row.today{color:var(--strong)}
+.wk-row.late{color:var(--alert)}
+.wk-day{flex:none;min-width:4.4rem;font:400 10.5px var(--f-mono)}
+.wk-row.today .wk-day{color:var(--c1)}
+.wk-desc{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wk-row.today .wk-desc{font-weight:500}
+.wk-row.empty-day .wk-desc{color:var(--mute-faint)}
+.wk-dot{flex:none;width:5px;height:5px;border-radius:50%;background:var(--c3);align-self:center}
+.reminder{margin:2px 0;font:300 1.12rem/1.45 var(--f-body);letter-spacing:-.005em;color:var(--ink);text-wrap:balance}
+.load-row{display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--hair-faint)}
+.load-row:last-child{border-bottom:0}
+.load-row b{font:400 12px var(--f-mono);color:var(--strong)}
+.widget.photo-card{padding:0;overflow:hidden}
+.photo{position:relative;border-radius:inherit;overflow:hidden;aspect-ratio:4/5;background:var(--glass-low)}
+.ph-layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s cubic-bezier(.4,0,.2,1)}
+.ph-layer.on{opacity:1}
+.photo-dots{position:absolute;left:12px;bottom:12px;display:flex;gap:6px}
+.photo-dots button{width:7px;height:7px;padding:0;border-radius:50%;border:0;background:rgba(255,255,255,.45);transition:background .2s}
+.photo-dots button[aria-current="true"]{background:var(--strong)}
+
+/* ---------- dashboard ---------- */
+.kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:10px 0 14px}
+.kpi{--tint:var(--glass);padding:16px 18px;min-width:0;overflow:hidden}
+.kpi:hover{--tint:var(--glass-hi)}
+.kpi-lbl{font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--label);margin-bottom:6px}
+.kpi-val{font-size:1.9rem;font-weight:600;line-height:1;letter-spacing:-.02em;color:var(--strong);font-variant-numeric:tabular-nums;white-space:nowrap}
+.kpi-sub{font-size:10.5px;color:var(--mute-faint);margin-top:5px}
+.charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.dcard{padding:20px;min-width:0;overflow:hidden}
+.dcard-hd{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:16px}
+.dcard-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--label)}
+.dcard-meta{font-size:10.5px;color:var(--mute-faint);background:var(--hair-faint);padding:2px 8px;border-radius:4px;white-space:nowrap}
+.donut-wrap{display:flex;flex-direction:column;align-items:center;gap:16px}
+.donut{width:100%;max-width:230px;display:block}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px}
+.leg{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-soft)}
+.leg i{width:8px;height:8px;border-radius:2px;flex:none}
+.leg b{font:400 12px var(--f-mono);color:var(--strong)}
+.hbars{width:100%;display:block}
+.chart-empty{font-size:13px;color:var(--mute);padding:30px 0;text-align:center}
+.dseg{cursor:var(--cursor-hand);transition:stroke-dasharray var(--dur,.6s) cubic-bezier(.22,1,.36,1) var(--delay,0s),stroke-width .15s,filter .15s}
+.dseg:hover{stroke-width:32;filter:brightness(1.2)}
+.donut-track{stroke:var(--hair-faint)}
+.donut-total{fill:var(--strong);font:600 30px var(--f-body)}
+.donut-cap{fill:var(--mute);font:400 11px var(--f-body)}
+.hbar{transform-box:fill-box;transform-origin:left center;transition:transform .9s cubic-bezier(.22,1,.36,1) var(--delay,0s),filter .15s}
+.hbar[data-drill-type]{cursor:var(--cursor-hand)}
+.hbar:hover{filter:brightness(1.25)}
+.hbar-track{fill:var(--glass-low)}
+.chart-text{fill:var(--ink-soft);font:400 11px var(--f-body)}
+.chart-num{fill:var(--mute);font:400 10.5px var(--f-mono)}
+.drill{margin-top:12px;overflow:hidden;transition:height .38s cubic-bezier(.4,0,.2,1),margin-top .38s cubic-bezier(.4,0,.2,1),opacity .3s ease}
+.drill-hd{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:13px 12px 13px 18px;border-bottom:1px solid var(--hair)}
+.drill-title{font-size:14px;font-weight:600;color:var(--c)}
+.drill-hd .icon-btn{margin-left:auto}
+.drill-scroll{max-height:440px;overflow:auto}
+.dt{width:100%;border-collapse:collapse;font-size:12.5px}
+.dt th{padding:8px 18px;text-align:left;font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute-faint);border-bottom:1px solid var(--hair-faint)}
+.dt td{padding:8px 18px;color:var(--ink);border-bottom:1px solid var(--hair-faint)}
+.dt tbody tr:last-child td{border-bottom:0}
+.dt tbody tr:hover{background:var(--glass-low)}
+.dt .sub{color:var(--mute)}
+.dt .num{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ---------- overlays ---------- */
+#tooltip{position:fixed;z-index:300;pointer-events:none;min-width:150px;padding:10px 14px;border-radius:var(--r-card);background:var(--tooltip);border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow-lg)}
+.tt-title{font-size:13px;font-weight:600;color:var(--tooltip-ink);margin-bottom:6px}
+.tt-body{display:flex;align-items:center;gap:7px}
+.tt-dot{width:9px;height:9px;border-radius:2px}
+.tt-val{font:400 12px var(--f-mono);color:var(--tooltip-ink)}
+.tt-pct{font:400 11px var(--f-mono);color:var(--tooltip-mute);margin-left:4px}
+#toast{position:fixed;left:50%;top:calc(84px + env(safe-area-inset-top,0px));transform:translateX(-50%);z-index:250;display:flex;align-items:center;gap:12px;max-width:calc(100vw - 32px);padding:8px 8px 8px 16px;border-radius:99px;background:var(--tooltip);border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow-lg);font-size:13px;color:var(--tooltip-ink)}
+#toast .dot{flex:none;width:7px;height:7px;border-radius:50%;background:var(--c3)}
+#toast.bad .dot{background:var(--alert)}
+#toast .msg{padding-right:8px}
+#toast button{flex:none;font-size:12px;font-weight:600;background:rgba(255,255,255,.14);color:var(--tooltip-ink);border:0;border-radius:99px;padding:4px 12px}
+
+/* ---------- small screens ---------- */
+@media (max-width:860px){
+  :root{--gutter:16px}
+  .chrome-inner{flex-wrap:wrap;gap:8px;padding-bottom:10px}
+  .app-tabs{width:100%}
+  .hero{margin-top:104px}
+  .page{grid-template-columns:minmax(0,1fr)}
+  .side{position:static}
+  .grid2,.charts{grid-template-columns:minmax(0,1fr)}
+  .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .event{grid-template-columns:minmax(0,1fr)}
+  .photo{aspect-ratio:4/3}
+}
+@media (max-width:480px){
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .composer .actions{margin-left:0}
+  .field.num,.field.date{flex:1 1 120px}
+}
+/* Touch screens ignore fixed backgrounds and stretch the blurred copy over each card,
+   so there the glass blurs live instead (mobile Safari draws it cleanly). */
+@media (hover:none) and (pointer:coarse){
+  .glass,.kpi{background:linear-gradient(var(--tint),var(--tint));backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%)}
+  .chrome-bg{background:var(--chrome-touch);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-scene"></div>
+
+<header class="chrome" id="chrome">
+  <div class="chrome-bg" aria-hidden="true"></div>
+  <div class="chrome-inner">
+    <span class="brand" id="brand"></span>
+    <nav class="app-tabs" id="tabs" aria-label="Sections"></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <p class="greeting" id="greeting"></p>
+  <p class="hero-deck" id="hero-deck"></p>
+  <div class="hero-sub" id="hero-sub"></div>
+</section>
+
+<div class="page" id="page">
+  <main id="main"></main>
+  <aside class="side" id="side" aria-label="At a glance"></aside>
+</div>
+
+<div id="tooltip" hidden><p class="tt-title" id="tt-title"></p><div class="tt-body" id="tt-body"></div></div>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+"use strict";
+
+/* =====================================================================================
+   CONFIG — the content of the page. Swap these for the new project; the components
+   below read only from here and from the store.
+   ===================================================================================== */
+
+const inDays = (n) => { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + n); return isoDay(d); };
+
+const BRAND_HTML = 'atlas<span>.</span>';                     // trusted constant; the <span> renders in --accent. Never a real company's logo.
+const STORAGE_KEY = "atlas-hq";                              // prefix for per-viewer localStorage conveniences
+
+// The people who own work. Colours come from the theme's series accents.
+const OWNERS = {
+  avery: { name: "Avery", color: "var(--c1)" },
+  blake: { name: "Blake", color: "var(--c2)" },
+  both:  { name: "Both",  color: "var(--c3)" },
+};
+const ME_CHOICES = ["avery", "blake"];                       // who can say "I'm …" in the hero
+
+// Dated milestones. Each gets its own tab with a countdown panel, its tasks and its people.
+const SECTIONS = {
+  checkout: {
+    label: "Checkout", region: "Payments", date: inDays(46), color: "var(--accent)",
+    facts: [
+      ["Go-live", fmtDay(inDays(46), { weekday: "long", month: "long", day: "numeric", year: "numeric" })],
+      ["Scope", "Payment Element, Link, Apple Pay + Google Pay"],
+      ["Mode", "Test mode until the cutover review"],
+      ["Webhooks", "payment_intent.succeeded · charge.refunded · charge.dispute.created"],
+      ["Docs", "docs.stripe.com/payments", "https://docs.stripe.com/payments"],
+    ],
+  },
+  billing: {
+    label: "Billing", region: "Subscriptions", date: inDays(118), color: "var(--c1)",
+    facts: [
+      ["Cutover", fmtDay(inDays(118), { weekday: "long", month: "long", day: "numeric", year: "numeric" })],
+      ["Scope", "Legacy plans to Products + Prices, Customer Portal"],
+      ["Customers", "4,200 active subscriptions"],
+      ["Docs", "docs.stripe.com/billing", "https://docs.stripe.com/billing"],
+    ],
+  },
+};
+const PARTS = { ...Object.fromEntries(Object.entries(SECTIONS).map(([k, v]) => [k, v.label])), general: "General" };
+const partColor = (k) => (SECTIONS[k] ? SECTIONS[k].color : "var(--mute-faint)");
+
+const STATUSES = { "Researching": "var(--mute)", "Contacted": "var(--c1)", "Engaged": "var(--c3)", "Signed": "var(--accent)" };
+
+const TABS = [["home", "Overview"], ...Object.entries(SECTIONS).map(([k, v]) => [k, v.label]), ["budget", "Spend"], ["people", "Contacts"], ["dashboard", "Dashboard"]];
+const WIDE_TABS = new Set(["dashboard"]);                    // tabs that drop the rail and run full width
+
+// Hero: [headline, emphasised ending, deck line]. >52 chars of headline switches to the smaller size.
+// The deck line can also carry a quote's credit if a page wants rotating quotes instead.
+const HERO_LINES = [
+  ["Everything for the launch, ", "in one place.", "Tasks, contacts, spend and progress for the Checkout and Billing work, kept live."],
+];
+const TAB_LINES = {
+  checkout: [["Checkout, ", "from test mode to live.", "Every task, contact and dollar for the payments cutover."]],
+  billing: [["Billing, ", "migrated without surprises.", "Plans to Prices, the Customer Portal, and the cutover plan."]],
+  budget: [["Every dollar ", "accounted for.", "Planned against paid, grouped by workstream."]],
+  people: [["The people ", "who get it shipped.", "Partners, vendors and owners, with where things stand."]],
+  dashboard: [["The whole picture, ", "at a glance.", "Tap any slice or bar to see the rows behind it."]],
+};
+const REMINDER = "Ship in small, finished pieces. A task marked done beats a perfect plan.";
+
+// Optional rotating photo widget. Leave empty to drop it.
+const PHOTOS = [];
+
+const DEMO = {
+  tasks: [
+    { title: "Swap Card Element for the Payment Element", who: "avery", part: "checkout", due: inDays(3) },
+    { title: "Register the Apple Pay domain", who: "blake", part: "checkout", due: inDays(-2) },
+    { title: "Add a webhook endpoint for payment_intent.succeeded", who: "both", part: "checkout", due: inDays(9) },
+    { title: "Run the test-card scenarios, including 3DS", who: "avery", part: "checkout", due: inDays(5) },
+    { title: "Map legacy plans to Products and Prices", who: "blake", part: "billing", due: inDays(14) },
+    { title: "Configure the Customer Portal", who: "", part: "billing", due: inDays(30) },
+    { title: "Review Radar rules with risk", who: "avery", part: "general", due: "" },
+    { title: "Rotate restricted API keys", who: "avery", part: "general", due: inDays(1), done: true, doneBy: "avery", doneAt: Date.now() - 864e5 },
+    { title: "Share the cutover runbook", who: "both", part: "checkout", due: "", done: true, doneBy: "blake", doneAt: Date.now() - 3 * 864e5 },
+  ],
+  items: [
+    { name: "QA contractor", planned: 9600, paid: 4800, part: "checkout", note: "Two sprints of payment-flow testing" },
+    { name: "Load testing", planned: 2400, paid: 0, part: "checkout" },
+    { name: "Migration tooling", planned: 5400, paid: 1800, part: "billing" },
+    { name: "Design review", planned: 1800, paid: 1800, part: "general" },
+  ],
+  people: [
+    { name: "Jordan Lee", role: "Integration engineer", email: "jordan@example.com", phone: "512-555-0142", part: "checkout", status: "Engaged" },
+    { name: "Sam Ortiz", role: "Finance lead", email: "sam@example.com", part: "billing", status: "Contacted" },
+    { name: "Riley Park", role: "QA vendor", email: "riley@example.com", part: "checkout", status: "Signed" },
+  ],
+  settings: { budgetTotal: 25000 },
+};
+
+/* =====================================================================================
+   DATA LAYER — an in-memory store with the same shape as a live collection database:
+   async writes, and a change feed the page re-renders from. To make the page shared and
+   durable inside Claude, replace this object with the artifact `db` capability (load the
+   artifact-capabilities skill first) and keep the five methods' signatures.
+   ===================================================================================== */
+
+const store = (() => {
+  const data = { tasks: [], items: [], people: [], settings: {} };
+  const subs = new Set();
+  let seq = 0;
+  const newId = () => "d" + Date.now().toString(36) + (seq++).toString(36);
+  const emit = () => subs.forEach((fn) => fn(data));
+  const write = (fn) => new Promise((resolve) => setTimeout(() => { fn(); emit(); resolve(); }, 40));
+  return {
+    seed(seed) {
+      for (const k of ["tasks", "items", "people"]) data[k] = (seed[k] || []).map((d) => ({ id: newId(), done: false, ...d }));
+      data.settings = { ...(seed.settings || {}) };
+      emit();
+    },
+    onChange(fn) { subs.add(fn); return () => subs.delete(fn); },
+    add: (kind, doc) => write(() => data[kind].push({ id: newId(), ...doc })),
+    update: (kind, id, patch) => write(() => { const r = data[kind].find((x) => x.id === id); if (r) Object.assign(r, patch); }),
+    set: (kind, id, doc) => write(() => { const i = data[kind].findIndex((x) => x.id === id); if (i >= 0) data[kind][i] = { id, ...doc }; else data[kind].push({ id, ...doc }); }),
+    remove: (kind, id) => write(() => { data[kind] = data[kind].filter((x) => x.id !== id); }),
+    setSettings: (s) => write(() => { data.settings = { ...s }; }),
+  };
+})();
+
+/* ===================== helpers ===================== */
+
+function isoDay(d) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; }
+function fmtDay(s, opts) { return s ? parseDay(s).toLocaleDateString("en-US", opts || { month: "short", day: "numeric", year: "numeric" }) : ""; }
+function parseDay(s) { return new Date(s + "T00:00:00"); }
+const $ = (sel) => document.querySelector(sel);
+const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const sum = (rows, key) => rows.reduce((t, r) => t + (Number(r[key]) || 0), 0);
+const money = (n) => { const v = Number(n) || 0; return (v < 0 ? "-$" : "$") + Math.abs(v).toLocaleString("en-US", { minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 }); };
+const moneyShort = (n) => { const v = Number(n) || 0; if (Math.abs(v) < 10000) return money(Math.round(v)); return "$" + (v / 1000).toFixed(v >= 100000 ? 0 : 1).replace(/\.0$/, "") + "K"; };
+const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
+const plural = (n, word, many = word + "s") => `${n} ${n === 1 ? word : many}`;
+const startOfToday = () => { const d = new Date(); d.setHours(0, 0, 0, 0); return d; };
+const daysUntil = (s) => Math.round((parseDay(s) - startOfToday()) / 864e5);
+const fmtStamp = (ms) => new Date(ms).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+const ownerColor = (k) => (OWNERS[k] ? OWNERS[k].color : "var(--mute)");
+const REDUCED_MOTION = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const byDue = (a, b) => { const x = a.due || "9999", y = b.due || "9999"; return x < y ? -1 : x > y ? 1 : String(a.title).localeCompare(String(b.title)); };
+const openFirst = (a, b) => (Number(!!a.done) - Number(!!b.done)) || byDue(a, b);
+
+function dueText(t) {
+  const d = daysUntil(t.due);
+  if (d < 0) return `${plural(-d, "day")} late`;
+  if (d === 0) return "Due today";
+  if (d === 1) return "Due tomorrow";
+  if (d < 7) return `Due in ${d} days`;
+  return "Due " + fmtDay(t.due, { month: "short", day: "numeric" });
+}
+function countdown(dateStr) {
+  const d = daysUntil(dateStr);
+  if (d > 1) return { n: d, label: "days to go" };
+  if (d === 1) return { n: 1, label: "day to go" };
+  if (d === 0) return { n: "Today", label: "it's happening" };
+  return { n: "Done", label: "live " + fmtDay(dateStr) };
+}
+
+const ICON = {
+  check: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  edit: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.5 2.5l3 3-8 8h-3v-3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>',
+  close: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
+  copy: '<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.5 3.5v-.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>',
+};
+
+/* ===================== state ===================== */
+
+const state = {
+  tab: "home", filter: "all", me: "", editing: "", drill: null, photoIndex: 0,
+  status: "loading",                 // loading | live
+  canWrite: true,
+  tasks: [], items: [], people: [], settings: {},
+};
+let animateDash = false, photoShown = "", photoLayer = 0;
+try { state.me = localStorage.getItem(STORAGE_KEY + ":me") || ""; } catch (e) {}
+
+/* ===================== primitives ===================== */
+
+const section = (label, meta = "") => `<div class="sh"><h2 class="sh-label">${label}</h2>${meta ? `<span class="sh-meta">${meta}</span>` : ""}</div>`;
+const empty = (msg, extra = "") => `<div class="empty glass quiet"><span>${state.status === "loading" ? "Loading…" : msg}</span>${state.status === "loading" ? "" : extra}</div>`;
+const pill = (k) => (OWNERS[k] ? `<span class="pill" style="--c:${OWNERS[k].color}">${OWNERS[k].name}</span>` : `<span class="pill out">Unassigned</span>`);
+const bar = (p, over) => `<div class="bar${over ? " over" : ""}"><i style="width:${Math.min(100, Math.max(0, p))}%"></i></div>`;
+const disabled = () => (state.canWrite ? "" : " disabled");
+// Every dropdown sits in a wrapper that draws the same chevron, tinted to match its text.
+const selectBox = (html, { pill = false, color = "", cls = "" } = {}) =>
+  `<span class="select${pill ? " is-pill" : ""}${cls ? " " + cls : ""}"${color ? ` style="--c:${color}"` : ""}>${html}</span>`;
+const options = (pairs, selected) => pairs.map(([v, l]) => `<option value="${esc(v)}"${(selected || "") === v ? " selected" : ""}>${esc(l)}</option>`).join("");
+const ownerOptions = (sel) => options([["", "Unassigned"], ...Object.entries(OWNERS).map(([k, v]) => [k, v.name])], sel);
+const partSelect = (id, sel) => selectBox(`<select id="${id}" class="field" name="part" aria-label="Part">${options(Object.entries(PARTS), sel)}</select>`);
+const toolBtns = (editId, kind, id, label) => state.canWrite
+  ? `<button class="icon-btn" data-action="edit" data-id="${editId}" aria-label="Edit ${esc(label)}">${ICON.edit}</button><button class="icon-btn" data-action="delete" data-kind="${kind}" data-id="${esc(id)}" aria-label="Delete ${esc(label)}">${ICON.close}</button>`
+  : "";
+const formActions = (label, cancel = false) => `<div class="actions">${cancel ? `<button type="button" class="btn ghost" data-action="cancel">Cancel</button>` : ""}<button class="btn">${label}</button></div>`;
+
+/* ===================== components ===================== */
+
+function taskRow(t) {
+  if (state.editing === "task:" + t.id) return taskEditForm(t);
+  const id = esc(t.id);
+  const meta = [];
+  if (t.done) meta.push(`Done by ${OWNERS[t.doneBy] ? OWNERS[t.doneBy].name : "someone"}${t.doneAt ? " · " + fmtStamp(t.doneAt) : ""}`);
+  else if (t.due) { const d = daysUntil(t.due); meta.push(`<span class="${d < 0 ? "due-late" : d <= 7 ? "due-soon" : ""}">${dueText(t)}</span>`); }
+  if (state.tab === "home") meta.push(esc(PARTS[t.part] || "General"));
+  return `<div class="task glass${t.done ? " is-done" : ""}">
+    <button class="check${t.done ? " on" : ""}" style="--c:${t.done ? ownerColor(t.doneBy) : "var(--c3)"}" data-action="toggle" data-id="${id}" aria-pressed="${!!t.done}" aria-label="${t.done ? "Mark not done" : "Mark done"}: ${esc(t.title)}"${disabled()}>${ICON.check}</button>
+    <div class="task-body"><div class="task-title">${esc(t.title)}</div>${meta.length ? `<div class="task-meta">${meta.map((m) => `<span>${m}</span>`).join("")}</div>` : ""}</div>
+    <div class="task-tools">
+      ${selectBox(`<select id="who-${id}" class="pill-select" data-change="task-who" data-id="${id}" aria-label="Who's on it"${disabled()}>${ownerOptions(t.who)}</select>`, { pill: true, color: ownerColor(t.who) })}
+      ${toolBtns("task:" + id, "tasks", t.id, "task")}
+    </div>
+  </div>`;
+}
+
+function taskEditForm(t) {
+  return `<form class="composer glass" data-form="edit-task" data-id="${esc(t.id)}" autocomplete="off">
+    <input id="edit-task-title" class="field grow" name="title" value="${esc(t.title)}" aria-label="Task" required maxlength="200">
+    ${partSelect("edit-task-part", t.part || "general")}
+    <input id="edit-task-due" class="field date" type="date" name="due" value="${esc(t.due || "")}" aria-label="Due date">
+    ${formActions("Save", true)}
+  </form>`;
+}
+
+function taskForm(part) {
+  if (!state.canWrite) return "";
+  const scope = part || "all";
+  return `<form class="composer glass quiet" data-form="add-task" autocomplete="off">
+    <input id="add-task-title-${scope}" class="field grow" name="title" placeholder="Add a task, like “Test the refund flow”" aria-label="New task" required maxlength="200">
+    ${selectBox(`<select id="add-task-who-${scope}" class="field" name="who" aria-label="Who's on it">${ownerOptions(state.me)}</select>`)}
+    ${part ? `<input type="hidden" name="part" value="${part}">` : partSelect("add-task-part-" + scope, "general")}
+    <input id="add-task-due-${scope}" class="field date" type="date" name="due" aria-label="Due date">
+    ${formActions("Add task")}
+  </form>`;
+}
+
+function spotCard(t) {
+  const d = daysUntil(t.due);
+  const badge = d < 0 ? `${plural(-d, "day")} late` : d === 0 ? "Today" : d === 1 ? "Tomorrow" : `in ${d} days`;
+  return `<article class="spot glass accent">
+    <span class="spot-badge${d < 0 ? " late" : ""}">${badge}</span>
+    <h3 class="spot-title">${esc(t.title)}</h3>
+    <p class="spot-deck">${fmtDay(t.due, { weekday: "short", month: "short", day: "numeric" })} · ${esc(PARTS[t.part] || "General")}</p>
+    <div class="spot-foot">${pill(t.who)}${state.canWrite ? `<button class="btn small ghost" data-action="toggle" data-id="${esc(t.id)}">Mark done</button>` : ""}</div>
+  </article>`;
+}
+
+function personCard(p) {
+  if (state.editing === "person:" + p.id) return personEditForm(p);
+  const id = esc(p.id);
+  const statuses = Object.keys(STATUSES);
+  if (p.status && !STATUSES[p.status]) statuses.push(p.status);
+  const contact = (v, label) => v ? `<div class="contact"><span>${esc(v)}</span><button class="icon-btn" data-action="copy" data-copy="${esc(v)}" aria-label="Copy ${label}">${ICON.copy}</button></div>` : "";
+  return `<article class="card glass">
+    <div class="card-head">
+      <div><h3 class="card-name">${esc(p.name)}</h3>${p.role ? `<p class="card-deck">${esc(p.role)}</p>` : ""}</div>
+      <div class="card-tools">${toolBtns("person:" + id, "people", p.id, p.name)}</div>
+    </div>
+    ${selectBox(`<select id="status-${id}" class="pill-select" data-change="person-status" data-id="${id}" aria-label="Status"${disabled()}>${options(statuses.map((s) => [s, s]), p.status || "Researching")}</select>`, { pill: true, color: STATUSES[p.status] || "var(--label)", cls: "status" })}
+    ${contact(p.email, "email")}${contact(p.phone, "phone number")}
+    <input id="note-${id}" class="field" style="width:100%;font-size:12.5px" data-change="person-note" data-id="${id}" value="${esc(p.note || "")}" placeholder="${state.canWrite ? "Add a note" : "No notes"}" aria-label="Notes about ${esc(p.name)}"${disabled()}>
+  </article>`;
+}
+
+function personEditForm(p) {
+  return `<form class="composer glass" data-form="edit-person" data-id="${esc(p.id)}" autocomplete="off">
+    <input id="edit-person-name" class="field grow" name="name" value="${esc(p.name)}" aria-label="Name" required maxlength="120">
+    <input id="edit-person-role" class="field grow" name="role" value="${esc(p.role || "")}" placeholder="Role" aria-label="Role" maxlength="120">
+    <input id="edit-person-email" class="field grow" type="email" name="email" value="${esc(p.email || "")}" placeholder="Email" aria-label="Email">
+    <input id="edit-person-phone" class="field" name="phone" value="${esc(p.phone || "")}" placeholder="Phone" aria-label="Phone" maxlength="40">
+    ${partSelect("edit-person-part", p.part || "general")}
+    ${formActions("Save", true)}
+  </form>`;
+}
+
+function personForm(part) {
+  if (!state.canWrite) return "";
+  const scope = part || "all";
+  return `<form class="composer glass quiet" data-form="add-person" autocomplete="off">
+    <input id="add-person-name-${scope}" class="field grow" name="name" placeholder="Name" aria-label="Name" required maxlength="120">
+    <input id="add-person-role-${scope}" class="field grow" name="role" placeholder="Role, like Finance lead" aria-label="Role" maxlength="120">
+    <input id="add-person-email-${scope}" class="field grow" type="email" name="email" placeholder="Email" aria-label="Email">
+    <input id="add-person-phone-${scope}" class="field" name="phone" placeholder="Phone" aria-label="Phone" maxlength="40">
+    ${part ? `<input type="hidden" name="part" value="${part}">` : partSelect("add-person-part-" + scope, "general")}
+    ${formActions("Add person")}
+  </form>`;
+}
+
+function itemCard(i) {
+  if (state.editing === "item:" + i.id) return itemEditForm(i);
+  const id = esc(i.id), planned = Number(i.planned) || 0, paid = Number(i.paid) || 0;
+  return `<article class="card glass">
+    <div class="card-head">
+      <div><h3 class="card-name">${esc(i.name)}</h3><p class="card-deck">${paid >= planned && planned > 0 ? "Paid in full" : planned ? `${money(planned - paid)} left to pay` : "No amount planned"}</p></div>
+      <div class="card-tools">${toolBtns("item:" + id, "items", i.id, i.name)}</div>
+    </div>
+    <div class="figs"><span>Planned <b>${money(planned)}</b></span><label for="paid-${id}">Paid <input id="paid-${id}" class="field num" type="number" min="0" step="0.01" inputmode="decimal" value="${paid || ""}" placeholder="0" data-change="item-paid" data-id="${id}"${disabled()}></label></div>
+    ${bar(pct(paid, planned), paid > planned && planned > 0)}
+    ${i.note ? `<p class="card-note">${esc(i.note)}</p>` : ""}
+  </article>`;
+}
+
+function itemEditForm(i) {
+  return `<form class="composer glass" data-form="edit-item" data-id="${esc(i.id)}" autocomplete="off">
+    <input id="edit-item-name" class="field grow" name="name" value="${esc(i.name)}" aria-label="Item" required maxlength="120">
+    <input id="edit-item-planned" class="field num" type="number" min="0" step="0.01" inputmode="decimal" name="planned" value="${Number(i.planned) || ""}" placeholder="Planned $" aria-label="Planned amount">
+    ${partSelect("edit-item-part", i.part || "general")}
+    <input id="edit-item-note" class="field grow" name="note" value="${esc(i.note || "")}" placeholder="Note" aria-label="Note" maxlength="300">
+    ${formActions("Save", true)}
+  </form>`;
+}
+
+function itemForm() {
+  if (!state.canWrite) return "";
+  return `<form class="composer glass quiet" data-form="add-item" autocomplete="off">
+    <input id="add-item-name" class="field grow" name="name" placeholder="Contractor, tooling, review…" aria-label="Spend item" required maxlength="120">
+    <input id="add-item-planned" class="field num" type="number" min="0" step="0.01" inputmode="decimal" name="planned" placeholder="Planned $" aria-label="Planned amount">
+    ${partSelect("add-item-part", "general")}
+    <input id="add-item-note" class="field grow" name="note" placeholder="Note" aria-label="Note" maxlength="300">
+    ${formActions("Add item")}
+  </form>`;
+}
+
+/* ===================== views ===================== */
+
+function notice() {
+  return state.canWrite ? "" : `<div class="notice glass quiet">You can view this page. To make changes, ask the owner for edit access.</div>`;
+}
+
+function homeView() {
+  const open = state.tasks.filter((t) => !t.done);
+  const dated = open.filter((t) => t.due).sort(byDue);
+  let soon = dated.filter((t) => daysUntil(t.due) <= 21).slice(0, 4);
+  const soonMeta = soon.length ? "Next three weeks" : dated.length ? "Next on the calendar" : "";
+  if (!soon.length) soon = dated.slice(0, 2);
+  const match = (k) => (t) => k === "all" || (k === "none" ? !OWNERS[t.who] : t.who === k);
+  const filtered = open.filter(match(state.filter)).sort(byDue);
+  const chips = [["all", "Everyone"], ...Object.entries(OWNERS).map(([k, v]) => [k, v.name]), ["none", "Unassigned"]]
+    .map(([k, l]) => `<button class="chip" data-action="filter" data-id="${k}" aria-pressed="${state.filter === k}">${esc(l)}<span class="n">${open.filter(match(k)).length}</span></button>`).join("");
+  const done = state.tasks.filter((t) => t.done).sort((a, b) => (b.doneAt || 0) - (a.doneAt || 0)).slice(0, 10);
+  return `${notice()}
+    ${section("Coming up", soonMeta)}
+    ${soon.length ? `<div class="grid2">${soon.map(spotCard).join("")}</div>` : empty("Nothing has a due date yet. Give a task a date and it shows up here.")}
+    ${section("All tasks", plural(open.length, "open task"))}
+    ${taskForm()}
+    <div class="chips" role="group" aria-label="Filter by person">${chips}</div>
+    <div class="stack">${filtered.map(taskRow).join("") || empty(open.length ? "Nothing open for this person." : "No open tasks. Add one above.")}</div>
+    ${section("Recently completed")}
+    ${done.length ? `<div class="quiet-list glass quiet"><div class="quiet-scroll">${done.map((t) => `<div class="q-row"><span class="q-name">${esc(t.title)}</span><span class="q-meta">${t.doneAt ? fmtStamp(t.doneAt) : ""}</span><span class="q-note">${OWNERS[t.doneBy] ? OWNERS[t.doneBy].name : "Someone"} checked this off · ${esc(PARTS[t.part] || "General")}</span></div>`).join("")}</div></div>` : empty("Finished tasks land here, with who checked them off.")}`;
+}
+
+function sectionView(key) {
+  const ev = SECTIONS[key], cd = countdown(ev.date);
+  const tasks = state.tasks.filter((t) => t.part === key).sort(openFirst);
+  const people = state.people.filter((p) => p.part === key);
+  const items = state.items.filter((i) => i.part === key);
+  const openCount = tasks.filter((t) => !t.done).length;
+  const facts = [...ev.facts,
+    ["Spend", items.length ? `${money(sum(items, "paid"))} paid of ${money(sum(items, "planned"))}` : "No spend planned yet"],
+    ["Tasks", `${openCount} open · ${tasks.length - openCount} done`]];
+  return `${notice()}
+    <section class="event glass">
+      <div><p class="eyebrow">${esc(ev.label)} · ${esc(ev.region)}</p><div class="count-n">${cd.n}</div><div class="count-l">${cd.label}</div></div>
+      <div class="facts">${facts.map(([l, v, url]) => `<div class="fact"><span class="fact-l">${esc(l)}</span><span class="fact-v">${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(v)}</a>` : esc(v)}</span></div>`).join("")}</div>
+    </section>
+    ${section("Tasks", plural(openCount, "open task"))}
+    ${taskForm(key)}
+    <div class="stack">${tasks.map(taskRow).join("") || empty(`No ${ev.label.toLowerCase()} tasks yet. Add the first one above.`)}</div>
+    ${section("People", people.length ? plural(people.length, "person", "people") : "")}
+    ${people.length ? `<div class="grid2">${people.map(personCard).join("")}</div>` : empty(`Add the people helping with the ${ev.label.toLowerCase()}.`)}
+    <div style="margin-top:12px">${personForm(key)}</div>`;
+}
+
+function budgetView() {
+  const total = Number(state.settings.budgetTotal) || 0;
+  const planned = sum(state.items, "planned"), paid = sum(state.items, "paid");
+  const stat = (lbl, val, sub = "") => `<div><p class="stat-lbl">${lbl}</p><p class="stat-val">${val}</p>${sub ? `<p class="stat-sub">${sub}</p>` : ""}</div>`;
+  const groups = Object.keys(PARTS).map((k) => {
+    const items = state.items.filter((i) => (PARTS[i.part] ? i.part : "general") === k);
+    return items.length ? section(PARTS[k], `${money(sum(items, "paid"))} paid of ${money(sum(items, "planned"))}`) + `<div class="grid2">${items.map(itemCard).join("")}</div>` : "";
+  }).join("");
+  return `${notice()}
+    <section class="summary glass">
+      <div class="summary-top">
+        <div><p class="summary-name">Spend</p><p class="stat-sub">Everything planned so far</p></div>
+        <input id="budget-total" class="field num" type="number" min="0" step="100" inputmode="decimal" value="${total || ""}" placeholder="Set a total" aria-label="Budget total" data-change="budget-total"${disabled()}>
+      </div>
+      ${total ? bar(pct(planned, total), planned > total) : ""}
+      <div class="stats">
+        ${stat("Planned", money(planned), total ? `${pct(planned, total)}% of the total` : "Set a total to compare")}
+        ${stat("Paid", money(paid), planned ? `${pct(paid, planned)}% of planned` : "")}
+        ${stat("Left to pay", money(Math.max(0, planned - paid)))}
+        ${stat(total && planned > total ? "Over budget" : "Unallocated", total ? money(Math.abs(total - planned)) : "—")}
+      </div>
+    </section>
+    ${groups || `<div style="margin-top:14px">${empty("No spend items yet. Add the first one below.")}</div>`}
+    ${section("Add an item")}
+    ${itemForm()}`;
+}
+
+function peopleView() {
+  const groups = Object.keys(PARTS).map((k) => {
+    const ps = state.people.filter((p) => (PARTS[p.part] ? p.part : "general") === k);
+    return ps.length ? section(PARTS[k], plural(ps.length, "person", "people")) + `<div class="grid2">${ps.map(personCard).join("")}</div>` : "";
+  }).join("");
+  return `${notice()}${section("Add someone")}${personForm()}${groups || empty("No one added yet.")}`;
+}
+
+/* ---------- dashboard ---------- */
+
+function donutSVG(segs, kind, center) {
+  const size = 240, r = 86, sw = 26, c = size / 2, C = 2 * Math.PI * r;
+  const total = segs.reduce((s, x) => s + x.v, 0);
+  let out = `<svg class="donut" viewBox="0 0 ${size} ${size}" role="img" aria-label="${esc(center.cap)}: ${segs.map((s) => `${esc(s.name)} ${esc(s.label || s.v)}`).join(", ")}">`;
+  out += `<circle class="donut-track" cx="${c}" cy="${c}" r="${r}" fill="none" stroke-width="${sw}"/>`;
+  // Each slice is its own open arc from 12 o'clock clockwise; dashes on one shared circle notch at its start point.
+  const at = (len) => { const a = -Math.PI / 2 + (len / C) * 2 * Math.PI; return `${(c + r * Math.cos(a)).toFixed(3)} ${(c + r * Math.sin(a)).toFixed(3)}`; };
+  let offset = 0, delay = 0;
+  segs.forEach((seg) => {
+    if (!seg.v || !total) return;
+    const len = (seg.v / total) * C, dur = Math.max(0.12, seg.v / total);
+    const d = seg.v === total
+      ? `M${at(0)} A${r} ${r} 0 1 1 ${at(C / 2)} A${r} ${r} 0 1 1 ${at(C)}`
+      : `M${at(offset)} A${r} ${r} 0 ${len > C / 2 ? 1 : 0} 1 ${at(offset + len)}`;
+    out += `<path class="dseg" d="${d}" fill="none" stroke-width="${sw}" stroke-dasharray="${len.toFixed(2)} ${C.toFixed(2)}" data-circ="${C.toFixed(2)}"
+      style="stroke:${seg.color};--dur:${dur.toFixed(2)}s;--delay:${delay.toFixed(2)}s"
+      data-tip-name="${esc(seg.name)}" data-tip-val="${esc(seg.label || seg.v)}" data-tip-pct="${pct(seg.v, total)}" data-tip-color="${seg.color}"
+      data-drill-type="${kind}" data-drill-key="${esc(seg.key)}"/>`;
+    offset += len; delay += dur;
+  });
+  return out + `<text class="donut-total" x="${c}" y="${c + 6}" text-anchor="middle">${esc(center.big)}</text><text class="donut-cap" x="${c}" y="${c + 28}" text-anchor="middle">${esc(center.cap)}</text></svg>`;
+}
+
+const legend = (segs) => `<div class="legend">${segs.map((s) => `<span class="leg"><i style="background:${s.color}"></i>${esc(s.name)}<b>${esc(s.label || s.v)}</b></span>`).join("")}</div>`;
+
+// rows: {key, name, v, max?, color, value, tip?, pct?, drill?}
+function hbarSVG(rows, maxVal) {
+  const LW = 132, BA = 220, VW = 96, RH = 32, W = LW + BA + VW, H = rows.length * RH + 4;
+  let out = `<svg class="hbars" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMinYMin meet" role="img" aria-label="${rows.map((r) => `${esc(r.name)} ${esc(r.value)}`).join(", ")}">`;
+  rows.forEach((row, i) => {
+    const y = i * RH + RH / 2 + 2;
+    const name = row.name.length > 20 ? row.name.slice(0, 19) + "…" : row.name;
+    const bw = maxVal ? Math.max(row.v ? 3 : 0, Math.round((row.v / maxVal) * BA)) : 0;
+    const back = row.max != null && maxVal ? Math.max(3, Math.round((row.max / maxVal) * BA)) : BA;
+    const hover = `data-tip-name="${esc(row.name)}" data-tip-val="${esc(row.tip || row.value)}" data-tip-pct="${row.pct ?? ""}" data-tip-color="${row.color}"${row.drill ? ` data-drill-type="${row.drill}" data-drill-key="${esc(row.key)}"` : ""}`;
+    out += `<rect class="hbar-track" x="${LW}" y="${y - 7}" width="${back}" height="14" rx="3"${row.max != null ? ` style="fill:${row.color};opacity:.22"` : ""} ${hover}/>`;
+    if (bw) out += `<rect class="hbar" x="${LW}" y="${y - 7}" width="${bw}" height="14" rx="3" style="fill:${row.color};--delay:${(i * 0.055).toFixed(3)}s" ${hover}/>`;
+    out += `<text class="chart-text" x="${LW - 10}" y="${y + 4}" text-anchor="end">${esc(name)}</text>`;
+    out += `<text class="chart-num" x="${W - 2}" y="${y + 4}" text-anchor="end">${esc(row.value)}</text>`;
+  });
+  return out + "</svg>";
+}
+
+function drillView() {
+  const d = state.drill;
+  if (!d) return "";
+  let title = "", color = "var(--ink)", head = "", rows = [], meta = "";
+  if (d.type === "status" || d.type === "person") {
+    const open = state.tasks.filter((t) => !t.done);
+    let list = [];
+    if (d.key === "done") { list = state.tasks.filter((t) => t.done); title = "Done"; color = "var(--label)"; }
+    else if (d.key === "none") { list = open.filter((t) => !OWNERS[t.who]); title = "Unassigned"; color = "var(--mute)"; }
+    else if (OWNERS[d.key]) { list = open.filter((t) => t.who === d.key); title = OWNERS[d.key].name; color = OWNERS[d.key].color; }
+    meta = plural(list.length, d.key === "done" ? "finished task" : "open task");
+    head = "<th>Task</th><th>Part</th><th>Due</th><th>Who</th>";
+    rows = list.sort(openFirst).map((t) => `<tr><td>${esc(t.title)}</td><td class="sub">${esc(PARTS[t.part] || "General")}</td><td class="sub">${t.done ? "Done" : t.due ? fmtDay(t.due, { month: "short", day: "numeric" }) : "—"}</td><td>${pill(t.done ? t.doneBy : t.who)}</td></tr>`);
+  } else if (d.type === "parts") {
+    const list = state.items.filter((i) => (PARTS[i.part] ? i.part : "general") === d.key);
+    title = PARTS[d.key] || "General"; color = partColor(d.key);
+    meta = `${money(sum(list, "paid"))} paid of ${money(sum(list, "planned"))}`;
+    head = `<th>Item</th><th class="num">Planned</th><th class="num">Paid</th>`;
+    rows = list.map((i) => `<tr><td>${esc(i.name)}</td><td class="num">${money(i.planned)}</td><td class="num">${money(i.paid)}</td></tr>`);
+  }
+  return `<section class="drill glass dcard" id="drill" style="padding:0">
+    <div class="drill-hd"><span class="drill-title" style="--c:${color}">${esc(title)}</span><span class="dcard-meta">${meta}</span><button class="icon-btn" data-action="close-drill" aria-label="Close table">${ICON.close}</button></div>
+    <div class="drill-scroll">${rows.length ? `<table class="dt"><thead><tr>${head}</tr></thead><tbody>${rows.join("")}</tbody></table>` : `<p class="chart-empty">Nothing here yet.</p>`}</div>
+  </section>`;
+}
+
+function dashboardView() {
+  const all = state.tasks, done = all.filter((t) => t.done), open = all.filter((t) => !t.done);
+  const overdue = open.filter((t) => t.due && daysUntil(t.due) < 0).length;
+  const thisWeek = open.filter((t) => t.due && daysUntil(t.due) >= 0 && daysUntil(t.due) < 7).length;
+  const planned = sum(state.items, "planned"), paid = sum(state.items, "paid");
+  const next = Object.entries(SECTIONS).map(([k, s]) => ({ k, label: s.label, d: daysUntil(s.date) })).filter((x) => x.d >= 0).sort((a, b) => a.d - b.d)[0];
+  const kpis = [
+    ["Tasks done", `${done.length}/${all.length}`, all.length ? `${pct(done.length, all.length)}% complete` : "no tasks yet", ""],
+    ["Open", open.length, overdue ? `${overdue} overdue` : "none overdue", overdue ? "var(--alert)" : ""],
+    ["Due this week", thisWeek, "next 7 days", thisWeek ? "var(--accent)" : ""],
+    ["Planned", moneyShort(planned), state.settings.budgetTotal ? `of ${moneyShort(state.settings.budgetTotal)}` : "no total set", "var(--c1)"],
+    ["Paid", moneyShort(paid), `${money(Math.max(0, planned - paid))} to go`, "var(--c3)"],
+    ["Countdown", next ? `${next.d}d` : "—", next ? `to ${next.label.toLowerCase()} go-live` : "all shipped", ""],
+  ];
+  const kpiHTML = kpis.map(([l, v, s, c]) => `<div class="kpi"><p class="kpi-lbl">${l}</p><p class="kpi-val"${c ? ` style="color:${c}"` : ""}>${esc(v)}</p><p class="kpi-sub">${esc(s)}</p></div>`).join("");
+
+  const status = [
+    ...Object.entries(OWNERS).map(([k, o]) => ({ key: k, name: o.name, v: open.filter((t) => t.who === k).length, color: o.color })),
+    { key: "none", name: "Unassigned", v: open.filter((t) => !OWNERS[t.who]).length, color: "var(--mute-faint)" },
+    { key: "done", name: "Done", v: done.length, color: "var(--label)" },
+  ];
+  const statusCard = all.length ? `<div class="donut-wrap">${donutSVG(status, "status", { big: `${pct(done.length, all.length)}%`, cap: "tasks done" })}${legend(status)}</div>` : `<p class="chart-empty">Add tasks to see progress here.</p>`;
+  const loadRows = status.filter((s) => s.key !== "done").map((s) => ({ ...s, value: plural(s.v, "task"), pct: pct(s.v, open.length), drill: "person" }));
+  const loadCard = open.length ? hbarSVG(loadRows, Math.max(1, ...loadRows.map((r) => r.v))) : `<p class="chart-empty">No open tasks. Nice.</p>`;
+  const items = [...state.items].sort((a, b) => (Number(b.planned) || 0) - (Number(a.planned) || 0)).slice(0, 8);
+  const itemMax = Math.max(1, ...items.map((i) => Math.max(Number(i.planned) || 0, Number(i.paid) || 0)));
+  const itemRows = items.map((i) => ({ key: i.id, name: i.name, v: Number(i.paid) || 0, max: Number(i.planned) || 0, color: partColor(i.part), value: moneyShort(i.planned), tip: `${money(i.paid)} paid of ${money(i.planned)}`, pct: pct(Number(i.paid) || 0, Number(i.planned) || 0) }));
+  const itemsChart = items.length ? hbarSVG(itemRows, itemMax) : `<p class="chart-empty">Add budget items to compare planned and paid.</p>`;
+  const parts = Object.keys(PARTS).map((k) => { const v = sum(state.items.filter((i) => (PARTS[i.part] ? i.part : "general") === k), "planned"); return { key: k, name: PARTS[k], v, label: moneyShort(v), color: partColor(k) }; });
+  const partsCard = planned ? `<div class="donut-wrap">${donutSVG(parts, "parts", { big: moneyShort(planned), cap: "planned" })}${legend(parts)}</div>` : `<p class="chart-empty">Nothing planned yet.</p>`;
+  const card = (lbl, meta, body) => `<section class="dcard glass"><div class="dcard-hd"><h3 class="dcard-lbl">${lbl}</h3><span class="dcard-meta">${meta}</span></div>${body}</section>`;
+  return `${notice()}
+    <div class="kpis">${kpiHTML}</div>
+    <div class="charts">
+      ${card("Tasks by status", plural(all.length, "task"), statusCard)}
+      ${card("Open tasks by person", "tap a bar for the list", loadCard)}
+      ${card("Spend by item", "bright = paid", itemsChart)}
+      ${card("Planned by part", money(planned), partsCard)}
+    </div>
+    ${drillView()}`;
+}
+
+/* ===================== rail ===================== */
+
+const WIDGETS = [
+  { id: "w-countdown", cls: "", render: () => `<p class="wlabel">Countdown</p><hr class="wdiv">` + Object.values(SECTIONS).map((s) => {
+      const cd = countdown(s.date);
+      return `<div class="cd-row"><div><div class="cd-n">${cd.n}</div><div class="cd-l">${typeof cd.n === "number" ? `${cd.label} · ${esc(s.label.toLowerCase())}` : `${esc(s.label)}: ${cd.label}`}</div></div><span class="cd-date">${fmtDay(s.date, { month: "short", day: "numeric" })}</span></div>`;
+    }).join("") },
+  { id: "w-reminder", cls: "", render: () => `<p class="reminder">${esc(REMINDER)}</p>` },
+  { id: "w-money", cls: "c1", render: () => {
+      const total = Number(state.settings.budgetTotal) || 0, planned = sum(state.items, "planned"), paid = sum(state.items, "paid");
+      return `<p class="now-label">Spend · planned so far</p><p class="now-val">${money(planned)}</p><p class="now-change">${money(paid)} paid · ${pct(paid, planned)}%</p>
+        <p class="now-sub">${total ? `of ${money(total)} total · ${planned > total ? money(planned - total) + " over" : money(total - planned) + " unallocated"}` : "Set a total on the Spend tab"}</p>`;
+    } },
+  { id: "w-photos", cls: "photo-card", render: null },
+  { id: "w-week", cls: "", render: () => {
+      const open = state.tasks.filter((t) => !t.done), t0 = startOfToday(), rows = [];
+      const late = open.filter((t) => t.due && daysUntil(t.due) < 0).sort(byDue);
+      if (late.length) rows.push(`<div class="wk-row late"><span class="wk-day">Overdue</span><span class="wk-desc">${esc(late[0].title)}${late.length > 1 ? ` +${late.length - 1}` : ""}</span></div>`);
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(t0); d.setDate(t0.getDate() + i);
+        const due = open.filter((t) => t.due === isoDay(d));
+        const day = d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+        rows.push(`<div class="wk-row${i === 0 ? " today" : ""}${due.length ? "" : " empty-day"}"><span class="wk-day">${day}</span><span class="wk-desc">${due.length ? esc(due[0].title) + (due.length > 1 ? ` +${due.length - 1}` : "") : "Nothing due"}</span>${i === 0 ? '<span class="wk-dot"></span>' : ""}</div>`);
+      }
+      return `<p class="wlabel">Week at a glance</p><hr class="wdiv">${rows.join("")}`;
+    } },
+  { id: "w-load", cls: "", render: () => {
+      const open = state.tasks.filter((t) => !t.done);
+      return `<p class="wlabel">Open tasks</p><hr class="wdiv">` + [...Object.keys(OWNERS), ""].map((k) => `<div class="load-row">${pill(k)}<b>${open.filter((t) => (OWNERS[t.who] ? t.who : "") === k).length}</b></div>`).join("");
+    } },
+].filter((w) => (w.id !== "w-photos" || PHOTOS.length) && (w.id !== "w-countdown" || Object.keys(SECTIONS).length));
+
+function buildRail() {
+  $("#side").innerHTML = WIDGETS.map((w) => `<div class="widget glass${w.cls ? " " + w.cls : ""}" id="${w.id}"></div>`).join("");
+}
+function renderSide() {
+  WIDGETS.forEach((w) => { if (w.render) document.getElementById(w.id).innerHTML = w.render(); });
+  if (PHOTOS.length) renderPhotos();
+}
+
+function renderPhotos() {
+  const el = $("#w-photos");
+  if (!el.firstChild) {
+    el.innerHTML = `<div class="photo"><img class="ph-layer" alt=""><img class="ph-layer" alt=""><div class="photo-dots"></div></div>`;
+    PHOTOS.forEach((p) => { new Image().src = p.src; });   // warm the cache so fades never wait on the network
+  }
+  el.querySelector(".photo-dots").innerHTML = PHOTOS.length > 1 ? PHOTOS.map((_, i) => `<button data-action="photo" data-id="${i}" aria-label="Photo ${i + 1} of ${PHOTOS.length}" aria-current="${i === state.photoIndex}"></button>`).join("") : "";
+  const p = PHOTOS[state.photoIndex];
+  if (photoShown !== p.key) showPhoto(p);
+}
+
+async function showPhoto(p) {
+  photoShown = p.key;
+  const layers = $("#w-photos").querySelectorAll(".ph-layer");
+  const incoming = layers[1 - photoLayer], outgoing = layers[photoLayer];
+  incoming.src = p.src; incoming.alt = p.caption; incoming.style.objectPosition = p.focus;
+  try { await incoming.decode(); } catch (e) {}
+  if (photoShown !== p.key) return;   // a newer photo was picked meanwhile
+  incoming.classList.add("on"); outgoing.classList.remove("on"); outgoing.alt = "";
+  photoLayer = 1 - photoLayer;
+}
+
+/* ===================== render ===================== */
+
+// The page re-renders from innerHTML on every change. Keep half-typed drafts and the focused field intact.
+function captureFields() {
+  const drafts = [];
+  document.querySelectorAll("#main form[data-form] [id]").forEach((el) => { if (el.matches("input:not([type=hidden]),select,textarea")) drafts.push([el.id, el.value]); });
+  const a = document.activeElement;
+  let focus = null;
+  if (a && a.id && $("#main").contains(a) && a.matches("input,select,textarea")) {
+    focus = { id: a.id, value: a.value, start: null, end: null };
+    try { focus.start = a.selectionStart; focus.end = a.selectionEnd; } catch (e) {}
+  }
+  return { drafts, focus };
+}
+function restoreFields({ drafts, focus }) {
+  drafts.forEach(([id, v]) => { const el = document.getElementById(id); if (el) el.value = v; });
+  if (!focus) return;
+  const el = document.getElementById(focus.id);
+  if (!el) return;
+  if (!el.closest("form")) el.value = focus.value;   // inline fields being typed in
+  el.focus({ preventScroll: true });
+  try { if (focus.start != null) el.setSelectionRange(focus.start, focus.end); } catch (e) {}
+}
+
+function render() {
+  const fields = captureFields();
+  hideTooltip();
+  $("#tabs").innerHTML = TABS.map(([k, l]) => `<button class="app-tab" data-action="tab" data-id="${k}"${state.tab === k ? ' aria-current="page"' : ""}>${esc(l)}</button>`).join("");
+  renderSub();
+  const views = { home: homeView, budget: budgetView, people: peopleView, dashboard: dashboardView };
+  $("#main").innerHTML = views[state.tab] ? views[state.tab]() : sectionView(state.tab);
+  const wide = WIDE_TABS.has(state.tab);
+  $("#page").classList.toggle("wide", wide);
+  $("#side").hidden = wide;
+  if (!wide) renderSide();
+  restoreFields(fields);
+  if (wide && animateDash && state.status === "live") { animateDash = false; runDashAnimations(); }
+}
+
+function renderSub() {
+  const today = new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
+  let context = "";
+  if (state.tab === "home") {
+    const next = Object.values(SECTIONS).map((s) => ({ s, d: daysUntil(s.date) })).filter((x) => x.d >= 0).sort((a, b) => a.d - b.d)[0];
+    if (next) context = `${plural(next.d, "day")} to ${esc(next.s.label.toLowerCase())} go-live`;
+  } else if (SECTIONS[state.tab]) context = fmtDay(SECTIONS[state.tab].date, { weekday: "long", month: "long", day: "numeric", year: "numeric" });
+  const chips = ME_CHOICES.map((k) => `<button class="chip" data-action="me" data-id="${k}" aria-pressed="${state.me === k}">${esc(OWNERS[k].name)}</button>`).join("");
+  $("#hero-sub").innerHTML = `<span>${today}</span>${context ? `<span>${context}</span>` : ""}<span class="viewing" id="viewing" role="group" aria-label="Who's using this">I'm ${chips}</span>`;
+}
+
+function setGreeting(fade) {
+  const list = TAB_LINES[state.tab] || HERO_LINES;
+  const key = TAB_LINES[state.tab] ? state.tab : "_";
+  const last = setGreeting.last || (setGreeting.last = {});
+  let i;
+  do { i = Math.floor(Math.random() * list.length); } while (list.length > 1 && i === last[key]);
+  last[key] = i;
+  const [lead, ending, credit] = list[i];
+  const show = () => {
+    const g = $("#greeting");
+    g.innerHTML = `${esc(lead)}<strong>${esc(ending)}</strong>`;
+    g.classList.toggle("long", (lead + ending).length > 52);
+    $("#hero-deck").textContent = credit;
+  };
+  const els = [$("#greeting"), $("#hero-deck")];
+  if (!fade || REDUCED_MOTION) { show(); return; }
+  els.forEach((el) => (el.style.opacity = "0"));
+  setTimeout(() => { show(); els.forEach((el) => (el.style.opacity = "1")); }, 260);
+}
+
+function setTab(tab, { scroll = true } = {}) {
+  if (!TABS.some(([k]) => k === tab)) tab = "home";
+  const changed = tab !== state.tab;
+  state.tab = tab; state.editing = ""; state.drill = null;
+  if (WIDE_TABS.has(tab)) animateDash = true;
+  try { history.replaceState(null, "", "#" + tab); } catch (e) {}
+  if (changed) setGreeting(true);
+  render();
+  if (scroll) scrollTo({ top: 0 });
+}
+
+/* ---------- dashboard motion: draw from zero on arrival ---------- */
+
+function runDashAnimations() {
+  if (REDUCED_MOTION) return;
+  const segs = document.querySelectorAll(".dseg"), bars = document.querySelectorAll(".hbar");
+  segs.forEach((el) => { el.style.transition = "none"; el.style.strokeDasharray = `0 ${el.dataset.circ}`; });
+  bars.forEach((el) => { el.style.transition = "none"; el.style.transform = "scaleX(0)"; });
+  void document.body.offsetWidth;
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    segs.forEach((el) => { el.style.transition = ""; el.style.strokeDasharray = ""; });
+    bars.forEach((el) => { el.style.transition = ""; el.style.transform = ""; });
+  }));
+}
+
+/* ---------- drill-down: slides open, resizes between slices, slides closed ---------- */
+// Height and opacity only: a transform would unpin the glass background on desktop.
+
+const DRILL_MS = 380;
+let drillTimer = 0;
+function openDrill(type, key) {
+  clearTimeout(drillTimer);
+  const before = $("#drill"), fromH = before ? before.offsetHeight : 0;
+  state.drill = { type, key };
+  render();
+  const el = $("#drill");
+  if (!el) return;
+  const reveal = () => el.scrollIntoView({ behavior: REDUCED_MOTION ? "auto" : "smooth", block: "nearest" });
+  if (REDUCED_MOTION) { reveal(); return; }
+  const toH = el.offsetHeight;
+  el.style.transition = "none"; el.style.height = fromH + "px";
+  if (!before) { el.style.opacity = "0"; el.style.marginTop = "0px"; }
+  void el.offsetHeight;
+  el.style.transition = ""; el.style.height = toH + "px"; el.style.opacity = "1"; el.style.marginTop = "";
+  drillTimer = setTimeout(() => { el.style.height = ""; reveal(); }, DRILL_MS);
+}
+function closeDrill() {
+  clearTimeout(drillTimer);
+  const el = $("#drill");
+  if (!el || REDUCED_MOTION) { state.drill = null; render(); return; }
+  el.style.height = el.offsetHeight + "px";
+  void el.offsetHeight;
+  el.style.height = "0px"; el.style.opacity = "0"; el.style.marginTop = "0px";
+  drillTimer = setTimeout(() => { state.drill = null; render(); }, DRILL_MS);
+}
+
+/* ---------- tooltip (any element with data-tip-name) ---------- */
+
+const tooltip = $("#tooltip");
+function hideTooltip() { tooltip.hidden = true; }
+document.addEventListener("pointerover", (e) => {
+  const el = e.target.closest && e.target.closest("[data-tip-name]");
+  if (!el) return;
+  $("#tt-title").textContent = el.dataset.tipName;
+  $("#tt-body").innerHTML = `<span class="tt-dot" style="background:${el.dataset.tipColor}"></span><span class="tt-val">${esc(el.dataset.tipVal)}</span>${el.dataset.tipPct !== "" ? `<span class="tt-pct">${esc(el.dataset.tipPct)}%</span>` : ""}`;
+  tooltip.hidden = false;
+});
+document.addEventListener("pointerout", (e) => { if (e.target.closest && e.target.closest("[data-tip-name]")) hideTooltip(); });
+document.addEventListener("pointermove", (e) => {
+  if (tooltip.hidden) return;
+  let x = e.clientX + 16; const y = e.clientY - 12;
+  if (x + 190 > innerWidth) x = e.clientX - 196;
+  tooltip.style.left = x + "px"; tooltip.style.top = y + "px";
+}, { passive: true });
+
+/* ---------- liquid glass edge glow (mouse only) ---------- */
+
+let glowEl = null;
+document.addEventListener("pointermove", (e) => {
+  if (e.pointerType && e.pointerType !== "mouse") return;
+  const el = e.target.closest ? e.target.closest(".glass,.kpi,.app-tab") : null;
+  if (glowEl && glowEl !== el) glowEl.classList.remove("glow");
+  glowEl = el;
+  if (!el) return;
+  const r = el.getBoundingClientRect();
+  el.style.setProperty("--mx", (((e.clientX - r.left) / r.width) * 100).toFixed(1) + "%");
+  el.style.setProperty("--my", (((e.clientY - r.top) / r.height) * 100).toFixed(1) + "%");
+  el.classList.add("glow");
+}, { passive: true });
+document.addEventListener("pointerleave", () => { if (glowEl) glowEl.classList.remove("glow"); glowEl = null; });
+
+/* ---------- toast, with optional Undo ---------- */
+
+let toastTimer = 0;
+function toast(msg, { bad = false, undo = null } = {}) {
+  const t = $("#toast");
+  clearTimeout(toastTimer);
+  t.className = bad ? "bad" : "";
+  t.innerHTML = `<span class="dot"></span><span class="msg"></span>${undo ? '<button type="button">Undo</button>' : ""}`;
+  t.querySelector(".msg").textContent = msg;
+  if (undo) t.querySelector("button").onclick = () => { t.hidden = true; undo(); };
+  t.hidden = false;
+  toastTimer = setTimeout(() => { t.hidden = true; }, undo ? 6000 : 3200);
+}
+
+/* ===================== writes ===================== */
+
+async function save(promise, okMsg) {
+  try { await promise; if (okMsg) toast(okMsg); return true; }
+  catch (e) { toast("Couldn't save. Check your connection and try again.", { bad: true }); return false; }
+}
+function canWriteNow() {
+  if (!state.canWrite) { toast("You can view this page but not change it.", { bad: true }); return false; }
+  return true;
+}
+
+const LABEL = { tasks: "Task", items: "Spend item", people: "Contact" };
+async function removeDoc(kind, id) {
+  if (!canWriteNow() || !LABEL[kind]) return;
+  const row = state[kind].find((r) => r.id === id);
+  if (!row) return;
+  const { id: _omit, ...copy } = row;
+  if (await save(store.remove(kind, id))) toast(`${LABEL[kind]} deleted`, { undo: () => save(store.set(kind, id, copy), "Restored") });
+}
+
+function toggleTask(id) {
+  if (!canWriteNow()) return;
+  const t = state.tasks.find((x) => x.id === id);
+  if (!t) return;
+  if (!t.done && !OWNERS[state.me]) {
+    toast(`Tap ${ME_CHOICES.map((k) => OWNERS[k].name).join(" or ")} at the top first, so the page knows who finished it.`);
+    const v = $("#viewing"); if (v) { v.classList.remove("nudge"); void v.offsetWidth; v.classList.add("nudge"); }
+    return;
+  }
+  save(store.update("tasks", id, t.done ? { done: false, doneBy: "", doneAt: 0 } : { done: true, doneBy: state.me, doneAt: Date.now() }));
+}
+
+function setMe(who) {
+  state.me = who;
+  try { localStorage.setItem(STORAGE_KEY + ":me", who); } catch (e) {}
+  render();
+}
+
+async function copyText(btn) {
+  const value = btn.dataset.copy;
+  try { await navigator.clipboard.writeText(value); toast("Copied " + value); }
+  catch (e) {
+    const span = btn.previousElementSibling;
+    if (span) { const r = document.createRange(); r.selectNodeContents(span); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+    toast("Selected. Press Ctrl+C or ⌘C to copy.");
+  }
+}
+
+/* ===================== events (delegated: one listener per type) ===================== */
+
+document.addEventListener("click", (e) => {
+  const drill = e.target.closest && e.target.closest("[data-drill-type]");
+  if (drill) { openDrill(drill.dataset.drillType, drill.dataset.drillKey); return; }
+  const b = e.target.closest && e.target.closest("[data-action]");
+  if (!b) return;
+  const { action, id, kind } = b.dataset;
+  switch (action) {
+    case "tab": setTab(id); break;
+    case "filter": state.filter = id; render(); break;
+    case "me": setMe(id); break;
+    case "toggle": toggleTask(id); break;
+    case "delete": removeDoc(kind, id); break;
+    case "edit": { state.editing = id; render(); const f = $("#main form[data-form^='edit'] input"); if (f) f.focus(); break; }
+    case "cancel": state.editing = ""; render(); break;
+    case "copy": copyText(b); break;
+    case "close-drill": closeDrill(); break;
+    case "photo": state.photoIndex = Number(id) || 0; renderPhotos(); break;
+  }
+});
+
+document.addEventListener("change", (e) => {
+  const el = e.target, kind = el.dataset && el.dataset.change;
+  if (!kind) return;
+  if (el.tagName === "SELECT") el.blur();
+  if (!canWriteNow()) { render(); return; }
+  const id = el.dataset.id, num = (v) => Math.max(0, Number(v) || 0);
+  switch (kind) {
+    case "task-who": save(store.update("tasks", id, { who: el.value })); break;
+    case "person-status": save(store.update("people", id, { status: el.value })); break;
+    case "person-note": save(store.update("people", id, { note: el.value.trim() })); break;
+    case "item-paid": save(store.update("items", id, { paid: num(el.value) })); break;
+    case "budget-total": save(store.setSettings({ ...state.settings, budgetTotal: num(el.value) }), "Spend total saved"); break;
+  }
+});
+
+document.addEventListener("keydown", (e) => { if (e.key === "Enter" && e.target.matches && e.target.matches("input[data-change]")) e.target.blur(); });
+
+document.addEventListener("submit", async (e) => {
+  const f = e.target.closest && e.target.closest("form[data-form]");
+  if (!f) return;
+  e.preventDefault();
+  if (!canWriteNow()) return;
+  const d = Object.fromEntries(new FormData(f));
+  const str = (v) => String(v ?? "").trim(), num = (v) => Math.max(0, Number(v) || 0);
+  const part = PARTS[d.part] ? d.part : "general";
+  const kind = f.dataset.form, id = f.dataset.id;
+  const firstFieldId = (f.querySelector("input:not([type=hidden])") || {}).id;
+  let ok = false;
+  switch (kind) {
+    case "add-task": if (!str(d.title)) return; ok = await save(store.add("tasks", { title: str(d.title), who: OWNERS[d.who] ? d.who : "", part, due: d.due || "", done: false, doneBy: "", doneAt: 0, createdAt: Date.now() }), "Task added"); break;
+    case "add-person": if (!str(d.name)) return; ok = await save(store.add("people", { name: str(d.name), role: str(d.role), email: str(d.email), phone: str(d.phone), part, status: "Researching", note: "" }), "Added " + str(d.name)); break;
+    case "add-item": if (!str(d.name)) return; ok = await save(store.add("items", { name: str(d.name), planned: num(d.planned), paid: 0, part, note: str(d.note) }), "Spend item added"); break;
+    case "edit-task": ok = await save(store.update("tasks", id, { title: str(d.title), part, due: d.due || "" }), "Saved"); break;
+    case "edit-person": ok = await save(store.update("people", id, { name: str(d.name), role: str(d.role), email: str(d.email), phone: str(d.phone), part }), "Saved"); break;
+    case "edit-item": ok = await save(store.update("items", id, { name: str(d.name), planned: num(d.planned), part, note: str(d.note) }), "Saved"); break;
+  }
+  if (!ok) return;
+  if (kind.startsWith("add")) {
+    // a change may have re-rendered the form while the write was in flight, so reset the live one
+    const first = firstFieldId && document.getElementById(firstFieldId);
+    const live = first ? first.form : f;
+    const keepFocus = live.contains(document.activeElement);
+    live.reset();
+    if (first && keepFocus) first.focus({ preventScroll: true });
+  } else {
+    state.editing = "";
+    if (document.activeElement) document.activeElement.blur();
+  }
+  render();
+});
+
+/* ---------- chrome frosts in once the page scrolls ---------- */
+
+let ticking = false;
+function onScroll() { $("#chrome").classList.toggle("scrolled", (scrollY || 0) > 10); ticking = false; }
+addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+
+/* ---------- rail widgets take turns at the top (desktop, every 8s, paused on hover/focus) ---------- */
+
+let cycleTimer = 0;
+function cycleWidgets() {
+  const side = $("#side");
+  if (side.hidden || side.contains(document.activeElement)) return;
+  const items = [...side.children].filter((el) => !el.hidden);
+  if (items.length < 2) return;
+  const [top, ...rest] = items;
+  top.style.transition = "opacity .25s ease";
+  top.style.opacity = "0";
+  setTimeout(() => {
+    const before = rest.map((el) => el.getBoundingClientRect().top);
+    side.appendChild(top);
+    // slide with `top` (position:relative), not a transform, so the pinned glass stays aligned
+    rest.forEach((el, i) => { el.style.transition = "none"; el.style.top = `${before[i] - el.getBoundingClientRect().top}px`; });
+    void side.offsetHeight;
+    rest.forEach((el) => { el.style.transition = "top .5s cubic-bezier(.4,0,.2,1)"; el.style.top = "0px"; });   // "0px", not "": a slide to auto never animates
+    setTimeout(() => {
+      top.style.transition = "opacity .35s ease";
+      top.style.opacity = "";
+      setTimeout(() => items.forEach((el) => { el.style.transition = ""; el.style.top = ""; }), 380);
+    }, 520);
+  }, 260);
+}
+function startCycle() {
+  if (REDUCED_MOTION || cycleTimer || !matchMedia("(min-width: 861px)").matches) return;
+  cycleTimer = setInterval(() => { if (!document.hidden) cycleWidgets(); }, 8000);
+}
+function stopCycle() { clearInterval(cycleTimer); cycleTimer = 0; }
+$("#side").addEventListener("mouseenter", stopCycle);
+$("#side").addEventListener("mouseleave", startCycle);
+
+if (PHOTOS.length > 1) setInterval(() => {
+  if (document.hidden || $("#side").hidden || $("#w-photos").matches(":hover")) return;
+  state.photoIndex = (state.photoIndex + 1) % PHOTOS.length;
+  renderPhotos();
+}, 9000);
+
+/* ===================== boot ===================== */
+
+function boot() {
+  $("#brand").innerHTML = BRAND_HTML;
+  const hash = location.hash.slice(1);
+  if (TABS.some(([k]) => k === hash)) state.tab = hash;
+  if (WIDE_TABS.has(state.tab)) animateDash = true;
+  buildRail();
+  setGreeting(false);
+  render();
+  onScroll();
+  startCycle();
+  store.onChange((data) => {
+    state.tasks = data.tasks.slice();
+    state.items = data.items.slice();
+    state.people = [...data.people].sort((a, b) => String(a.name).localeCompare(String(b.name)));
+    state.settings = { ...data.settings };
+    state.status = "live";
+    render();
+  });
+  store.seed(DEMO);
+}
+
+boot();
+</script>
+</body>
+</html>
