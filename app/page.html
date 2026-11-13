@@ -210,9 +210,13 @@ select.field{padding-right:28px}
 .new-pill{align-self:center;border:0;border-radius:99px;padding:6px 14px;font-size:12.5px;font-weight:600;background:var(--accent);color:var(--on-accent);cursor:pointer;box-shadow:var(--shadow)}
 .card{display:flex;flex-direction:column;gap:6px;cursor:pointer}
 .card-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 14px}
-.card-top .title{font-size:16px}
+.card-top .title{font-size:16.5px;color:var(--accent)}
+.rp-title h2.acct{color:var(--accent)}
 .card-tags{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12.5px;color:var(--mute)}
 .card-tags b{font-weight:600;color:var(--strong)}
+.card-tags .acv b,.fact .v.acv{color:color-mix(in srgb,var(--c3) 82%,var(--strong));font-weight:600}
+.card-tags .vs{color:var(--ink)}
+.card-tags .meta{color:var(--mute-faint)}
 .card .reason{font-size:13.5px;line-height:1.45;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .card[aria-expanded="true"]{cursor:default}
 .empty{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
@@ -623,16 +627,16 @@ async function postReview(report) {
 }
 
 /* ════════════════════ REPORT ════════════════════ */
-function fact(label, v, strong) { return h("div", { class: "fact" }, h("span", { class: "lbl", text: label }), h("span", { class: "v" + (strong ? " strong" : ""), text: v || "—" })); }
+function fact(label, v, cls) { return h("div", { class: "fact" }, h("span", { class: "lbl", text: label }), h("span", { class: "v" + (cls ? " " + cls : ""), text: v || "—" })); }
 function renderReport(r, opts) {
   opts = opts || {};
   const H = r.header || {};
   const wrap = h("div", { class: "report" });
   const head = h("div", { class: "glass accent box", style: "gap:12px" },
-    h("div", { class: "rp-title" }, h("h2", { text: H.deal || "Unnamed deal" }), outcomeEl(H.outcome)),
+    h("div", { class: "rp-title" }, h("h2", { class: "acct", text: H.deal || "Unnamed deal" }), outcomeEl(H.outcome)),
     h("div", { class: "facts" },
-      fact("ACV", H.acv ? fmtACV(H.acv.amount) : "Not stated", !!H.acv),
-      fact("Reason", H.tag, true),
+      fact("ACV", H.acv ? fmtACV(H.acv.amount) : "Not stated", H.acv ? "acv" : ""),
+      fact("Reason", H.tag, "strong"),
       fact("Up against", H.competitor)),
     H.reason ? h("p", { class: "why", text: H.reason }) : null,
     h("p", { class: "meta-line", text: [r.rep ? "AE: " + r.rep : null, opts.authorName ? "Reviewed by " + opts.authorName : null, r.createdAt ? fmtDate(r.createdAt) : null, r.editedAt ? "Edited " + fmtDate(r.editedAt) : null].filter(Boolean).join(" · ") }));
@@ -699,9 +703,9 @@ function cardEl(c) {
   const author = c.example ? "" : feed.names[c.authorId] || "";
   const el = h("article", { class: "glass box card", "aria-expanded": String(open), tabindex: "0" },
     h("div", { class: "card-top" }, h("p", { class: "title", text: c.deal || "Unnamed deal" }), outcomeEl(c.outcome)),
-    h("div", { class: "card-tags" }, h("span", {}, "ACV ", h("b", { text: fmtACV(c.acv) })), h("span", {}, "Reason ", h("b", { text: c.tag || "—" })),
-      c.competitor ? h("span", { text: "vs " + c.competitor }) : null, c.rep ? h("span", { text: "AE: " + c.rep }) : null,
-      author ? h("span", { text: "by " + author }) : null, c.createdAt ? h("span", { text: fmtDate(c.createdAt) }) : null),
+    h("div", { class: "card-tags" }, h("span", { class: "acv" }, "ACV ", h("b", { text: fmtACV(c.acv) })), h("span", {}, "Reason ", h("b", { text: c.tag || "—" })),
+      c.competitor ? h("span", { class: "vs", text: "vs " + c.competitor }) : null, c.rep ? h("span", { class: "meta", text: "AE: " + c.rep }) : null,
+      author ? h("span", { class: "meta", text: "by " + author }) : null, c.createdAt ? h("span", { class: "meta", text: fmtDate(c.createdAt) }) : null),
     !open && c.reason ? h("p", { class: "reason", text: c.reason }) : null);
   const detail = h("div", { hidden: !open });
   el.append(detail);
