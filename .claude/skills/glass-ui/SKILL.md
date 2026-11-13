@@ -36,7 +36,7 @@ Full-page screenshots show seams where each screenful ends; that's the screensho
 - **Rim light:** `.glass::before` is a 1px ring lit where the mouse is. The JS sets `--mx/--my` and `.glow`. Mouse only.
 - **Shell:** `.bg-scene` (fixed backdrop), `.chrome` (fixed nav, clear at the top, frosts in after 10px of scroll), `.hero` (`.headline` at weight 300 with a `<strong>` ending at 600, plus a `.deck` line), `.page` (main column + 284px sticky `.side`; add `.wide` to drop the side column; stacks under 860px).
 - **Layout inside `main`:** `.grid2`, `.grid4` (2-up on phones), `.sh` section heading (`.sh-label` in the accent, `.sh-meta` muted).
-- **Inside a box:** `.lbl` small-caps label, `.title`, `.text`, `.big` number (tabular), `.pair` label/value rows (add `.divide` to the box for hairlines between them), `.btn` / `.btn.ghost` (pill buttons), `.pill` badge (tint it with `--c`), `.field`, `.table`.
+- **Box content styles:** `.lbl` small-caps label, `.title`, `.text`, `.big` number (tabular), `.pair` label/value rows (add `.divide` to the box for hairlines between them), `.btn` / `.btn.ghost` (pill buttons), `.pill` badge (tint it with `--c`), `.field`, `.table`.
 
 ## Using it
 
