@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.5",
+ "header": {
+  "deal": "Kestrel Learning",
+  "ae": "Elena",
+  "acv": {
+   "amount": 320000,
+   "quote": "The account was worth about three hundred and twenty K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "tag": "Approval rates",
+  "reason": "We lost the international half of the account to Adyen. Adyen ran a test on Kestrel's international traffic and showed results by country, while we answered with an average uplift and our own market-by-market analysis arrived three weeks late, after the test was finished. Elena says it was decided before we got in the room, but we hadn't met the new head of payments before the renewal and were slow to show him his own approvals. The US business stayed."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Build an outreach play for when an account hires a new payments leader: offer a by-country declines review in their first month.",
+   "quote": "the first thing he did was pull declines by country. A few of their international markets looked bad to him.",
+   "who": "Elena, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Arm the head of payments with a CFO-ready page that turns his approval gaps by market into dollars at stake.",
+   "quote": "I can't take an average to my CFO.",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Write a rep counter to 'local acquiring' and ask Kestrel what Adyen's country test showed, since we never saw the results.",
+   "quote": "I don't know what I'd have pitched against that.",
+   "who": "Elena, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Stop answering approval questions with the Authorization Boost average-uplift claim. Lead with the customer's own rates by country, card type and issuer.",
+   "quote": "that's an average. What's mine?",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a market-by-market approvals report with reasons that ships in days, and name a monthly performance owner for strategic accounts.",
+   "quote": "He asked who at Stripe looks at his numbers every month, and I didn't have a name.",
+   "who": "Elena, AE"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Use 'approvals' and 'money left on the table' in our messaging instead of 'authorization' and 'uplift'.",
+   "quote": "Money left on the table.",
+   "who": "Stefan, head of payments"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 57676,
+  "cost": 0.17548980000000003,
+  "stage_ms": {
+   "reader": 29348,
+   "analyst": 28328
+  },
+  "stage_cost": {
+   "reader": 0.0479498,
+   "analyst": 0.12754000000000001
+  }
+ }
+}

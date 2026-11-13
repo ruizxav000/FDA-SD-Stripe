@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.4",
+ "header": {
+  "deal": "Kestrel Learning",
+  "ae": "Elena",
+  "acv": {
+   "amount": 320000,
+   "quote": "The account was worth about three hundred and twenty K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "tag": "Approval rates",
+  "reason": "The international half of the account moved to Adyen's local acquiring and the US stayed. Adyen ran a test on the customer's own international traffic and showed results by country, while we answered with an average uplift and delivered our own market-by-market analysis three weeks late, after the test had finished. Elena says nothing could have been done, but the evidence points to a late and generic response to a new head of payments we had not met before the renewal."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Build an outreach play for when a customer hires a new payments leader, opening with a country-by-country approvals review before they pull the declines themselves.",
+   "quote": "the first thing he did was pull declines by country",
+   "who": "Elena, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Arm the head of payments with a CFO-ready page that shows his own approval gap by market in dollars, instead of an average uplift.",
+   "quote": "I can't take an average to my CFO.",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Pre-empt competitor traffic tests by offering our own per-country test on the customer's international traffic, and ask customers what Adyen's test results showed, since Stefan never shared them.",
+   "quote": "Adyen ran a test on a slice of their international traffic and came back with results by country.",
+   "who": "Elena, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Stop answering approval questions with the Authorization Boost average uplift claim, and lead with the customer's own approval rates by country, card type and issuer.",
+   "quote": "that's an average. What's mine?",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a fast-turnaround market-by-market approval report with decline reasons, and name the Stripe person who reviews it with the customer every month.",
+   "quote": "He asked who at Stripe looks at his numbers every month, and I didn't have a name.",
+   "who": "Elena, AE"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Use 'approvals' and 'money left on the table' in place of 'authorization' and 'uplift' in our international payments messaging.",
+   "quote": "Money left on the table.",
+   "who": "Stefan, head of payments"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 52198,
+  "cost": 0.16638180000000002,
+  "stage_ms": {
+   "reader": 29348,
+   "analyst": 22850
+  },
+  "stage_cost": {
+   "reader": 0.0479498,
+   "analyst": 0.11843200000000001
+  }
+ }
+}

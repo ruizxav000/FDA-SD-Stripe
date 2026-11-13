@@ -175,7 +175,7 @@ async function runShort(cfgFull, d) {
 
 function judgeShortPrompt(d, report) {
   const clean = { header: report.header, findings: report.findings };
-  return `You are grading a short AI-written deal review against an answer key written by a product-marketing lead. The review has only: account, ACV, outcome, competitor, a reason tag, a one-to-two sentence reason, and six labelled findings (trigger, who decided, competitor, our message, missing proof, the customer's words), each with a supporting quote. Ignore the answer key's section-by-section detail; use it to judge whether this short review got the essentials right. Be strict and consistent.
+  return `You are grading a short AI-written deal review against an answer key written by a product-marketing lead. The review has only: account, ACV, outcome, competitor, a reason tag, a one-to-two sentence reason, and six labelled insights (trigger, who decided, competitor, our message, missing proof, the customer's words), each an action with a supporting quote. Ignore the answer key's section-by-section detail; use it to judge whether this short review got the essentials right. Be strict and consistent.
 
 Scoring:
 - account: 1 = the account name (or, if the transcript never names it, a fair short description); 0 otherwise.
@@ -183,7 +183,7 @@ Scoring:
 - outcome: 1 = matches the key's outcome; 0 otherwise.
 - tag: 2 = the key's tag; 1 = the key's acceptable alternative; 0 otherwise.
 - reason: 2 = names the real reason the key gives (not the rep's framing where the key says they differ); 1 = partly; 0 = wrong or the rep's framing.
-- insights: for EACH of trigger, decider, competitor, message, proof, words, score 0-1: 1 = matches the key's corresponding section (its evidence and insight), with a quote that supports it; 0.5 = partly; 0 = wrong, generic, or "not covered" when the transcript had it. "Not covered" scores 1 only when the key says the interview didn't cover it.
+- insights: each of trigger, decider, competitor, message, proof, words is meant to be an ACTION for the product marketing team (a change to messaging, positioning, proof assets or what reps say), backed by a quote. Score each 0-1: 1 = a specific, actionable step that follows from the evidence and points the same way as the key's insight / expected messaging direction for that topic; 0.5 = actionable but generic, or right direction but mostly a description of what happened; 0 = a summary with no action, wrong, or "not covered" when the transcript had it.
 - repetitive: true if two findings make the same point.
 - fails: list every instance of invented content (a claim, figure, name or quote not supported by the transcript) and every "Fails if" condition the review triggers. Empty list if none.
 

@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.5",
+ "header": {
+  "deal": "Marlowe & Finch",
+  "ae": "Tom",
+  "acv": {
+   "amount": 600000,
+   "quote": "We proposed six hundred K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "tag": "In-store and online together",
+  "reason": "Angela, the COO, signed with Adyen after a store operations workshop where we described a till return instead of showing it, had no one who had run a store rollout, and said a partner would do installs. Tom names Raj as decider and points to the web side, but the store side is what decided it."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead store messaging with the broken cross-channel return: an online order the store can't see or refund at the till.",
+   "quote": "The store couldn't see the online order, so staff were refunding to gift cards or telling people to mail it back.",
+   "who": "Tom, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Arm reps to reach the COO beyond kickoff with a single-accountable-vendor story covering store installs and support, not partner handoffs.",
+   "quote": "I don't want two vendors pointing at each other.",
+   "who": "Angela, COO"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Pre-empt a retail-team pitch by introducing our store rollout people early; this rests on Raj's secondhand account, so confirm what Adyen showed.",
+   "quote": "they came in with a retail team, people who'd done store rollouts",
+   "who": "Tom, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Cut the 'line between them has pretty much disappeared' slide; keep the online checkout demo and add a step-by-step till return walkthrough.",
+   "quote": "that's a diagram.",
+   "who": "Bev, head of store operations"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a ready-to-call store-and-online retailer reference and a sample multi-store rollout plan covering dates, installers and old tills.",
+   "quote": "can I talk to them?",
+   "who": "Angela, COO"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Use 'the tills' and 'one system for the tills and the website' instead of 'point of sale' and 'unified commerce'.",
+   "quote": "One system for the tills and the website.",
+   "who": "Bev, head of store operations"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 73240,
+  "cost": 0.198103,
+  "stage_ms": {
+   "reader": 50845,
+   "analyst": 22395
+  },
+  "stage_cost": {
+   "reader": 0.079851,
+   "analyst": 0.118252
+  }
+ }
+}

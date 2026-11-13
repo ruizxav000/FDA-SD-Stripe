@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "text": "{\"account\":1,\"acv\":1,\"outcome\":1,\"tag\":2,\"reason\":2,\"insights\":{\"trigger\":1,\"decider\":1,\"competitor\":1,\"message\":1,\"proof\":1,\"words\":0},\"repetitive\":false,\"fails\":[\"Customer-language section reads as if the question had been answered (covered:true, no label that the rep deferred it to Slack or that the phrase came from elsewhere in the interview)\"],\"notes\":\"It got the ACV, the value-proof tag and the Maya-chose/Greg-decided reason right, kept the online-only scope in the reason, and turned trigger, decider, competitor, message and proof into specific actions that match the key. It treated customer language as answered when the rep deferred it to Slack, and the outcome field itself is a bare 'Won' with the scope note only in the reason.\"}",
+ "data": {
+  "account": 1,
+  "acv": 1,
+  "outcome": 1,
+  "tag": 2,
+  "reason": 2,
+  "insights": {
+   "trigger": 1,
+   "decider": 1,
+   "competitor": 1,
+   "message": 1,
+   "proof": 1,
+   "words": 0
+  },
+  "repetitive": false,
+  "fails": [
+   "Customer-language section reads as if the question had been answered (covered:true, no label that the rep deferred it to Slack or that the phrase came from elsewhere in the interview)"
+  ],
+  "notes": "It got the ACV, the value-proof tag and the Maya-chose/Greg-decided reason right, kept the online-only scope in the reason, and turned trigger, decider, competitor, message and proof into specific actions that match the key. It treated customer language as answered when the rep deferred it to Slack, and the outcome field itself is a bare 'Won' with the scope note only in the reason."
+ },
+ "ms": 15466,
+ "cost": 0.076516,
+ "in_tokens": 6323,
+ "out_tokens": 1297,
+ "model": "claude-opus-5-5"
+}

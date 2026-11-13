@@ -82,6 +82,10 @@ Key findings became one per insight (what started it, who decided, the competito
 
 Round 12 also stopped the reviewer from claiming we never reached a decider unless the transcript says so.
 
+## Rounds 13-14: insights as actions, not summaries
+
+Each of the six areas now asks for one action for the product marketing team (a verb-first change to messaging, positioning, proof or what reps say), with the quote as evidence. Round 13: 12.4/13, header perfect on all 8 deals, "Missing proof" actions perfect on all 8, 1 invented-content flag; 3 reviews had two overlapping actions. Round 14 added a rule against overlapping actions; it scored lower (12.3/13, 4 overlaps, 3 flags), so it was reverted and round 13 ships.
+
 ## Why several steps instead of one prompt
 
 The single-prompt Sonnet baseline is strong: 21.0, no invented content, half the time, a quarter of the cost. On score alone the multi-step design wins by about 1 point, which is close to the judge's own noise: the same setup scored anywhere from 18 to 24 on one deal across runs. The steps are kept for reasons the score doesn't capture:

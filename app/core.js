@@ -6,7 +6,7 @@
 (function (root) {
   "use strict";
 
-  const PIPELINE_VERSION = "2026-11-14.3";
+  const PIPELINE_VERSION = "2026-11-14.4";
 
   // ── Which model runs each stage (set from the model comparison; see eval/REPORT.md)
   const STAGE_MODELS = {
@@ -338,12 +338,12 @@ Reply with ONLY this JSON:
 
   // The six insights every review must answer (the seventh, the real reason, is the "reason" field).
   const INSIGHTS = [
-    ["trigger", "What started it", "What happened at the customer that started the evaluation, and so what moment our messaging should aim at."],
-    ["decider", "Who decided", "Who made the final call and how we know. Say if the decider was not our champion. Say we never met or reached someone only if the transcript says so."],
-    ["competitor", "The competitor", "What the customer told us about the competitor, and how their questions changed after meeting them. This is secondhand: if it is only the AE's guess, write 'the AE thinks'. If the AE didn't know, say so."],
-    ["message", "Our message", "Which parts of our pitch landed and which got silence or pushback. Name the specific claims."],
-    ["proof", "Missing proof", "What they asked for that we couldn't show."],
-    ["words", "Their words", "The customer's own words for their problem, and how they differ from the words we use. The quote must be the customer's words."],
+    ["trigger", "What started it", "From what started the evaluation: the moment or event our messaging should aim at."],
+    ["decider", "Who decided", "From who made the final call: who our message has to convince, and what that person needs to see. Say we never met or reached someone only if the transcript says so."],
+    ["competitor", "The competitor", "From what the customer said about the competitor and how their questions changed after meeting them: what we have to counter or pre-empt. This is secondhand: if it rests only on the AE's guess, say so."],
+    ["message", "Our message", "From which parts of our pitch landed and which got silence or pushback: what to keep, cut or change. Name the claim."],
+    ["proof", "Missing proof", "From what they asked for that we couldn't show: the proof asset, demo or reference to build."],
+    ["words", "Their words", "From the customer's own words for their problem: the words to use in our messaging instead of ours. The quote must be the customer's words."],
   ];
   const INSIGHT_KEYS = INSIGHTS.map((i) => i[0]);
 
@@ -363,14 +363,15 @@ Write:
 - competitor: who we were up against, "None (status quo)" if no one, or null if unknown.
 - tag: exactly one reason tag from the list. The outcome gives the direction: on a win, the tag is why they picked us. There is no price tag on purpose: when the rep blames price, find what was really behind it. To choose between close tags, ask what the decider was comparing when it was decided. If the interview never got to the reason, use "Not established".
 - reason: one or two plain sentences on why the deal was really won or lost. If the rep's own explanation differs from what the evidence shows, say so briefly.
-- insights: one finding for each of these, in this order:
+- insights: one ACTION for each of these, in this order:
 ${INSIGHTS.map(([k, n, d]) => `  - ${k} (${n}): ${d}`).join("\n")}
-  Each finding is one or two plain sentences: what happened, and what it suggests for our messaging or positioning. Plus one short supporting quote copied EXACTLY from the transcript, and who said it as "Name, role" (for example "Lucy, ecommerce director" or "Sam, AE").
-  If the interview never got to it, set covered to false and leave the rest empty. "I don't know" from the AE counts as covered: say the AE didn't know.
-  - Each finding makes its own point. Don't repeat another finding or the reason.
-  - Say what this deal suggests, not rules for every deal: one deal is one data point.
-  - Pick the quote that best proves the finding. Never use the AE's guess or hedge as the only support, unless the finding is about that guess.
-  - Never say someone reacted to something they never saw or heard.
+  An insight is not a summary of what happened. It is something the product marketing team can act on: a change to our messaging, positioning, proof assets, or what reps say. The quote carries what happened.
+  - One sentence, starting with a verb ("Lead with...", "Build...", "Stop opening with...", "Arm the champion with...", "Use..."). Ideally under 25 words.
+  - Specific: name the message, claim, proof asset, audience or words. "Improve our messaging" is not an insight.
+  - It must follow from this deal's evidence. Frame it as something to change or test; one deal is one data point, so no "always" or "every deal".
+  - Each insight is different from the others and from the reason.
+  - Plus one short supporting quote copied EXACTLY from the transcript that shows why, and who said it as "Name, role" (for example "Lucy, ecommerce director" or "Sam, AE"). Pick the quote that best proves it, never the AE's guess unless the insight is about that guess. Never claim someone reacted to something they never saw or heard.
+  - If the interview never got to the topic, set covered to false. If the AE didn't know, the action can be to find out (for example "Ask the customer what the competitor showed them").
 
 Reason tags:
 ${tagsBlock()}
@@ -393,7 +394,7 @@ JSON safety: inside any string value, write double quotation marks as single quo
 
 Reply with ONLY this JSON:
 {"account":"","ae":null,"acv":null,"outcome":"Won|Lost|No decision","competitor":null,"tag":"","reason":"",
- "insights":{${INSIGHT_KEYS.map((k) => `"${k}":{"covered":true,"finding":"","quote":"","who":""}`).join(",")}}}`;
+ "insights":{${INSIGHT_KEYS.map((k) => `"${k}":{"covered":true,"action":"","quote":"","who":""}`).join(",")}}}`;
   }
 
   function strategistPrompt({ analysis, ledger }) {
@@ -502,9 +503,10 @@ Reply with ONLY this JSON:
     const ins = r.insights || {};
     for (const [k, label] of INSIGHTS) {
       const f = ins[k] || {};
-      const ok = f.covered !== false && f.finding && f.quote && verbatim(f.quote);
-      if (f.covered !== false && f.finding && !ok) dropped.push(Object.assign({ key: k }, f));
-      findings.push(ok ? { key: k, label, covered: true, finding: uq(String(f.finding), k), quote: String(f.quote), who: f.who || null } : { key: k, label, covered: false });
+      const text = f.action || f.finding;
+      const ok = f.covered !== false && text && f.quote && verbatim(f.quote);
+      if (f.covered !== false && text && !ok) dropped.push(Object.assign({ key: k }, f));
+      findings.push(ok ? { key: k, label, covered: true, finding: uq(String(text), k), quote: String(f.quote), who: f.who || null } : { key: k, label, covered: false });
     }
     const header = {
       deal: (r.account && String(r.account).replace(/\s*\((?:company|customer)[^)]*\)\s*$/i, "").trim()) || "Unnamed deal",

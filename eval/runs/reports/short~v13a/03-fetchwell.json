@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.4",
+ "header": {
+  "deal": "Fetchwell",
+  "ae": "Priya",
+  "acv": {
+   "amount": 180000,
+   "quote": "A hundred and eighty K a year, on a three-year term."
+  },
+  "outcome": "Won",
+  "competitor": "Braintree",
+  "tag": "Developer experience",
+  "reason": "An engineer at Fetchwell built a working sitter payment flow in our sandbox over a weekend. That turned a bake-off into a yes for Daniel, the VP of Engineering, who treated this as an engineering decision. The rep called it 'a clean one,' but the Venmo question and the saved-card reference request were never answered."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Aim messaging at the moment a company launches new countries and its sitters must be paid locally, while its own payment code holds that launch back.",
+   "quote": "They were launching Canada, then the UK, and sitters have to get paid locally.",
+   "who": "Priya, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Win over the VP of Engineering with a hands-on sandbox build, and give finance a one-line answer on whether sitter pay timing changes.",
+   "quote": "this is an engineering decision, finance will sign what I bring them.",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Arm reps with a clear answer on keeping PayPal, Venmo and saved cards before 'what do we lose' comes up; what Braintree said is only the AE's guess, so ask the customer.",
+   "quote": "It went from 'how fast can we build this' to 'what do we lose.'",
+   "who": "Priya, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Stop opening with the average acceptance-rate improvement slide for low-ticket bookings; lead with docs, sandbox, sitter onboarding, identity checks and local-currency sitter pay.",
+   "quote": "our average booking is 38 dollars, I'm not losing sleep over auth rates.",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a saved-card migration reference from a customer of similar size that lost no cards, plus a written answer on keeping Venmo.",
+   "quote": "who's done this at our size without losing cards?",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Use 'stop babysitting this', 'sitter pay' and 'paid by Friday' in messaging instead of 'payouts' and 'marketplace'.",
+   "quote": "We want to stop babysitting this.",
+   "who": "Daniel, VP of Engineering"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 50843,
+  "cost": 0.16914659999999998,
+  "stage_ms": {
+   "reader": 32131,
+   "analyst": 18712
+  },
+  "stage_cost": {
+   "reader": 0.0543106,
+   "analyst": 0.114836
+  }
+ }
+}

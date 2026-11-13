@@ -1,0 +1,91 @@
+{
+ "version": "2026-11-14.5",
+ "header": {
+  "deal": "Fernbrook Garden Supply",
+  "ae": "Sam",
+  "acv": {
+   "amount": 95000,
+   "quote": "Ninety-five K ACV, on a two-year term."
+  },
+  "outcome": "Lost",
+  "competitor": "Fiserv (incumbent, through their bank)",
+  "tag": "Value proof",
+  "reason": "The CFO, Martin, decided from a controller's one-pager that compared only per-transaction rates. Nothing on it showed what the failed big-basket orders were costing, so he saw us as 'the same thing' at a higher price after the bank sharpened its rate. Sam blames price, but the real gap was that we never sized the value in Fernbrook's own numbers."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Aim messaging at unexplained checkout failures on high-value orders where the current processor can't say why cards fail.",
+   "quote": "She said about one in twelve online orders was failing at the payment step, and it was worse on the big baskets.",
+   "who": "Sam, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Build a CFO-facing total-cost comparison covering gateway fees and chargeback staffing, so a rate-only one-pager doesn't make us look like 'the same thing'.",
+   "quote": "Why would I pay more for the same thing.",
+   "who": "Martin, CFO"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Prepare reps to pre-empt an incumbent bank's rate-cut counter by saying early that a better rate leaves the failing orders unfixed.",
+   "quote": "After the bank came back, every email was the rate.",
+   "who": "Sam, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Keep the solutions engineer's explanation of why big-ticket orders get declined, and stop leaning on the generic average-acceptance uplift slide as the value claim.",
+   "quote": "When our solutions engineer, Farah, explained why big-ticket orders get knocked back and what we do about it, Lucy was nodding the whole way.",
+   "who": "Sam, AE"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a one-page business case template that prices the customer's failed orders from a three-month decline export, for champions to hand the CFO.",
+   "quote": "Lucy asked once if we had something she could hand Martin. Like a one-page business case.",
+   "who": "Sam, AE"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Use 'orders dying at the last step' and 'the big baskets' in messaging instead of 'declines' and acceptance uplift.",
+   "quote": "we do all the work to get someone to buy a four-thousand-dollar greenhouse and then the card says no.",
+   "who": "Lucy, ecommerce director"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": [
+   {
+    "where": "words",
+    "text": "acceptance uplift"
+   }
+  ]
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 59772,
+  "cost": 0.1916717,
+  "stage_ms": {
+   "reader": 37180,
+   "analyst": 22592
+  },
+  "stage_cost": {
+   "reader": 0.0596757,
+   "analyst": 0.131996
+  }
+ }
+}

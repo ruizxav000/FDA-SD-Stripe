@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "text": "{\"account\":1,\"acv\":1,\"outcome\":1,\"tag\":2,\"reason\":2,\"insights\":{\"trigger\":1,\"decider\":0.5,\"competitor\":1,\"message\":1,\"proof\":1,\"words\":0.5},\"repetitive\":true,\"fails\":[\"Customer-language finding is marked covered:true and uses an earlier-interview phrase without saying so, so it reads as if the skipped question was answered (the rep deferred it to Slack, T31-T32)\",\"Trigger finding says 'finance' split the churn; the transcript only says 'somebody' did (T2)\"],\"notes\":\"It got the account, the $210K ACV, the Value proof tag, the real reason (own-file recovery analysis unlocked Greg), the Maya/Greg correction and the online-only scope in the reason, and the message and proof actions match the key. The outcome field is a plain 'Won' (the scope note appears only in the reason), the decider action is about exit costs instead of giving the finance gatekeeper his own numbers and overlaps the competitor finding on contract terms, and customer language is wrongly presented as covered.\"}",
+ "data": {
+  "account": 1,
+  "acv": 1,
+  "outcome": 1,
+  "tag": 2,
+  "reason": 2,
+  "insights": {
+   "trigger": 1,
+   "decider": 0.5,
+   "competitor": 1,
+   "message": 1,
+   "proof": 1,
+   "words": 0.5
+  },
+  "repetitive": true,
+  "fails": [
+   "Customer-language finding is marked covered:true and uses an earlier-interview phrase without saying so, so it reads as if the skipped question was answered (the rep deferred it to Slack, T31-T32)",
+   "Trigger finding says 'finance' split the churn; the transcript only says 'somebody' did (T2)"
+  ],
+  "notes": "It got the account, the $210K ACV, the Value proof tag, the real reason (own-file recovery analysis unlocked Greg), the Maya/Greg correction and the online-only scope in the reason, and the message and proof actions match the key. The outcome field is a plain 'Won' (the scope note appears only in the reason), the decider action is about exit costs instead of giving the finance gatekeeper his own numbers and overlaps the competitor finding on contract terms, and customer language is wrongly presented as covered."
+ },
+ "ms": 21873,
+ "cost": 0.088444,
+ "in_tokens": 6359,
+ "out_tokens": 1879,
+ "model": "claude-opus-5-5"
+}

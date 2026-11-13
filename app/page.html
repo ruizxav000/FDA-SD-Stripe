@@ -197,8 +197,8 @@ select.field{padding-right:28px}
 .fi{display:grid;grid-template-columns:9.5em minmax(0,1fr);gap:4px 16px;padding:12px 0}
 .fi + .fi{border-top:1px solid var(--hair-faint)}
 .fi .k{font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--label);padding-top:3px}
-.fi .f{font-size:14.5px;line-height:1.5;color:var(--strong)}
-.fi .q{display:block;margin-top:4px;font-size:13px;line-height:1.45;color:var(--mute)}
+.fi .f{font-size:15px;line-height:1.45;color:var(--strong);font-weight:500}
+.fi .q{display:block;margin-top:5px;font-size:13px;line-height:1.45;color:var(--mute);font-weight:400}
 .fi .q::before{content:"\201C"} .fi .q .end::after{content:"\201D"}
 .fi.nc .f{color:var(--mute);font-size:13.5px}
 @media (max-width:860px){ .fi{grid-template-columns:minmax(0,1fr)} }
@@ -639,7 +639,7 @@ function renderReport(r, opts) {
   wrap.append(head);
 
   const fs = r.findings || [];
-  const findings = h("div", { class: "glass box" }, h("p", { class: "title", text: "Key findings" }));
+  const findings = h("div", { class: "glass box" }, h("p", { class: "title", text: "Insights" }));
   findings.append(h("div", { class: "findings" }, ...fs.map((f) => h("div", { class: "fi" + (f.covered === false ? " nc" : "") },
     h("span", { class: "k", text: f.label || "" }),
     f.covered === false ? h("span", { class: "f", text: "Not covered in the interview." })

@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.5",
+ "header": {
+  "deal": "Fetchwell",
+  "ae": "Priya",
+  "acv": {
+   "amount": 180000,
+   "quote": "A hundred and eighty K a year, on a three-year term."
+  },
+  "outcome": "Won",
+  "competitor": "Braintree",
+  "tag": "Developer experience",
+  "reason": "Their own engineer used our docs and sandbox to build a working sitter payment flow over a weekend, and that turned a bake-off into a decision for Daniel, the VP of Engineering who signed. Priya called it 'a clean one', but the PayPal and Venmo question and the saved-card reference request were never answered."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Aim messaging at the moment a company launches new countries and its engineers are stuck keeping sitter pay working.",
+   "quote": "They were launching Canada, then the UK, and sitters have to get paid locally.",
+   "who": "Priya, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Lead with VPs of Engineering by offering a guided sandbox path that lets their engineers build a working pay flow before the bake-off ends.",
+   "quote": "this is an engineering decision, finance will sign what I bring them.",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Write a clear PayPal, Venmo and saved-card answer that reps raise before a Braintree call. What Braintree said is only the AE's guess, so ask the customer.",
+   "quote": "Do we lose PayPal, do we lose Venmo, what happens to the saved cards.",
+   "who": "Priya, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Stop opening with the average acceptance-rate improvement slide for low-ticket bookings. Test leading with sitter onboarding, identity checks and local-currency pay instead.",
+   "quote": "our average booking is 38 dollars, I'm not losing sleep over auth rates.",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a reference story of a similar-size customer that moved saved cards over without losing any.",
+   "quote": "who's done this at our size without losing cards?",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Use 'sitter pay', 'paid by Friday' and 'payments shouldn't be a team' instead of 'payouts' and 'marketplace' in pitch and web copy.",
+   "quote": "Payments shouldn't be a team",
+   "who": "Daniel, VP of Engineering"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 49251,
+  "cost": 0.17079060000000001,
+  "stage_ms": {
+   "reader": 32131,
+   "analyst": 17120
+  },
+  "stage_cost": {
+   "reader": 0.0543106,
+   "analyst": 0.11648
+  }
+ }
+}

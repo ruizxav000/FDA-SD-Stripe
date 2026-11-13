@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.4",
+ "header": {
+  "deal": "Corelane Fitness",
+  "ae": null,
+  "acv": {
+   "amount": 210000,
+   "quote": "Two hundred and ten K ACV."
+  },
+  "outcome": "Won",
+  "competitor": "Global Payments",
+  "tag": "Value proof",
+  "reason": "We won the online membership billing because Tobi's session on one month of the customer's own failed renewals showed the controller what was recoverable. The contract had sat unsigned with him for two weeks and was signed four days later. The rep first credited Maya, but Greg held and signed the contract. The front desks stay with Global Payments, and phase two has no date."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Aim messaging at the moment a board churn review splits cancellations from failed cards, and offer to run that split for prospects.",
+   "quote": "somebody finally split it into people who cancelled and people whose card just failed.",
+   "who": "Speaker 2, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Arm the champion to bring the controller into an own-data failed-renewals session early, before the contract reaches him.",
+   "quote": "Greg hadn't said a word in two meetings, and he asked for the spreadsheet.",
+   "who": "Speaker 2, AE"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Prepare a rep answer on exit costs and front-desk hardware to counter an incumbent's terminal bundle and longer contract; the offer is known only through Maya.",
+   "quote": "Greg asked about termination fees twice.",
+   "who": "Speaker 2, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Test cutting the global slide and the 'unified commerce' phrase for North American fitness prospects, and open with recovered failed renewals instead.",
+   "quote": "is that the readers?",
+   "who": "Maya, head of digital"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a live demo of our reader inside the studio management software, with member check-in and a retail sale on one screen.",
+   "quote": "the studio managers will revolt.",
+   "who": "Maya, head of digital"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Use 'members who never meant to leave' in place of 'failed payment recovery' in fitness membership messaging.",
+   "quote": "members who never meant to leave.",
+   "who": "Maya, head of digital"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 66668,
+  "cost": 0.18510750000000004,
+  "stage_ms": {
+   "reader": 46056,
+   "analyst": 20612
+  },
+  "stage_cost": {
+   "reader": 0.07428350000000002,
+   "analyst": 0.110824
+  }
+ }
+}

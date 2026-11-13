@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.4",
+ "header": {
+  "deal": "Tallowfield Supply",
+  "ae": "Dana",
+  "acv": {
+   "amount": 140000,
+   "quote": "About a hundred and forty K a year."
+  },
+  "outcome": "Won",
+  "competitor": "Fiserv",
+  "tag": "Value proof",
+  "reason": "The deal turned when our solutions engineer priced the manual deposit matching from one month of the customer's own statements, and the CFO accepted it as 'that's my number, not yours.' The earlier portal and checkout pitch had stalled, and the rep had the deal at 20 percent."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Aim messaging at new CFOs facing a slow month-end close and hand-matched deposits, not at online portal launches.",
+   "quote": "She'd been there about four months, and her first month-end close took nine days.",
+   "who": "Dana, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Put the finance problem and its cost on page one of proposals, so a forwarded proposal still speaks to the CFO.",
+   "quote": "she read the first page and said it wasn't her problem",
+   "who": "Dana, AE"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Prepare reps to answer an incumbent bank's rate offer with deposit visibility and a named contact; ask customers what Fiserv actually showed, since the AE never saw it.",
+   "quote": "I didn't ask about my rates.",
+   "who": "Ines, CFO"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Lead with the payout reconciliation demo tied to the ERP; test cutting the 'financial infrastructure, global growth' opening and developer story for regional distributors.",
+   "quote": "go back.",
+   "who": "Ines, CFO"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a wholesale distributor reference customer and a live demo of branch counter readers landing in the same report.",
+   "quote": "this is a company that sells sweaters.",
+   "who": "Ines, CFO"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Use 'know where my money is' and 'the deposits' in finance-facing messaging instead of 'payments' and 'infrastructure'.",
+   "quote": "I just want to know where my money is.",
+   "who": "Ines, CFO"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 53216,
+  "cost": 0.195462,
+  "stage_ms": {
+   "reader": 35300,
+   "analyst": 17916
+  },
+  "stage_cost": {
+   "reader": 0.07501,
+   "analyst": 0.120452
+  }
+ }
+}
