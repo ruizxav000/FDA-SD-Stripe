@@ -719,7 +719,7 @@ function cardEl(c) {
   const detail = h("div", { class: "detail", hidden: true });
   const el = h("article", { class: "glass box card", "aria-expanded": "false", tabindex: "0" },
     h("p", { class: "title", text: c.deal || "Unnamed deal" }),
-    h("div", { class: "card-tags" }, outcomeEl(c.outcome), (c.products || []).length ? h("span", { class: "prod" }, h("b", { text: c.products.join(" + ") })) : null, h("span", { class: "acv" }, "ACV ", h("b", { text: fmtACV(c.acv) })), h("span", {}, "Reason ", h("b", { text: c.tag || "—" })),
+    h("div", { class: "card-tags" }, outcomeEl(c.outcome), h("span", { class: "prod" }, "Product: ", h("b", { text: (c.products || []).length ? c.products.join(" + ") : "—" })), h("span", { class: "acv" }, "ACV ", h("b", { text: fmtACV(c.acv) })), h("span", {}, "Reason ", h("b", { text: c.tag || "—" })),
       c.competitor ? h("span", { class: "vs", text: "vs " + c.competitor }) : null, c.rep ? h("span", { class: "meta", text: "AE: " + c.rep }) : null,
       author ? h("span", { class: "meta", text: "by " + author }) : null, c.createdAt ? h("span", { class: "meta", text: fmtDate(c.createdAt) }) : null),
     reason, detail);
