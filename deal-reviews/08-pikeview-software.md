@@ -1,0 +1,76 @@
+# Deal review 08: Pikeview Software
+
+*Mock transcript. The customer, the people and the conversation are invented for a demo. Nothing here is a real statement by or about any company.*
+
+- **Outcome:** No decision
+- **Competitor:** None (stay as they are)
+- **Incumbent:** Homegrown billing system on their bank's processor
+- **Customer:** Software company selling to property managers, bills landlords on subscriptions
+- **Account executive:** Renee
+- **Reviewer:** Product marketing (PMM)
+
+---
+
+**PMM:** Thanks, Renee. I run these on no-decisions too, same questions. What happened at the customer that started this evaluation?
+
+**Renee:** Um. Good question. There wasn't one big thing. Their VP of Product, Owen, had wanted to rebuild billing for a while. The billing system is homegrown, built by a guy who left, and every pricing change takes them a quarter. He reached out to us.
+
+**PMM:** Was there a date they had to hit?
+
+**Renee:** Not really. He wanted it done before they launched a new pricing tier, but the tier didn't have a date either.
+
+**PMM:** Who made the final call, and how do you know?
+
+**Renee:** The CFO, I guess? Diane. She froze it. Well, she froze everything. They missed their number in Q3 and she put a hold on all new vendor projects. So I don't know that you'd say she decided against us. She decided against everything.
+
+**PMM:** How do you know that's what happened?
+
+**Renee:** Owen told me. I never spoke to her.
+
+**PMM:** Was she in any meeting?
+
+**Renee:** No. Owen said he'd bring her in at the end.
+
+**PMM:** What did the customer bring up about the competitor?
+
+**Renee:** There wasn't one. It was us against doing nothing. Owen never looked at anybody else, as far as I know.
+
+**PMM:** Did anything change in their questions over the cycle?
+
+**Renee:** Toward the end Owen started asking for things for finance. Like, "do you have something that shows payback?" That started maybe a month before the freeze.
+
+**PMM:** Which part of our pitch got a reaction, and which got silence?
+
+**Renee:** Reaction: the billing demo. Changing a price in a few clicks, trials, proration. Owen said, "that's a quarter of roadmap in five minutes." His engineers were into it.
+
+Silence, hm. I don't know that anything got silence. We only ever talked to product and engineering. I guess the revenue framing. I said something about growing revenue and Owen said, "we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap."
+
+**PMM:** When did you first feel this wasn't going to close? What happened right before?
+
+**Renee:** The freeze email. Before that we were in procurement. Well, we'd sent paper.
+
+**PMM:** And right before the freeze?
+
+**Renee:** Owen had asked me for a payback number, like I said. I sent him the ROI deck. The general one, with the study. He said, "I can't get this past Diane without a number that's ours." We were going to set up a session to build one. Then Q3 closed.
+
+**PMM:** How long between him asking and the freeze?
+
+**Renee:** About a month.
+
+**PMM:** What did they ask for that we couldn't show?
+
+**Renee:** The number. Their own. What the homegrown system costs them. Engineering time, billing errors, and he mentioned once that some landlord subscriptions lapse because the card fails and nobody chases it. We never added it up.
+
+He also asked about migration. Moving the existing subscriptions over without asking landlords for their card details again, and whether they could do it in stages. Their engineering lead said, "we don't touch billing before renewal season." We had a doc for that. He wanted to talk to someone who'd done it.
+
+**PMM:** What exact words did they use for their problem?
+
+**Renee:** Owen's was "a tax on the roadmap." From Diane, through Owen, "if it isn't on fire, it isn't funded." And "nice to have." Owen said finance saw it as a nice to have.
+
+**PMM:** Was it on fire?
+
+**Renee:** For Owen, yeah. For Diane, no. I don't think anyone told her what it was costing.
+
+**PMM:** Anything else?
+
+**Renee:** It's timing. It'll come back next year. I don't think there was anything we could have done.
