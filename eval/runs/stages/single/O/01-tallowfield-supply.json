@@ -1,0 +1,243 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":\"Won\",\"scope\":null,\"competitor\":null,\"incumbent\":\"Fiserv (through the customer's bank)\",\"tag\":\"Value proof\",\"runner_up\":\"Product fit\",\"tag_why\":\"The deal turned at the meeting where Wen built a cost-of-doing-nothing figure from Tallowfield's own statements, staff cost and unmatched-deposit write-offs. The CFO's response was \\\"that's my number, not yours,\\\" and the rep says everything after that was paperwork. Before that meeting the rep had the deal at 20 percent. The runner-up is Product fit: payout-to-transaction-to-ERP reconciliation was the capability that made her stop the demo, and the business case was built on top of it.\"},\n \"messaging_changes\":[\n  {\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"replace\",\"change\":\"For mid-market, single-currency, finance-led buyers, open with the money-visibility problem instead of global infrastructure. For example: \\\"Know where your money is: every deposit tied to its transactions and invoices, without the month-end spreadsheet hunt.\\\"\",\"evidence_excerpts\":[\"Silence was the whole opening.\",\"I just want to know where my money is.\",\"Nobody said \\\"infrastructure.\\\"\"],\"why\":\"The global/currency opener got silence from a business that sells to restaurants in three states. The decider described her problem as not knowing where her money is, never as payments or infrastructure. The line that got a reaction was reconciliation (M9), and it sits deep in the current messaging.\",\"strength\":\"Test this\"},\n  {\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"replace\",\"change\":\"Lead with an ROI built from the prospect's own data. For example: \\\"Send us one month of statements and we'll show you what reconciliation is costing you, in your numbers.\\\" Keep the independent study as supporting proof, not as the headline.\",\"evidence_excerpts\":[\"that's my number, not yours.\",\"Then she asked if she could see it with their data.\"],\"why\":\"The CFO valued the figure because it was built from her data, and she rejected generic proof (the retail case study). This one business case moved the deal from 20 percent to signed.\",\"strength\":\"Test this\"},\n  {\"target\":\"M8\",\"current_line\":\"Trusted by leading businesses; see our customer stories.\",\"type\":\"replace\",\"change\":\"Segment proof by business model. We need a wholesale/distribution story (invoices, branch counter sales, reconciliation to the ERP) before we promise peer proof to distributors. Until one exists, don't lead with generic customer stories for this segment.\",\"evidence_excerpts\":[\"this is a company that sells sweaters.\",\"She wanted to talk to another distributor.\"],\"why\":\"She asked for a distributor reference twice and never got one. The retail case study was dismissed as irrelevant. She signed anyway, but this is a real proof gap for the next distributor deal.\",\"strength\":\"Test this\"}\n ],\n \"sections\":{\n  \"trigger\":{\"covered\":true,\"evidence\":[{\"excerpt\":\"The portal was the excuse.\",\"label\":\"opinion\"},{\"excerpt\":\"her first month-end close took nine days\",\"label\":\"fact\"},{\"excerpt\":\"month-end is a week of archaeology\",\"label\":\"quote\"},{\"excerpt\":\"two people in finance matching deposits from the bank against the processor statements against invoices in the ERP. By hand, in spreadsheets.\",\"label\":\"fact\"}],\"insight\":\"The inbound stated trigger was an online ordering portal, but the real trigger was a new CFO (about four months in) whose first nine-day month-end close exposed manual three-way matching of bank deposits, processor statements and ERP invoices. The rep only saw this on roughly the third call. The stated project and the actual pain sat with different people: IT owned the portal, finance owned the pain. Because the portal was off the shelf with a plugin, the checkout/API pitch had nothing to attach to.\",\"messaging\":\"For distributors and other invoice-heavy B2B buyers, discovery and opening messaging should probe month-end close and deposit matching, not just the channel project in the inbound. Reconciliation (M9) is a candidate lead message for finance-led buyers.\"},\n  \"decider\":{\"covered\":true,\"evidence\":[{\"excerpt\":\"I can recommend, she decides.\",\"label\":\"quote\"},{\"excerpt\":\"she's the one who signed\",\"label\":\"fact\"},{\"excerpt\":\"she read the first page and said it wasn't her problem\",\"label\":\"fact\"}],\"insight\":\"Ines (CFO) decided and signed. Paul (IT director) was the day-to-day contact and said outright that he could only recommend. The first proposal was written to Paul's world (portal, checkout, APIs), so when he forwarded it to the real decider it stalled for three weeks. The champion was in the wrong function for the pain we ended up solving.\",\"messaging\":\"Proposals and first-call material need a finance-facing first page (close time, reconciliation hours, cost) whenever the CFO is likely to see them, even if IT is the entry point.\"},\n  \"competitor\":{\"covered\":true,\"evidence\":[{\"excerpt\":\"I honestly don't know what Fiserv showed them, if anything.\",\"label\":\"opinion\"},{\"excerpt\":\"we can take a look at your rates.\",\"label\":\"quote\"},{\"excerpt\":\"I didn't ask about my rates.\",\"label\":\"quote\"},{\"excerpt\":\"whether she'd get a named contact\",\"label\":\"fact\"}],\"insight\":\"The incumbent, Fiserv via the bank, answered a reconciliation and visibility problem with a rate discussion, and that annoyed the CFO rather than retaining her. We don't know whether Fiserv presented anything else. After talking to the bank she asked one new question: whether she'd get a named contact, because her bank rep had changed and she didn't know who the new one was. Service continuity was a quiet sore point with the incumbent.\",\"messaging\":\"Against bank-bundled incumbents, don't compete on rates when the buyer's pain is operational. Positioning around visibility, plus a named person who answers (a concrete version of M5 rather than tiered response times), is worth testing.\"},\n  \"message\":{\"covered\":true,\"evidence\":[{\"excerpt\":\"Silence was the whole opening.\",\"label\":\"fact\"},{\"excerpt\":\"the developer story went nowhere\",\"label\":\"fact\"},{\"excerpt\":\"Paul's team is four people and they aren't building anything.\",\"label\":\"fact\"},{\"excerpt\":\"go back.\",\"label\":\"quote\"}],\"insight\":\"The standard deck (global infrastructure, currencies) and the developer story (M1, M2) didn't land with a three-state distributor that has a four-person IT team and is building nothing. The reconciliation demo (M9) got the only strong reaction: the CFO interrupted to rewind it, then asked to see it with her own data. That request was the buying signal that led to the business case. The rep was relieved Ines missed the first call, which suggests the opener could have cost credibility with the decider.\",\"messaging\":\"Move reconciliation up front for finance-led mid-market buyers. Treat M1 and M2 as segment-specific; drop them from first calls where engineering isn't building anything.\"},\n  \"decided\":{\"covered\":true,\"evidence\":[{\"excerpt\":\"Wen asked for one month of their statements, the controller sent them over\",\"label\":\"fact\"},{\"excerpt\":\"It was something like 60 hours a month across two people.\",\"label\":\"opinion\"},{\"excerpt\":\"that's my number, not yours.\",\"label\":\"quote\"},{\"excerpt\":\"I had it at 20 percent.\",\"label\":\"opinion\"}],\"insight\":\"The deal turned when the SE built the cost of manual matching from the customer's own statements, staff cost and write-offs from unmatched deposits, working alongside the controller. The rep's recall of the hours and the dollar figure (\\\"low six figures\\\") is approximate, and the exact figure isn't known. What mattered to the CFO was ownership of the number, not its size. The deal went from 'dead' to paperwork after this one meeting.\",\"messaging\":\"Make 'your numbers' the ROI promise (replace the M6 headline). Consider packaging the one-month-statement reconciliation cost analysis as a standard offer for finance buyers.\"},\n  \"gaps\":{\"covered\":true,\"evidence\":[{\"excerpt\":\"She wanted to talk to another distributor.\",\"label\":\"fact\"},{\"excerpt\":\"this is a company that sells sweaters.\",\"label\":\"quote\"},{\"excerpt\":\"she asked if the card readers at the counter would land in the same report\",\"label\":\"fact\"},{\"excerpt\":\"We didn't demo it.\",\"label\":\"fact\"}],\"insight\":\"There were two gaps. First, no wholesale/distributor reference: she raised it twice, and the retail case study backfired. Second, branch counter sales (14 branches) landing in the same reconciliation report was claimed with a slide but never demoed. She let it go, but it is an unproven promise in a live account and a likely question in the next distributor deal. In this account, unified commerce (M3) matters as 'one report', not as a channel story.\",\"messaging\":\"Build distributor proof before claiming it. If M3 is used for B2B distributors, frame it as card-present branch sales reconciling into the same report, and have a demo, not a slide.\"},\n  \"language\":{\"covered\":true,\"evidence\":[{\"excerpt\":\"I just want to know where my money is.\",\"label\":\"quote\"},{\"excerpt\":\"A week of archaeology\",\"label\":\"quote\"},{\"excerpt\":\"She never once said \\\"payments.\\\" She'd say \\\"the deposits.\\\"\",\"label\":\"fact\"},{\"excerpt\":\"Paul would say \\\"the processor.\\\"\",\"label\":\"fact\"}],\"insight\":\"The decider's vocabulary was about money visibility and deposits, not payments or infrastructure. IT called us 'the processor', a commodity framing. Our category words never appeared in the customer's mouth.\",\"messaging\":\"For finance buyers, use 'deposits', 'month-end', 'where your money is' and 'match' instead of 'payments infrastructure'. Test these phrases in the M1 replacement and the M9 copy.\"}\n },\n \"close\":{\"gaps\":[\n  {\"question\":\"What did Fiserv or the bank actually propose beyond offering to review rates?\",\"kind\":\"unknown\",\"follow_up\":\"Ask Ines or Paul whether the bank sent any formal counter-proposal and what it contained.\"},\n  {\"question\":\"What was the exact business-case figure (hours and annual cost)?\",\"kind\":\"unknown\",\"follow_up\":\"Pull Wen's model from the deal folder to confirm the hours, cost basis and write-off amount, so it can be reused as a template.\"},\n  {\"question\":\"Were any other vendors besides the incumbent evaluated?\",\"kind\":\"skipped\",\"follow_up\":\"Ask the rep whether Tallowfield looked at anyone else, or whether this was purely us versus the status quo.\"},\n  {\"question\":\"Does branch counter (card-present) volume actually land in the same reconciliation report for this customer?\",\"kind\":\"unknown\",\"follow_up\":\"Check with Wen and implementation that it works in their rollout, and capture it as a demo for future distributor deals.\"}\n ],\"rep_takeaway\":\"When the inbound names a channel project, ask early who feels the pain at month-end and who signs. Here that was the CFO, and pitching the portal to IT cost a month and a stalled proposal. Bringing the customer's own numbers to the decider is what won it.\"}}",
+ "data": {
+  "header": {
+   "outcome": "Won",
+   "scope": null,
+   "competitor": null,
+   "incumbent": "Fiserv (through the customer's bank)",
+   "tag": "Value proof",
+   "runner_up": "Product fit",
+   "tag_why": "The deal turned at the meeting where Wen built a cost-of-doing-nothing figure from Tallowfield's own statements, staff cost and unmatched-deposit write-offs. The CFO's response was \"that's my number, not yours,\" and the rep says everything after that was paperwork. Before that meeting the rep had the deal at 20 percent. The runner-up is Product fit: payout-to-transaction-to-ERP reconciliation was the capability that made her stop the demo, and the business case was built on top of it."
+  },
+  "messaging_changes": [
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "replace",
+    "change": "For mid-market, single-currency, finance-led buyers, open with the money-visibility problem instead of global infrastructure. For example: \"Know where your money is: every deposit tied to its transactions and invoices, without the month-end spreadsheet hunt.\"",
+    "evidence_excerpts": [
+     "Silence was the whole opening.",
+     "I just want to know where my money is.",
+     "Nobody said \"infrastructure.\""
+    ],
+    "why": "The global/currency opener got silence from a business that sells to restaurants in three states. The decider described her problem as not knowing where her money is, never as payments or infrastructure. The line that got a reaction was reconciliation (M9), and it sits deep in the current messaging.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "replace",
+    "change": "Lead with an ROI built from the prospect's own data. For example: \"Send us one month of statements and we'll show you what reconciliation is costing you, in your numbers.\" Keep the independent study as supporting proof, not as the headline.",
+    "evidence_excerpts": [
+     "that's my number, not yours.",
+     "Then she asked if she could see it with their data."
+    ],
+    "why": "The CFO valued the figure because it was built from her data, and she rejected generic proof (the retail case study). This one business case moved the deal from 20 percent to signed.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M8",
+    "current_line": "Trusted by leading businesses; see our customer stories.",
+    "type": "replace",
+    "change": "Segment proof by business model. We need a wholesale/distribution story (invoices, branch counter sales, reconciliation to the ERP) before we promise peer proof to distributors. Until one exists, don't lead with generic customer stories for this segment.",
+    "evidence_excerpts": [
+     "this is a company that sells sweaters.",
+     "She wanted to talk to another distributor."
+    ],
+    "why": "She asked for a distributor reference twice and never got one. The retail case study was dismissed as irrelevant. She signed anyway, but this is a real proof gap for the next distributor deal.",
+    "strength": "Test this"
+   }
+  ],
+  "sections": {
+   "trigger": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "The portal was the excuse.",
+      "label": "opinion"
+     },
+     {
+      "excerpt": "her first month-end close took nine days",
+      "label": "fact"
+     },
+     {
+      "excerpt": "month-end is a week of archaeology",
+      "label": "quote"
+     },
+     {
+      "excerpt": "two people in finance matching deposits from the bank against the processor statements against invoices in the ERP. By hand, in spreadsheets.",
+      "label": "fact"
+     }
+    ],
+    "insight": "The inbound stated trigger was an online ordering portal, but the real trigger was a new CFO (about four months in) whose first nine-day month-end close exposed manual three-way matching of bank deposits, processor statements and ERP invoices. The rep only saw this on roughly the third call. The stated project and the actual pain sat with different people: IT owned the portal, finance owned the pain. Because the portal was off the shelf with a plugin, the checkout/API pitch had nothing to attach to.",
+    "messaging": "For distributors and other invoice-heavy B2B buyers, discovery and opening messaging should probe month-end close and deposit matching, not just the channel project in the inbound. Reconciliation (M9) is a candidate lead message for finance-led buyers."
+   },
+   "decider": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "I can recommend, she decides.",
+      "label": "quote"
+     },
+     {
+      "excerpt": "she's the one who signed",
+      "label": "fact"
+     },
+     {
+      "excerpt": "she read the first page and said it wasn't her problem",
+      "label": "fact"
+     }
+    ],
+    "insight": "Ines (CFO) decided and signed. Paul (IT director) was the day-to-day contact and said outright that he could only recommend. The first proposal was written to Paul's world (portal, checkout, APIs), so when he forwarded it to the real decider it stalled for three weeks. The champion was in the wrong function for the pain we ended up solving.",
+    "messaging": "Proposals and first-call material need a finance-facing first page (close time, reconciliation hours, cost) whenever the CFO is likely to see them, even if IT is the entry point."
+   },
+   "competitor": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "I honestly don't know what Fiserv showed them, if anything.",
+      "label": "opinion"
+     },
+     {
+      "excerpt": "we can take a look at your rates.",
+      "label": "quote"
+     },
+     {
+      "excerpt": "I didn't ask about my rates.",
+      "label": "quote"
+     },
+     {
+      "excerpt": "whether she'd get a named contact",
+      "label": "fact"
+     }
+    ],
+    "insight": "The incumbent, Fiserv via the bank, answered a reconciliation and visibility problem with a rate discussion, and that annoyed the CFO rather than retaining her. We don't know whether Fiserv presented anything else. After talking to the bank she asked one new question: whether she'd get a named contact, because her bank rep had changed and she didn't know who the new one was. Service continuity was a quiet sore point with the incumbent.",
+    "messaging": "Against bank-bundled incumbents, don't compete on rates when the buyer's pain is operational. Positioning around visibility, plus a named person who answers (a concrete version of M5 rather than tiered response times), is worth testing."
+   },
+   "message": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "Silence was the whole opening.",
+      "label": "fact"
+     },
+     {
+      "excerpt": "the developer story went nowhere",
+      "label": "fact"
+     },
+     {
+      "excerpt": "Paul's team is four people and they aren't building anything.",
+      "label": "fact"
+     },
+     {
+      "excerpt": "go back.",
+      "label": "quote"
+     }
+    ],
+    "insight": "The standard deck (global infrastructure, currencies) and the developer story (M1, M2) didn't land with a three-state distributor that has a four-person IT team and is building nothing. The reconciliation demo (M9) got the only strong reaction: the CFO interrupted to rewind it, then asked to see it with her own data. That request was the buying signal that led to the business case. The rep was relieved Ines missed the first call, which suggests the opener could have cost credibility with the decider.",
+    "messaging": "Move reconciliation up front for finance-led mid-market buyers. Treat M1 and M2 as segment-specific; drop them from first calls where engineering isn't building anything."
+   },
+   "decided": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "Wen asked for one month of their statements, the controller sent them over",
+      "label": "fact"
+     },
+     {
+      "excerpt": "It was something like 60 hours a month across two people.",
+      "label": "opinion"
+     },
+     {
+      "excerpt": "that's my number, not yours.",
+      "label": "quote"
+     },
+     {
+      "excerpt": "I had it at 20 percent.",
+      "label": "opinion"
+     }
+    ],
+    "insight": "The deal turned when the SE built the cost of manual matching from the customer's own statements, staff cost and write-offs from unmatched deposits, working alongside the controller. The rep's recall of the hours and the dollar figure (\"low six figures\") is approximate, and the exact figure isn't known. What mattered to the CFO was ownership of the number, not its size. The deal went from 'dead' to paperwork after this one meeting.",
+    "messaging": "Make 'your numbers' the ROI promise (replace the M6 headline). Consider packaging the one-month-statement reconciliation cost analysis as a standard offer for finance buyers."
+   },
+   "gaps": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "She wanted to talk to another distributor.",
+      "label": "fact"
+     },
+     {
+      "excerpt": "this is a company that sells sweaters.",
+      "label": "quote"
+     },
+     {
+      "excerpt": "she asked if the card readers at the counter would land in the same report",
+      "label": "fact"
+     },
+     {
+      "excerpt": "We didn't demo it.",
+      "label": "fact"
+     }
+    ],
+    "insight": "There were two gaps. First, no wholesale/distributor reference: she raised it twice, and the retail case study backfired. Second, branch counter sales (14 branches) landing in the same reconciliation report was claimed with a slide but never demoed. She let it go, but it is an unproven promise in a live account and a likely question in the next distributor deal. In this account, unified commerce (M3) matters as 'one report', not as a channel story.",
+    "messaging": "Build distributor proof before claiming it. If M3 is used for B2B distributors, frame it as card-present branch sales reconciling into the same report, and have a demo, not a slide."
+   },
+   "language": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "I just want to know where my money is.",
+      "label": "quote"
+     },
+     {
+      "excerpt": "A week of archaeology",
+      "label": "quote"
+     },
+     {
+      "excerpt": "She never once said \"payments.\" She'd say \"the deposits.\"",
+      "label": "fact"
+     },
+     {
+      "excerpt": "Paul would say \"the processor.\"",
+      "label": "fact"
+     }
+    ],
+    "insight": "The decider's vocabulary was about money visibility and deposits, not payments or infrastructure. IT called us 'the processor', a commodity framing. Our category words never appeared in the customer's mouth.",
+    "messaging": "For finance buyers, use 'deposits', 'month-end', 'where your money is' and 'match' instead of 'payments infrastructure'. Test these phrases in the M1 replacement and the M9 copy."
+   }
+  },
+  "close": {
+   "gaps": [
+    {
+     "question": "What did Fiserv or the bank actually propose beyond offering to review rates?",
+     "kind": "unknown",
+     "follow_up": "Ask Ines or Paul whether the bank sent any formal counter-proposal and what it contained."
+    },
+    {
+     "question": "What was the exact business-case figure (hours and annual cost)?",
+     "kind": "unknown",
+     "follow_up": "Pull Wen's model from the deal folder to confirm the hours, cost basis and write-off amount, so it can be reused as a template."
+    },
+    {
+     "question": "Were any other vendors besides the incumbent evaluated?",
+     "kind": "skipped",
+     "follow_up": "Ask the rep whether Tallowfield looked at anyone else, or whether this was purely us versus the status quo."
+    },
+    {
+     "question": "Does branch counter (card-present) volume actually land in the same reconciliation report for this customer?",
+     "kind": "unknown",
+     "follow_up": "Check with Wen and implementation that it works in their rollout, and capture it as a demo for future distributor deals."
+    }
+   ],
+   "rep_takeaway": "When the inbound names a channel project, ask early who feels the pain at month-end and who signs. Here that was the CFO, and pitching the portal to IT cost a month and a stalled proposal. Bringing the customer's own numbers to the decider is what won it."
+  }
+ },
+ "ms": 51995,
+ "cost": 0.141036,
+ "in_tokens": 5428,
+ "out_tokens": 4881,
+ "model": "claude-opus-5-5"
+}

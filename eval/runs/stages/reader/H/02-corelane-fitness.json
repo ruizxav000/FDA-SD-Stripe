@@ -1,0 +1,570 @@
+{
+ "ok": true,
+ "text": "{\"people\":[{\"name\":\"Maya\",\"role\":\"head of digital\",\"side\":\"customer\"},{\"name\":\"Greg\",\"role\":\"controller\",\"side\":\"customer\"},{\"name\":\"Studio managers\",\"role\":\"front-desk staff group\",\"side\":\"customer\"},{\"name\":\"Tobi\",\"role\":\"solutions engineer\",\"side\":\"us\"},{\"name\":\"Rep (unnamed)\",\"role\":\"account executive\",\"side\":\"us\"},{\"name\":\"Partner (unnamed)\",\"role\":\"integration partner\",\"side\":\"other\"},{\"name\":\"Global Payments\",\"role\":\"incumbent payments provider\",\"side\":\"competitor\"}],\n\"competitors\":[\"Global Payments\"],\n\"incumbent\":\"Global Payments, through the studio software\",\n\"evidence\":[\n{\"id\":\"E1\",\"turn\":2,\"excerpt\":\"They report member churn to the board every quarter\",\"label\":\"fact\",\"speaker\":\"the rep, relaying the customer\",\"paraphrase\":true,\"topics\":[\"trigger\"],\"note\":\"Customer reports churn to its board quarterly; the trigger was board-level pressure.\"},\n{\"id\":\"E2\",\"turn\":2,\"excerpt\":\"it had ticked up two quarters running\",\"label\":\"fact\",\"speaker\":\"the rep, relaying the customer\",\"paraphrase\":true,\"topics\":[\"trigger\"],\"note\":\"Churn rose two straight quarters before the evaluation began.\"},\n{\"id\":\"E3\",\"turn\":2,\"excerpt\":\"somebody finally split it into people who cancelled and people whose card just failed\",\"label\":\"fact\",\"speaker\":\"the rep, relaying the customer\",\"paraphrase\":true,\"topics\":[\"trigger\"],\"note\":\"Churn was split by cause, revealing a failed-card bucket.\"},\n{\"id\":\"E4\",\"turn\":2,\"excerpt\":\"The second bucket was a lot bigger than anyone expected.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Failed-card churn surprised the customer; the core trigger.\"},\n{\"id\":\"E5\",\"turn\":2,\"excerpt\":\"members who never meant to leave\",\"label\":\"quote\",\"speaker\":\"Maya (head of digital)\",\"paraphrase\":false,\"topics\":[\"message\",\"language\"],\"note\":\"Customer's own framing of failed-card churn; reusable language.\"},\n{\"id\":\"E6\",\"turn\":4,\"excerpt\":\"I want to say a third of the churn?\",\"label\":\"opinion\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Rep unsure of the share; claims it is in the board deck.\"},\n{\"id\":\"E7\",\"turn\":6,\"excerpt\":\"She ran the evaluation, she was in every meeting\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Rep's basis for naming Maya as the decider.\"},\n{\"id\":\"E8\",\"turn\":6,\"excerpt\":\"She said it was her call.\",\"label\":\"opinion\",\"speaker\":\"Maya (head of digital), relayed by the rep\",\"paraphrase\":true,\"topics\":[\"decider\"],\"note\":\"Maya's self-assessment of decision authority, unverified and later contradicted.\"},\n{\"id\":\"E9\",\"turn\":8,\"excerpt\":\"Global Payments was already in there, through the studio software.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Incumbent is embedded through the studio software.\"},\n{\"id\":\"E10\",\"turn\":8,\"excerpt\":\"they came back with a rate review and a new terminal bundle for the front desks, on a longer contract\",\"label\":\"fact\",\"speaker\":\"Maya (head of digital), relayed by the rep\",\"paraphrase\":true,\"topics\":[\"competitor\"],\"note\":\"Global's counteroffer, reported secondhand; rep did not see it.\"},\n{\"id\":\"E11\",\"turn\":8,\"excerpt\":\"My read is they were rattled, but that's my read, not hers.\",\"label\":\"opinion\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Rep's own guess about the incumbent's reaction; explicitly not the customer's view.\"},\n{\"id\":\"E12\",\"turn\":10,\"excerpt\":\"Suddenly everything was hardware.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Customer's questions shifted to hardware after the incumbent meeting.\"},\n{\"id\":\"E13\",\"turn\":10,\"excerpt\":\"Before that meeting it was all failed payments and retries.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"competitor\",\"message\"],\"note\":\"Pre-meeting focus was failed payments; our core pitch matched this.\"},\n{\"id\":\"E14\",\"turn\":10,\"excerpt\":\"Greg asked about termination fees twice.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"decider\",\"competitor\"],\"note\":\"Controller focused on exit costs, signaling a cost and contract concern.\"},\n{\"id\":\"E15\",\"turn\":14,\"excerpt\":\"took an export of one month of their failed renewals\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Tobi used the customer's own failed-renewal data in the demo.\"},\n{\"id\":\"E16\",\"turn\":14,\"excerpt\":\"Greg hadn't said a word in two meetings, and he asked for the spreadsheet.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"decider\",\"message\"],\"note\":\"Greg's first engagement came from the data, not the pitch.\"},\n{\"id\":\"E17\",\"turn\":14,\"excerpt\":\"I opened with the global slide. They have studios in the US and a handful in Canada.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Global-scale opener; customer footprint is small and regional.\"},\n{\"id\":\"E18\",\"turn\":14,\"excerpt\":\"is that the readers?\",\"label\":\"quote\",\"speaker\":\"Maya (head of digital)\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Maya heard unified commerce as hardware, not software.\"},\n{\"id\":\"E19\",\"turn\":14,\"excerpt\":\"unified commerce\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Our term; did not land with the customer.\"},\n{\"id\":\"E20\",\"turn\":16,\"excerpt\":\"Before that I honestly thought we were there to keep the incumbent honest.\",\"label\":\"opinion\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Rep's earlier read that they were a benchmark, not a true contender.\"},\n{\"id\":\"E21\",\"turn\":16,\"excerpt\":\"The paper had gone to Greg and it sat with him for two weeks.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Proposal sat with Greg for two weeks before movement.\"},\n{\"id\":\"E22\",\"turn\":16,\"excerpt\":\"four days later it was signed\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"decided\",\"outcome\"],\"note\":\"Signature followed the data session by four days.\"},\n{\"id\":\"E23\",\"turn\":18,\"excerpt\":\"His signature's on it.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"decider\",\"decided\"],\"note\":\"Greg signed; conflicts with Maya as sole decider.\"},\n{\"id\":\"E24\",\"turn\":20,\"excerpt\":\"Maya chose us. Greg decided whether anybody got chosen.\",\"label\":\"opinion\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Rep's revised decider claim after pushback; split authority.\"},\n{\"id\":\"E25\",\"turn\":22,\"excerpt\":\"They asked to see our reader working inside their studio management software.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":true,\"topics\":[\"gaps\",\"language\"],\"note\":\"Front-desk integration was requested and not shown live.\"},\n{\"id\":\"E26\",\"turn\":22,\"excerpt\":\"We couldn't show that live. It runs through a partner integration\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Demo gap: the front-desk flow depended on a partner integration.\"},\n{\"id\":\"E27\",\"turn\":22,\"excerpt\":\"It nearly cost us.\",\"label\":\"opinion\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Rep's assessment of the demo gap's deal risk.\"},\n{\"id\":\"E28\",\"turn\":22,\"excerpt\":\"the studio managers will revolt\",\"label\":\"quote\",\"speaker\":\"Maya (head of digital)\",\"paraphrase\":false,\"topics\":[\"gaps\",\"language\"],\"note\":\"Customer's stated objection to two-screen front-desk workflow.\"},\n{\"id\":\"E29\",\"turn\":24,\"excerpt\":\"They saw the partner's demo. Not in their own setup.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Customer never saw the product in its own environment before signing.\"},\n{\"id\":\"E30\",\"turn\":24,\"excerpt\":\"what they signed is memberships. Online billing went first.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"decided\",\"outcome\"],\"note\":\"Signed scope covers only online membership billing.\"},\n{\"id\":\"E31\",\"turn\":24,\"excerpt\":\"The studios are phase two.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"gaps\",\"outcome\"],\"note\":\"Studio front desk is deferred to a second phase.\"},\n{\"id\":\"E32\",\"turn\":26,\"excerpt\":\"Still Global.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"outcome\",\"competitor\"],\"note\":\"Front-desk payments remain with the incumbent.\"},\n{\"id\":\"E33\",\"turn\":28,\"excerpt\":\"Not yet. It depends on the partner piece.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"No date for phase two; tied to partner work.\"},\n{\"id\":\"E34\",\"turn\":14,\"excerpt\":\"The reaction was failed payment recovery.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"message\",\"language\"],\"note\":\"The pitch element that drew a reaction from the customer.\"}\n],\n\"contradictions\":[\n{\"evidence\":[\"E8\",\"E23\",\"E24\"],\"what\":\"Rep first says Maya decided, then Greg's signature is on the contract, then splits the decision between Maya and Greg.\"},\n{\"evidence\":[\"E22\",\"E30\",\"E32\"],\"what\":\"Rep describes the deal as signed, but only online membership billing was signed; front-desk payments remain with Global.\"}\n],\n\"dodges\":[\n{\"question\":\"Which part of our pitch got a reaction, and which got silence?\",\"turn\":13,\"what\":\"Answered the reaction side; the silence side was left as one unclear word ('Silence.') with no named pitch element.\"},\n{\"question\":\"Then who made the final call?\",\"turn\":19,\"what\":\"Repeated Maya after the earlier answer, then conceded and split the decision with Greg only after pushback.\"},\n{\"question\":\"What exact words did they—\",\"turn\":29,\"what\":\"Deflected the customer-language question by moving it to Slack, citing a customer call.\"}\n],\n\"skipped\":[\"language\"],\n\"language_pairs\":[\n{\"theirs\":\"is that the readers?\",\"ours\":\"unified commerce\",\"evidence\":[\"E18\",\"E19\"]},\n{\"theirs\":\"failed payments and retries\",\"ours\":\"failed payment recovery\",\"evidence\":[\"E13\",\"E34\"]},\n{\"theirs\":\"members who never meant to leave\",\"ours\":\"failed-card churn analysis (rep's framing)\",\"evidence\":[\"E3\",\"E5\"]},\n{\"theirs\":\"the studio managers will revolt\",\"ours\":\"our reader working inside their studio management software\",\"evidence\":[\"E25\",\"E28\"]}\n],\n\"outcome_signals\":[\n{\"evidence\":[\"E22\",\"E23\"],\"what\":\"Deal signed four days after the data session; Greg's signature is on the contract.\"},\n{\"evidence\":[\"E30\",\"E31\",\"E33\"],\"what\":\"Partial win: only membership online billing signed; studio phase two has no date and depends on the partner.\"},\n{\"evidence\":[\"E32\",\"E26\"],\"what\":\"Front-desk payments still with Global Payments; the live front-desk demo could not be shown.\"}\n]}",
+ "data": {
+  "people": [
+   {
+    "name": "Maya",
+    "role": "head of digital",
+    "side": "customer"
+   },
+   {
+    "name": "Greg",
+    "role": "controller",
+    "side": "customer"
+   },
+   {
+    "name": "Studio managers",
+    "role": "front-desk staff group",
+    "side": "customer"
+   },
+   {
+    "name": "Tobi",
+    "role": "solutions engineer",
+    "side": "us"
+   },
+   {
+    "name": "Rep (unnamed)",
+    "role": "account executive",
+    "side": "us"
+   },
+   {
+    "name": "Partner (unnamed)",
+    "role": "integration partner",
+    "side": "other"
+   },
+   {
+    "name": "Global Payments",
+    "role": "incumbent payments provider",
+    "side": "competitor"
+   }
+  ],
+  "competitors": [
+   "Global Payments"
+  ],
+  "incumbent": "Global Payments, through the studio software",
+  "evidence": [
+   {
+    "id": "E1",
+    "turn": 2,
+    "excerpt": "They report member churn to the board every quarter",
+    "label": "fact",
+    "speaker": "the rep, relaying the customer",
+    "paraphrase": true,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Customer reports churn to its board quarterly; the trigger was board-level pressure."
+   },
+   {
+    "id": "E2",
+    "turn": 2,
+    "excerpt": "it had ticked up two quarters running",
+    "label": "fact",
+    "speaker": "the rep, relaying the customer",
+    "paraphrase": true,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Churn rose two straight quarters before the evaluation began."
+   },
+   {
+    "id": "E3",
+    "turn": 2,
+    "excerpt": "somebody finally split it into people who cancelled and people whose card just failed",
+    "label": "fact",
+    "speaker": "the rep, relaying the customer",
+    "paraphrase": true,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Churn was split by cause, revealing a failed-card bucket."
+   },
+   {
+    "id": "E4",
+    "turn": 2,
+    "excerpt": "The second bucket was a lot bigger than anyone expected.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Failed-card churn surprised the customer; the core trigger."
+   },
+   {
+    "id": "E5",
+    "turn": 2,
+    "excerpt": "members who never meant to leave",
+    "label": "quote",
+    "speaker": "Maya (head of digital)",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "language"
+    ],
+    "note": "Customer's own framing of failed-card churn; reusable language."
+   },
+   {
+    "id": "E6",
+    "turn": 4,
+    "excerpt": "I want to say a third of the churn?",
+    "label": "opinion",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Rep unsure of the share; claims it is in the board deck."
+   },
+   {
+    "id": "E7",
+    "turn": 6,
+    "excerpt": "She ran the evaluation, she was in every meeting",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Rep's basis for naming Maya as the decider."
+   },
+   {
+    "id": "E8",
+    "turn": 6,
+    "excerpt": "She said it was her call.",
+    "label": "opinion",
+    "speaker": "Maya (head of digital), relayed by the rep",
+    "paraphrase": true,
+    "topics": [
+     "decider"
+    ],
+    "note": "Maya's self-assessment of decision authority, unverified and later contradicted."
+   },
+   {
+    "id": "E9",
+    "turn": 8,
+    "excerpt": "Global Payments was already in there, through the studio software.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Incumbent is embedded through the studio software."
+   },
+   {
+    "id": "E10",
+    "turn": 8,
+    "excerpt": "they came back with a rate review and a new terminal bundle for the front desks, on a longer contract",
+    "label": "fact",
+    "speaker": "Maya (head of digital), relayed by the rep",
+    "paraphrase": true,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Global's counteroffer, reported secondhand; rep did not see it."
+   },
+   {
+    "id": "E11",
+    "turn": 8,
+    "excerpt": "My read is they were rattled, but that's my read, not hers.",
+    "label": "opinion",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Rep's own guess about the incumbent's reaction; explicitly not the customer's view."
+   },
+   {
+    "id": "E12",
+    "turn": 10,
+    "excerpt": "Suddenly everything was hardware.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Customer's questions shifted to hardware after the incumbent meeting."
+   },
+   {
+    "id": "E13",
+    "turn": 10,
+    "excerpt": "Before that meeting it was all failed payments and retries.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "message"
+    ],
+    "note": "Pre-meeting focus was failed payments; our core pitch matched this."
+   },
+   {
+    "id": "E14",
+    "turn": 10,
+    "excerpt": "Greg asked about termination fees twice.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "competitor"
+    ],
+    "note": "Controller focused on exit costs, signaling a cost and contract concern."
+   },
+   {
+    "id": "E15",
+    "turn": 14,
+    "excerpt": "took an export of one month of their failed renewals",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Tobi used the customer's own failed-renewal data in the demo."
+   },
+   {
+    "id": "E16",
+    "turn": 14,
+    "excerpt": "Greg hadn't said a word in two meetings, and he asked for the spreadsheet.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "message"
+    ],
+    "note": "Greg's first engagement came from the data, not the pitch."
+   },
+   {
+    "id": "E17",
+    "turn": 14,
+    "excerpt": "I opened with the global slide. They have studios in the US and a handful in Canada.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Global-scale opener; customer footprint is small and regional."
+   },
+   {
+    "id": "E18",
+    "turn": 14,
+    "excerpt": "is that the readers?",
+    "label": "quote",
+    "speaker": "Maya (head of digital)",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Maya heard unified commerce as hardware, not software."
+   },
+   {
+    "id": "E19",
+    "turn": 14,
+    "excerpt": "unified commerce",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Our term; did not land with the customer."
+   },
+   {
+    "id": "E20",
+    "turn": 16,
+    "excerpt": "Before that I honestly thought we were there to keep the incumbent honest.",
+    "label": "opinion",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Rep's earlier read that they were a benchmark, not a true contender."
+   },
+   {
+    "id": "E21",
+    "turn": 16,
+    "excerpt": "The paper had gone to Greg and it sat with him for two weeks.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Proposal sat with Greg for two weeks before movement."
+   },
+   {
+    "id": "E22",
+    "turn": 16,
+    "excerpt": "four days later it was signed",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "outcome"
+    ],
+    "note": "Signature followed the data session by four days."
+   },
+   {
+    "id": "E23",
+    "turn": 18,
+    "excerpt": "His signature's on it.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "decided"
+    ],
+    "note": "Greg signed; conflicts with Maya as sole decider."
+   },
+   {
+    "id": "E24",
+    "turn": 20,
+    "excerpt": "Maya chose us. Greg decided whether anybody got chosen.",
+    "label": "opinion",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Rep's revised decider claim after pushback; split authority."
+   },
+   {
+    "id": "E25",
+    "turn": 22,
+    "excerpt": "They asked to see our reader working inside their studio management software.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": true,
+    "topics": [
+     "gaps",
+     "language"
+    ],
+    "note": "Front-desk integration was requested and not shown live."
+   },
+   {
+    "id": "E26",
+    "turn": 22,
+    "excerpt": "We couldn't show that live. It runs through a partner integration",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Demo gap: the front-desk flow depended on a partner integration."
+   },
+   {
+    "id": "E27",
+    "turn": 22,
+    "excerpt": "It nearly cost us.",
+    "label": "opinion",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Rep's assessment of the demo gap's deal risk."
+   },
+   {
+    "id": "E28",
+    "turn": 22,
+    "excerpt": "the studio managers will revolt",
+    "label": "quote",
+    "speaker": "Maya (head of digital)",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "language"
+    ],
+    "note": "Customer's stated objection to two-screen front-desk workflow."
+   },
+   {
+    "id": "E29",
+    "turn": 24,
+    "excerpt": "They saw the partner's demo. Not in their own setup.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Customer never saw the product in its own environment before signing."
+   },
+   {
+    "id": "E30",
+    "turn": 24,
+    "excerpt": "what they signed is memberships. Online billing went first.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "outcome"
+    ],
+    "note": "Signed scope covers only online membership billing."
+   },
+   {
+    "id": "E31",
+    "turn": 24,
+    "excerpt": "The studios are phase two.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "outcome"
+    ],
+    "note": "Studio front desk is deferred to a second phase."
+   },
+   {
+    "id": "E32",
+    "turn": 26,
+    "excerpt": "Still Global.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "outcome",
+     "competitor"
+    ],
+    "note": "Front-desk payments remain with the incumbent."
+   },
+   {
+    "id": "E33",
+    "turn": 28,
+    "excerpt": "Not yet. It depends on the partner piece.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "No date for phase two; tied to partner work."
+   },
+   {
+    "id": "E34",
+    "turn": 14,
+    "excerpt": "The reaction was failed payment recovery.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "language"
+    ],
+    "note": "The pitch element that drew a reaction from the customer."
+   }
+  ],
+  "contradictions": [
+   {
+    "evidence": [
+     "E8",
+     "E23",
+     "E24"
+    ],
+    "what": "Rep first says Maya decided, then Greg's signature is on the contract, then splits the decision between Maya and Greg."
+   },
+   {
+    "evidence": [
+     "E22",
+     "E30",
+     "E32"
+    ],
+    "what": "Rep describes the deal as signed, but only online membership billing was signed; front-desk payments remain with Global."
+   }
+  ],
+  "dodges": [
+   {
+    "question": "Which part of our pitch got a reaction, and which got silence?",
+    "turn": 13,
+    "what": "Answered the reaction side; the silence side was left as one unclear word ('Silence.') with no named pitch element."
+   },
+   {
+    "question": "Then who made the final call?",
+    "turn": 19,
+    "what": "Repeated Maya after the earlier answer, then conceded and split the decision with Greg only after pushback."
+   },
+   {
+    "question": "What exact words did they—",
+    "turn": 29,
+    "what": "Deflected the customer-language question by moving it to Slack, citing a customer call."
+   }
+  ],
+  "skipped": [
+   "language"
+  ],
+  "language_pairs": [
+   {
+    "theirs": "is that the readers?",
+    "ours": "unified commerce",
+    "evidence": [
+     "E18",
+     "E19"
+    ]
+   },
+   {
+    "theirs": "failed payments and retries",
+    "ours": "failed payment recovery",
+    "evidence": [
+     "E13",
+     "E34"
+    ]
+   },
+   {
+    "theirs": "members who never meant to leave",
+    "ours": "failed-card churn analysis (rep's framing)",
+    "evidence": [
+     "E3",
+     "E5"
+    ]
+   },
+   {
+    "theirs": "the studio managers will revolt",
+    "ours": "our reader working inside their studio management software",
+    "evidence": [
+     "E25",
+     "E28"
+    ]
+   }
+  ],
+  "outcome_signals": [
+   {
+    "evidence": [
+     "E22",
+     "E23"
+    ],
+    "what": "Deal signed four days after the data session; Greg's signature is on the contract."
+   },
+   {
+    "evidence": [
+     "E30",
+     "E31",
+     "E33"
+    ],
+    "what": "Partial win: only membership online billing signed; studio phase two has no date and depends on the partner."
+   },
+   {
+    "evidence": [
+     "E32",
+     "E26"
+    ],
+    "what": "Front-desk payments still with Global Payments; the live front-desk demo could not be shown."
+   }
+  ]
+ },
+ "ms": 57583,
+ "cost": 0.0076492999999999995,
+ "in_tokens": 4190,
+ "out_tokens": 13623,
+ "model": "claude-haiku-5-5"
+}

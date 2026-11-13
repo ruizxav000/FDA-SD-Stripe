@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The real trigger is the CFO's month-end close, not the portal.\",\"pass\":true},{\"item\":\"No dollar figure is stated. The rep doesn't know it.\",\"pass\":true},{\"item\":\"Fiserv's pitch stays unknown.\",\"pass\":true},{\"item\":\"The global/infrastructure opener is reported as silence.\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report got the core story right. The portal was the way in, the CFO's month-end close was the real trigger, and a value case built from her own data took the deal from 20% to won. It kept the exact dollar figure and Fiserv's pitch as unknown. Its main miss is the header: it leaves the competitor field null even though Fiserv was both the competitor and the incumbent. It also leaves the counter-reader demo and the finance-language shift out of the formal messaging changes, though both appear in the sections.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The real trigger is the CFO's month-end close, not the portal.",
+    "pass": true
+   },
+   {
+    "item": "No dollar figure is stated. The rep doesn't know it.",
+    "pass": true
+   },
+   {
+    "item": "Fiserv's pitch stays unknown.",
+    "pass": true
+   },
+   {
+    "item": "The global/infrastructure opener is reported as silence.",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report got the core story right. The portal was the way in, the CFO's month-end close was the real trigger, and a value case built from her own data took the deal from 20% to won. It kept the exact dollar figure and Fiserv's pitch as unknown. Its main miss is the header: it leaves the competitor field null even though Fiserv was both the competitor and the incumbent. It also leaves the counter-reader demo and the finance-language shift out of the formal messaging changes, though both appear in the sections."
+ },
+ "ms": 22708,
+ "cost": 0.11979200000000001,
+ "in_tokens": 9745,
+ "out_tokens": 2092,
+ "model": "claude-opus-5-5"
+}

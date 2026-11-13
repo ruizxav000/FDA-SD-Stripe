@@ -1,0 +1,383 @@
+{
+ "version": "2026-11-13.1",
+ "header": {
+  "deal": "Corelane Fitness",
+  "outcome": "Won",
+  "scope": "Won: online membership billing only; studio front-desk payments are phase two (no date) and still with Global Payments.",
+  "competitor": "Global Payments",
+  "incumbent": "Global Payments (through the studio software)",
+  "tag": "Value proof",
+  "runner_up": "In-store and online together",
+  "tag_why": "The deal moved when Tobi showed Corelane's own month of failed renewals and the controller, silent for two meetings, asked for the spreadsheet; the signature followed four days later."
+ },
+ "messaging_changes": [
+  {
+   "target": "M1",
+   "current_line": "Financial infrastructure to grow globally, in every currency.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For regional subscription businesses (US/Canada membership and studio chains): \"Send us one month of your failed renewals and we'll show you which members would come back.\" Lead with this data session instead of the global opener, and frame the problem in the customer's terms: members who never meant to leave, separated from members who cancelled.",
+   "evidence": [
+    "E15",
+    "E16",
+    "E17",
+    "E5"
+   ],
+   "evidence_found": true,
+   "why": "The global opener drew silence from a US and Canada studio chain, while the customer's own month of failed renewals got the controller to ask for the spreadsheet.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M10",
+   "current_line": "Recover failed payments automatically with smart retries.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For subscription buyers: \"Your churn number has two buckets: people who cancelled and people whose card just failed. We'll show you the second bucket in your own data, and which of those payments come back.\" Use 'failed payments and retries' as the customer's phrasing and do not quote any size for the failed-card share until it is confirmed.",
+   "evidence": [
+    "E3",
+    "E4",
+    "E13",
+    "E34"
+   ],
+   "evidence_found": true,
+   "why": "The trigger was a board-level churn figure that had not been split into cancellations and failed cards, and the customer reacted to failed payments and retries, not to a generic recovery claim.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M3",
+   "current_line": "Online and in-store on one platform; the line between them has pretty much disappeared.",
+   "line_matches": true,
+   "type": "drop",
+   "change": "Stop leading with this for buyers who run studio or practice-management software at the front desk until the front-desk flow can be shown live in their own setup. Say plainly what is available now (online billing) and what runs through the partner integration, and be ready to answer reader compatibility, contract term and exit cost questions directly.",
+   "evidence": [
+    "E25",
+    "E26",
+    "E29",
+    "E14",
+    "E18"
+   ],
+   "evidence_found": true,
+   "why": "The customer asked to see the reader working inside their studio software, we could only show the partner's demo, and their questions after the incumbent's bundle moved to readers, contract term and termination fees, none of which this line answers.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M6",
+   "current_line": "Proven ROI, backed by an independent economic impact study.",
+   "line_matches": true,
+   "type": "add",
+   "change": "Add a finance-facing proof point for the controller or signer: a one-page summary built from the customer's own failed-renewal data, plus contract terms and exit costs. Bring it to the first meeting, not after the paper has gone to finance.",
+   "evidence": [
+    "E21",
+    "E16",
+    "E22",
+    "E14"
+   ],
+   "evidence_found": true,
+   "why": "The controller who held the paper for two weeks asked for the spreadsheet and asked about termination fees twice, and the signature followed four days after he saw the data, so a generic ROI study was not what moved him.",
+   "strength": "Test this"
+  }
+ ],
+ "no_change_reason": null,
+ "sections": {
+  "trigger": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E2",
+     "excerpt": "it had ticked up two quarters running",
+     "label": "fact",
+     "speaker": "the rep, relaying the customer",
+     "verified": true
+    },
+    {
+     "id": "E3",
+     "excerpt": "somebody finally split it into people who cancelled and people whose card just failed",
+     "label": "fact",
+     "speaker": "the rep, relaying the customer",
+     "verified": true
+    },
+    {
+     "id": "E4",
+     "excerpt": "The second bucket was a lot bigger than anyone expected.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E6",
+     "excerpt": "I want to say a third of the churn?",
+     "label": "opinion",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The trigger was a board-level churn number that had been misread. Nobody had separated involuntary failure from real cancellation until someone did the split, and the surprise made it urgent. We have no hard size for the bucket: the rep guessed and said not to quote it. The rep also admits they thought they were only there to keep the incumbent honest, so the customer may not have started out intending to switch.",
+   "messaging": "Open with the involuntary-churn split (people who cancelled vs. people whose card failed) as the board-level problem, and present recovery (M10) as the fix for the second bucket."
+  },
+  "decider": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E8",
+     "excerpt": "She said it was her call.",
+     "label": "opinion",
+     "speaker": "Maya (head of digital), relayed by the rep",
+     "verified": true
+    },
+    {
+     "id": "E21",
+     "excerpt": "The paper had gone to Greg and it sat with him for two weeks.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E23",
+     "excerpt": "His signature's on it.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E24",
+     "excerpt": "Maya chose us. Greg decided whether anybody got chosen.",
+     "label": "opinion",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The rep's first answer was Maya's own account of her authority. Only pushback surfaced that Greg, the controller, held the paper for two weeks and signed it. Maya was the champion and Greg was the gate, and the rep spent two meetings pitching the person who couldn't release the deal. What Greg wanted to see before signing was never asked about directly.",
+   "messaging": "Build a finance-facing artifact for the controller (their own numbers, contract terms, exit costs) and bring it to the first meeting, rather than relying on the champion to carry the ROI story (M6)."
+  },
+  "competitor": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E10",
+     "excerpt": "they came back with a rate review and a new terminal bundle for the front desks, on a longer contract",
+     "label": "fact",
+     "speaker": "Maya (head of digital), relayed by the rep",
+     "verified": true
+    },
+    {
+     "id": "E13",
+     "excerpt": "Before that meeting it was all failed payments and retries.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E12",
+     "excerpt": "Suddenly everything was hardware.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E14",
+     "excerpt": "Greg asked about termination fees twice.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "Global's counter was a rate review plus a terminal bundle on a longer contract. After it, the customer's questions moved from failed payments to readers, compatibility with the studio software, contract term and exit cost. That is a lock-in play aimed at the front desk, and Greg's termination questions show switching cost was his worry. The offer is Maya's secondhand account, and the rep's view that Global was rattled is only a guess.",
+   "messaging": "Prepare a direct answer to the incumbent's bundle and lock-in (hardware compatibility, contract term, cost to exit) and don't let M3 'unified commerce' stand in for it."
+  },
+  "message": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E34",
+     "excerpt": "The reaction was failed payment recovery.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E15",
+     "excerpt": "took an export of one month of their failed renewals",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E16",
+     "excerpt": "Greg hadn't said a word in two meetings, and he asked for the spreadsheet.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E17",
+     "excerpt": "I opened with the global slide. They have studios in the US and a handful in Canada.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "What worked was the customer's own failed-renewal file, not our average or the generic recovery claim. The global opener got silence, and it didn't fit a US and Canada studio chain, and M1 is built around global reach. The rep named the silence only by implication, so we don't know what else fell flat.",
+   "messaging": "For regional subscription businesses, replace the M1 global opener with 'send us one month of failed renewals and we'll show which would come back', and treat that data session as the lead pitch for M10."
+  },
+  "decided": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E16",
+     "excerpt": "Greg hadn't said a word in two meetings, and he asked for the spreadsheet.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E21",
+     "excerpt": "The paper had gone to Greg and it sat with him for two weeks.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E22",
+     "excerpt": "four days later it was signed",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E30",
+     "excerpt": "what they signed is memberships. Online billing went first.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The turning point was the controller asking for the data, after two weeks of nothing, and the signature came four days after the session. But what got signed is only membership billing, so the data won the part the data covers and the front desk remains open. The rep called it won before the front-desk demo had landed.",
+   "messaging": "Put the customer-data session right after the first meeting, ahead of the paper going to finance, so it doesn't sit for two weeks."
+  },
+  "gaps": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E25",
+     "excerpt": "They asked to see our reader working inside their studio management software.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E26",
+     "excerpt": "We couldn't show that live. It runs through a partner integration",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E29",
+     "excerpt": "They saw the partner's demo. Not in their own setup.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E33",
+     "excerpt": "Not yet. It depends on the partner piece.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The gap is a live front-desk flow inside their studio software, and it sits with a partner, not us. They signed without seeing it in their own setup, phase two has no date, and Global still holds the front desk with a bundle on a longer contract. Maya's quote about the studio managers revolting over two screens shows this is where the rest of the deal can be lost.",
+   "messaging": "Don't claim M3 ('the line has pretty much disappeared') to studio-software customers until we can show the front-desk flow live; say what is available now and what runs through the partner."
+  },
+  "language": {
+   "covered": false,
+   "evidence": [
+    {
+     "id": "E5",
+     "excerpt": "members who never meant to leave",
+     "label": "quote",
+     "speaker": "Maya (head of digital)",
+     "verified": true
+    },
+    {
+     "id": "E18",
+     "excerpt": "is that the readers?",
+     "label": "quote",
+     "speaker": "Maya (head of digital)",
+     "verified": true
+    },
+    {
+     "id": "E28",
+     "excerpt": "the studio managers will revolt",
+     "label": "quote",
+     "speaker": "Maya (head of digital)",
+     "verified": true
+    }
+   ],
+   "insight": "",
+   "messaging": ""
+  }
+ },
+ "close": {
+  "gaps": [
+   {
+    "question": "What exact words did they use for their problem?",
+    "kind": "skipped",
+    "follow_up": "Ask the rep over Slack as promised for verbatim phrases from Maya and Greg, and check whether Maya's board deck language can be shared."
+   },
+   {
+    "question": "How big was the failed-card share of churn?",
+    "kind": "unknown",
+    "follow_up": "Ask the rep to get the actual figure from the board deck, or ask Maya directly, before any number is used."
+   },
+   {
+    "question": "Who decided, and what did Greg need to see?",
+    "kind": "dodged",
+    "follow_up": "Ask the rep what Greg said or did when the paper was with him, and what Maya told the rep about how the sign-off worked."
+   },
+   {
+    "question": "Which pitch elements got silence?",
+    "kind": "dodged",
+    "follow_up": "Ask the rep which other parts of the pitch besides the global slide drew no reaction, and who in the room stayed quiet."
+   },
+   {
+    "question": "What exactly did Global offer?",
+    "kind": "unknown",
+    "follow_up": "Ask Maya (via the rep) for the rate review and bundle terms, and how long the longer contract was."
+   },
+   {
+    "question": "When will the studios (phase two) happen?",
+    "kind": "unknown",
+    "follow_up": "Ask the partner manager what the integration timeline is and who owns the date."
+   }
+  ],
+  "rep_takeaway": "Your deal moved when Tobi showed their own failed renewals, so bring customer data to the first meeting, and get the person who signs into the room early; and don't call a deal won until you've said what was actually signed."
+ },
+ "confidence": "medium",
+ "checks": {
+  "quotes_total": 27,
+  "quotes_failed": 0,
+  "failed": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-haiku-5-5",
+   "analyst": "claude-sonnet-5-5",
+   "strategist": "claude-sonnet-5-5"
+  },
+  "ms": 104775,
+  "cost": 0.1241213,
+  "stage_ms": {
+   "reader": 57583,
+   "analyst": 36591,
+   "strategist": 10601
+  },
+  "stage_cost": {
+   "reader": 0.0076492999999999995,
+   "analyst": 0.08579,
+   "strategist": 0.030682
+  },
+  "reader_items": 34,
+  "reader_verbatim": 34
+ }
+}

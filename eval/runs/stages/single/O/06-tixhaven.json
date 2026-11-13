@@ -1,0 +1,228 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":\"Lost\",\"scope\":null,\"competitor\":null,\"incumbent\":null,\"tag\":\"Support and service\",\"runner_up\":\"Value proof\",\"tag_why\":\"The COO decided on who picks up on on-sale morning. Our technical proof won over the CTO. When she asked 'who's my person' we answered with support tiers, and she heard 'a queue with a faster timer.' The competitor brought named people and an on-call promise for every major on-sale. Runner-up is Value proof because our proof (load test, uptime, logos) was in our terms. Her terms were 'what happens when it's down,' and we had no reference person who could speak to that.\"},\n \"messaging_changes\":[\n  {\"target\":\"M5\",\"current_line\":\"Support plans with tiered response times, up to 24/7 coverage.\",\"type\":\"replace\",\"change\":\"Lead with named people, not tiers: 'Your named engineer and account lead, a shared channel, and a known escalation path, including who covers when your person is away.' Keep response-time tiers as supporting detail, not the headline.\",\"evidence_excerpts\":[\"so it's a queue with a faster timer.\",\"A name, not a queue.\",\"Who's my person. What's the escalation path if that person's on holiday.\"],\"why\":\"The decider rejected the tiers-and-timers framing in one sentence, and the rep marks that sentence as the moment the deal was lost. The customer's own words were 'a name, not a queue', so the support message should be about who rather than about speed.\",\"strength\":\"Test this\"},\n  {\"target\":null,\"current_line\":\"\",\"type\":\"add\",\"change\":\"Add a peak-event readiness message, backed by a one-page plan template built with solutions engineering: 'Your peak moment, planned on paper: who's watching, who you call, what happens at minute four.'\",\"evidence_excerpts\":[\"She wanted to see, on paper, what we do on an on-sale morning.\",\"We don't have that as a thing.\",\"I don't buy uptime, I buy what happens when it's down.\"],\"why\":\"This was the concrete artifact the decider asked for, and we couldn't show it. The trigger itself (failures four minutes in, a ticket form, a reply after the event) shows the pain is the response during the incident, not avoiding the incident.\",\"strength\":\"Test this\"},\n  {\"target\":\"M8\",\"current_line\":\"Trusted by leading businesses; see our customer stories.\",\"type\":\"replace\",\"change\":\"Shift proof from logos to people: offer a peer reference in the same vertical who can say what happened at their peak moment and who picked up.\",\"evidence_excerpts\":[\"I had logos. I didn't have a person.\",\"Somebody who'd tell her, \\\"we ran a huge on-sale and here's who picked up.\\\"\"],\"why\":\"The rep says a ticketing reference who could describe a real escalation was the missing proof. A logo wall doesn't answer the decider's 'who' question.\",\"strength\":\"Test this\"}\n ],\n \"sections\":{\n  \"trigger\":{\"covered\":true,\"evidence\":[\n   {\"excerpt\":\"payments started failing about four minutes in\",\"label\":\"fact\"},\n   {\"excerpt\":\"Their provider's support was a ticket form. They got a reply after the on-sale was over.\",\"label\":\"fact\"},\n   {\"excerpt\":\"Ben, their CTO, said twice. But this was the first time the CEO saw it.\",\"label\":\"fact\"}],\n   \"insight\":\"Payments had failed during on-sales twice before, and that didn't trigger a switch. What triggered it was the CEO seeing it on social, and the provider's support answering via ticket form after the event was over. So the trigger was the failure of response, and how visible it was to executives, more than the outage itself. The evaluation was framed from day one by the COO ('replacing payments before the spring on-sales'): an operational buyer with a deadline tied to her next peak moments.\",\"messaging\":\"Open with what happens during a failure at peak, not with platform capability. The pain we are replacing is 'nobody picked up', not 'it went down'.\"},\n  \"decider\":{\"covered\":true,\"evidence\":[\n   {\"excerpt\":\"it was Halima's call and she made it in one meeting.\",\"label\":\"quote\"},\n   {\"excerpt\":\"Ben wanted us. He told me that, and he told me he lost.\",\"label\":\"fact\"}],\n   \"insight\":\"The COO decided, not the technical champion. Our strongest proof landed with the CTO, who lost the internal argument. Her reaction to the load test ('good.') shows that technical evidence was table stakes for her, not a reason to choose. The rep's closing line, 'We were the better platform', is the champion's frame, not the decider's.\",\"messaging\":\"Make sure the support and peak-event story is built for the operational executive. Developer and platform messaging can win the CTO and still lose the COO.\"},\n  \"competitor\":{\"covered\":true,\"evidence\":[\n   {\"excerpt\":\"A named solutions engineer and an account lead, in the room.\",\"label\":\"fact\"},\n   {\"excerpt\":\"they said there'd be a shared channel and someone on call for every major on-sale\",\"label\":\"fact\"},\n   {\"excerpt\":\"I think they over-promised. I don't think anybody staffs every on-sale.\",\"label\":\"opinion\"},\n   {\"excerpt\":\"Before that meeting it was throughput, queueing, bots. After, it was names.\",\"label\":\"fact\"}],\n   \"insight\":\"The competitor won by bringing the actual account team into the room and promising on-call cover for every major on-sale. After that meeting, the buying criteria moved from technical (throughput, queueing, bots) to people ('who do I call at 10 on a Friday'). The competitor changed the question, and we kept answering the old one. The rep's view that they over-promised is unverified; he admits 'I don't know that.' Even if it's true, it didn't matter to the buyer.\",\"messaging\":\"Expect competitors to sell named people and event coverage. Our message needs a named-team and escalation answer ready before the question arrives, not a tiered-plan answer.\"},\n  \"message\":{\"covered\":true,\"evidence\":[\n   {\"excerpt\":\"Ben's team ran a load test in the sandbox and it went great.\",\"label\":\"fact\"},\n   {\"excerpt\":\"The bot and fraud tooling got a good reaction too.\",\"label\":\"fact\"},\n   {\"excerpt\":\"She let me finish.\",\"label\":\"fact\"},\n   {\"excerpt\":\"so it's a queue with a faster timer.\",\"label\":\"quote\"}],\n   \"insight\":\"Developer and platform messaging (sandbox, docs, uptime, bot and fraud tooling) worked with the technical team. The support-tiers pitch got silence and then a dismissal from the decider. She heard tiers and response times as the same queue she was trying to escape. Our support message describes a process, and she was buying a person.\",\"messaging\":\"M2 holds for technical evaluators. M5 as written actively hurt us with an operational buyer coming out of a support failure.\"},\n  \"decided\":{\"covered\":true,\"evidence\":[\n   {\"excerpt\":\"That sentence. Right before it we were the favourite.\",\"label\":\"opinion\"},\n   {\"excerpt\":\"Ben had basically told his team to start planning the integration.\",\"label\":\"opinion\"},\n   {\"excerpt\":\"good.\",\"label\":\"quote\"}],\n   \"insight\":\"The rep places the loss at one moment: the 'queue with a faster timer' line. That line is the rep's read, but it's consistent with the decider making the call in one meeting. Feeling like the favourite came from the champion's enthusiasm, not from the decider. Her one-word response to the load test was an early signal that technical proof wasn't moving her, and it went unread.\",\"messaging\":\"When the decider gives a flat reaction to our proof, our proof is in the wrong terms. Pivot to her criteria: what happens when it's down, and who.\"},\n  \"gaps\":{\"covered\":true,\"evidence\":[\n   {\"excerpt\":\"She wanted to see, on paper, what we do on an on-sale morning.\",\"label\":\"fact\"},\n   {\"excerpt\":\"We don't have that as a thing. I could have built something with our solutions engineer, and I didn't.\",\"label\":\"fact\"},\n   {\"excerpt\":\"I had logos. I didn't have a person.\",\"label\":\"fact\"}],\n   \"insight\":\"There were two gaps. One is an on-sale or peak-event plan: who's watching, who she calls, what happens at minute four. The other is a reference person who has lived through a big on-sale with us. The first was partly a product or packaging gap and partly a rep choice, since he says he could have built it with the SE. He didn't because he believed the load test had already won.\",\"messaging\":\"Package a peak-event plan template and line up vertical references who can speak to escalations, so reps don't have to improvise either one.\"},\n  \"language\":{\"covered\":true,\"evidence\":[\n   {\"excerpt\":\"A name, not a queue.\",\"label\":\"quote\"},\n   {\"excerpt\":\"Someone who picks up.\",\"label\":\"quote\"},\n   {\"excerpt\":\"I don't buy uptime, I buy what happens when it's down.\",\"label\":\"quote\"},\n   {\"excerpt\":\"Nobody said \\\"support.\\\" They said \\\"who.\\\"\",\"label\":\"fact\"}],\n   \"insight\":\"The customer's vocabulary is people and moments: 'who', 'a name', 'someone who picks up', 'on-sale morning'. Ours is categories and metrics: 'support plans', 'tiers', 'response times', 'uptime'. The decider explicitly rejected uptime as her buying criterion.\",\"messaging\":\"Rewrite support messaging in the customer's words. Say 'your named person' and 'who picks up', and anchor it to their peak moment ('on-sale morning') instead of 'support tiers'.\"}\n },\n \"close\":{\"gaps\":[\n  {\"question\":\"Who was the competitor, and who was the incumbent provider?\",\"kind\":\"unknown\",\"follow_up\":\"Ask Jordan, or ask Ben directly, to name both so we can track the competitor's named-team and on-call play.\"},\n  {\"question\":\"Did the competitor put the 'on call for every major on-sale' promise in writing or in the contract?\",\"kind\":\"unknown\",\"follow_up\":\"Ask Ben whether it's contractual. If it is, we need a comparable commitment. If not, we need a way to make buyers ask for it in writing.\"},\n  {\"question\":\"What did Halima weigh in the one meeting where she decided? Did price or migration timing before spring come up?\",\"kind\":\"unknown\",\"follow_up\":\"Request a short loss call with Halima, or ask Ben what was on the table in that meeting.\"},\n  {\"question\":\"Could we have offered named people and on-sale coverage at all, if asked?\",\"kind\":\"unknown\",\"follow_up\":\"Check with support and solutions engineering what we can commit to for peak events, before we change M5.\"}\n ],\n \"rep_takeaway\":\"When the decider asks a 'who' question, answer with names and a plan, not a tier chart. When a buyer tells you exactly what artifact she needs, as Halima did with the on-sale plan, build it with your SE that week. Don't let the champion's technical win stand in for the decider's criteria.\"}}",
+ "data": {
+  "header": {
+   "outcome": "Lost",
+   "scope": null,
+   "competitor": null,
+   "incumbent": null,
+   "tag": "Support and service",
+   "runner_up": "Value proof",
+   "tag_why": "The COO decided on who picks up on on-sale morning. Our technical proof won over the CTO. When she asked 'who's my person' we answered with support tiers, and she heard 'a queue with a faster timer.' The competitor brought named people and an on-call promise for every major on-sale. Runner-up is Value proof because our proof (load test, uptime, logos) was in our terms. Her terms were 'what happens when it's down,' and we had no reference person who could speak to that."
+  },
+  "messaging_changes": [
+   {
+    "target": "M5",
+    "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+    "type": "replace",
+    "change": "Lead with named people, not tiers: 'Your named engineer and account lead, a shared channel, and a known escalation path, including who covers when your person is away.' Keep response-time tiers as supporting detail, not the headline.",
+    "evidence_excerpts": [
+     "so it's a queue with a faster timer.",
+     "A name, not a queue.",
+     "Who's my person. What's the escalation path if that person's on holiday."
+    ],
+    "why": "The decider rejected the tiers-and-timers framing in one sentence, and the rep marks that sentence as the moment the deal was lost. The customer's own words were 'a name, not a queue', so the support message should be about who rather than about speed.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": "",
+    "type": "add",
+    "change": "Add a peak-event readiness message, backed by a one-page plan template built with solutions engineering: 'Your peak moment, planned on paper: who's watching, who you call, what happens at minute four.'",
+    "evidence_excerpts": [
+     "She wanted to see, on paper, what we do on an on-sale morning.",
+     "We don't have that as a thing.",
+     "I don't buy uptime, I buy what happens when it's down."
+    ],
+    "why": "This was the concrete artifact the decider asked for, and we couldn't show it. The trigger itself (failures four minutes in, a ticket form, a reply after the event) shows the pain is the response during the incident, not avoiding the incident.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M8",
+    "current_line": "Trusted by leading businesses; see our customer stories.",
+    "type": "replace",
+    "change": "Shift proof from logos to people: offer a peer reference in the same vertical who can say what happened at their peak moment and who picked up.",
+    "evidence_excerpts": [
+     "I had logos. I didn't have a person.",
+     "Somebody who'd tell her, \"we ran a huge on-sale and here's who picked up.\""
+    ],
+    "why": "The rep says a ticketing reference who could describe a real escalation was the missing proof. A logo wall doesn't answer the decider's 'who' question.",
+    "strength": "Test this"
+   }
+  ],
+  "sections": {
+   "trigger": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "payments started failing about four minutes in",
+      "label": "fact"
+     },
+     {
+      "excerpt": "Their provider's support was a ticket form. They got a reply after the on-sale was over.",
+      "label": "fact"
+     },
+     {
+      "excerpt": "Ben, their CTO, said twice. But this was the first time the CEO saw it.",
+      "label": "fact"
+     }
+    ],
+    "insight": "Payments had failed during on-sales twice before, and that didn't trigger a switch. What triggered it was the CEO seeing it on social, and the provider's support answering via ticket form after the event was over. So the trigger was the failure of response, and how visible it was to executives, more than the outage itself. The evaluation was framed from day one by the COO ('replacing payments before the spring on-sales'): an operational buyer with a deadline tied to her next peak moments.",
+    "messaging": "Open with what happens during a failure at peak, not with platform capability. The pain we are replacing is 'nobody picked up', not 'it went down'."
+   },
+   "decider": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "it was Halima's call and she made it in one meeting.",
+      "label": "quote"
+     },
+     {
+      "excerpt": "Ben wanted us. He told me that, and he told me he lost.",
+      "label": "fact"
+     }
+    ],
+    "insight": "The COO decided, not the technical champion. Our strongest proof landed with the CTO, who lost the internal argument. Her reaction to the load test ('good.') shows that technical evidence was table stakes for her, not a reason to choose. The rep's closing line, 'We were the better platform', is the champion's frame, not the decider's.",
+    "messaging": "Make sure the support and peak-event story is built for the operational executive. Developer and platform messaging can win the CTO and still lose the COO."
+   },
+   "competitor": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "A named solutions engineer and an account lead, in the room.",
+      "label": "fact"
+     },
+     {
+      "excerpt": "they said there'd be a shared channel and someone on call for every major on-sale",
+      "label": "fact"
+     },
+     {
+      "excerpt": "I think they over-promised. I don't think anybody staffs every on-sale.",
+      "label": "opinion"
+     },
+     {
+      "excerpt": "Before that meeting it was throughput, queueing, bots. After, it was names.",
+      "label": "fact"
+     }
+    ],
+    "insight": "The competitor won by bringing the actual account team into the room and promising on-call cover for every major on-sale. After that meeting, the buying criteria moved from technical (throughput, queueing, bots) to people ('who do I call at 10 on a Friday'). The competitor changed the question, and we kept answering the old one. The rep's view that they over-promised is unverified; he admits 'I don't know that.' Even if it's true, it didn't matter to the buyer.",
+    "messaging": "Expect competitors to sell named people and event coverage. Our message needs a named-team and escalation answer ready before the question arrives, not a tiered-plan answer."
+   },
+   "message": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "Ben's team ran a load test in the sandbox and it went great.",
+      "label": "fact"
+     },
+     {
+      "excerpt": "The bot and fraud tooling got a good reaction too.",
+      "label": "fact"
+     },
+     {
+      "excerpt": "She let me finish.",
+      "label": "fact"
+     },
+     {
+      "excerpt": "so it's a queue with a faster timer.",
+      "label": "quote"
+     }
+    ],
+    "insight": "Developer and platform messaging (sandbox, docs, uptime, bot and fraud tooling) worked with the technical team. The support-tiers pitch got silence and then a dismissal from the decider. She heard tiers and response times as the same queue she was trying to escape. Our support message describes a process, and she was buying a person.",
+    "messaging": "M2 holds for technical evaluators. M5 as written actively hurt us with an operational buyer coming out of a support failure."
+   },
+   "decided": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "That sentence. Right before it we were the favourite.",
+      "label": "opinion"
+     },
+     {
+      "excerpt": "Ben had basically told his team to start planning the integration.",
+      "label": "opinion"
+     },
+     {
+      "excerpt": "good.",
+      "label": "quote"
+     }
+    ],
+    "insight": "The rep places the loss at one moment: the 'queue with a faster timer' line. That line is the rep's read, but it's consistent with the decider making the call in one meeting. Feeling like the favourite came from the champion's enthusiasm, not from the decider. Her one-word response to the load test was an early signal that technical proof wasn't moving her, and it went unread.",
+    "messaging": "When the decider gives a flat reaction to our proof, our proof is in the wrong terms. Pivot to her criteria: what happens when it's down, and who."
+   },
+   "gaps": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "She wanted to see, on paper, what we do on an on-sale morning.",
+      "label": "fact"
+     },
+     {
+      "excerpt": "We don't have that as a thing. I could have built something with our solutions engineer, and I didn't.",
+      "label": "fact"
+     },
+     {
+      "excerpt": "I had logos. I didn't have a person.",
+      "label": "fact"
+     }
+    ],
+    "insight": "There were two gaps. One is an on-sale or peak-event plan: who's watching, who she calls, what happens at minute four. The other is a reference person who has lived through a big on-sale with us. The first was partly a product or packaging gap and partly a rep choice, since he says he could have built it with the SE. He didn't because he believed the load test had already won.",
+    "messaging": "Package a peak-event plan template and line up vertical references who can speak to escalations, so reps don't have to improvise either one."
+   },
+   "language": {
+    "covered": true,
+    "evidence": [
+     {
+      "excerpt": "A name, not a queue.",
+      "label": "quote"
+     },
+     {
+      "excerpt": "Someone who picks up.",
+      "label": "quote"
+     },
+     {
+      "excerpt": "I don't buy uptime, I buy what happens when it's down.",
+      "label": "quote"
+     },
+     {
+      "excerpt": "Nobody said \"support.\" They said \"who.\"",
+      "label": "fact"
+     }
+    ],
+    "insight": "The customer's vocabulary is people and moments: 'who', 'a name', 'someone who picks up', 'on-sale morning'. Ours is categories and metrics: 'support plans', 'tiers', 'response times', 'uptime'. The decider explicitly rejected uptime as her buying criterion.",
+    "messaging": "Rewrite support messaging in the customer's words. Say 'your named person' and 'who picks up', and anchor it to their peak moment ('on-sale morning') instead of 'support tiers'."
+   }
+  },
+  "close": {
+   "gaps": [
+    {
+     "question": "Who was the competitor, and who was the incumbent provider?",
+     "kind": "unknown",
+     "follow_up": "Ask Jordan, or ask Ben directly, to name both so we can track the competitor's named-team and on-call play."
+    },
+    {
+     "question": "Did the competitor put the 'on call for every major on-sale' promise in writing or in the contract?",
+     "kind": "unknown",
+     "follow_up": "Ask Ben whether it's contractual. If it is, we need a comparable commitment. If not, we need a way to make buyers ask for it in writing."
+    },
+    {
+     "question": "What did Halima weigh in the one meeting where she decided? Did price or migration timing before spring come up?",
+     "kind": "unknown",
+     "follow_up": "Request a short loss call with Halima, or ask Ben what was on the table in that meeting."
+    },
+    {
+     "question": "Could we have offered named people and on-sale coverage at all, if asked?",
+     "kind": "unknown",
+     "follow_up": "Check with support and solutions engineering what we can commit to for peak events, before we change M5."
+    }
+   ],
+   "rep_takeaway": "When the decider asks a 'who' question, answer with names and a plan, not a tier chart. When a buyer tells you exactly what artifact she needs, as Halima did with the on-sale plan, build it with your SE that week. Don't let the champion's technical win stand in for the decider's criteria."
+  }
+ },
+ "ms": 53135,
+ "cost": 0.14074,
+ "in_tokens": 4981,
+ "out_tokens": 5045,
+ "model": "claude-opus-5-5"
+}

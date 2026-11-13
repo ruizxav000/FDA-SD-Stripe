@@ -1,0 +1,237 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":\"No decision\",\"scope\":null,\"competitor\":\"None (status quo)\",\"incumbent\":\"Homegrown billing system, built by a former employee\",\"tag\":\"Value proof\",\"runner_up\":\"Migration effort\",\"tag_why\":\"The CFO froze all new vendor projects after a Q3 miss, and Owen said he couldn't get past her without a payback number of their own, which we never built (only the generic ROI deck went out); the deal was exposed because finance never saw the cost of doing nothing.\"},\"sections\":{\"trigger\":{\"covered\":true,\"evidence\":[{\"id\":\"E1\",\"excerpt\":\"The billing system is homegrown, built by a guy who left\",\"label\":\"fact\"},{\"id\":\"E3\",\"excerpt\":\"every pricing change takes them a quarter.\",\"label\":\"fact\"},{\"id\":\"E2\",\"excerpt\":\"He reached out to us.\",\"label\":\"fact\"},{\"id\":\"E4\",\"excerpt\":\"He wanted it done before they launched a new pricing tier\",\"label\":\"fact\"}],\"insight\":\"There was no forcing event: a chronic pain owned by one product leader, with a pricing tier that had no date. A deal with no deadline and no business event behind it is the first to lose to a budget freeze. Owen came to us, so the pain was real to him, but nothing tied it to a company-level consequence.\",\"messaging\":\"Lead outreach and discovery with the cost of a quarter-long pricing change (delayed tiers, lost revenue) so a champion has a business event to anchor to, not just an engineering annoyance.\"},\"decider\":{\"covered\":true,\"evidence\":[{\"id\":\"E5\",\"excerpt\":\"The CFO, I guess?\",\"label\":\"opinion\"},{\"id\":\"E10\",\"excerpt\":\"I never spoke to her.\",\"label\":\"fact\"},{\"id\":\"E11\",\"excerpt\":\"Owen said he'd bring her in at the end.\",\"label\":\"fact\"},{\"id\":\"E35\",\"excerpt\":\"if it isn't on fire, it isn't funded.\",\"label\":\"quote\"}],\"insight\":\"The person with the money was never in a meeting and never heard from us directly; everything we know about her is Owen's relay, and the rep herself only guesses she was the decider. We built a deal for Owen and planned to meet the budget holder after paper was sent, which is too late.\",\"messaging\":\"Give champions a finance-ready one-pager that frames the cost of doing nothing in CFO terms, so our case reaches the budget holder without us in the room.\"},\"competitor\":{\"covered\":true,\"evidence\":[{\"id\":\"E12\",\"excerpt\":\"It was us against doing nothing.\",\"label\":\"opinion\"},{\"id\":\"E13\",\"excerpt\":\"Owen never looked at anybody else, as far as I know.\",\"label\":\"opinion\"},{\"id\":\"E14\",\"excerpt\":\"do you have something that shows payback?\",\"label\":\"quote\"}],\"insight\":\"The real opponent was the status quo, and the rep's hedge ('as far as I know') means even that is unverified. The one shift in Owen's questions, from product capability to payback, shows the evaluation moved from an engineering conversation to a finance one, and we were not ready for that.\",\"messaging\":\"Position against doing nothing explicitly: make the cost of the homegrown system and the delayed roadmap the central comparison, not a feature list.\"},\"message\":{\"covered\":true,\"evidence\":[{\"id\":\"E17\",\"excerpt\":\"that's a quarter of roadmap in five minutes.\",\"label\":\"quote\"},{\"id\":\"E18\",\"excerpt\":\"His engineers were into it.\",\"label\":\"fact\"},{\"id\":\"E21\",\"excerpt\":\"we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap.\",\"label\":\"quote\"},{\"id\":\"E25\",\"excerpt\":\"I sent him the ROI deck. The general one, with the study.\",\"label\":\"fact\"}],\"insight\":\"The demo landed because it translated into roadmap time, which is how Owen thinks. Our revenue framing was rejected outright, and the rep's 'nothing got silence' contradicts that. We only ever spoke to product and engineering, so we don't know how anything played with finance, and the generic ROI deck was the one finance-facing asset we sent.\",\"messaging\":\"For billing, replace M7 ('Billing that helps you grow revenue') with a speed-and-engineering-time message, and treat M6's generic study as a supporting point, not the answer to a CFO's request.\"},\"decided\":{\"covered\":true,\"evidence\":[{\"id\":\"E7\",\"excerpt\":\"They missed their number in Q3 and she put a hold on all new vendor projects.\",\"label\":\"fact\"},{\"id\":\"E23\",\"excerpt\":\"Before that we were in procurement.\",\"label\":\"fact\"},{\"id\":\"E24\",\"excerpt\":\"I can't get this past Diane without a number that's ours.\",\"label\":\"quote\"},{\"id\":\"E26\",\"excerpt\":\"We were going to set up a session to build one.\",\"label\":\"fact\"}],\"insight\":\"The rep frames this as timing, and the freeze was a general hold, but the deal was already exposed: Owen asked for a customer-specific number about a month before the freeze and we replied with a generic deck and a session that never happened. Her claim that nothing could have been done contradicts her own account, and 'it'll come back next year' has no evidence behind it. A funded 'on fire' case might have survived the freeze; we will never know.\",\"messaging\":\"Make a customer-specific value session a standard step before procurement, so the number exists before any budget review.\"},\"gaps\":{\"covered\":true,\"evidence\":[{\"id\":\"E28\",\"excerpt\":\"The number. Their own.\",\"label\":\"fact\"},{\"id\":\"E30\",\"excerpt\":\"We never added it up.\",\"label\":\"fact\"},{\"id\":\"E33\",\"excerpt\":\"some landlord subscriptions lapse because the card fails and nobody chases it.\",\"label\":\"fact\"},{\"id\":\"E29\",\"excerpt\":\"we don't touch billing before renewal season.\",\"label\":\"quote\"}],\"insight\":\"Two gaps: the business case was never built, and migration was answered with a doc when the customer wanted a peer who had done it, in stages and without re-collecting cards. The lapsed-subscription leak that Owen mentioned once is exactly the kind of cost finance responds to, and nobody quantified it. Whether a reference was ever provided is unknown.\",\"messaging\":\"Pair billing messaging with a staged, no-card-recollection migration story backed by a named customer reference, and use M10 (recovery of failed payments) as the revenue-leak hook in the value case.\"},\"language\":{\"covered\":true,\"evidence\":[{\"id\":\"E34\",\"excerpt\":\"a tax on the roadmap.\",\"label\":\"quote\"},{\"id\":\"E35\",\"excerpt\":\"if it isn't on fire, it isn't funded.\",\"label\":\"quote\"},{\"id\":\"E36\",\"excerpt\":\"nice to have\",\"label\":\"quote\"},{\"id\":\"E24\",\"excerpt\":\"I can't get this past Diane without a number that's ours.\",\"label\":\"quote\"}],\"insight\":\"Owen speaks in roadmap time; Diane, through him, speaks in urgency and funding thresholds. 'Nice to have' is what finance concluded, and the rep admits nobody told Diane the cost, so the project was never on fire for the person who funds it. The gap between the two vocabularies is the loss.\",\"messaging\":\"Use 'stop billing being a tax on your roadmap' for product buyers and 'put a number on the cost of not fixing it' for finance, and drop 'grow revenue' from billing.\"}},\"close\":{\"gaps\":[{\"question\":\"Who made the final call, and how do you know?\",\"kind\":\"dodged\",\"follow_up\":\"Ask Owen (or the rep's manager if Owen is unreachable): did Diane ever see the proposal or any cost figure, and who told her the project was frozen?\"},{\"question\":\"Did a competitor or an internal rebuild ever come up?\",\"kind\":\"unknown\",\"follow_up\":\"Ask Owen: did you evaluate any other vendor or consider extending the homegrown system?\"},{\"question\":\"Which part of our pitch got silence?\",\"kind\":\"dodged\",\"follow_up\":\"Ask the rep: what did engineering and finance each say about migration and ROI, and who else outside product attended any session?\"},{\"question\":\"Was a migration reference ever provided?\",\"kind\":\"unknown\",\"follow_up\":\"Ask the rep: did Owen get to speak to a customer who had migrated, and what happened to that request?\"},{\"question\":\"Will the project return next year?\",\"kind\":\"unknown\",\"follow_up\":\"Ask Owen: what would need to change for this to be funded, and when does the freeze review happen?\"}],\"rep_takeaway\":\"When a champion tells you he can't get past finance without a number, that request is the deal: build it with him that week, get in front of the CFO before paper goes out, and don't conclude afterward that nothing could have been done.\"},\"confidence\":\"medium\"}",
+ "data": {
+  "header": {
+   "outcome": "No decision",
+   "scope": null,
+   "competitor": "None (status quo)",
+   "incumbent": "Homegrown billing system, built by a former employee",
+   "tag": "Value proof",
+   "runner_up": "Migration effort",
+   "tag_why": "The CFO froze all new vendor projects after a Q3 miss, and Owen said he couldn't get past her without a payback number of their own, which we never built (only the generic ROI deck went out); the deal was exposed because finance never saw the cost of doing nothing."
+  },
+  "sections": {
+   "trigger": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E1",
+      "excerpt": "The billing system is homegrown, built by a guy who left",
+      "label": "fact"
+     },
+     {
+      "id": "E3",
+      "excerpt": "every pricing change takes them a quarter.",
+      "label": "fact"
+     },
+     {
+      "id": "E2",
+      "excerpt": "He reached out to us.",
+      "label": "fact"
+     },
+     {
+      "id": "E4",
+      "excerpt": "He wanted it done before they launched a new pricing tier",
+      "label": "fact"
+     }
+    ],
+    "insight": "There was no forcing event: a chronic pain owned by one product leader, with a pricing tier that had no date. A deal with no deadline and no business event behind it is the first to lose to a budget freeze. Owen came to us, so the pain was real to him, but nothing tied it to a company-level consequence.",
+    "messaging": "Lead outreach and discovery with the cost of a quarter-long pricing change (delayed tiers, lost revenue) so a champion has a business event to anchor to, not just an engineering annoyance."
+   },
+   "decider": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E5",
+      "excerpt": "The CFO, I guess?",
+      "label": "opinion"
+     },
+     {
+      "id": "E10",
+      "excerpt": "I never spoke to her.",
+      "label": "fact"
+     },
+     {
+      "id": "E11",
+      "excerpt": "Owen said he'd bring her in at the end.",
+      "label": "fact"
+     },
+     {
+      "id": "E35",
+      "excerpt": "if it isn't on fire, it isn't funded.",
+      "label": "quote"
+     }
+    ],
+    "insight": "The person with the money was never in a meeting and never heard from us directly; everything we know about her is Owen's relay, and the rep herself only guesses she was the decider. We built a deal for Owen and planned to meet the budget holder after paper was sent, which is too late.",
+    "messaging": "Give champions a finance-ready one-pager that frames the cost of doing nothing in CFO terms, so our case reaches the budget holder without us in the room."
+   },
+   "competitor": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E12",
+      "excerpt": "It was us against doing nothing.",
+      "label": "opinion"
+     },
+     {
+      "id": "E13",
+      "excerpt": "Owen never looked at anybody else, as far as I know.",
+      "label": "opinion"
+     },
+     {
+      "id": "E14",
+      "excerpt": "do you have something that shows payback?",
+      "label": "quote"
+     }
+    ],
+    "insight": "The real opponent was the status quo, and the rep's hedge ('as far as I know') means even that is unverified. The one shift in Owen's questions, from product capability to payback, shows the evaluation moved from an engineering conversation to a finance one, and we were not ready for that.",
+    "messaging": "Position against doing nothing explicitly: make the cost of the homegrown system and the delayed roadmap the central comparison, not a feature list."
+   },
+   "message": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E17",
+      "excerpt": "that's a quarter of roadmap in five minutes.",
+      "label": "quote"
+     },
+     {
+      "id": "E18",
+      "excerpt": "His engineers were into it.",
+      "label": "fact"
+     },
+     {
+      "id": "E21",
+      "excerpt": "we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap.",
+      "label": "quote"
+     },
+     {
+      "id": "E25",
+      "excerpt": "I sent him the ROI deck. The general one, with the study.",
+      "label": "fact"
+     }
+    ],
+    "insight": "The demo landed because it translated into roadmap time, which is how Owen thinks. Our revenue framing was rejected outright, and the rep's 'nothing got silence' contradicts that. We only ever spoke to product and engineering, so we don't know how anything played with finance, and the generic ROI deck was the one finance-facing asset we sent.",
+    "messaging": "For billing, replace M7 ('Billing that helps you grow revenue') with a speed-and-engineering-time message, and treat M6's generic study as a supporting point, not the answer to a CFO's request."
+   },
+   "decided": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E7",
+      "excerpt": "They missed their number in Q3 and she put a hold on all new vendor projects.",
+      "label": "fact"
+     },
+     {
+      "id": "E23",
+      "excerpt": "Before that we were in procurement.",
+      "label": "fact"
+     },
+     {
+      "id": "E24",
+      "excerpt": "I can't get this past Diane without a number that's ours.",
+      "label": "quote"
+     },
+     {
+      "id": "E26",
+      "excerpt": "We were going to set up a session to build one.",
+      "label": "fact"
+     }
+    ],
+    "insight": "The rep frames this as timing, and the freeze was a general hold, but the deal was already exposed: Owen asked for a customer-specific number about a month before the freeze and we replied with a generic deck and a session that never happened. Her claim that nothing could have been done contradicts her own account, and 'it'll come back next year' has no evidence behind it. A funded 'on fire' case might have survived the freeze; we will never know.",
+    "messaging": "Make a customer-specific value session a standard step before procurement, so the number exists before any budget review."
+   },
+   "gaps": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E28",
+      "excerpt": "The number. Their own.",
+      "label": "fact"
+     },
+     {
+      "id": "E30",
+      "excerpt": "We never added it up.",
+      "label": "fact"
+     },
+     {
+      "id": "E33",
+      "excerpt": "some landlord subscriptions lapse because the card fails and nobody chases it.",
+      "label": "fact"
+     },
+     {
+      "id": "E29",
+      "excerpt": "we don't touch billing before renewal season.",
+      "label": "quote"
+     }
+    ],
+    "insight": "Two gaps: the business case was never built, and migration was answered with a doc when the customer wanted a peer who had done it, in stages and without re-collecting cards. The lapsed-subscription leak that Owen mentioned once is exactly the kind of cost finance responds to, and nobody quantified it. Whether a reference was ever provided is unknown.",
+    "messaging": "Pair billing messaging with a staged, no-card-recollection migration story backed by a named customer reference, and use M10 (recovery of failed payments) as the revenue-leak hook in the value case."
+   },
+   "language": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E34",
+      "excerpt": "a tax on the roadmap.",
+      "label": "quote"
+     },
+     {
+      "id": "E35",
+      "excerpt": "if it isn't on fire, it isn't funded.",
+      "label": "quote"
+     },
+     {
+      "id": "E36",
+      "excerpt": "nice to have",
+      "label": "quote"
+     },
+     {
+      "id": "E24",
+      "excerpt": "I can't get this past Diane without a number that's ours.",
+      "label": "quote"
+     }
+    ],
+    "insight": "Owen speaks in roadmap time; Diane, through him, speaks in urgency and funding thresholds. 'Nice to have' is what finance concluded, and the rep admits nobody told Diane the cost, so the project was never on fire for the person who funds it. The gap between the two vocabularies is the loss.",
+    "messaging": "Use 'stop billing being a tax on your roadmap' for product buyers and 'put a number on the cost of not fixing it' for finance, and drop 'grow revenue' from billing."
+   }
+  },
+  "close": {
+   "gaps": [
+    {
+     "question": "Who made the final call, and how do you know?",
+     "kind": "dodged",
+     "follow_up": "Ask Owen (or the rep's manager if Owen is unreachable): did Diane ever see the proposal or any cost figure, and who told her the project was frozen?"
+    },
+    {
+     "question": "Did a competitor or an internal rebuild ever come up?",
+     "kind": "unknown",
+     "follow_up": "Ask Owen: did you evaluate any other vendor or consider extending the homegrown system?"
+    },
+    {
+     "question": "Which part of our pitch got silence?",
+     "kind": "dodged",
+     "follow_up": "Ask the rep: what did engineering and finance each say about migration and ROI, and who else outside product attended any session?"
+    },
+    {
+     "question": "Was a migration reference ever provided?",
+     "kind": "unknown",
+     "follow_up": "Ask the rep: did Owen get to speak to a customer who had migrated, and what happened to that request?"
+    },
+    {
+     "question": "Will the project return next year?",
+     "kind": "unknown",
+     "follow_up": "Ask Owen: what would need to change for this to be funded, and when does the freeze review happen?"
+    }
+   ],
+   "rep_takeaway": "When a champion tells you he can't get past finance without a number, that request is the deal: build it with him that week, get in front of the CFO before paper goes out, and don't conclude afterward that nothing could have been done."
+  },
+  "confidence": "medium"
+ },
+ "ms": 23984,
+ "cost": 0.070982,
+ "in_tokens": 10459,
+ "out_tokens": 2915,
+ "model": "claude-sonnet-5-5"
+}

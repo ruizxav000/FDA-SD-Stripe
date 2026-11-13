@@ -1,0 +1,51 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":0},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":1,\"gaps\":1,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"Value proof is named as the underlying cause behind the No decision tag.\",\"pass\":true},\n  {\"item\":\"\\\"Nothing we could have done\\\" is labeled opinion and challenged.\",\"pass\":false},\n  {\"item\":\"The payback request one month before the freeze is surfaced as the turning point.\",\"pass\":true},\n  {\"item\":\"The revenue framing is reported as pushed back.\",\"pass\":true}],\n \"fails\":[\n  \"Misquote in 'decided' insight: the rep's view is rendered as \\\"there was anything we could have done\\\", which drops 'I don't think' and reverses the meaning. It is also not cited as evidence or labelled opinion.\",\n  \"tag_why states definitively that 'urgent projects could still get money', but the transcript says Diane put a hold on all new vendor projects. The report presents an inference from 'if it isn't on fire, it isn't funded' as fact.\",\n  \"Gaps insight and messaging invent a product claim: 'failed-card lapses that our recovery capability directly addresses' / 'Link failed-payment recovery to the payback case'. No recovery capability is mentioned in the transcript.\"],\n \"notes\":\"Strongest point: the report correctly identifies the payback request a month before the freeze as the real turning point. It also traces the loss to the missing customer-specific number, rather than accepting 'timing'. Biggest misses: it tags the deal Value proof instead of No decision, and it never labels or quotes the rep's 'nothing we could have done' as opinion, garbling it into the opposite meaning. The close also omits the follow-ups to build the number with Owen and to line up a staged-migration reference.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 0
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 1,
+   "gaps": 1,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "Value proof is named as the underlying cause behind the No decision tag.",
+    "pass": true
+   },
+   {
+    "item": "\"Nothing we could have done\" is labeled opinion and challenged.",
+    "pass": false
+   },
+   {
+    "item": "The payback request one month before the freeze is surfaced as the turning point.",
+    "pass": true
+   },
+   {
+    "item": "The revenue framing is reported as pushed back.",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Misquote in 'decided' insight: the rep's view is rendered as \"there was anything we could have done\", which drops 'I don't think' and reverses the meaning. It is also not cited as evidence or labelled opinion.",
+   "tag_why states definitively that 'urgent projects could still get money', but the transcript says Diane put a hold on all new vendor projects. The report presents an inference from 'if it isn't on fire, it isn't funded' as fact.",
+   "Gaps insight and messaging invent a product claim: 'failed-card lapses that our recovery capability directly addresses' / 'Link failed-payment recovery to the payback case'. No recovery capability is mentioned in the transcript."
+  ],
+  "notes": "Strongest point: the report correctly identifies the payback request a month before the freeze as the real turning point. It also traces the loss to the missing customer-specific number, rather than accepting 'timing'. Biggest misses: it tags the deal Value proof instead of No decision, and it never labels or quotes the rep's 'nothing we could have done' as opinion, garbling it into the opposite meaning. The close also omits the follow-ups to build the number with Owen and to line up a staged-migration reference."
+ },
+ "ms": 31319,
+ "cost": 0.13324,
+ "in_tokens": 8961,
+ "out_tokens": 3078,
+ "model": "claude-opus-5-5"
+}

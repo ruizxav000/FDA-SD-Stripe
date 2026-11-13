@@ -1,0 +1,651 @@
+{
+ "ok": true,
+ "text": "{\"people\":[{\"name\":\"Tom\",\"role\":\"rep, account executive\",\"side\":\"us\"},{\"name\":\"Raj\",\"role\":\"CTO, ran the RFP\",\"side\":\"customer\"},{\"name\":\"Angela\",\"role\":\"COO\",\"side\":\"customer\"},{\"name\":\"Bev\",\"role\":\"head of store operations\",\"side\":\"customer\"},{\"name\":\"(unnamed)\",\"role\":\"ecommerce lead\",\"side\":\"customer\"},{\"name\":\"(unnamed)\",\"role\":\"solutions engineer, attended store ops workshop\",\"side\":\"us\"}],\n\"competitors\":[\"Adyen\"],\n\"incumbent\":null,\n\"evidence\":[\n{\"id\":\"E1\",\"turn\":2,\"excerpt\":\"Their COO, Angela, apparently stood in a store on December 27th watching the returns queue.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Secondhand trigger story, hedged with 'apparently'.\"},\n{\"id\":\"E2\",\"turn\":2,\"excerpt\":\"The store couldn't see the online order\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Describes the returns problem that started the evaluation.\"},\n{\"id\":\"E3\",\"turn\":2,\"excerpt\":\"they'd just launched a loyalty program that was supposed to work everywhere and didn't\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Second pain point: loyalty split across two customer records.\"},\n{\"id\":\"E4\",\"turn\":4,\"excerpt\":\"The CTO, Raj. He ran the RFP, he was my contact the whole way.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Rep names Raj as decider; contradicted later.\"},\n{\"id\":\"E5\",\"turn\":6,\"excerpt\":\"they came in with a retail team, people who'd done store rollouts\",\"label\":\"fact\",\"speaker\":\"Raj (customer, reported by Tom)\",\"paraphrase\":true,\"topics\":[\"competitor\"],\"note\":\"Competitor pitch, relayed indirectly, not verbatim.\"},\n{\"id\":\"E6\",\"turn\":6,\"excerpt\":\"they talked about one platform for the tills and the website, on one contract\",\"label\":\"fact\",\"speaker\":\"Raj (customer, reported by Tom)\",\"paraphrase\":true,\"topics\":[\"competitor\",\"message\"],\"note\":\"Competitor offered one platform and one contract.\"},\n{\"id\":\"E7\",\"turn\":6,\"excerpt\":\"And they named retailers Angela knew.\",\"label\":\"fact\",\"speaker\":\"Raj (customer, reported by Tom)\",\"paraphrase\":true,\"topics\":[\"competitor\"],\"note\":\"Competitor used references Angela recognized.\"},\n{\"id\":\"E8\",\"turn\":6,\"excerpt\":\"I wasn't there.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Rep was absent; all competitor detail is secondhand.\"},\n{\"id\":\"E9\",\"turn\":8,\"excerpt\":\"Before, it was all web. Conversion, checkout, wallets. After, it was stores.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"competitor\",\"gaps\"],\"note\":\"Customer questions shifted from web to stores after the competitor meeting.\"},\n{\"id\":\"E10\",\"turn\":8,\"excerpt\":\"Raj forwarded me a list of 14 questions and 11 of them were about stores.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Store questions dominated the customer's list.\"},\n{\"id\":\"E11\",\"turn\":8,\"excerpt\":\"How do you roll out 120 stores.\",\"label\":\"fact\",\"speaker\":\"customer (question list forwarded by Raj)\",\"paraphrase\":true,\"topics\":[\"gaps\"],\"note\":\"Store count of 120 is a concrete rollout requirement.\"},\n{\"id\":\"E12\",\"turn\":10,\"excerpt\":\"Reaction: the online checkout demo. Their ecommerce lead loved it.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Web demo landed well with the ecommerce lead.\"},\n{\"id\":\"E13\",\"turn\":10,\"excerpt\":\"Silence: the unified commerce part.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Our unified commerce pitch got no reaction.\"},\n{\"id\":\"E14\",\"turn\":10,\"excerpt\":\"Online and in-store on one platform, the line between them has pretty much disappeared.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"message\",\"language\"],\"note\":\"Our slide wording; rep's pitch line.\"},\n{\"id\":\"E15\",\"turn\":10,\"excerpt\":\"that's a diagram.\",\"label\":\"quote\",\"speaker\":\"Bev (customer, head of store operations)\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Bev dismissed the unified commerce slide as abstract.\"},\n{\"id\":\"E16\",\"turn\":10,\"excerpt\":\"Then she asked how a return works. Step by step. At the till.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Bev's follow-up asked for the in-store return flow.\"},\n{\"id\":\"E17\",\"turn\":12,\"excerpt\":\"I described it.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Answer to what he said about the return flow; evasive.\"},\n{\"id\":\"E18\",\"turn\":14,\"excerpt\":\"They asked for a half day on stores.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"gaps\",\"trigger\"],\"note\":\"Store ops workshop request, the point where the rep felt the loss.\"},\n{\"id\":\"E19\",\"turn\":14,\"excerpt\":\"They had six people from store operations.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Customer attendance at the workshop.\"},\n{\"id\":\"E20\",\"turn\":14,\"excerpt\":\"Nobody on our side had run a store rollout.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Our team lacked store rollout experience; competitor had it.\"},\n{\"id\":\"E21\",\"turn\":14,\"excerpt\":\"When Bev asked who does the installs, I said we'd bring in a partner.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"gaps\",\"language\"],\"note\":\"Install answer relied on an unnamed partner.\"},\n{\"id\":\"E22\",\"turn\":14,\"excerpt\":\"She wrote something down and didn't ask another question.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Bev's reaction to the partner answer.\"},\n{\"id\":\"E23\",\"turn\":14,\"excerpt\":\"I knew on the drive home.\",\"label\":\"opinion\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"trigger\",\"outcome\"],\"note\":\"Rep's own read on when the deal was lost.\"},\n{\"id\":\"E24\",\"turn\":14,\"excerpt\":\"Right before that, honestly, we were ahead. Raj said so. We'd won the web side.\",\"label\":\"opinion\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"outcome\"],\"note\":\"Rep's view of partial win; Raj's view reported secondhand.\"},\n{\"id\":\"E25\",\"turn\":16,\"excerpt\":\"Angela's team. Stores.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"trigger\",\"decider\"],\"note\":\"Angela's team, not Raj, requested the store workshop.\"},\n{\"id\":\"E26\",\"turn\":18,\"excerpt\":\"Angela.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"decided\"],\"note\":\"Rep says Angela signed with Adyen.\"},\n{\"id\":\"E27\",\"turn\":20,\"excerpt\":\"Probably Angela.\",\"label\":\"opinion\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Hedged decider answer; conflicts with Raj as decider.\"},\n{\"id\":\"E28\",\"turn\":20,\"excerpt\":\"Raj wanted us. I think. He told me he did.\",\"label\":\"opinion\",\"speaker\":\"Tom (rep)\",\"paraphrase\":true,\"topics\":[\"decider\"],\"note\":\"Raj's preference is rep's belief, reported secondhand.\"},\n{\"id\":\"E29\",\"turn\":22,\"excerpt\":\"Once. The kickoff.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Rep met Angela only once, at kickoff.\"},\n{\"id\":\"E30\",\"turn\":24,\"excerpt\":\"We sent a case study.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Fashion retailer case study, stores and online.\"},\n{\"id\":\"E31\",\"turn\":24,\"excerpt\":\"can I talk to them?\",\"label\":\"quote\",\"speaker\":\"Angela (customer, COO)\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Angela wanted a reference call we could not arrange.\"},\n{\"id\":\"E32\",\"turn\":24,\"excerpt\":\"we couldn't set up a call in time.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Reference call missed; no call in time.\"},\n{\"id\":\"E33\",\"turn\":24,\"excerpt\":\"They wanted to watch an online order get returned at a store till, live. We described it. We never showed it.\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Customer asked for a live demo; we only described it.\"},\n{\"id\":\"E34\",\"turn\":26,\"excerpt\":\"One system for the tills and the website.\",\"label\":\"quote\",\"speaker\":\"Bev (customer, head of store operations)\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Bev's own framing of the need.\"},\n{\"id\":\"E35\",\"turn\":26,\"excerpt\":\"I don't want two vendors pointing at each other.\",\"label\":\"quote\",\"speaker\":\"Angela (customer, COO)\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Angela's vendor-accountability concern.\"},\n{\"id\":\"E36\",\"turn\":26,\"excerpt\":\"one customer, one basket.\",\"label\":\"quote\",\"speaker\":\"customer (speaker not named)\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer phrasing for unified commerce.\"},\n{\"id\":\"E37\",\"turn\":26,\"excerpt\":\"They never said \\\"unified commerce.\\\"\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer never used our category term.\"},\n{\"id\":\"E38\",\"turn\":26,\"excerpt\":\"We kept saying \\\"in-person payments\\\" and \\\"point of sale.\\\"\",\"label\":\"fact\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Our terms, which the customer did not use.\"},\n{\"id\":\"E39\",\"turn\":26,\"excerpt\":\"the tills.\",\"label\":\"quote\",\"speaker\":\"customer (speaker not named)\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer's term for point-of-sale hardware.\"},\n{\"id\":\"E40\",\"turn\":28,\"excerpt\":\"I think we had the better product online. I still think that.\",\"label\":\"opinion\",\"speaker\":\"Tom (rep)\",\"paraphrase\":false,\"topics\":[\"message\",\"outcome\"],\"note\":\"Rep's product opinion; web strength, not the decision driver.\"}\n],\n\"contradictions\":[\n{\"evidence\":[\"E4\",\"E27\"],\"what\":\"Rep first names Raj as the decider, then says 'Probably Angela' when asked who made the final call.\"},\n{\"evidence\":[\"E28\",\"E26\"],\"what\":\"Rep says Raj wanted us, yet Angela signed with Adyen; the rep's account of the decider is unresolved.\"},\n{\"evidence\":[\"E29\",\"E31\"],\"what\":\"Rep says they met Angela only once, at kickoff, yet reports her direct words in later requests and comments.\"}\n],\n\"dodges\":[\n{\"question\":\"What did you say?\",\"turn\":12,\"what\":\"Answered 'I described it.' without saying what was described when the customer asked about the in-store return flow.\"},\n{\"question\":\"So who made the final call?\",\"turn\":20,\"what\":\"Hedged with 'Probably Angela', then 'Raj wanted us. I think.', contradicting the earlier decider answer.\"}\n],\n\"skipped\":[\"decided\"],\n\"language_pairs\":[\n{\"theirs\":\"One system for the tills and the website.\",\"ours\":\"unified commerce\",\"evidence\":[\"E34\",\"E37\"]},\n{\"theirs\":\"the tills\",\"ours\":\"point of sale\",\"evidence\":[\"E39\",\"E38\"]},\n{\"theirs\":\"I don't want two vendors pointing at each other.\",\"ours\":\"we'd bring in a partner\",\"evidence\":[\"E35\",\"E21\"]},\n{\"theirs\":\"one customer, one basket.\",\"ours\":\"Online and in-store on one platform\",\"evidence\":[\"E36\",\"E14\"]},\n{\"theirs\":\"that's a diagram.\",\"ours\":\"Online and in-store on one platform, the line between them has pretty much disappeared.\",\"evidence\":[\"E15\",\"E14\"]},\n{\"theirs\":\"can I talk to them?\",\"ours\":\"We sent a case study.\",\"evidence\":[\"E31\",\"E30\"]}\n],\n\"outcome_signals\":[\n{\"evidence\":[\"E26\"],\"what\":\"Rep says Angela signed with Adyen, indicating the deal went to the competitor (loss implied, not stated as 'lost').\"},\n{\"evidence\":[\"E24\"],\"what\":\"Rep says we were ahead and had 'won the web side', suggesting only part of the business was in play or won.\"},\n{\"evidence\":[\"E23\"],\"what\":\"Rep says they knew the deal was lost on the drive home after the store ops workshop.\"},\n{\"evidence\":[\"E28\"],\"what\":\"Rep reports Raj wanted us, unverified and in conflict with the signing outcome.\"}\n]}",
+ "data": {
+  "people": [
+   {
+    "name": "Tom",
+    "role": "rep, account executive",
+    "side": "us"
+   },
+   {
+    "name": "Raj",
+    "role": "CTO, ran the RFP",
+    "side": "customer"
+   },
+   {
+    "name": "Angela",
+    "role": "COO",
+    "side": "customer"
+   },
+   {
+    "name": "Bev",
+    "role": "head of store operations",
+    "side": "customer"
+   },
+   {
+    "name": "(unnamed)",
+    "role": "ecommerce lead",
+    "side": "customer"
+   },
+   {
+    "name": "(unnamed)",
+    "role": "solutions engineer, attended store ops workshop",
+    "side": "us"
+   }
+  ],
+  "competitors": [
+   "Adyen"
+  ],
+  "incumbent": null,
+  "evidence": [
+   {
+    "id": "E1",
+    "turn": 2,
+    "excerpt": "Their COO, Angela, apparently stood in a store on December 27th watching the returns queue.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Secondhand trigger story, hedged with 'apparently'."
+   },
+   {
+    "id": "E2",
+    "turn": 2,
+    "excerpt": "The store couldn't see the online order",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Describes the returns problem that started the evaluation."
+   },
+   {
+    "id": "E3",
+    "turn": 2,
+    "excerpt": "they'd just launched a loyalty program that was supposed to work everywhere and didn't",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Second pain point: loyalty split across two customer records."
+   },
+   {
+    "id": "E4",
+    "turn": 4,
+    "excerpt": "The CTO, Raj. He ran the RFP, he was my contact the whole way.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Rep names Raj as decider; contradicted later."
+   },
+   {
+    "id": "E5",
+    "turn": 6,
+    "excerpt": "they came in with a retail team, people who'd done store rollouts",
+    "label": "fact",
+    "speaker": "Raj (customer, reported by Tom)",
+    "paraphrase": true,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Competitor pitch, relayed indirectly, not verbatim."
+   },
+   {
+    "id": "E6",
+    "turn": 6,
+    "excerpt": "they talked about one platform for the tills and the website, on one contract",
+    "label": "fact",
+    "speaker": "Raj (customer, reported by Tom)",
+    "paraphrase": true,
+    "topics": [
+     "competitor",
+     "message"
+    ],
+    "note": "Competitor offered one platform and one contract."
+   },
+   {
+    "id": "E7",
+    "turn": 6,
+    "excerpt": "And they named retailers Angela knew.",
+    "label": "fact",
+    "speaker": "Raj (customer, reported by Tom)",
+    "paraphrase": true,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Competitor used references Angela recognized."
+   },
+   {
+    "id": "E8",
+    "turn": 6,
+    "excerpt": "I wasn't there.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Rep was absent; all competitor detail is secondhand."
+   },
+   {
+    "id": "E9",
+    "turn": 8,
+    "excerpt": "Before, it was all web. Conversion, checkout, wallets. After, it was stores.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "gaps"
+    ],
+    "note": "Customer questions shifted from web to stores after the competitor meeting."
+   },
+   {
+    "id": "E10",
+    "turn": 8,
+    "excerpt": "Raj forwarded me a list of 14 questions and 11 of them were about stores.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Store questions dominated the customer's list."
+   },
+   {
+    "id": "E11",
+    "turn": 8,
+    "excerpt": "How do you roll out 120 stores.",
+    "label": "fact",
+    "speaker": "customer (question list forwarded by Raj)",
+    "paraphrase": true,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Store count of 120 is a concrete rollout requirement."
+   },
+   {
+    "id": "E12",
+    "turn": 10,
+    "excerpt": "Reaction: the online checkout demo. Their ecommerce lead loved it.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Web demo landed well with the ecommerce lead."
+   },
+   {
+    "id": "E13",
+    "turn": 10,
+    "excerpt": "Silence: the unified commerce part.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Our unified commerce pitch got no reaction."
+   },
+   {
+    "id": "E14",
+    "turn": 10,
+    "excerpt": "Online and in-store on one platform, the line between them has pretty much disappeared.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "language"
+    ],
+    "note": "Our slide wording; rep's pitch line."
+   },
+   {
+    "id": "E15",
+    "turn": 10,
+    "excerpt": "that's a diagram.",
+    "label": "quote",
+    "speaker": "Bev (customer, head of store operations)",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Bev dismissed the unified commerce slide as abstract."
+   },
+   {
+    "id": "E16",
+    "turn": 10,
+    "excerpt": "Then she asked how a return works. Step by step. At the till.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Bev's follow-up asked for the in-store return flow."
+   },
+   {
+    "id": "E17",
+    "turn": 12,
+    "excerpt": "I described it.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Answer to what he said about the return flow; evasive."
+   },
+   {
+    "id": "E18",
+    "turn": 14,
+    "excerpt": "They asked for a half day on stores.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "trigger"
+    ],
+    "note": "Store ops workshop request, the point where the rep felt the loss."
+   },
+   {
+    "id": "E19",
+    "turn": 14,
+    "excerpt": "They had six people from store operations.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Customer attendance at the workshop."
+   },
+   {
+    "id": "E20",
+    "turn": 14,
+    "excerpt": "Nobody on our side had run a store rollout.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Our team lacked store rollout experience; competitor had it."
+   },
+   {
+    "id": "E21",
+    "turn": 14,
+    "excerpt": "When Bev asked who does the installs, I said we'd bring in a partner.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "language"
+    ],
+    "note": "Install answer relied on an unnamed partner."
+   },
+   {
+    "id": "E22",
+    "turn": 14,
+    "excerpt": "She wrote something down and didn't ask another question.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Bev's reaction to the partner answer."
+   },
+   {
+    "id": "E23",
+    "turn": 14,
+    "excerpt": "I knew on the drive home.",
+    "label": "opinion",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "trigger",
+     "outcome"
+    ],
+    "note": "Rep's own read on when the deal was lost."
+   },
+   {
+    "id": "E24",
+    "turn": 14,
+    "excerpt": "Right before that, honestly, we were ahead. Raj said so. We'd won the web side.",
+    "label": "opinion",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "outcome"
+    ],
+    "note": "Rep's view of partial win; Raj's view reported secondhand."
+   },
+   {
+    "id": "E25",
+    "turn": 16,
+    "excerpt": "Angela's team. Stores.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "trigger",
+     "decider"
+    ],
+    "note": "Angela's team, not Raj, requested the store workshop."
+   },
+   {
+    "id": "E26",
+    "turn": 18,
+    "excerpt": "Angela.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "decided"
+    ],
+    "note": "Rep says Angela signed with Adyen."
+   },
+   {
+    "id": "E27",
+    "turn": 20,
+    "excerpt": "Probably Angela.",
+    "label": "opinion",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Hedged decider answer; conflicts with Raj as decider."
+   },
+   {
+    "id": "E28",
+    "turn": 20,
+    "excerpt": "Raj wanted us. I think. He told me he did.",
+    "label": "opinion",
+    "speaker": "Tom (rep)",
+    "paraphrase": true,
+    "topics": [
+     "decider"
+    ],
+    "note": "Raj's preference is rep's belief, reported secondhand."
+   },
+   {
+    "id": "E29",
+    "turn": 22,
+    "excerpt": "Once. The kickoff.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Rep met Angela only once, at kickoff."
+   },
+   {
+    "id": "E30",
+    "turn": 24,
+    "excerpt": "We sent a case study.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Fashion retailer case study, stores and online."
+   },
+   {
+    "id": "E31",
+    "turn": 24,
+    "excerpt": "can I talk to them?",
+    "label": "quote",
+    "speaker": "Angela (customer, COO)",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Angela wanted a reference call we could not arrange."
+   },
+   {
+    "id": "E32",
+    "turn": 24,
+    "excerpt": "we couldn't set up a call in time.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Reference call missed; no call in time."
+   },
+   {
+    "id": "E33",
+    "turn": 24,
+    "excerpt": "They wanted to watch an online order get returned at a store till, live. We described it. We never showed it.",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Customer asked for a live demo; we only described it."
+   },
+   {
+    "id": "E34",
+    "turn": 26,
+    "excerpt": "One system for the tills and the website.",
+    "label": "quote",
+    "speaker": "Bev (customer, head of store operations)",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Bev's own framing of the need."
+   },
+   {
+    "id": "E35",
+    "turn": 26,
+    "excerpt": "I don't want two vendors pointing at each other.",
+    "label": "quote",
+    "speaker": "Angela (customer, COO)",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Angela's vendor-accountability concern."
+   },
+   {
+    "id": "E36",
+    "turn": 26,
+    "excerpt": "one customer, one basket.",
+    "label": "quote",
+    "speaker": "customer (speaker not named)",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer phrasing for unified commerce."
+   },
+   {
+    "id": "E37",
+    "turn": 26,
+    "excerpt": "They never said \"unified commerce.\"",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer never used our category term."
+   },
+   {
+    "id": "E38",
+    "turn": 26,
+    "excerpt": "We kept saying \"in-person payments\" and \"point of sale.\"",
+    "label": "fact",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Our terms, which the customer did not use."
+   },
+   {
+    "id": "E39",
+    "turn": 26,
+    "excerpt": "the tills.",
+    "label": "quote",
+    "speaker": "customer (speaker not named)",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer's term for point-of-sale hardware."
+   },
+   {
+    "id": "E40",
+    "turn": 28,
+    "excerpt": "I think we had the better product online. I still think that.",
+    "label": "opinion",
+    "speaker": "Tom (rep)",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "outcome"
+    ],
+    "note": "Rep's product opinion; web strength, not the decision driver."
+   }
+  ],
+  "contradictions": [
+   {
+    "evidence": [
+     "E4",
+     "E27"
+    ],
+    "what": "Rep first names Raj as the decider, then says 'Probably Angela' when asked who made the final call."
+   },
+   {
+    "evidence": [
+     "E28",
+     "E26"
+    ],
+    "what": "Rep says Raj wanted us, yet Angela signed with Adyen; the rep's account of the decider is unresolved."
+   },
+   {
+    "evidence": [
+     "E29",
+     "E31"
+    ],
+    "what": "Rep says they met Angela only once, at kickoff, yet reports her direct words in later requests and comments."
+   }
+  ],
+  "dodges": [
+   {
+    "question": "What did you say?",
+    "turn": 12,
+    "what": "Answered 'I described it.' without saying what was described when the customer asked about the in-store return flow."
+   },
+   {
+    "question": "So who made the final call?",
+    "turn": 20,
+    "what": "Hedged with 'Probably Angela', then 'Raj wanted us. I think.', contradicting the earlier decider answer."
+   }
+  ],
+  "skipped": [
+   "decided"
+  ],
+  "language_pairs": [
+   {
+    "theirs": "One system for the tills and the website.",
+    "ours": "unified commerce",
+    "evidence": [
+     "E34",
+     "E37"
+    ]
+   },
+   {
+    "theirs": "the tills",
+    "ours": "point of sale",
+    "evidence": [
+     "E39",
+     "E38"
+    ]
+   },
+   {
+    "theirs": "I don't want two vendors pointing at each other.",
+    "ours": "we'd bring in a partner",
+    "evidence": [
+     "E35",
+     "E21"
+    ]
+   },
+   {
+    "theirs": "one customer, one basket.",
+    "ours": "Online and in-store on one platform",
+    "evidence": [
+     "E36",
+     "E14"
+    ]
+   },
+   {
+    "theirs": "that's a diagram.",
+    "ours": "Online and in-store on one platform, the line between them has pretty much disappeared.",
+    "evidence": [
+     "E15",
+     "E14"
+    ]
+   },
+   {
+    "theirs": "can I talk to them?",
+    "ours": "We sent a case study.",
+    "evidence": [
+     "E31",
+     "E30"
+    ]
+   }
+  ],
+  "outcome_signals": [
+   {
+    "evidence": [
+     "E26"
+    ],
+    "what": "Rep says Angela signed with Adyen, indicating the deal went to the competitor (loss implied, not stated as 'lost')."
+   },
+   {
+    "evidence": [
+     "E24"
+    ],
+    "what": "Rep says we were ahead and had 'won the web side', suggesting only part of the business was in play or won."
+   },
+   {
+    "evidence": [
+     "E23"
+    ],
+    "what": "Rep says they knew the deal was lost on the drive home after the store ops workshop."
+   },
+   {
+    "evidence": [
+     "E28"
+    ],
+    "what": "Rep reports Raj wanted us, unverified and in conflict with the signing outcome."
+   }
+  ]
+ },
+ "ms": 70123,
+ "cost": 0.0094785,
+ "in_tokens": 4021,
+ "out_tokens": 17349,
+ "model": "claude-haiku-5-5"
+}

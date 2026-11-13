@@ -1,0 +1,247 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":\"Lost\",\"scope\":\"Lost: the international business moved to local acquiring after Adyen's test on that traffic; the US stayed with us, per the rep.\",\"competitor\":\"Adyen\",\"incumbent\":\"Stripe (us)\",\"tag\":\"Value proof\",\"runner_up\":\"Approval rates\",\"tag_why\":\"Adyen tested his own international traffic and showed results by country, while we answered with an average uplift he said he couldn't take to his CFO; our customer-specific analysis came three weeks later, after their test had finished.\"},\n \"sections\":{\n  \"trigger\":{\"covered\":true,\"evidence\":[\n    {\"id\":\"E2\",\"excerpt\":\"Payments sat under an engineering manager, the guy who originally bought us, and he left last year.\",\"label\":\"fact\"},\n    {\"id\":\"E1\",\"excerpt\":\"A new head of payments. Stefan. They'd never had one.\",\"label\":\"fact\"},\n    {\"id\":\"E4\",\"excerpt\":\"the first thing he did was pull declines by country\",\"label\":\"fact\"},\n    {\"id\":\"E26\",\"excerpt\":\"No. I knew the engineering manager had left. I didn't know they'd hired a head of payments.\",\"label\":\"fact\"}],\n   \"insight\":\"The trigger was a change of owner, not a product incident. Our buyer left, and a payments specialist from a bigger company arrived and judged us on declines by country on day one. We knew our buyer had gone, missed the new hire, and had gone 9-10 months without a business review. So the evaluation started and ran without us, and the 'healthy, no tickets' signal was measuring the wrong person. We still don't know which markets he flagged beyond 'Brazil and a couple in Europe', or what his numbers showed.\",\n   \"messaging\":\"For accounts where a payments owner has just been hired, open with a proactive approvals-by-country review of their own traffic rather than M1's global-growth line, because that review is what a new head of payments does first anyway.\"},\n  \"decider\":{\"covered\":true,\"evidence\":[\n    {\"id\":\"E7\",\"excerpt\":\"Stefan recommended it and the CFO approved.\",\"label\":\"fact\"},\n    {\"id\":\"E8\",\"excerpt\":\"this went to the CFO two weeks ago.\",\"label\":\"quote\"},\n    {\"id\":\"E15\",\"excerpt\":\"I can't take an average to my CFO.\",\"label\":\"quote\"}],\n   \"insight\":\"Stefan built the case and the CFO signed it, and we never reached the CFO. Stefan told us the test for what could reach the CFO: a customer-specific number, not an average. By our last call the decision had already gone up two weeks earlier. We don't know whether our analysis reached Stefan before he wrote his recommendation, and we never asked.\",\n   \"messaging\":\"Give the head of payments a CFO-ready page with his own markets, his approval gap and the revenue at stake, because he is carrying our case into a room we are not in.\"},\n  \"competitor\":{\"covered\":true,\"evidence\":[\n    {\"id\":\"E9\",\"excerpt\":\"Adyen ran a test on a slice of their international traffic and came back with results by country.\",\"label\":\"fact\"},\n    {\"id\":\"E10\",\"excerpt\":\"local acquiring\",\"label\":\"quote\"},\n    {\"id\":\"E11\",\"excerpt\":\"I can't tell you what the test showed. He wouldn't share it.\",\"label\":\"fact\"},\n    {\"id\":\"E12\",\"excerpt\":\"They got very specific. What's our approval rate in this country, on this card type, by issuer. And why.\",\"label\":\"fact\"}],\n   \"insight\":\"Adyen won by changing how the decision was judged: proof on his own traffic, by country, with a reason. After that meeting Stefan's questions shifted to country, card type, issuer and why. We don't know that Adyen's approvals were actually better, because the results were never shared. What we know is that they had evidence in his terms and we didn't. 'Local acquiring' was the explanation he adopted, and we never offered a counter-explanation.\",\n   \"messaging\":\"When a competitor offers a traffic test, offer our own market-by-market diagnostic on the customer's existing data within days, and name the cause per country (issuer, card type, local vs cross-border) in the same structure his questions took.\"},\n  \"message\":{\"covered\":true,\"evidence\":[\n    {\"id\":\"E13\",\"excerpt\":\"The Authorization Boost deck. The average uplift customers see.\",\"label\":\"fact\"},\n    {\"id\":\"E14\",\"excerpt\":\"that's an average. What's mine?\",\"label\":\"quote\"},\n    {\"id\":\"E20\",\"excerpt\":\"I offered a roadmap session and he didn't take it.\",\"label\":\"fact\"},\n    {\"id\":\"E32\",\"excerpt\":\"He said it was the most useful thing we'd sent him.\",\"label\":\"fact\"}],\n   \"insight\":\"The rep says 'we weren't really pitching', yet we pitched M4 almost word for word. It wasn't met with silence: he rejected it outright. He also declined the roadmap session, because he wanted his numbers now, not our future. The only thing that got a positive reaction was the tailored analysis. Developer love and billing (M2, M7) are the rep's explanation for why the US stayed, but they did nothing for the international decision.\",\n   \"messaging\":\"Rewrite M4 for payments-led buyers from 'customers see an average uplift' to 'here is your approval rate by market, and what we'll fix', and use the average only as a footnote.\"},\n  \"decided\":{\"covered\":true,\"evidence\":[\n    {\"id\":\"E21\",\"excerpt\":\"I don't think there was a moment. It was kind of decided before we got in the room.\",\"label\":\"opinion\"},\n    {\"id\":\"E29\",\"excerpt\":\"that landed three weeks after he asked, and by then the test was finished.\",\"label\":\"fact\"},\n    {\"id\":\"E31\",\"excerpt\":\"Real findings. Things we could have fixed.\",\"label\":\"opinion\"},\n    {\"id\":\"E23\",\"excerpt\":\"When the renewal notice went out and Stefan replied asking to split the contract.\",\"label\":\"fact\"}],\n   \"insight\":\"The rep says there was no moment, but the evidence points to one: Adyen's test finished while all we had was an average, and our analysis with fixable findings arrived three weeks later. 'Decided before we got in the room' is true only because we entered the room at renewal, when he was already asking to split. 'Nothing to do' doesn't hold up when our own team found things we could have fixed.\",\n   \"messaging\":\"Use the speed of a customer-specific diagnosis as a sales message ('your approval analysis in days, not weeks'), and make it an operating commitment so the claim is real.\"},\n  \"gaps\":{\"covered\":true,\"evidence\":[\n    {\"id\":\"E27\",\"excerpt\":\"A market-by-market view of their own approval rates, with reasons.\",\"label\":\"fact\"},\n    {\"id\":\"E30\",\"excerpt\":\"He asked who at Stripe looks at his numbers every month, and I didn't have a name.\",\"label\":\"fact\"},\n    {\"id\":\"E39\",\"excerpt\":\"I don't know what I'd have pitched against that.\",\"label\":\"opinion\"}],\n   \"insight\":\"The first gap wasn't capability, since our payments performance team produced the analysis; it was speed and access. The second gap is real: no named person owns his numbers every month, and M5's tiered response times answer a different question than 'who is watching my approvals?' Whether we have a product gap on local acquiring in Brazil and the European markets is unknown. The rep had no answer, and that has to be checked, not assumed.\",\n   \"messaging\":\"Add a support claim alongside M5 that names a person: 'a named payments performance contact who reviews your approvals by market every month', but only once that coverage exists for accounts of this kind.\"},\n  \"language\":{\"covered\":true,\"evidence\":[\n    {\"id\":\"E33\",\"excerpt\":\"Money left on the table.\",\"label\":\"quote\"},\n    {\"id\":\"E34\",\"excerpt\":\"Local cards, local rails.\",\"label\":\"quote\"},\n    {\"id\":\"E36\",\"excerpt\":\"He doesn't say \\\"authorization,\\\" he says \\\"approvals.\\\"\",\"label\":\"fact\"},\n    {\"id\":\"E37\",\"excerpt\":\"I heard from Stripe when I said I was leaving.\",\"label\":\"quote\"}],\n   \"insight\":\"He frames the problem as lost revenue in his own markets ('money left on the table', 'what's mine'). We frame it as a product feature with an average uplift (Authorization Boost, Adaptive Acceptance). 'Local cards, local rails' is a mechanism he believes in, and we never addressed it. The line about hearing from Stripe only when he was leaving is the real verdict on how we covered the account.\",\n   \"messaging\":\"Lead acceptance messaging with 'approvals' and 'the revenue you're leaving on the table in each market', put the product names second, and say explicitly how we handle local cards per market.\"}},\n \"close\":{\"gaps\":[\n   {\"question\":\"Which markets did Stefan flag, and what did Adyen's test show?\",\"kind\":\"unknown\",\"follow_up\":\"Ask Stefan, ideally in a win-loss conversation not run by the account team, which markets drove the split and what the test showed by country.\"},\n   {\"question\":\"Did our analysis reach Stefan before his recommendation went to the CFO?\",\"kind\":\"unknown\",\"follow_up\":\"Ask Elena to reconstruct the dates from email: when Stefan asked, when the analysis landed, and when he sent the recommendation to the CFO.\"},\n   {\"question\":\"When did you first feel this was lost, and what happened right before?\",\"kind\":\"dodged\",\"follow_up\":\"Ask Elena: what did Stefan say or do between the split request and the last call that changed his tone?\"},\n   {\"question\":\"What exactly were the fixable findings, and were any fixes offered or applied?\",\"kind\":\"unknown\",\"follow_up\":\"Ask the payments performance team for the findings and whether any were acted on for the business that stayed.\"},\n   {\"question\":\"Do we offer local acquiring in Brazil and the European markets in question?\",\"kind\":\"unknown\",\"follow_up\":\"Ask the payments product team whether we have local acquiring in those markets and what we could have shown Stefan.\"},\n   {\"question\":\"How much volume moved and on what contract terms?\",\"kind\":\"unknown\",\"follow_up\":\"Ask Elena or the deal desk what share of volume moved under the split and what remains with us beyond the US.\"},\n   {\"question\":\"Did anyone at Stripe ever meet the CFO?\",\"kind\":\"skipped\",\"follow_up\":\"Ask Elena whether we had any contact with the CFO, and what Stefan's recommendation to the CFO contained.\"},\n   {\"question\":\"Why did the account go 9-10 months without a review or a named owner after the buyer left?\",\"kind\":\"unknown\",\"follow_up\":\"Ask the account management lead how the account was covered during the handover and why the new head of payments wasn't spotted.\"}],\n  \"rep_takeaway\":\"When the person who bought us leaves, treat the account as up for grabs: a new head of payments pulling declines by country is a buying signal, and we should have been in that meeting, not finding out at renewal. When a buyer asks 'what's mine?', put his own numbers in front of him fast. The analysis he called the most useful thing we sent existed, and in week one instead of week three it might have changed the outcome. And don't settle on 'there was nothing to do' when you've just told us about findings we could have fixed.\"},\n \"confidence\":\"medium\"}\n```",
+ "data": {
+  "header": {
+   "outcome": "Lost",
+   "scope": "Lost: the international business moved to local acquiring after Adyen's test on that traffic; the US stayed with us, per the rep.",
+   "competitor": "Adyen",
+   "incumbent": "Stripe (us)",
+   "tag": "Value proof",
+   "runner_up": "Approval rates",
+   "tag_why": "Adyen tested his own international traffic and showed results by country, while we answered with an average uplift he said he couldn't take to his CFO; our customer-specific analysis came three weeks later, after their test had finished."
+  },
+  "sections": {
+   "trigger": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E2",
+      "excerpt": "Payments sat under an engineering manager, the guy who originally bought us, and he left last year.",
+      "label": "fact"
+     },
+     {
+      "id": "E1",
+      "excerpt": "A new head of payments. Stefan. They'd never had one.",
+      "label": "fact"
+     },
+     {
+      "id": "E4",
+      "excerpt": "the first thing he did was pull declines by country",
+      "label": "fact"
+     },
+     {
+      "id": "E26",
+      "excerpt": "No. I knew the engineering manager had left. I didn't know they'd hired a head of payments.",
+      "label": "fact"
+     }
+    ],
+    "insight": "The trigger was a change of owner, not a product incident. Our buyer left, and a payments specialist from a bigger company arrived and judged us on declines by country on day one. We knew our buyer had gone, missed the new hire, and had gone 9-10 months without a business review. So the evaluation started and ran without us, and the 'healthy, no tickets' signal was measuring the wrong person. We still don't know which markets he flagged beyond 'Brazil and a couple in Europe', or what his numbers showed.",
+    "messaging": "For accounts where a payments owner has just been hired, open with a proactive approvals-by-country review of their own traffic rather than M1's global-growth line, because that review is what a new head of payments does first anyway."
+   },
+   "decider": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E7",
+      "excerpt": "Stefan recommended it and the CFO approved.",
+      "label": "fact"
+     },
+     {
+      "id": "E8",
+      "excerpt": "this went to the CFO two weeks ago.",
+      "label": "quote"
+     },
+     {
+      "id": "E15",
+      "excerpt": "I can't take an average to my CFO.",
+      "label": "quote"
+     }
+    ],
+    "insight": "Stefan built the case and the CFO signed it, and we never reached the CFO. Stefan told us the test for what could reach the CFO: a customer-specific number, not an average. By our last call the decision had already gone up two weeks earlier. We don't know whether our analysis reached Stefan before he wrote his recommendation, and we never asked.",
+    "messaging": "Give the head of payments a CFO-ready page with his own markets, his approval gap and the revenue at stake, because he is carrying our case into a room we are not in."
+   },
+   "competitor": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E9",
+      "excerpt": "Adyen ran a test on a slice of their international traffic and came back with results by country.",
+      "label": "fact"
+     },
+     {
+      "id": "E10",
+      "excerpt": "local acquiring",
+      "label": "quote"
+     },
+     {
+      "id": "E11",
+      "excerpt": "I can't tell you what the test showed. He wouldn't share it.",
+      "label": "fact"
+     },
+     {
+      "id": "E12",
+      "excerpt": "They got very specific. What's our approval rate in this country, on this card type, by issuer. And why.",
+      "label": "fact"
+     }
+    ],
+    "insight": "Adyen won by changing how the decision was judged: proof on his own traffic, by country, with a reason. After that meeting Stefan's questions shifted to country, card type, issuer and why. We don't know that Adyen's approvals were actually better, because the results were never shared. What we know is that they had evidence in his terms and we didn't. 'Local acquiring' was the explanation he adopted, and we never offered a counter-explanation.",
+    "messaging": "When a competitor offers a traffic test, offer our own market-by-market diagnostic on the customer's existing data within days, and name the cause per country (issuer, card type, local vs cross-border) in the same structure his questions took."
+   },
+   "message": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E13",
+      "excerpt": "The Authorization Boost deck. The average uplift customers see.",
+      "label": "fact"
+     },
+     {
+      "id": "E14",
+      "excerpt": "that's an average. What's mine?",
+      "label": "quote"
+     },
+     {
+      "id": "E20",
+      "excerpt": "I offered a roadmap session and he didn't take it.",
+      "label": "fact"
+     },
+     {
+      "id": "E32",
+      "excerpt": "He said it was the most useful thing we'd sent him.",
+      "label": "fact"
+     }
+    ],
+    "insight": "The rep says 'we weren't really pitching', yet we pitched M4 almost word for word. It wasn't met with silence: he rejected it outright. He also declined the roadmap session, because he wanted his numbers now, not our future. The only thing that got a positive reaction was the tailored analysis. Developer love and billing (M2, M7) are the rep's explanation for why the US stayed, but they did nothing for the international decision.",
+    "messaging": "Rewrite M4 for payments-led buyers from 'customers see an average uplift' to 'here is your approval rate by market, and what we'll fix', and use the average only as a footnote."
+   },
+   "decided": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E21",
+      "excerpt": "I don't think there was a moment. It was kind of decided before we got in the room.",
+      "label": "opinion"
+     },
+     {
+      "id": "E29",
+      "excerpt": "that landed three weeks after he asked, and by then the test was finished.",
+      "label": "fact"
+     },
+     {
+      "id": "E31",
+      "excerpt": "Real findings. Things we could have fixed.",
+      "label": "opinion"
+     },
+     {
+      "id": "E23",
+      "excerpt": "When the renewal notice went out and Stefan replied asking to split the contract.",
+      "label": "fact"
+     }
+    ],
+    "insight": "The rep says there was no moment, but the evidence points to one: Adyen's test finished while all we had was an average, and our analysis with fixable findings arrived three weeks later. 'Decided before we got in the room' is true only because we entered the room at renewal, when he was already asking to split. 'Nothing to do' doesn't hold up when our own team found things we could have fixed.",
+    "messaging": "Use the speed of a customer-specific diagnosis as a sales message ('your approval analysis in days, not weeks'), and make it an operating commitment so the claim is real."
+   },
+   "gaps": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E27",
+      "excerpt": "A market-by-market view of their own approval rates, with reasons.",
+      "label": "fact"
+     },
+     {
+      "id": "E30",
+      "excerpt": "He asked who at Stripe looks at his numbers every month, and I didn't have a name.",
+      "label": "fact"
+     },
+     {
+      "id": "E39",
+      "excerpt": "I don't know what I'd have pitched against that.",
+      "label": "opinion"
+     }
+    ],
+    "insight": "The first gap wasn't capability, since our payments performance team produced the analysis; it was speed and access. The second gap is real: no named person owns his numbers every month, and M5's tiered response times answer a different question than 'who is watching my approvals?' Whether we have a product gap on local acquiring in Brazil and the European markets is unknown. The rep had no answer, and that has to be checked, not assumed.",
+    "messaging": "Add a support claim alongside M5 that names a person: 'a named payments performance contact who reviews your approvals by market every month', but only once that coverage exists for accounts of this kind."
+   },
+   "language": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E33",
+      "excerpt": "Money left on the table.",
+      "label": "quote"
+     },
+     {
+      "id": "E34",
+      "excerpt": "Local cards, local rails.",
+      "label": "quote"
+     },
+     {
+      "id": "E36",
+      "excerpt": "He doesn't say \"authorization,\" he says \"approvals.\"",
+      "label": "fact"
+     },
+     {
+      "id": "E37",
+      "excerpt": "I heard from Stripe when I said I was leaving.",
+      "label": "quote"
+     }
+    ],
+    "insight": "He frames the problem as lost revenue in his own markets ('money left on the table', 'what's mine'). We frame it as a product feature with an average uplift (Authorization Boost, Adaptive Acceptance). 'Local cards, local rails' is a mechanism he believes in, and we never addressed it. The line about hearing from Stripe only when he was leaving is the real verdict on how we covered the account.",
+    "messaging": "Lead acceptance messaging with 'approvals' and 'the revenue you're leaving on the table in each market', put the product names second, and say explicitly how we handle local cards per market."
+   }
+  },
+  "close": {
+   "gaps": [
+    {
+     "question": "Which markets did Stefan flag, and what did Adyen's test show?",
+     "kind": "unknown",
+     "follow_up": "Ask Stefan, ideally in a win-loss conversation not run by the account team, which markets drove the split and what the test showed by country."
+    },
+    {
+     "question": "Did our analysis reach Stefan before his recommendation went to the CFO?",
+     "kind": "unknown",
+     "follow_up": "Ask Elena to reconstruct the dates from email: when Stefan asked, when the analysis landed, and when he sent the recommendation to the CFO."
+    },
+    {
+     "question": "When did you first feel this was lost, and what happened right before?",
+     "kind": "dodged",
+     "follow_up": "Ask Elena: what did Stefan say or do between the split request and the last call that changed his tone?"
+    },
+    {
+     "question": "What exactly were the fixable findings, and were any fixes offered or applied?",
+     "kind": "unknown",
+     "follow_up": "Ask the payments performance team for the findings and whether any were acted on for the business that stayed."
+    },
+    {
+     "question": "Do we offer local acquiring in Brazil and the European markets in question?",
+     "kind": "unknown",
+     "follow_up": "Ask the payments product team whether we have local acquiring in those markets and what we could have shown Stefan."
+    },
+    {
+     "question": "How much volume moved and on what contract terms?",
+     "kind": "unknown",
+     "follow_up": "Ask Elena or the deal desk what share of volume moved under the split and what remains with us beyond the US."
+    },
+    {
+     "question": "Did anyone at Stripe ever meet the CFO?",
+     "kind": "skipped",
+     "follow_up": "Ask Elena whether we had any contact with the CFO, and what Stefan's recommendation to the CFO contained."
+    },
+    {
+     "question": "Why did the account go 9-10 months without a review or a named owner after the buyer left?",
+     "kind": "unknown",
+     "follow_up": "Ask the account management lead how the account was covered during the handover and why the new head of payments wasn't spotted."
+    }
+   ],
+   "rep_takeaway": "When the person who bought us leaves, treat the account as up for grabs: a new head of payments pulling declines by country is a buying signal, and we should have been in that meeting, not finding out at renewal. When a buyer asks 'what's mine?', put his own numbers in front of him fast. The analysis he called the most useful thing we sent existed, and in week one instead of week three it might have changed the outcome. And don't settle on 'there was nothing to do' when you've just told us about findings we could have fixed."
+  },
+  "confidence": "medium"
+ },
+ "ms": 63660,
+ "cost": 0.214204,
+ "in_tokens": 10689,
+ "out_tokens": 6435,
+ "model": "claude-opus-5-5"
+}

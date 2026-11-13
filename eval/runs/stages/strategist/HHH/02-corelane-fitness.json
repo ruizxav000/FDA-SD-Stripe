@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M10\",\"current_line\":\"Recover failed payments automatically with smart retries.\",\"type\":\"replace\",\"change\":\"Recover failed payments and retries automatically. For studio operators, start with an export of your own failed renewals so you can see how many lost members never meant to leave.\",\"evidence\":[\"E34\",\"E13\",\"E3\",\"E5\"],\"why\":\"Only the failed-renewal data drew a response from the customer, and their own wording, 'failed payments and retries' and 'members who never meant to leave', is sharper than our current line.\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"drop\",\"change\":\"Stop leading with the global opener for regional operators, such as a few US studios and Canadian sites. Open with the customer's own churn split instead.\",\"evidence\":[\"E17\",\"E34\"],\"why\":\"The global-scale opener did not fit a customer with a handful of regional sites, and the failed-renewal data was the only part that got a response.\",\"strength\":\"Test this\"},{\"target\":\"M3\",\"current_line\":\"Online and in-store on one platform; the line between them has pretty much disappeared.\",\"type\":\"drop\",\"change\":\"Do not claim in-store or front-desk coverage for a customer until a live demo runs in their own studio management software or a phase-two date is set. Describe the front desk in plain words before using the term 'unified commerce'.\",\"evidence\":[\"E19\",\"E18\",\"E26\",\"E29\"],\"why\":\"The customer heard 'unified commerce' as hardware, and the front-desk flow ran through a partner integration that was only shown in the partner's demo, not in their setup.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For finance buyers: run a failed-renewal data session with the controller before any proposal goes to them, and include failed-renewal numbers and exit terms in a finance-facing version of the proposal.\",\"evidence\":[\"E21\",\"E23\",\"E16\",\"E22\",\"E24\"],\"why\":\"The controller held the paper for two weeks, asked for the customer's own spreadsheet, and signed four days after the data session, so the signer needed finance-specific proof rather than the head of digital's view.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M10",
+    "current_line": "Recover failed payments automatically with smart retries.",
+    "type": "replace",
+    "change": "Recover failed payments and retries automatically. For studio operators, start with an export of your own failed renewals so you can see how many lost members never meant to leave.",
+    "evidence": [
+     "E34",
+     "E13",
+     "E3",
+     "E5"
+    ],
+    "why": "Only the failed-renewal data drew a response from the customer, and their own wording, 'failed payments and retries' and 'members who never meant to leave', is sharper than our current line.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "drop",
+    "change": "Stop leading with the global opener for regional operators, such as a few US studios and Canadian sites. Open with the customer's own churn split instead.",
+    "evidence": [
+     "E17",
+     "E34"
+    ],
+    "why": "The global-scale opener did not fit a customer with a handful of regional sites, and the failed-renewal data was the only part that got a response.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M3",
+    "current_line": "Online and in-store on one platform; the line between them has pretty much disappeared.",
+    "type": "drop",
+    "change": "Do not claim in-store or front-desk coverage for a customer until a live demo runs in their own studio management software or a phase-two date is set. Describe the front desk in plain words before using the term 'unified commerce'.",
+    "evidence": [
+     "E19",
+     "E18",
+     "E26",
+     "E29"
+    ],
+    "why": "The customer heard 'unified commerce' as hardware, and the front-desk flow ran through a partner integration that was only shown in the partner's demo, not in their setup.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For finance buyers: run a failed-renewal data session with the controller before any proposal goes to them, and include failed-renewal numbers and exit terms in a finance-facing version of the proposal.",
+    "evidence": [
+     "E21",
+     "E23",
+     "E16",
+     "E22",
+     "E24"
+    ],
+    "why": "The controller held the paper for two weeks, asked for the customer's own spreadsheet, and signed four days after the data session, so the signer needed finance-specific proof rather than the head of digital's view.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 11997,
+ "cost": 0.0019626,
+ "in_tokens": 5059,
+ "out_tokens": 1902,
+ "model": "claude-haiku-5-5"
+}

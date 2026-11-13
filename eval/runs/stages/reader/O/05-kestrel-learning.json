@@ -1,0 +1,647 @@
+{
+ "ok": true,
+ "text": "{\"people\":[{\"name\":\"Elena\",\"role\":\"Account executive (rep)\",\"side\":\"us\"},{\"name\":\"PMM\",\"role\":\"Product marketer (interviewer)\",\"side\":\"us\"},{\"name\":\"Stefan\",\"role\":\"Head of payments (new hire, came from a much bigger company)\",\"side\":\"customer\"},{\"name\":\"CFO (unnamed)\",\"role\":\"Approved the decision\",\"side\":\"customer\"},{\"name\":\"Engineering manager (unnamed)\",\"role\":\"Former payments owner who originally bought us; left last year\",\"side\":\"customer\"},{\"name\":\"Payments performance team\",\"role\":\"Produced market-by-market approval analysis\",\"side\":\"us\"}],\n\"competitors\":[\"Adyen\"],\n\"incumbent\":\"Stripe (us)\",\n\"evidence\":[\n{\"id\":\"E1\",\"turn\":2,\"excerpt\":\"A new head of payments. Stefan. They'd never had one.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Trigger was a new role and new buyer, not product dissatisfaction.\"},\n{\"id\":\"E2\",\"turn\":2,\"excerpt\":\"Payments sat under an engineering manager, the guy who originally bought us, and he left last year.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Original champion left a year before; relationship lost.\"},\n{\"id\":\"E3\",\"turn\":2,\"excerpt\":\"the first thing he did was pull declines by country.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Evaluation began from per-country decline data, not a pitch.\"},\n{\"id\":\"E4\",\"turn\":2,\"excerpt\":\"A few of their international markets looked bad to him.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":true,\"topics\":[\"trigger\"],\"note\":\"Rep's secondhand read; rep never saw his analysis.\"},\n{\"id\":\"E5\",\"turn\":4,\"excerpt\":\"He mentioned Brazil and a couple in Europe. I never saw his analysis.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Only named market is Brazil; rep lacked visibility into the problem data.\"},\n{\"id\":\"E6\",\"turn\":6,\"excerpt\":\"Stefan recommended it and the CFO approved.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Two-step decision: Stefan recommends, CFO approves; rep never met CFO.\"},\n{\"id\":\"E7\",\"turn\":6,\"excerpt\":\"this went to the CFO two weeks ago.\",\"label\":\"quote\",\"speaker\":\"Stefan (head of payments)\",\"paraphrase\":false,\"topics\":[\"decider\",\"decided\"],\"note\":\"Decision escalated before rep's last call.\"},\n{\"id\":\"E8\",\"turn\":8,\"excerpt\":\"Yeah.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decided\"],\"note\":\"Confirms CFO approval preceded the final call by two weeks.\"},\n{\"id\":\"E9\",\"turn\":10,\"excerpt\":\"Adyen ran a test on a slice of their international traffic and came back with results by country.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Competitor proved value with customer-specific, per-country test data.\"},\n{\"id\":\"E10\",\"turn\":10,\"excerpt\":\"local acquiring\",\"label\":\"quote\",\"speaker\":\"Stefan (head of payments)\",\"paraphrase\":false,\"topics\":[\"competitor\",\"language\"],\"note\":\"Customer's repeated framing of the competitive capability.\"},\n{\"id\":\"E11\",\"turn\":10,\"excerpt\":\"I can't tell you what the test showed. He wouldn't share it.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Competitor test results unknown to us.\"},\n{\"id\":\"E12\",\"turn\":12,\"excerpt\":\"They got very specific. What's our approval rate in this country, on this card type, by issuer. And why.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"competitor\",\"gaps\"],\"note\":\"Questions shifted to granular, explained, account-specific data after the competitor test.\"},\n{\"id\":\"E13\",\"turn\":14,\"excerpt\":\"The Authorization Boost deck. The average uplift customers see. Adaptive Acceptance, the machine learning piece.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"We answered specific questions with generic averages and product features.\"},\n{\"id\":\"E14\",\"turn\":14,\"excerpt\":\"that's an average. What's mine?\",\"label\":\"quote\",\"speaker\":\"Stefan (head of payments)\",\"paraphrase\":false,\"topics\":[\"message\",\"language\"],\"note\":\"Direct rejection of average-uplift messaging.\"},\n{\"id\":\"E15\",\"turn\":14,\"excerpt\":\"I can't take an average to my CFO.\",\"label\":\"quote\",\"speaker\":\"Stefan (head of payments)\",\"paraphrase\":false,\"topics\":[\"message\",\"decider\"],\"note\":\"Buyer needed CFO-ready, account-specific proof.\"},\n{\"id\":\"E16\",\"turn\":16,\"excerpt\":\"It's a renewal, so we weren't really pitching.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Conflicts with presenting the Authorization Boost deck.\"},\n{\"id\":\"E17\",\"turn\":16,\"excerpt\":\"They like the product. The developers love us, billing works, nobody wanted to rip anything out.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"outcome\"],\"note\":\"Rep's view of retained strengths; not customer-sourced.\"},\n{\"id\":\"E18\",\"turn\":16,\"excerpt\":\"That's why the US stayed.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"outcome\"],\"note\":\"Partial outcome: US kept; reason is rep's theory.\"},\n{\"id\":\"E19\",\"turn\":16,\"excerpt\":\"Silence was the uplift number, like I said.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Called silence, yet Stefan verbally rejected the average.\"},\n{\"id\":\"E20\",\"turn\":16,\"excerpt\":\"I offered a roadmap session and he didn't take it.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Roadmap offer didn't address his per-market data need.\"},\n{\"id\":\"E21\",\"turn\":18,\"excerpt\":\"I don't think there was a moment. It was kind of decided before we got in the room.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decided\"],\"note\":\"Denies a turning point; later turns reveal several.\"},\n{\"id\":\"E22\",\"turn\":18,\"excerpt\":\"I'm not sure there was anything to do.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decided\"],\"note\":\"Contradicted by fixable findings in the late analysis.\"},\n{\"id\":\"E23\",\"turn\":20,\"excerpt\":\"When the renewal notice went out and Stefan replied asking to split the contract.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decided\",\"outcome\"],\"note\":\"Learned of evaluation only at renewal; split request was the signal.\"},\n{\"id\":\"E24\",\"turn\":22,\"excerpt\":\"Before I took the account. So nine months? Ten.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"No business review for roughly 9-10 months (hedged estimate).\"},\n{\"id\":\"E25\",\"turn\":22,\"excerpt\":\"It was a healthy account. Growing, no tickets. It wasn't on anybody's list.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Health judged by tickets/growth missed buyer change.\"},\n{\"id\":\"E26\",\"turn\":24,\"excerpt\":\"I knew the engineering manager had left. I didn't know they'd hired a head of payments.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"trigger\",\"gaps\"],\"note\":\"New decision-maker unknown to us until renewal.\"},\n{\"id\":\"E27\",\"turn\":26,\"excerpt\":\"A market-by-market view of their own approval rates, with reasons.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Core unmet ask: their own per-market data with explanations.\"},\n{\"id\":\"E28\",\"turn\":26,\"excerpt\":\"We did get it to him. Our payments performance team did a proper analysis.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"We had the capability; it existed internally.\"},\n{\"id\":\"E29\",\"turn\":26,\"excerpt\":\"But that landed three weeks after he asked, and by then the test was finished.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\",\"decided\"],\"note\":\"Speed gap: analysis arrived after competitor test concluded.\"},\n{\"id\":\"E30\",\"turn\":26,\"excerpt\":\"He asked who at Stripe looks at his numbers every month, and I didn't have a name.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"No named owner monitoring his performance.\"},\n{\"id\":\"E31\",\"turn\":28,\"excerpt\":\"Real findings. Things we could have fixed.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\",\"decided\"],\"note\":\"Fixable issues existed; undermines 'nothing to do'.\"},\n{\"id\":\"E32\",\"turn\":28,\"excerpt\":\"He said it was the most useful thing we'd sent him.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":true,\"topics\":[\"gaps\",\"message\"],\"note\":\"Reported speech: account-specific analysis resonated, just too late.\"},\n{\"id\":\"E33\",\"turn\":30,\"excerpt\":\"Money left on the table.\",\"label\":\"quote\",\"speaker\":\"Stefan (head of payments)\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer's headline framing of the problem.\"},\n{\"id\":\"E34\",\"turn\":30,\"excerpt\":\"Local cards, local rails.\",\"label\":\"quote\",\"speaker\":\"Stefan (head of payments)\",\"paraphrase\":false,\"topics\":[\"language\",\"competitor\"],\"note\":\"Customer framing aligned with competitor's local acquiring.\"},\n{\"id\":\"E35\",\"turn\":30,\"excerpt\":\"He doesn't say \\\"authorization,\\\" he says \\\"approvals.\\\"\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Vocabulary mismatch with 'Authorization Boost'.\"},\n{\"id\":\"E36\",\"turn\":30,\"excerpt\":\"I heard from Stripe when I said I was leaving.\",\"label\":\"quote\",\"speaker\":\"Stefan (head of payments)\",\"paraphrase\":false,\"topics\":[\"gaps\",\"language\"],\"note\":\"Customer felt we engaged only reactively.\"},\n{\"id\":\"E37\",\"turn\":32,\"excerpt\":\"They went with local acquiring.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"outcome\",\"competitor\"],\"note\":\"International moved; provider not explicitly named here.\"},\n{\"id\":\"E38\",\"turn\":32,\"excerpt\":\"I don't know what I'd have pitched against that.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"message\",\"outcome\"],\"note\":\"Rep sees no counter, despite valued per-market analysis.\"}\n],\n\"contradictions\":[\n{\"evidence\":[\"E21\",\"E22\",\"E29\",\"E31\",\"E32\"],\"what\":\"Rep says it was decided beforehand and nothing could be done, but our analysis had fixable findings, was called the most useful thing we sent, and lost only by arriving three weeks late after the test ended.\"},\n{\"evidence\":[\"E16\",\"E13\"],\"what\":\"Rep says 'we weren't really pitching' but presented the Authorization Boost deck, average uplift and Adaptive Acceptance.\"},\n{\"evidence\":[\"E19\",\"E14\",\"E15\"],\"what\":\"Rep calls the uplift number 'silence', yet Stefan verbally rejected it as an average he couldn't take to the CFO.\"},\n{\"evidence\":[\"E25\",\"E17\",\"E24\",\"E26\",\"E36\"],\"what\":\"Rep describes a healthy, happy account, yet there had been no business review for 9-10 months, the new buyer was unknown, and he said he only heard from Stripe when leaving.\"},\n{\"evidence\":[\"E38\",\"E32\",\"E27\"],\"what\":\"Rep says she wouldn't know what to pitch against local acquiring, but the market-by-market analysis was exactly what he asked for and valued.\"}\n],\n\"dodges\":[\n{\"question\":\"When did you first feel this was lost? What happened right before?\",\"turn\":18,\"what\":\"Answered 'no moment'/'nothing to do'; later turns reveal the split request, CFO escalation two weeks before the last call, and late analysis.\"},\n{\"question\":\"Which part of our pitch got a reaction, and which got silence?\",\"turn\":16,\"what\":\"Deflected with 'it's a renewal, so we weren't really pitching' and pivoted to product likability.\"},\n{\"question\":\"Which ones? (international markets)\",\"turn\":4,\"what\":\"Vague: 'I don't know exactly'; only Brazil named, never saw the analysis.\"}\n],\n\"skipped\":[\"decided\"],\n\"language_pairs\":[\n{\"theirs\":\"approvals\",\"ours\":\"authorization (Authorization Boost)\",\"evidence\":[\"E35\",\"E13\"]},\n{\"theirs\":\"what's mine\",\"ours\":\"the average uplift customers see\",\"evidence\":[\"E14\",\"E13\"]},\n{\"theirs\":\"local acquiring / local cards, local rails\",\"ours\":\"Adaptive Acceptance, the machine learning piece\",\"evidence\":[\"E10\",\"E34\",\"E13\"]},\n{\"theirs\":\"money left on the table\",\"ours\":\"uplift\",\"evidence\":[\"E33\",\"E13\"]}\n],\n\"outcome_signals\":[\n{\"evidence\":[\"E23\"],\"what\":\"Customer asked to split the contract at renewal.\"},\n{\"evidence\":[\"E18\"],\"what\":\"Partial: US business stayed with us (reason per rep's opinion).\"},\n{\"evidence\":[\"E37\",\"E9\"],\"what\":\"International went to local acquiring; Adyen ran the international test, but the rep does not explicitly name the winner.\"},\n{\"evidence\":[\"E6\",\"E7\"],\"what\":\"Decision recommended by Stefan, approved by CFO two weeks before rep's last call.\"}\n]}",
+ "data": {
+  "people": [
+   {
+    "name": "Elena",
+    "role": "Account executive (rep)",
+    "side": "us"
+   },
+   {
+    "name": "PMM",
+    "role": "Product marketer (interviewer)",
+    "side": "us"
+   },
+   {
+    "name": "Stefan",
+    "role": "Head of payments (new hire, came from a much bigger company)",
+    "side": "customer"
+   },
+   {
+    "name": "CFO (unnamed)",
+    "role": "Approved the decision",
+    "side": "customer"
+   },
+   {
+    "name": "Engineering manager (unnamed)",
+    "role": "Former payments owner who originally bought us; left last year",
+    "side": "customer"
+   },
+   {
+    "name": "Payments performance team",
+    "role": "Produced market-by-market approval analysis",
+    "side": "us"
+   }
+  ],
+  "competitors": [
+   "Adyen"
+  ],
+  "incumbent": "Stripe (us)",
+  "evidence": [
+   {
+    "id": "E1",
+    "turn": 2,
+    "excerpt": "A new head of payments. Stefan. They'd never had one.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Trigger was a new role and new buyer, not product dissatisfaction."
+   },
+   {
+    "id": "E2",
+    "turn": 2,
+    "excerpt": "Payments sat under an engineering manager, the guy who originally bought us, and he left last year.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Original champion left a year before; relationship lost."
+   },
+   {
+    "id": "E3",
+    "turn": 2,
+    "excerpt": "the first thing he did was pull declines by country.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Evaluation began from per-country decline data, not a pitch."
+   },
+   {
+    "id": "E4",
+    "turn": 2,
+    "excerpt": "A few of their international markets looked bad to him.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": true,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Rep's secondhand read; rep never saw his analysis."
+   },
+   {
+    "id": "E5",
+    "turn": 4,
+    "excerpt": "He mentioned Brazil and a couple in Europe. I never saw his analysis.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Only named market is Brazil; rep lacked visibility into the problem data."
+   },
+   {
+    "id": "E6",
+    "turn": 6,
+    "excerpt": "Stefan recommended it and the CFO approved.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Two-step decision: Stefan recommends, CFO approves; rep never met CFO."
+   },
+   {
+    "id": "E7",
+    "turn": 6,
+    "excerpt": "this went to the CFO two weeks ago.",
+    "label": "quote",
+    "speaker": "Stefan (head of payments)",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "decided"
+    ],
+    "note": "Decision escalated before rep's last call."
+   },
+   {
+    "id": "E8",
+    "turn": 8,
+    "excerpt": "Yeah.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decided"
+    ],
+    "note": "Confirms CFO approval preceded the final call by two weeks."
+   },
+   {
+    "id": "E9",
+    "turn": 10,
+    "excerpt": "Adyen ran a test on a slice of their international traffic and came back with results by country.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Competitor proved value with customer-specific, per-country test data."
+   },
+   {
+    "id": "E10",
+    "turn": 10,
+    "excerpt": "local acquiring",
+    "label": "quote",
+    "speaker": "Stefan (head of payments)",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "language"
+    ],
+    "note": "Customer's repeated framing of the competitive capability."
+   },
+   {
+    "id": "E11",
+    "turn": 10,
+    "excerpt": "I can't tell you what the test showed. He wouldn't share it.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Competitor test results unknown to us."
+   },
+   {
+    "id": "E12",
+    "turn": 12,
+    "excerpt": "They got very specific. What's our approval rate in this country, on this card type, by issuer. And why.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "gaps"
+    ],
+    "note": "Questions shifted to granular, explained, account-specific data after the competitor test."
+   },
+   {
+    "id": "E13",
+    "turn": 14,
+    "excerpt": "The Authorization Boost deck. The average uplift customers see. Adaptive Acceptance, the machine learning piece.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "We answered specific questions with generic averages and product features."
+   },
+   {
+    "id": "E14",
+    "turn": 14,
+    "excerpt": "that's an average. What's mine?",
+    "label": "quote",
+    "speaker": "Stefan (head of payments)",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "language"
+    ],
+    "note": "Direct rejection of average-uplift messaging."
+   },
+   {
+    "id": "E15",
+    "turn": 14,
+    "excerpt": "I can't take an average to my CFO.",
+    "label": "quote",
+    "speaker": "Stefan (head of payments)",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "decider"
+    ],
+    "note": "Buyer needed CFO-ready, account-specific proof."
+   },
+   {
+    "id": "E16",
+    "turn": 16,
+    "excerpt": "It's a renewal, so we weren't really pitching.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Conflicts with presenting the Authorization Boost deck."
+   },
+   {
+    "id": "E17",
+    "turn": 16,
+    "excerpt": "They like the product. The developers love us, billing works, nobody wanted to rip anything out.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "outcome"
+    ],
+    "note": "Rep's view of retained strengths; not customer-sourced."
+   },
+   {
+    "id": "E18",
+    "turn": 16,
+    "excerpt": "That's why the US stayed.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "outcome"
+    ],
+    "note": "Partial outcome: US kept; reason is rep's theory."
+   },
+   {
+    "id": "E19",
+    "turn": 16,
+    "excerpt": "Silence was the uplift number, like I said.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Called silence, yet Stefan verbally rejected the average."
+   },
+   {
+    "id": "E20",
+    "turn": 16,
+    "excerpt": "I offered a roadmap session and he didn't take it.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Roadmap offer didn't address his per-market data need."
+   },
+   {
+    "id": "E21",
+    "turn": 18,
+    "excerpt": "I don't think there was a moment. It was kind of decided before we got in the room.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decided"
+    ],
+    "note": "Denies a turning point; later turns reveal several."
+   },
+   {
+    "id": "E22",
+    "turn": 18,
+    "excerpt": "I'm not sure there was anything to do.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decided"
+    ],
+    "note": "Contradicted by fixable findings in the late analysis."
+   },
+   {
+    "id": "E23",
+    "turn": 20,
+    "excerpt": "When the renewal notice went out and Stefan replied asking to split the contract.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "outcome"
+    ],
+    "note": "Learned of evaluation only at renewal; split request was the signal."
+   },
+   {
+    "id": "E24",
+    "turn": 22,
+    "excerpt": "Before I took the account. So nine months? Ten.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "No business review for roughly 9-10 months (hedged estimate)."
+   },
+   {
+    "id": "E25",
+    "turn": 22,
+    "excerpt": "It was a healthy account. Growing, no tickets. It wasn't on anybody's list.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Health judged by tickets/growth missed buyer change."
+   },
+   {
+    "id": "E26",
+    "turn": 24,
+    "excerpt": "I knew the engineering manager had left. I didn't know they'd hired a head of payments.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger",
+     "gaps"
+    ],
+    "note": "New decision-maker unknown to us until renewal."
+   },
+   {
+    "id": "E27",
+    "turn": 26,
+    "excerpt": "A market-by-market view of their own approval rates, with reasons.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Core unmet ask: their own per-market data with explanations."
+   },
+   {
+    "id": "E28",
+    "turn": 26,
+    "excerpt": "We did get it to him. Our payments performance team did a proper analysis.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "We had the capability; it existed internally."
+   },
+   {
+    "id": "E29",
+    "turn": 26,
+    "excerpt": "But that landed three weeks after he asked, and by then the test was finished.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "decided"
+    ],
+    "note": "Speed gap: analysis arrived after competitor test concluded."
+   },
+   {
+    "id": "E30",
+    "turn": 26,
+    "excerpt": "He asked who at Stripe looks at his numbers every month, and I didn't have a name.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "No named owner monitoring his performance."
+   },
+   {
+    "id": "E31",
+    "turn": 28,
+    "excerpt": "Real findings. Things we could have fixed.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "decided"
+    ],
+    "note": "Fixable issues existed; undermines 'nothing to do'."
+   },
+   {
+    "id": "E32",
+    "turn": 28,
+    "excerpt": "He said it was the most useful thing we'd sent him.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": true,
+    "topics": [
+     "gaps",
+     "message"
+    ],
+    "note": "Reported speech: account-specific analysis resonated, just too late."
+   },
+   {
+    "id": "E33",
+    "turn": 30,
+    "excerpt": "Money left on the table.",
+    "label": "quote",
+    "speaker": "Stefan (head of payments)",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer's headline framing of the problem."
+   },
+   {
+    "id": "E34",
+    "turn": 30,
+    "excerpt": "Local cards, local rails.",
+    "label": "quote",
+    "speaker": "Stefan (head of payments)",
+    "paraphrase": false,
+    "topics": [
+     "language",
+     "competitor"
+    ],
+    "note": "Customer framing aligned with competitor's local acquiring."
+   },
+   {
+    "id": "E35",
+    "turn": 30,
+    "excerpt": "He doesn't say \"authorization,\" he says \"approvals.\"",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Vocabulary mismatch with 'Authorization Boost'."
+   },
+   {
+    "id": "E36",
+    "turn": 30,
+    "excerpt": "I heard from Stripe when I said I was leaving.",
+    "label": "quote",
+    "speaker": "Stefan (head of payments)",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "language"
+    ],
+    "note": "Customer felt we engaged only reactively."
+   },
+   {
+    "id": "E37",
+    "turn": 32,
+    "excerpt": "They went with local acquiring.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "outcome",
+     "competitor"
+    ],
+    "note": "International moved; provider not explicitly named here."
+   },
+   {
+    "id": "E38",
+    "turn": 32,
+    "excerpt": "I don't know what I'd have pitched against that.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "outcome"
+    ],
+    "note": "Rep sees no counter, despite valued per-market analysis."
+   }
+  ],
+  "contradictions": [
+   {
+    "evidence": [
+     "E21",
+     "E22",
+     "E29",
+     "E31",
+     "E32"
+    ],
+    "what": "Rep says it was decided beforehand and nothing could be done, but our analysis had fixable findings, was called the most useful thing we sent, and lost only by arriving three weeks late after the test ended."
+   },
+   {
+    "evidence": [
+     "E16",
+     "E13"
+    ],
+    "what": "Rep says 'we weren't really pitching' but presented the Authorization Boost deck, average uplift and Adaptive Acceptance."
+   },
+   {
+    "evidence": [
+     "E19",
+     "E14",
+     "E15"
+    ],
+    "what": "Rep calls the uplift number 'silence', yet Stefan verbally rejected it as an average he couldn't take to the CFO."
+   },
+   {
+    "evidence": [
+     "E25",
+     "E17",
+     "E24",
+     "E26",
+     "E36"
+    ],
+    "what": "Rep describes a healthy, happy account, yet there had been no business review for 9-10 months, the new buyer was unknown, and he said he only heard from Stripe when leaving."
+   },
+   {
+    "evidence": [
+     "E38",
+     "E32",
+     "E27"
+    ],
+    "what": "Rep says she wouldn't know what to pitch against local acquiring, but the market-by-market analysis was exactly what he asked for and valued."
+   }
+  ],
+  "dodges": [
+   {
+    "question": "When did you first feel this was lost? What happened right before?",
+    "turn": 18,
+    "what": "Answered 'no moment'/'nothing to do'; later turns reveal the split request, CFO escalation two weeks before the last call, and late analysis."
+   },
+   {
+    "question": "Which part of our pitch got a reaction, and which got silence?",
+    "turn": 16,
+    "what": "Deflected with 'it's a renewal, so we weren't really pitching' and pivoted to product likability."
+   },
+   {
+    "question": "Which ones? (international markets)",
+    "turn": 4,
+    "what": "Vague: 'I don't know exactly'; only Brazil named, never saw the analysis."
+   }
+  ],
+  "skipped": [
+   "decided"
+  ],
+  "language_pairs": [
+   {
+    "theirs": "approvals",
+    "ours": "authorization (Authorization Boost)",
+    "evidence": [
+     "E35",
+     "E13"
+    ]
+   },
+   {
+    "theirs": "what's mine",
+    "ours": "the average uplift customers see",
+    "evidence": [
+     "E14",
+     "E13"
+    ]
+   },
+   {
+    "theirs": "local acquiring / local cards, local rails",
+    "ours": "Adaptive Acceptance, the machine learning piece",
+    "evidence": [
+     "E10",
+     "E34",
+     "E13"
+    ]
+   },
+   {
+    "theirs": "money left on the table",
+    "ours": "uplift",
+    "evidence": [
+     "E33",
+     "E13"
+    ]
+   }
+  ],
+  "outcome_signals": [
+   {
+    "evidence": [
+     "E23"
+    ],
+    "what": "Customer asked to split the contract at renewal."
+   },
+   {
+    "evidence": [
+     "E18"
+    ],
+    "what": "Partial: US business stayed with us (reason per rep's opinion)."
+   },
+   {
+    "evidence": [
+     "E37",
+     "E9"
+    ],
+    "what": "International went to local acquiring; Adyen ran the international test, but the rep does not explicitly name the winner."
+   },
+   {
+    "evidence": [
+     "E6",
+     "E7"
+    ],
+    "what": "Decision recommended by Stefan, approved by CFO two weeks before rep's last call."
+   }
+  ]
+ },
+ "ms": 65123,
+ "cost": 0.19036400000000003,
+ "in_tokens": 3999,
+ "out_tokens": 7919,
+ "model": "claude-opus-5-5"
+}

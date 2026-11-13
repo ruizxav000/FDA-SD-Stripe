@@ -1,0 +1,68 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M7\",\"current_line\":\"Billing that helps you grow revenue.\",\"type\":\"replace\",\"change\":\"For product and engineering buyers: \\\"Stop billing being a tax on your roadmap. Change a price and ship a new tier in minutes, not a quarter.\\\" Lead with roadmap time returned to engineers, not revenue growth.\",\"evidence\":[\"E17\",\"E21\",\"E34\",\"E3\"],\"why\":\"Owen rejected the revenue framing outright ('we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap') and the demo only landed when it was translated into roadmap time ('a quarter of roadmap in five minutes').\",\"strength\":\"Test this\"},{\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"replace\",\"change\":\"For finance-gated deals: \\\"Put a number on the cost of not fixing it. We build your payback case with you, using your own figures, before any budget review.\\\" Offer a customer-specific value session as the first response when a champion asks for payback, and keep the generic study as a supporting proof point only.\",\"evidence\":[\"E14\",\"E24\",\"E25\",\"E28\",\"E26\"],\"why\":\"Owen asked for 'something that shows payback' and said he couldn't get past the CFO 'without a number that's ours', and we sent only the general ROI deck; the planned session to build their own number never happened.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For buyers worried about switching off a homegrown billing system: a staged migration story (move in stages, no re-collecting cards), backed by a named customer reference who has done it. Lead with this instead of a migration doc. Note that the customer said 'we don't touch billing before renewal season', so show how the staging works around that timing.\",\"evidence\":[\"E29\",\"E41\",\"E30\"],\"why\":\"Migration was the runner-up loss reason, and the customer wanted a peer who had done it but received a doc; whether a reference was ever offered is unknown, so this is a hypothesis to test.\",\"strength\":\"Test this\"},{\"target\":\"M10\",\"current_line\":\"Recover failed payments automatically with smart retries.\",\"type\":\"add\",\"change\":\"For billing buyers with finance in the loop, add a revenue-leak proof point: \\\"Some subscriptions lapse because the card fails and nobody chases it. Quantify that leak in your value case, so finance sees a cost of doing nothing.\\\" Use it as a hook in the customer-specific payback case, not as a standalone feature line.\",\"evidence\":[\"E33\",\"E30\"],\"why\":\"Owen mentioned lapsed subscriptions from failed cards once and nobody added it up, though it is the kind of concrete cost finance responds to.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M7",
+    "current_line": "Billing that helps you grow revenue.",
+    "type": "replace",
+    "change": "For product and engineering buyers: \"Stop billing being a tax on your roadmap. Change a price and ship a new tier in minutes, not a quarter.\" Lead with roadmap time returned to engineers, not revenue growth.",
+    "evidence": [
+     "E17",
+     "E21",
+     "E34",
+     "E3"
+    ],
+    "why": "Owen rejected the revenue framing outright ('we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap') and the demo only landed when it was translated into roadmap time ('a quarter of roadmap in five minutes').",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "replace",
+    "change": "For finance-gated deals: \"Put a number on the cost of not fixing it. We build your payback case with you, using your own figures, before any budget review.\" Offer a customer-specific value session as the first response when a champion asks for payback, and keep the generic study as a supporting proof point only.",
+    "evidence": [
+     "E14",
+     "E24",
+     "E25",
+     "E28",
+     "E26"
+    ],
+    "why": "Owen asked for 'something that shows payback' and said he couldn't get past the CFO 'without a number that's ours', and we sent only the general ROI deck; the planned session to build their own number never happened.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For buyers worried about switching off a homegrown billing system: a staged migration story (move in stages, no re-collecting cards), backed by a named customer reference who has done it. Lead with this instead of a migration doc. Note that the customer said 'we don't touch billing before renewal season', so show how the staging works around that timing.",
+    "evidence": [
+     "E29",
+     "E41",
+     "E30"
+    ],
+    "why": "Migration was the runner-up loss reason, and the customer wanted a peer who had done it but received a doc; whether a reference was ever offered is unknown, so this is a hypothesis to test.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M10",
+    "current_line": "Recover failed payments automatically with smart retries.",
+    "type": "add",
+    "change": "For billing buyers with finance in the loop, add a revenue-leak proof point: \"Some subscriptions lapse because the card fails and nobody chases it. Quantify that leak in your value case, so finance sees a cost of doing nothing.\" Use it as a hook in the customer-specific payback case, not as a standalone feature line.",
+    "evidence": [
+     "E33",
+     "E30"
+    ],
+    "why": "Owen mentioned lapsed subscriptions from failed cards once and nobody added it up, though it is the kind of concrete cost finance responds to.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 10319,
+ "cost": 0.030594000000000003,
+ "in_tokens": 5357,
+ "out_tokens": 917,
+ "model": "claude-sonnet-5-5"
+}

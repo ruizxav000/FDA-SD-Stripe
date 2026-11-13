@@ -1,0 +1,344 @@
+{
+ "version": "2026-11-13.1",
+ "header": {
+  "deal": "Kestrel Learning",
+  "outcome": "Lost",
+  "scope": "Partial: Stefan asked to split the contract. Per Elena, the international markets went to local acquiring and the US stayed with us. The markets and volumes that moved were not confirmed.",
+  "competitor": "Adyen",
+  "incumbent": "Stripe",
+  "tag": "Approval rates",
+  "runner_up": "Support and service",
+  "tag_why": "Stefan's problem was approval performance by country, card type and issuer, and he wanted his own numbers. Our answer was an average uplift, and the market-by-market analysis arrived after Adyen's test had finished. The named-person gap and the lack of contact with him are close behind, but the approval data he asked for was the sharper trigger."
+ },
+ "messaging_changes": [
+  {
+   "target": "M4",
+   "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "Lead with the customer's own approval rates, not an average. Something like: 'See your approval rates by country, card type and issuer, with the reasons behind each gap, and what we would fix first.' Use 'approvals', the buyer's word. Keep the uplift figure as supporting proof only.",
+   "evidence": [],
+   "evidence_found": true,
+   "why": "The average uplift got a direct rebuttal from the person who decided. The buyer needed a figure he could defend to his CFO. The same objection likely applies to M6, whose independent study is also an average. Test whether a per-customer approval view up front changes how head-of-payments buyers react.",
+   "strength": "Test this",
+   "evidence_excerpts": [
+    "that's an average. What's mine?",
+    "I can't take an average to my CFO.",
+    "He doesn't say \"authorization,\" he says \"approvals.\""
+   ]
+  },
+  {
+   "target": "M5",
+   "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "Test a line built around a named person: 'A named payments specialist reviews your approval performance with you every month.' Test it against response-time tiers.",
+   "evidence": [],
+   "evidence_found": true,
+   "why": "The customer wanted a named person who owns his numbers, not a response-time tier. He also felt we only showed up when he was leaving. This is one account, so test it before rolling it out.",
+   "strength": "Test this",
+   "evidence_excerpts": [
+    "He asked who at Stripe looks at his numbers every month, and I didn't have a name.",
+    "I heard from Stripe when I said I was leaving."
+   ]
+  },
+  {
+   "target": "M1",
+   "current_line": "Financial infrastructure to grow globally, in every currency.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "Test an international opener framed around local performance: 'Grow internationally with approval rates you can see and improve, market by market.' Test it against currency breadth.",
+   "evidence": [],
+   "evidence_found": true,
+   "why": "Stefan framed international as lost approvals in specific markets and as local rails, not as currency coverage. Elena could not say what we would pitch against local acquiring, so the opener may need to speak to that frame. Do not claim local acquiring capability until product confirms it.",
+   "strength": "Test this",
+   "evidence_excerpts": [
+    "Local cards, local rails.",
+    "Money left on the table."
+   ]
+  }
+ ],
+ "no_change_reason": null,
+ "sections": {
+  "trigger": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "S1",
+     "excerpt": "Payments sat under an engineering manager, the guy who originally bought us, and he left last year.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S2",
+     "excerpt": "Stefan came from a much bigger company, and the first thing he did was pull declines by country.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S3",
+     "excerpt": "I never saw his analysis.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    }
+   ],
+   "insight": "The trigger was a person change, not a product failure. Our original buyer left, and a new head of payments arrived with a larger company's benchmark and went straight to decline data by country. Elena never saw that analysis. She does not know which markets looked bad beyond Brazil and a couple in Europe. We only know the evaluation started from his numbers, not ours.",
+   "messaging": "Assume a new payments leader will audit approvals by market before anything else. Our story should be ready for that audit, with the buyer's own numbers, not generic uplift."
+  },
+  "decider": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "S4",
+     "excerpt": "this went to the CFO two weeks ago.",
+     "label": "quote",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S5",
+     "excerpt": "I can't take an average to my CFO.",
+     "label": "quote",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S6",
+     "excerpt": "No. I knew the engineering manager had left.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    }
+   ],
+   "insight": "Stefan drove the decision, and the CFO was the audience he had to convince. 'Approved' is Elena's inference. The quote says only that the matter went to the CFO, and Elena has not spoken to the CFO. She had also never met Stefan before the renewal, so she knows about the decision only through him, and late. The CFO test was the bar: proof had to be portable to a finance reader.",
+   "messaging": "Write proof for two readers: the payments lead who audits, and the CFO who signs off. A customer-specific number that survives a CFO question beats an average."
+  },
+  "competitor": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "S7",
+     "excerpt": "Adyen ran a test on a slice of their international traffic and came back with results by country.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S8",
+     "excerpt": "local acquiring.",
+     "label": "quote",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S9",
+     "excerpt": "They got very specific. What's our approval rate in this country, on this card type, by issuer. And why.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S10",
+     "excerpt": "I can't tell you what the test showed. He wouldn't share it.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    }
+   ],
+   "insight": "Adyen won by running a test on the customer's own traffic and reporting back by country. After meeting them, Stefan's questions shifted from general capability to approval rate by country, card type and issuer, and the reason. We do not know what the test showed, only that Stefan would not share it. His term for the alternative was 'local acquiring'. Elena then said she doesn't know what she'd have pitched against that, which is a product-positioning gap, not just a pitch gap.",
+   "messaging": "Prepare an answer to 'local acquiring' that is honest about what we can and cannot do. Offer a test or analysis on the customer's own traffic early, before a competitor's test frames the conversation."
+  },
+  "message": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "S11",
+     "excerpt": "that's an average. What's mine?",
+     "label": "quote",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S12",
+     "excerpt": "I can't take an average to my CFO.",
+     "label": "quote",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S13",
+     "excerpt": "They like the product. The developers love us, billing works, nobody wanted to rip anything out.",
+     "label": "opinion",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S14",
+     "excerpt": "And I offered a roadmap session and he didn't take it.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    }
+   ],
+   "insight": "Elena framed the uplift number as 'silence', but it got an explicit, pointed rebuttal, which is a reaction. The silence was the roadmap session, which he declined, so he wanted data on his own traffic, not a future promise. Her claims that developers love us and billing works are her own read, with no customer words behind them. They may explain why the US stayed, but that is an opinion. 'It's a renewal, so we weren't really pitching' also sidesteps the question: nobody tested the product story on the buyer who mattered.",
+   "messaging": "Retire the average-uplift lead for buyers who audit their own data. Do not lean on developer love or billing in this segment until a customer says it in their own words."
+  },
+  "decided": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "S15",
+     "excerpt": "It was kind of decided before we got in the room.",
+     "label": "opinion",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S16",
+     "excerpt": "When the renewal notice went out and Stefan replied asking to split the contract.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S17",
+     "excerpt": "But that landed three weeks after he asked, and by then the test was finished.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S18",
+     "excerpt": "I didn't know they'd hired a head of payments.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    }
+   ],
+   "insight": "Elena says it was decided before she got in the room, but the facts point to a loss that was avoidable on substance and lost on timing and absence. There was no business review for nine to ten months. She learned of the evaluation only when Stefan replied to the renewal notice. She had never met him, and our analysis arrived three weeks after he asked, after Adyen's test had finished. The analysis itself was strong enough that he called it the most useful thing we'd sent him. The 'nothing to do' framing is the rep's read, and it protects the rep from the real lesson, that early relationship and a fast, customer-specific analysis could have changed the outcome. Elena has no single moment where it flipped.",
+   "messaging": "Speed to the customer's own numbers is part of the message. A strong analysis delivered after the competitor's test is worth far less."
+  },
+  "gaps": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "S19",
+     "excerpt": "A market-by-market view of their own approval rates, with reasons.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S20",
+     "excerpt": "But that landed three weeks after he asked, and by then the test was finished.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S21",
+     "excerpt": "He asked who at Stripe looks at his numbers every month, and I didn't have a name.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S22",
+     "excerpt": "He said it was the most useful thing we'd sent him.",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    }
+   ],
+   "insight": "The gaps were in delivery and ownership, not capability. We did produce the market-by-market analysis with reasons and it was well received, but it was late. We had no named person to own his numbers. The strongest proof we had was built reactively and only after he asked. The ask for a monthly owner also points at a service model we do not sell.",
+   "messaging": "Make the per-market approval analysis a front-of-funnel and renewal asset, not a rescue document. Pair it with a named owner."
+  },
+  "language": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "S23",
+     "excerpt": "Money left on the table.",
+     "label": "quote",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S24",
+     "excerpt": "Local cards, local rails.",
+     "label": "quote",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S25",
+     "excerpt": "He doesn't say \"authorization,\" he says \"approvals.\"",
+     "label": "fact",
+     "speaker": null,
+     "verified": true
+    },
+    {
+     "id": "S26",
+     "excerpt": "I heard from Stripe when I said I was leaving.",
+     "label": "quote",
+     "speaker": null,
+     "verified": true
+    }
+   ],
+   "insight": "His problem was money left on the table, a financial-loss framing, not a technical one. 'Local cards, local rails' names the remedy he wanted. 'Approvals' differs from our 'authorization' vocabulary, which shows our wording sits at one remove from his. His last line is ambiguous (who was leaving, and what we did or didn't do), but it shows he felt we reached out only at the exit.",
+   "messaging": "Use his words: approvals, money left on the table, local cards and local rails. Treat 'what's mine' as the standard for every proof point."
+  }
+ },
+ "close": {
+  "gaps": [
+   {
+    "question": "When did you first feel this was lost? What happened right before?",
+    "kind": "dodged",
+    "follow_up": "Elena said 'no moment' and 'decided before we got in the room'. Ask for a dated timeline: when Stefan asked for the analysis, when Adyen's test ran, when the contract split was raised, and when our analysis landed."
+   },
+   {
+    "question": "Which markets looked bad, and what did Adyen's test show?",
+    "kind": "unknown",
+    "follow_up": "Elena does not know the markets beyond Brazil and a couple in Europe, and Stefan would not share the test. Ask our payments performance team for the findings by market, and ask Stefan for a debrief if the relationship allows."
+   },
+   {
+    "question": "Did the CFO actually approve, and what scope moved?",
+    "kind": "unknown",
+    "follow_up": "Confirm in writing which markets and volume went to local acquiring and which stayed with us, and whether the CFO signed off. Elena inferred approval from a quote that says only that it went to the CFO."
+   },
+   {
+    "question": "Which part of our pitch got a reaction, and which got silence?",
+    "kind": "dodged",
+    "follow_up": "Elena said they weren't pitching and gave her own read on what they like. Ask for anything Stefan said, in his words, about why the US stayed with us."
+   },
+   {
+    "question": "What did Stefan mean by 'I heard from Stripe when I said I was leaving'?",
+    "kind": "unknown",
+    "follow_up": "Ask Elena who was leaving, what outreach happened and when, and whether anyone at Stripe knew about the new head of payments before the renewal notice."
+   }
+  ],
+  "rep_takeaway": "When a customer asks for their own numbers, treat the deadline as the deal: deliver the analysis while a competitor's test is still running, and meet any new stakeholder before the renewal notice goes out."
+ },
+ "confidence": null,
+ "checks": {
+  "quotes_total": 26,
+  "quotes_failed": 0,
+  "failed": []
+ },
+ "meta": {
+  "models": {
+   "single": "claude-sonnet-5-5"
+  },
+  "ms": 70792,
+  "cost": 0.097071,
+  "stage_ms": {
+   "single": 70792
+  },
+  "stage_cost": {
+   "single": 0.097071
+  }
+ }
+}

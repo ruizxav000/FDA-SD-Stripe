@@ -1,0 +1,71 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For acceptance conversations: lead with the buyer's own numbers, not an average. Wording: \\\"If one in twelve of your online orders is dying at the last step, and it's the big baskets getting turned away, here is what that costs you each month. Send us a three-month decline export and we'll put a dollar figure on it.\\\" Use this with finance approvers and champions whose incumbent cannot explain their declines.\",\"evidence\":[\"E2\",\"E3\",\"E25\",\"E37\",\"E38\"],\"why\":\"The average-uplift slide reached the champion but gave the CFO nothing in dollars, while the customer's own failed-order rate and 'orders dying at the last step' language described the problem more sharply than our acceptance wording.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a proof asset: a one-page CFO business case that champions can hand to a finance approver who does not take vendor meetings. It puts the prospect's current rate, gateway fee, chargeback labor and value of failed orders side by side with ours, built from the prospect's own decline export. Offer it before the pricing proposal is sent, for example: \\\"Want something to hand your CFO? We'll build it from your own numbers.\\\"\",\"evidence\":[\"E34\",\"E35\",\"E28\",\"E6\",\"E8\"],\"why\":\"The champion asked for a one-pager for the CFO and got a deck and pricing proposal, and the CFO, who never met us, decided on a rate-only comparison.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a response for when an incumbent bank or processor sharpens its rate: \\\"A better rate on the same card declines is still the same one-in-twelve lost orders. Compare total cost: rate, gateway fee, chargeback labor and the big-basket orders that fail at checkout.\\\" For use with finance buyers once a rate-only comparison starts to form.\",\"evidence\":[\"E10\",\"E12\",\"E18\",\"E16\"],\"why\":\"After the bank cut its rate, the conversation moved from declines to rate, and the CFO's page held only rate lines, so he judged the offers to be 'the same thing'.\",\"strength\":\"Test this\"},{\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"drop\",\"change\":\"For buyers who are comparing us against an incumbent on rate, stop leading with generic ROI claims. Replace them with a figure built from the buyer's own decline data, as in the one-page business case. Keep the study as supporting material only.\",\"evidence\":[\"E18\",\"E21\",\"E30\"],\"why\":\"The only value material the CFO saw was our quote beside a rate comparison, and a generic ROI claim would not have shown him what Fernbrook's own failed orders cost.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For acceptance conversations: lead with the buyer's own numbers, not an average. Wording: \"If one in twelve of your online orders is dying at the last step, and it's the big baskets getting turned away, here is what that costs you each month. Send us a three-month decline export and we'll put a dollar figure on it.\" Use this with finance approvers and champions whose incumbent cannot explain their declines.",
+    "evidence": [
+     "E2",
+     "E3",
+     "E25",
+     "E37",
+     "E38"
+    ],
+    "why": "The average-uplift slide reached the champion but gave the CFO nothing in dollars, while the customer's own failed-order rate and 'orders dying at the last step' language described the problem more sharply than our acceptance wording.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a proof asset: a one-page CFO business case that champions can hand to a finance approver who does not take vendor meetings. It puts the prospect's current rate, gateway fee, chargeback labor and value of failed orders side by side with ours, built from the prospect's own decline export. Offer it before the pricing proposal is sent, for example: \"Want something to hand your CFO? We'll build it from your own numbers.\"",
+    "evidence": [
+     "E34",
+     "E35",
+     "E28",
+     "E6",
+     "E8"
+    ],
+    "why": "The champion asked for a one-pager for the CFO and got a deck and pricing proposal, and the CFO, who never met us, decided on a rate-only comparison.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a response for when an incumbent bank or processor sharpens its rate: \"A better rate on the same card declines is still the same one-in-twelve lost orders. Compare total cost: rate, gateway fee, chargeback labor and the big-basket orders that fail at checkout.\" For use with finance buyers once a rate-only comparison starts to form.",
+    "evidence": [
+     "E10",
+     "E12",
+     "E18",
+     "E16"
+    ],
+    "why": "After the bank cut its rate, the conversation moved from declines to rate, and the CFO's page held only rate lines, so he judged the offers to be 'the same thing'.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "drop",
+    "change": "For buyers who are comparing us against an incumbent on rate, stop leading with generic ROI claims. Replace them with a figure built from the buyer's own decline data, as in the one-page business case. Keep the study as supporting material only.",
+    "evidence": [
+     "E18",
+     "E21",
+     "E30"
+    ],
+    "why": "The only value material the CFO saw was our quote beside a rate comparison, and a generic ROI claim would not have shown him what Fernbrook's own failed orders cost.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 9824,
+ "cost": 0.031444,
+ "in_tokens": 5412,
+ "out_tokens": 980,
+ "model": "claude-sonnet-5-5"
+}

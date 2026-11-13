@@ -1,0 +1,71 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"replace\",\"change\":\"For regional subscription businesses (US/Canada membership and studio chains): \\\"Send us one month of your failed renewals and we'll show you which members would come back.\\\" Lead with this data session instead of the global opener, and frame the problem in the customer's terms: members who never meant to leave, separated from members who cancelled.\",\"evidence\":[\"E15\",\"E16\",\"E17\",\"E5\"],\"why\":\"The global opener drew silence from a US and Canada studio chain, while the customer's own month of failed renewals got the controller to ask for the spreadsheet.\",\"strength\":\"Test this\"},{\"target\":\"M10\",\"current_line\":\"Recover failed payments automatically with smart retries.\",\"type\":\"replace\",\"change\":\"For subscription buyers: \\\"Your churn number has two buckets: people who cancelled and people whose card just failed. We'll show you the second bucket in your own data, and which of those payments come back.\\\" Use 'failed payments and retries' as the customer's phrasing and do not quote any size for the failed-card share until it is confirmed.\",\"evidence\":[\"E3\",\"E4\",\"E13\",\"E34\"],\"why\":\"The trigger was a board-level churn figure that had not been split into cancellations and failed cards, and the customer reacted to failed payments and retries, not to a generic recovery claim.\",\"strength\":\"Test this\"},{\"target\":\"M3\",\"current_line\":\"Online and in-store on one platform; the line between them has pretty much disappeared.\",\"type\":\"drop\",\"change\":\"Stop leading with this for buyers who run studio or practice-management software at the front desk until the front-desk flow can be shown live in their own setup. Say plainly what is available now (online billing) and what runs through the partner integration, and be ready to answer reader compatibility, contract term and exit cost questions directly.\",\"evidence\":[\"E25\",\"E26\",\"E29\",\"E14\",\"E18\"],\"why\":\"The customer asked to see the reader working inside their studio software, we could only show the partner's demo, and their questions after the incumbent's bundle moved to readers, contract term and termination fees, none of which this line answers.\",\"strength\":\"Test this\"},{\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"add\",\"change\":\"Add a finance-facing proof point for the controller or signer: a one-page summary built from the customer's own failed-renewal data, plus contract terms and exit costs. Bring it to the first meeting, not after the paper has gone to finance.\",\"evidence\":[\"E21\",\"E16\",\"E22\",\"E14\"],\"why\":\"The controller who held the paper for two weeks asked for the spreadsheet and asked about termination fees twice, and the signature followed four days after he saw the data, so a generic ROI study was not what moved him.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "replace",
+    "change": "For regional subscription businesses (US/Canada membership and studio chains): \"Send us one month of your failed renewals and we'll show you which members would come back.\" Lead with this data session instead of the global opener, and frame the problem in the customer's terms: members who never meant to leave, separated from members who cancelled.",
+    "evidence": [
+     "E15",
+     "E16",
+     "E17",
+     "E5"
+    ],
+    "why": "The global opener drew silence from a US and Canada studio chain, while the customer's own month of failed renewals got the controller to ask for the spreadsheet.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M10",
+    "current_line": "Recover failed payments automatically with smart retries.",
+    "type": "replace",
+    "change": "For subscription buyers: \"Your churn number has two buckets: people who cancelled and people whose card just failed. We'll show you the second bucket in your own data, and which of those payments come back.\" Use 'failed payments and retries' as the customer's phrasing and do not quote any size for the failed-card share until it is confirmed.",
+    "evidence": [
+     "E3",
+     "E4",
+     "E13",
+     "E34"
+    ],
+    "why": "The trigger was a board-level churn figure that had not been split into cancellations and failed cards, and the customer reacted to failed payments and retries, not to a generic recovery claim.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M3",
+    "current_line": "Online and in-store on one platform; the line between them has pretty much disappeared.",
+    "type": "drop",
+    "change": "Stop leading with this for buyers who run studio or practice-management software at the front desk until the front-desk flow can be shown live in their own setup. Say plainly what is available now (online billing) and what runs through the partner integration, and be ready to answer reader compatibility, contract term and exit cost questions directly.",
+    "evidence": [
+     "E25",
+     "E26",
+     "E29",
+     "E14",
+     "E18"
+    ],
+    "why": "The customer asked to see the reader working inside their studio software, we could only show the partner's demo, and their questions after the incumbent's bundle moved to readers, contract term and termination fees, none of which this line answers.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "add",
+    "change": "Add a finance-facing proof point for the controller or signer: a one-page summary built from the customer's own failed-renewal data, plus contract terms and exit costs. Bring it to the first meeting, not after the paper has gone to finance.",
+    "evidence": [
+     "E21",
+     "E16",
+     "E22",
+     "E14"
+    ],
+    "why": "The controller who held the paper for two weeks asked for the spreadsheet and asked about termination fees twice, and the signature followed four days after he saw the data, so a generic ROI study was not what moved him.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 10601,
+ "cost": 0.030682,
+ "in_tokens": 5334,
+ "out_tokens": 935,
+ "model": "claude-sonnet-5-5"
+}

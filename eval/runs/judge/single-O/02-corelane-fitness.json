@@ -1,0 +1,53 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},\n  {\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},\n  {\"item\":\"Customer language is marked Not covered\",\"pass\":true},\n  {\"item\":\"'A third of the churn' is labeled unverified or opinion\",\"pass\":true},\n  {\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}\n ],\n \"fails\":[\"Decider insight puts a first-person quote, 'it was my call', in Maya's mouth. The transcript only has the rep's report: \\\"She said it was her call.\\\" This is a reconstructed quote that does not appear in the transcript.\"],\n \"notes\":\"Strong report. It carries the online-only scope note, surfaces the Maya-chose/Greg-decided contradiction, labels 'a third' as unverified, marks customer language Not covered, and points every messaging change at the key's direction using real excerpts. Main miss: the rep takeaway covers only finding the signer early. It never says to treat the front desk as a live, incumbent-held deal. The messaging also only implies, and never states, adding a live in-environment reader demo as the proof to build.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": true
+   },
+   {
+    "item": "'A third of the churn' is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Decider insight puts a first-person quote, 'it was my call', in Maya's mouth. The transcript only has the rep's report: \"She said it was her call.\" This is a reconstructed quote that does not appear in the transcript."
+  ],
+  "notes": "Strong report. It carries the online-only scope note, surfaces the Maya-chose/Greg-decided contradiction, labels 'a third' as unverified, marks customer language Not covered, and points every messaging change at the key's direction using real excerpts. Main miss: the rep takeaway covers only finding the signer early. It never says to treat the front desk as a live, incumbent-held deal. The messaging also only implies, and never states, adding a live in-environment reader demo as the proof to build."
+ },
+ "ms": 31776,
+ "cost": 0.132828,
+ "in_tokens": 8887,
+ "out_tokens": 3087,
+ "model": "claude-opus-5-5"
+}
