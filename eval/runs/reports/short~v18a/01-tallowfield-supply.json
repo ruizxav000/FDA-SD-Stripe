@@ -1,0 +1,123 @@
+{
+ "version": "2026-11-14.9",
+ "header": {
+  "deal": "Tallowfield Supply",
+  "ae": "Dana",
+  "acv": {
+   "amount": 140000,
+   "quote": "About a hundred and forty K a year."
+  },
+  "outcome": "Won",
+  "competitor": "Fiserv",
+  "products": [
+   "Revenue and Finance Automation",
+   "Payments",
+   "Terminal"
+  ],
+  "tag": "Value proof",
+  "reason": "Won once Wen priced the hand-matching of deposits using Ines's own statements and staff costs. Dana blames finding the CFO late, but the real gap was pitching a portal instead of her problem."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with slow month-end close, not the online ordering portal.",
+   "line": {
+    "id": "F1",
+    "text": "Stripe automates the tedious parts of revenue reporting and reconciliation, so teams spend less time closing the books",
+    "product": "Revenue and Finance Automation"
+   },
+   "why": "Ines, the new CFO, had a nine-day first close, much of it matching deposits by hand.",
+   "quote": "her first month-end close took nine days",
+   "who": "Dana, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Open with what hand-matching deposits costs finance, not checkout APIs.",
+   "line": {
+    "id": "H3",
+    "text": "Programmable financial infrastructure",
+    "product": null
+   },
+   "why": "Ines read page one of the portal proposal and set it aside. The deal stalled for three weeks.",
+   "quote": "she read the first page and said it wasn't her problem",
+   "who": "Dana, AE"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Say we show where the money went, not just lower rates.",
+   "line": {
+    "id": "A2",
+    "text": "Businesses on custom interchange pricing can lower card processing costs by up to 3.3%",
+    "product": "Payments"
+   },
+   "why": "Ines told her bank she was looking and it offered rates. Dana never saw what Fiserv pitched.",
+   "quote": "I didn't ask about my rates.",
+   "who": "Ines, CFO"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Lead with each payout tied to its transactions, not global growth.",
+   "line": {
+    "id": "H2",
+    "text": "Financial infrastructure for global growth",
+    "product": null
+   },
+   "why": "The global deck got silence from Paul. Ines stopped Wen during the payout matching demo.",
+   "quote": "go back.",
+   "who": "Ines, CFO"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add a wholesale distributor story about matching deposits to invoices.",
+   "line": null,
+   "why": "Ines asked twice to talk to a distributor and waved off our retail case study.",
+   "quote": "this is a company that sells sweaters.",
+   "who": "Ines, CFO"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'know where my money is' and 'deposits', not 'infrastructure'.",
+   "line": {
+    "id": "H1",
+    "text": "Financial infrastructure to grow your revenue",
+    "product": null
+   },
+   "why": "Ines said 'the deposits', never 'payments', and nobody used our word 'infrastructure'.",
+   "quote": "I just want to know where my money is.",
+   "who": "Ines, CFO"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 56761,
+  "cost": 0.213662,
+  "stage_ms": {
+   "reader": 35300,
+   "analyst": 21461
+  },
+  "stage_cost": {
+   "reader": 0.07501,
+   "analyst": 0.138652
+  }
+ }
+}

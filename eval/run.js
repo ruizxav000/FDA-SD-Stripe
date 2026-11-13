@@ -155,7 +155,7 @@ async function runSingle(cfg, d) {
 // ── Short report (current page format): reader (cached from round 9) -> analyst -> checks
 async function runShort(cfgFull, d) {
   const sfx = cfgFull.split("~")[1] || "a";
-  const readerKey = "S~v9a"; // same transcripts and reader instructions as round 9
+  const readerKey = "S~v19a"; // transcripts gained the "what were we selling" exchange in round 19
   const reader = await once(`reader:${readerKey}:${d.deal}`, () => limited(() => cached(stageFile("reader", readerKey, d.deal),
     () => claude(D.readerPrompt({ transcript: d.transcript }), MODELS.S, EFFORT))));
   if (!reader.data) return null;
@@ -175,7 +175,7 @@ async function runShort(cfgFull, d) {
 
 function judgeShortPrompt(d, report) {
   const clean = { header: report.header, findings: report.findings };
-  return `You are grading a short AI-written deal review against an answer key written by a product-marketing lead. The review has only: account, ACV, outcome, competitor, a reason tag, a one-to-two sentence reason, and six labelled insights (trigger, who decided, competitor, our message, missing proof, the customer's words), each a messaging change (sometimes tied to one of our current messaging lines), a one-line why, and a supporting quote. The answer key has the same shape: a header, and one expected messaging change per insight area with the id of our current messaging line it should touch. Be strict and consistent.
+  return `You are grading a short AI-written deal review against an answer key written by a product-marketing lead. The review has only: account, ACV, outcome, competitor, the products the deal was about, a reason tag, a one-to-two sentence reason, and six labelled insights (trigger, who decided, competitor, our message, missing proof, the customer's words), each a messaging change (sometimes tied to one of our current messaging lines), a one-line why, and a supporting quote. The answer key has the same shape: a header, and one expected messaging change per insight area with the id of our current messaging line it should touch. Be strict and consistent.
 
 Our messaging line ids:
 ${D.MESSAGING.map((m) => `- ${m.id}: ${m.line}`).join("\n")}
@@ -184,6 +184,7 @@ Scoring:
 - account: 1 = the account name (or, if the transcript never names it, a fair short description); 0 otherwise.
 - acv: 1 = matches the key's ACV; 0 otherwise.
 - outcome: 1 = matches the key's outcome; 0 otherwise.
+- products: 1 = the review's main (first) product is one the key lists, and it names no product the transcript doesn't support; 0.5 = right product but not first, or one extra unsupported product; 0 otherwise.
 - tag: 2 = the key's tag; 1 = the key's acceptable alternative; 0 otherwise.
 - reason: 2 = names the real reason the key gives (not the rep's framing where the key says they differ); 1 = partly; 0 = wrong or the rep's framing.
 - insights: for each of trigger, decider, competitor, message, proof, words, compare the review's messaging change with the key's "Expected change" for that area. Many keys list several acceptable changes for one area; the review gives one short action per area, so matching ANY ONE of them fully scores 1. 1 = points the same way as one of the key's changes (wording can differ; touching the key's line, or a sensible neighbouring line, counts); 0.5 = partly, or right idea but generic; 0 = different direction, not about messaging, or "not covered" when the key expects a change. When the key says the area was not covered, 1 only if the review also says so (or does what the key says is acceptable).
@@ -204,7 +205,7 @@ REVIEW (JSON)
 ${JSON.stringify(clean)}
 
 Reply with ONLY this JSON:
-{"account":0,"acv":0,"outcome":0,"tag":0,"reason":0,"insights":{"trigger":0,"decider":0,"competitor":0,"message":0,"proof":0,"words":0},"repetitive":false,"readable":0,"messaging":0,"fails":[""],"notes":"2 sentences: what it got right, what it missed"}`;
+{"account":0,"acv":0,"outcome":0,"products":0,"tag":0,"reason":0,"insights":{"trigger":0,"decider":0,"competitor":0,"message":0,"proof":0,"words":0},"repetitive":false,"readable":0,"messaging":0,"fails":[""],"notes":"2 sentences: what it got right, what it missed"}`;
 }
 
 // ── Judge ──────────────────────────────────────────────────────────

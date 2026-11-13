@@ -3,6 +3,7 @@
 **Input:** `02-corelane-fitness.txt`. **No speaker names:** Speaker 2 is the AE (Marcus). Line ids refer to `messaging-baseline.md`.
 
 ## Header
+- **Products:** Billing (also acceptable: Terminal, for the front desks in phase two)
 - **Account:** Corelane Fitness · **ACV:** $210,000/year
 - **Outcome:** Won, **online memberships only**; the front desks stay with the incumbent and phase two has no date. The reason should say so.
 - **Competitor:** Global Payments (incumbent, through their studio software)

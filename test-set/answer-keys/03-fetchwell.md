@@ -3,6 +3,7 @@
 **Input:** `03-fetchwell.vtt` (Teams). AE: **Priya**. Line ids refer to `messaging-baseline.md`.
 
 ## Header
+- **Products:** Connect (also acceptable: Payments)
 - **Account:** Fetchwell · **ACV:** $180,000/year
 - **Outcome:** Won · **Competitor:** Braintree (incumbent)
 - **Reason tag:** Developer experience (acceptable: Product fit)

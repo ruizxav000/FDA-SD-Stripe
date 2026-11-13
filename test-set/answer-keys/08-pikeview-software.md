@@ -3,6 +3,7 @@
 **Input:** `08-pikeview-software.txt` (plain text). AE: **Renee**. Line ids refer to `messaging-baseline.md`.
 
 ## Header
+- **Products:** Billing
 - **Account:** Pikeview Software · **ACV:** $75,000/year (what it would have been)
 - **Outcome:** No decision · **Competitor:** None (status quo) · incumbent: a homegrown billing system
 - **Reason tag:** No decision (the underlying cause, Value proof, should appear in the reason)

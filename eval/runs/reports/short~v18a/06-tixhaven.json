@@ -1,0 +1,115 @@
+{
+ "version": "2026-11-14.9",
+ "header": {
+  "deal": "Tixhaven",
+  "ae": "Jordan",
+  "acv": {
+   "amount": 250000,
+   "quote": "Two hundred and fifty K ACV."
+  },
+  "outcome": "Lost",
+  "competitor": null,
+  "products": [
+   "Payments",
+   "Support plans",
+   "Radar"
+  ],
+  "tag": "Support and service",
+  "reason": "Halima, the COO, picked the competitor because it showed the actual people who would answer on an on-sale morning. Jordan points to our better platform, but that is not what decided it."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with what happens when payments fail mid on-sale.",
+   "line": null,
+   "why": "Payments failed four minutes into a big on-sale, and the old provider only replied after it ended.",
+   "quote": "payments started failing about four minutes in",
+   "who": "Jordan, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Tell Halima who answers when things break, not how fast we run.",
+   "line": null,
+   "why": "Halima decided alone in one meeting. Ben showed her our load test results and she only said 'good'.",
+   "quote": "it was Halima's call and she made it in one meeting",
+   "who": "Ben, CTO"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Answer 'who's my person' with real names and on-call people.",
+   "line": {
+    "id": "P3",
+    "text": "Enterprise support: a technical account manager embedded in your team, with a 15-minute response for critical issues",
+    "product": "Support plans"
+   },
+   "why": "Per Ben, the competitor brought its actual account team. Jordan's view that they over-promised is his own unchecked guess.",
+   "quote": "someone on call for every major on-sale",
+   "who": "Ben, CTO"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Stop answering 'who's my person' with support tiers and response times.",
+   "line": {
+    "id": "P3",
+    "text": "Enterprise support: a technical account manager embedded in your team, with a 15-minute response for critical issues",
+    "product": "Support plans"
+   },
+   "why": "Jordan walked Halima through our support plans, and her reply marked the moment the deal was lost.",
+   "quote": "so it's a queue with a faster timer.",
+   "who": "Halima, COO"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add a ticketing customer story about who picked up mid on-sale.",
+   "line": null,
+   "why": "Halima wanted to see what we do at minute four. Jordan had ticketing logos but no customer to vouch.",
+   "quote": "I had logos. I didn't have a person.",
+   "who": "Jordan, AE"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'a name, not a queue' instead of 'support'.",
+   "line": {
+    "id": "P1",
+    "text": "All Stripe customers receive 24x7 phone, email, and chat help",
+    "product": "Support plans"
+   },
+   "why": "Nobody at Tixhaven said 'support'. They asked 'who' and talked about 'on-sale morning'.",
+   "quote": "A name, not a queue.",
+   "who": "Halima, COO"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 74559,
+  "cost": 0.20793910000000002,
+  "stage_ms": {
+   "reader": 53891,
+   "analyst": 20668
+  },
+  "stage_cost": {
+   "reader": 0.08193910000000001,
+   "analyst": 0.126
+  }
+ }
+}

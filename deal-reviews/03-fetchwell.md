@@ -4,6 +4,7 @@
 
 - **Outcome:** Won
 - **ACV:** $180,000 per year
+- **Products:** Connect + Payments
 - **Competitor:** Braintree
 - **Incumbent:** Braintree
 - **Customer:** Pet-care marketplace app (owners book sitters and walkers), US, launching in Canada and the UK
@@ -19,6 +20,10 @@
 **PMM:** Before that, how big was the deal?
 
 **Priya:** A hundred and eighty K a year, on a three-year term.
+
+**PMM:** And what were we selling them?
+
+**Priya:** Connect, for paying the sitters, with Payments for the bookings.
 
 **PMM:** Who made the final call, and how do you know?
 

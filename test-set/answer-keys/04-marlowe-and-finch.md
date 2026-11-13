@@ -3,6 +3,7 @@
 **Input:** `04-marlowe-and-finch.txt` (plain text). AE: **Tom**. Line ids refer to `messaging-baseline.md`.
 
 ## Header
+- **Products:** Terminal + Payments
 - **Account:** Marlowe & Finch · **ACV:** $600,000/year
 - **Outcome:** Lost · **Competitor:** Adyen · incumbent: separate store and online providers
 - **Reason tag:** In-store and online together (acceptable: Support and service)

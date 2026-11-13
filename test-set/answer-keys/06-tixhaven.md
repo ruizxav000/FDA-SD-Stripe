@@ -3,6 +3,7 @@
 **Input:** `06-tixhaven.txt` (Otter style). AE: **Jordan**. Line ids refer to `messaging-baseline.md`.
 
 ## Header
+- **Products:** Payments + Support plans + Radar (main product: Payments)
 - **Account:** Tixhaven · **ACV:** $250,000/year
 - **Outcome:** Lost · **Competitor:** not named in the interview (the rival is described, never named) · incumbent: an in-house gateway on their bank
 - **Reason tag:** Support and service

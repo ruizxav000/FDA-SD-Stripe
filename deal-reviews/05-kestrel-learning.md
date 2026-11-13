@@ -4,6 +4,7 @@
 
 - **Outcome:** Lost (renewal: international volume moved, US volume stayed)
 - **ACV:** $320,000 per year
+- **Products:** Payments (they also use Billing)
 - **Competitor:** Adyen
 - **Incumbent:** Stripe
 - **Customer:** Online language-learning subscription with subscribers in more than 40 countries, a customer for four years
@@ -23,6 +24,10 @@
 **PMM:** Before that, how big was the deal?
 
 **Elena:** The account was worth about three hundred and twenty K a year. Roughly half of that was international.
+
+**PMM:** And what were we selling them?
+
+**Elena:** Payments. They're on Billing too, but the renewal was about the payments volume.
 
 **PMM:** Who made the final call, and how do you know?
 

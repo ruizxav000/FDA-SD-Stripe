@@ -4,6 +4,7 @@
 
 - **Outcome:** Lost
 - **ACV:** $250,000 per year
+- **Products:** Payments + Radar + Enterprise support
 - **Competitor:** Checkout.com
 - **Incumbent:** In-house gateway on their bank's merchant services
 - **Customer:** Live-event ticketing platform
@@ -23,6 +24,10 @@
 **PMM:** Before that, how big was the deal?
 
 **Jordan:** Two hundred and fifty K ACV. Their volume spikes hard around big on-sales.
+
+**PMM:** And what were we selling them?
+
+**Jordan:** Payments, with Radar for the bots, and we pitched Enterprise support on top.
 
 **PMM:** Who made the final call, and how do you know?
 

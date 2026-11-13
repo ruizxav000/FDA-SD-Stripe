@@ -1,0 +1,107 @@
+{
+ "version": "2026-11-14.9",
+ "header": {
+  "deal": "Tixhaven",
+  "ae": "Jordan",
+  "acv": {
+   "amount": 250000,
+   "quote": "Two hundred and fifty K ACV."
+  },
+  "outcome": "Lost",
+  "competitor": null,
+  "products": [
+   "Payments",
+   "Radar",
+   "Support plans"
+  ],
+  "tag": "Support and service",
+  "reason": "Halima, the COO, picked the rival because they named who would pick up on on-sale day. Our support tiers sounded like 'a queue with a faster timer.' Jordan thought the load test had won it."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with what happens when payments fail mid on-sale.",
+   "line": null,
+   "why": "Payments failed four minutes into a Friday on-sale. The old provider replied to a ticket after it ended.",
+   "quote": "payments started failing about four minutes in",
+   "who": "Jordan, account executive"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Write for the COO who owns on-sale day, not the CTO.",
+   "line": null,
+   "why": "Ben, the CTO, wanted us. Halima decided in one meeting and only said 'good' to the load test.",
+   "quote": "it was Halima's call and she made it in one meeting.",
+   "who": "Ben, CTO"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Say who covers a big on-sale, not just throughput and bots.",
+   "line": null,
+   "why": "Ben said the rival brought named people. Afterward, Tixhaven's questions moved from throughput to names.",
+   "quote": "Before that meeting it was throughput, queueing, bots. After, it was names.",
+   "who": "Jordan, account executive"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Change support tiers and response times into named people who answer.",
+   "line": {
+    "id": "P3",
+    "text": "Enterprise support: a technical account manager embedded in your team, with a 15-minute response for critical issues",
+    "product": "Support plans"
+   },
+   "why": "When Halima asked 'who's my person,' Jordan explained tiers and response times. She dismissed it.",
+   "quote": "so it's a queue with a faster timer.",
+   "who": "Halima, COO"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add a written on-sale morning plan showing who watches and who answers.",
+   "line": null,
+   "why": "Halima asked to see on paper what we do at minute four. We had nothing to show.",
+   "quote": "She wanted to see, on paper, what we do on an on-sale morning.",
+   "who": "Jordan, account executive"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'what happens when it's down' instead of uptime or support.",
+   "line": null,
+   "why": "Halima brushed off uptime. Jordan noted that nobody at Tixhaven used the word 'support'.",
+   "quote": "I don't buy uptime, I buy what happens when it's down.",
+   "who": "Halima, COO"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 51503,
+  "cost": 0.191028,
+  "stage_ms": {
+   "reader": 26998,
+   "analyst": 24505
+  },
+  "stage_cost": {
+   "reader": 0.059032,
+   "analyst": 0.131996
+  }
+ }
+}

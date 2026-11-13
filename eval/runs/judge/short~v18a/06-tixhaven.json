@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "text": "{\"account\":1,\"acv\":1,\"outcome\":1,\"products\":1,\"tag\":2,\"reason\":2,\"insights\":{\"trigger\":0.5,\"decider\":1,\"competitor\":1,\"message\":1,\"proof\":1,\"words\":1},\"repetitive\":true,\"readable\":2,\"messaging\":2,\"fails\":[\"Words quote 'A name, not a queue.' is attributed to Halima, COO, but the transcript gives it only as a customer phrase relayed by Jordan, not as Halima's own words\",\"Decider why says Halima 'decided alone', but the transcript says only that it was her call and she made it in one meeting\"],\"notes\":\"The review correctly separates the COO from the CTO, treats 'they over-promised' as Jordan's guess, swaps support tiers for named people, and uses the customer's own words. It leads the trigger with 'what happens' instead of 'who answers' and never reframes uptime as 'what happens when it's down'; the decider and competitor findings both make the same 'tell them who answers' point.\"}",
+ "data": {
+  "account": 1,
+  "acv": 1,
+  "outcome": 1,
+  "products": 1,
+  "tag": 2,
+  "reason": 2,
+  "insights": {
+   "trigger": 0.5,
+   "decider": 1,
+   "competitor": 1,
+   "message": 1,
+   "proof": 1,
+   "words": 1
+  },
+  "repetitive": true,
+  "readable": 2,
+  "messaging": 2,
+  "fails": [
+   "Words quote 'A name, not a queue.' is attributed to Halima, COO, but the transcript gives it only as a customer phrase relayed by Jordan, not as Halima's own words",
+   "Decider why says Halima 'decided alone', but the transcript says only that it was her call and she made it in one meeting"
+  ],
+  "notes": "The review correctly separates the COO from the CTO, treats 'they over-promised' as Jordan's guess, swaps support tiers for named people, and uses the customer's own words. It leads the trigger with 'what happens' instead of 'who answers' and never reframes uptime as 'what happens when it's down'; the decider and competitor findings both make the same 'tell them who answers' point."
+ },
+ "ms": 24167,
+ "cost": 0.090688,
+ "in_tokens": 6212,
+ "out_tokens": 2050,
+ "model": "claude-opus-5-5"
+}

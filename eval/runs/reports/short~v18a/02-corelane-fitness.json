@@ -1,0 +1,118 @@
+{
+ "version": "2026-11-14.9",
+ "header": {
+  "deal": "Corelane Fitness",
+  "ae": null,
+  "acv": {
+   "amount": 210000,
+   "quote": "Two hundred and ten K ACV."
+  },
+  "outcome": "Won",
+  "competitor": "Global Payments",
+  "products": [
+   "Billing",
+   "Terminal"
+  ],
+  "tag": "Value proof",
+  "reason": "Greg, the controller, signed four days after Tobi showed which of their own failed renewals could come back. Only memberships were won. Front desks stay with Global. The rep first credited Maya."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with failed cards hiding inside the churn numbers boards see.",
+   "line": {
+    "id": "B1",
+    "text": "Monetize faster with Stripe Billing. Manage pricing, reduce churn, and grow revenue on one platform",
+    "product": "Billing"
+   },
+   "why": "Corelane's board churn rose two quarters, and splitting it showed failed cards were a bigger bucket than expected.",
+   "quote": "split it into people who cancelled and people whose card just failed",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Show the controller recoverable renewals from his own data, not averages.",
+   "line": null,
+   "why": "Greg, the controller, held the contract for two weeks and signed only after seeing his own failed renewals.",
+   "quote": "Greg hadn't said a word in two meetings, and he asked for the spreadsheet.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "State plainly what leaving the current processor costs, and our contract term.",
+   "line": null,
+   "why": "Maya told the rep Global offered a front-desk bundle on a longer contract. Questions then turned to exit costs.",
+   "quote": "Greg asked about termination fees twice.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Cut the global headline for customers in one or two countries.",
+   "line": {
+    "id": "H2",
+    "text": "Financial infrastructure for global growth",
+    "product": null
+   },
+   "why": "The rep opened with the global slide and got silence. Corelane has studios in the US and a few in Canada.",
+   "quote": "I opened with the global slide.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add a live example of our reader inside studio management software.",
+   "line": {
+    "id": "S2",
+    "text": "Stripe Terminal is a point of sale system that unifies your online and offline channels",
+    "product": "Terminal"
+   },
+   "why": "Maya feared two screens at the front desk. They only saw a partner demo, not their own setup.",
+   "quote": "the studio managers will revolt.",
+   "who": "Maya, head of digital"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'members who never meant to leave' instead of 'failed payment recovery'.",
+   "line": {
+    "id": "B2",
+    "text": "AI-powered Smart Retries, card account updater, and cancellation surveys work together to keep revenue flowing",
+    "product": "Billing"
+   },
+   "why": "From earlier in the call: Maya used this phrase for failed-card churn. The words question itself went to Slack.",
+   "quote": "members who never meant to leave.",
+   "who": "Maya, head of digital"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 76755,
+  "cost": 0.2199835,
+  "stage_ms": {
+   "reader": 46056,
+   "analyst": 30699
+  },
+  "stage_cost": {
+   "reader": 0.07428350000000002,
+   "analyst": 0.1457
+  }
+ }
+}

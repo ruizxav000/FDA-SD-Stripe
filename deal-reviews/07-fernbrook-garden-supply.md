@@ -4,6 +4,7 @@
 
 - **Outcome:** Lost
 - **ACV:** $95,000 per year
+- **Products:** Payments
 - **Competitor:** Fiserv
 - **Incumbent:** Fiserv (through the customer's bank)
 - **Customer:** Online garden and outdoor equipment retailer (greenhouses, mowers, tools), spring peak season
@@ -23,6 +24,10 @@
 **PMM:** Before that, how big was the deal?
 
 **Sam:** Around ninety-five thousand a year. Ninety-five K ACV, on a two-year term.
+
+**PMM:** And what were we selling them?
+
+**Sam:** Payments. Online checkout for the store.
 
 **PMM:** Who made the final call, and how do you know?
 

@@ -4,6 +4,7 @@
 
 - **Outcome:** Lost
 - **ACV:** $600,000 per year
+- **Products:** Terminal + Payments
 - **Competitor:** Adyen
 - **Incumbent:** Separate providers for stores and for online
 - **Customer:** Apparel retailer, about 120 stores plus ecommerce
@@ -19,6 +20,10 @@
 **PMM:** Before that, how big was the deal?
 
 **Tom:** We proposed six hundred K a year. Stores and online together, one contract.
+
+**PMM:** And what were we selling them?
+
+**Tom:** Terminal for the stores and Payments for the website, on one contract.
 
 **PMM:** Who made the final call, and how do you know?
 

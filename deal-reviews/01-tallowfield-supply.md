@@ -4,6 +4,7 @@
 
 - **Outcome:** Won
 - **ACV:** $140,000 per year
+- **Products:** Payments + Revenue and Finance Automation (Terminal also in the proposal)
 - **Competitor:** Fiserv
 - **Incumbent:** Fiserv (through the customer's bank)
 - **Customer:** Regional restaurant-supply distributor, 14 branches, launching an online ordering portal
@@ -23,6 +24,10 @@
 **PMM:** Before that, how big was the deal?
 
 **Dana:** About a hundred and forty K a year. Card processing across the portal and the branch counters, plus the reconciliation piece.
+
+**PMM:** And what were we selling them?
+
+**Dana:** Payments for the ordering portal, plus Revenue and Finance Automation for the reconciliation. Terminal for the branch counters was in there too.
 
 **PMM:** Who made the final call, and how do you know?
 

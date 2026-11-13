@@ -1,0 +1,123 @@
+{
+ "version": "2026-11-14.9",
+ "header": {
+  "deal": "Marlowe & Finch",
+  "ae": "Tom",
+  "acv": {
+   "amount": 600000,
+   "quote": "We proposed six hundred K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "products": [
+   "Terminal",
+   "Payments"
+  ],
+  "tag": "In-store and online together",
+  "reason": "Angela, the COO, signed with Adyen after we never showed a store return or a rollout plan. Tom thought Raj decided and that we had already won the web side."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with online orders that stores can't see or return.",
+   "line": null,
+   "why": "Returns broke last holiday season, and Angela, the COO, reportedly watched the returns queue in a store.",
+   "quote": "The store couldn't see the online order",
+   "who": "Tom, account executive"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Tell the COO one company answers for both tills and website.",
+   "line": {
+    "id": "S2",
+    "text": "Stripe Terminal is a point of sale system that unifies your online and offline channels",
+    "product": "Terminal"
+   },
+   "why": "Angela signed with Adyen. Tom met her only once and treated Raj, the CTO, as the decider.",
+   "quote": "I don't want two vendors pointing at each other.",
+   "who": "Angela, COO"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Answer store worries: installs, wifi drops, tills down on Saturdays.",
+   "line": null,
+   "why": "Raj said Adyen brought a retail team. After that, 11 of 14 questions were about stores. This is secondhand.",
+   "quote": "Raj forwarded me a list of 14 questions and 11 of them were about stores.",
+   "who": "Tom, account executive"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Replace the line has disappeared claim with a step-by-step till return.",
+   "line": {
+    "id": "S1",
+    "text": "Unify online and in-store commerce: the line between online and in-store has all but disappeared",
+    "product": "Terminal"
+   },
+   "why": "Bev, head of store operations, dismissed our one-platform slide and asked how a return works at the till.",
+   "quote": "that's a diagram.",
+   "who": "Bev, head of store operations"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add a retailer story showing store rollout dates and who installs.",
+   "line": {
+    "id": "S4",
+    "text": "URBN consolidates $5 billion in online and in-store revenue onto Stripe",
+    "product": "Terminal"
+   },
+   "why": "Angela wanted to talk to the retailer in our case study. We also had no rollout plan to show.",
+   "quote": "can I talk to them?",
+   "who": "Angela, COO"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'the tills' and 'one customer, one basket', not 'point of sale'.",
+   "line": {
+    "id": "S2",
+    "text": "Stripe Terminal is a point of sale system that unifies your online and offline channels",
+    "product": "Terminal"
+   },
+   "why": "Bev said it this way every time, while we kept saying 'in-person payments' and 'point of sale'.",
+   "quote": "One system for the tills and the website.",
+   "who": "Bev, head of store operations"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": [
+   {
+    "where": "message",
+    "text": "line has disappeared"
+   }
+  ]
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 69178,
+  "cost": 0.22979,
+  "stage_ms": {
+   "reader": 51179,
+   "analyst": 17999
+  },
+  "stage_cost": {
+   "reader": 0.09731000000000001,
+   "analyst": 0.13248
+  }
+ }
+}

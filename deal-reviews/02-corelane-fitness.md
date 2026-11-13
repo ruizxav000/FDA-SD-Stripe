@@ -4,6 +4,7 @@
 
 - **Outcome:** Won
 - **ACV:** $210,000 per year
+- **Products:** Billing (Terminal is phase two)
 - **Competitor:** Global Payments
 - **Incumbent:** Global Payments (through the customer's studio management software)
 - **Customer:** Boutique fitness chain, 62 studios, monthly memberships plus front-desk retail
@@ -23,6 +24,10 @@
 **PMM:** Before that, how big was the deal?
 
 **Marcus:** Two hundred and ten K ACV. And that's memberships only, the front desks aren't in it.
+
+**PMM:** And what were we selling them?
+
+**Marcus:** Billing for the memberships. Terminal for the front desks was in the proposal, but that's phase two.
 
 **PMM:** Who made the final call, and how do you know?
 

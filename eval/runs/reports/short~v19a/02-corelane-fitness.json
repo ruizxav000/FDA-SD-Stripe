@@ -1,0 +1,122 @@
+{
+ "version": "2026-11-14.9",
+ "header": {
+  "deal": "Corelane Fitness",
+  "ae": null,
+  "acv": {
+   "amount": 210000,
+   "quote": "Two hundred and ten K ACV. And that's memberships only"
+  },
+  "outcome": "Won",
+  "competitor": "Global Payments",
+  "products": [
+   "Billing",
+   "Terminal"
+  ],
+  "tag": "Value proof",
+  "reason": "We won the memberships, but the front desks stay with Global Payments for now. Greg, the controller, signed after Tobi showed which of their own failed renewals could come back. The AE first credited Maya."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with churn from failed cards, split out from real cancellations.",
+   "line": {
+    "id": "B2",
+    "text": "AI-powered Smart Retries, card account updater, and cancellation surveys work together to keep revenue flowing",
+    "product": "Billing"
+   },
+   "why": "Corelane's board churn rose two quarters. The failed-card bucket turned out much bigger than anyone expected.",
+   "quote": "people whose card just failed. The second bucket was a lot bigger than anyone expected",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Show what the customer's own failed renewals could bring back.",
+   "line": null,
+   "why": "Greg, the controller, sat on the contract for two weeks. He signed four days after seeing his own data.",
+   "quote": "Maya chose us. Greg decided whether anybody got chosen.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Say plainly what the contract term and exit costs are for front-desk readers.",
+   "line": {
+    "id": "S2",
+    "text": "Stripe Terminal is a point of sale system that unifies your online and offline channels",
+    "product": "Terminal"
+   },
+   "why": "Maya told the AE that Global offered a reader bundle on a longer contract. Greg then asked twice about getting out.",
+   "quote": "Greg asked about termination fees twice.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Cut the global growth headline for a US and Canada business.",
+   "line": {
+    "id": "H2",
+    "text": "Financial infrastructure for global growth",
+    "product": null
+   },
+   "why": "The AE opened with the global slide and got silence. Corelane only has studios in the US and Canada.",
+   "quote": "Silence. I opened with the global slide.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add proof of our reader working inside studio software, on one screen.",
+   "line": {
+    "id": "S2",
+    "text": "Stripe Terminal is a point of sale system that unifies your online and offline channels",
+    "product": "Terminal"
+   },
+   "why": "Corelane asked to see check-in and a sale on one screen. We couldn't show it, and the front desks stayed with Global.",
+   "quote": "We couldn't show that live.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'members who never meant to leave' instead of 'reduce churn'.",
+   "line": {
+    "id": "B1",
+    "text": "Monetize faster with Stripe Billing. Manage pricing, reduce churn, and grow revenue on one platform",
+    "product": "Billing"
+   },
+   "why": "Maya, head of digital, used these words for the failed-card bucket. This came from earlier in the call.",
+   "quote": "members who never meant to leave",
+   "who": "Maya, head of digital"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 31739,
+  "cost": 0.123638,
+  "stage_ms": {
+   "reader": 7412,
+   "analyst": 24327
+  },
+  "stage_cost": {
+   "reader": 0.021613999999999998,
+   "analyst": 0.102024
+  }
+ }
+}

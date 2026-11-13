@@ -8,6 +8,7 @@ Each review has only:
 |---|---|
 | **Account** | The customer's name as said in the interview, or a short description if it's never said. Never invented. |
 | **ACV** | Annual contract value, only if someone states it in the interview (the words are checked against the transcript). |
+| **Products** | Which of our products the deal was about, main one first (up to 3), from the product list in `app/core.js` (`PRODUCTS`). PROVISIONAL list: public product names matched to the messaging baseline (Payments, Terminal, Billing, Connect, Revenue and Finance Automation, Radar, Support plans); replace with the team's real product / solution list. The feed filters by product, and each messaging line shows the product it belongs to. |
 | **Outcome** | Won, Lost or No decision. |
 | **Reason** | One reason tag (list below), plus one or two plain sentences on why the deal was really won or lost. If the AE's explanation differs from the evidence, it says so. |
 | **Insights** | One messaging change for each area the team asked about: what started it, who decided, the competitor, our message, missing proof, and the customer's own words. Each is a short verb-first action (what to lead with, say, stop saying, or which proof point to add), the current messaging line it changes when there is one (from `messaging-baseline.md`), one plain sentence on why, and a short quote. |

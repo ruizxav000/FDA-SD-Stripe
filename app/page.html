@@ -328,6 +328,7 @@ select.field{padding-right:28px}
         <button type="button" class="chip" data-outcome="Won" aria-pressed="false">Won</button>
         <button type="button" class="chip" data-outcome="Lost" aria-pressed="false">Lost</button>
         <button type="button" class="chip" data-outcome="No decision" aria-pressed="false">No decision</button>
+        <select class="field" id="f-prod" aria-label="Product"><option value="">All products</option></select>
         <select class="field" id="f-tag" aria-label="Reason"><option value="">All reasons</option></select>
         <input class="field" id="f-q" type="search" placeholder="Search accounts and findings" aria-label="Search">
       </div>
@@ -641,6 +642,7 @@ function renderReport(r, opts) {
     h("div", { class: "rp-title" }, h("h2", { class: "acct", text: H.deal || "Unnamed deal" }), outcomeEl(H.outcome)),
     h("div", { class: "facts" },
       fact("ACV", H.acv ? fmtACV(H.acv.amount) : "Not stated", H.acv ? "acv" : ""),
+      fact("Product", (H.products || []).join(" + ") || "Not clear", "strong"),
       fact("Reason", H.tag, "strong"),
       fact("Up against", H.competitor)),
     H.reason ? h("p", { class: "why", text: H.reason }) : null,
@@ -658,13 +660,13 @@ function insightRows(r) {
     h("span", { class: "k", text: f.label || "" }),
     f.covered === false ? h("span", { class: "f", text: "Not covered in the interview." })
       : h("span", { class: "f" }, f.finding,
-          f.line ? h("span", { class: "ln" }, "Our line: ", h("span", { class: "lt", text: "\u201C" + f.line.text + "\u201D" })) : null,
+          f.line ? h("span", { class: "ln" }, (f.line.product ? f.line.product + " line: " : "Our line: "), h("span", { class: "lt", text: "\u201C" + f.line.text + "\u201D" })) : null,
           f.why ? h("span", { class: "w", text: f.why }) : null,
           f.quote ? h("span", { class: "q" }, h("span", { class: "end", text: f.quote }), f.who ? " — " + f.who : "") : null))));
 }
 
 /* ════════════════════ FEED ════════════════════ */
-const feed = { real: [], seen: new Set(), pending: [], loaded: false, offline: false, showExamples: false, filter: { outcome: "", tag: "", q: "" }, open: new Set(), names: {} };
+const feed = { real: [], seen: new Set(), pending: [], loaded: false, offline: false, showExamples: false, filter: { outcome: "", tag: "", prod: "", q: "" }, open: new Set(), names: {} };
 const EXAMPLE_CARDS = (window.EXAMPLES || []).map((x, i) => Object.assign({}, x.card, { rid: "ex" + i, uid: "example", example: true }));
 
 function allCards() {
@@ -676,8 +678,9 @@ function matches(c) {
   const f = feed.filter;
   if (f.outcome && c.outcome !== f.outcome) return false;
   if (f.tag && c.tag !== f.tag) return false;
+  if (f.prod && !(c.products || []).includes(f.prod)) return false;
   if (f.q) {
-    const hay = [c.deal, c.competitor, c.tag, c.rep, c.reason].join(" ").toLowerCase();
+    const hay = [c.deal, c.competitor, c.tag, c.rep, c.reason, ...(c.products || [])].join(" ").toLowerCase();
     if (!hay.includes(f.q.toLowerCase())) return false;
   }
   return true;
@@ -694,6 +697,7 @@ async function resolveNames(ids) {
 async function renderFeed() {
   const cards = allCards();
   fillSelect($("f-tag"), cards.map((c) => c.tag), "All reasons");
+  fillSelect($("f-prod"), cards.flatMap((c) => c.products || []), "All products");
   const shown = cards.filter(matches);
   await resolveNames(shown.map((c) => c.authorId));
   const list = $("feed-list");
@@ -715,7 +719,7 @@ function cardEl(c) {
   const detail = h("div", { class: "detail", hidden: true });
   const el = h("article", { class: "glass box card", "aria-expanded": "false", tabindex: "0" },
     h("p", { class: "title", text: c.deal || "Unnamed deal" }),
-    h("div", { class: "card-tags" }, outcomeEl(c.outcome), h("span", { class: "acv" }, "ACV ", h("b", { text: fmtACV(c.acv) })), h("span", {}, "Reason ", h("b", { text: c.tag || "—" })),
+    h("div", { class: "card-tags" }, outcomeEl(c.outcome), (c.products || []).length ? h("span", { class: "prod" }, h("b", { text: c.products.join(" + ") })) : null, h("span", { class: "acv" }, "ACV ", h("b", { text: fmtACV(c.acv) })), h("span", {}, "Reason ", h("b", { text: c.tag || "—" })),
       c.competitor ? h("span", { class: "vs", text: "vs " + c.competitor }) : null, c.rep ? h("span", { class: "meta", text: "AE: " + c.rep }) : null,
       author ? h("span", { class: "meta", text: "by " + author }) : null, c.createdAt ? h("span", { class: "meta", text: fmtDate(c.createdAt) }) : null),
     reason, detail);
@@ -764,6 +768,7 @@ document.querySelectorAll("[data-outcome]").forEach((b) => b.addEventListener("c
   feed.filter.outcome = b.dataset.outcome; renderFeed();
 }));
 $("f-tag").addEventListener("change", () => { feed.filter.tag = $("f-tag").value; renderFeed(); });
+$("f-prod").addEventListener("change", () => { feed.filter.prod = $("f-prod").value; renderFeed(); });
 let qTimer; $("f-q").addEventListener("input", () => { clearTimeout(qTimer); qTimer = setTimeout(() => { feed.filter.q = $("f-q").value.trim(); renderFeed(); }, 200); });
 $("new-pill").onclick = () => { feed.real = feed.pending; feed.pendingCount = 0; $("new-pill").hidden = true; renderFeed(); renderDashboard(); };
 

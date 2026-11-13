@@ -4,6 +4,7 @@
 
 - **Outcome:** No decision
 - **ACV:** $75,000 per year
+- **Products:** Billing
 - **Competitor:** None (stay as they are)
 - **Incumbent:** Homegrown billing system on their bank's processor
 - **Customer:** Software company selling to property managers, bills landlords on subscriptions
@@ -23,6 +24,10 @@
 **PMM:** Before that, how big was the deal?
 
 **Renee:** It would have been about seventy-five K a year.
+
+**PMM:** And what were we selling them?
+
+**Renee:** Billing. To replace the homegrown system.
 
 **PMM:** Who made the final call, and how do you know?
 

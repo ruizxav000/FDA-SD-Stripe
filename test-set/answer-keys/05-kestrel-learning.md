@@ -3,6 +3,7 @@
 **Input:** `05-kestrel-learning.txt` (plain text). AE: **Elena**. A renewal: **we are the incumbent.** Line ids refer to `messaging-baseline.md`.
 
 ## Header
+- **Products:** Payments (Billing acceptable as a second product; the renewal was about payments volume)
 - **Account:** Kestrel Learning · **ACV:** $320,000/year (the whole account)
 - **Outcome:** Lost, **international only**; the US volume stayed. The reason should say so.
 - **Competitor:** Adyen

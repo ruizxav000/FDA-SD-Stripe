@@ -1,0 +1,123 @@
+{
+ "version": "2026-11-14.9",
+ "header": {
+  "deal": "Marlowe & Finch",
+  "ae": "Tom",
+  "acv": {
+   "amount": 600000,
+   "quote": "We proposed six hundred K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "products": [
+   "Terminal",
+   "Payments"
+  ],
+  "tag": "In-store and online together",
+  "reason": "Angela, the COO, signed with Adyen after they showed store rollout experience and one vendor for tills and web. Tom first named Raj as decider and credited our online strength, but stores decided it."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with online orders returned at the store till.",
+   "line": {
+    "id": "S1",
+    "text": "Unify online and in-store commerce: the line between online and in-store has all but disappeared",
+    "product": "Terminal"
+   },
+   "why": "Stores couldn't see online orders, and Angela reportedly watched the returns queue on December 27th.",
+   "quote": "The store couldn't see the online order",
+   "who": "Tom, account executive"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Speak to the COO's store worries: returns, tills, one vendor accountable.",
+   "line": null,
+   "why": "Angela signed with Adyen, but Tom pitched mostly to Raj, the CTO, and met her only once.",
+   "quote": "Once. The kickoff.",
+   "who": "Tom, account executive"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Say who runs store rollouts and installs, and name retailers.",
+   "line": null,
+   "why": "Raj said Adyen brought a team with store rollout experience. This is secondhand. Afterwards 11 of 14 questions were about stores.",
+   "quote": "people who'd done store rollouts",
+   "who": "Tom, account executive"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Replace the line has disappeared claim with a step-by-step till return.",
+   "line": {
+    "id": "S1",
+    "text": "Unify online and in-store commerce: the line between online and in-store has all but disappeared",
+    "product": "Terminal"
+   },
+   "why": "Bev called our unified commerce slide a diagram and asked how a return works at the till.",
+   "quote": "that's a diagram.",
+   "who": "Bev, head of store operations"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add a store retailer story with rollout dates and who installs.",
+   "line": {
+    "id": "S4",
+    "text": "URBN consolidates $5 billion in online and in-store revenue onto Stripe",
+    "product": "Terminal"
+   },
+   "why": "Angela asked to talk to the case study retailer, and we couldn't set up a call in time.",
+   "quote": "can I talk to them?",
+   "who": "Angela, COO"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'the tills' and 'one customer, one basket', not point of sale.",
+   "line": {
+    "id": "S2",
+    "text": "Stripe Terminal is a point of sale system that unifies your online and offline channels",
+    "product": "Terminal"
+   },
+   "why": "Bev and Angela never said unified commerce, while we kept saying in-person payments and point of sale.",
+   "quote": "One system for the tills and the website.",
+   "who": "Bev, head of store operations"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": [
+   {
+    "where": "message",
+    "text": "line has disappeared"
+   }
+  ]
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 71883,
+  "cost": 0.20866300000000002,
+  "stage_ms": {
+   "reader": 50845,
+   "analyst": 21038
+  },
+  "stage_cost": {
+   "reader": 0.079851,
+   "analyst": 0.128812
+  }
+ }
+}

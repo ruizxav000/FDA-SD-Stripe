@@ -1,0 +1,117 @@
+{
+ "version": "2026-11-14.9",
+ "header": {
+  "deal": "Kestrel Learning",
+  "ae": "Elena",
+  "acv": {
+   "amount": 320000,
+   "quote": "The account was worth about three hundred and twenty K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "products": [
+   "Payments"
+  ],
+  "tag": "Approval rates",
+  "reason": "The international half went to Adyen after its country-by-country test, while we offered averages. The US stayed. Elena says nothing could be done, but our late analysis found fixable problems."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Speak to new payments leaders who check declines country by country.",
+   "line": null,
+   "why": "Stefan, the new head of payments, started by pulling declines by country and disliked several international markets.",
+   "quote": "the first thing he did was pull declines by country",
+   "who": "Elena, account executive"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Show approval gains in the customer's own numbers, ready for the CFO.",
+   "line": {
+    "id": "A1",
+    "text": "Authorization Boost increases acceptance rates by 3.8% on average",
+    "product": "Payments"
+   },
+   "why": "Stefan recommended the switch and the CFO approved it. Stefan said an average would not convince his CFO.",
+   "quote": "I can't take an average to my CFO.",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Write a direct answer to the 'local acquiring' pitch.",
+   "line": null,
+   "why": "Stefan kept repeating Adyen's phrase after its country test, and Elena had no answer. We never saw the test results.",
+   "quote": "I don't know what I'd have pitched against that.",
+   "who": "Elena, account executive"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Replace the average uplift claim with a review of their own approvals.",
+   "line": {
+    "id": "A1",
+    "text": "Authorization Boost increases acceptance rates by 3.8% on average",
+    "product": "Payments"
+   },
+   "why": "Stefan met the uplift number with silence but called our analysis of his own numbers the most useful thing.",
+   "quote": "that's an average. What's mine?",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Promise a named person who reviews their approval numbers every month.",
+   "line": {
+    "id": "P2",
+    "text": "Premium support: a dedicated support manager who has ongoing context about your business",
+    "product": "Support plans"
+   },
+   "why": "Stefan asked who at Stripe looks at his numbers monthly, and Elena had no name to give.",
+   "quote": "He asked who at Stripe looks at his numbers every month",
+   "who": "Elena, account executive"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'approvals' and 'money left on the table', not 'authorization'.",
+   "line": {
+    "id": "A1",
+    "text": "Authorization Boost increases acceptance rates by 3.8% on average",
+    "product": "Payments"
+   },
+   "why": "Stefan's own headline was money left on the table, and he says approvals, not authorization.",
+   "quote": "Money left on the table.",
+   "who": "Stefan, head of payments"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 64143,
+  "cost": 0.2025538,
+  "stage_ms": {
+   "reader": 29348,
+   "analyst": 34795
+  },
+  "stage_cost": {
+   "reader": 0.0479498,
+   "analyst": 0.154604
+  }
+ }
+}

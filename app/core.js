@@ -6,7 +6,7 @@
 (function (root) {
   "use strict";
 
-  const PIPELINE_VERSION = "2026-11-14.8";
+  const PIPELINE_VERSION = "2026-11-14.9";
 
   // ── Which model runs each stage (set from the model comparison; see eval/REPORT.md)
   const STAGE_MODELS = {
@@ -40,6 +40,20 @@
     ["language", "Customer language", "What exact words did they use for their problem?"],
   ];
   const SECTION_KEYS = SECTIONS.map((s) => s[0]);
+
+  // ── Products a deal can be about. PROVISIONAL: public product names matched to the
+  // messaging baseline; replace with the team's real product / solution list.
+  const PRODUCTS = [
+    ["Payments", "Online payments: checkout, approvals and authorization rates, declines, payment methods, acquiring"],
+    ["Terminal", "In-person payments: card readers, point of sale, stores, unified online and in-store commerce"],
+    ["Billing", "Subscriptions and recurring billing: pricing changes, invoicing, failed renewals and retries"],
+    ["Connect", "Platforms and marketplaces: onboarding sellers or providers, identity checks, payouts to them"],
+    ["Revenue and Finance Automation", "Reconciliation, revenue reporting, closing the books, matching deposits"],
+    ["Radar", "Fraud and bot protection"],
+    ["Support plans", "Premium or enterprise support: named managers, response times, on-call coverage"],
+  ];
+  const PRODUCT_NAMES = PRODUCTS.map((x) => x[0]);
+  const PILLAR_PRODUCT = { Approvals: "Payments", "Stores and online": "Terminal", Finance: "Revenue and Finance Automation", Billing: "Billing", Marketplaces: "Connect", Support: "Support plans" };
 
   // ── Our messaging: the baseline in messaging-baseline.md (Stripe's public pages, 13 Nov 2026).
   // Insights are written against these lines.
@@ -372,6 +386,7 @@ Write:
 - acv: the deal's annual contract value, ONLY if the rep or customer states it: {"amount": number in US dollars per year, "quote": the exact words that state it}. Not product prices, fees, savings, value estimates or a competitor's price. Never estimate. Else null.
 - outcome: exactly "Won", "Lost" or "No decision". Decide from the evidence, not the rep's framing. If nobody actually chose a competitor and the deal stalled or was frozen, it is "No decision". If only part of the business moved, pick the outcome for the part that was decided and say so in the reason.
 - competitor: who we were up against, "None (status quo)" if no one, or null if unknown.
+- products: which of our products this deal was about, main one first, at most 3, chosen from the list below. Only products the conversation actually shows being sold or evaluated. Empty list if it isn't clear.
 - tag: exactly one reason tag from the list. The outcome gives the direction: on a win, the tag is why they picked us. There is no price tag on purpose: when the rep blames price, find what was really behind it. To choose between close tags, ask what the decider was comparing when it was decided. If the interview never got to the reason, use "Not established".
 - reason: why the deal was really won or lost, in one or two short sentences, at most 35 words in total, in plain words. If the AE's own explanation is different from what really happened, say so in a few words.
 - insights: one for each of these, in this order:
@@ -395,6 +410,9 @@ ${INSIGHTS.map(([k, n, d]) => `  - ${k} (${n}): ${d}`).join("\n")}
 Reason tags:
 ${tagsBlock()}
 
+Our products:
+${PRODUCTS.map(([n, d]) => `- ${n}: ${d}`).join("\n")}
+
 Our current messaging (ids for the "line" field):
 ${libraryBlock()}
 
@@ -415,7 +433,7 @@ ${JSON.stringify(ledger)}
 JSON safety: inside any string value, write double quotation marks as single quotation marks (') so the JSON stays valid. Quotes still count as word for word.
 
 Reply with ONLY this JSON:
-{"account":"","ae":null,"acv":null,"outcome":"Won|Lost|No decision","competitor":null,"tag":"","reason":"",
+{"account":"","ae":null,"acv":null,"outcome":"Won|Lost|No decision","competitor":null,"products":[""],"tag":"","reason":"",
  "insights":{${INSIGHT_KEYS.map((k) => `"${k}":{"covered":true,"action":"","line":null,"why":"","quote":"","who":""}`).join(",")}}}`;
   }
 
@@ -529,7 +547,7 @@ Reply with ONLY this JSON:
       const ok = f.covered !== false && text && f.quote && verbatim(f.quote);
       if (f.covered !== false && text && !ok) dropped.push(Object.assign({ key: k }, f));
       const lib = MESSAGING.find((m) => m.id === f.line);
-      findings.push(ok ? { key: k, label, covered: true, finding: uq(String(text), k), line: lib ? { id: lib.id, text: lib.line } : null,
+      findings.push(ok ? { key: k, label, covered: true, finding: uq(String(text), k), line: lib ? { id: lib.id, text: lib.line, product: PILLAR_PRODUCT[lib.pillar] || null } : null,
         why: f.why ? uq(String(f.why), k) : null, quote: String(f.quote), who: f.who || null } : { key: k, label, covered: false });
     }
     const header = {
@@ -538,6 +556,7 @@ Reply with ONLY this JSON:
       acv,
       outcome: ["Won", "Lost", "No decision"].includes(r.outcome) ? r.outcome : "No decision",
       competitor: r.competitor && !/^(unnamed|unknown|not named|not stated|n\/a)\b/i.test(String(r.competitor).trim()) ? r.competitor : null,
+      products: [...new Set((Array.isArray(r.products) ? r.products : []).map((x) => PRODUCT_NAMES.find((n) => n.toLowerCase() === String(x).trim().toLowerCase())).filter(Boolean))].slice(0, 3),
       tag: TAG_NAMES.includes(r.tag) ? r.tag : "Not established",
       reason: uq(String(r.reason || ""), "reason"),
     };
@@ -704,14 +723,14 @@ Reply with ONLY this JSON:
     const h = report.header || {};
     return Object.assign({
       deal: h.deal || "", acv: h.acv ? h.acv.amount : null, outcome: h.outcome || null, tag: h.tag || null,
-      competitor: h.competitor || null, reason: String(h.reason || "").slice(0, 900),
+      competitor: h.competitor || null, products: h.products || [], reason: String(h.reason || "").slice(0, 900),
       lines: [...new Set((report.findings || []).map((f) => f.line && f.line.id).filter(Boolean))], // our messaging lines this deal challenges
       version: report.version || PIPELINE_VERSION,
     }, extra || {});
   }
 
   const api = {
-    PIPELINE_VERSION, STAGE_MODELS, INSIGHTS, TAGS, TAG_NAMES, SECTIONS, SECTION_KEYS, MESSAGING,
+    PIPELINE_VERSION, STAGE_MODELS, INSIGHTS, PRODUCTS, PRODUCT_NAMES, TAGS, TAG_NAMES, SECTIONS, SECTION_KEYS, MESSAGING,
     parseTranscript, guessRoles, renderTranscript, makeVerifier, norm,
     readerPrompt, reviewPrompt, assembleReview, runPipeline, toCard, parseModelJSON,
     analystPrompt, strategistPrompt, singlePrompt, assemble, // earlier long-form report (kept for the eval history)

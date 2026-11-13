@@ -3,6 +3,7 @@
 **Input:** `01-tallowfield-supply.vtt` (Zoom). AE: **Dana**. Line ids refer to `messaging-baseline.md` (see the README).
 
 ## Header
+- **Products:** Payments + Revenue and Finance Automation (also acceptable: Terminal, for the branch counters)
 - **Account:** Tallowfield Supply · **ACV:** $140,000/year
 - **Outcome:** Won · **Competitor:** Fiserv (incumbent, through their bank)
 - **Reason tag:** Value proof

@@ -3,6 +3,7 @@
 **Input:** `07-fernbrook-garden-supply.txt` (plain text). AE: **Sam**. Line ids refer to `messaging-baseline.md`.
 
 ## Header
+- **Products:** Payments
 - **Account:** Fernbrook Garden Supply · **ACV:** $95,000/year (not the $4,000 greenhouse, not a two-year total)
 - **Outcome:** Lost · **Competitor:** Fiserv (incumbent, through their bank)
 - **Reason tag:** Value proof (acceptable: Champion or access)

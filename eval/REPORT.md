@@ -95,6 +95,10 @@ Each of the six areas now asks for one action for the product marketing team (a 
 
 The answer keys were rewritten to match what the page shows: header (account, ACV, outcome, tag, real reason) plus one expected messaging change per insight area, tied to lines in `messaging-baseline.md`. Because a report gives one action per area and a key often lists several acceptable changes, matching any one counts. The same round-16 reports scored 11.6/13 if every listed change was required and 12.4/13 under the any-one rule, so about 0.8 of the gain is the fairer rule. Round 17 also told the review to say when an answer came from elsewhere in the call because the question was skipped: **12.8/13, header 7/7 on every deal, no invented content flagged.**
 
+## Rounds 18-19: products
+
+Each review now names the products the deal was about (main one first), from a provisional product list matched to the messaging baseline, so a PMM can filter to their own product. Round 18 inferred products from context: main product right on all 8 deals. Round 19 added a "what were we selling them?" exchange to each mock interview (as real reviews should ask): **13.3/14, products 8/8, header 7/7 on every deal, no invented content flagged.**
+
 ## Why several steps instead of one prompt
 
 The single-prompt Sonnet baseline is strong: 21.0, no invented content, half the time, a quarter of the cost. On score alone the multi-step design wins by about 1 point, which is close to the judge's own noise: the same setup scored anywhere from 18 to 24 on one deal across runs. The steps are kept for reasons the score doesn't capture:

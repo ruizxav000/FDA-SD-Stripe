@@ -8,7 +8,7 @@ The originals are in [`../deal-reviews/`](../deal-reviews/). This folder holds t
 
 ## What's different from the originals
 
-Every interview includes a deal-size exchange ("Before that, how big was the deal?"), so ACV extraction is tested on all eight. Fernbrook also mentions a $4,000 greenhouse, a product price the review must not mistake for ACV.
+Every interview includes a deal-size exchange ("Before that, how big was the deal?") and a product exchange ("And what were we selling them?"), so ACV and product extraction are tested on all eight. Fernbrook also mentions a $4,000 greenhouse, a product price the review must not mistake for ACV.
 
 
 - **Headers removed.** Outcome, competitor and incumbent were stated at the top of each original. Real Zoom and Teams files don't include them, and the synthesizer has to work them out. Those answers now live in the answer keys.
@@ -47,12 +47,13 @@ Each key matches the report the page shows: a header, then one expected **messag
 | Item | Points |
 |---|---|
 | Account | 1 |
+| Products (main product right) | 1 |
 | ACV | 1 |
 | Outcome | 1 |
 | Reason tag (the key's tag 2, its acceptable alternative 1) | 2 |
 | Real reason (not the AE's framing where they differ) | 2 |
 | Six insights: 1 each when the messaging change points the same way as one of the key's expected changes for that area (the key often lists several; any one counts), 0.5 when partly | 6 |
-| **Total** | **13** |
+| **Total** | **14** |
 
 Also checked: **must catch** items, **fails if** conditions, whether every insight is a messaging change (not sales process), readability for someone skimming the feed, and whether two insights repeat each other.
 
@@ -61,7 +62,7 @@ Also checked: **must catch** items, **fails if** conditions, whether every insig
 **Suggested bar before piloting with the team:**
 - No **fails if** triggered and no invented content.
 - All **must catch** items pass.
-- 11 or more out of 13 on average.
+- 12 or more out of 14 on average.
 - Repeat runs give the same outcome and reason tag.
 
 ## Limits
