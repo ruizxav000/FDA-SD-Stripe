@@ -259,7 +259,7 @@ select.field{padding-right:28px}
     <span class="brand">Deal Reviews<span>.</span></span>
     <nav class="tabs" aria-label="Pages">
       <a class="tab" href="#submit">Submit</a>
-      <a class="tab" href="#feed">Feed<span class="count" id="feed-count"></span></a>
+      <a class="tab" href="#feed">Feed</a>
       <a class="tab" href="#dashboard">Dashboard</a>
     </nav>
   </div>
@@ -681,7 +681,6 @@ async function renderFeed() {
   fillSelect($("f-tag"), cards.map((c) => c.tag), "All reasons");
   const shown = cards.filter(matches);
   await resolveNames(shown.map((c) => c.authorId));
-  $("feed-count").textContent = feed.real.length ? String(feed.real.length) : "";
   const list = $("feed-list");
   if (!shown.length) {
     list.replaceChildren(h("div", { class: "glass box empty" },
