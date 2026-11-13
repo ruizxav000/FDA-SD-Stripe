@@ -179,6 +179,9 @@ select.field{padding-right:28px}
 .step .t{font-variant-numeric:tabular-nums;font-size:12px;color:var(--mute)}
 .step small{display:block;font-size:11.5px;color:var(--mute)}
 @keyframes pulse{50%{opacity:.35}}
+.tracker{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink);font-variant-numeric:tabular-nums}
+.tracker i{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 1.2s ease-in-out infinite}
+.tracker.done i{background:var(--c3);animation:none}
 
 /* ---------- report ---------- */
 .report{display:flex;flex-direction:column;gap:12px}
@@ -287,18 +290,14 @@ select.field{padding-right:28px}
         </div>
         <div class="btns" style="justify-content:space-between">
           <div class="toggle-row" style="gap:10px"><button type="button" class="switch" id="post-switch" role="switch" aria-checked="true" aria-label="Post to the team feed"></button><span class="text">Post to the team feed</span></div>
-          <div class="btns"><span class="text" id="run-hint"></span>
+          <div class="btns"><span class="tracker" id="run-tracker" hidden><i></i><span id="run-tracker-text"></span></span><span class="text" id="run-hint"></span>
             <button type="button" class="btn ghost" id="stop" hidden>Stop</button>
             <button class="btn" id="run" type="submit">Run the review</button></div>
         </div>
       </form>
 
-      <div class="glass box" id="progress" hidden>
-        <div class="box-head"><p class="title" id="progress-title">Reviewing</p><span class="text" id="progress-time"></span></div>
-        <ol class="steps" id="steps"></ol>
-        <p class="note err" id="run-error" hidden></p>
-        <div class="btns" id="retry-row" hidden><button type="button" class="btn small" id="retry">Retry from this step</button><span class="text" id="retry-hint"></span></div>
-      </div>
+      <p class="note err" id="run-error" hidden></p>
+      <div class="btns" id="retry-row" hidden><button type="button" class="btn small" id="retry">Retry from this step</button><span class="text" id="retry-hint"></span></div>
 
       <div id="result" class="report" hidden></div>
     </main>
@@ -530,10 +529,11 @@ function updateRunState() {
   const missing = !sub.parsed ? "Add a transcript to start." : !caps.sample ? "Open this page in Claude to run reviews." : "";
   $("run").disabled = !!missing || !!sub.running;
   $("run-hint").textContent = sub.running ? "" : missing;
+  if (missing) $("run-tracker").hidden = true;
 }
 ready.then(updateRunState);
 
-const STAGES = [["reader", "Reading the whole conversation"], ["analyst", "Working out what decided the deal"], ["checks", "Checking every quote against the transcript"]];
+const STAGES = [["reader", "Reading the conversation"], ["analyst", "Finding what decided the deal"], ["checks", "Checking quotes"]];
 const ERR = {
   not_granted: "Claude access wasn't allowed for this page, so the review can't run. You can allow it from the page's permissions.",
   sampling_disabled: "Claude isn't available on your account here.",
@@ -555,23 +555,17 @@ async function startRun() {
   const ctl = new AbortController();
   sub.running = ctl; updateRunState();
   $("stop").hidden = false; $("stop").onclick = () => ctl.abort();
-  $("result").hidden = true; $("run-error").hidden = true; $("progress").hidden = false;
-  $("progress-title").textContent = "Reviewing the interview";
-  const t0 = Date.now(), times = {}; let cur = null;
-  if (sub.state.ledger) times.reader = { kept: true };
-  if (sub.state.review) times.analyst = { kept: true };
+  $("result").hidden = true; $("run-error").hidden = true;
+  const t0 = Date.now(); let cur = null;
+  const tracker = $("run-tracker");
+  tracker.classList.remove("done"); tracker.hidden = false;
   const draw = () => {
-    $("steps").replaceChildren(...STAGES.map(([k, label]) => {
-      const t = times[k];
-      const st = t && (t.end || t.kept) ? "done" : cur === k ? "active" : "";
-      const m = DR.STAGE_MODELS[k];
-      const secs = t ? (t.kept ? "kept" : Math.round(((t.end || Date.now()) - t.start) / 1000) + "s") : "";
-      return h("li", { class: "step " + st }, h("span", { class: "dot" }), h("span", {}, label, h("small", { text: m ? MODEL_NAME(m.model) : "Code" })), h("span", { class: "t", text: secs }));
-    }));
-    $("progress-time").textContent = Math.round((Date.now() - t0) / 1000) + "s";
+    const label = (STAGES.find(([k]) => k === cur) || [, "Starting"])[1];
+    $("run-tracker-text").textContent = `${label} · ${Math.round((Date.now() - t0) / 1000)}s`;
   };
+  draw();
   const tick = setInterval(draw, 1000);
-  const onStage = (k) => { if (cur && times[cur]) times[cur].end = Date.now(); cur = k; times[k] = { start: Date.now() }; draw(); };
+  const onStage = (k) => { cur = k; draw(); };
   // Plain-text call + our own tolerant JSON parser (repairs the occasional malformed reply).
   const call = async (stage, prompt, m) => {
     const { text } = await caps.sample(prompt, {
@@ -585,17 +579,17 @@ async function startRun() {
   try {
     const report = await DR.runPipeline({ parsed: sub.parsed, roles: sub.roles, call, onStage, state: sub.state });
     sub.state = null;
-    times.checks.end = Date.now(); cur = null; draw();
     report.rep = (sub.roles.ae && !/^(Speaker \d+|Unknown|AE|Rep)$/i.test(sub.roles.ae) ? sub.roles.ae : report.header.ae) || null;
     report.authorId = me.id; report.createdAt = new Date().toISOString();
     let posted = null;
     if ($("post-switch").getAttribute("aria-checked") === "true") posted = await postReview(report);
-    $("progress-title").textContent = "Review finished";
-    showResult(report, posted);
+    tracker.classList.add("done");
+    $("run-tracker-text").textContent = `Done in ${Math.round((Date.now() - t0) / 1000)}s` + (posted === true ? " · posted" : posted ? "" : " · not posted");
+    if (posted && posted !== true) { $("run-error").textContent = posted; $("run-error").hidden = false; }
+    showResult(report);
   } catch (err) {
-    cur = null; draw();
     const code = err && err.code;
-    $("progress-title").textContent = code === "cancelled" ? "Review stopped" : "Review didn't finish";
+    tracker.hidden = true;
     if (code !== "cancelled") { $("run-error").textContent = ERR[code] || (err && err.message) || ERR.upstream_error; $("run-error").hidden = false; }
     if (["invalid_json", "bad_stage", "upstream_error", "empty_completion", "cancelled", "rate_limited"].includes(code) && sub.state && sub.state.stage) {
       const step = (STAGES.find(([k]) => k === sub.state.stage) || [, "the failed step"])[1];
@@ -606,12 +600,9 @@ async function startRun() {
     clearInterval(tick); sub.running = null; $("stop").hidden = true; updateRunState();
   }
 }
-function showResult(report, posted) {
+function showResult(report) {
   const box = $("result");
-  const status = posted === true ? h("p", { class: "note", text: "Posted to the team feed." })
-    : posted ? h("p", { class: "note err", text: posted })
-    : h("p", { class: "note", text: "Not posted. Only you can see this report, until you leave the page." });
-  box.replaceChildren(status, renderReport(report, {}));
+  box.replaceChildren(renderReport(report, {}));
   box.hidden = false;
   box.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
 }
