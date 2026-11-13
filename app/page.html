@@ -218,7 +218,9 @@ select.field{padding-right:28px}
 .card-tags .vs{color:var(--ink)}
 .card-tags .meta{color:var(--mute-faint)}
 .card .reason{font-size:13.5px;line-height:1.45;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.card[aria-expanded="true"]{cursor:default}
+.card .detail{overflow:hidden;transition:height .28s ease}
+.card .detail-inner{display:flex;flex-direction:column;gap:4px;padding-top:10px;margin-top:6px;border-top:1px solid var(--hair-faint)}
+.card.open .reason{display:block;-webkit-line-clamp:unset;overflow:visible}
 .empty{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
 
 /* ---------- dashboard ---------- */
@@ -642,14 +644,17 @@ function renderReport(r, opts) {
     h("p", { class: "meta-line", text: [r.rep ? "AE: " + r.rep : null, opts.authorName ? "Reviewed by " + opts.authorName : null, r.createdAt ? fmtDate(r.createdAt) : null, r.editedAt ? "Edited " + fmtDate(r.editedAt) : null].filter(Boolean).join(" · ") }));
   wrap.append(head);
 
-  const fs = r.findings || [];
-  const findings = h("div", { class: "glass box" }, h("p", { class: "title", text: "Insights" }));
-  findings.append(h("div", { class: "findings" }, ...fs.map((f) => h("div", { class: "fi" + (f.covered === false ? " nc" : "") },
-    h("span", { class: "k", text: f.label || "" }),
-    f.covered === false ? h("span", { class: "f", text: "Not covered in the interview." })
-      : h("span", { class: "f" }, f.finding, f.quote ? h("span", { class: "q" }, h("span", { class: "end", text: f.quote }), f.who ? " — " + f.who : "") : null)))));
+  const findings = h("div", { class: "glass box" }, h("p", { class: "title", text: "Insights" }), insightRows(r));
   wrap.append(findings);
   return wrap;
+}
+
+function insightRows(r) {
+  const fs = r.findings || [];
+  return h("div", { class: "findings" }, ...fs.map((f) => h("div", { class: "fi" + (f.covered === false ? " nc" : "") },
+    h("span", { class: "k", text: f.label || "" }),
+    f.covered === false ? h("span", { class: "f", text: "Not covered in the interview." })
+      : h("span", { class: "f" }, f.finding, f.quote ? h("span", { class: "q" }, h("span", { class: "end", text: f.quote }), f.who ? " — " + f.who : "") : null))));
 }
 
 /* ════════════════════ FEED ════════════════════ */
@@ -699,32 +704,56 @@ async function renderFeed() {
 }
 function cardEl(c) {
   const key = c.uid + "/" + c.rid;
-  const open = feed.open.has(key);
   const author = c.example ? "" : feed.names[c.authorId] || "";
-  const el = h("article", { class: "glass box card", "aria-expanded": String(open), tabindex: "0" },
+  const reason = c.reason ? h("p", { class: "reason", text: c.reason }) : null;
+  const detail = h("div", { class: "detail", hidden: true });
+  const el = h("article", { class: "glass box card", "aria-expanded": "false", tabindex: "0" },
     h("p", { class: "title", text: c.deal || "Unnamed deal" }),
     h("div", { class: "card-tags" }, outcomeEl(c.outcome), h("span", { class: "acv" }, "ACV ", h("b", { text: fmtACV(c.acv) })), h("span", {}, "Reason ", h("b", { text: c.tag || "—" })),
       c.competitor ? h("span", { class: "vs", text: "vs " + c.competitor }) : null, c.rep ? h("span", { class: "meta", text: "AE: " + c.rep }) : null,
       author ? h("span", { class: "meta", text: "by " + author }) : null, c.createdAt ? h("span", { class: "meta", text: fmtDate(c.createdAt) }) : null),
-    !open && c.reason ? h("p", { class: "reason", text: c.reason }) : null);
-  const detail = h("div", { hidden: !open });
-  el.append(detail);
-  const toggle = async () => {
-    if (feed.open.has(key)) { feed.open.delete(key); renderFeed(); return; }
-    feed.open.add(key); renderFeed();
+    reason, detail);
+  let busy = false;
+  const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Animate height between two values, then hand control back to the layout.
+  const animate = (from, to, done) => {
+    if (reduced()) { done(); return; }
+    detail.style.height = from + "px";
+    detail.getBoundingClientRect();
+    detail.style.height = to + "px";
+    const end = (e) => { if (e && e.target !== detail) return; detail.removeEventListener("transitionend", end); clearTimeout(t); done(); };
+    const t = setTimeout(end, 400);
+    detail.addEventListener("transitionend", end);
   };
-  el.addEventListener("click", (e) => { if (e.target.closest("button,a,input,select,textarea,.report")) return; toggle(); });
+  const open = async (instant) => {
+    if (!detail.childElementCount) await fillDetail(c, detail);
+    feed.open.add(key); el.setAttribute("aria-expanded", "true"); el.classList.add("open");
+    detail.hidden = false;
+    if (instant) return;
+    animate(0, detail.scrollHeight, () => { detail.style.height = ""; });
+  };
+  const close = () => {
+    feed.open.delete(key); el.setAttribute("aria-expanded", "false"); el.classList.remove("open");
+    animate(detail.scrollHeight, 0, () => { detail.hidden = true; detail.style.height = ""; });
+  };
+  const toggle = async () => {
+    if (busy) return; busy = true;
+    try { if (feed.open.has(key)) close(); else await open(false); } finally { setTimeout(() => { busy = false; }, 300); }
+  };
+  el.addEventListener("click", (e) => { if (e.target.closest("button,a,input,select,textarea,.detail")) return; toggle(); });
   el.addEventListener("keydown", (e) => { if ((e.key === "Enter" || e.key === " ") && e.target === el) { e.preventDefault(); toggle(); } });
-  if (open) loadDetail(c, detail);
+  if (feed.open.has(key)) open(true); // stays open when the list redraws (filters, new reviews)
   return el;
 }
-async function loadDetail(c, detail) {
-  detail.replaceChildren(h("p", { class: "text", text: "Loading the full report…" }));
+async function fillDetail(c, detail) {
   let report = null;
   if (c.example) report = (window.EXAMPLES[Number(c.rid.slice(2))] || {}).report;
   else if (caps.db) { try { const s = await caps.db.doc(`reviews/${c.uid}/items/${c.rid}`).get(); report = s.exists ? s.data() : null; } catch {} }
   if (!report) { detail.replaceChildren(h("p", { class: "note err", text: "This report couldn't be loaded. It may have been deleted." })); return; }
-  detail.replaceChildren(h("div", { style: "margin-top:10px" }, renderReport(report, { authorName: feed.names[c.authorId] || "" })));
+  const H = report.header || {};
+  detail.replaceChildren(h("div", { class: "detail-inner" },
+    H.acv && H.acv.quote ? h("p", { class: "meta-line", text: "Deal size from the interview: \u201C" + H.acv.quote + "\u201D" }) : null,
+    insightRows(report)));
 }
 document.querySelectorAll("[data-outcome]").forEach((b) => b.addEventListener("click", () => {
   document.querySelectorAll("[data-outcome]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
