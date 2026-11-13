@@ -1,0 +1,55 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"ACV is $210,000 per year, and the close does not list deal size as a gap\",\"pass\":true},\n  {\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},\n  {\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},\n  {\"item\":\"Customer language is marked Not covered\",\"pass\":true},\n  {\"item\":\"'A third of the churn' is labeled unverified or opinion\",\"pass\":true},\n  {\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report gets the essentials right. It scopes the win to online memberships with the front desk still on Global, surfaces the Maya-chose/Greg-decided contradiction, and builds its messaging on own-file value proof. It also correctly marks customer language as not covered. The close is weaker: it wrongly lists the final-call question as dodged when the rep answered it, and the rep takeaway leaves out the key's main point that the front desk is a live, open deal rather than a done one.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "ACV is $210,000 per year, and the close does not list deal size as a gap",
+    "pass": true
+   },
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": true
+   },
+   {
+    "item": "'A third of the churn' is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the essentials right. It scopes the win to online memberships with the front desk still on Global, surfaces the Maya-chose/Greg-decided contradiction, and builds its messaging on own-file value proof. It also correctly marks customer language as not covered. The close is weaker: it wrongly lists the final-call question as dodged when the rep answered it, and the rep takeaway leaves out the key's main point that the front desk is a live, open deal rather than a done one."
+ },
+ "ms": 29161,
+ "cost": 0.131712,
+ "in_tokens": 9545,
+ "out_tokens": 2768,
+ "model": "claude-opus-5-5"
+}

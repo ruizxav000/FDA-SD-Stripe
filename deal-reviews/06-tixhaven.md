@@ -12,7 +12,7 @@
 
 ---
 
-**PMM:** Thanks, Jordan. Seven questions, same as always. What happened at the customer that started this evaluation?
+**PMM:** Thanks, Jordan. This is the Tixhaven review. Seven questions, same as always. What happened at the customer that started this evaluation?
 
 **Jordan:** An on-sale. Big arena tour, tickets went live at 10am on a Friday, and payments started failing about four minutes in. Their provider's support was a ticket form. They got a reply after the on-sale was over. The CEO was getting screenshots on social. So Monday morning the COO, Halima, says they're replacing payments before the spring on-sales.
 

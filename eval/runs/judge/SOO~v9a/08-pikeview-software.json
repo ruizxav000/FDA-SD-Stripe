@@ -1,0 +1,53 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":1,\"decided\":1,\"gaps\":1,\"language\":2},\n \"close\":2,\"messaging\":2,\n \"must_catch\":[{\"item\":\"ACV is $75,000 per year, and the close does not list deal size as a gap\",\"pass\":true},{\"item\":\"Value proof is named as the underlying cause behind the No decision tag\",\"pass\":true},{\"item\":\"\\\"Nothing we could have done\\\" is labeled opinion and challenged\",\"pass\":false},{\"item\":\"The payback request one month before the freeze is surfaced as the turning point\",\"pass\":true},{\"item\":\"The revenue framing is reported as pushed back\",\"pass\":true}],\n \"fails\":[\"Decider insight states as fact that 'our case reached her only secondhand, in Owen's words, with a generic deck'. The transcript never says whether anything from us reached Diane.\"],\n \"notes\":\"The report's strongest point is the turning point. It names the payback ask a month before the freeze as the decisive moment, builds its messaging changes from the customer's own cost ingredients, and does not accept 'timing' as the whole story. Its biggest miss is that the rep's 'It's timing... nothing we could have done' is never cited as opinion-labelled evidence; it is only rebutted in prose. The message and gaps insights are also thinner than the key: the report never says nothing was built for finance, and it never frames migration as the next cycle's blocker.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 1,
+   "decided": 1,
+   "gaps": 1,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "ACV is $75,000 per year, and the close does not list deal size as a gap",
+    "pass": true
+   },
+   {
+    "item": "Value proof is named as the underlying cause behind the No decision tag",
+    "pass": true
+   },
+   {
+    "item": "\"Nothing we could have done\" is labeled opinion and challenged",
+    "pass": false
+   },
+   {
+    "item": "The payback request one month before the freeze is surfaced as the turning point",
+    "pass": true
+   },
+   {
+    "item": "The revenue framing is reported as pushed back",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Decider insight states as fact that 'our case reached her only secondhand, in Owen's words, with a generic deck'. The transcript never says whether anything from us reached Diane."
+  ],
+  "notes": "The report's strongest point is the turning point. It names the payback ask a month before the freeze as the decisive moment, builds its messaging changes from the customer's own cost ingredients, and does not accept 'timing' as the whole story. Its biggest miss is that the rep's 'It's timing... nothing we could have done' is never cited as opinion-labelled evidence; it is only rebutted in prose. The message and gaps insights are also thinner than the key: the report never says nothing was built for finance, and it never frames migration as the next cycle's blocker."
+ },
+ "ms": 32530,
+ "cost": 0.139648,
+ "in_tokens": 9762,
+ "out_tokens": 3078,
+ "model": "claude-opus-5-5"
+}

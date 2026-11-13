@@ -12,7 +12,7 @@
 
 ---
 
-**PMM:** Appreciate you doing this the week after close. I'll go through the same questions I ask everyone. What happened at the customer that started this evaluation?
+**PMM:** Appreciate you doing this the week after close. This is the Corelane Fitness review. I'll go through the same questions I ask everyone. What happened at the customer that started this evaluation?
 
 **Marcus:** Churn. They report member churn to the board every quarter, it had ticked up two quarters running, and somebody finally split it into people who cancelled and people whose card just failed. The second bucket was a lot bigger than anyone expected. Maya, she's head of digital, called them "members who never meant to leave." Which, great line.
 

@@ -12,7 +12,7 @@
 
 ---
 
-**PMM:** Thanks, Sam. Same questions I ask on every review. What happened at the customer that started this evaluation?
+**PMM:** Thanks, Sam. This is the Fernbrook Garden Supply review. Same questions I ask on every review. What happened at the customer that started this evaluation?
 
 **Sam:** Their ecommerce director, Lucy, came inbound. Orders failing at checkout. She said about one in twelve online orders was failing at the payment step, and it was worse on the big baskets. The greenhouses, the ride-on mowers. Customers would call in annoyed, or just not come back. And she couldn't get a straight answer from the processor on why.
 
