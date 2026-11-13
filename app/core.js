@@ -171,7 +171,14 @@
     }
     const interviewer = Object.keys(qHits).sort((a, b) => qHits[b] - qHits[a])[0] || null;
     const ae = parsed.speakers.find((s) => s !== interviewer) || parsed.speakers[0] || null;
-    return { ae, interviewer };
+    // Sure enough to skip asking: someone clearly asks the standard questions, and either
+    // only two people speak or the AE talks far more than anyone else besides the interviewer.
+    const words = {};
+    for (const t of parsed.turns) words[t.speaker] = (words[t.speaker] || 0) + t.text.split(/\s+/).length;
+    const others = parsed.speakers.filter((s) => s !== interviewer && s !== ae);
+    const runnerUp = Math.max(0, ...others.map((s) => words[s] || 0));
+    const confident = !!interviewer && (qHits[interviewer] || 0) >= 2 && (others.length === 0 || (words[ae] || 0) >= 3 * runnerUp);
+    return { ae, interviewer, confident };
   }
 
   function renderTranscript(turns, roles) {

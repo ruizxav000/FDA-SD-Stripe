@@ -280,8 +280,8 @@ select.field{padding-right:28px}
           </details>
           <div id="parsed" hidden style="display:flex;flex-direction:column;gap:10px">
             <div class="file-line"><b id="parsed-name"></b><span class="text" id="parsed-stats"></span><button type="button" class="linkish" id="clear-file">Remove</button></div>
-            <div class="form-item"><span class="label" id="ae-label">Which speaker is the AE?</span><div class="speakers" id="ae-pick" role="radiogroup" aria-labelledby="ae-label"></div>
-              <span class="hint">We guessed from who talks most and who asks the questions. Change it if that's wrong.</span></div>
+            <div class="form-item" id="ae-row" hidden><span class="label" id="ae-label">Which speaker is the AE?</span><div class="speakers" id="ae-pick" role="radiogroup" aria-labelledby="ae-label"></div>
+              <span class="hint">We couldn't tell from the transcript who the AE is.</span></div>
           </div>
           <p class="note err" id="file-error" hidden></p>
         </div>
@@ -491,6 +491,7 @@ function loadText(text, name) {
   $("parsed").hidden = false; $("drop").hidden = true; $("paste-wrap").hidden = true;
   $("parsed-name").textContent = name;
   $("parsed-stats").textContent = `${parsed.turns.length} turns · ${parsed.words.toLocaleString()} words · ${parsed.speakers.length} speakers`;
+  $("ae-row").hidden = sub.roles.confident;   // only ask when the transcript leaves it unclear
   renderSpeakers();
   updateRunState();
 }
