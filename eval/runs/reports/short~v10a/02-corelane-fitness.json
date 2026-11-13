@@ -1,0 +1,63 @@
+{
+ "version": "2026-11-14.1",
+ "header": {
+  "deal": "Corelane Fitness",
+  "ae": null,
+  "acv": {
+   "amount": 210000,
+   "quote": "Two hundred and ten K ACV."
+  },
+  "outcome": "Won",
+  "competitor": "Global Payments",
+  "tag": "Value proof",
+  "reason": "We won the online membership billing only. The contract sat unsigned with Greg, the controller, for two weeks and was signed four days after our engineer showed which of their own failed renewals could be recovered. The rep first credited Maya, head of digital, but Greg's signature is what moved it. The front desks are still with the incumbent Global Payments, and phase two has no date."
+ },
+ "findings": [
+  {
+   "finding": "The deal turned when we showed recoverable failed renewals in the customer's own export instead of our averages, so lead with a data session on their file for any finance approver.",
+   "quote": "Their file, not our average.",
+   "who": "Rep"
+  },
+  {
+   "finding": "The rep named the wrong decider at first: the head of digital chose us, but the controller decided whether anyone got chosen, so reps need to find and win over the money holder early.",
+   "quote": "Maya chose us. Greg decided whether anybody got chosen.",
+   "who": "Rep"
+  },
+  {
+   "finding": "We couldn't show our reader working live inside their studio software, so the front desks stayed with Global Payments and phase two has no date. We need a real in-their-setup demo for the store side.",
+   "quote": "the studio managers will revolt.",
+   "who": "Maya, head of digital (relayed by rep)"
+  },
+  {
+   "finding": "After the incumbent's counteroffer, which we only know through Maya, the questions moved to readers, contract terms and exit costs. Reps need ready answers on hardware and switching costs.",
+   "quote": "Greg asked about termination fees twice.",
+   "who": "Rep"
+  },
+  {
+   "finding": "Our global slide and the phrase 'unified commerce' landed flat, while the customer described the problem as 'members who never meant to leave', so message in their churn language, not our category terms.",
+   "quote": "is that the readers?",
+   "who": "Maya, head of digital (relayed by rep)"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 63417,
+  "cost": 0.17383550000000003,
+  "stage_ms": {
+   "reader": 46056,
+   "analyst": 17361
+  },
+  "stage_cost": {
+   "reader": 0.07428350000000002,
+   "analyst": 0.099552
+  }
+ }
+}

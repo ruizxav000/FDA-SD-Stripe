@@ -1,0 +1,63 @@
+{
+ "version": "2026-11-14.1",
+ "header": {
+  "deal": "Tallowfield Supply",
+  "ae": "Dana",
+  "acv": {
+   "amount": 140000,
+   "quote": "About a hundred and forty K a year."
+  },
+  "outcome": "Won",
+  "competitor": "Fiserv",
+  "tag": "Value proof",
+  "reason": "The CFO, Ines, signed after our solutions engineer used one month of her statements to show what manual deposit matching cost her finance team in hours and write-offs. Before that meeting the rep had the deal at 20 percent. The portal and checkout pitch did not move her."
+ },
+ "findings": [
+  {
+   "finding": "The deal turned when we priced the cost of manual reconciliation using the customer's own statements and staff costs, so we should offer a data-based cost of doing nothing early in finance-led deals.",
+   "quote": "that's my number, not yours.",
+   "who": "Ines (via Dana)"
+  },
+  {
+   "finding": "We pitched the portal and the APIs to the IT director, but the CFO decided, and she dismissed that proposal, which cost about a month; we need to find the finance buyer and lead with their problem from the first call.",
+   "quote": "she read the first page and said it wasn't her problem.",
+   "who": "Dana"
+  },
+  {
+   "finding": "Our standard first-call deck on infrastructure, global growth and currencies got silence from a three-state distributor, while the buyer talked about deposits and knowing where her money is; finance-led messaging should use her words, not ours.",
+   "quote": "I just want to know where my money is.",
+   "who": "Ines (via Dana)"
+  },
+  {
+   "finding": "We had no distributor or wholesale reference, and a retail case study was rejected out of hand; she signed anyway but raised it twice, so we need a peer story for invoice-based wholesale businesses.",
+   "quote": "this is a company that sells sweaters.",
+   "who": "Ines (via Dana)"
+  },
+  {
+   "finding": "The incumbent bank answered her with a rate offer when her problem was visibility, and she then asked us for a named contact, so against bank-bundled incumbents we should stress a named owner and the reconciliation problem, not price.",
+   "quote": "I didn't ask about my rates.",
+   "who": "Ines (via Dana)"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 50856,
+  "cost": 0.18301,
+  "stage_ms": {
+   "reader": 35300,
+   "analyst": 15556
+  },
+  "stage_cost": {
+   "reader": 0.07501,
+   "analyst": 0.108
+  }
+ }
+}

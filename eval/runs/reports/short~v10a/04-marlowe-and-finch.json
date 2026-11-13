@@ -1,0 +1,63 @@
+{
+ "version": "2026-11-14.1",
+ "header": {
+  "deal": "Marlowe & Finch",
+  "ae": "Tom",
+  "acv": {
+   "amount": 600000,
+   "quote": "We proposed six hundred K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "tag": "In-store and online together",
+  "reason": "Angela, the COO who signed with Adyen, was deciding on the stores: returns at the till, who does the installs, and a credible rollout plan. We described all of that and never showed it. The rep frames it as a win on the web side that Raj (the CTO) backed, but nothing in the transcript shows any business coming to us, and Raj did not make the final call."
+ },
+ "findings": [
+  {
+   "finding": "We sold to the CTO who ran the RFP, while the COO who signed was met only once, so store-led deals need the operations executive engaged early and directly.",
+   "quote": "Once. The kickoff.",
+   "who": "Tom (rep)"
+  },
+  {
+   "finding": "Answering 'who does the installs' with 'a partner' ended store operations' interest, because the COO wanted one accountable vendor; we need a credible rollout story that includes installs, dates and old tills.",
+   "quote": "I don't want two vendors pointing at each other.",
+   "who": "Angela (COO), relayed by Tom"
+  },
+  {
+   "finding": "Store operations asked to see an online order returned at a till, live, and we only described it; that return is the demo for retail deals, and a slide got called 'a diagram'.",
+   "quote": "We described it. We never showed it.",
+   "who": "Tom (rep)"
+  },
+  {
+   "finding": "The customer talked about 'the tills' and one system, while we said 'unified commerce', 'in-person payments' and 'point of sale'; our store messaging should use their plain words.",
+   "quote": "One system for the tills and the website.",
+   "who": "Bev (head of store operations), relayed by Tom"
+  },
+  {
+   "finding": "According to Raj, Adyen brought a retail team and named retailers the COO knew, while we sent a case study and couldn't arrange the reference call she asked for; we need retail references ready to call.",
+   "quote": "we couldn't set up a call in time.",
+   "who": "Tom (rep)"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 66420,
+  "cost": 0.17699900000000002,
+  "stage_ms": {
+   "reader": 50845,
+   "analyst": 15575
+  },
+  "stage_cost": {
+   "reader": 0.079851,
+   "analyst": 0.097148
+  }
+ }
+}

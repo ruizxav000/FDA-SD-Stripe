@@ -1,0 +1,63 @@
+{
+ "version": "2026-11-14.1",
+ "header": {
+  "deal": "Fernbrook Garden Supply",
+  "ae": "Sam",
+  "acv": {
+   "amount": 95000,
+   "quote": "Ninety-five K ACV, on a two-year term."
+  },
+  "outcome": "Lost",
+  "competitor": "Fiserv (through their bank)",
+  "tag": "Value proof",
+  "reason": "The CFO decided from a one-page comparison of our rate against the bank's sharpened rate, and nothing on it showed what one in twelve failed online orders was costing Fernbrook. That left him seeing 'the same thing' at a higher price. The AE blames price, but the evidence shows we never put the value in the customer's own numbers, even though Farah offered to and Lucy asked for it."
+ },
+ "findings": [
+  {
+   "finding": "The final decision was made on a page that compared only rates, with nothing from us on what failing orders cost, so our value case has to reach the finance decider in the customer's own numbers.",
+   "quote": "The controller did a one-pager for Martin. Our rate, their rate, side by side.",
+   "who": "Sam"
+  },
+  {
+   "finding": "Our solutions engineer offered to put a figure on Fernbrook's failed orders, but the AE skipped it to avoid slowing the deal at quarter end. A customer-specific decline analysis should be a standard step before pricing goes to finance, not an optional extra.",
+   "quote": "Farah offered to run their declines. She wanted a three-month export so she could show what the failed orders were worth.",
+   "who": "Sam"
+  },
+  {
+   "finding": "The champion asked for a one-page business case she could hand the CFO and got the generic deck and a pricing proposal instead. We need a ready-made one-page business case template that a champion can carry into the room.",
+   "quote": "Lucy asked once if we had something she could hand Martin. Like a one-page business case.",
+   "who": "Sam"
+  },
+  {
+   "finding": "We never reached the CFO who decided, and the champion's sense that approval was 'a formality' proved wrong. When the decider won't meet us, the material the champion carries has to make the case without us.",
+   "quote": "Lucy said he doesn't take vendor meetings and she'd carry it.",
+   "who": "Sam"
+  },
+  {
+   "finding": "The customer described the problem as lost big-ticket sales, not as decline rates, so our messaging should lead with the money lost on 'the big baskets' rather than average acceptance uplift.",
+   "quote": "we do all the work to get someone to buy a four-thousand-dollar greenhouse and then the card says no.",
+   "who": "Lucy (relayed by Sam)"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 54896,
+  "cost": 0.1736957,
+  "stage_ms": {
+   "reader": 37180,
+   "analyst": 17716
+  },
+  "stage_cost": {
+   "reader": 0.0596757,
+   "analyst": 0.11402
+  }
+ }
+}

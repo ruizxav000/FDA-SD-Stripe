@@ -1,0 +1,63 @@
+{
+ "version": "2026-11-14.1",
+ "header": {
+  "deal": "Tixhaven",
+  "ae": "Jordan",
+  "acv": {
+   "amount": 250000,
+   "quote": "Two hundred and fifty K ACV."
+  },
+  "outcome": "Lost",
+  "competitor": "Unnamed competitor",
+  "tag": "Support and service",
+  "reason": "The COO, Halima, decided alone in one meeting. She chose the competitor because it named the people who would pick up the phone during an on-sale, while we answered with support tiers and response times. Jordan believes we were the better platform and that the load test had won it, but the decider was not comparing platforms: she wanted to know who would help when payments went down."
+ },
+ "findings": [
+  {
+   "finding": "When the decider asked who her person was, we answered with support tiers and she dismissed them, so our answer to 'who' has to be named people and an escalation path, not service levels.",
+   "quote": "so it's a queue with a faster timer.",
+   "who": "Halima (COO), as relayed by Jordan"
+  },
+  {
+   "finding": "According to Ben, the competitor brought the actual account team into the room and promised someone on call for every major on-sale, which turned the customer's questions from throughput to names; the AE thinks they over-promised but admits he doesn't know.",
+   "quote": "A named solutions engineer and an account lead, in the room.",
+   "who": "Ben (CTO), as relayed by Jordan"
+  },
+  {
+   "finding": "Our technical proof won over the CTO but not the COO who decided, so for ticketing buyers we should lead with what happens during an outage, not uptime and load tests.",
+   "quote": "I don't buy uptime, I buy what happens when it's down.",
+   "who": "Halima (COO), as relayed by Jordan"
+  },
+  {
+   "finding": "The decider asked for a written on-sale morning plan and we had none; the AE could have built one with our solutions engineer, so we should make an on-sale playbook a standard asset.",
+   "quote": "I could have built something with our solutions engineer, and I didn't.",
+   "who": "Jordan (AE)"
+  },
+  {
+   "finding": "We had no ticketing reference who could vouch for how we respond on a big on-sale, only logos, so we need reference customers who can speak to who picked up.",
+   "quote": "I had logos. I didn't have a person.",
+   "who": "Jordan (AE)"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 69391,
+  "cost": 0.1789591,
+  "stage_ms": {
+   "reader": 53891,
+   "analyst": 15500
+  },
+  "stage_cost": {
+   "reader": 0.08193910000000001,
+   "analyst": 0.09702
+  }
+ }
+}

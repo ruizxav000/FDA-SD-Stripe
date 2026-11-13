@@ -1,5 +1,24 @@
 # Deal Review Synthesizer — Spec
 
+## The report (current)
+
+Each review has only:
+
+| Field | What it is |
+|---|---|
+| **Account** | The customer's name as said in the interview, or a short description if it's never said. Never invented. Editable after posting. |
+| **ACV** | Annual contract value, only if someone states it in the interview (the words are checked against the transcript). Editable after posting. |
+| **Outcome** | Won, Lost or No decision. |
+| **Reason** | One reason tag (list below), plus one or two plain sentences on why the deal was really won or lost. If the AE's explanation differs from the evidence, it says so. |
+| **Key findings** | The 3–5 most important things the deal teaches us, each one plain sentence with a short supporting quote. A finding whose quote isn't word for word in the transcript is dropped. |
+
+Workflow: Sonnet reads the interview into an evidence list, Opus writes the report, code checks every quote and the ACV. No comments or flags on the page.
+
+---
+
+*Below: the original long-form spec (sections per question, evidence labels, messaging changes, close). Superseded by the short report above; kept for reference.*
+
+
 The decisions made so far, in one place. Nothing here is built yet.
 
 **Purpose:** We aren't building a summary of the call. The synthesizer digs into an AE interview, pulls out the insights, and turns them into **changes to our messaging and positioning**.

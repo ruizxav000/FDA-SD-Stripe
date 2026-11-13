@@ -52,6 +52,22 @@ Every setup quoted 100% of its evidence word for word, because the code check gu
 
 Rounds 4–7 score 21.1–22.5 out of 24 at about 105–120s and $0.32–0.37 per review.
 
+## Round 10: the short report
+
+The report was cut to account, ACV, outcome, reason and 3-5 key findings, and the separate messaging-changes step was removed (Sonnet reads, Opus writes the report, code checks). Graded with a matching rubric (max 11):
+
+| Item | Average |
+|---|---|
+| Account | 1.00 / 1 |
+| ACV | 1.00 / 1 |
+| Outcome | 1.00 / 1 |
+| Reason tag | 2.00 / 2 |
+| Reason (the real one, not the AE's framing) | 2.00 / 2 |
+| Key findings (capture the deal's key insights) | 3.38 / 4 |
+| **Total** | **10.4 / 11** |
+
+One finding was flagged as overstated across the 8 reports. About 50-70 seconds per review.
+
 ## Why several steps instead of one prompt
 
 The single-prompt Sonnet baseline is strong: 21.0, no invented content, half the time, a quarter of the cost. On score alone the multi-step design wins by about 1 point, which is close to the judge's own noise: the same setup scored anywhere from 18 to 24 on one deal across runs. The steps are kept for reasons the score doesn't capture:

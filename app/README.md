@@ -14,13 +14,10 @@ It is published as a claude.ai artifact and runs on each viewer's own Claude acc
 
 | Step | Done by | Job |
 |---|---|---|
-| Read | AI (see `STAGE_MODELS` in `core.js`) | Builds an evidence ledger from the whole transcript: every excerpt copied word for word and labelled quote, fact or opinion, plus contradictions, dodges, skipped questions and the customer's words against ours. |
-| Check ledger | Code | Drops any ledger excerpt that isn't word for word in the transcript, before the analyst sees it. |
-| Analyze | AI | Header (outcome, scope, competitor, incumbent, reason tag), the seven sections with evidence, insight and messaging, and the close. |
-| Plan messaging | AI | Concrete changes against the current messaging library, each tied to evidence and marked "Test this". |
-| Check report | Code | Verifies every evidence excerpt again, checks each change targets a real messaging line, and records the results on the report. |
-
-The steps run in order under plain code, not under an AI "orchestrator". This keeps every review identical in shape, which matters more for standardization than letting a model choose the steps. See `../eval/REPORT.md` for why each step uses the model it does.
+| Read | Sonnet | Builds an evidence list from the whole transcript, every excerpt copied word for word. |
+| Check | Code | Drops any excerpt that isn't word for word in the transcript. |
+| Analyze | Opus | Writes the report: account, ACV, outcome, reason tag and reason, 3-5 key findings with quotes. |
+| Check | Code | Drops any finding whose quote isn't in the transcript, keeps ACV only if its words are, removes quotation marks from paraphrases. |
 
 ## Data
 

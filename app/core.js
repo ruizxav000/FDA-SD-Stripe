@@ -6,13 +6,12 @@
 (function (root) {
   "use strict";
 
-  const PIPELINE_VERSION = "2026-11-13.7";
+  const PIPELINE_VERSION = "2026-11-14.1";
 
   // ── Which model runs each stage (set from the model comparison; see eval/REPORT.md)
   const STAGE_MODELS = {
     reader: { model: "claude-sonnet-5-5", effort: "medium" },
     analyst: { model: "claude-opus-5-5", effort: "medium" },
-    strategist: { model: "claude-opus-5-5", effort: "medium" },
   };
 
   // ── Reason tags (docs/report-spec.md)
@@ -330,6 +329,47 @@ Reply with ONLY this JSON:
  "confidence":"high|medium|low"}`;
   }
 
+  // The report people read: account, ACV, outcome, reason, key findings.
+  function reviewPrompt({ transcript, ledger }) {
+    return `You are the ANALYST in a deal-review pipeline. Turn the interview into a short deal review a product marketer reads in one minute. Don't summarize the call: find what really decided the deal and what it teaches us about how we sell and message.
+
+${CONTEXT}
+
+You get the transcript and an evidence ledger built by a reader (excerpts already checked word for word). Use it, and read the transcript yourself.
+
+Write:
+- account: the customer's company name exactly as said in the transcript. If it is never named, a short plain description of the customer from the transcript, at most 6 words, with no notes or brackets. Never invent a name.
+- ae: the account executive's first name if the transcript gives it, else null.
+- acv: the deal's annual contract value, ONLY if the rep or customer states it: {"amount": number in US dollars per year, "quote": the exact words that state it}. Not product prices, fees, savings, value estimates or a competitor's price. Never estimate. Else null.
+- outcome: exactly "Won", "Lost" or "No decision". Decide from the evidence, not the rep's framing. If nobody actually chose a competitor and the deal stalled or was frozen, it is "No decision". If only part of the business moved, pick the outcome for the part that was decided and say so in the reason.
+- competitor: who we were up against, "None (status quo)" if no one, or null if unknown.
+- tag: exactly one reason tag from the list. The outcome gives the direction: on a win, the tag is why they picked us. There is no price tag on purpose: when the rep blames price, find what was really behind it. To choose between close tags, ask what the decider was comparing when it was decided. If the interview never got to the reason, use "Not established".
+- reason: one or two plain sentences on why the deal was really won or lost. If the rep's own explanation differs from what the evidence shows, say so briefly.
+- findings: the 3 to 5 most important things this deal teaches us, most important first. Each is one plain sentence a marketer can act on (what happened, and what it means for how we sell or message), plus one short supporting quote copied EXACTLY from the transcript, and who said it. When a finding rests only on the rep's opinion or guess, say so in the sentence ("the AE thinks...").
+
+Reason tags:
+${tagsBlock()}
+
+Hard rules:
+- Never invent names, numbers, quotes or outcomes. Never state a competitor's claim as fact unless the customer said it.
+- Use quotation marks only around words copied exactly from the transcript.
+- Do not describe the customer or our product beyond what the transcript says.
+- Quotes come from what the rep (or another participant) said, never from the interviewer's questions.
+- Plain language. No jargon, no labels, no headings inside the text.
+
+TRANSCRIPT
+${transcript}
+END TRANSCRIPT
+
+EVIDENCE LEDGER (JSON)
+${JSON.stringify(ledger)}
+
+JSON safety: inside any string value, write double quotation marks as single quotation marks (') so the JSON stays valid. Quotes still count as word for word.
+
+Reply with ONLY this JSON:
+{"account":"","ae":null,"acv":null,"outcome":"Won|Lost|No decision","competitor":null,"tag":"","reason":"","findings":[{"finding":"","quote":"","who":""}]}`;
+  }
+
   function strategistPrompt({ analysis, ledger }) {
     const pairs = (ledger && ledger.language_pairs) || [];
     return `You are the MESSAGING STRATEGIST in a deal-review pipeline. An analyst has turned a post-deal interview into findings. Your job is the part of the report that matters most: concrete changes to our messaging.
@@ -419,6 +459,40 @@ Reply with ONLY this JSON:
       .replace(/(^|[\s(—–-])[‘']([^’'\n]{3,}?)[’'](?=[\s.,;:!?)—–-]|$)/g, fix);
   }
 
+  function assembleReview({ review, turns, meta }) {
+    const verbatim = makeVerifier(turns);
+    const proseLog = [];
+    const uq = (t, where) => unquoteProse(t, verbatim, where, proseLog);
+    const r = review || {};
+    let acv = null, acvRejected = null;
+    if (r.acv && typeof r.acv === "object") {
+      const amount = Number(String(r.acv.amount).replace(/[^0-9.]/g, ""));
+      if (amount > 0 && r.acv.quote && verbatim(r.acv.quote)) acv = { amount: Math.round(amount), quote: String(r.acv.quote) };
+      else acvRejected = r.acv;
+    }
+    // A finding keeps its place only if its supporting quote is really in the transcript.
+    const findings = [], dropped = [];
+    for (const f of Array.isArray(r.findings) ? r.findings : []) {
+      if (!f || !f.finding) continue;
+      if (f.quote && verbatim(f.quote)) findings.push({ finding: uq(String(f.finding), "finding"), quote: String(f.quote), who: f.who || null });
+      else dropped.push(f);
+    }
+    const header = {
+      deal: (r.account && String(r.account).replace(/\s*\((?:company|customer)[^)]*\)\s*$/i, "").trim()) || "Unnamed deal",
+      ae: r.ae || null,
+      acv,
+      outcome: ["Won", "Lost", "No decision"].includes(r.outcome) ? r.outcome : "No decision",
+      competitor: r.competitor && !/^(unnamed|unknown|not named|not stated|n\/a)\b/i.test(String(r.competitor).trim()) ? r.competitor : null,
+      tag: TAG_NAMES.includes(r.tag) ? r.tag : "Not established",
+      reason: uq(String(r.reason || ""), "reason"),
+    };
+    return {
+      version: PIPELINE_VERSION, header, findings: findings.slice(0, 5),
+      checks: { findings_dropped: dropped, acv_rejected: acvRejected, prose_unquoted: proseLog },
+      meta: meta || {},
+    };
+  }
+
   function assemble({ deal, ledger, analysis, strategy, turns, meta }) {
     const verbatim = makeVerifier(turns);
     const proseLog = [];
@@ -501,8 +575,9 @@ Reply with ONLY this JSON:
   }
 
   // Orchestrator: deterministic code, not a model. Reader -> Analyst -> Strategist -> checks.
-  // `state` (optional) keeps finished steps, so a failed run can resume from the step that failed.
-  async function runPipeline({ deal, parsed, roles, call, models, onStage, state }) {
+  // Reader -> Analyst -> code checks. `state` (optional) keeps finished steps, so a
+  // failed run can resume from the step that failed.
+  async function runPipeline({ parsed, roles, call, models, onStage, state }) {
     const M = Object.assign({}, STAGE_MODELS, models || {});
     const S = state || {};
     const transcript = renderTranscript(parsed.turns, roles);
@@ -514,29 +589,19 @@ Reply with ONLY this JSON:
       stage("reader");
       const ledger = await call("reader", readerPrompt({ transcript }), M.reader);
       if (!ledger || !Array.isArray(ledger.evidence)) throw fail("reader", "Reader returned no evidence");
-      // Drop ledger items that are not verbatim before the analyst sees them.
       const verbatim = makeVerifier(parsed.turns);
-      S.ledgerItems = ledger.evidence.length;
       ledger.evidence = ledger.evidence.filter((e) => verbatim(e.excerpt));
       S.ledger = ledger;
     }
-    if (!S.analysis) {
+    if (!S.review) {
       stage("analyst");
-      const analysis = await call("analyst", analystPrompt({ transcript, ledger: S.ledger }), M.analyst);
-      if (!analysis || !analysis.sections) throw fail("analyst", "Analyst returned no sections");
-      S.analysis = analysis;
-    }
-    if (!S.strategy) {
-      stage("strategist");
-      const strategy = await call("strategist", strategistPrompt({ analysis: S.analysis, ledger: S.ledger }), M.strategist);
-      if (!strategy || !Array.isArray(strategy.changes)) throw fail("strategist", "Strategist returned no changes list");
-      S.strategy = strategy;
+      const review = await call("analyst", reviewPrompt({ transcript, ledger: S.ledger }), M.analyst);
+      if (!review || !Array.isArray(review.findings)) throw fail("analyst", "Analyst returned no findings");
+      S.review = review;
     }
     stage("checks");
-    return assemble({
-      deal, ledger: S.ledger, analysis: S.analysis, strategy: S.strategy, turns: parsed.turns,
-      meta: { models: { reader: M.reader.model, analyst: M.analyst.model, strategist: M.strategist.model }, ms: Date.now() - t0, ledger_items: S.ledgerItems, ledger_dropped: S.ledgerItems - S.ledger.evidence.length },
-    });
+    return assembleReview({ review: S.review, turns: parsed.turns,
+      meta: { models: { reader: M.reader.model, analyst: M.analyst.model }, ms: Date.now() - t0 } });
   }
 
   // Tolerant JSON for model replies: whole text, a fenced block, or first {/[ to last }/].
@@ -582,15 +647,9 @@ Reply with ONLY this JSON:
   // The small summary that rides in the feed index (reviews/<uid>.cards[rid]).
   function toCard(report, extra) {
     const h = report.header || {};
-    const ch = report.messaging_changes || [];
-    const lang = ((report.sections || {}).language || {}).evidence || [];
     return Object.assign({
-      deal: h.deal || "", acv: h.acv ? h.acv.amount : null, outcome: h.outcome || null, scope: h.scope || null, tag: h.tag || null, runner_up: h.runner_up || null,
-      competitor: h.competitor || null, incumbent: h.incumbent || null,
-      first_change: ch[0] ? { target: ch[0].target, type: ch[0].type, change: String(ch[0].change).slice(0, 400) } : null,
-      changes: ch.map((c) => ({ target: c.target, type: c.type, change: String(c.change).slice(0, 400) })),
-      language: lang.filter((e) => e.label === "quote" && e.verified !== false).slice(0, 4).map((e) => String(e.excerpt).slice(0, 240)),
-      quotes_failed: (report.checks && report.checks.quotes_failed) || 0,
+      deal: h.deal || "", acv: h.acv ? h.acv.amount : null, outcome: h.outcome || null, tag: h.tag || null,
+      competitor: h.competitor || null, reason: String(h.reason || "").slice(0, 900),
       version: report.version || PIPELINE_VERSION,
     }, extra || {});
   }
@@ -598,7 +657,8 @@ Reply with ONLY this JSON:
   const api = {
     PIPELINE_VERSION, STAGE_MODELS, TAGS, TAG_NAMES, SECTIONS, SECTION_KEYS, MESSAGING,
     parseTranscript, guessRoles, renderTranscript, makeVerifier, norm,
-    readerPrompt, analystPrompt, strategistPrompt, singlePrompt, assemble, runPipeline, toCard, parseModelJSON,
+    readerPrompt, reviewPrompt, assembleReview, runPipeline, toCard, parseModelJSON,
+    analystPrompt, strategistPrompt, singlePrompt, assemble, // earlier long-form report (kept for the eval history)
   };
   root.DealReview = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;

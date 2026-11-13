@@ -22,6 +22,7 @@ const examples = files.map((f, n) => {
   const report = JSON.parse(fs.readFileSync(path.join(rdir, f), "utf8"));
   const num = f.slice(0, 2);
   report.rep = REPS[num] || null;
+  if (report.header && /^(unnamed|unknown|not named|not stated)/i.test(String(report.header.competitor || ""))) report.header.competitor = null;
   report.createdAt = new Date(now - (files.length - n) * 6 * 864e5).toISOString(); // spread over recent weeks
   delete report.meta.cost; delete report.meta.stage_cost; delete report.meta.judge_cost;
   const card = D.toCard(report, { rep: report.rep, createdAt: report.createdAt, models: report.meta.models });

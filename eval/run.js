@@ -152,6 +152,55 @@ async function runSingle(cfg, d) {
   return report;
 }
 
+// ── Short report (current page format): reader (cached from round 9) -> analyst -> checks
+async function runShort(cfgFull, d) {
+  const sfx = cfgFull.split("~")[1] || "a";
+  const readerKey = "S~v9a"; // same transcripts and reader instructions as round 9
+  const reader = await once(`reader:${readerKey}:${d.deal}`, () => limited(() => cached(stageFile("reader", readerKey, d.deal),
+    () => claude(D.readerPrompt({ transcript: d.transcript }), MODELS.S, EFFORT))));
+  if (!reader.data) return null;
+  const verbatim = D.makeVerifier(d.parsed.turns);
+  const ledger = JSON.parse(JSON.stringify(reader.data));
+  ledger.evidence = (ledger.evidence || []).filter((e) => verbatim(e.excerpt));
+  const analyst = await limited(() => cached(stageFile("short", "O~" + sfx, d.deal),
+    () => claude(D.reviewPrompt({ transcript: d.transcript, ledger }), MODELS.O, EFFORT)));
+  if (!analyst.data) return null;
+  const report = D.assembleReview({ review: analyst.data, turns: d.parsed.turns, meta: { models: { reader: MODELS.S, analyst: MODELS.O } } });
+  report.meta.ms = (reader.ms || 0) + analyst.ms;
+  report.meta.cost = (reader.cost || 0) + analyst.cost;
+  report.meta.stage_ms = { reader: reader.ms, analyst: analyst.ms };
+  report.meta.stage_cost = { reader: reader.cost, analyst: analyst.cost };
+  return report;
+}
+
+function judgeShortPrompt(d, report) {
+  const clean = { header: report.header, findings: report.findings };
+  return `You are grading a short AI-written deal review against an answer key written by a product-marketing lead. The review has only: account, ACV, outcome, competitor, a reason tag, a one-to-two sentence reason, and 3-5 key findings with supporting quotes. Ignore the answer key's section-by-section detail; use it to judge whether this short review got the essentials right. Be strict and consistent.
+
+Scoring:
+- account: 1 = the account name (or, if the transcript never names it, a fair short description); 0 otherwise.
+- acv: 1 = matches the key's ACV; 0 otherwise.
+- outcome: 1 = matches the key's outcome; 0 otherwise.
+- tag: 2 = the key's tag; 1 = the key's acceptable alternative; 0 otherwise.
+- reason: 2 = names the real reason the key gives (not the rep's framing where the key says they differ); 1 = partly; 0 = wrong or the rep's framing.
+- findings: 0-4 for how well the findings capture the key's most important insights (its "Must catch" items and expected messaging direction). 4 = all the big ones, specific and actionable; 2 = some; 0 = generic or wrong.
+- fails: list every instance of invented content (a claim, figure, name or quote not supported by the transcript) and every "Fails if" condition the review triggers. Empty list if none.
+
+ANSWER KEY
+${d.key}
+END ANSWER KEY
+
+TRANSCRIPT
+${d.transcript}
+END TRANSCRIPT
+
+REVIEW (JSON)
+${JSON.stringify(clean)}
+
+Reply with ONLY this JSON:
+{"account":0,"acv":0,"outcome":0,"tag":0,"reason":0,"findings":0,"fails":[""],"notes":"2 sentences: what it got right, what it missed"}`;
+}
+
 // ── Judge ──────────────────────────────────────────────────────────
 function judgePrompt(d, report) {
   const clean = JSON.parse(JSON.stringify(report));
@@ -201,13 +250,19 @@ async function judge(cfg, d, report) {
   const t0 = Date.now();
   const jobs = [];
   for (const cfg of CONFIGS) for (const d of deals) jobs.push((async () => {
-    const report = cfg.startsWith("single") ? await runSingle(cfg, d) : await runPipelineConfig(cfg, d);
+    const report = cfg.startsWith("short") ? await runShort(cfg, d) : cfg.startsWith("single") ? await runSingle(cfg, d) : await runPipelineConfig(cfg, d);
     if (!report) { console.log(`✗ ${cfg} ${d.deal}`); return; }
     const out = path.join(RUNS, "reports", cfg, d.deal + ".json");
     fs.mkdirSync(path.dirname(out), { recursive: true }); fs.writeFileSync(out, JSON.stringify(report, null, 1));
     let j = null;
-    if (!flag("no-judge")) { j = await judge(cfg, d, report); if (j.data) report.meta.judge_cost = j.cost; }
-    console.log(`✓ ${cfg.padEnd(8)} ${d.deal.padEnd(28)} ${(report.meta.ms / 1000).toFixed(0).padStart(4)}s $${report.meta.cost.toFixed(3)}  ${report.header.outcome}/${report.header.tag}  quotes ${report.checks.quotes_total - report.checks.quotes_failed}/${report.checks.quotes_total}${j && j.data ? "  judged" : ""}`);
+    if (!flag("no-judge")) {
+      j = cfg.startsWith("short")
+        ? await limited(() => cached(path.join(RUNS, "judge", cfg, d.deal + ".json"), () => claude(judgeShortPrompt(d, report), MODELS.O, "high")))
+        : await judge(cfg, d, report);
+      if (j.data) report.meta.judge_cost = j.cost;
+    }
+    const q = report.findings ? `findings ${report.findings.length} (dropped ${report.checks.findings_dropped.length})` : `quotes ${report.checks.quotes_total - report.checks.quotes_failed}/${report.checks.quotes_total}`;
+    console.log(`✓ ${cfg.padEnd(8)} ${d.deal.padEnd(28)} ${(report.meta.ms / 1000).toFixed(0).padStart(4)}s $${report.meta.cost.toFixed(3)}  ${report.header.outcome}/${report.header.tag}  ${q}${j && j.data ? "  judged" : ""}`);
   })());
   await Promise.all(jobs);
   console.log(`done in ${((Date.now() - t0) / 60000).toFixed(1)} min`);

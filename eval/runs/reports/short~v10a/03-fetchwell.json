@@ -1,0 +1,63 @@
+{
+ "version": "2026-11-14.1",
+ "header": {
+  "deal": "Fetchwell",
+  "ae": "Priya",
+  "acv": {
+   "amount": 180000,
+   "quote": "A hundred and eighty K a year, on a three-year term."
+  },
+  "outcome": "Won",
+  "competitor": "Braintree",
+  "tag": "Developer experience",
+  "reason": "We won because one of their engineers built a working sitter payment flow in our sandbox over a weekend, which turned a bake-off into a decision for Daniel, the engineering VP who signed. The AE called it 'a clean one', but questions on PayPal, Venmo and saved cards were never fully answered, so the customer won on build speed despite those gaps, not because there were none."
+ },
+ "findings": [
+  {
+   "finding": "The deal turned when a customer engineer built a working sitter payment flow in our sandbox on her own, so we should make a fast hands-on build the main step when engineering decides.",
+   "quote": "The weekend prototype. Before that it was a bake-off.",
+   "who": "Priya"
+  },
+  {
+   "finding": "The acceptance-rate pitch got silence from a buyer with small bookings, so lead with freeing up engineers and getting sitters paid, not average approval gains.",
+   "quote": "our average booking is 38 dollars, I'm not losing sleep over auth rates.",
+   "who": "Daniel"
+  },
+  {
+   "finding": "After their Braintree call the questions turned to 'what do we lose', and we had no clear answer on keeping PayPal and Venmo, so we need a crisp, ready answer on those buttons (the AE only guesses Braintree raised it).",
+   "quote": "We kind of danced around it.",
+   "who": "Priya"
+  },
+  {
+   "finding": "Daniel asked for a customer of his size who moved saved cards without losing any, we never gave one, and it was still open at kickoff, so we need a ready reference story for saved-card moves.",
+   "quote": "who's done this at our size without losing cards?",
+   "who": "Daniel"
+  },
+  {
+   "finding": "The customer talks about 'sitter pay', 'paid by Friday' and 'the app', not payouts or marketplace, so our messaging should use their words and frame the problem as payments eating an engineering team.",
+   "quote": "Payments shouldn't be a team",
+   "who": "Daniel"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 47434,
+  "cost": 0.1536826,
+  "stage_ms": {
+   "reader": 32131,
+   "analyst": 15303
+  },
+  "stage_cost": {
+   "reader": 0.0543106,
+   "analyst": 0.099372
+  }
+ }
+}

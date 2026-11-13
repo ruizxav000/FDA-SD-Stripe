@@ -1,0 +1,63 @@
+{
+ "version": "2026-11-14.1",
+ "header": {
+  "deal": "Kestrel Learning",
+  "ae": "Elena",
+  "acv": {
+   "amount": 320000,
+   "quote": "The account was worth about three hundred and twenty K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "tag": "Approval rates",
+  "reason": "The international half of the account moved to Adyen's local acquiring, while the US business stayed. A new head of payments compared Adyen's country-by-country test results against our average-uplift deck, and we could not show his own approval rates until after the test had finished. Elena says it was decided before we got in the room. The evidence shows we never met him before the renewal and our useful analysis came three weeks late."
+ },
+ "findings": [
+  {
+   "finding": "When Stefan asked for approval rates by country, card type and issuer, we answered with the average uplift customers see. Lead with the customer's own approval numbers instead, because averages can't go to a CFO.",
+   "quote": "I can't take an average to my CFO.",
+   "who": "Stefan (relayed by Elena)"
+  },
+  {
+   "finding": "Our payments performance team's analysis had real, fixable findings and Stefan called it the most useful thing we sent him. It arrived three weeks after he asked, once Adyen's test was done, so this analysis has to be fast and proactive, not reactive.",
+   "quote": "But that landed three weeks after he asked, and by then the test was finished.",
+   "who": "Elena"
+  },
+  {
+   "finding": "The original buyer left, and nobody at our side knew a head of payments had been hired. There had been no business review in nine or ten months, and the decision reached the CFO before we engaged. Healthy-looking accounts need a check whenever the buyer changes.",
+   "quote": "I didn't know they'd hired a head of payments.",
+   "who": "Elena"
+  },
+  {
+   "finding": "Stefan wanted a named person who reviews his numbers every month, and we had no name to give him. Ongoing, named payments-performance ownership is part of what we need to sell.",
+   "quote": "He asked who at Stripe looks at his numbers every month, and I didn't have a name.",
+   "who": "Elena"
+  },
+  {
+   "finding": "Stefan framed the problem as 'approvals', 'local cards, local rails' and lost money, not our 'authorization' language. The AE says she had no counter to local acquiring, so we need messaging in his terms that answers it directly.",
+   "quote": "Money left on the table.",
+   "who": "Stefan (relayed by Elena)"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 46004,
+  "cost": 0.1490138,
+  "stage_ms": {
+   "reader": 29348,
+   "analyst": 16656
+  },
+  "stage_cost": {
+   "reader": 0.0479498,
+   "analyst": 0.101064
+  }
+ }
+}
