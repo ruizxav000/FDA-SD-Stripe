@@ -1,0 +1,688 @@
+{
+ "ok": true,
+ "text": "{\"people\":[{\"name\":\"Dana\",\"role\":\"account executive (rep)\",\"side\":\"us\"},{\"name\":\"PMM\",\"role\":\"product marketer / interviewer\",\"side\":\"us\"},{\"name\":\"Ines\",\"role\":\"new CFO at Tallowfield Supply, final decision maker\",\"side\":\"customer\"},{\"name\":\"Paul\",\"role\":\"IT director, Dana's day-to-day contact\",\"side\":\"customer\"},{\"name\":\"Wen\",\"role\":\"our solutions engineer\",\"side\":\"us\"},{\"name\":\"Controller\",\"role\":\"Tallowfield controller who sent statements and sat in on hours analysis\",\"side\":\"customer\"},{\"name\":\"Bank rep\",\"role\":\"customer's bank representative (changed recently, new one unknown to Ines)\",\"side\":\"competitor\"}],\"competitors\":[\"Fiserv\"],\"incumbent\":\"Fiserv, through their bank\",\"evidence\":[{\"id\":\"E1\",\"turn\":2,\"excerpt\":\"I thought it was the online ordering portal. That's what the inbound said.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Initial assumed trigger came from the inbound request.\"},{\"id\":\"E2\",\"turn\":2,\"excerpt\":\"They were building a portal so a chef could reorder at midnight. So I went in pitching checkout.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"trigger\",\"message\"],\"note\":\"Opening pitch was checkout, aimed at the portal.\"},{\"id\":\"E3\",\"turn\":4,\"excerpt\":\"The portal was the excuse.\",\"label\":\"opinion\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Rep's read that the portal was not the real trigger.\"},{\"id\":\"E4\",\"turn\":4,\"excerpt\":\"I didn't get this until maybe the third call\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Real driver surfaced only around third call.\"},{\"id\":\"E5\",\"turn\":4,\"excerpt\":\"they had a new CFO. Ines. She'd been there about four months, and her first month-end close took nine days.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"trigger\",\"decider\"],\"note\":\"New CFO with a nine-day first close is the real trigger.\"},{\"id\":\"E6\",\"turn\":4,\"excerpt\":\"two people in finance matching deposits from the bank against the processor statements against invoices in the ERP. By hand, in spreadsheets.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Manual three-way reconciliation is the concrete pain.\"},{\"id\":\"E7\",\"turn\":4,\"excerpt\":\"month-end is a week of archaeology.\",\"label\":\"quote\",\"speaker\":\"Ines\",\"paraphrase\":false,\"topics\":[\"language\",\"trigger\"],\"note\":\"Customer's own phrase for the problem.\"},{\"id\":\"E8\",\"turn\":6,\"excerpt\":\"I can recommend, she decides.\",\"label\":\"quote\",\"speaker\":\"Paul\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Paul says Ines is the decider.\"},{\"id\":\"E9\",\"turn\":6,\"excerpt\":\"And she's the one who signed.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"decider\",\"decided\",\"outcome\"],\"note\":\"Ines signed, supporting her as decider and indicating a win.\"},{\"id\":\"E10\",\"turn\":8,\"excerpt\":\"We sent the first proposal to Paul and it was all about the portal. The checkout, the APIs. Then nothing happened for three weeks.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"message\",\"decider\"],\"note\":\"Portal-focused proposal stalled three weeks.\"},{\"id\":\"E11\",\"turn\":8,\"excerpt\":\"Paul had forwarded it to her, she read the first page and said it wasn't her problem.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"decider\",\"message\"],\"note\":\"Relayed secondhand; Ines dismissed the portal pitch as not her problem.\"},{\"id\":\"E12\",\"turn\":10,\"excerpt\":\"Fiserv was the incumbent, through their bank.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Incumbent identified.\"},{\"id\":\"E13\",\"turn\":10,\"excerpt\":\"I honestly don't know what Fiserv showed them, if anything. I never saw a deck.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"competitor\",\"gaps\"],\"note\":\"Rep has no visibility into competitor's pitch.\"},{\"id\":\"E14\",\"turn\":10,\"excerpt\":\"we can take a look at your rates.\",\"label\":\"quote\",\"speaker\":\"Ines\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Bank's reply when Ines said they were looking around, relayed by Ines.\"},{\"id\":\"E15\",\"turn\":10,\"excerpt\":\"I didn't ask about my rates.\",\"label\":\"quote\",\"speaker\":\"Ines\",\"paraphrase\":false,\"topics\":[\"competitor\",\"language\"],\"note\":\"Ines rejected the bank's price-focused response.\"},{\"id\":\"E16\",\"turn\":12,\"excerpt\":\"Not much. If anything she got more annoyed.\",\"label\":\"opinion\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Rep's read of Ines's reaction after the bank call.\"},{\"id\":\"E17\",\"turn\":12,\"excerpt\":\"She did ask us one new thing afterwards, whether she'd get a named contact.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"competitor\",\"decided\",\"gaps\"],\"note\":\"Changed ask after bank call: a named contact; bank rep had changed.\"},{\"id\":\"E18\",\"turn\":12,\"excerpt\":\"Her bank rep had changed and she didn't know who the new one was. I said yes, me.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"competitor\",\"decided\"],\"note\":\"Dana committed herself as the named contact.\"},{\"id\":\"E19\",\"turn\":14,\"excerpt\":\"Silence was the whole opening. I ran the standard first-call deck. Financial infrastructure, global growth, all the currencies.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"message\",\"language\"],\"note\":\"Standard deck got no reaction.\"},{\"id\":\"E20\",\"turn\":14,\"excerpt\":\"They sell to restaurants in three states.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Global-growth messaging didn't fit a three-state business.\"},{\"id\":\"E21\",\"turn\":14,\"excerpt\":\"Paul was polite about it. Ines wasn't on that call, thank god.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"message\",\"decider\"],\"note\":\"Decider was absent from the first call.\"},{\"id\":\"E22\",\"turn\":14,\"excerpt\":\"Paul's team is four people and they aren't building anything. The portal is off the shelf with a plugin.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"message\",\"trigger\"],\"note\":\"Developer story irrelevant; conflicts with earlier 'building a portal'.\"},{\"id\":\"E23\",\"turn\":14,\"excerpt\":\"The reaction was the payout reconciliation.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"The message that landed.\"},{\"id\":\"E24\",\"turn\":14,\"excerpt\":\"Ines actually stopped him and said, \\\"go back.\\\" Then she asked if she could see it with their data.\",\"label\":\"quote\",\"speaker\":\"Ines\",\"paraphrase\":false,\"topics\":[\"message\",\"decided\"],\"note\":\"Strong reaction to reconciliation demo; asked for her own data.\"},{\"id\":\"E25\",\"turn\":16,\"excerpt\":\"Wen asked for one month of their statements, the controller sent them over\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"decided\",\"message\"],\"note\":\"Data-based analysis step.\"},{\"id\":\"E26\",\"turn\":16,\"excerpt\":\"It was something like 60 hours a month across two people.\",\"label\":\"opinion\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"decided\"],\"note\":\"Approximate hours estimate, hedged.\"},{\"id\":\"E27\",\"turn\":16,\"excerpt\":\"I don't remember the exact figure. Low six figures a year.\",\"label\":\"opinion\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"decided\"],\"note\":\"Dollar figure vague, from memory.\"},{\"id\":\"E28\",\"turn\":16,\"excerpt\":\"that's my number, not yours.\",\"label\":\"quote\",\"speaker\":\"Ines\",\"paraphrase\":false,\"topics\":[\"decided\",\"language\"],\"note\":\"Ines owned the figure because it used her data.\"},{\"id\":\"E29\",\"turn\":16,\"excerpt\":\"After that it was paperwork.\",\"label\":\"opinion\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"decided\",\"outcome\"],\"note\":\"Rep's read that the deal was effectively won after the ROI meeting.\"},{\"id\":\"E30\",\"turn\":18,\"excerpt\":\"Dead, honestly. I had it at 20 percent.\",\"label\":\"opinion\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"decided\"],\"note\":\"Rep's estimate before the data meeting.\"},{\"id\":\"E31\",\"turn\":20,\"excerpt\":\"She wanted to talk to another distributor. Wholesale, invoices, that kind of business.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Unmet request for a distributor reference.\"},{\"id\":\"E32\",\"turn\":20,\"excerpt\":\"We had retail stories and software stories.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"No distributor-relevant case study.\"},{\"id\":\"E33\",\"turn\":20,\"excerpt\":\"this is a company that sells sweaters.\",\"label\":\"quote\",\"speaker\":\"Ines\",\"paraphrase\":false,\"topics\":[\"gaps\",\"language\"],\"note\":\"Ines rejected the retail case study as irrelevant.\"},{\"id\":\"E34\",\"turn\":20,\"excerpt\":\"We never got her a call. She signed anyway, but she brought it up twice.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"gaps\",\"outcome\"],\"note\":\"Reference gap persisted; deal still signed.\"},{\"id\":\"E35\",\"turn\":20,\"excerpt\":\"They have 14 branches with counter sales, and she asked if the card readers at the counter would land in the same report.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"gaps\",\"outcome\"],\"note\":\"Counter/in-person card readers question; possible scope beyond online.\"},{\"id\":\"E36\",\"turn\":20,\"excerpt\":\"Wen said yes and showed a slide. We didn't demo it. She let it go.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Branch card-reader capability not demoed.\"},{\"id\":\"E37\",\"turn\":22,\"excerpt\":\"I just want to know where my money is.\",\"label\":\"quote\",\"speaker\":\"Ines\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Her most frequent phrase.\"},{\"id\":\"E38\",\"turn\":22,\"excerpt\":\"She never once said \\\"payments.\\\" She'd say \\\"the deposits.\\\" Paul would say \\\"the processor.\\\" Nobody said \\\"infrastructure.\\\"\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer vocabulary versus our terms.\"},{\"id\":\"E39\",\"turn\":24,\"excerpt\":\"Find the CFO sooner. I lost a month pitching a portal.\",\"label\":\"opinion\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"decider\",\"trigger\",\"gaps\"],\"note\":\"Rep's own lesson: late discovery of the real buyer cost time.\"},{\"id\":\"E40\",\"turn\":6,\"excerpt\":\"She's also the one who sat on the first proposal.\",\"label\":\"fact\",\"speaker\":\"Dana\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Decider delayed the first proposal, though Paul forwarded it.\"}],\"contradictions\":[{\"evidence\":[\"E1\",\"E22\"],\"what\":\"Rep says the customer was 'building a portal' but later says Paul's team isn't building anything and the portal is off the shelf.\"},{\"evidence\":[\"E4\",\"E24\"],\"what\":\"Rep says she only understood the CFO angle around the third call, yet Ines wasn't on the first call and the reconciliation reaction came after.\"},{\"evidence\":[\"E40\",\"E11\"],\"what\":\"Rep says Ines 'sat on' the proposal, but then explains it went to Paul, who forwarded it; Ines only read the first page after delay.\"},{\"evidence\":[\"E16\",\"E17\"],\"what\":\"Rep says 'Not much' changed in questions after the bank talk, then describes a new ask: a named contact.\"},{\"evidence\":[\"E30\",\"E24\"],\"what\":\"Rep had the deal at 20% and 'dead' before the data meeting, though Ines had already said 'go back' and asked to see it with her data.\"},{\"evidence\":[\"E34\",\"E39\"],\"what\":\"Rep cites only finding the CFO sooner as a regret, but also left a reference gap Ines raised twice and never closed.\"}],\"dodges\":[{\"question\":\"What did the customer bring up about the competitor?\",\"turn\":10,\"what\":\"Rep said she doesn't know what Fiserv showed and 'that's about all I've got'; little on competitive evaluation.\"},{\"question\":\"What changed in their questions after they'd talked to the bank?\",\"turn\":12,\"what\":\"Answered 'Not much' then described a new question about a named contact.\"},{\"question\":\"Anything you'd do differently?\",\"turn\":24,\"what\":\"Gave one short answer; did not mention the reference gap or the untested branch card-reader demo.\"}],\"skipped\":[],\"language_pairs\":[{\"theirs\":\"a week of archaeology\",\"ours\":\"Financial infrastructure\",\"evidence\":[\"E7\",\"E19\"]},{\"theirs\":\"the deposits\",\"ours\":\"payments\",\"evidence\":[\"E38\"]},{\"theirs\":\"the processor\",\"ours\":\"infrastructure\",\"evidence\":[\"E38\"]},{\"theirs\":\"I just want to know where my money is\",\"ours\":\"global growth, all the currencies\",\"evidence\":[\"E37\",\"E19\"]},{\"theirs\":\"a reference to another distributor (wholesale, invoices)\",\"ours\":\"retail and software case studies\",\"evidence\":[\"E31\",\"E32\",\"E33\"]}],\"outcome_signals\":[{\"evidence\":[\"E9\"],\"what\":\"Won: Ines signed.\"},{\"evidence\":[\"E29\"],\"what\":\"After the data-based ROI meeting it was 'paperwork'.\"},{\"evidence\":[\"E34\"],\"what\":\"Signed despite unresolved reference request.\"},{\"evidence\":[\"E35\",\"E36\"],\"what\":\"Counter/branch card-reader coverage asked about but not demoed; unclear whether that part of the business moved.\"}]}",
+ "data": {
+  "people": [
+   {
+    "name": "Dana",
+    "role": "account executive (rep)",
+    "side": "us"
+   },
+   {
+    "name": "PMM",
+    "role": "product marketer / interviewer",
+    "side": "us"
+   },
+   {
+    "name": "Ines",
+    "role": "new CFO at Tallowfield Supply, final decision maker",
+    "side": "customer"
+   },
+   {
+    "name": "Paul",
+    "role": "IT director, Dana's day-to-day contact",
+    "side": "customer"
+   },
+   {
+    "name": "Wen",
+    "role": "our solutions engineer",
+    "side": "us"
+   },
+   {
+    "name": "Controller",
+    "role": "Tallowfield controller who sent statements and sat in on hours analysis",
+    "side": "customer"
+   },
+   {
+    "name": "Bank rep",
+    "role": "customer's bank representative (changed recently, new one unknown to Ines)",
+    "side": "competitor"
+   }
+  ],
+  "competitors": [
+   "Fiserv"
+  ],
+  "incumbent": "Fiserv, through their bank",
+  "evidence": [
+   {
+    "id": "E1",
+    "turn": 2,
+    "excerpt": "I thought it was the online ordering portal. That's what the inbound said.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Initial assumed trigger came from the inbound request."
+   },
+   {
+    "id": "E2",
+    "turn": 2,
+    "excerpt": "They were building a portal so a chef could reorder at midnight. So I went in pitching checkout.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "trigger",
+     "message"
+    ],
+    "note": "Opening pitch was checkout, aimed at the portal."
+   },
+   {
+    "id": "E3",
+    "turn": 4,
+    "excerpt": "The portal was the excuse.",
+    "label": "opinion",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Rep's read that the portal was not the real trigger."
+   },
+   {
+    "id": "E4",
+    "turn": 4,
+    "excerpt": "I didn't get this until maybe the third call",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Real driver surfaced only around third call."
+   },
+   {
+    "id": "E5",
+    "turn": 4,
+    "excerpt": "they had a new CFO. Ines. She'd been there about four months, and her first month-end close took nine days.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "trigger",
+     "decider"
+    ],
+    "note": "New CFO with a nine-day first close is the real trigger."
+   },
+   {
+    "id": "E6",
+    "turn": 4,
+    "excerpt": "two people in finance matching deposits from the bank against the processor statements against invoices in the ERP. By hand, in spreadsheets.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Manual three-way reconciliation is the concrete pain."
+   },
+   {
+    "id": "E7",
+    "turn": 4,
+    "excerpt": "month-end is a week of archaeology.",
+    "label": "quote",
+    "speaker": "Ines",
+    "paraphrase": false,
+    "topics": [
+     "language",
+     "trigger"
+    ],
+    "note": "Customer's own phrase for the problem."
+   },
+   {
+    "id": "E8",
+    "turn": 6,
+    "excerpt": "I can recommend, she decides.",
+    "label": "quote",
+    "speaker": "Paul",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Paul says Ines is the decider."
+   },
+   {
+    "id": "E9",
+    "turn": 6,
+    "excerpt": "And she's the one who signed.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "decided",
+     "outcome"
+    ],
+    "note": "Ines signed, supporting her as decider and indicating a win."
+   },
+   {
+    "id": "E10",
+    "turn": 8,
+    "excerpt": "We sent the first proposal to Paul and it was all about the portal. The checkout, the APIs. Then nothing happened for three weeks.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "decider"
+    ],
+    "note": "Portal-focused proposal stalled three weeks."
+   },
+   {
+    "id": "E11",
+    "turn": 8,
+    "excerpt": "Paul had forwarded it to her, she read the first page and said it wasn't her problem.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "message"
+    ],
+    "note": "Relayed secondhand; Ines dismissed the portal pitch as not her problem."
+   },
+   {
+    "id": "E12",
+    "turn": 10,
+    "excerpt": "Fiserv was the incumbent, through their bank.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Incumbent identified."
+   },
+   {
+    "id": "E13",
+    "turn": 10,
+    "excerpt": "I honestly don't know what Fiserv showed them, if anything. I never saw a deck.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "gaps"
+    ],
+    "note": "Rep has no visibility into competitor's pitch."
+   },
+   {
+    "id": "E14",
+    "turn": 10,
+    "excerpt": "we can take a look at your rates.",
+    "label": "quote",
+    "speaker": "Ines",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Bank's reply when Ines said they were looking around, relayed by Ines."
+   },
+   {
+    "id": "E15",
+    "turn": 10,
+    "excerpt": "I didn't ask about my rates.",
+    "label": "quote",
+    "speaker": "Ines",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "language"
+    ],
+    "note": "Ines rejected the bank's price-focused response."
+   },
+   {
+    "id": "E16",
+    "turn": 12,
+    "excerpt": "Not much. If anything she got more annoyed.",
+    "label": "opinion",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Rep's read of Ines's reaction after the bank call."
+   },
+   {
+    "id": "E17",
+    "turn": 12,
+    "excerpt": "She did ask us one new thing afterwards, whether she'd get a named contact.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "decided",
+     "gaps"
+    ],
+    "note": "Changed ask after bank call: a named contact; bank rep had changed."
+   },
+   {
+    "id": "E18",
+    "turn": 12,
+    "excerpt": "Her bank rep had changed and she didn't know who the new one was. I said yes, me.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "decided"
+    ],
+    "note": "Dana committed herself as the named contact."
+   },
+   {
+    "id": "E19",
+    "turn": 14,
+    "excerpt": "Silence was the whole opening. I ran the standard first-call deck. Financial infrastructure, global growth, all the currencies.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "language"
+    ],
+    "note": "Standard deck got no reaction."
+   },
+   {
+    "id": "E20",
+    "turn": 14,
+    "excerpt": "They sell to restaurants in three states.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Global-growth messaging didn't fit a three-state business."
+   },
+   {
+    "id": "E21",
+    "turn": 14,
+    "excerpt": "Paul was polite about it. Ines wasn't on that call, thank god.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "decider"
+    ],
+    "note": "Decider was absent from the first call."
+   },
+   {
+    "id": "E22",
+    "turn": 14,
+    "excerpt": "Paul's team is four people and they aren't building anything. The portal is off the shelf with a plugin.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "trigger"
+    ],
+    "note": "Developer story irrelevant; conflicts with earlier 'building a portal'."
+   },
+   {
+    "id": "E23",
+    "turn": 14,
+    "excerpt": "The reaction was the payout reconciliation.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "The message that landed."
+   },
+   {
+    "id": "E24",
+    "turn": 14,
+    "excerpt": "Ines actually stopped him and said, \"go back.\" Then she asked if she could see it with their data.",
+    "label": "quote",
+    "speaker": "Ines",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "decided"
+    ],
+    "note": "Strong reaction to reconciliation demo; asked for her own data."
+   },
+   {
+    "id": "E25",
+    "turn": 16,
+    "excerpt": "Wen asked for one month of their statements, the controller sent them over",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "message"
+    ],
+    "note": "Data-based analysis step."
+   },
+   {
+    "id": "E26",
+    "turn": 16,
+    "excerpt": "It was something like 60 hours a month across two people.",
+    "label": "opinion",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "decided"
+    ],
+    "note": "Approximate hours estimate, hedged."
+   },
+   {
+    "id": "E27",
+    "turn": 16,
+    "excerpt": "I don't remember the exact figure. Low six figures a year.",
+    "label": "opinion",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "decided"
+    ],
+    "note": "Dollar figure vague, from memory."
+   },
+   {
+    "id": "E28",
+    "turn": 16,
+    "excerpt": "that's my number, not yours.",
+    "label": "quote",
+    "speaker": "Ines",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "language"
+    ],
+    "note": "Ines owned the figure because it used her data."
+   },
+   {
+    "id": "E29",
+    "turn": 16,
+    "excerpt": "After that it was paperwork.",
+    "label": "opinion",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "outcome"
+    ],
+    "note": "Rep's read that the deal was effectively won after the ROI meeting."
+   },
+   {
+    "id": "E30",
+    "turn": 18,
+    "excerpt": "Dead, honestly. I had it at 20 percent.",
+    "label": "opinion",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "decided"
+    ],
+    "note": "Rep's estimate before the data meeting."
+   },
+   {
+    "id": "E31",
+    "turn": 20,
+    "excerpt": "She wanted to talk to another distributor. Wholesale, invoices, that kind of business.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Unmet request for a distributor reference."
+   },
+   {
+    "id": "E32",
+    "turn": 20,
+    "excerpt": "We had retail stories and software stories.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "No distributor-relevant case study."
+   },
+   {
+    "id": "E33",
+    "turn": 20,
+    "excerpt": "this is a company that sells sweaters.",
+    "label": "quote",
+    "speaker": "Ines",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "language"
+    ],
+    "note": "Ines rejected the retail case study as irrelevant."
+   },
+   {
+    "id": "E34",
+    "turn": 20,
+    "excerpt": "We never got her a call. She signed anyway, but she brought it up twice.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "outcome"
+    ],
+    "note": "Reference gap persisted; deal still signed."
+   },
+   {
+    "id": "E35",
+    "turn": 20,
+    "excerpt": "They have 14 branches with counter sales, and she asked if the card readers at the counter would land in the same report.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "outcome"
+    ],
+    "note": "Counter/in-person card readers question; possible scope beyond online."
+   },
+   {
+    "id": "E36",
+    "turn": 20,
+    "excerpt": "Wen said yes and showed a slide. We didn't demo it. She let it go.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Branch card-reader capability not demoed."
+   },
+   {
+    "id": "E37",
+    "turn": 22,
+    "excerpt": "I just want to know where my money is.",
+    "label": "quote",
+    "speaker": "Ines",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Her most frequent phrase."
+   },
+   {
+    "id": "E38",
+    "turn": 22,
+    "excerpt": "She never once said \"payments.\" She'd say \"the deposits.\" Paul would say \"the processor.\" Nobody said \"infrastructure.\"",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer vocabulary versus our terms."
+   },
+   {
+    "id": "E39",
+    "turn": 24,
+    "excerpt": "Find the CFO sooner. I lost a month pitching a portal.",
+    "label": "opinion",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "trigger",
+     "gaps"
+    ],
+    "note": "Rep's own lesson: late discovery of the real buyer cost time."
+   },
+   {
+    "id": "E40",
+    "turn": 6,
+    "excerpt": "She's also the one who sat on the first proposal.",
+    "label": "fact",
+    "speaker": "Dana",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Decider delayed the first proposal, though Paul forwarded it."
+   }
+  ],
+  "contradictions": [
+   {
+    "evidence": [
+     "E1",
+     "E22"
+    ],
+    "what": "Rep says the customer was 'building a portal' but later says Paul's team isn't building anything and the portal is off the shelf."
+   },
+   {
+    "evidence": [
+     "E4",
+     "E24"
+    ],
+    "what": "Rep says she only understood the CFO angle around the third call, yet Ines wasn't on the first call and the reconciliation reaction came after."
+   },
+   {
+    "evidence": [
+     "E40",
+     "E11"
+    ],
+    "what": "Rep says Ines 'sat on' the proposal, but then explains it went to Paul, who forwarded it; Ines only read the first page after delay."
+   },
+   {
+    "evidence": [
+     "E16",
+     "E17"
+    ],
+    "what": "Rep says 'Not much' changed in questions after the bank talk, then describes a new ask: a named contact."
+   },
+   {
+    "evidence": [
+     "E30",
+     "E24"
+    ],
+    "what": "Rep had the deal at 20% and 'dead' before the data meeting, though Ines had already said 'go back' and asked to see it with her data."
+   },
+   {
+    "evidence": [
+     "E34",
+     "E39"
+    ],
+    "what": "Rep cites only finding the CFO sooner as a regret, but also left a reference gap Ines raised twice and never closed."
+   }
+  ],
+  "dodges": [
+   {
+    "question": "What did the customer bring up about the competitor?",
+    "turn": 10,
+    "what": "Rep said she doesn't know what Fiserv showed and 'that's about all I've got'; little on competitive evaluation."
+   },
+   {
+    "question": "What changed in their questions after they'd talked to the bank?",
+    "turn": 12,
+    "what": "Answered 'Not much' then described a new question about a named contact."
+   },
+   {
+    "question": "Anything you'd do differently?",
+    "turn": 24,
+    "what": "Gave one short answer; did not mention the reference gap or the untested branch card-reader demo."
+   }
+  ],
+  "skipped": [],
+  "language_pairs": [
+   {
+    "theirs": "a week of archaeology",
+    "ours": "Financial infrastructure",
+    "evidence": [
+     "E7",
+     "E19"
+    ]
+   },
+   {
+    "theirs": "the deposits",
+    "ours": "payments",
+    "evidence": [
+     "E38"
+    ]
+   },
+   {
+    "theirs": "the processor",
+    "ours": "infrastructure",
+    "evidence": [
+     "E38"
+    ]
+   },
+   {
+    "theirs": "I just want to know where my money is",
+    "ours": "global growth, all the currencies",
+    "evidence": [
+     "E37",
+     "E19"
+    ]
+   },
+   {
+    "theirs": "a reference to another distributor (wholesale, invoices)",
+    "ours": "retail and software case studies",
+    "evidence": [
+     "E31",
+     "E32",
+     "E33"
+    ]
+   }
+  ],
+  "outcome_signals": [
+   {
+    "evidence": [
+     "E9"
+    ],
+    "what": "Won: Ines signed."
+   },
+   {
+    "evidence": [
+     "E29"
+    ],
+    "what": "After the data-based ROI meeting it was 'paperwork'."
+   },
+   {
+    "evidence": [
+     "E34"
+    ],
+    "what": "Signed despite unresolved reference request."
+   },
+   {
+    "evidence": [
+     "E35",
+     "E36"
+    ],
+    "what": "Counter/branch card-reader coverage asked about but not demoed; unclear whether that part of the business moved."
+   }
+  ]
+ },
+ "ms": 31542,
+ "cost": 0.0550485,
+ "in_tokens": 4305,
+ "out_tokens": 5158,
+ "model": "claude-sonnet-5-5"
+}

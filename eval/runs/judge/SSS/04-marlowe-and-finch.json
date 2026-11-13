@@ -1,0 +1,50 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":1,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The decision-maker contradiction (Raj vs. Angela) is surfaced.\",\"pass\":true},{\"item\":\"\\\"that's a diagram\\\" is tied to a messaging change.\",\"pass\":true},{\"item\":\"The question shift (11 of 14 about stores) is reported as a fact.\",\"pass\":true},{\"item\":\"The rep's \\\"better product online\\\" is treated as opinion, not used as a reason.\",\"pass\":true}],\n \"fails\":[\"Competitor insight claims 'we kept answering web questions' after the shift to stores. The transcript does not say this.\",\"Decided insight claims 'Tom's own account says the lead was not real'. Tom said the opposite ('we were ahead. Raj said so.'), so this misstates the transcript.\"],\n \"notes\":\"The report gets the core story right. It surfaces the Raj/Angela decider contradiction, ties 'that's a diagram' to replacing M3 with a live till-return demo in the customer's own words, and reports 11 of 14 as fact. It misses the incumbent (separate store and web providers). It labels the Dec 27 Angela story as opinion, where the key calls it secondhand fact. The competitor insight is weak on Adyen selling the rollout and the people. The close misses the key's open questions (Adyen's terms, what Bev wrote down, whether a partner-install plan would have been accepted) and the follow-up to get Raj's list of 14 questions.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 1,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The decision-maker contradiction (Raj vs. Angela) is surfaced.",
+    "pass": true
+   },
+   {
+    "item": "\"that's a diagram\" is tied to a messaging change.",
+    "pass": true
+   },
+   {
+    "item": "The question shift (11 of 14 about stores) is reported as a fact.",
+    "pass": true
+   },
+   {
+    "item": "The rep's \"better product online\" is treated as opinion, not used as a reason.",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Competitor insight claims 'we kept answering web questions' after the shift to stores. The transcript does not say this.",
+   "Decided insight claims 'Tom's own account says the lead was not real'. Tom said the opposite ('we were ahead. Raj said so.'), so this misstates the transcript."
+  ],
+  "notes": "The report gets the core story right. It surfaces the Raj/Angela decider contradiction, ties 'that's a diagram' to replacing M3 with a live till-return demo in the customer's own words, and reports 11 of 14 as fact. It misses the incumbent (separate store and web providers). It labels the Dec 27 Angela story as opinion, where the key calls it secondhand fact. The competitor insight is weak on Adyen selling the rollout and the people. The close misses the key's open questions (Adyen's terms, what Bev wrote down, whether a partner-install plan would have been accepted) and the follow-up to get Raj's list of 14 questions."
+ },
+ "ms": 31808,
+ "cost": 0.13566799999999998,
+ "in_tokens": 9087,
+ "out_tokens": 3149,
+ "model": "claude-opus-5-5"
+}

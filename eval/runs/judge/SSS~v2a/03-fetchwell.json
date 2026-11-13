@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":1,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":1,\n \"must_catch\":[{\"item\":\"The gaps section shows the rep's \\\"nothing\\\" being contradicted (PayPal/Venmo, saved cards)\",\"pass\":true},{\"item\":\"The Braintree theory is labeled opinion\",\"pass\":true},{\"item\":\"The approval-rate slide is reported as silence in a win\",\"pass\":true},{\"item\":\"The CFO's one question is surfaced as a messaging signal\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report gets the core story right. The gaps section shows Priya's \\\"clean one\\\" being contradicted by the Venmo and saved-card answers, the Braintree theory is labelled opinion, and the CFO's sitter-pay-timing question becomes a finance messaging signal. Its main misses are leaving the incumbent null (it even asks in the close who the incumbent was, though Braintree clearly is) and labelling Priya's paraphrase \\\"what do we lose\\\" as a direct Daniel quote. The messaging_changes list also leaves out the payout-timing finance message and the PayPal/Venmo and saved-card proof items; these appear only in the section-level messaging.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 1,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 1,
+  "must_catch": [
+   {
+    "item": "The gaps section shows the rep's \"nothing\" being contradicted (PayPal/Venmo, saved cards)",
+    "pass": true
+   },
+   {
+    "item": "The Braintree theory is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The approval-rate slide is reported as silence in a win",
+    "pass": true
+   },
+   {
+    "item": "The CFO's one question is surfaced as a messaging signal",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core story right. The gaps section shows Priya's \"clean one\" being contradicted by the Venmo and saved-card answers, the Braintree theory is labelled opinion, and the CFO's sitter-pay-timing question becomes a finance messaging signal. Its main misses are leaving the incumbent null (it even asks in the close who the incumbent was, though Braintree clearly is) and labelling Priya's paraphrase \"what do we lose\" as a direct Daniel quote. The messaging_changes list also leaves out the payout-timing finance message and the PayPal/Venmo and saved-card proof items; these appear only in the section-level messaging."
+ },
+ "ms": 31691,
+ "cost": 0.135724,
+ "in_tokens": 9449,
+ "out_tokens": 3007,
+ "model": "claude-opus-5-5"
+}

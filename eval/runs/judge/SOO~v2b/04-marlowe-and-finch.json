@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The decision-maker contradiction (Raj vs. Angela) is surfaced.\",\"pass\":true},\n  {\"item\":\"\\\"that's a diagram\\\" is tied to a messaging change.\",\"pass\":true},\n  {\"item\":\"The question shift (11 of 14 about stores) is reported as a fact.\",\"pass\":true},\n  {\"item\":\"The rep's \\\"better product online\\\" is treated as opinion, not used as a reason.\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report's main strength is how it handles the decision-maker contradiction. It moves from Tom's 'The CTO, Raj' to Angela signing and Tom meeting her only once, then to the takeaway about selling to whoever owns the problem. It also ties 'that's a diagram' to a live till-return demo and covers all four expected messaging directions with real evidence. It loses points in four places: it leaves the incumbent null and lists it as skipped, although T2 implies separate store and web systems; it labels Angela's December 27 story as opinion rather than secondhand fact; its close omits what Bev wrote down and asking Raj for the list of 14 questions; and it never addresses Tom's 'better product online' at all, although it doesn't use it as a reason.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The decision-maker contradiction (Raj vs. Angela) is surfaced.",
+    "pass": true
+   },
+   {
+    "item": "\"that's a diagram\" is tied to a messaging change.",
+    "pass": true
+   },
+   {
+    "item": "The question shift (11 of 14 about stores) is reported as a fact.",
+    "pass": true
+   },
+   {
+    "item": "The rep's \"better product online\" is treated as opinion, not used as a reason.",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report's main strength is how it handles the decision-maker contradiction. It moves from Tom's 'The CTO, Raj' to Angela signing and Tom meeting her only once, then to the takeaway about selling to whoever owns the problem. It also ties 'that's a diagram' to a live till-return demo and covers all four expected messaging directions with real evidence. It loses points in four places: it leaves the incumbent null and lists it as skipped, although T2 implies separate store and web systems; it labels Angela's December 27 story as opinion rather than secondhand fact; its close omits what Bev wrote down and asking Raj for the list of 14 questions; and it never addresses Tom's 'better product online' at all, although it doesn't use it as a reason."
+ },
+ "ms": 26104,
+ "cost": 0.125528,
+ "in_tokens": 9592,
+ "out_tokens": 2440,
+ "model": "claude-opus-5-5"
+}

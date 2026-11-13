@@ -1,0 +1,67 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"New proof step for recurring-revenue prospects, run before the contract goes to the finance signer: take one month of the prospect's failed renewals and show which ones usually come back with a retry or an updated card. Position it as \\\"Their file, not our average.\\\" Bring it to the controller or finance signer, not only the evaluation lead.\",\"evidence\":[\"E18\",\"E19\",\"E20\",\"E26\",\"E25\"],\"why\":\"The analysis of the customer's own failed renewals was the only thing that got the silent controller to speak, and he signed four days later after the paper had sat with him for two weeks.\",\"strength\":\"Test this\"},{\"target\":\"M10\",\"current_line\":\"Recover failed payments automatically with smart retries.\",\"type\":\"replace\",\"change\":\"For subscription and membership businesses that report churn: \\\"Win back the members who never meant to leave.\\\" Some of the churn you report is cards that failed, not people who cancelled. Smart retries recover those payments automatically.\",\"evidence\":[\"E1\",\"E2\",\"E4\"],\"why\":\"The evaluation started as a board-level churn problem, and failed payments only mattered once churn was split into people who cancelled and people whose card failed; the customer's phrase \\\"members who never meant to leave\\\" frames recovery as churn, not as a payments feature.\",\"strength\":\"Test this\"},{\"target\":\"M3\",\"current_line\":\"Online and in-store on one platform; the line between them has pretty much disappeared.\",\"type\":\"replace\",\"change\":\"For prospects whose front desk runs inside third-party studio software: say plainly that in-store payments work through a partner integration with [partner name], and offer a demo in the prospect's own setup showing check-in and a front-desk sale on one screen, before claiming online and in-store are unified.\",\"evidence\":[\"E23\",\"E29\",\"E31\",\"E34\"],\"why\":\"The buyer translated unified commerce into \\\"is that the readers?\\\", asked to see our reader inside their studio software, and we couldn't show it live, which is why the front desks stayed with the incumbent.\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"drop\",\"change\":\"Stop opening with the global positioning line for prospects whose pain is churn in a mostly domestic business; open with their churn problem and the own-data failed-renewal analysis instead.\",\"evidence\":[\"E21\"],\"why\":\"The rep opened with the global slide and got silence.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "New proof step for recurring-revenue prospects, run before the contract goes to the finance signer: take one month of the prospect's failed renewals and show which ones usually come back with a retry or an updated card. Position it as \"Their file, not our average.\" Bring it to the controller or finance signer, not only the evaluation lead.",
+    "evidence": [
+     "E18",
+     "E19",
+     "E20",
+     "E26",
+     "E25"
+    ],
+    "why": "The analysis of the customer's own failed renewals was the only thing that got the silent controller to speak, and he signed four days later after the paper had sat with him for two weeks.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M10",
+    "current_line": "Recover failed payments automatically with smart retries.",
+    "type": "replace",
+    "change": "For subscription and membership businesses that report churn: \"Win back the members who never meant to leave.\" Some of the churn you report is cards that failed, not people who cancelled. Smart retries recover those payments automatically.",
+    "evidence": [
+     "E1",
+     "E2",
+     "E4"
+    ],
+    "why": "The evaluation started as a board-level churn problem, and failed payments only mattered once churn was split into people who cancelled and people whose card failed; the customer's phrase \"members who never meant to leave\" frames recovery as churn, not as a payments feature.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M3",
+    "current_line": "Online and in-store on one platform; the line between them has pretty much disappeared.",
+    "type": "replace",
+    "change": "For prospects whose front desk runs inside third-party studio software: say plainly that in-store payments work through a partner integration with [partner name], and offer a demo in the prospect's own setup showing check-in and a front-desk sale on one screen, before claiming online and in-store are unified.",
+    "evidence": [
+     "E23",
+     "E29",
+     "E31",
+     "E34"
+    ],
+    "why": "The buyer translated unified commerce into \"is that the readers?\", asked to see our reader inside their studio software, and we couldn't show it live, which is why the front desks stayed with the incumbent.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "drop",
+    "change": "Stop opening with the global positioning line for prospects whose pain is churn in a mostly domestic business; open with their churn problem and the own-data failed-renewal analysis instead.",
+    "evidence": [
+     "E21"
+    ],
+    "why": "The rep opened with the global slide and got silence.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 20773,
+ "cost": 0.08158800000000001,
+ "in_tokens": 5677,
+ "out_tokens": 1809,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,68 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M2\",\"current_line\":\"Built for developers: launch payments fast with our APIs, docs and sandbox.\",\"type\":\"replace\",\"change\":\"For engineering-led buyers: 'Get one of your engineers to a working payment flow in our sandbox, over a weekend, before you decide.' Sales should make a sandbox prototype an explicit step in the evaluation instead of hearing about it afterwards.\",\"evidence\":[\"E16\",\"E22\",\"E18\"],\"why\":\"A customer engineer's weekend sandbox prototype turned a bake-off into a decision, and the docs and sandbox were the first thing to draw a reaction, so the line works better as an invitation to build than as a claim.\",\"strength\":\"Test this\"},{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"drop\",\"change\":\"For low-ticket marketplaces, take the acceptance-rate slide out of the core pitch. Keep it in reserve for when the buyer raises auth rates.\",\"evidence\":[\"E20\",\"E21\"],\"why\":\"The acceptance-rate slide was presented and met silence, and the buyer said 'our average booking is 38 dollars, I'm not losing sleep over auth rates.'\",\"strength\":\"Test this\"},{\"target\":\"M11\",\"current_line\":\"Onboard, verify and pay out to sellers worldwide, in their local currency.\",\"type\":\"replace\",\"change\":\"For marketplaces with workers on the supply side: 'Payments shouldn't be a team. Onboard and verify your [sitters/workers] and pay them locally in every country you launch, so your engineers can stop babysitting this.' Use the prospect's own word for its workers and for their pay (here 'sitter pay', not 'payouts'). Do not promise a payout timing such as 'paid by Friday' until we confirm we can support it.\",\"evidence\":[\"E19\",\"E33\",\"E34\",\"E37\",\"E35\"],\"why\":\"The marketplace capabilities landed, but the customer described the need as 'Payments shouldn't be a team' and 'We want to stop babysitting this' and called it 'sitter pay', which is sharper than our wording. Pay timing ('paid by Friday') is their promise to sitters, but we have no confirmed commitment on it.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a switching-continuity proof point for use early in evaluations that answers 'what do we lose': what happens to PayPal, Venmo and saved cards when a customer moves to us. Back it with a reference from a comparable customer that migrated saved cards. Publish it only once we have a confirmed position on Venmo.\",\"evidence\":[\"E13\",\"E14\",\"E26\",\"E30\"],\"why\":\"The customer's questions shifted from speed to 'what do we lose' (PayPal, Venmo, saved cards), the rep had no Venmo answer, and the request for a reference 'at our size without losing cards' was never met.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M2",
+    "current_line": "Built for developers: launch payments fast with our APIs, docs and sandbox.",
+    "type": "replace",
+    "change": "For engineering-led buyers: 'Get one of your engineers to a working payment flow in our sandbox, over a weekend, before you decide.' Sales should make a sandbox prototype an explicit step in the evaluation instead of hearing about it afterwards.",
+    "evidence": [
+     "E16",
+     "E22",
+     "E18"
+    ],
+    "why": "A customer engineer's weekend sandbox prototype turned a bake-off into a decision, and the docs and sandbox were the first thing to draw a reaction, so the line works better as an invitation to build than as a claim.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "drop",
+    "change": "For low-ticket marketplaces, take the acceptance-rate slide out of the core pitch. Keep it in reserve for when the buyer raises auth rates.",
+    "evidence": [
+     "E20",
+     "E21"
+    ],
+    "why": "The acceptance-rate slide was presented and met silence, and the buyer said 'our average booking is 38 dollars, I'm not losing sleep over auth rates.'",
+    "strength": "Test this"
+   },
+   {
+    "target": "M11",
+    "current_line": "Onboard, verify and pay out to sellers worldwide, in their local currency.",
+    "type": "replace",
+    "change": "For marketplaces with workers on the supply side: 'Payments shouldn't be a team. Onboard and verify your [sitters/workers] and pay them locally in every country you launch, so your engineers can stop babysitting this.' Use the prospect's own word for its workers and for their pay (here 'sitter pay', not 'payouts'). Do not promise a payout timing such as 'paid by Friday' until we confirm we can support it.",
+    "evidence": [
+     "E19",
+     "E33",
+     "E34",
+     "E37",
+     "E35"
+    ],
+    "why": "The marketplace capabilities landed, but the customer described the need as 'Payments shouldn't be a team' and 'We want to stop babysitting this' and called it 'sitter pay', which is sharper than our wording. Pay timing ('paid by Friday') is their promise to sitters, but we have no confirmed commitment on it.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a switching-continuity proof point for use early in evaluations that answers 'what do we lose': what happens to PayPal, Venmo and saved cards when a customer moves to us. Back it with a reference from a comparable customer that migrated saved cards. Publish it only once we have a confirmed position on Venmo.",
+    "evidence": [
+     "E13",
+     "E14",
+     "E26",
+     "E30"
+    ],
+    "why": "The customer's questions shifted from speed to 'what do we lose' (PayPal, Venmo, saved cards), the rep had no Venmo answer, and the request for a reference 'at our size without losing cards' was never met.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 21814,
+ "cost": 0.086412,
+ "in_tokens": 5990,
+ "out_tokens": 1925,
+ "model": "claude-opus-5-5"
+}

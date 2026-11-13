@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":1},\n \"sections\":{\"trigger\":2,\"decider\":1,\"competitor\":2,\"message\":1,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the international-only scope note\",\"pass\":true},\n  {\"item\":\"\\\"Decided before we got in the room\\\" is challenged with the coverage facts\",\"pass\":true},\n  {\"item\":\"\\\"that's an average. What's mine?\\\" is tied to a messaging change\",\"pass\":true},\n  {\"item\":\"The Adyen test results stay unknown\",\"pass\":true}\n ],\n \"fails\":[\n  \"Message section says the average uplift was 'rejected out loud, not met with silence', which contradicts T16 ('Silence was the uplift number, like I said'). It misstates the transcript.\"\n ],\n \"notes\":\"The report's strongest move is challenging 'decided before we got in the room' with the coverage facts: no review in 9–10 months, Stefan never met, and the analysis landing three weeks late after the test ended. It also ties every key quote to sound messaging changes and keeps Adyen's results unknown. It misses that the key tag is Approval rates (given only as runner-up), and the decider section never says the decision was effectively made before we engaged. The close mislabels answered questions as dodged and omits the follow-up to act on the analysis findings to protect the US and set up a win-back.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 1
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 1,
+   "competitor": 2,
+   "message": 1,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the international-only scope note",
+    "pass": true
+   },
+   {
+    "item": "\"Decided before we got in the room\" is challenged with the coverage facts",
+    "pass": true
+   },
+   {
+    "item": "\"that's an average. What's mine?\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "The Adyen test results stay unknown",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Message section says the average uplift was 'rejected out loud, not met with silence', which contradicts T16 ('Silence was the uplift number, like I said'). It misstates the transcript."
+  ],
+  "notes": "The report's strongest move is challenging 'decided before we got in the room' with the coverage facts: no review in 9–10 months, Stefan never met, and the analysis landing three weeks late after the test ended. It also ties every key quote to sound messaging changes and keeps Adyen's results unknown. It misses that the key tag is Approval rates (given only as runner-up), and the decider section never says the decision was effectively made before we engaged. The close mislabels answered questions as dodged and omits the follow-up to act on the analysis findings to protect the US and set up a win-back."
+ },
+ "ms": 27419,
+ "cost": 0.131984,
+ "in_tokens": 9909,
+ "out_tokens": 2636,
+ "model": "claude-opus-5-5"
+}

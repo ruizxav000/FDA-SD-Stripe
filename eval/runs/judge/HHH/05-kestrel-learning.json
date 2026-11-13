@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":1},\n \"sections\":{\"trigger\":2,\"decider\":1,\"competitor\":1,\"message\":2,\"decided\":1,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the international-only scope note\",\"pass\":true},\n  {\"item\":\"\\\"Decided before we got in the room\\\" is challenged with the coverage facts\",\"pass\":false},\n  {\"item\":\"\\\"that's an average. What's mine?\\\" is tied to a messaging change\",\"pass\":true},\n  {\"item\":\"The Adyen test results stay unknown\",\"pass\":true}\n ],\n \"fails\":[\n  \"Competitor insight claims 'the rep never names the vendor' and the scope says 'vendor not confirmed'. The rep explicitly named Adyen as the vendor that ran the test (T10), so this misrepresents the transcript.\"\n ],\n \"notes\":\"The report tied the rejected average-uplift pitch ('that's an average. What's mine?', 'I can't take an average to my CFO') to a concrete shift toward the customer's own approvals by country, card and issuer. It also kept the Adyen results unknown. Its biggest miss is the 'what decided it' section: it never uses the coverage facts (no business review for 9–10 months, never met Stefan, learned of the evaluation only from the renewal notice, 'I heard from Stripe when I said I was leaving') to show that 'decided before we got in the room' is itself the finding. The decider insight also misses that the CFO had approved before we engaged, and the rep takeaway is reactive (start when a split request arrives) rather than the proactive 'healthy accounts still need reviews; know when the buyer changes'.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 1
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 1,
+   "competitor": 1,
+   "message": 2,
+   "decided": 1,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the international-only scope note",
+    "pass": true
+   },
+   {
+    "item": "\"Decided before we got in the room\" is challenged with the coverage facts",
+    "pass": false
+   },
+   {
+    "item": "\"that's an average. What's mine?\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "The Adyen test results stay unknown",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Competitor insight claims 'the rep never names the vendor' and the scope says 'vendor not confirmed'. The rep explicitly named Adyen as the vendor that ran the test (T10), so this misrepresents the transcript."
+  ],
+  "notes": "The report tied the rejected average-uplift pitch ('that's an average. What's mine?', 'I can't take an average to my CFO') to a concrete shift toward the customer's own approvals by country, card and issuer. It also kept the Adyen results unknown. Its biggest miss is the 'what decided it' section: it never uses the coverage facts (no business review for 9–10 months, never met Stefan, learned of the evaluation only from the renewal notice, 'I heard from Stripe when I said I was leaving') to show that 'decided before we got in the room' is itself the finding. The decider insight also misses that the CFO had approved before we engaged, and the rep takeaway is reactive (start when a split request arrives) rather than the proactive 'healthy accounts still need reviews; know when the buyer changes'."
+ },
+ "ms": 34264,
+ "cost": 0.144,
+ "in_tokens": 9316,
+ "out_tokens": 3474,
+ "model": "claude-opus-5-5"
+}

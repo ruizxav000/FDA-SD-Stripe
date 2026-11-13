@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":1},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":1,\"message\":2,\"decided\":1,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"Value proof is named as the underlying cause behind the No decision tag\",\"pass\":true},{\"item\":\"\\\"Nothing we could have done\\\" is labeled opinion and challenged\",\"pass\":false},{\"item\":\"The payback request one month before the freeze is surfaced as the turning point\",\"pass\":true},{\"item\":\"The revenue framing is reported as pushed back\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report correctly makes the payback request a month before the freeze the turning point, and its messaging changes match all four expected directions (drop revenue framing, use the customer's own number, a cost-of-doing-nothing story for the CFO, and a staged-migration reference). However, it never quotes or labels the rep's \\\"It's timing... I don't think there was anything we could have done\\\" as opinion, so it never directly refutes it. It also inverts the tag, putting Value proof first and No decision only as runner-up, and it leaves the warning-sign shift toward finance out of the competitor section and leaves what the homegrown system costs off the list of open questions.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 1
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 1,
+   "message": 2,
+   "decided": 1,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "Value proof is named as the underlying cause behind the No decision tag",
+    "pass": true
+   },
+   {
+    "item": "\"Nothing we could have done\" is labeled opinion and challenged",
+    "pass": false
+   },
+   {
+    "item": "The payback request one month before the freeze is surfaced as the turning point",
+    "pass": true
+   },
+   {
+    "item": "The revenue framing is reported as pushed back",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report correctly makes the payback request a month before the freeze the turning point, and its messaging changes match all four expected directions (drop revenue framing, use the customer's own number, a cost-of-doing-nothing story for the CFO, and a staged-migration reference). However, it never quotes or labels the rep's \"It's timing... I don't think there was anything we could have done\" as opinion, so it never directly refutes it. It also inverts the tag, putting Value proof first and No decision only as runner-up, and it leaves the warning-sign shift toward finance out of the competitor section and leaves what the homegrown system costs off the list of open questions."
+ },
+ "ms": 37648,
+ "cost": 0.15316000000000002,
+ "in_tokens": 9676,
+ "out_tokens": 3788,
+ "model": "claude-opus-5-5"
+}

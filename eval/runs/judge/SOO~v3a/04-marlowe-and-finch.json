@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The decision-maker contradiction (Raj vs. Angela) is surfaced.\",\"pass\":true},{\"item\":\"\\\"that's a diagram\\\" is tied to a messaging change.\",\"pass\":true},{\"item\":\"The question shift (11 of 14 about stores) is reported as a fact.\",\"pass\":true},{\"item\":\"The rep's \\\"better product online\\\" is treated as opinion, not used as a reason.\",\"pass\":false}],\n \"fails\":[\"Messaging change and message-section copy specify the till return is 'refunded to the original payment'. That product capability is not in the transcript, and the report itself says the transcript doesn't establish whether we can do the till return.\"],\n \"notes\":\"Strongest point: the report surfaces the Raj-vs-Angela contradiction and ties the loss to the store-ops workshop, the 'that's a diagram' moment and missing store proof. Its messaging changes match the key's direction closely. Misses: the incumbent is left null, though the separate store and web records point to separate providers. The Angela December 27 story is labelled opinion rather than secondhand fact, and the rep's closing 'better product online' claim is never addressed. Several of Tom's relayed lines are attributed to Raj or Bev as speaker. The close omits what Bev wrote down and asking Raj for the 14-question list, and it lists the decider question as dodged even though probing answered it.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The decision-maker contradiction (Raj vs. Angela) is surfaced.",
+    "pass": true
+   },
+   {
+    "item": "\"that's a diagram\" is tied to a messaging change.",
+    "pass": true
+   },
+   {
+    "item": "The question shift (11 of 14 about stores) is reported as a fact.",
+    "pass": true
+   },
+   {
+    "item": "The rep's \"better product online\" is treated as opinion, not used as a reason.",
+    "pass": false
+   }
+  ],
+  "fails": [
+   "Messaging change and message-section copy specify the till return is 'refunded to the original payment'. That product capability is not in the transcript, and the report itself says the transcript doesn't establish whether we can do the till return."
+  ],
+  "notes": "Strongest point: the report surfaces the Raj-vs-Angela contradiction and ties the loss to the store-ops workshop, the 'that's a diagram' moment and missing store proof. Its messaging changes match the key's direction closely. Misses: the incumbent is left null, though the separate store and web records point to separate providers. The Angela December 27 story is labelled opinion rather than secondhand fact, and the rep's closing 'better product online' claim is never addressed. Several of Tom's relayed lines are attributed to Raj or Bev as speaker. The close omits what Bev wrote down and asking Raj for the 14-question list, and it lists the decider question as dodged even though probing answered it."
+ },
+ "ms": 27009,
+ "cost": 0.12886799999999998,
+ "in_tokens": 9857,
+ "out_tokens": 2501,
+ "model": "claude-opus-5-5"
+}

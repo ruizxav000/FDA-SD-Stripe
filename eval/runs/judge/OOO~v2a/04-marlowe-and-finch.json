@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The decision-maker contradiction (Raj vs. Angela) is surfaced.\",\"pass\":true},{\"item\":\"\\\"that's a diagram\\\" is tied to a messaging change.\",\"pass\":true},{\"item\":\"The question shift (11 of 14 about stores) is reported as a fact.\",\"pass\":true},{\"item\":\"The rep's \\\"better product online\\\" is treated as opinion, not used as a reason.\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report gets the core story right. It surfaces the Raj-vs-Angela contradiction clearly, ties \\\"that's a diagram\\\" to a demo-led rewrite in the customer's own words, and frames every gap as a store-side proof gap. Its main misses: it leaves the incumbent null even though the transcript implies separate store and web systems, and it labels the Angela December 27 story as opinion rather than secondhand fact. The close omits the key's not-covered items (Adyen's commercial terms, what Bev wrote down, whether a partner-backed rollout plan would have been accepted) and the follow-up to get Raj's list of 14 questions. It also never explicitly addresses the rep's 'better product online' remark; it passes only because the report doesn't rely on it.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The decision-maker contradiction (Raj vs. Angela) is surfaced.",
+    "pass": true
+   },
+   {
+    "item": "\"that's a diagram\" is tied to a messaging change.",
+    "pass": true
+   },
+   {
+    "item": "The question shift (11 of 14 about stores) is reported as a fact.",
+    "pass": true
+   },
+   {
+    "item": "The rep's \"better product online\" is treated as opinion, not used as a reason.",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core story right. It surfaces the Raj-vs-Angela contradiction clearly, ties \"that's a diagram\" to a demo-led rewrite in the customer's own words, and frames every gap as a store-side proof gap. Its main misses: it leaves the incumbent null even though the transcript implies separate store and web systems, and it labels the Angela December 27 story as opinion rather than secondhand fact. The close omits the key's not-covered items (Adyen's commercial terms, what Bev wrote down, whether a partner-backed rollout plan would have been accepted) and the follow-up to get Raj's list of 14 questions. It also never explicitly addresses the rep's 'better product online' remark; it passes only because the report doesn't rely on it."
+ },
+ "ms": 26094,
+ "cost": 0.130076,
+ "in_tokens": 9888,
+ "out_tokens": 2549,
+ "model": "claude-opus-5-5"
+}

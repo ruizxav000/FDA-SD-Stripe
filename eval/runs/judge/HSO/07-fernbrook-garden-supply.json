@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The tag is Value proof, and the report explicitly challenges 'lost on price'\",\"pass\":true},\n  {\"item\":\"The rep's 'more room on the rate' is labeled opinion and shown as contradicted\",\"pass\":true},\n  {\"item\":\"The declined decline analysis is surfaced\",\"pass\":true},\n  {\"item\":\"Rate-vs-rate (not total cost) on the CFO's page is identified\",\"pass\":true}\n ],\n \"fails\":[\"Trigger insight states as fact that 'customers call in annoyed or don't come back' is the rep's embellishment and not something Lucy said. The transcript doesn't support that; Sam gives it as part of Lucy's account (T2).\"],\n \"notes\":\"The report gets the core diagnosis right: it tags Value proof, reads 'the same thing' as the CFO seeing us as a commodity, calls the rep's rate claim a guess his own hedges undercut, and surfaces the skipped decline analysis and the rate-only one-pager. It falls short in a few places. The close never proposes offering the decline analysis now, ahead of spring. The trigger insight doesn't note that the pain was owned by someone who couldn't sign, and it adds an unsupported claim that the rep embellished part of Lucy's account. The rep's 'more room on the rate' appears only in the decided insight, not as an evidence item labelled opinion.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The tag is Value proof, and the report explicitly challenges 'lost on price'",
+    "pass": true
+   },
+   {
+    "item": "The rep's 'more room on the rate' is labeled opinion and shown as contradicted",
+    "pass": true
+   },
+   {
+    "item": "The declined decline analysis is surfaced",
+    "pass": true
+   },
+   {
+    "item": "Rate-vs-rate (not total cost) on the CFO's page is identified",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Trigger insight states as fact that 'customers call in annoyed or don't come back' is the rep's embellishment and not something Lucy said. The transcript doesn't support that; Sam gives it as part of Lucy's account (T2)."
+  ],
+  "notes": "The report gets the core diagnosis right: it tags Value proof, reads 'the same thing' as the CFO seeing us as a commodity, calls the rep's rate claim a guess his own hedges undercut, and surfaces the skipped decline analysis and the rate-only one-pager. It falls short in a few places. The close never proposes offering the decline analysis now, ahead of spring. The trigger insight doesn't note that the pain was owned by someone who couldn't sign, and it adds an unsupported claim that the rep embellished part of Lucy's account. The rep's 'more room on the rate' appears only in the decided insight, not as an evidence item labelled opinion."
+ },
+ "ms": 35532,
+ "cost": 0.147856,
+ "in_tokens": 10088,
+ "out_tokens": 3358,
+ "model": "claude-opus-5-5"
+}

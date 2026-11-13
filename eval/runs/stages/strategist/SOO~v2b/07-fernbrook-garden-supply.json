@@ -1,0 +1,73 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For buyers who come to us over failed checkouts, lead with their own number instead of our average: \\\"You're losing [X] orders a month at the last step, worth [$Y] a year, mostly on the big baskets. Send us a three-month decline export and we'll show you what recovering them is worth.\\\" Keep the acceptance mechanics as supporting detail, not as the headline.\",\"evidence\":[\"E27\",\"E2\",\"E29\",\"E41\",\"E43\"],\"why\":\"We led with 'the average improvement in acceptance', and the CFO still saw 'the same thing', while the customer's own one-in-twelve failure rate and the decline export Farah offered could have put a dollar figure on the difference.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"When the decider won't take vendor meetings, give the champion a one-page business case she can hand over without us. It covers the failed-order rate from her own dashboard, the revenue those orders represent, the projected recovery, and our price. Send this instead of the deck and pricing proposal, and send it before the price reaches the decider.\",\"evidence\":[\"E37\",\"E38\",\"E6\",\"E8\",\"E19\",\"E31\"],\"why\":\"Lucy asked for something she could hand Martin and got the deck, so the CFO decided from a controller's rate-versus-rate page that had nothing from us on it.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"When the incumbent re-prices, answer with total cost, not a rate counter: rate plus gateway fee plus chargeback handling, shown next to the revenue from recovered failed orders. Then bring the conversation back to the problem: \\\"A better rate doesn't fix orders dying at the last step.\\\"\",\"evidence\":[\"E10\",\"X1\",\"E12\",\"E22\"],\"why\":\"The bank offered 'just a better rate' with nothing on declines, after which every email was about the rate, and costs that are 'not on the statement line' never reached the decision page.\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"replace\",\"change\":\"For buyers whose evaluation starts with failed payments, open with their problem in their words: \\\"You do all the work to get someone to buy, and then the card says no.\\\" Follow with why it happens (declines their current processor can't explain) and put the global-growth line later in the deck.\",\"evidence\":[\"E2\",\"E4\",\"E3\",\"E42\"],\"why\":\"The evaluation started because about one in twelve online orders was failing and the processor couldn't explain why, which a global-growth opener does not speak to.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For buyers who come to us over failed checkouts, lead with their own number instead of our average: \"You're losing [X] orders a month at the last step, worth [$Y] a year, mostly on the big baskets. Send us a three-month decline export and we'll show you what recovering them is worth.\" Keep the acceptance mechanics as supporting detail, not as the headline.",
+    "evidence": [
+     "E27",
+     "E2",
+     "E29",
+     "E41",
+     "E43"
+    ],
+    "why": "We led with 'the average improvement in acceptance', and the CFO still saw 'the same thing', while the customer's own one-in-twelve failure rate and the decline export Farah offered could have put a dollar figure on the difference.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "When the decider won't take vendor meetings, give the champion a one-page business case she can hand over without us. It covers the failed-order rate from her own dashboard, the revenue those orders represent, the projected recovery, and our price. Send this instead of the deck and pricing proposal, and send it before the price reaches the decider.",
+    "evidence": [
+     "E37",
+     "E38",
+     "E6",
+     "E8",
+     "E19",
+     "E31"
+    ],
+    "why": "Lucy asked for something she could hand Martin and got the deck, so the CFO decided from a controller's rate-versus-rate page that had nothing from us on it.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "When the incumbent re-prices, answer with total cost, not a rate counter: rate plus gateway fee plus chargeback handling, shown next to the revenue from recovered failed orders. Then bring the conversation back to the problem: \"A better rate doesn't fix orders dying at the last step.\"",
+    "evidence": [
+     "E10",
+     "X1",
+     "E12",
+     "E22"
+    ],
+    "why": "The bank offered 'just a better rate' with nothing on declines, after which every email was about the rate, and costs that are 'not on the statement line' never reached the decision page.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "replace",
+    "change": "For buyers whose evaluation starts with failed payments, open with their problem in their words: \"You do all the work to get someone to buy, and then the card says no.\" Follow with why it happens (declines their current processor can't explain) and put the global-growth line later in the deck.",
+    "evidence": [
+     "E2",
+     "E4",
+     "E3",
+     "E42"
+    ],
+    "why": "The evaluation started because about one in twelve online orders was failing and the processor couldn't explain why, which a global-growth opener does not speak to.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 19121,
+ "cost": 0.07925199999999999,
+ "in_tokens": 5825,
+ "out_tokens": 1633,
+ "model": "claude-opus-5-5"
+}

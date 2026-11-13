@@ -1,0 +1,386 @@
+{
+ "version": "2026-11-13.3",
+ "header": {
+  "deal": "Fernbrook Garden Supply",
+  "outcome": "Lost",
+  "scope": null,
+  "competitor": "Fiserv (through their bank)",
+  "incumbent": "Fiserv through their bank",
+  "tag": "Approval rates",
+  "runner_up": "Champion or access",
+  "tag_why": "The rep blames price, but the CFO saw only a rate-versus-rate page and called us 'the same thing' because nobody showed what Fernbrook's own failed checkout orders were worth; Farah offered that analysis and the rep skipped it, and the case had to go through a champion to a CFO we never met."
+ },
+ "messaging_changes": [
+  {
+   "target": "M4",
+   "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "Do not lead with an average. Offer to size the prospect's own losses instead: Send us three months of your declined orders and we'll show you what the orders dying at the last step are worth to you, and how much of that we can win back. Use this with ecommerce champions whose finance lead makes the final call.",
+   "evidence": [
+    "E26",
+    "E16",
+    "E29",
+    "E41"
+   ],
+   "evidence_found": true,
+   "why": "We showed the average-uplift slide, but the CFO still saw 'the same thing', even though Farah had offered to put a figure on the failed orders from a three-month export.",
+   "strength": "Test this"
+  },
+  {
+   "target": null,
+   "current_line": null,
+   "line_matches": true,
+   "type": "add",
+   "change": "Add a one-page business case the champion can hand to finance, built on the prospect's own data before any pricing goes out. It should show the value of failed orders, especially the big baskets, next to our price, so finance never sees our quote as the only thing from us. Use it whenever the decider will not take vendor meetings.",
+   "evidence": [
+    "E38",
+    "E39",
+    "E18",
+    "E22",
+    "E7"
+   ],
+   "evidence_found": true,
+   "why": "The champion asked for 'a one-page business case' and was sent the deck and pricing instead, and the CFO, who never met us, decided on a controller's page where our quote was the only thing from us.",
+   "strength": "Test this"
+  },
+  {
+   "target": null,
+   "current_line": null,
+   "line_matches": true,
+   "type": "add",
+   "change": "Add a line for prospects on a bank-provided processor, used early before the incumbent counters: A better rate from your current processor still leaves the same orders failing at checkout. The question is what the card says no to, not just what each transaction costs.",
+   "evidence": [
+    "E9",
+    "E10",
+    "E12",
+    "E11"
+   ],
+   "evidence_found": true,
+   "why": "Once the bank sharpened the rate with 'No new product, nothing', the conversation moved from why big orders fail to the rate, and we never pulled it back.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M1",
+   "current_line": "Financial infrastructure to grow globally, in every currency.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For inbound prospects whose checkout orders are failing at the payment step, open with lost revenue instead of global growth: You do all the work to get someone to buy, and then the card says no. Let's find out what those orders are worth, starting from your own dashboard.",
+   "evidence": [
+    "E2",
+    "E4",
+    "E43",
+    "E3"
+   ],
+   "evidence_found": true,
+   "why": "The deal started with the champion's own dashboard showing one in twelve online orders failing, worse on the big baskets, and her greenhouse line describes that cost far more sharply than a global-growth opener does.",
+   "strength": "Test this"
+  }
+ ],
+ "no_change_reason": null,
+ "sections": {
+  "trigger": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E1",
+     "excerpt": "Their ecommerce director, Lucy, came inbound.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E2",
+     "excerpt": "She said about one in twelve online orders was failing at the payment step, and it was worse on the big baskets.",
+     "label": "fact",
+     "speaker": "Lucy",
+     "verified": true
+    },
+    {
+     "id": "E4",
+     "excerpt": "Her number. Off their own dashboard.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E3",
+     "excerpt": "And she couldn't get a straight answer from the processor on why.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The deal started with lost revenue, not with cost: failing orders, worst on the highest-value baskets, measured on the customer's own dashboard. The raw material for a business case was handed to us at the first conversation and never turned into a figure, so a deal triggered by lost revenue ended as a fee comparison. The incumbent's failure was opacity: Lucy could not get an explanation for the declines. Our positioning opener about growing globally in every currency has nothing to say to this.",
+   "messaging": "Open with the cost of failed checkouts measured in the prospect's own data, for example 'what are the orders failing at your payment step worth?', not with M1's global-growth line."
+  },
+  "decider": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E5",
+     "excerpt": "The CFO, Martin. Lucy was the champion, she wanted it, IT was fine with it. Martin said no.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E6",
+     "excerpt": "Lucy told me. I never met him.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E7",
+     "excerpt": "Lucy said he doesn't take vendor meetings and she'd carry it.",
+     "label": "fact",
+     "speaker": "Lucy",
+     "verified": true
+    },
+    {
+     "id": "E35",
+     "excerpt": "He'd said he'd do it if finance approved.",
+     "label": "fact",
+     "speaker": "IT lead",
+     "verified": true
+    }
+   ],
+   "insight": "The only person who could say yes was never reached, and the champion who carried the case misread him: she called it a formality just before he refused. The rep's line that IT was fine with it does not hold up, because the IT lead's support depended on finance approving and he was nervous about moving before spring. Everything we know about Martin comes through Lucy, so any read of his motives is secondhand.",
+   "messaging": "When the decider won't meet vendors, our message has to reach him through the champion, so give champions a one-page summary written for finance rather than a deck written for an ecommerce buyer."
+  },
+  "competitor": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E8",
+     "excerpt": "They were on Fiserv through their bank, had been forever.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E9",
+     "excerpt": "when the bank heard, they came back and sharpened the rate.",
+     "label": "fact",
+     "speaker": "Lucy",
+     "verified": true
+    },
+    {
+     "id": "E10",
+     "excerpt": "No new product, nothing. Just a better rate.",
+     "label": "opinion",
+     "speaker": "Lucy",
+     "verified": true
+    },
+    {
+     "id": "E12",
+     "excerpt": "After the bank came back, every email was the rate.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The incumbent did not have to fix the declines. It only had to lower its rate, and that one move changed the questions from why big orders fail to whether we could beat the rate. Nothing in the transcript shows we pulled the conversation back to declines; we answered on the incumbent's terms. The long bank relationship is real, but there is no evidence of a bundle or a lock-in deciding it.",
+   "messaging": "Expect the incumbent to cut its rate and say so early: a cheaper rate on the same processor still leaves the same orders failing at checkout."
+  },
+  "message": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E11",
+     "excerpt": "Up to then Lucy was asking about declines. Why big orders fail, what we'd do about it.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E14",
+     "excerpt": "Lucy was nodding the whole way.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E15",
+     "excerpt": "Silence, honestly, nothing bombed. It was a good cycle. We lost on price.",
+     "label": "opinion",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E26",
+     "excerpt": "We showed the uplift slide. The average improvement in acceptance.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The explanation of why big-ticket orders get declined landed with Lucy, but it was spoken and never made it to the CFO. The rep says nothing got silence, but the silence was at the level that decided: the average-uplift slide (M4) and the customer stories (M8) produced no figure Martin could weigh against a rate. A strong reaction from the champion was mistaken for a reaction from the buyer.",
+   "messaging": "Replace M4's 'average uplift' claim with a promise to calculate the uplift on the prospect's own declined orders, and turn the explanation of big-basket declines into a written leave-behind."
+  },
+  "decided": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E16",
+     "excerpt": "he's not going to pay more for the same thing.",
+     "label": "quote",
+     "speaker": "Martin (via Lucy)",
+     "verified": true
+    },
+    {
+     "id": "E18",
+     "excerpt": "Their rate with the bank. The controller did a one-pager for Martin. Our rate, their rate, side by side.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E22",
+     "excerpt": "Our quote.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E36",
+     "excerpt": "Martin would still have been looking at a page that said same rate, so why move. So maybe not only the rate.",
+     "label": "opinion",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The deal was decided on a page the customer's controller wrote, and the only thing on it from us was our quote. 'The same thing' is a value problem, not a price problem: the CFO saw no difference to pay for. The rep's own counterfactual admits that even a matched rate leaves a CFO asking why he should move. The rep cannot give a reliable account of the loss; he was not in the room and even the CFO's quoted words come out slightly differently at T16 and T24.",
+   "messaging": "Never let a price be the only thing from us in front of finance: every quote should go out with a line stating what the prospect's failed orders cost them."
+  },
+  "gaps": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E38",
+     "excerpt": "Lucy asked once if we had something she could hand Martin. Like a one-page business case.",
+     "label": "fact",
+     "speaker": "Lucy",
+     "verified": true
+    },
+    {
+     "id": "E39",
+     "excerpt": "I sent her the deck and the pricing proposal.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E29",
+     "excerpt": "Farah offered to run their declines. She wanted a three-month export so she could show what the failed orders were worth.",
+     "label": "fact",
+     "speaker": "Farah",
+     "verified": true
+    },
+    {
+     "id": "E30",
+     "excerpt": "it was the last two weeks of the quarter, and I didn't want to slow things down.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "This gap was self-inflicted, not a product gap. The champion asked for exactly what lost the deal, Farah offered the analysis that would have produced it, and the rep skipped it to save time and then lost at the finance stage. The gateway fee and the full-time chargeback person the rep mentions were never put into any figure, so the total-cost argument is the rep's opinion, not something the customer saw. The ROI study in M6 does not replace a business case built on this customer's numbers.",
+   "messaging": "Make the analysis of the prospect's own declines, with a one-page business case covering failed-order value, gateway fees and chargeback handling, a standard step before any pricing goes to finance."
+  },
+  "language": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E41",
+     "excerpt": "orders dying at the last step.",
+     "label": "quote",
+     "speaker": "Lucy",
+     "verified": true
+    },
+    {
+     "id": "E42",
+     "excerpt": "the big baskets.",
+     "label": "quote",
+     "speaker": "Lucy",
+     "verified": true
+    },
+    {
+     "id": "E43",
+     "excerpt": "we do all the work to get someone to buy a four-thousand-dollar greenhouse and then the card says no.",
+     "label": "quote",
+     "speaker": "Lucy",
+     "verified": true
+    },
+    {
+     "id": "E44",
+     "excerpt": "From Martin, secondhand, all I have is 'the same thing.'",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The champion describes lost sales and wasted effort; we talk about authorization rates and acceptance uplift. Those are two different vocabularies, and the CFO's only recorded phrase, 'the same thing', shows ours never crossed over. Her greenhouse line is a ready-made way to describe the cost, and we never turned it into a figure.",
+   "messaging": "Say it the way the customer does, as orders dying at the last step and big baskets the card says no to, and attach a figure for what those orders are worth instead of 'authorization uplift'."
+  }
+ },
+ "close": {
+  "gaps": [
+   {
+    "question": "Which part of our pitch got silence?",
+    "kind": "dodged",
+    "follow_up": "Ask Lucy: which of our materials did you actually use when presenting to Martin, and what did he ignore or push back on?"
+   },
+   {
+    "question": "Did we put a figure on the value they'd get?",
+    "kind": "dodged",
+    "follow_up": "Ask Sam and Farah: can we still get the three-month decline export from Lucy and size the failed-order value, to reopen the conversation?"
+   },
+   {
+    "question": "What did Martin know about what the one-in-twelve failures were costing?",
+    "kind": "unknown",
+    "follow_up": "Ask Lucy: did you give Martin any figure for the failed orders, and how did he react to it?"
+   },
+   {
+    "question": "How large was the rate gap after the bank's counter, and was total cost (gateway fee, chargeback staff) ever compared?",
+    "kind": "skipped",
+    "follow_up": "Ask Sam for the controller's one-pager figures, or ask Lucy what the gap was and whether the gateway fee was considered."
+   },
+   {
+    "question": "Did the IT lead's concern about moving before spring factor into Martin's decision?",
+    "kind": "unknown",
+    "follow_up": "Ask Lucy whether timing or migration risk came up in the meeting with Martin, or only the rate."
+   }
+  ],
+  "rep_takeaway": "When a champion asks for something she can hand the decider, that request is the deal. Lucy asked for a one-page business case and Farah offered the analysis to build it, but quarter-end pressure won. Martin then decided on a page the customer's controller wrote, where our quote was the only thing from us. A rate can always be matched; a figure for what their own failed orders cost cannot. Take the extra two weeks."
+ },
+ "confidence": "medium",
+ "checks": {
+  "quotes_total": 28,
+  "quotes_failed": 0,
+  "failed": [],
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5",
+   "strategist": "claude-opus-5-5"
+  },
+  "ms": 111098,
+  "cost": 0.36365200000000003,
+  "stage_ms": {
+   "reader": 36438,
+   "analyst": 57160,
+   "strategist": 17500
+  },
+  "stage_cost": {
+   "reader": 0.07555999999999999,
+   "analyst": 0.21199600000000002,
+   "strategist": 0.076096
+  },
+  "reader_items": 45,
+  "reader_verbatim": 45
+ }
+}

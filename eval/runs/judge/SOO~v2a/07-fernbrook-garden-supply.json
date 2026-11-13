@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":1,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The tag is Value proof, and the report explicitly challenges 'lost on price'\",\"pass\":true},{\"item\":\"The rep's 'more room on the rate' is labeled opinion and shown as contradicted\",\"pass\":true},{\"item\":\"The declined decline analysis is surfaced\",\"pass\":true},{\"item\":\"Rate-vs-rate (not total cost) on the CFO's page is identified\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report gets the core right: it tags Value proof, shows the CFO decided on a rate-only one-pager where our only input was the quote, and surfaces the decline analysis the rep turned down for quarter-end. It never cites the rep's T42 line ('more room on the rate, we win this') as opinion in the decided section, though it labels 'We lost on price' as opinion and uses the T34 hedge to undercut it, so the must-catch passes on substance only. The close does not offer the decline analysis now, ahead of spring, and never explicitly flags that the failed orders' value was never calculated; the messaging changes also leave total cost (gateway fee, chargebacks person) to the section notes.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 1,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The tag is Value proof, and the report explicitly challenges 'lost on price'",
+    "pass": true
+   },
+   {
+    "item": "The rep's 'more room on the rate' is labeled opinion and shown as contradicted",
+    "pass": true
+   },
+   {
+    "item": "The declined decline analysis is surfaced",
+    "pass": true
+   },
+   {
+    "item": "Rate-vs-rate (not total cost) on the CFO's page is identified",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core right: it tags Value proof, shows the CFO decided on a rate-only one-pager where our only input was the quote, and surfaces the decline analysis the rep turned down for quarter-end. It never cites the rep's T42 line ('more room on the rate, we win this') as opinion in the decided section, though it labels 'We lost on price' as opinion and uses the T34 hedge to undercut it, so the must-catch passes on substance only. The close does not offer the decline analysis now, ahead of spring, and never explicitly flags that the failed orders' value was never calculated; the messaging changes also leave total cost (gateway fee, chargebacks person) to the section notes."
+ },
+ "ms": 39179,
+ "cost": 0.15417599999999998,
+ "in_tokens": 9873,
+ "out_tokens": 3760,
+ "model": "claude-opus-5-5"
+}

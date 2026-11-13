@@ -1,0 +1,70 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M2\",\"current_line\":\"Built for developers: launch payments fast with our APIs, docs and sandbox.\",\"type\":\"replace\",\"change\":\"For engineering-led buyers, make the developer claim an early ask: invite one of their engineers to build their own core payment flow (for a pet-sitting app, sitter pay) in our sandbox using our docs, then review it with their engineering lead. Suggested line: \\\"Don't take our word for it. Have one of your engineers build your own payment flow in our sandbox this week.\\\"\",\"evidence\":[\"E17\",\"E22\",\"E23\",\"E39\"],\"why\":\"The deal turned when a customer engineer built a working sitter payment flow over a weekend with our docs and sandbox, after which Daniel \\\"stopped saying \\\"if\\\"\\\", so the proof was hands-on experience rather than our claim.\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"replace\",\"change\":\"For buyers whose engineering team carries payments upkeep, open with removing the burden, in the customer's words: \\\"Payments shouldn't be a team.\\\" Follow with: stop tying up engineers just keeping payments working, and get stalled roadmap items like faster sitter pay moving. Make paying people locally in new countries the second beat. Use the buyer's own nouns (\\\"sitter pay\\\", not \\\"payouts\\\").\",\"evidence\":[\"E3\",\"E4\",\"E34\",\"E35\",\"E1\",\"E38\"],\"why\":\"Expansion set the deadline, but the pain the signer felt was two engineers \\\"just keeping sitter payments working\\\" and a sitter-pay roadmap item pushed three quarters, which the customer framed as \\\"We want to stop babysitting this.\\\"\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For buyers switching providers, add a migration proof point ready before the competitor raises it: a named customer at comparable scale that moved saved cards without losses, plus a direct, confirmed answer on keeping PayPal and Venmo. It must answer the buyer's question as asked: \\\"who's done this at our size without losing cards?\\\"\",\"evidence\":[\"E13\",\"E30\",\"E25\",\"E26\"],\"why\":\"After the Braintree call the conversation went from \\\"how fast can we build this\\\" to \\\"what do we lose\\\". The rep \\\"danced around\\\" PayPal, had no Venmo answer, and never sent the saved-card reference the customer asked for.\",\"strength\":\"Test this\"},{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"drop\",\"change\":\"Stop leading with the acceptance-rate slide for buyers with low average transaction values who say auth rates aren't a concern. Ask first whether authorization rates are a problem for them, and show this only if the answer is yes.\",\"evidence\":[\"E20\",\"E21\"],\"why\":\"The rep ran the whole acceptance-rate slide to silence, and the decider said \\\"our average booking is 38 dollars, I'm not losing sleep over auth rates.\\\"\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M2",
+    "current_line": "Built for developers: launch payments fast with our APIs, docs and sandbox.",
+    "type": "replace",
+    "change": "For engineering-led buyers, make the developer claim an early ask: invite one of their engineers to build their own core payment flow (for a pet-sitting app, sitter pay) in our sandbox using our docs, then review it with their engineering lead. Suggested line: \"Don't take our word for it. Have one of your engineers build your own payment flow in our sandbox this week.\"",
+    "evidence": [
+     "E17",
+     "E22",
+     "E23",
+     "E39"
+    ],
+    "why": "The deal turned when a customer engineer built a working sitter payment flow over a weekend with our docs and sandbox, after which Daniel \"stopped saying \"if\"\", so the proof was hands-on experience rather than our claim.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "replace",
+    "change": "For buyers whose engineering team carries payments upkeep, open with removing the burden, in the customer's words: \"Payments shouldn't be a team.\" Follow with: stop tying up engineers just keeping payments working, and get stalled roadmap items like faster sitter pay moving. Make paying people locally in new countries the second beat. Use the buyer's own nouns (\"sitter pay\", not \"payouts\").",
+    "evidence": [
+     "E3",
+     "E4",
+     "E34",
+     "E35",
+     "E1",
+     "E38"
+    ],
+    "why": "Expansion set the deadline, but the pain the signer felt was two engineers \"just keeping sitter payments working\" and a sitter-pay roadmap item pushed three quarters, which the customer framed as \"We want to stop babysitting this.\"",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For buyers switching providers, add a migration proof point ready before the competitor raises it: a named customer at comparable scale that moved saved cards without losses, plus a direct, confirmed answer on keeping PayPal and Venmo. It must answer the buyer's question as asked: \"who's done this at our size without losing cards?\"",
+    "evidence": [
+     "E13",
+     "E30",
+     "E25",
+     "E26"
+    ],
+    "why": "After the Braintree call the conversation went from \"how fast can we build this\" to \"what do we lose\". The rep \"danced around\" PayPal, had no Venmo answer, and never sent the saved-card reference the customer asked for.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "drop",
+    "change": "Stop leading with the acceptance-rate slide for buyers with low average transaction values who say auth rates aren't a concern. Ask first whether authorization rates are a problem for them, and show this only if the answer is yes.",
+    "evidence": [
+     "E20",
+     "E21"
+    ],
+    "why": "The rep ran the whole acceptance-rate slide to silence, and the decider said \"our average booking is 38 dollars, I'm not losing sleep over auth rates.\"",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 19990,
+ "cost": 0.083596,
+ "in_tokens": 5993,
+ "out_tokens": 1783,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,618 @@
+{
+ "ok": true,
+ "text": "{\"people\":[{\"name\":\"Priya\",\"role\":\"account executive (rep)\",\"side\":\"us\"},{\"name\":\"PMM\",\"role\":\"product marketer, interviewer\",\"side\":\"us\"},{\"name\":\"Daniel\",\"role\":\"VP of Engineering at Fetchwell; final decider and signer\",\"side\":\"customer\"},{\"name\":\"CFO\",\"role\":\"Fetchwell CFO; joined one call for ten minutes\",\"side\":\"customer\"},{\"name\":\"Unnamed engineer (her)\",\"role\":\"Fetchwell engineer who built a working sitter payment flow over a weekend\",\"side\":\"customer\"},{\"name\":\"Unnamed engineer (kickoff)\",\"role\":\"Fetchwell engineer who said 'we'll find out' at kickoff\",\"side\":\"customer\"},{\"name\":\"Incumbent account manager(s)\",\"role\":\"Incumbent's account manager, changed three times in two years\",\"side\":\"competitor\"},{\"name\":\"Braintree\",\"role\":\"Competitor the customer called mid-evaluation\",\"side\":\"competitor\"}],\"competitors\":[\"Braintree\",\"PayPal\"],\"incumbent\":\"PayPal (implied by the PayPal/Venmo button concerns and the account manager complaints; the transcript never names the incumbent explicitly)\",\"evidence\":[{\"id\":\"E1\",\"turn\":2,\"excerpt\":\"They were launching Canada, then the UK, and sitters have to get paid locally.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Expansion into Canada and UK created local sitter payout need.\"},{\"id\":\"E2\",\"turn\":2,\"excerpt\":\"called it \\\"a haunted house.\\\"\",\"label\":\"quote\",\"speaker\":\"Daniel, VP of Engineering\",\"paraphrase\":false,\"topics\":[\"trigger\",\"language\"],\"note\":\"Customer's own description of their payments code.\"},{\"id\":\"E3\",\"turn\":2,\"excerpt\":\"Two engineers more or less full-time just keeping sitter payments working.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Engineering burden of maintaining existing payments; 'more or less' is hedged.\"},{\"id\":\"E4\",\"turn\":2,\"excerpt\":\"a roadmap item, faster pay for sitters, that had been pushed three quarters in a row.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Faster sitter pay roadmap item repeatedly delayed.\"},{\"id\":\"E5\",\"turn\":4,\"excerpt\":\"Daniel. He signed.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Daniel signed the deal.\"},{\"id\":\"E6\",\"turn\":4,\"excerpt\":\"The CFO joined one call for ten minutes, asked one question, \\\"does this change when sitters get paid?\\\", and left.\",\"label\":\"quote\",\"speaker\":\"CFO\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"CFO's only concern was sitter pay timing; limited involvement.\"},{\"id\":\"E7\",\"turn\":4,\"excerpt\":\"\\\"this is an engineering decision, finance will sign what I bring them.\\\"\",\"label\":\"quote\",\"speaker\":\"Daniel\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Daniel stated early that engineering decides and finance signs off.\"},{\"id\":\"E8\",\"turn\":6,\"excerpt\":\"Their account manager had changed three times in two years.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"competitor\",\"trigger\"],\"note\":\"Incumbent service churn, reported by customer to rep.\"},{\"id\":\"E9\",\"turn\":6,\"excerpt\":\"\\\"I've stopped learning their names.\\\"\",\"label\":\"quote\",\"speaker\":\"Daniel\",\"paraphrase\":false,\"topics\":[\"competitor\",\"language\"],\"note\":\"Customer frustration with incumbent account manager turnover.\"},{\"id\":\"E10\",\"turn\":6,\"excerpt\":\"A lot of pet owners pay with PayPal and Venmo, and they were nervous about what happens to those buttons.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"competitor\",\"gaps\"],\"note\":\"Customer worry about preserving PayPal/Venmo checkout.\"},{\"id\":\"E11\",\"turn\":8,\"excerpt\":\"They had a call with Braintree in the middle of the evaluation.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Braintree was consulted; inferred from question changes, not directly witnessed.\"},{\"id\":\"E12\",\"turn\":8,\"excerpt\":\"I know because the questions changed. It went from \\\"how fast can we build this\\\" to \\\"what do we lose.\\\"\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"competitor\",\"gaps\"],\"note\":\"Observed shift in customer questions from speed to loss.\"},{\"id\":\"E13\",\"turn\":8,\"excerpt\":\"Do we lose PayPal, do we lose Venmo, what happens to the saved cards.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"gaps\",\"competitor\"],\"note\":\"Specific loss concerns raised after Braintree call.\"},{\"id\":\"E14\",\"turn\":8,\"excerpt\":\"I assume Braintree told them they'd lose things. I don't know that. That's me guessing.\",\"label\":\"opinion\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Rep explicitly flags guess about what Braintree said.\"},{\"id\":\"E15\",\"turn\":10,\"excerpt\":\"One of their engineers, on her own time, built a working sitter payment flow over a weekend and showed it at Monday standup.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"message\",\"decided\"],\"note\":\"Engineer-built prototype validated docs/sandbox.\"},{\"id\":\"E16\",\"turn\":10,\"excerpt\":\"Reaction: the docs and the sandbox.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Docs and sandbox drew positive reaction.\"},{\"id\":\"E17\",\"turn\":10,\"excerpt\":\"And the marketplace piece. Onboarding sitters, the identity checks, paying out in local currency.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Marketplace features got reaction.\"},{\"id\":\"E18\",\"turn\":10,\"excerpt\":\"Silence: the acceptance-rate slide.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Acceptance-rate slide drew no reaction.\"},{\"id\":\"E19\",\"turn\":10,\"excerpt\":\"\\\"our average booking is 38 dollars, I'm not losing sleep over auth rates.\\\"\",\"label\":\"quote\",\"speaker\":\"Daniel\",\"paraphrase\":false,\"topics\":[\"message\",\"language\"],\"note\":\"Why auth-rate pitch fell flat: low booking value.\"},{\"id\":\"E20\",\"turn\":12,\"excerpt\":\"The weekend prototype. Before that it was a bake-off.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"decided\"],\"note\":\"Prototype is when rep felt it was won; prior was a competitive bake-off.\"},{\"id\":\"E21\",\"turn\":12,\"excerpt\":\"After that Daniel stopped saying \\\"if.\\\"\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"decided\",\"language\"],\"note\":\"Observed change in Daniel's language from if to when.\"},{\"id\":\"E22\",\"turn\":14,\"excerpt\":\"Nothing, really. It was a clean one.\",\"label\":\"opinion\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Rep says nothing couldn't be shown; contradicted later.\"},{\"id\":\"E23\",\"turn\":16,\"excerpt\":\"We kind of danced around it.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"gaps\",\"competitor\"],\"note\":\"Admits evasive handling of PayPal/Venmo question.\"},{\"id\":\"E24\",\"turn\":16,\"excerpt\":\"We said they could keep offering PayPal and we'd work through the details in implementation.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"PayPal answer deferred to implementation.\"},{\"id\":\"E25\",\"turn\":16,\"excerpt\":\"I didn't have a crisp answer on Venmo in the room, and I still don't.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Venmo question unresolved.\"},{\"id\":\"E26\",\"turn\":16,\"excerpt\":\"They decided it was a risk they'd take.\",\"label\":\"opinion\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"gaps\",\"decided\"],\"note\":\"Rep's characterization of customer's risk acceptance; source unclear.\"},{\"id\":\"E27\",\"turn\":18,\"excerpt\":\"We walked them through moving saved cards over so nobody has to re-enter anything. But it was a doc and a conversation.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Saved card migration only covered by doc and conversation, no proof.\"},{\"id\":\"E28\",\"turn\":18,\"excerpt\":\"\\\"who's done this at our size without losing cards?\\\"\",\"label\":\"quote\",\"speaker\":\"Daniel\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Customer asked for a reference at their size.\"},{\"id\":\"E29\",\"turn\":18,\"excerpt\":\"I said I'd get back to him. I didn't.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Follow-up on reference request never happened.\"},{\"id\":\"E30\",\"turn\":20,\"excerpt\":\"Once, in the kickoff. His engineer said, \\\"we'll find out.\\\"\",\"label\":\"quote\",\"speaker\":\"Daniel's engineer\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Saved-card question resurfaced at kickoff, still unresolved.\"},{\"id\":\"E31\",\"turn\":22,\"excerpt\":\"\\\"Payments shouldn't be a team,\\\" he said that a lot.\",\"label\":\"quote\",\"speaker\":\"Daniel\",\"paraphrase\":false,\"topics\":[\"language\",\"trigger\"],\"note\":\"Recurring customer phrase about payments burden.\"},{\"id\":\"E32\",\"turn\":22,\"excerpt\":\"\\\"We want to stop babysitting this.\\\"\",\"label\":\"quote\",\"speaker\":\"Daniel\",\"paraphrase\":false,\"topics\":[\"language\",\"trigger\"],\"note\":\"Customer's words for the desired outcome.\"},{\"id\":\"E33\",\"turn\":22,\"excerpt\":\"On the sitter side it's \\\"paid by Friday.\\\" The whole promise to sitters is paid by Friday.\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Sitter promise is paid by Friday.\"},{\"id\":\"E34\",\"turn\":22,\"excerpt\":\"Nobody there says \\\"marketplace.\\\" They say \\\"the app.\\\"\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer says 'the app', not 'marketplace'; conflicts with our pitch term.\"},{\"id\":\"E35\",\"turn\":22,\"excerpt\":\"And nobody says \\\"payouts.\\\" They say \\\"sitter pay.\\\"\",\"label\":\"fact\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer says 'sitter pay', not 'payouts'.\"},{\"id\":\"E36\",\"turn\":24,\"excerpt\":\"Only that I barely sold this. Their engineer did.\",\"label\":\"opinion\",\"speaker\":\"Priya\",\"paraphrase\":false,\"topics\":[\"decided\"],\"note\":\"Rep's view that customer's engineer drove the win.\"}],\"contradictions\":[{\"evidence\":[\"E22\",\"E23\",\"E25\"],\"what\":\"Rep said customer asked for nothing they couldn't show and it was 'a clean one', then admitted dancing around PayPal/Venmo and having no crisp Venmo answer.\"},{\"evidence\":[\"E22\",\"E29\",\"E30\"],\"what\":\"'Clean one' conflicts with the unfulfilled saved-cards reference request, raised again at kickoff.\"},{\"evidence\":[\"E5\",\"E7\",\"E36\"],\"what\":\"Daniel is named as decider, but rep says their engineer sold it and she 'barely sold this', suggesting influence beyond Daniel.\"},{\"evidence\":[\"E12\",\"E14\"],\"what\":\"Rep says she 'knows' Braintree call happened because questions changed, yet admits she doesn't know what Braintree said; the call is inferred.\"},{\"evidence\":[\"E24\",\"E26\"],\"what\":\"Rep says the customer 'decided it was a risk they'd take' on PayPal/Venmo, but earlier says the details were deferred to implementation and Venmo was unanswered.\"}],\"dodges\":[{\"question\":\"What did they ask for that we couldn't show?\",\"turn\":14,\"what\":\"Answered 'Nothing, really. It was a clean one.' then later admitted dancing around PayPal/Venmo and an unanswered saved-cards reference request.\"}],\"skipped\":[],\"language_pairs\":[{\"theirs\":\"the app\",\"ours\":\"marketplace\",\"evidence\":[\"E34\"]},{\"theirs\":\"sitter pay\",\"ours\":\"payouts\",\"evidence\":[\"E35\"]},{\"theirs\":\"paid by Friday\",\"ours\":\"faster pay / local currency payouts\",\"evidence\":[\"E33\",\"E4\",\"E17\"]},{\"theirs\":\"haunted house; payments shouldn't be a team; stop babysitting this\",\"ours\":\"acceptance-rate improvement / auth rates\",\"evidence\":[\"E2\",\"E31\",\"E32\",\"E19\"]}],\"outcome_signals\":[{\"evidence\":[\"E5\"],\"what\":\"Won: Daniel signed.\"},{\"evidence\":[\"E20\",\"E21\"],\"what\":\"Felt won after the weekend prototype; Daniel stopped saying 'if'.\"},{\"evidence\":[\"E24\",\"E25\",\"E26\"],\"what\":\"PayPal/Venmo unresolved at signing; customer accepted the risk, so part of the business may not have moved cleanly.\"},{\"evidence\":[\"E29\",\"E30\"],\"what\":\"Saved-card reference request went unanswered after signing; still open at kickoff.\"}]}",
+ "data": {
+  "people": [
+   {
+    "name": "Priya",
+    "role": "account executive (rep)",
+    "side": "us"
+   },
+   {
+    "name": "PMM",
+    "role": "product marketer, interviewer",
+    "side": "us"
+   },
+   {
+    "name": "Daniel",
+    "role": "VP of Engineering at Fetchwell; final decider and signer",
+    "side": "customer"
+   },
+   {
+    "name": "CFO",
+    "role": "Fetchwell CFO; joined one call for ten minutes",
+    "side": "customer"
+   },
+   {
+    "name": "Unnamed engineer (her)",
+    "role": "Fetchwell engineer who built a working sitter payment flow over a weekend",
+    "side": "customer"
+   },
+   {
+    "name": "Unnamed engineer (kickoff)",
+    "role": "Fetchwell engineer who said 'we'll find out' at kickoff",
+    "side": "customer"
+   },
+   {
+    "name": "Incumbent account manager(s)",
+    "role": "Incumbent's account manager, changed three times in two years",
+    "side": "competitor"
+   },
+   {
+    "name": "Braintree",
+    "role": "Competitor the customer called mid-evaluation",
+    "side": "competitor"
+   }
+  ],
+  "competitors": [
+   "Braintree",
+   "PayPal"
+  ],
+  "incumbent": "PayPal (implied by the PayPal/Venmo button concerns and the account manager complaints; the transcript never names the incumbent explicitly)",
+  "evidence": [
+   {
+    "id": "E1",
+    "turn": 2,
+    "excerpt": "They were launching Canada, then the UK, and sitters have to get paid locally.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Expansion into Canada and UK created local sitter payout need."
+   },
+   {
+    "id": "E2",
+    "turn": 2,
+    "excerpt": "called it \"a haunted house.\"",
+    "label": "quote",
+    "speaker": "Daniel, VP of Engineering",
+    "paraphrase": false,
+    "topics": [
+     "trigger",
+     "language"
+    ],
+    "note": "Customer's own description of their payments code."
+   },
+   {
+    "id": "E3",
+    "turn": 2,
+    "excerpt": "Two engineers more or less full-time just keeping sitter payments working.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Engineering burden of maintaining existing payments; 'more or less' is hedged."
+   },
+   {
+    "id": "E4",
+    "turn": 2,
+    "excerpt": "a roadmap item, faster pay for sitters, that had been pushed three quarters in a row.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Faster sitter pay roadmap item repeatedly delayed."
+   },
+   {
+    "id": "E5",
+    "turn": 4,
+    "excerpt": "Daniel. He signed.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Daniel signed the deal."
+   },
+   {
+    "id": "E6",
+    "turn": 4,
+    "excerpt": "The CFO joined one call for ten minutes, asked one question, \"does this change when sitters get paid?\", and left.",
+    "label": "quote",
+    "speaker": "CFO",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "CFO's only concern was sitter pay timing; limited involvement."
+   },
+   {
+    "id": "E7",
+    "turn": 4,
+    "excerpt": "\"this is an engineering decision, finance will sign what I bring them.\"",
+    "label": "quote",
+    "speaker": "Daniel",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Daniel stated early that engineering decides and finance signs off."
+   },
+   {
+    "id": "E8",
+    "turn": 6,
+    "excerpt": "Their account manager had changed three times in two years.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "trigger"
+    ],
+    "note": "Incumbent service churn, reported by customer to rep."
+   },
+   {
+    "id": "E9",
+    "turn": 6,
+    "excerpt": "\"I've stopped learning their names.\"",
+    "label": "quote",
+    "speaker": "Daniel",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "language"
+    ],
+    "note": "Customer frustration with incumbent account manager turnover."
+   },
+   {
+    "id": "E10",
+    "turn": 6,
+    "excerpt": "A lot of pet owners pay with PayPal and Venmo, and they were nervous about what happens to those buttons.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "gaps"
+    ],
+    "note": "Customer worry about preserving PayPal/Venmo checkout."
+   },
+   {
+    "id": "E11",
+    "turn": 8,
+    "excerpt": "They had a call with Braintree in the middle of the evaluation.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Braintree was consulted; inferred from question changes, not directly witnessed."
+   },
+   {
+    "id": "E12",
+    "turn": 8,
+    "excerpt": "I know because the questions changed. It went from \"how fast can we build this\" to \"what do we lose.\"",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "gaps"
+    ],
+    "note": "Observed shift in customer questions from speed to loss."
+   },
+   {
+    "id": "E13",
+    "turn": 8,
+    "excerpt": "Do we lose PayPal, do we lose Venmo, what happens to the saved cards.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "competitor"
+    ],
+    "note": "Specific loss concerns raised after Braintree call."
+   },
+   {
+    "id": "E14",
+    "turn": 8,
+    "excerpt": "I assume Braintree told them they'd lose things. I don't know that. That's me guessing.",
+    "label": "opinion",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Rep explicitly flags guess about what Braintree said."
+   },
+   {
+    "id": "E15",
+    "turn": 10,
+    "excerpt": "One of their engineers, on her own time, built a working sitter payment flow over a weekend and showed it at Monday standup.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "decided"
+    ],
+    "note": "Engineer-built prototype validated docs/sandbox."
+   },
+   {
+    "id": "E16",
+    "turn": 10,
+    "excerpt": "Reaction: the docs and the sandbox.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Docs and sandbox drew positive reaction."
+   },
+   {
+    "id": "E17",
+    "turn": 10,
+    "excerpt": "And the marketplace piece. Onboarding sitters, the identity checks, paying out in local currency.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Marketplace features got reaction."
+   },
+   {
+    "id": "E18",
+    "turn": 10,
+    "excerpt": "Silence: the acceptance-rate slide.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Acceptance-rate slide drew no reaction."
+   },
+   {
+    "id": "E19",
+    "turn": 10,
+    "excerpt": "\"our average booking is 38 dollars, I'm not losing sleep over auth rates.\"",
+    "label": "quote",
+    "speaker": "Daniel",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "language"
+    ],
+    "note": "Why auth-rate pitch fell flat: low booking value."
+   },
+   {
+    "id": "E20",
+    "turn": 12,
+    "excerpt": "The weekend prototype. Before that it was a bake-off.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "decided"
+    ],
+    "note": "Prototype is when rep felt it was won; prior was a competitive bake-off."
+   },
+   {
+    "id": "E21",
+    "turn": 12,
+    "excerpt": "After that Daniel stopped saying \"if.\"",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "language"
+    ],
+    "note": "Observed change in Daniel's language from if to when."
+   },
+   {
+    "id": "E22",
+    "turn": 14,
+    "excerpt": "Nothing, really. It was a clean one.",
+    "label": "opinion",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Rep says nothing couldn't be shown; contradicted later."
+   },
+   {
+    "id": "E23",
+    "turn": 16,
+    "excerpt": "We kind of danced around it.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "competitor"
+    ],
+    "note": "Admits evasive handling of PayPal/Venmo question."
+   },
+   {
+    "id": "E24",
+    "turn": 16,
+    "excerpt": "We said they could keep offering PayPal and we'd work through the details in implementation.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "PayPal answer deferred to implementation."
+   },
+   {
+    "id": "E25",
+    "turn": 16,
+    "excerpt": "I didn't have a crisp answer on Venmo in the room, and I still don't.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Venmo question unresolved."
+   },
+   {
+    "id": "E26",
+    "turn": 16,
+    "excerpt": "They decided it was a risk they'd take.",
+    "label": "opinion",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "decided"
+    ],
+    "note": "Rep's characterization of customer's risk acceptance; source unclear."
+   },
+   {
+    "id": "E27",
+    "turn": 18,
+    "excerpt": "We walked them through moving saved cards over so nobody has to re-enter anything. But it was a doc and a conversation.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Saved card migration only covered by doc and conversation, no proof."
+   },
+   {
+    "id": "E28",
+    "turn": 18,
+    "excerpt": "\"who's done this at our size without losing cards?\"",
+    "label": "quote",
+    "speaker": "Daniel",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Customer asked for a reference at their size."
+   },
+   {
+    "id": "E29",
+    "turn": 18,
+    "excerpt": "I said I'd get back to him. I didn't.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Follow-up on reference request never happened."
+   },
+   {
+    "id": "E30",
+    "turn": 20,
+    "excerpt": "Once, in the kickoff. His engineer said, \"we'll find out.\"",
+    "label": "quote",
+    "speaker": "Daniel's engineer",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Saved-card question resurfaced at kickoff, still unresolved."
+   },
+   {
+    "id": "E31",
+    "turn": 22,
+    "excerpt": "\"Payments shouldn't be a team,\" he said that a lot.",
+    "label": "quote",
+    "speaker": "Daniel",
+    "paraphrase": false,
+    "topics": [
+     "language",
+     "trigger"
+    ],
+    "note": "Recurring customer phrase about payments burden."
+   },
+   {
+    "id": "E32",
+    "turn": 22,
+    "excerpt": "\"We want to stop babysitting this.\"",
+    "label": "quote",
+    "speaker": "Daniel",
+    "paraphrase": false,
+    "topics": [
+     "language",
+     "trigger"
+    ],
+    "note": "Customer's words for the desired outcome."
+   },
+   {
+    "id": "E33",
+    "turn": 22,
+    "excerpt": "On the sitter side it's \"paid by Friday.\" The whole promise to sitters is paid by Friday.",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Sitter promise is paid by Friday."
+   },
+   {
+    "id": "E34",
+    "turn": 22,
+    "excerpt": "Nobody there says \"marketplace.\" They say \"the app.\"",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer says 'the app', not 'marketplace'; conflicts with our pitch term."
+   },
+   {
+    "id": "E35",
+    "turn": 22,
+    "excerpt": "And nobody says \"payouts.\" They say \"sitter pay.\"",
+    "label": "fact",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer says 'sitter pay', not 'payouts'."
+   },
+   {
+    "id": "E36",
+    "turn": 24,
+    "excerpt": "Only that I barely sold this. Their engineer did.",
+    "label": "opinion",
+    "speaker": "Priya",
+    "paraphrase": false,
+    "topics": [
+     "decided"
+    ],
+    "note": "Rep's view that customer's engineer drove the win."
+   }
+  ],
+  "contradictions": [
+   {
+    "evidence": [
+     "E22",
+     "E23",
+     "E25"
+    ],
+    "what": "Rep said customer asked for nothing they couldn't show and it was 'a clean one', then admitted dancing around PayPal/Venmo and having no crisp Venmo answer."
+   },
+   {
+    "evidence": [
+     "E22",
+     "E29",
+     "E30"
+    ],
+    "what": "'Clean one' conflicts with the unfulfilled saved-cards reference request, raised again at kickoff."
+   },
+   {
+    "evidence": [
+     "E5",
+     "E7",
+     "E36"
+    ],
+    "what": "Daniel is named as decider, but rep says their engineer sold it and she 'barely sold this', suggesting influence beyond Daniel."
+   },
+   {
+    "evidence": [
+     "E12",
+     "E14"
+    ],
+    "what": "Rep says she 'knows' Braintree call happened because questions changed, yet admits she doesn't know what Braintree said; the call is inferred."
+   },
+   {
+    "evidence": [
+     "E24",
+     "E26"
+    ],
+    "what": "Rep says the customer 'decided it was a risk they'd take' on PayPal/Venmo, but earlier says the details were deferred to implementation and Venmo was unanswered."
+   }
+  ],
+  "dodges": [
+   {
+    "question": "What did they ask for that we couldn't show?",
+    "turn": 14,
+    "what": "Answered 'Nothing, really. It was a clean one.' then later admitted dancing around PayPal/Venmo and an unanswered saved-cards reference request."
+   }
+  ],
+  "skipped": [],
+  "language_pairs": [
+   {
+    "theirs": "the app",
+    "ours": "marketplace",
+    "evidence": [
+     "E34"
+    ]
+   },
+   {
+    "theirs": "sitter pay",
+    "ours": "payouts",
+    "evidence": [
+     "E35"
+    ]
+   },
+   {
+    "theirs": "paid by Friday",
+    "ours": "faster pay / local currency payouts",
+    "evidence": [
+     "E33",
+     "E4",
+     "E17"
+    ]
+   },
+   {
+    "theirs": "haunted house; payments shouldn't be a team; stop babysitting this",
+    "ours": "acceptance-rate improvement / auth rates",
+    "evidence": [
+     "E2",
+     "E31",
+     "E32",
+     "E19"
+    ]
+   }
+  ],
+  "outcome_signals": [
+   {
+    "evidence": [
+     "E5"
+    ],
+    "what": "Won: Daniel signed."
+   },
+   {
+    "evidence": [
+     "E20",
+     "E21"
+    ],
+    "what": "Felt won after the weekend prototype; Daniel stopped saying 'if'."
+   },
+   {
+    "evidence": [
+     "E24",
+     "E25",
+     "E26"
+    ],
+    "what": "PayPal/Venmo unresolved at signing; customer accepted the risk, so part of the business may not have moved cleanly."
+   },
+   {
+    "evidence": [
+     "E29",
+     "E30"
+    ],
+    "what": "Saved-card reference request went unanswered after signing; still open at kickoff."
+   }
+  ]
+ },
+ "ms": 29939,
+ "cost": 0.052361899999999996,
+ "in_tokens": 3983,
+ "out_tokens": 4891,
+ "model": "claude-sonnet-5-5"
+}

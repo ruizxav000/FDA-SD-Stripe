@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":1,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":1,\n \"must_catch\":[\n  {\"item\":\"The gaps section shows the rep's \\\"nothing\\\" being contradicted (PayPal/Venmo, saved cards)\",\"pass\":true},\n  {\"item\":\"The Braintree theory is labeled opinion\",\"pass\":true},\n  {\"item\":\"The approval-rate slide is reported as silence in a win\",\"pass\":true},\n  {\"item\":\"The CFO's one question is surfaced as a messaging signal\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report shows the rep's \\\"clean one\\\" being contradicted by the Venmo non-answer and the saved-card reference she promised and never sent, labels the Braintree theory as opinion, and treats the CFO's one question as a messaging signal. Its main miss is leaving the incumbent null and calling it unclear, when Braintree was the incumbent; this also blurs the insight that the incumbent's weakness was the relationship. The messaging_changes list also omits the finance payout-timing message and the PayPal/Venmo and saved-card proof additions, which appear only in section-level notes.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 1,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 1,
+  "must_catch": [
+   {
+    "item": "The gaps section shows the rep's \"nothing\" being contradicted (PayPal/Venmo, saved cards)",
+    "pass": true
+   },
+   {
+    "item": "The Braintree theory is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The approval-rate slide is reported as silence in a win",
+    "pass": true
+   },
+   {
+    "item": "The CFO's one question is surfaced as a messaging signal",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report shows the rep's \"clean one\" being contradicted by the Venmo non-answer and the saved-card reference she promised and never sent, labels the Braintree theory as opinion, and treats the CFO's one question as a messaging signal. Its main miss is leaving the incumbent null and calling it unclear, when Braintree was the incumbent; this also blurs the insight that the incumbent's weakness was the relationship. The messaging_changes list also omits the finance payout-timing message and the PayPal/Venmo and saved-card proof additions, which appear only in section-level notes."
+ },
+ "ms": 27307,
+ "cost": 0.128916,
+ "in_tokens": 9893,
+ "out_tokens": 2489,
+ "model": "claude-opus-5-5"
+}

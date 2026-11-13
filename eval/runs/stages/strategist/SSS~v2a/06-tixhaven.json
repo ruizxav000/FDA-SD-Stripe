@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M5\",\"current_line\":\"Support plans with tiered response times, up to 24/7 coverage.\",\"type\":\"replace\",\"change\":\"For buyers who run live on-sales, especially an operations or COO decider: \\\"A name, not a queue.\\\" Someone who picks up. Name the solutions engineer and account lead who will be on the account, and put in writing what happens at minute four of an on-sale and who is on call for every major on-sale. Do not lead with tiers or response times. Only publish the on-call commitment once the team confirms it can staff it.\",\"evidence\":[\"E21\",\"E23\",\"E34\",\"E36\",\"E12\"],\"why\":\"The decider heard our tiers and response times as \\\"a queue with a faster timer\\\" and wanted a person, while the winning competitor promised named people and on-call coverage for every major on-sale.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a written on-sale plan as a sales asset for ticketing and live-event buyers. It shows what we do on an on-sale morning: who is named on the account, who is on call, what the shared channel is, and what happens in the first minutes of a failure. Walk the operations decider through it directly, not only the technical champion.\",\"evidence\":[\"E26\",\"E27\",\"E28\",\"E10\"],\"why\":\"The decider \\\"wanted to see, on paper, what we do on an on-sale morning\\\", we had no such artifact, and the rep says it could have been built with the solutions engineer.\",\"strength\":\"Test this\"},{\"target\":\"M8\",\"current_line\":\"Trusted by leading businesses; see our customer stories.\",\"type\":\"replace\",\"change\":\"For live-event and ticketing buyers: offer a conversation with a named customer who has run a real on-sale with us, instead of leading with logos or customer stories. Line: \\\"Talk to someone who has been through an on-sale with us.\\\"\",\"evidence\":[\"E31\",\"E38\"],\"why\":\"The rep says \\\"I had logos. I didn't have a person,\\\" and the customer asked \\\"who,\\\" not for more proof of reliability.\",\"strength\":\"Test this\"},{\"target\":\"M2\",\"current_line\":\"Built for developers: launch payments fast with our APIs, docs and sandbox.\",\"type\":\"add\",\"change\":\"For a buyer who owns the consequences of a failure, pair the technical proof with the decider's framing: \\\"I don't buy uptime, I buy what happens when it's down.\\\" Open the COO-facing conversation on who responds when payments fail during an on-sale, and treat the load test and sandbox story as support for the engineer, not the case for the decider.\",\"evidence\":[\"E37\",\"E18\",\"E7\",\"E9\"],\"why\":\"The load test went well with the CTO, but the COO decided in one meeting and said she does not buy uptime.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M5",
+    "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+    "type": "replace",
+    "change": "For buyers who run live on-sales, especially an operations or COO decider: \"A name, not a queue.\" Someone who picks up. Name the solutions engineer and account lead who will be on the account, and put in writing what happens at minute four of an on-sale and who is on call for every major on-sale. Do not lead with tiers or response times. Only publish the on-call commitment once the team confirms it can staff it.",
+    "evidence": [
+     "E21",
+     "E23",
+     "E34",
+     "E36",
+     "E12"
+    ],
+    "why": "The decider heard our tiers and response times as \"a queue with a faster timer\" and wanted a person, while the winning competitor promised named people and on-call coverage for every major on-sale.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a written on-sale plan as a sales asset for ticketing and live-event buyers. It shows what we do on an on-sale morning: who is named on the account, who is on call, what the shared channel is, and what happens in the first minutes of a failure. Walk the operations decider through it directly, not only the technical champion.",
+    "evidence": [
+     "E26",
+     "E27",
+     "E28",
+     "E10"
+    ],
+    "why": "The decider \"wanted to see, on paper, what we do on an on-sale morning\", we had no such artifact, and the rep says it could have been built with the solutions engineer.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M8",
+    "current_line": "Trusted by leading businesses; see our customer stories.",
+    "type": "replace",
+    "change": "For live-event and ticketing buyers: offer a conversation with a named customer who has run a real on-sale with us, instead of leading with logos or customer stories. Line: \"Talk to someone who has been through an on-sale with us.\"",
+    "evidence": [
+     "E31",
+     "E38"
+    ],
+    "why": "The rep says \"I had logos. I didn't have a person,\" and the customer asked \"who,\" not for more proof of reliability.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M2",
+    "current_line": "Built for developers: launch payments fast with our APIs, docs and sandbox.",
+    "type": "add",
+    "change": "For a buyer who owns the consequences of a failure, pair the technical proof with the decider's framing: \"I don't buy uptime, I buy what happens when it's down.\" Open the COO-facing conversation on who responds when payments fail during an on-sale, and treat the load test and sandbox story as support for the engineer, not the case for the decider.",
+    "evidence": [
+     "E37",
+     "E18",
+     "E7",
+     "E9"
+    ],
+    "why": "The load test went well with the CTO, but the COO decided in one meeting and said she does not buy uptime.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 10906,
+ "cost": 0.030604,
+ "in_tokens": 5377,
+ "out_tokens": 910,
+ "model": "claude-sonnet-5-5"
+}

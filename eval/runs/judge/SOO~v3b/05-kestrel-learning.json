@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":1,\"competitor\":2,\"message\":2,\"decided\":1,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The outcome carries the international-only scope note\",\"pass\":true},{\"item\":\"\\\"Decided before we got in the room\\\" is challenged with the coverage facts\",\"pass\":false},{\"item\":\"\\\"that's an average. What's mine?\\\" is tied to a messaging change\",\"pass\":true},{\"item\":\"The Adyen test results stay unknown\",\"pass\":true}],\n \"fails\":[\"Trigger insight asserts Stefan ran his decline analysis 'on our data'. The transcript only says he pulled declines by country; the rep never saw his analysis.\"],\n \"notes\":\"The report's strongest point is tying 'that's an average. What's mine?' and 'I can't take an average to my CFO' to a concrete replace-M4 change with customer-specific approvals, while keeping the Adyen results unknown and preserving the US/international split. Its biggest miss is in the 'decided' section, which recasts the loss as a speed-of-proof race. The key's finding is that 'decided before we got in the room' is true because the account had no coverage: no review for 9–10 months, the rep never met Stefan, and we learned of the evaluation from the renewal notice. Smaller misses: the unverified 'Brazil and a couple in Europe' is labelled fact instead of opinion, the runner-up is 'Support and service' rather than 'Champion or access', and the close omits acting on the analysis findings to protect the US and position a win-back.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 1,
+   "competitor": 2,
+   "message": 2,
+   "decided": 1,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the international-only scope note",
+    "pass": true
+   },
+   {
+    "item": "\"Decided before we got in the room\" is challenged with the coverage facts",
+    "pass": false
+   },
+   {
+    "item": "\"that's an average. What's mine?\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "The Adyen test results stay unknown",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Trigger insight asserts Stefan ran his decline analysis 'on our data'. The transcript only says he pulled declines by country; the rep never saw his analysis."
+  ],
+  "notes": "The report's strongest point is tying 'that's an average. What's mine?' and 'I can't take an average to my CFO' to a concrete replace-M4 change with customer-specific approvals, while keeping the Adyen results unknown and preserving the US/international split. Its biggest miss is in the 'decided' section, which recasts the loss as a speed-of-proof race. The key's finding is that 'decided before we got in the room' is true because the account had no coverage: no review for 9–10 months, the rep never met Stefan, and we learned of the evaluation from the renewal notice. Smaller misses: the unverified 'Brazil and a couple in Europe' is labelled fact instead of opinion, the runner-up is 'Support and service' rather than 'Champion or access', and the close omits acting on the analysis findings to protect the US and position a win-back."
+ },
+ "ms": 33759,
+ "cost": 0.144528,
+ "in_tokens": 9627,
+ "out_tokens": 3376,
+ "model": "claude-opus-5-5"
+}

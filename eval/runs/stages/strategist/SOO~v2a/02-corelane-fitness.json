@@ -1,0 +1,67 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M10\",\"current_line\":\"Recover failed payments automatically with smart retries.\",\"type\":\"replace\",\"change\":\"Open with involuntary churn in the buyer's words, not with retries: \\\"members who never meant to leave.\\\" Suggested line: Some of your churn is members who never meant to leave; their card just failed. Send us one month of failed renewals and we'll show you which ones usually come back with a retry or an updated card. Proof framing: \\\"Their file, not our average.\\\" For subscription and membership buyers.\",\"evidence\":[\"E2\",\"E3\",\"E17\",\"E18\"],\"why\":\"The evaluation began when churn was split into cancellations and failed cards (E2, E3), and the generic retry claim gave way to an analysis of the customer's own failed renewals, which is what finally got the controller to engage (E17, E18).\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a finance and controller version of the pitch, delivered before the contract goes to finance. It should give recoverable membership revenue calculated from the prospect's own failed-renewal export, and state plainly our contract term and what it costs to get out. Pair it with the cost of leaving their current processor so the switch can be weighed in their own numbers.\",\"evidence\":[\"E23\",\"E13\",\"E18\",\"E24\"],\"why\":\"The contract sat with the controller for two weeks while he asked about contract term and exit cost (E23, E13), and it was signed four days after he asked for the spreadsheet built from his own data (E18, E24).\",\"strength\":\"Test this\"},{\"target\":\"M3\",\"current_line\":\"Online and in-store on one platform; the line between them has pretty much disappeared.\",\"type\":\"replace\",\"change\":\"For buyers running studio management software: do not claim M3 until the reader can be shown live in their own software. Say instead: Move online billing now with no front-desk hardware change. At the front desk, our reader runs through a partner integration with your studio software, and we'll show it working in your setup before we ask you to switch.\",\"evidence\":[\"E20\",\"E27\",\"E28\",\"E34\"],\"why\":\"The unified-commerce line was heard as \\\"is that the readers?\\\" (E20) and pulled attention to a one-screen front desk we could not show live because it runs through a partner integration (E27, E28), which leaves the studios undecided (E34).\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"drop\",\"change\":\"Don't open with the global positioning line for buyers who don't operate globally. Open with the involuntary-churn line (see M10) instead.\",\"evidence\":[\"E19\"],\"why\":\"The rep opened with the global slide and got \\\"Silence\\\" from a buyer with studios in the US and a handful in Canada (E19).\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M10",
+    "current_line": "Recover failed payments automatically with smart retries.",
+    "type": "replace",
+    "change": "Open with involuntary churn in the buyer's words, not with retries: \"members who never meant to leave.\" Suggested line: Some of your churn is members who never meant to leave; their card just failed. Send us one month of failed renewals and we'll show you which ones usually come back with a retry or an updated card. Proof framing: \"Their file, not our average.\" For subscription and membership buyers.",
+    "evidence": [
+     "E2",
+     "E3",
+     "E17",
+     "E18"
+    ],
+    "why": "The evaluation began when churn was split into cancellations and failed cards (E2, E3), and the generic retry claim gave way to an analysis of the customer's own failed renewals, which is what finally got the controller to engage (E17, E18).",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a finance and controller version of the pitch, delivered before the contract goes to finance. It should give recoverable membership revenue calculated from the prospect's own failed-renewal export, and state plainly our contract term and what it costs to get out. Pair it with the cost of leaving their current processor so the switch can be weighed in their own numbers.",
+    "evidence": [
+     "E23",
+     "E13",
+     "E18",
+     "E24"
+    ],
+    "why": "The contract sat with the controller for two weeks while he asked about contract term and exit cost (E23, E13), and it was signed four days after he asked for the spreadsheet built from his own data (E18, E24).",
+    "strength": "Test this"
+   },
+   {
+    "target": "M3",
+    "current_line": "Online and in-store on one platform; the line between them has pretty much disappeared.",
+    "type": "replace",
+    "change": "For buyers running studio management software: do not claim M3 until the reader can be shown live in their own software. Say instead: Move online billing now with no front-desk hardware change. At the front desk, our reader runs through a partner integration with your studio software, and we'll show it working in your setup before we ask you to switch.",
+    "evidence": [
+     "E20",
+     "E27",
+     "E28",
+     "E34"
+    ],
+    "why": "The unified-commerce line was heard as \"is that the readers?\" (E20) and pulled attention to a one-screen front desk we could not show live because it runs through a partner integration (E27, E28), which leaves the studios undecided (E34).",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "drop",
+    "change": "Don't open with the global positioning line for buyers who don't operate globally. Open with the involuntary-churn line (see M10) instead.",
+    "evidence": [
+     "E19"
+    ],
+    "why": "The rep opened with the global slide and got \"Silence\" from a buyer with studios in the US and a handful in Canada (E19).",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 25199,
+ "cost": 0.089064,
+ "in_tokens": 5494,
+ "out_tokens": 2256,
+ "model": "claude-opus-5-5"
+}

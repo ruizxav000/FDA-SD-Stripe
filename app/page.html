@@ -336,6 +336,7 @@ select.field{padding-right:28px}
         <div class="box-head"><p class="title" id="progress-title">Reviewing</p><span class="text" id="progress-time"></span></div>
         <ol class="steps" id="steps"></ol>
         <p class="note err" id="run-error" hidden></p>
+        <div class="btns" id="retry-row" hidden><button type="button" class="btn small" id="retry">Retry from this step</button><span class="text" id="retry-hint"></span></div>
       </div>
 
       <div id="result" class="report" hidden></div>
@@ -520,7 +521,7 @@ function showTip(title, lines, x, y) {
 const hideTip = () => { tip.hidden = true; };
 
 /* ════════════════════ SUBMIT ════════════════════ */
-const sub = { parsed: null, roles: null, name: "", running: null };
+const sub = { parsed: null, roles: null, name: "", running: null, state: null };
 $("how-steps").append(...[
   ["Read", "reader", "Pulls every piece of evidence from the whole conversation, word for word, and labels it quote, fact or opinion."],
   ["Analyze", "analyst", "Works out the outcome, the real reason, and the insight behind each of the seven questions."],
@@ -570,7 +571,7 @@ function loadText(text, name) {
   if (parsed.words < 80 || !parsed.turns.length) { showFileError("That file has too little text to review. Check it's the full transcript."); return; }
   if (parsed.speakers.length < 2) { showFileError("We couldn't tell the speakers apart. Use an export that includes speaker names, or paste it as “Name: what they said” lines."); return; }
   if (text.length > 200000) { showFileError("This transcript is very long. Trim small talk before and after the interview, then try again."); return; }
-  sub.parsed = parsed; sub.roles = DR.guessRoles(parsed); sub.name = name;
+  sub.parsed = parsed; sub.roles = DR.guessRoles(parsed); sub.name = name; sub.state = null;
   $("parsed").hidden = false; $("drop").hidden = true; $("paste-wrap").hidden = true;
   $("parsed-name").textContent = name;
   $("parsed-stats").textContent = `${parsed.turns.length} turns · ${parsed.words.toLocaleString()} words · ${parsed.speakers.length} speakers`;
@@ -583,7 +584,7 @@ function renderSpeakers() {
     type: "button", class: "chip", role: "radio", "aria-checked": String(s === sub.roles.ae),
     onclick: () => {
       const other = sub.parsed.speakers.find((x) => x !== s);
-      sub.roles = { ae: s, interviewer: sub.roles.interviewer === s ? other : sub.roles.interviewer };
+      sub.roles = { ae: s, interviewer: sub.roles.interviewer === s ? other : sub.roles.interviewer }; sub.state = null;
       if (!$("rep").dataset.touched && !/^Speaker \d+$/.test(s)) $("rep").value = s;
       renderSpeakers();
     },
@@ -614,7 +615,7 @@ $("load-example").onclick = () => {
   $("deal").value = "Fernbrook Garden Supply (example)";
   updateRunState();
 };
-$("deal").addEventListener("input", updateRunState);
+$("deal").addEventListener("input", () => { sub.state = null; updateRunState(); });
 $("post-switch").onclick = (e) => e.currentTarget.setAttribute("aria-checked", String(e.currentTarget.getAttribute("aria-checked") !== "true"));
 function updateRunState() {
   const missing = !sub.parsed ? "Add a transcript to start." : !$("deal").value.trim() ? "Name the deal to start." : !caps.sample ? "Open this page in Claude to run reviews." : "";
@@ -636,32 +637,45 @@ const ERR = {
   bad_stage: "A step returned an incomplete answer. Run the review again.",
   upstream_error: "The connection to Claude dropped. Run the review again.",
 };
-$("submit-form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  if ($("run").disabled) return;
+$("submit-form").addEventListener("submit", (e) => { e.preventDefault(); sub.state = null; startRun(); });
+$("retry").onclick = () => startRun();
+async function startRun() {
+  if (!sub.parsed || !$("deal").value.trim() || !caps.sample || sub.running) return;
+  if (!sub.state) sub.state = {};
+  $("retry-row").hidden = true;
   const ctl = new AbortController();
   sub.running = ctl; updateRunState();
   $("stop").hidden = false; $("stop").onclick = () => ctl.abort();
   $("result").hidden = true; $("run-error").hidden = true; $("progress").hidden = false;
   $("progress-title").textContent = "Reviewing " + $("deal").value.trim();
   const t0 = Date.now(), times = {}; let cur = null;
+  if (sub.state.ledger) times.reader = { start: 0, end: 0, kept: true };
+  if (sub.state.analysis) times.analyst = { start: 0, end: 0, kept: true };
+  if (sub.state.strategy) times.strategist = { start: 0, end: 0, kept: true };
   const draw = () => {
     $("steps").replaceChildren(...STAGES.map(([k, label]) => {
-      const st = times[k] && times[k].end ? "done" : cur === k ? "active" : "";
+      const st = times[k] && (times[k].end || times[k].kept) ? "done" : cur === k ? "active" : "";
       const m = DR.STAGE_MODELS[k];
-      const secs = times[k] ? Math.round(((times[k].end || Date.now()) - times[k].start) / 1000) + "s" : "";
+      const secs = times[k] ? (times[k].kept ? "kept" : Math.round(((times[k].end || Date.now()) - times[k].start) / 1000) + "s") : "";
       return h("li", { class: "step " + st }, h("span", { class: "dot" }), h("span", {}, label, h("small", { text: m ? MODEL_NAME(m.model) : "Code" })), h("span", { class: "t", text: secs }));
     }));
     $("progress-time").textContent = Math.round((Date.now() - t0) / 1000) + "s";
   };
   const tick = setInterval(draw, 1000);
   const onStage = (k) => { if (cur && times[cur]) times[cur].end = Date.now(); cur = k; times[k] = { start: Date.now() }; draw(); };
-  const call = (stage, prompt, m) => caps.sample.json(prompt, {
-    model: m.model, effort: m.effort, signal: ctl.signal,
-    modelTier: /opus/.test(m.model) ? "complex" : /haiku/.test(m.model) ? "quick" : "default",
-  });
+  // Plain-text call + our own tolerant JSON parser (repairs the occasional unescaped quote).
+  const call = async (stage, prompt, m) => {
+    const { text } = await caps.sample(prompt, {
+      model: m.model, effort: m.effort, signal: ctl.signal,
+      modelTier: /opus/.test(m.model) ? "complex" : /haiku/.test(m.model) ? "quick" : "default",
+    });
+    const data = DR.parseModelJSON(text);
+    if (data === undefined) throw { code: "invalid_json", message: stage + " reply was not JSON" };
+    return data;
+  };
   try {
-    const report = await DR.runPipeline({ deal: $("deal").value.trim(), parsed: sub.parsed, roles: sub.roles, call, onStage });
+    const report = await DR.runPipeline({ deal: $("deal").value.trim(), parsed: sub.parsed, roles: sub.roles, call, onStage, state: sub.state });
+    sub.state = null;
     times.checks.end = Date.now(); cur = null; draw();
     report.rep = $("rep").value.trim() || null;
     report.authorId = me.id; report.createdAt = new Date().toISOString();
@@ -674,10 +688,16 @@ $("submit-form").addEventListener("submit", async (e) => {
     const code = err && err.code;
     $("progress-title").textContent = code === "cancelled" ? "Review stopped" : "Review didn't finish";
     if (code !== "cancelled") { $("run-error").textContent = ERR[code] || (err && err.message) || ERR.upstream_error; $("run-error").hidden = false; }
+    const resumable = ["invalid_json", "bad_stage", "upstream_error", "empty_completion", "cancelled", "rate_limited"].includes(code) && sub.state && sub.state.stage;
+    if (resumable) {
+      const step = (STAGES.find(([k]) => k === sub.state.stage) || [, "the failed step"])[1];
+      $("retry-hint").textContent = "Keeps the finished steps and restarts at: " + step.toLowerCase() + ".";
+      $("retry-row").hidden = false;
+    }
   } finally {
     clearInterval(tick); sub.running = null; $("stop").hidden = true; updateRunState();
   }
-});
+}
 
 function showResult(report, posted) {
   const box = $("result");
@@ -772,7 +792,8 @@ function renderReport(r, opts) {
   wrap.append(withComments(closeBox));
 
   if (r.checks && r.checks.quotes_total) wrap.append(h("p", { class: "meta-line", style: "padding:0 4px", text:
-    r.checks.quotes_failed ? `${r.checks.quotes_failed} of ${r.checks.quotes_total} evidence excerpts weren't found word for word in the transcript and are marked.` : `All ${r.checks.quotes_total} evidence excerpts were found word for word in the transcript.` }));
+    (r.checks.quotes_failed ? `${r.checks.quotes_failed} of ${r.checks.quotes_total} evidence excerpts weren't found word for word in the transcript and are marked.` : `All ${r.checks.quotes_total} evidence excerpts were found word for word in the transcript.`) +
+    ((r.checks.prose_unquoted || []).length ? (r.checks.prose_unquoted.length > 1 ? ` ${r.checks.prose_unquoted.length} phrases in the analysis looked like quotes but weren't in the transcript, so their quotation marks were removed.` : " 1 phrase in the analysis looked like a quote but wasn't in the transcript, so its quotation marks were removed.") : "") }));
   return wrap;
 }
 function fact(label, v, cls) { return h("div", { class: "fact" }, h("span", { class: "lbl", text: label }), h("span", { class: "v " + (cls || ""), text: v || "—" })); }

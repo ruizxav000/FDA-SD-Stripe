@@ -56,7 +56,7 @@ function claude(prompt, model, effort) {
       try { r = JSON.parse(out); } catch { r = { is_error: true, result: out || err }; }
       const u = r.usage || {};
       resolve({
-        ok: !r.is_error, text: r.result || "", data: extractJSON(r.result),
+        ok: !r.is_error, text: r.result || "", data: D.parseModelJSON(r.result),
         ms: Date.now() - t0, cost: r.total_cost_usd || 0,
         in_tokens: (u.input_tokens || 0) + (u.cache_read_input_tokens || 0) + (u.cache_creation_input_tokens || 0),
         out_tokens: u.output_tokens || 0, model: Object.keys(r.modelUsage || {})[0] || model,

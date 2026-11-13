@@ -1,0 +1,66 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For subscription and membership businesses, add a proof step before the contract goes out: 'Send us one month of your failed renewals and we'll show you which ones usually come back with a retry or an updated card.' Put the result in front of the finance signer, not only the person running the evaluation.\",\"evidence\":[\"E18\",\"E20\",\"E25\",\"E26\"],\"why\":\"The contract sat with the controller for two weeks and was signed four days after the session where he saw recoverable renewals in his own export. He had been silent until he asked for that spreadsheet.\",\"strength\":\"Test this\"},{\"target\":\"M10\",\"current_line\":\"Recover failed payments automatically with smart retries.\",\"type\":\"replace\",\"change\":\"For subscription and membership businesses: 'Win back members who never meant to leave. Recover renewals that failed on a card, not on a decision, and report them as recovered churn.'\",\"evidence\":[\"E1\",\"E2\",\"E4\"],\"why\":\"The evaluation started as a board-level churn problem and became a payments project only when churn was split into cancellations and failed cards. The customer's phrase 'members who never meant to leave' names that outcome more sharply than 'failed payments'.\",\"strength\":\"Test this\"},{\"target\":\"M3\",\"current_line\":\"Online and in-store on one platform; the line between them has pretty much disappeared.\",\"type\":\"replace\",\"change\":\"For businesses running studio or other front-desk management software, stop saying 'unified commerce' and describe the front desk concretely: which readers we offer, how they connect to their software, naming the partner integration plainly, and an offer to show it working in their own setup. Don't claim one platform for in-store until we can run that demo.\",\"evidence\":[\"E22\",\"E29\",\"E30\",\"E32\"],\"why\":\"The customer asked 'is that the readers?' when she heard 'unified commerce'. We then couldn't show the reader inside their studio software live, the studios stayed with the incumbent, and she warned that 'the studio managers will revolt'.\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"drop\",\"change\":\"For subscription businesses operating in one or two countries, don't open with the global positioning line. Open with the failed-renewals offer instead.\",\"evidence\":[\"E21\"],\"why\":\"The rep opened with the global slide for a business with studios in the US and a handful in Canada, and the analysis records that it got no response.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For subscription and membership businesses, add a proof step before the contract goes out: 'Send us one month of your failed renewals and we'll show you which ones usually come back with a retry or an updated card.' Put the result in front of the finance signer, not only the person running the evaluation.",
+    "evidence": [
+     "E18",
+     "E20",
+     "E25",
+     "E26"
+    ],
+    "why": "The contract sat with the controller for two weeks and was signed four days after the session where he saw recoverable renewals in his own export. He had been silent until he asked for that spreadsheet.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M10",
+    "current_line": "Recover failed payments automatically with smart retries.",
+    "type": "replace",
+    "change": "For subscription and membership businesses: 'Win back members who never meant to leave. Recover renewals that failed on a card, not on a decision, and report them as recovered churn.'",
+    "evidence": [
+     "E1",
+     "E2",
+     "E4"
+    ],
+    "why": "The evaluation started as a board-level churn problem and became a payments project only when churn was split into cancellations and failed cards. The customer's phrase 'members who never meant to leave' names that outcome more sharply than 'failed payments'.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M3",
+    "current_line": "Online and in-store on one platform; the line between them has pretty much disappeared.",
+    "type": "replace",
+    "change": "For businesses running studio or other front-desk management software, stop saying 'unified commerce' and describe the front desk concretely: which readers we offer, how they connect to their software, naming the partner integration plainly, and an offer to show it working in their own setup. Don't claim one platform for in-store until we can run that demo.",
+    "evidence": [
+     "E22",
+     "E29",
+     "E30",
+     "E32"
+    ],
+    "why": "The customer asked 'is that the readers?' when she heard 'unified commerce'. We then couldn't show the reader inside their studio software live, the studios stayed with the incumbent, and she warned that 'the studio managers will revolt'.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "drop",
+    "change": "For subscription businesses operating in one or two countries, don't open with the global positioning line. Open with the failed-renewals offer instead.",
+    "evidence": [
+     "E21"
+    ],
+    "why": "The rep opened with the global slide for a business with studios in the US and a handful in Canada, and the analysis records that it got no response.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 22426,
+ "cost": 0.08590400000000001,
+ "in_tokens": 5389,
+ "out_tokens": 2140,
+ "model": "claude-opus-5-5"
+}

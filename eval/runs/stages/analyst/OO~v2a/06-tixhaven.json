@@ -1,0 +1,237 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":\"Lost\",\"scope\":null,\"competitor\":\"Unnamed competitor (name never given in the transcript)\",\"incumbent\":\"Their existing payments provider (unnamed), whose support was a ticket form\",\"tag\":\"Support and service\",\"runner_up\":\"Value proof\",\"tag_why\":\"The decider rejected our tiered support answer as \\\"a queue with a faster timer\\\", while the competitor put a named solutions engineer and account lead in the room and promised on-call coverage for major on-sales.\"},\n \"sections\":{\n  \"trigger\":{\"covered\":true,\"evidence\":[{\"id\":\"E1\",\"excerpt\":\"tickets went live at 10am on a Friday, and payments started failing about four minutes in\",\"label\":\"fact\"},{\"id\":\"E2\",\"excerpt\":\"Their provider's support was a ticket form. They got a reply after the on-sale was over.\",\"label\":\"fact\"},{\"id\":\"E5\",\"excerpt\":\"Ben, their CTO, said twice.\",\"label\":\"fact\"},{\"id\":\"E6\",\"excerpt\":\"But this was the first time the CEO saw it.\",\"label\":\"fact\"}],\"insight\":\"Payments had failed during on-sales before, and nobody switched. What changed was that the CEO saw it and that nobody at the provider answered until the on-sale was over. The buying pain was reachability during the crisis, not throughput. From that first Monday the COO owned the deadline, not the CTO, which set the terms for the whole deal before we arrived.\",\"messaging\":\"Open ticketing and event deals with the on-sale failure story (what happens at minute four, and who answers), not with M1's global-currency positioning.\"},\n  \"decider\":{\"covered\":true,\"evidence\":[{\"id\":\"E4\",\"excerpt\":\"So Monday morning the COO, Halima, says they're replacing payments before the spring on-sales.\",\"label\":\"fact\"},{\"id\":\"E7\",\"excerpt\":\"Ben wanted us. He told me that, and he told me he lost.\",\"label\":\"fact\"},{\"id\":\"E9\",\"excerpt\":\"it was Halima's call and she made it in one meeting.\",\"label\":\"quote\"}],\"insight\":\"Halima started the evaluation and ended it, and Ben's preference didn't carry. The rep's read of the deal came from the champion, not from the person who decided. A decision made in one meeting suggests she knew her criterion well before that meeting, and nobody wrote it down in our terms.\",\"messaging\":\"When an operations executive opens the evaluation after a public failure, write the proof for her question (who answers during an incident), not for the CTO's technical review.\"},\n  \"competitor\":{\"covered\":true,\"evidence\":[{\"id\":\"E10\",\"excerpt\":\"They showed up with the people who'd actually be on the account. A named solutions engineer and an account lead, in the room.\",\"label\":\"fact\"},{\"id\":\"E11\",\"excerpt\":\"they said there'd be a shared channel and someone on call for every major on-sale. That's from Ben.\",\"label\":\"fact\"},{\"id\":\"E15\",\"excerpt\":\"Before that meeting it was throughput, queueing, bots. After, it was names.\",\"label\":\"fact\"},{\"id\":\"E12\",\"excerpt\":\"I think they over-promised. I don't think anybody staffs every on-sale. But I don't know that.\",\"label\":\"opinion\"}],\"insight\":\"The competitor didn't win on the platform. It changed the buying criterion from throughput to names, and the customer's questions show the shift happened right after that meeting. We saw the signal and answered with tiers. The rep's theory that they over-promised is unverified and beside the point: they answered the question the decider was asking, and we didn't.\",\"messaging\":\"When a buyer starts asking \\\"who\\\", answer with named people, a shared channel and an escalation path, and only promise the on-sale coverage we can actually staff.\"},\n  \"message\":{\"covered\":true,\"evidence\":[{\"id\":\"E16\",\"excerpt\":\"Ben's team ran a load test in the sandbox and it went great.\",\"label\":\"fact\"},{\"id\":\"E19\",\"excerpt\":\"I walked her through the support plans. The tiers, the response times.\",\"label\":\"fact\"},{\"id\":\"E20\",\"excerpt\":\"so it's a queue with a faster timer.\",\"label\":\"quote\"},{\"id\":\"E29\",\"excerpt\":\"good\",\"label\":\"quote\"}],\"insight\":\"The developer story (M2: sandbox, docs, uptime) landed with the CTO's team and got a single word from the decider. Our support message (M5: tiered response times) was the sentence that lost the deal, because to someone burned by a ticket form, a tier still sounds like a queue. The transcript doesn't say who reacted well to the bot and fraud tooling.\",\"messaging\":\"Rewrite M5 from tiers and response times into who picks up, how to reach them and what happens if they're out; tiers alone read as a faster queue.\"},\n  \"decided\":{\"covered\":true,\"evidence\":[{\"id\":\"E20\",\"excerpt\":\"so it's a queue with a faster timer.\",\"label\":\"quote\"},{\"id\":\"E21\",\"excerpt\":\"Right before it we were the favourite.\",\"label\":\"opinion\"},{\"id\":\"E25\",\"excerpt\":\"I thought the load test had won it.\",\"label\":\"opinion\"},{\"id\":\"E33\",\"excerpt\":\"I don't buy uptime, I buy what happens when it's down.\",\"label\":\"quote\"}],\"insight\":\"The rep places the loss at Halima's sentence, but the warning came earlier, when every question turned to who. Being the favourite was Ben's view, and Ben didn't decide. Halima told us outright that uptime, the thing our load test proved, was not what she was buying.\",\"messaging\":\"Pair every uptime or load-test proof point with an incident story: when it goes down, here is who is on the line and what they do.\"},\n  \"gaps\":{\"covered\":true,\"evidence\":[{\"id\":\"E23\",\"excerpt\":\"She wanted to see, on paper, what we do on an on-sale morning. Who's watching, who she calls, what happens at minute four.\",\"label\":\"fact\"},{\"id\":\"E24\",\"excerpt\":\"We don't have that as a thing. I could have built something with our solutions engineer, and I didn't.\",\"label\":\"fact\"},{\"id\":\"E27\",\"excerpt\":\"I had logos. I didn't have a person.\",\"label\":\"fact\"}],\"insight\":\"The missing piece was a written on-sale runbook with names in it, not a feature. The rep says it could have been built with our solutions engineer and wasn't. The proof gap matches the same pattern: logos (M8) instead of a reachable person who has been through a big on-sale. The transcript doesn't say whether the customer actually asked for a ticketing reference or the rep inferred it.\",\"messaging\":\"Package an on-sale or peak-event runbook (who watches, who you call, what happens at minute four) and back M8 with a reference customer who will describe who picked up during their peak.\"},\n  \"language\":{\"covered\":true,\"evidence\":[{\"id\":\"E30\",\"excerpt\":\"A name, not a queue.\",\"label\":\"quote\"},{\"id\":\"E31\",\"excerpt\":\"On-sale morning\",\"label\":\"quote\"},{\"id\":\"E33\",\"excerpt\":\"I don't buy uptime, I buy what happens when it's down.\",\"label\":\"quote\"},{\"id\":\"E34\",\"excerpt\":\"Nobody said \\\"support.\\\" They said \\\"who.\\\"\",\"label\":\"fact\"}],\"insight\":\"Each customer phrase is about a person or a moment (a name, on-sale morning, minute four, someone who picks up). Our vocabulary is about a system (support, tiers, response times, uptime). The word \\\"support\\\" itself puts us on the incumbent's side of their mental line.\",\"messaging\":\"In peak-event deals, replace \\\"support plans\\\" and \\\"response times\\\" with the customer's terms: \\\"a name, not a queue\\\", \\\"someone who picks up\\\", \\\"on-sale morning\\\".\"}\n },\n \"close\":{\"gaps\":[\n  {\"question\":\"Who was the competitor?\",\"kind\":\"skipped\",\"follow_up\":\"Ask Jordan, or Ben if he'll talk, which provider Tixhaven chose.\"},\n  {\"question\":\"Why didn't you build the on-sale plan with our solutions engineer once Halima asked for it?\",\"kind\":\"dodged\",\"follow_up\":\"Ask Jordan when Halima asked for the plan, what stopped him from building it, and whether the solutions engineer was ever brought into the deal.\"},\n  {\"question\":\"Can the competitor really staff someone on call for every major on-sale?\",\"kind\":\"unknown\",\"follow_up\":\"Ask Ben in a few months, after the spring on-sales, whether the named person and on-call coverage actually showed up.\"},\n  {\"question\":\"Did the customer ask for a ticketing reference, or did the rep infer that need?\",\"kind\":\"unknown\",\"follow_up\":\"Ask Jordan whether Halima or Ben explicitly asked to speak to a ticketing customer.\"},\n  {\"question\":\"Was Halima in the competitor's meeting with the named solutions engineer and account lead?\",\"kind\":\"skipped\",\"follow_up\":\"Ask Jordan, or Ben, who from Tixhaven attended that meeting.\"},\n  {\"question\":\"Did we ever put named people from our side in front of Halima?\",\"kind\":\"skipped\",\"follow_up\":\"Ask Jordan whether Halima met anyone from our team besides him, and whether we could have named an on-call contact.\"}\n ],\"rep_takeaway\":\"When the buyer's questions change, the deal has changed: the moment every question became \\\"who\\\", the load test stopped mattering. Answer the decider's question in her own words (a name, a plan for on-sale morning, someone who picks up) and bring in the solutions engineer to build it, rather than relying on a champion who can't make the call.\"},\n \"confidence\":\"high\"}",
+ "data": {
+  "header": {
+   "outcome": "Lost",
+   "scope": null,
+   "competitor": "Unnamed competitor (name never given in the transcript)",
+   "incumbent": "Their existing payments provider (unnamed), whose support was a ticket form",
+   "tag": "Support and service",
+   "runner_up": "Value proof",
+   "tag_why": "The decider rejected our tiered support answer as \"a queue with a faster timer\", while the competitor put a named solutions engineer and account lead in the room and promised on-call coverage for major on-sales."
+  },
+  "sections": {
+   "trigger": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E1",
+      "excerpt": "tickets went live at 10am on a Friday, and payments started failing about four minutes in",
+      "label": "fact"
+     },
+     {
+      "id": "E2",
+      "excerpt": "Their provider's support was a ticket form. They got a reply after the on-sale was over.",
+      "label": "fact"
+     },
+     {
+      "id": "E5",
+      "excerpt": "Ben, their CTO, said twice.",
+      "label": "fact"
+     },
+     {
+      "id": "E6",
+      "excerpt": "But this was the first time the CEO saw it.",
+      "label": "fact"
+     }
+    ],
+    "insight": "Payments had failed during on-sales before, and nobody switched. What changed was that the CEO saw it and that nobody at the provider answered until the on-sale was over. The buying pain was reachability during the crisis, not throughput. From that first Monday the COO owned the deadline, not the CTO, which set the terms for the whole deal before we arrived.",
+    "messaging": "Open ticketing and event deals with the on-sale failure story (what happens at minute four, and who answers), not with M1's global-currency positioning."
+   },
+   "decider": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E4",
+      "excerpt": "So Monday morning the COO, Halima, says they're replacing payments before the spring on-sales.",
+      "label": "fact"
+     },
+     {
+      "id": "E7",
+      "excerpt": "Ben wanted us. He told me that, and he told me he lost.",
+      "label": "fact"
+     },
+     {
+      "id": "E9",
+      "excerpt": "it was Halima's call and she made it in one meeting.",
+      "label": "quote"
+     }
+    ],
+    "insight": "Halima started the evaluation and ended it, and Ben's preference didn't carry. The rep's read of the deal came from the champion, not from the person who decided. A decision made in one meeting suggests she knew her criterion well before that meeting, and nobody wrote it down in our terms.",
+    "messaging": "When an operations executive opens the evaluation after a public failure, write the proof for her question (who answers during an incident), not for the CTO's technical review."
+   },
+   "competitor": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E10",
+      "excerpt": "They showed up with the people who'd actually be on the account. A named solutions engineer and an account lead, in the room.",
+      "label": "fact"
+     },
+     {
+      "id": "E11",
+      "excerpt": "they said there'd be a shared channel and someone on call for every major on-sale. That's from Ben.",
+      "label": "fact"
+     },
+     {
+      "id": "E15",
+      "excerpt": "Before that meeting it was throughput, queueing, bots. After, it was names.",
+      "label": "fact"
+     },
+     {
+      "id": "E12",
+      "excerpt": "I think they over-promised. I don't think anybody staffs every on-sale. But I don't know that.",
+      "label": "opinion"
+     }
+    ],
+    "insight": "The competitor didn't win on the platform. It changed the buying criterion from throughput to names, and the customer's questions show the shift happened right after that meeting. We saw the signal and answered with tiers. The rep's theory that they over-promised is unverified and beside the point: they answered the question the decider was asking, and we didn't.",
+    "messaging": "When a buyer starts asking \"who\", answer with named people, a shared channel and an escalation path, and only promise the on-sale coverage we can actually staff."
+   },
+   "message": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E16",
+      "excerpt": "Ben's team ran a load test in the sandbox and it went great.",
+      "label": "fact"
+     },
+     {
+      "id": "E19",
+      "excerpt": "I walked her through the support plans. The tiers, the response times.",
+      "label": "fact"
+     },
+     {
+      "id": "E20",
+      "excerpt": "so it's a queue with a faster timer.",
+      "label": "quote"
+     },
+     {
+      "id": "E29",
+      "excerpt": "good",
+      "label": "quote"
+     }
+    ],
+    "insight": "The developer story (M2: sandbox, docs, uptime) landed with the CTO's team and got a single word from the decider. Our support message (M5: tiered response times) was the sentence that lost the deal, because to someone burned by a ticket form, a tier still sounds like a queue. The transcript doesn't say who reacted well to the bot and fraud tooling.",
+    "messaging": "Rewrite M5 from tiers and response times into who picks up, how to reach them and what happens if they're out; tiers alone read as a faster queue."
+   },
+   "decided": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E20",
+      "excerpt": "so it's a queue with a faster timer.",
+      "label": "quote"
+     },
+     {
+      "id": "E21",
+      "excerpt": "Right before it we were the favourite.",
+      "label": "opinion"
+     },
+     {
+      "id": "E25",
+      "excerpt": "I thought the load test had won it.",
+      "label": "opinion"
+     },
+     {
+      "id": "E33",
+      "excerpt": "I don't buy uptime, I buy what happens when it's down.",
+      "label": "quote"
+     }
+    ],
+    "insight": "The rep places the loss at Halima's sentence, but the warning came earlier, when every question turned to who. Being the favourite was Ben's view, and Ben didn't decide. Halima told us outright that uptime, the thing our load test proved, was not what she was buying.",
+    "messaging": "Pair every uptime or load-test proof point with an incident story: when it goes down, here is who is on the line and what they do."
+   },
+   "gaps": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E23",
+      "excerpt": "She wanted to see, on paper, what we do on an on-sale morning. Who's watching, who she calls, what happens at minute four.",
+      "label": "fact"
+     },
+     {
+      "id": "E24",
+      "excerpt": "We don't have that as a thing. I could have built something with our solutions engineer, and I didn't.",
+      "label": "fact"
+     },
+     {
+      "id": "E27",
+      "excerpt": "I had logos. I didn't have a person.",
+      "label": "fact"
+     }
+    ],
+    "insight": "The missing piece was a written on-sale runbook with names in it, not a feature. The rep says it could have been built with our solutions engineer and wasn't. The proof gap matches the same pattern: logos (M8) instead of a reachable person who has been through a big on-sale. The transcript doesn't say whether the customer actually asked for a ticketing reference or the rep inferred it.",
+    "messaging": "Package an on-sale or peak-event runbook (who watches, who you call, what happens at minute four) and back M8 with a reference customer who will describe who picked up during their peak."
+   },
+   "language": {
+    "covered": true,
+    "evidence": [
+     {
+      "id": "E30",
+      "excerpt": "A name, not a queue.",
+      "label": "quote"
+     },
+     {
+      "id": "E31",
+      "excerpt": "On-sale morning",
+      "label": "quote"
+     },
+     {
+      "id": "E33",
+      "excerpt": "I don't buy uptime, I buy what happens when it's down.",
+      "label": "quote"
+     },
+     {
+      "id": "E34",
+      "excerpt": "Nobody said \"support.\" They said \"who.\"",
+      "label": "fact"
+     }
+    ],
+    "insight": "Each customer phrase is about a person or a moment (a name, on-sale morning, minute four, someone who picks up). Our vocabulary is about a system (support, tiers, response times, uptime). The word \"support\" itself puts us on the incumbent's side of their mental line.",
+    "messaging": "In peak-event deals, replace \"support plans\" and \"response times\" with the customer's terms: \"a name, not a queue\", \"someone who picks up\", \"on-sale morning\"."
+   }
+  },
+  "close": {
+   "gaps": [
+    {
+     "question": "Who was the competitor?",
+     "kind": "skipped",
+     "follow_up": "Ask Jordan, or Ben if he'll talk, which provider Tixhaven chose."
+    },
+    {
+     "question": "Why didn't you build the on-sale plan with our solutions engineer once Halima asked for it?",
+     "kind": "dodged",
+     "follow_up": "Ask Jordan when Halima asked for the plan, what stopped him from building it, and whether the solutions engineer was ever brought into the deal."
+    },
+    {
+     "question": "Can the competitor really staff someone on call for every major on-sale?",
+     "kind": "unknown",
+     "follow_up": "Ask Ben in a few months, after the spring on-sales, whether the named person and on-call coverage actually showed up."
+    },
+    {
+     "question": "Did the customer ask for a ticketing reference, or did the rep infer that need?",
+     "kind": "unknown",
+     "follow_up": "Ask Jordan whether Halima or Ben explicitly asked to speak to a ticketing customer."
+    },
+    {
+     "question": "Was Halima in the competitor's meeting with the named solutions engineer and account lead?",
+     "kind": "skipped",
+     "follow_up": "Ask Jordan, or Ben, who from Tixhaven attended that meeting."
+    },
+    {
+     "question": "Did we ever put named people from our side in front of Halima?",
+     "kind": "skipped",
+     "follow_up": "Ask Jordan whether Halima met anyone from our team besides him, and whether we could have named an on-call contact."
+    }
+   ],
+   "rep_takeaway": "When the buyer's questions change, the deal has changed: the moment every question became \"who\", the load test stopped mattering. Answer the decider's question in her own words (a name, a plan for on-sale morning, someone who picks up) and bring in the solutions engineer to build it, rather than relying on a champion who can't make the call."
+  },
+  "confidence": "high"
+ },
+ "ms": 47393,
+ "cost": 0.17480400000000001,
+ "in_tokens": 10254,
+ "out_tokens": 4639,
+ "model": "claude-opus-5-5"
+}

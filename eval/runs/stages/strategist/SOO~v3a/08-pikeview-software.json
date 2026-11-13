@@ -1,0 +1,66 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M7\",\"current_line\":\"Billing that helps you grow revenue.\",\"type\":\"replace\",\"change\":\"For product and engineering buyers replacing a homegrown billing system: 'Stop billing being a tax on the roadmap. Change a price, add a trial or prorate in a few clicks, instead of spending a quarter of engineering time on every pricing change.'\",\"evidence\":[\"E20\",\"E16\",\"E15\"],\"why\":\"The champion rejected the revenue-growth framing outright ('we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap.') and described the demo himself as 'a quarter of roadmap in five minutes'.\",\"strength\":\"Test this\"},{\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"replace\",\"change\":\"Use the study only as a door-opener. When a buyer asks about payback, reply: 'Let's build your own payback number together: what your current billing costs you today, and what changes when you switch.' Offer a dated working session within days instead of sending the general ROI deck.\",\"evidence\":[\"E22\",\"E23\",\"E24\"],\"why\":\"The rep sent the general ROI deck with the study, the champion said 'I can't get this past Diane without a number that's ours', and the session to build that number never happened before Q3 closed.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a finance-facing companion piece the champion can forward to the CFO when replacing homegrown billing. It should answer 'is this on fire?' with the monthly cost of keeping the current system: engineering time per pricing change, billing errors, and subscriptions that lapse 'because the card fails and nobody chases it' (tie the last item to M10 smart retries). The goal is to show the cost of doing nothing, not to list features.\",\"evidence\":[\"E33\",\"E34\",\"E26\",\"E27\",\"E28\"],\"why\":\"Finance treated the project as a 'nice to have' under an 'if it isn't on fire, it isn't funded' rule, and the customer named the cost inputs (including lapsed subscriptions from failed cards), but 'We never added it up.'\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For buyers moving off a homegrown billing system, add a migration proof point: an offer to talk to a reference customer who has made the same move, not only a migration doc.\",\"evidence\":[\"E31\"],\"why\":\"The rep says 'We had a doc for that. He wanted to talk to someone who'd done it.', so a written migration claim was not enough proof for this buyer.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M7",
+    "current_line": "Billing that helps you grow revenue.",
+    "type": "replace",
+    "change": "For product and engineering buyers replacing a homegrown billing system: 'Stop billing being a tax on the roadmap. Change a price, add a trial or prorate in a few clicks, instead of spending a quarter of engineering time on every pricing change.'",
+    "evidence": [
+     "E20",
+     "E16",
+     "E15"
+    ],
+    "why": "The champion rejected the revenue-growth framing outright ('we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap.') and described the demo himself as 'a quarter of roadmap in five minutes'.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "replace",
+    "change": "Use the study only as a door-opener. When a buyer asks about payback, reply: 'Let's build your own payback number together: what your current billing costs you today, and what changes when you switch.' Offer a dated working session within days instead of sending the general ROI deck.",
+    "evidence": [
+     "E22",
+     "E23",
+     "E24"
+    ],
+    "why": "The rep sent the general ROI deck with the study, the champion said 'I can't get this past Diane without a number that's ours', and the session to build that number never happened before Q3 closed.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a finance-facing companion piece the champion can forward to the CFO when replacing homegrown billing. It should answer 'is this on fire?' with the monthly cost of keeping the current system: engineering time per pricing change, billing errors, and subscriptions that lapse 'because the card fails and nobody chases it' (tie the last item to M10 smart retries). The goal is to show the cost of doing nothing, not to list features.",
+    "evidence": [
+     "E33",
+     "E34",
+     "E26",
+     "E27",
+     "E28"
+    ],
+    "why": "Finance treated the project as a 'nice to have' under an 'if it isn't on fire, it isn't funded' rule, and the customer named the cost inputs (including lapsed subscriptions from failed cards), but 'We never added it up.'",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For buyers moving off a homegrown billing system, add a migration proof point: an offer to talk to a reference customer who has made the same move, not only a migration doc.",
+    "evidence": [
+     "E31"
+    ],
+    "why": "The rep says 'We had a doc for that. He wanted to talk to someone who'd done it.', so a written migration claim was not enough proof for this buyer.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 19965,
+ "cost": 0.08304,
+ "in_tokens": 6016,
+ "out_tokens": 1746,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":0},\n \"sections\":{\"trigger\":2,\"decider\":1,\"competitor\":2,\"message\":2,\"decided\":1,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":1,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the international-only scope note\",\"pass\":true},\n  {\"item\":\"\\\"Decided before we got in the room\\\" is challenged with the coverage facts\",\"pass\":true},\n  {\"item\":\"\\\"that's an average. What's mine?\\\" is tied to a messaging change\",\"pass\":true},\n  {\"item\":\"The Adyen test results stay unknown\",\"pass\":true}],\n \"fails\":[\"The messaging change M4 'why' says Adyen won 'by showing results by country, card type and issuer in his own traffic'. The transcript only says Adyen's results were by country. Card type and issuer were Stefan's later questions to us, not Adyen's results.\"],\n \"notes\":\"The report gets the core story right: average-uplift messaging failed against customer-specific proof. It keeps the Adyen results unknown, and it shows that the late analysis contradicts the rep's 'nothing to do'. It misses the key's tag (it uses Value proof and Support and service instead of Approval rates or Champion or access) and has no messaging change answering 'local acquiring' or 'local cards, local rails'. The decided section also leaves out the coverage facts: no business review in 9–10 months, the rep never met Stefan, and we learned of the evaluation from the renewal notice. Without them, it never lands 'decided before we got in the room is true, and that is the finding'.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 0
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 1,
+   "competitor": 2,
+   "message": 2,
+   "decided": 1,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 1,
+  "must_catch": [
+   {
+    "item": "The outcome carries the international-only scope note",
+    "pass": true
+   },
+   {
+    "item": "\"Decided before we got in the room\" is challenged with the coverage facts",
+    "pass": true
+   },
+   {
+    "item": "\"that's an average. What's mine?\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "The Adyen test results stay unknown",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "The messaging change M4 'why' says Adyen won 'by showing results by country, card type and issuer in his own traffic'. The transcript only says Adyen's results were by country. Card type and issuer were Stefan's later questions to us, not Adyen's results."
+  ],
+  "notes": "The report gets the core story right: average-uplift messaging failed against customer-specific proof. It keeps the Adyen results unknown, and it shows that the late analysis contradicts the rep's 'nothing to do'. It misses the key's tag (it uses Value proof and Support and service instead of Approval rates or Champion or access) and has no messaging change answering 'local acquiring' or 'local cards, local rails'. The decided section also leaves out the coverage facts: no business review in 9–10 months, the rep never met Stefan, and we learned of the evaluation from the renewal notice. Without them, it never lands 'decided before we got in the room is true, and that is the finding'."
+ },
+ "ms": 34522,
+ "cost": 0.141056,
+ "in_tokens": 9443,
+ "out_tokens": 3276,
+ "model": "claude-opus-5-5"
+}

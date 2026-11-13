@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":1,\"message\":2,\"decided\":1,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The tag is Value proof, and the report explicitly challenges 'lost on price'\",\"pass\":true},\n  {\"item\":\"The rep's 'more room on the rate' is labeled opinion and shown as contradicted\",\"pass\":false},\n  {\"item\":\"The declined decline analysis is surfaced\",\"pass\":true},\n  {\"item\":\"Rate-vs-rate (not total cost) on the CFO's page is identified\",\"pass\":true}\n ],\n \"fails\":[\"Gaps insight and rep_takeaway say the analysis was skipped 'to save two weeks at quarter end'. The transcript only says it was the last two weeks of the quarter, so the two-week saving is an invented figure.\"],\n \"notes\":\"The report correctly diagnoses value proof over price. It shows the champion asked for a one-page business case and got the deck, and that the decline analysis was declined. It also shows that the CFO saw a rate-only page with nothing from us but the quote. It never cites or labels the rep's closing claim 'If we'd had more room on the rate, we win this' as opinion, or shows his own T34 admission undercutting it. It also mislabels the Lucy-relayed fact 'No new product, nothing. Just a better rate.' as opinion.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 1,
+   "message": 2,
+   "decided": 1,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The tag is Value proof, and the report explicitly challenges 'lost on price'",
+    "pass": true
+   },
+   {
+    "item": "The rep's 'more room on the rate' is labeled opinion and shown as contradicted",
+    "pass": false
+   },
+   {
+    "item": "The declined decline analysis is surfaced",
+    "pass": true
+   },
+   {
+    "item": "Rate-vs-rate (not total cost) on the CFO's page is identified",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Gaps insight and rep_takeaway say the analysis was skipped 'to save two weeks at quarter end'. The transcript only says it was the last two weeks of the quarter, so the two-week saving is an invented figure."
+  ],
+  "notes": "The report correctly diagnoses value proof over price. It shows the champion asked for a one-page business case and got the deck, and that the decline analysis was declined. It also shows that the CFO saw a rate-only page with nothing from us but the quote. It never cites or labels the rep's closing claim 'If we'd had more room on the rate, we win this' as opinion, or shows his own T34 admission undercutting it. It also mislabels the Lucy-relayed fact 'No new product, nothing. Just a better rate.' as opinion."
+ },
+ "ms": 28710,
+ "cost": 0.138004,
+ "in_tokens": 10279,
+ "out_tokens": 2789,
+ "model": "claude-opus-5-5"
+}

@@ -6,27 +6,27 @@
 (function (root) {
   "use strict";
 
-  const PIPELINE_VERSION = "2026-11-13.1";
+  const PIPELINE_VERSION = "2026-11-13.4";
 
   // ── Which model runs each stage (set from the model comparison; see eval/REPORT.md)
   const STAGE_MODELS = {
-    reader: { model: "claude-sonnet-5-5", effort: "low" },
+    reader: { model: "claude-sonnet-5-5", effort: "medium" },
     analyst: { model: "claude-opus-5-5", effort: "medium" },
     strategist: { model: "claude-opus-5-5", effort: "medium" },
   };
 
   // ── Reason tags (docs/report-spec.md)
   const TAGS = [
-    ["Value proof", "Whether we showed value in the customer's own terms and numbers (customer-specific business case, ROI, cost of doing nothing)."],
+    ["Value proof", "The decider compared MONEY: price against value, payback, ROI, the cost of doing nothing, and whether we showed it in the customer's own numbers. Use it even when the underlying problem is declines or failed payments, if the deciding question was what it is worth."],
     ["Product fit", "A capability we did or didn't have."],
     ["Developer experience", "Docs, sandbox, APIs, how fast their engineers could build."],
-    ["Approval rates", "Approval/decline performance, by market, card type or issuer."],
+    ["Approval rates", "The decider compared APPROVAL PERFORMANCE itself: approval/decline rates by market, card type or issuer, a competitor's test results, the customer's own approval data."],
     ["In-store and online together", "One platform across tills and web: returns, customer records, rollout."],
     ["Migration effort", "Cost, risk or timing of switching (re-collecting cards, staged moves, freeze periods)."],
     ["Existing relationship or bundle", "The incumbent's bank relationship, bundled services or contract lock-in."],
     ["Support and service", "Named people, escalation, rollout teams, on-call coverage."],
     ["Champion or access", "A champion leaving, or never reaching the person who decided."],
-    ["No decision", "Nobody switched: freeze, stall, status quo."],
+    ["No decision", "Nobody switched: freeze, stall, status quo. Whenever the outcome is No decision, this is the tag, and the underlying cause goes in runner_up."],
     ["Not established", "The review never got to the reason."],
   ];
   const TAG_NAMES = TAGS.map((t) => t[0]);
@@ -248,6 +248,8 @@ TRANSCRIPT
 ${transcript}
 END TRANSCRIPT
 
+JSON safety: inside any string value, write double quotation marks as single quotation marks (') so the JSON stays valid. Excerpts still count as word for word.
+
 Reply with ONLY this JSON (no prose):
 {"people":[{"name":"","role":"","side":"customer|us|competitor|other"}],
  "competitors":[""],
@@ -282,7 +284,8 @@ Write:
    - scope: one short sentence when the outcome is only partly true (for example "Won: online only; in-store still with the incumbent"), else null.
    - competitor (who we were up against; "None (status quo)" if no one) and incumbent (what they used before). Use null if unknown.
    - tag: exactly one reason tag from the list. The tags are neutral topics; the outcome gives the direction (on a win, the tag is why they picked us). There is no price tag on purpose: when the rep blames price, find what was really behind it. If the interview never got to the reason, use "Not established".
-   - runner_up: the second-closest tag, or null. tag_why: one sentence.
+   - To choose between close tags, ask what the decider was comparing at the moment it was decided (money, approval performance, people and support, rollout, switching effort...).
+   - runner_up: the second-closest tag, or null. When the outcome is "No decision", tag is "No decision" and runner_up is the underlying cause. tag_why: one sentence.
 
 Reason tags:
 ${tagsBlock()}
@@ -299,7 +302,13 @@ ${SECTIONS.map(([k, n, q]) => `   - ${k} (${n}): "${q}"`).join("\n")}
    - gaps: questions that were skipped, dodged, or left unknown, each with a follow-up question to ask (and of whom).
    - rep_takeaway: one takeaway for the rep, written as coaching (everyone on the team reads these).
 
-Hard rules: never invent names, numbers, quotes or outcomes. Never state a competitor's claim as fact unless the customer said it. A line the rep says they are paraphrasing is not a quote.
+Hard rules:
+- Never invent names, numbers, quotes or outcomes. Never state a competitor's claim as fact unless the customer said it. A line the rep says they are paraphrasing is not a quote.
+- An insight may interpret, but every factual claim inside it must be backed by the transcript. If the transcript does not establish something (whether anyone met a person, a figure, a duration, a motive), call it unclear or leave it out. Never assert something your close lists as unknown.
+- Use quotation marks ONLY around words copied exactly from the transcript. Paraphrase without quotation marks.
+- Do not describe the customer (size, segment, region) or our product beyond what the transcript says.
+- Evidence comes from what the rep (or another participant) said, never from the interviewer's questions.
+- In the close, kind "skipped" = the question was never asked; "dodged" = it was asked and the rep deflected, or answered and then contradicted themselves; "unknown" = asked, and the rep did not know.
 
 Our current messaging (provisional), for reference:
 ${libraryBlock()}
@@ -312,6 +321,8 @@ END TRANSCRIPT
 
 EVIDENCE LEDGER (JSON)
 ${JSON.stringify(ledger)}
+
+JSON safety: inside any string value, write double quotation marks as single quotation marks (') so the JSON stays valid. Excerpts still count as word for word.
 
 Reply with ONLY this JSON:
 {"header":{"outcome":"Won|Lost|No decision","scope":null,"competitor":null,"incumbent":null,"tag":"","runner_up":null,"tag_why":""},
@@ -332,6 +343,9 @@ Each change:
 - strength: always "Test this" (one deal is one data point; a person promotes a change after it repeats across deals).
 
 Give 1-4 changes, most important first. Only propose what the evidence supports. If nothing in the interview supports a change, return an empty list and say why in no_change_reason. Never invent evidence.
+- Use "drop" only when the interview shows the line was used and fell flat or backfired.
+- Use quotation marks only around words copied exactly from the transcript or from our messaging library.
+- Do not describe the customer (size, segment, region) or our product beyond what the analysis and transcript say.
 
 Our current messaging (PROVISIONAL library):
 ${libraryBlock()}
@@ -343,6 +357,8 @@ ${JSON.stringify(analysis)}
 
 CUSTOMER WORDS VS OURS (from the reader)
 ${JSON.stringify(pairs)}
+
+JSON safety: inside any string value, write double quotation marks as single quotation marks (') so the JSON stays valid. Excerpts still count as word for word.
 
 Reply with ONLY this JSON:
 {"changes":[{"target":"M1","current_line":"exact line or null","type":"replace|add|drop","change":"","evidence":["E1"],"why":"","strength":"Test this"}],"no_change_reason":null}`;
@@ -379,6 +395,8 @@ TRANSCRIPT
 ${transcript}
 END TRANSCRIPT
 
+JSON safety: inside any string value, write double quotation marks as single quotation marks (') so the JSON stays valid. Excerpts still count as word for word.
+
 Reply with ONLY this JSON:
 {"header":{"outcome":"","scope":null,"competitor":null,"incumbent":null,"tag":"","runner_up":null,"tag_why":""},
  "messaging_changes":[{"target":"M1","current_line":"","type":"replace|add|drop","change":"","evidence_excerpts":[""],"why":"","strength":"Test this"}],
@@ -389,8 +407,27 @@ Reply with ONLY this JSON:
   // ════════════════════════════════════════════════════════════════
   // Assembly + checks
   // ════════════════════════════════════════════════════════════════
+  // Quotation marks in prose that makes claims (insights, tag_why, the rep takeaway) must
+  // hold words that are really in the transcript or our library. Anything else is a
+  // paraphrase dressed as a quote: keep the words, drop the marks, and record it.
+  // Messaging lines and follow-up questions are left alone: quotes there mark proposed wording.
+  function unquoteProse(text, verbatim, where, log) {
+    if (!text || typeof text !== "string") return text;
+    const libOk = (s) => MESSAGING.some((m) => norm(m.line).includes(norm(s))) || TAG_NAMES.some((t) => norm(t) === norm(s));
+    const fix = (whole, pre, q) => {
+      if (norm(q).split(" ").length < 2 || verbatim(q) || libOk(q)) return whole;
+      log.push({ where, text: q });
+      return pre + q;
+    };
+    return text
+      .replace(/(^|[^\w])[“"]([^”"]{3,}?)[”"]/g, fix)
+      .replace(/(^|[\s(—–-])[‘']([^’'\n]{3,}?)[’'](?=[\s.,;:!?)—–-]|$)/g, fix);
+  }
+
   function assemble({ deal, ledger, analysis, strategy, turns, meta }) {
     const verbatim = makeVerifier(turns);
+    const proseLog = [];
+    const uq = (t, where) => unquoteProse(t, verbatim, where, proseLog);
     const byId = {};
     for (const e of (ledger && ledger.evidence) || []) byId[e.id] = e;
     const checks = { quotes_total: 0, quotes_failed: 0, failed: [] };
@@ -406,7 +443,7 @@ Reply with ONLY this JSON:
         if (!ok) { checks.quotes_failed++; checks.failed.push({ where: k, excerpt }); }
         return { id: e.id || null, excerpt, label: e.label || src.label || "fact", speaker: src.speaker || null, verified: ok };
       });
-      sections[k] = { covered: s.covered !== false, evidence: ev, insight: s.insight || "", messaging: s.messaging || "" };
+      sections[k] = { covered: s.covered !== false, evidence: ev, insight: uq(s.insight || "", k), messaging: s.messaging || "" };
     }
 
     const lib = {};
@@ -436,15 +473,21 @@ Reply with ONLY this JSON:
       incumbent: h.incumbent || null,
       tag: TAG_NAMES.includes(h.tag) ? h.tag : "Not established",
       runner_up: TAG_NAMES.includes(h.runner_up) ? h.runner_up : null,
-      tag_why: h.tag_why || "",
+      tag_why: uq(h.tag_why || "", "header"),
     };
+    const ac = analysis.close || {};
+    const close = {
+      gaps: (ac.gaps || []).map((g) => ({ question: g.question || "", kind: g.kind || "unknown", follow_up: g.follow_up || "" })),
+      rep_takeaway: uq(ac.rep_takeaway || "", "close"),
+    };
+    checks.prose_unquoted = proseLog;
     return {
       version: PIPELINE_VERSION,
       header,
       messaging_changes: changes,
       no_change_reason: (strategy && strategy.no_change_reason) || null,
       sections,
-      close: { gaps: (analysis.close && analysis.close.gaps) || [], rep_takeaway: (analysis.close && analysis.close.rep_takeaway) || "" },
+      close,
       confidence: analysis.confidence || null,
       checks,
       meta: meta || {},
@@ -452,33 +495,82 @@ Reply with ONLY this JSON:
   }
 
   // Orchestrator: deterministic code, not a model. Reader -> Analyst -> Strategist -> checks.
-  async function runPipeline({ deal, parsed, roles, call, models, onStage }) {
+  // `state` (optional) keeps finished steps, so a failed run can resume from the step that failed.
+  async function runPipeline({ deal, parsed, roles, call, models, onStage, state }) {
     const M = Object.assign({}, STAGE_MODELS, models || {});
+    const S = state || {};
     const transcript = renderTranscript(parsed.turns, roles);
     const t0 = Date.now();
-    const stage = (n) => onStage && onStage(n);
+    const stage = (n) => { S.stage = n; if (onStage) onStage(n); };
+    const fail = (st, msg) => Object.assign(new Error(msg), { code: "bad_stage", stage: st });
 
-    stage("reader");
-    const ledger = await call("reader", readerPrompt({ deal, transcript }), M.reader);
-    if (!ledger || !Array.isArray(ledger.evidence)) throw Object.assign(new Error("Reader returned no evidence"), { code: "bad_stage", stage: "reader" });
-    // Drop ledger items that are not verbatim before the analyst sees them.
-    const verbatim = makeVerifier(parsed.turns);
-    const before = ledger.evidence.length;
-    ledger.evidence = ledger.evidence.filter((e) => verbatim(e.excerpt));
-    const ledgerDropped = before - ledger.evidence.length;
-
-    stage("analyst");
-    const analysis = await call("analyst", analystPrompt({ deal, transcript, ledger }), M.analyst);
-    if (!analysis || !analysis.sections) throw Object.assign(new Error("Analyst returned no sections"), { code: "bad_stage", stage: "analyst" });
-
-    stage("strategist");
-    const strategy = await call("strategist", strategistPrompt({ deal, analysis, ledger }), M.strategist);
-
+    if (!S.ledger) {
+      stage("reader");
+      const ledger = await call("reader", readerPrompt({ deal, transcript }), M.reader);
+      if (!ledger || !Array.isArray(ledger.evidence)) throw fail("reader", "Reader returned no evidence");
+      // Drop ledger items that are not verbatim before the analyst sees them.
+      const verbatim = makeVerifier(parsed.turns);
+      S.ledgerItems = ledger.evidence.length;
+      ledger.evidence = ledger.evidence.filter((e) => verbatim(e.excerpt));
+      S.ledger = ledger;
+    }
+    if (!S.analysis) {
+      stage("analyst");
+      const analysis = await call("analyst", analystPrompt({ deal, transcript, ledger: S.ledger }), M.analyst);
+      if (!analysis || !analysis.sections) throw fail("analyst", "Analyst returned no sections");
+      S.analysis = analysis;
+    }
+    if (!S.strategy) {
+      stage("strategist");
+      const strategy = await call("strategist", strategistPrompt({ deal, analysis: S.analysis, ledger: S.ledger }), M.strategist);
+      if (!strategy || !Array.isArray(strategy.changes)) throw fail("strategist", "Strategist returned no changes list");
+      S.strategy = strategy;
+    }
     stage("checks");
     return assemble({
-      deal, ledger, analysis, strategy, turns: parsed.turns,
-      meta: { models: { reader: M.reader.model, analyst: M.analyst.model, strategist: M.strategist.model }, ms: Date.now() - t0, ledger_items: before, ledger_dropped: ledgerDropped },
+      deal, ledger: S.ledger, analysis: S.analysis, strategy: S.strategy, turns: parsed.turns,
+      meta: { models: { reader: M.reader.model, analyst: M.analyst.model, strategist: M.strategist.model }, ms: Date.now() - t0, ledger_items: S.ledgerItems, ledger_dropped: S.ledgerItems - S.ledger.evidence.length },
     });
+  }
+
+  // Tolerant JSON for model replies: whole text, a fenced block, or first {/[ to last }/].
+  // If that fails, repair the two usual faults: an unescaped " inside a string, and
+  // trailing commas. Returns undefined when nothing parses.
+  function repairJSON(t) {
+    t = t.replace(/(":\s*-?\d+(?:\.\d+)?)"(\s*[,}\]])/g, "$1$2"); // stray quote after a number: "turn":20",
+    let out = "", inStr = false;
+    for (let i = 0; i < t.length; i++) {
+      const c = t[i];
+      if (!inStr) { if (c === '"') inStr = true; out += c; continue; }
+      if (c === "\\") { out += c + (t[i + 1] || ""); i++; continue; }
+      if (c === "\n") { out += "\\n"; continue; }
+      if (c === '"') {
+        let j = i + 1; while (j < t.length && /\s/.test(t[j])) j++;
+        const next = t[j];
+        let closes = next === undefined || next === "}" || next === "]" || next === ":";
+        if (next === ",") {
+          // A real closing quote + comma is followed by another value or key, never a plain word.
+          let k = j + 1; while (k < t.length && /\s/.test(t[k])) k++;
+          closes = k >= t.length || /["{[\-0-9]/.test(t[k]) || /^(true|false|null)\b/.test(t.slice(k, k + 5));
+        }
+        if (closes) { inStr = false; out += c; }
+        else out += '\\"';
+        continue;
+      }
+      out += c;
+    }
+    return out.replace(/,\s*([}\]])/g, "$1");
+  }
+  function parseModelJSON(text) {
+    const t = String(text || "").trim();
+    const tries = [t];
+    const fence = t.match(/```(?:json)?\s*([\s\S]*?)```/);
+    if (fence) tries.push(fence[1].trim());
+    const a = t.search(/[[{]/), b = Math.max(t.lastIndexOf("}"), t.lastIndexOf("]"));
+    if (a >= 0 && b > a) tries.push(t.slice(a, b + 1));
+    for (const s of tries) { try { return JSON.parse(s); } catch (e) { /* next */ } }
+    for (const s of tries.slice(1).concat(tries[0])) { try { return JSON.parse(repairJSON(s)); } catch (e) { /* next */ } }
+    return undefined;
   }
 
   // The small summary that rides in the feed index (reviews/<uid>.cards[rid]).
@@ -500,7 +592,7 @@ Reply with ONLY this JSON:
   const api = {
     PIPELINE_VERSION, STAGE_MODELS, TAGS, TAG_NAMES, SECTIONS, SECTION_KEYS, MESSAGING,
     parseTranscript, guessRoles, renderTranscript, makeVerifier, norm,
-    readerPrompt, analystPrompt, strategistPrompt, singlePrompt, assemble, runPipeline, toCard,
+    readerPrompt, analystPrompt, strategistPrompt, singlePrompt, assemble, runPipeline, toCard, parseModelJSON,
   };
   root.DealReview = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;

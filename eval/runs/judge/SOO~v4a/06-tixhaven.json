@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":0,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":1,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"\\\"so it's a queue with a faster timer\\\" is tied to a messaging change\",\"pass\":true},\n  {\"item\":\"\\\"Over-promised\\\" is labeled opinion\",\"pass\":true},\n  {\"item\":\"The champion (Ben) and the decider (Halima) are distinguished\",\"pass\":true},\n  {\"item\":\"The passing remark that failures had happened twice before is surfaced in the trigger\",\"pass\":true}\n ],\n \"fails\":[\n  \"Language section attributes \\\"A name, not a queue.\\\" and \\\"Someone who picks up.\\\" to Halima as speaker. The transcript gives these only as the customer's words, without naming a speaker. Only \\\"I don't buy uptime...\\\" is attributed to Halima.\"\n ],\n \"notes\":\"The report gets the core story right: it separates Ben (champion) from Halima (decider), surfaces the 'twice before' remark, ties the 'queue with a faster timer' line to an M5 rewrite, and its four messaging changes match the key's four expected directions. It falls short in a few places: the gaps insight never says that both gaps could have been closed by the team in the room (neither was a product gap), the close misses the follow-up on whether we could offer named on-sale coverage, and 'over-promised' is framed as Jordan's unverified suspicion rather than explicitly labelled opinion (passed, but borderline). The competitor_incumbent score of 0 follows the key strictly, but the transcript never names Checkout.com or the bank gateway, so the report correctly avoided inventing them; the key should be reviewed.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 0,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 1,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "\"so it's a queue with a faster timer\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "\"Over-promised\" is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The champion (Ben) and the decider (Halima) are distinguished",
+    "pass": true
+   },
+   {
+    "item": "The passing remark that failures had happened twice before is surfaced in the trigger",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Language section attributes \"A name, not a queue.\" and \"Someone who picks up.\" to Halima as speaker. The transcript gives these only as the customer's words, without naming a speaker. Only \"I don't buy uptime...\" is attributed to Halima."
+  ],
+  "notes": "The report gets the core story right: it separates Ben (champion) from Halima (decider), surfaces the 'twice before' remark, ties the 'queue with a faster timer' line to an M5 rewrite, and its four messaging changes match the key's four expected directions. It falls short in a few places: the gaps insight never says that both gaps could have been closed by the team in the room (neither was a product gap), the close misses the follow-up on whether we could offer named on-sale coverage, and 'over-promised' is framed as Jordan's unverified suspicion rather than explicitly labelled opinion (passed, but borderline). The competitor_incumbent score of 0 follows the key strictly, but the transcript never names Checkout.com or the bank gateway, so the report correctly avoided inventing them; the key should be reviewed."
+ },
+ "ms": 34564,
+ "cost": 0.136008,
+ "in_tokens": 9002,
+ "out_tokens": 3200,
+ "model": "claude-opus-5-5"
+}

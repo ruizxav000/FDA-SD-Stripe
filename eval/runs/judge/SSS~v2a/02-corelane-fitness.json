@@ -1,0 +1,54 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},{\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},{\"item\":\"Customer language is marked Not covered\",\"pass\":true},{\"item\":\"'A third of the churn' is labeled unverified or opinion\",\"pass\":true},{\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}],\n \"fails\":[\"Rep takeaway says 'bring that data session to the first meeting instead of the fourth'. The transcript never says how many meetings there were, or which one the data session fell in; it only says Greg was silent for two meetings. 'Fourth' is an invented figure.\",\"Decider insight says 'the rep had barely engaged him until the data session'. This is an unsupported inference: the transcript says Greg was present but silent for two meetings, not that the rep failed to engage him.\"],\n \"notes\":\"The report's key strength is that it keeps the win honest. The header scopes the deal to online memberships only, with the front desk still on Global and phase two undated. It also surfaces the Maya-chose/Greg-decided contradiction and keeps the 'third of the churn' figure and customer language properly hedged and not covered. Its main weaknesses are an invented 'fourth meeting' in the rep takeaway and a close that marks the final-call question as 'dodged' even though the rep answered it once pressed. The competitor section also never says outright that the incumbent's hardware and lock-in defense is exactly the front-desk ground we did not win.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": true
+   },
+   {
+    "item": "'A third of the churn' is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Rep takeaway says 'bring that data session to the first meeting instead of the fourth'. The transcript never says how many meetings there were, or which one the data session fell in; it only says Greg was silent for two meetings. 'Fourth' is an invented figure.",
+   "Decider insight says 'the rep had barely engaged him until the data session'. This is an unsupported inference: the transcript says Greg was present but silent for two meetings, not that the rep failed to engage him."
+  ],
+  "notes": "The report's key strength is that it keeps the win honest. The header scopes the deal to online memberships only, with the front desk still on Global and phase two undated. It also surfaces the Maya-chose/Greg-decided contradiction and keeps the 'third of the churn' figure and customer language properly hedged and not covered. Its main weaknesses are an invented 'fourth meeting' in the rep takeaway and a close that marks the final-call question as 'dodged' even though the rep answered it once pressed. The competitor section also never says outright that the incumbent's hardware and lock-in defense is exactly the front-desk ground we did not win."
+ },
+ "ms": 29353,
+ "cost": 0.130464,
+ "in_tokens": 9489,
+ "out_tokens": 2728,
+ "model": "claude-opus-5-5"
+}

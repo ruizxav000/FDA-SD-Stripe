@@ -1,0 +1,71 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For payments-led buyers such as a head of payments, do not lead with the average uplift. Lead with their own numbers instead: Your approvals, market by market, on your own traffic: where money is left on the table and what we would fix. Say 'approvals', not authorization. Answer the buyer's 'what's mine' with their data, not a customer average.\",\"evidence\":[\"E12\",\"E13\",\"E14\",\"E34\",\"E31\"],\"why\":\"The buyer explicitly rejected the average-uplift pitch ('that's an average. What's mine?', 'I can't take an average to my CFO.') and frames the problem as approvals and 'Money left on the table', so the line has to move from our average to his numbers in his words.\",\"strength\":\"Test this\"},{\"target\":\"M5\",\"current_line\":\"Support plans with tiered response times, up to 24/7 coverage.\",\"type\":\"replace\",\"change\":\"For accounts with a payments owner, lead with ownership instead of response tiers: A named person at Stripe reviews your approvals by market with you every month. Make sure this commitment can actually be delivered before it is used.\",\"evidence\":[\"E28\",\"E35\"],\"why\":\"The buyer's real question was who at Stripe looks at his numbers every month, the rep had no name, and he said 'I heard from Stripe when I said I was leaving.' Tiered response times do not answer that question.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a proof point and play for existing accounts: When the payments owner changes, or ahead of renewal, we send you a market-by-market view of your approval rates, with reasons and the revenue at stake, before you ask. Deliver it within days, not weeks, and shape it so the champion can take it to the CFO.\",\"evidence\":[\"E1\",\"E3\",\"E26\",\"E27\",\"E30\",\"E14\"],\"why\":\"The new head of payments started by pulling declines by country, and our market-by-market analysis was called 'the most useful thing we'd sent him', but it landed three weeks after he asked and after Adyen's test had finished, so the asset works only if it arrives first and in a form he can take upstairs.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Prepare a market-by-market position for buyers who raise local acquiring and talk about 'Local cards, local rails', covering the specific markets they name. Do not claim we perform better than local acquiring until we know what the competitor's test showed.\",\"evidence\":[\"E8\",\"E9\",\"E32\",\"E10\"],\"why\":\"Adyen moved the international volume with a country-by-country test framed as local acquiring, the buyer adopted that framing as 'Local cards, local rails', and we had no counter-position, while the test results themselves remain unknown.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For payments-led buyers such as a head of payments, do not lead with the average uplift. Lead with their own numbers instead: Your approvals, market by market, on your own traffic: where money is left on the table and what we would fix. Say 'approvals', not authorization. Answer the buyer's 'what's mine' with their data, not a customer average.",
+    "evidence": [
+     "E12",
+     "E13",
+     "E14",
+     "E34",
+     "E31"
+    ],
+    "why": "The buyer explicitly rejected the average-uplift pitch ('that's an average. What's mine?', 'I can't take an average to my CFO.') and frames the problem as approvals and 'Money left on the table', so the line has to move from our average to his numbers in his words.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M5",
+    "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+    "type": "replace",
+    "change": "For accounts with a payments owner, lead with ownership instead of response tiers: A named person at Stripe reviews your approvals by market with you every month. Make sure this commitment can actually be delivered before it is used.",
+    "evidence": [
+     "E28",
+     "E35"
+    ],
+    "why": "The buyer's real question was who at Stripe looks at his numbers every month, the rep had no name, and he said 'I heard from Stripe when I said I was leaving.' Tiered response times do not answer that question.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a proof point and play for existing accounts: When the payments owner changes, or ahead of renewal, we send you a market-by-market view of your approval rates, with reasons and the revenue at stake, before you ask. Deliver it within days, not weeks, and shape it so the champion can take it to the CFO.",
+    "evidence": [
+     "E1",
+     "E3",
+     "E26",
+     "E27",
+     "E30",
+     "E14"
+    ],
+    "why": "The new head of payments started by pulling declines by country, and our market-by-market analysis was called 'the most useful thing we'd sent him', but it landed three weeks after he asked and after Adyen's test had finished, so the asset works only if it arrives first and in a form he can take upstairs.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Prepare a market-by-market position for buyers who raise local acquiring and talk about 'Local cards, local rails', covering the specific markets they name. Do not claim we perform better than local acquiring until we know what the competitor's test showed.",
+    "evidence": [
+     "E8",
+     "E9",
+     "E32",
+     "E10"
+    ],
+    "why": "Adyen moved the international volume with a country-by-country test framed as local acquiring, the buyer adopted that framing as 'Local cards, local rails', and we had no counter-position, while the test results themselves remain unknown.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 24700,
+ "cost": 0.087436,
+ "in_tokens": 5753,
+ "out_tokens": 2071,
+ "model": "claude-opus-5-5"
+}

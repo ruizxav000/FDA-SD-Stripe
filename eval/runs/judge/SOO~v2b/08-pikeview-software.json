@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":0},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":1,\"decided\":1,\"gaps\":1,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"Value proof is named as the underlying cause behind the No decision tag\",\"pass\":true},\n  {\"item\":\"\\\"Nothing we could have done\\\" is labeled opinion and challenged\",\"pass\":false},\n  {\"item\":\"The payback request one month before the freeze is surfaced as the turning point\",\"pass\":true},\n  {\"item\":\"The revenue framing is reported as pushed back\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report correctly identifies the turning point: the payback request came a month before the freeze, and the generic ROI deck was answered with \\\"a number that's ours\\\". Its four messaging changes all point the way the key expects and rest on real evidence. It misses two things: it uses Value proof as the tag instead of No decision, and it never quotes or labels Renee's \\\"I don't think there was anything we could have done\\\" as opinion. It does challenge that view in the takeaway, but only indirectly. The close also skips the uncovered question of what the homegrown system actually costs, and the gaps section does not link the migration and renewal-season risk to the next cycle.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 0
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 1,
+   "decided": 1,
+   "gaps": 1,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "Value proof is named as the underlying cause behind the No decision tag",
+    "pass": true
+   },
+   {
+    "item": "\"Nothing we could have done\" is labeled opinion and challenged",
+    "pass": false
+   },
+   {
+    "item": "The payback request one month before the freeze is surfaced as the turning point",
+    "pass": true
+   },
+   {
+    "item": "The revenue framing is reported as pushed back",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report correctly identifies the turning point: the payback request came a month before the freeze, and the generic ROI deck was answered with \"a number that's ours\". Its four messaging changes all point the way the key expects and rest on real evidence. It misses two things: it uses Value proof as the tag instead of No decision, and it never quotes or labels Renee's \"I don't think there was anything we could have done\" as opinion. It does challenge that view in the takeaway, but only indirectly. The close also skips the uncovered question of what the homegrown system actually costs, and the gaps section does not link the migration and renewal-season risk to the next cycle."
+ },
+ "ms": 27089,
+ "cost": 0.130112,
+ "in_tokens": 9685,
+ "out_tokens": 2632,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,53 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":1},\n \"close\":2,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},\n  {\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},\n  {\"item\":\"Customer language is marked Not covered\",\"pass\":false},\n  {\"item\":\"\\\"A third of the churn\\\" is labeled unverified or opinion\",\"pass\":true},\n  {\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}\n ],\n \"fails\":[\"The decider insight and messaging change 4 say Greg's 'only questions before the data session were about contract term and exit cost.' The transcript only says Greg asked about termination fees twice. It attributes the contract-term questions to 'they' and gives no timing relative to the data session.\"],\n \"notes\":\"The report gets the core of the deal right. It scopes the win to online memberships with the front desk still at Global and phase two undated. It also surfaces the Maya-chose/Greg-decided contradiction and ties the win to value proof on the customer's own file. Its main miss is the customer-language section: it is flagged covered:true and then draws conclusions about the customer's vocabulary, even though the insight admits the question was deferred to Slack. It also slightly over-attributes the contract-term questions to Greg.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 1
+  },
+  "close": 2,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": false
+   },
+   {
+    "item": "\"A third of the churn\" is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "The decider insight and messaging change 4 say Greg's 'only questions before the data session were about contract term and exit cost.' The transcript only says Greg asked about termination fees twice. It attributes the contract-term questions to 'they' and gives no timing relative to the data session."
+  ],
+  "notes": "The report gets the core of the deal right. It scopes the win to online memberships with the front desk still at Global and phase two undated. It also surfaces the Maya-chose/Greg-decided contradiction and ties the win to value proof on the customer's own file. Its main miss is the customer-language section: it is flagged covered:true and then draws conclusions about the customer's vocabulary, even though the insight admits the question was deferred to Slack. It also slightly over-attributes the contract-term questions to Greg."
+ },
+ "ms": 35600,
+ "cost": 0.146888,
+ "in_tokens": 9882,
+ "out_tokens": 3392,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":0,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"\\\"so it's a queue with a faster timer\\\" is tied to a messaging change\",\"pass\":true},{\"item\":\"\\\"Over-promised\\\" is labeled opinion\",\"pass\":true},{\"item\":\"The champion (Ben) and the decider (Halima) are distinguished\",\"pass\":true},{\"item\":\"The passing remark that failures had happened twice before is surfaced in the trigger\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report gets the core story right: a visible support failure triggered the deal, we won the technical evaluation with the CTO and lost the COO, whose 'queue with a faster timer' line became the first messaging change. It labels 'over-promised' as opinion and surfaces the 'twice before' remark. It scores 0 on competitor/incumbent only because the key names Checkout.com and an in-house bank gateway, and neither appears in the transcript, so the report was right not to invent them and the key should be checked. The close lists commercial terms but misses the key's other open question, whether we can offer named on-sale coverage at all (with a support-team follow-up); it mislabels the rep's answered 'why not' as dodged, and its first messaging change assumes that named peak-day coverage exists.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 0,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "\"so it's a queue with a faster timer\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "\"Over-promised\" is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The champion (Ben) and the decider (Halima) are distinguished",
+    "pass": true
+   },
+   {
+    "item": "The passing remark that failures had happened twice before is surfaced in the trigger",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core story right: a visible support failure triggered the deal, we won the technical evaluation with the CTO and lost the COO, whose 'queue with a faster timer' line became the first messaging change. It labels 'over-promised' as opinion and surfaces the 'twice before' remark. It scores 0 on competitor/incumbent only because the key names Checkout.com and an in-house bank gateway, and neither appears in the transcript, so the report was right not to invent them and the key should be checked. The close lists commercial terms but misses the key's other open question, whether we can offer named on-sale coverage at all (with a support-team follow-up); it mislabels the rep's answered 'why not' as dodged, and its first messaging change assumes that named peak-day coverage exists."
+ },
+ "ms": 23479,
+ "cost": 0.115696,
+ "in_tokens": 9108,
+ "out_tokens": 2142,
+ "model": "claude-opus-5-5"
+}

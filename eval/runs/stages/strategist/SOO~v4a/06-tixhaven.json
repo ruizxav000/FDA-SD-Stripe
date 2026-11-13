@@ -1,0 +1,67 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M5\",\"current_line\":\"Support plans with tiered response times, up to 24/7 coverage.\",\"type\":\"replace\",\"change\":\"For event-driven buyers where an operational executive is deciding: answer 'who's my person' with a name, not a tier. Suggested line: 'A name, not a queue: you get a named team you can reach directly, with a plan for your biggest events.' Only use this where we can actually staff named people. Keep tier and response-time language out of any answer to a 'who' question.\",\"evidence\":[\"X1\",\"E19\",\"E20\",\"E31\"],\"why\":\"When the decider asked 'who's my person' we answered with M5's tiers and response times, and she dismissed it as 'a queue with a faster timer', which echoed the ticket form that started the evaluation.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a written peak-event / on-sale playbook as a proof asset for event-driven prospects. It sets out on paper what we do on an 'on-sale morning': who's watching, who they call, and 'what happens at minute four'. Build it with the solutions engineer for the deal and put it in the operational buyer's hands, not only the CTO's.\",\"evidence\":[\"E23\",\"E24\",\"E25\"],\"why\":\"The decider asked to see on paper what we do on an on-sale morning, and the rep says 'We don't have that as a thing.'\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For operational executives evaluating after a public payment failure, open with the incident moment instead of reliability. Suggested line: 'You don't buy uptime, you buy what happens when it's down. Here is who picks up in the first minutes.' Keep the technical story (load test, uptime, docs) as supporting proof for the technical team.\",\"evidence\":[\"E34\",\"E1\",\"E2\",\"E8\"],\"why\":\"The evaluation was triggered by failures minutes into an on-sale and a ticket-form reply that arrived after it ended, and the buyer's own words, 'I don't buy uptime, I buy what happens when it's down', reject the reliability framing we led with.\",\"strength\":\"Test this\"},{\"target\":\"M8\",\"current_line\":\"Trusted by leading businesses; see our customer stories.\",\"type\":\"replace\",\"change\":\"For event-driven buyers, replace logo-based proof with a reference customer who can describe who picked up and what we did during their biggest event. Offer that person as a reference call instead of a logo wall.\",\"evidence\":[\"E28\",\"E33\"],\"why\":\"The rep admits 'I had logos. I didn't have a person.', and the buyer wanted 'Someone who picks up', so logos were the wrong kind of proof.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M5",
+    "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+    "type": "replace",
+    "change": "For event-driven buyers where an operational executive is deciding: answer 'who's my person' with a name, not a tier. Suggested line: 'A name, not a queue: you get a named team you can reach directly, with a plan for your biggest events.' Only use this where we can actually staff named people. Keep tier and response-time language out of any answer to a 'who' question.",
+    "evidence": [
+     "X1",
+     "E19",
+     "E20",
+     "E31"
+    ],
+    "why": "When the decider asked 'who's my person' we answered with M5's tiers and response times, and she dismissed it as 'a queue with a faster timer', which echoed the ticket form that started the evaluation.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a written peak-event / on-sale playbook as a proof asset for event-driven prospects. It sets out on paper what we do on an 'on-sale morning': who's watching, who they call, and 'what happens at minute four'. Build it with the solutions engineer for the deal and put it in the operational buyer's hands, not only the CTO's.",
+    "evidence": [
+     "E23",
+     "E24",
+     "E25"
+    ],
+    "why": "The decider asked to see on paper what we do on an on-sale morning, and the rep says 'We don't have that as a thing.'",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For operational executives evaluating after a public payment failure, open with the incident moment instead of reliability. Suggested line: 'You don't buy uptime, you buy what happens when it's down. Here is who picks up in the first minutes.' Keep the technical story (load test, uptime, docs) as supporting proof for the technical team.",
+    "evidence": [
+     "E34",
+     "E1",
+     "E2",
+     "E8"
+    ],
+    "why": "The evaluation was triggered by failures minutes into an on-sale and a ticket-form reply that arrived after it ended, and the buyer's own words, 'I don't buy uptime, I buy what happens when it's down', reject the reliability framing we led with.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M8",
+    "current_line": "Trusted by leading businesses; see our customer stories.",
+    "type": "replace",
+    "change": "For event-driven buyers, replace logo-based proof with a reference customer who can describe who picked up and what we did during their biggest event. Offer that person as a reference call instead of a logo wall.",
+    "evidence": [
+     "E28",
+     "E33"
+    ],
+    "why": "The rep admits 'I had logos. I didn't have a person.', and the buyer wanted 'Someone who picks up', so logos were the wrong kind of proof.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 16599,
+ "cost": 0.07364799999999999,
+ "in_tokens": 5647,
+ "out_tokens": 1424,
+ "model": "claude-opus-5-5"
+}

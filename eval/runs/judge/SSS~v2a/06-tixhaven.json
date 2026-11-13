@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":0,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"\\\"so it's a queue with a faster timer\\\" is tied to a messaging change\",\"pass\":true},{\"item\":\"\\\"Over-promised\\\" is labeled opinion\",\"pass\":true},{\"item\":\"The champion (Ben) and the decider (Halima) are distinguished\",\"pass\":true},{\"item\":\"The passing remark that failures had happened twice before is surfaced in the trigger\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report's strongest point is the core story: we won the CTO's technical evaluation but lost the COO, who rejected tiered support as \\\"a queue with a faster timer.\\\" All four messaging changes follow from this and line up with the key's direction. It misses the key's header facts (Checkout.com as competitor and an in-house bank gateway as incumbent), though the transcript states neither, so the null and 'unnamed provider' are faithful to the input. The close leaves out the key's open question on whether we could offer named on-sale coverage, and the support-team follow-up, and it wrongly marks the competitor's name as 'dodged' when it was never asked.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 0,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "\"so it's a queue with a faster timer\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "\"Over-promised\" is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The champion (Ben) and the decider (Halima) are distinguished",
+    "pass": true
+   },
+   {
+    "item": "The passing remark that failures had happened twice before is surfaced in the trigger",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report's strongest point is the core story: we won the CTO's technical evaluation but lost the COO, who rejected tiered support as \"a queue with a faster timer.\" All four messaging changes follow from this and line up with the key's direction. It misses the key's header facts (Checkout.com as competitor and an in-house bank gateway as incumbent), though the transcript states neither, so the null and 'unnamed provider' are faithful to the input. The close leaves out the key's open question on whether we could offer named on-sale coverage, and the support-team follow-up, and it wrongly marks the competitor's name as 'dodged' when it was never asked."
+ },
+ "ms": 27935,
+ "cost": 0.121832,
+ "in_tokens": 8855,
+ "out_tokens": 2550,
+ "model": "claude-opus-5-5"
+}

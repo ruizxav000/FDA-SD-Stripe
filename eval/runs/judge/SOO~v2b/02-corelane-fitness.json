@@ -1,0 +1,51 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":1,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":1},\n \"close\":1,\"messaging\":1,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},\n  {\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},\n  {\"item\":\"Customer language is marked Not covered\",\"pass\":false},\n  {\"item\":\"\\\"A third of the churn\\\" is labeled unverified or opinion\",\"pass\":true},\n  {\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report's biggest strength is that it never overstates the win. The header scope note is exactly right: online billing only, front desk still on Global, phase two undated. It also surfaces the Maya-chose/Greg-decided contradiction and correctly hangs the win on value proof shown on the customer's own file. Its biggest miss is that the language section is flagged covered:true even though its own text admits the question was deferred to Slack, so it was never formally marked Not covered. Smaller misses: the trigger section leaves out Maya's 'members who never meant to leave' quote and the link to the controller. The competitor messaging retreats from in-store when the key treats the front desk as the phase-two battleground. The close and messaging never frame the front desk as a live open deal or call for proof of a reader working live in their own studio software.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 1,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 1
+  },
+  "close": 1,
+  "messaging": 1,
+  "must_catch": [
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": false
+   },
+   {
+    "item": "\"A third of the churn\" is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report's biggest strength is that it never overstates the win. The header scope note is exactly right: online billing only, front desk still on Global, phase two undated. It also surfaces the Maya-chose/Greg-decided contradiction and correctly hangs the win on value proof shown on the customer's own file. Its biggest miss is that the language section is flagged covered:true even though its own text admits the question was deferred to Slack, so it was never formally marked Not covered. Smaller misses: the trigger section leaves out Maya's 'members who never meant to leave' quote and the link to the controller. The competitor messaging retreats from in-store when the key treats the front desk as the phase-two battleground. The close and messaging never frame the front desk as a live open deal or call for proof of a reader working live in their own studio software."
+ },
+ "ms": 30320,
+ "cost": 0.131468,
+ "in_tokens": 9742,
+ "out_tokens": 2677,
+ "model": "claude-opus-5-5"
+}

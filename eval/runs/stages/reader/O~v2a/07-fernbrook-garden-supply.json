@@ -1,0 +1,790 @@
+{
+ "ok": true,
+ "text": "{\"people\":[{\"name\":\"Lucy\",\"role\":\"Ecommerce director, champion\",\"side\":\"customer\"},{\"name\":\"Martin\",\"role\":\"CFO, final decision-maker (rep never met him)\",\"side\":\"customer\"},{\"name\":\"unnamed\",\"role\":\"Controller (prepared the one-pager rate comparison for Martin)\",\"side\":\"customer\"},{\"name\":\"unnamed\",\"role\":\"IT lead\",\"side\":\"customer\"},{\"name\":\"Sam\",\"role\":\"Account executive (rep)\",\"side\":\"us\"},{\"name\":\"Farah\",\"role\":\"Solutions engineer\",\"side\":\"us\"},{\"name\":\"PMM\",\"role\":\"Product marketer (interviewer)\",\"side\":\"us\"},{\"name\":\"the bank\",\"role\":\"Customer's bank, provider of incumbent Fiserv processing; came back with a sharper rate\",\"side\":\"competitor\"}],\n\"competitors\":[\"Fiserv (through the customer's bank)\"],\n\"incumbent\":\"Fiserv through their bank\",\n\"evidence\":[\n{\"id\":\"E1\",\"turn\":2,\"excerpt\":\"Their ecommerce director, Lucy, came inbound. Orders failing at checkout.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Inbound evaluation triggered by checkout failures.\"},\n{\"id\":\"E2\",\"turn\":2,\"excerpt\":\"She said about one in twelve online orders was failing at the payment step, and it was worse on the big baskets.\",\"label\":\"fact\",\"speaker\":\"Lucy (relayed by rep)\",\"paraphrase\":true,\"topics\":[\"trigger\",\"language\"],\"note\":\"Quantified pain from the customer, concentrated on large orders.\"},\n{\"id\":\"E3\",\"turn\":4,\"excerpt\":\"Her number. Off their own dashboard.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"The 1-in-12 figure comes from the customer's own data, not ours.\"},\n{\"id\":\"E4\",\"turn\":2,\"excerpt\":\"Customers would call in annoyed, or just not come back.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":true,\"topics\":[\"trigger\"],\"note\":\"Downstream cost of failures; source unclear, not quoted.\"},\n{\"id\":\"E5\",\"turn\":2,\"excerpt\":\"she couldn't get a straight answer from the processor on why.\",\"label\":\"fact\",\"speaker\":\"Lucy (relayed by rep)\",\"paraphrase\":true,\"topics\":[\"trigger\",\"competitor\"],\"note\":\"Incumbent weakness: no explanation of declines.\"},\n{\"id\":\"E6\",\"turn\":6,\"excerpt\":\"The CFO, Martin. Lucy was the champion, she wanted it, IT was fine with it. Martin said no.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decider\",\"outcome\"],\"note\":\"Decider was the CFO, not the champion.\"},\n{\"id\":\"E7\",\"turn\":6,\"excerpt\":\"Lucy told me. I never met him.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Rep never had access to the decider; all secondhand.\"},\n{\"id\":\"E8\",\"turn\":8,\"excerpt\":\"Lucy said he doesn't take vendor meetings and she'd carry it.\",\"label\":\"fact\",\"speaker\":\"Lucy (relayed by rep)\",\"paraphrase\":true,\"topics\":[\"decider\"],\"note\":\"Champion carried the case to the CFO alone.\"},\n{\"id\":\"E9\",\"turn\":10,\"excerpt\":\"They were on Fiserv through their bank, had been forever.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Long-standing incumbent bundled with the bank.\"},\n{\"id\":\"E10\",\"turn\":10,\"excerpt\":\"when the bank heard, they came back and sharpened the rate.\",\"label\":\"fact\",\"speaker\":\"Lucy (relayed by rep)\",\"paraphrase\":true,\"topics\":[\"competitor\"],\"note\":\"Incumbent's counter-move was a price cut, reported by the customer.\"},\n{\"id\":\"E11\",\"turn\":10,\"excerpt\":\"No new product, nothing. Just a better rate.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Rep's characterization of the competitor response.\"},\n{\"id\":\"E12\",\"turn\":12,\"excerpt\":\"Up to then Lucy was asking about declines. Why big orders fail, what we'd do about it.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"competitor\",\"message\"],\"note\":\"Customer questions were about declines before the bank's counter.\"},\n{\"id\":\"E13\",\"turn\":12,\"excerpt\":\"After the bank came back, every email was the rate. Can you do better on the rate.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"competitor\",\"decided\"],\"note\":\"Observable shift from value to price after the incumbent's counter.\"},\n{\"id\":\"E14\",\"turn\":14,\"excerpt\":\"Lucy loved the checkout. And the decline piece.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Rep's read of what resonated with the champion.\"},\n{\"id\":\"E15\",\"turn\":14,\"excerpt\":\"When our solutions engineer, Farah, explained why big-ticket orders get knocked back and what we do about it, Lucy was nodding the whole way.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"message\",\"language\"],\"note\":\"Observed reaction to the decline explanation.\"},\n{\"id\":\"E16\",\"turn\":14,\"excerpt\":\"Silence, honestly, nothing bombed. It was a good cycle. We lost on price.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"message\",\"outcome\"],\"note\":\"Rep attributes the loss to price; claims no message failed.\"},\n{\"id\":\"E17\",\"turn\":16,\"excerpt\":\"he's not going to pay more for the same thing.\",\"label\":\"quote\",\"speaker\":\"Lucy\",\"paraphrase\":false,\"topics\":[\"decided\",\"language\",\"outcome\"],\"note\":\"Moment of loss; the CFO saw no differentiation.\"},\n{\"id\":\"E18\",\"turn\":16,\"excerpt\":\"Right before that she'd been telling me it was a formality.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decided\",\"decider\"],\"note\":\"Champion overestimated her ability to carry the CFO.\"},\n{\"id\":\"E19\",\"turn\":18,\"excerpt\":\"The controller did a one-pager for Martin. Our rate, their rate, side by side.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decider\",\"decided\"],\"note\":\"The decision artifact was a rate-only comparison built by the customer.\"},\n{\"id\":\"E20\",\"turn\":20,\"excerpt\":\"Yeah. The per-transaction number.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decided\"],\"note\":\"Only the per-transaction rate was compared.\"},\n{\"id\":\"E21\",\"turn\":20,\"excerpt\":\"they pay a gateway fee on top, and they've got a person who does nothing but chargebacks.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Hidden incumbent costs the rep knew about but were never put in front of the CFO.\"},\n{\"id\":\"E22\",\"turn\":20,\"excerpt\":\"But that's not on the statement line, so it wasn't on the page.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\",\"decided\"],\"note\":\"Total cost was missing from the decision page.\"},\n{\"id\":\"E23\",\"turn\":22,\"excerpt\":\"Our quote.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Our only input on the decision page was price.\"},\n{\"id\":\"E24\",\"turn\":24,\"excerpt\":\"Martin and the controller. I wasn't in the room. Lucy presented it.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"No one from our side was present at the decision.\"},\n{\"id\":\"E25\",\"turn\":24,\"excerpt\":\"Why would I pay more for the same thing.\",\"label\":\"quote\",\"speaker\":\"Martin (relayed secondhand via Lucy)\",\"paraphrase\":false,\"topics\":[\"decided\",\"language\"],\"note\":\"Decider's framing: parity product, higher price.\"},\n{\"id\":\"E26\",\"turn\":26,\"excerpt\":\"Which it isn't. But that's what he said.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"language\",\"message\"],\"note\":\"Rep disputes the 'same thing' perception but did not counter it.\"},\n{\"id\":\"E27\",\"turn\":28,\"excerpt\":\"We showed the uplift slide. The average improvement in acceptance.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"message\",\"gaps\"],\"note\":\"Value was shown generically, not specific to Fernbrook.\"},\n{\"id\":\"E28\",\"turn\":28,\"excerpt\":\"Lucy got it.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"The value landed with the champion, not the decider.\"},\n{\"id\":\"E29\",\"turn\":30,\"excerpt\":\"Not in a doc, no.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"No Fernbrook-specific value figure was ever produced.\"},\n{\"id\":\"E30\",\"turn\":30,\"excerpt\":\"Farah offered to run their declines. She wanted a three-month export so she could show what the failed orders were worth.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"The SE offered a quantified business case; it never happened.\"},\n{\"id\":\"E31\",\"turn\":30,\"excerpt\":\"it was the last two weeks of the quarter, and I didn't want to slow things down.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Quarter-end pressure led the rep to skip the value analysis.\"},\n{\"id\":\"E32\",\"turn\":30,\"excerpt\":\"Lucy was sold. I didn't think we needed it.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\",\"decider\"],\"note\":\"Rep sold to the champion, not the decider.\"},\n{\"id\":\"E33\",\"turn\":32,\"excerpt\":\"Nothing from us.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"The CFO had no cost-of-failure data from us.\"},\n{\"id\":\"E34\",\"turn\":32,\"excerpt\":\"I assume Lucy told him.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\",\"decider\"],\"note\":\"Unverified assumption about what reached the decider.\"},\n{\"id\":\"E35\",\"turn\":34,\"excerpt\":\"Yes. Probably.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"outcome\"],\"note\":\"Hedged claim that a price match would have won.\"},\n{\"id\":\"E36\",\"turn\":34,\"excerpt\":\"their IT lead was a bit nervous about moving before spring, that's their whole year.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"decided\",\"outcome\"],\"note\":\"A second, non-price obstacle: migration risk before peak season.\"},\n{\"id\":\"E37\",\"turn\":34,\"excerpt\":\"He'd said he'd do it if finance approved.\",\"label\":\"fact\",\"speaker\":\"IT lead (relayed by rep)\",\"paraphrase\":true,\"topics\":[\"decider\"],\"note\":\"IT's approval was conditional on finance.\"},\n{\"id\":\"E38\",\"turn\":34,\"excerpt\":\"So maybe not only the rate. But the rate is what killed it.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"outcome\"],\"note\":\"Rep self-corrects, then reverts to price.\"},\n{\"id\":\"E39\",\"turn\":36,\"excerpt\":\"Lucy asked once if we had something she could hand Martin. Like a one-page business case.\",\"label\":\"fact\",\"speaker\":\"Lucy (relayed by rep)\",\"paraphrase\":true,\"topics\":[\"gaps\"],\"note\":\"Explicit ask from the champion for CFO-ready material.\"},\n{\"id\":\"E40\",\"turn\":36,\"excerpt\":\"I sent her the deck and the pricing proposal.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"The business-case request was answered with generic material.\"},\n{\"id\":\"E41\",\"turn\":38,\"excerpt\":\"The customer stories. The average uplift.\",\"label\":\"fact\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"gaps\",\"message\"],\"note\":\"The deck's 'business case' was generic, not Fernbrook's numbers.\"},\n{\"id\":\"E42\",\"turn\":40,\"excerpt\":\"orders dying at the last step.\",\"label\":\"quote\",\"speaker\":\"Lucy\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer's words for declines.\"},\n{\"id\":\"E43\",\"turn\":40,\"excerpt\":\"the big baskets.\",\"label\":\"quote\",\"speaker\":\"Lucy\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer's words for big-ticket orders.\"},\n{\"id\":\"E44\",\"turn\":40,\"excerpt\":\"we do all the work to get someone to buy a four-thousand-dollar greenhouse and then the card says no.\",\"label\":\"quote\",\"speaker\":\"Lucy\",\"paraphrase\":false,\"topics\":[\"language\",\"trigger\"],\"note\":\"Vivid customer framing of the pain, with an order value.\"},\n{\"id\":\"E45\",\"turn\":42,\"excerpt\":\"If we'd had more room on the rate, we win this.\",\"label\":\"opinion\",\"speaker\":\"rep\",\"paraphrase\":false,\"topics\":[\"outcome\"],\"note\":\"Rep's lesson is price only, despite the value gaps described.\"}\n],\n\"contradictions\":[\n{\"evidence\":[\"E16\",\"E38\",\"E45\"],\"what\":\"Rep says the deal was lost on price, then concedes 'maybe not only the rate', then reverts to 'we win this' with more room on the rate.\"},\n{\"evidence\":[\"E35\",\"E36\"],\"what\":\"Rep says a price match would have won ('Yes. Probably.'), then describes IT nervousness about moving before spring and the CFO still seeing 'same rate, so why move'.\"},\n{\"evidence\":[\"E16\",\"E17\",\"E25\"],\"what\":\"Rep says 'nothing bombed', but the decider concluded we were 'the same thing', so the differentiation message failed with him.\"},\n{\"evidence\":[\"E28\",\"E32\",\"E39\"],\"what\":\"Rep says Lucy 'got it' and 'was sold', yet Lucy asked for something to hand Martin and never got a business case.\"},\n{\"evidence\":[\"E18\",\"E6\",\"E17\"],\"what\":\"Lucy said approval was 'a formality' right before the CFO said no.\"},\n{\"evidence\":[\"E29\",\"E41\"],\"what\":\"Rep admits there was no Fernbrook value figure, but presents customer stories and average uplift as the business case in the deck.\"},\n{\"evidence\":[\"E17\",\"E25\"],\"what\":\"Rep says Martin's words are 'what I told you', but the two versions differ: 'he's not going to pay more for the same thing' vs 'Why would I pay more for the same thing'.\"}\n],\n\"dodges\":[\n{\"question\":\"Which part of our pitch got a reaction, and which got silence?\",\"turn\":14,\"what\":\"Answered 'nothing bombed' and pivoted to price, ignoring that the value message never reached or convinced the decider.\"},\n{\"question\":\"Did we put a figure on the value they'd get?\",\"turn\":28,\"what\":\"Answered with the generic uplift slide; admitted only when pressed that there was no Fernbrook figure.\"},\n{\"question\":\"So what did Martin have in front of him about what one in twelve orders was costing?\",\"turn\":32,\"what\":\"Hesitated, said 'Nothing from us', then deflected with an assumption that Lucy told him.\"},\n{\"question\":\"If we had matched the price, would we have won?\",\"turn\":34,\"what\":\"Hedged yes, listed non-price obstacles, then reasserted that the rate killed it.\"},\n{\"question\":\"Was there a business case in the deck?\",\"turn\":38,\"what\":\"Did not answer yes or no; named customer stories and average uplift.\"},\n{\"question\":\"If you ran it again?\",\"turn\":42,\"what\":\"Answered only about price room, skipping the value analysis and the business case he had just described as missing.\"}\n],\n\"skipped\":[],\n\"language_pairs\":[\n{\"theirs\":\"orders dying at the last step\",\"ours\":\"declines / improvement in acceptance\",\"evidence\":[\"E42\",\"E12\",\"E27\"]},\n{\"theirs\":\"the big baskets\",\"ours\":\"big-ticket orders\",\"evidence\":[\"E43\",\"E15\"]},\n{\"theirs\":\"the card says no\",\"ours\":\"knocked back / declines\",\"evidence\":[\"E44\",\"E15\"]},\n{\"theirs\":\"the same thing\",\"ours\":\"uplift / average improvement in acceptance\",\"evidence\":[\"E25\",\"E27\"]},\n{\"theirs\":\"a one-page business case\",\"ours\":\"the deck and the pricing proposal\",\"evidence\":[\"E39\",\"E40\"]}\n],\n\"outcome_signals\":[\n{\"evidence\":[\"E6\",\"E17\",\"E25\"],\"what\":\"Lost: the CFO said no because he saw no reason to pay more for 'the same thing'.\"},\n{\"evidence\":[\"E10\",\"E13\",\"E19\"],\"what\":\"The customer stayed with the incumbent bank/Fiserv after the bank sharpened its rate; the decision was made on a rate-only comparison.\"},\n{\"evidence\":[\"E16\",\"E45\"],\"what\":\"Rep frames the loss as price.\"},\n{\"evidence\":[\"E36\",\"E38\",\"E29\",\"E33\"],\"what\":\"Other factors: IT's pre-spring migration risk, and no quantified value was put in front of the decider.\"},\n{\"evidence\":[\"E6\"],\"what\":\"No indication that any part of the business moved; the whole deal was lost.\"}\n]}",
+ "data": {
+  "people": [
+   {
+    "name": "Lucy",
+    "role": "Ecommerce director, champion",
+    "side": "customer"
+   },
+   {
+    "name": "Martin",
+    "role": "CFO, final decision-maker (rep never met him)",
+    "side": "customer"
+   },
+   {
+    "name": "unnamed",
+    "role": "Controller (prepared the one-pager rate comparison for Martin)",
+    "side": "customer"
+   },
+   {
+    "name": "unnamed",
+    "role": "IT lead",
+    "side": "customer"
+   },
+   {
+    "name": "Sam",
+    "role": "Account executive (rep)",
+    "side": "us"
+   },
+   {
+    "name": "Farah",
+    "role": "Solutions engineer",
+    "side": "us"
+   },
+   {
+    "name": "PMM",
+    "role": "Product marketer (interviewer)",
+    "side": "us"
+   },
+   {
+    "name": "the bank",
+    "role": "Customer's bank, provider of incumbent Fiserv processing; came back with a sharper rate",
+    "side": "competitor"
+   }
+  ],
+  "competitors": [
+   "Fiserv (through the customer's bank)"
+  ],
+  "incumbent": "Fiserv through their bank",
+  "evidence": [
+   {
+    "id": "E1",
+    "turn": 2,
+    "excerpt": "Their ecommerce director, Lucy, came inbound. Orders failing at checkout.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Inbound evaluation triggered by checkout failures."
+   },
+   {
+    "id": "E2",
+    "turn": 2,
+    "excerpt": "She said about one in twelve online orders was failing at the payment step, and it was worse on the big baskets.",
+    "label": "fact",
+    "speaker": "Lucy (relayed by rep)",
+    "paraphrase": true,
+    "topics": [
+     "trigger",
+     "language"
+    ],
+    "note": "Quantified pain from the customer, concentrated on large orders."
+   },
+   {
+    "id": "E3",
+    "turn": 4,
+    "excerpt": "Her number. Off their own dashboard.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "The 1-in-12 figure comes from the customer's own data, not ours."
+   },
+   {
+    "id": "E4",
+    "turn": 2,
+    "excerpt": "Customers would call in annoyed, or just not come back.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": true,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Downstream cost of failures; source unclear, not quoted."
+   },
+   {
+    "id": "E5",
+    "turn": 2,
+    "excerpt": "she couldn't get a straight answer from the processor on why.",
+    "label": "fact",
+    "speaker": "Lucy (relayed by rep)",
+    "paraphrase": true,
+    "topics": [
+     "trigger",
+     "competitor"
+    ],
+    "note": "Incumbent weakness: no explanation of declines."
+   },
+   {
+    "id": "E6",
+    "turn": 6,
+    "excerpt": "The CFO, Martin. Lucy was the champion, she wanted it, IT was fine with it. Martin said no.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "outcome"
+    ],
+    "note": "Decider was the CFO, not the champion."
+   },
+   {
+    "id": "E7",
+    "turn": 6,
+    "excerpt": "Lucy told me. I never met him.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Rep never had access to the decider; all secondhand."
+   },
+   {
+    "id": "E8",
+    "turn": 8,
+    "excerpt": "Lucy said he doesn't take vendor meetings and she'd carry it.",
+    "label": "fact",
+    "speaker": "Lucy (relayed by rep)",
+    "paraphrase": true,
+    "topics": [
+     "decider"
+    ],
+    "note": "Champion carried the case to the CFO alone."
+   },
+   {
+    "id": "E9",
+    "turn": 10,
+    "excerpt": "They were on Fiserv through their bank, had been forever.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Long-standing incumbent bundled with the bank."
+   },
+   {
+    "id": "E10",
+    "turn": 10,
+    "excerpt": "when the bank heard, they came back and sharpened the rate.",
+    "label": "fact",
+    "speaker": "Lucy (relayed by rep)",
+    "paraphrase": true,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Incumbent's counter-move was a price cut, reported by the customer."
+   },
+   {
+    "id": "E11",
+    "turn": 10,
+    "excerpt": "No new product, nothing. Just a better rate.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Rep's characterization of the competitor response."
+   },
+   {
+    "id": "E12",
+    "turn": 12,
+    "excerpt": "Up to then Lucy was asking about declines. Why big orders fail, what we'd do about it.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "message"
+    ],
+    "note": "Customer questions were about declines before the bank's counter."
+   },
+   {
+    "id": "E13",
+    "turn": 12,
+    "excerpt": "After the bank came back, every email was the rate. Can you do better on the rate.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "decided"
+    ],
+    "note": "Observable shift from value to price after the incumbent's counter."
+   },
+   {
+    "id": "E14",
+    "turn": 14,
+    "excerpt": "Lucy loved the checkout. And the decline piece.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Rep's read of what resonated with the champion."
+   },
+   {
+    "id": "E15",
+    "turn": 14,
+    "excerpt": "When our solutions engineer, Farah, explained why big-ticket orders get knocked back and what we do about it, Lucy was nodding the whole way.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "language"
+    ],
+    "note": "Observed reaction to the decline explanation."
+   },
+   {
+    "id": "E16",
+    "turn": 14,
+    "excerpt": "Silence, honestly, nothing bombed. It was a good cycle. We lost on price.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "outcome"
+    ],
+    "note": "Rep attributes the loss to price; claims no message failed."
+   },
+   {
+    "id": "E17",
+    "turn": 16,
+    "excerpt": "he's not going to pay more for the same thing.",
+    "label": "quote",
+    "speaker": "Lucy",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "language",
+     "outcome"
+    ],
+    "note": "Moment of loss; the CFO saw no differentiation."
+   },
+   {
+    "id": "E18",
+    "turn": 16,
+    "excerpt": "Right before that she'd been telling me it was a formality.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "decider"
+    ],
+    "note": "Champion overestimated her ability to carry the CFO."
+   },
+   {
+    "id": "E19",
+    "turn": 18,
+    "excerpt": "The controller did a one-pager for Martin. Our rate, their rate, side by side.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "decided"
+    ],
+    "note": "The decision artifact was a rate-only comparison built by the customer."
+   },
+   {
+    "id": "E20",
+    "turn": 20,
+    "excerpt": "Yeah. The per-transaction number.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decided"
+    ],
+    "note": "Only the per-transaction rate was compared."
+   },
+   {
+    "id": "E21",
+    "turn": 20,
+    "excerpt": "they pay a gateway fee on top, and they've got a person who does nothing but chargebacks.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Hidden incumbent costs the rep knew about but were never put in front of the CFO."
+   },
+   {
+    "id": "E22",
+    "turn": 20,
+    "excerpt": "But that's not on the statement line, so it wasn't on the page.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "decided"
+    ],
+    "note": "Total cost was missing from the decision page."
+   },
+   {
+    "id": "E23",
+    "turn": 22,
+    "excerpt": "Our quote.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Our only input on the decision page was price."
+   },
+   {
+    "id": "E24",
+    "turn": 24,
+    "excerpt": "Martin and the controller. I wasn't in the room. Lucy presented it.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "No one from our side was present at the decision."
+   },
+   {
+    "id": "E25",
+    "turn": 24,
+    "excerpt": "Why would I pay more for the same thing.",
+    "label": "quote",
+    "speaker": "Martin (relayed secondhand via Lucy)",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "language"
+    ],
+    "note": "Decider's framing: parity product, higher price."
+   },
+   {
+    "id": "E26",
+    "turn": 26,
+    "excerpt": "Which it isn't. But that's what he said.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "language",
+     "message"
+    ],
+    "note": "Rep disputes the 'same thing' perception but did not counter it."
+   },
+   {
+    "id": "E27",
+    "turn": 28,
+    "excerpt": "We showed the uplift slide. The average improvement in acceptance.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "gaps"
+    ],
+    "note": "Value was shown generically, not specific to Fernbrook."
+   },
+   {
+    "id": "E28",
+    "turn": 28,
+    "excerpt": "Lucy got it.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "The value landed with the champion, not the decider."
+   },
+   {
+    "id": "E29",
+    "turn": 30,
+    "excerpt": "Not in a doc, no.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "No Fernbrook-specific value figure was ever produced."
+   },
+   {
+    "id": "E30",
+    "turn": 30,
+    "excerpt": "Farah offered to run their declines. She wanted a three-month export so she could show what the failed orders were worth.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "The SE offered a quantified business case; it never happened."
+   },
+   {
+    "id": "E31",
+    "turn": 30,
+    "excerpt": "it was the last two weeks of the quarter, and I didn't want to slow things down.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Quarter-end pressure led the rep to skip the value analysis."
+   },
+   {
+    "id": "E32",
+    "turn": 30,
+    "excerpt": "Lucy was sold. I didn't think we needed it.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "decider"
+    ],
+    "note": "Rep sold to the champion, not the decider."
+   },
+   {
+    "id": "E33",
+    "turn": 32,
+    "excerpt": "Nothing from us.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "The CFO had no cost-of-failure data from us."
+   },
+   {
+    "id": "E34",
+    "turn": 32,
+    "excerpt": "I assume Lucy told him.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "decider"
+    ],
+    "note": "Unverified assumption about what reached the decider."
+   },
+   {
+    "id": "E35",
+    "turn": 34,
+    "excerpt": "Yes. Probably.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "outcome"
+    ],
+    "note": "Hedged claim that a price match would have won."
+   },
+   {
+    "id": "E36",
+    "turn": 34,
+    "excerpt": "their IT lead was a bit nervous about moving before spring, that's their whole year.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "outcome"
+    ],
+    "note": "A second, non-price obstacle: migration risk before peak season."
+   },
+   {
+    "id": "E37",
+    "turn": 34,
+    "excerpt": "He'd said he'd do it if finance approved.",
+    "label": "fact",
+    "speaker": "IT lead (relayed by rep)",
+    "paraphrase": true,
+    "topics": [
+     "decider"
+    ],
+    "note": "IT's approval was conditional on finance."
+   },
+   {
+    "id": "E38",
+    "turn": 34,
+    "excerpt": "So maybe not only the rate. But the rate is what killed it.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "outcome"
+    ],
+    "note": "Rep self-corrects, then reverts to price."
+   },
+   {
+    "id": "E39",
+    "turn": 36,
+    "excerpt": "Lucy asked once if we had something she could hand Martin. Like a one-page business case.",
+    "label": "fact",
+    "speaker": "Lucy (relayed by rep)",
+    "paraphrase": true,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Explicit ask from the champion for CFO-ready material."
+   },
+   {
+    "id": "E40",
+    "turn": 36,
+    "excerpt": "I sent her the deck and the pricing proposal.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "The business-case request was answered with generic material."
+   },
+   {
+    "id": "E41",
+    "turn": 38,
+    "excerpt": "The customer stories. The average uplift.",
+    "label": "fact",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "message"
+    ],
+    "note": "The deck's 'business case' was generic, not Fernbrook's numbers."
+   },
+   {
+    "id": "E42",
+    "turn": 40,
+    "excerpt": "orders dying at the last step.",
+    "label": "quote",
+    "speaker": "Lucy",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer's words for declines."
+   },
+   {
+    "id": "E43",
+    "turn": 40,
+    "excerpt": "the big baskets.",
+    "label": "quote",
+    "speaker": "Lucy",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer's words for big-ticket orders."
+   },
+   {
+    "id": "E44",
+    "turn": 40,
+    "excerpt": "we do all the work to get someone to buy a four-thousand-dollar greenhouse and then the card says no.",
+    "label": "quote",
+    "speaker": "Lucy",
+    "paraphrase": false,
+    "topics": [
+     "language",
+     "trigger"
+    ],
+    "note": "Vivid customer framing of the pain, with an order value."
+   },
+   {
+    "id": "E45",
+    "turn": 42,
+    "excerpt": "If we'd had more room on the rate, we win this.",
+    "label": "opinion",
+    "speaker": "rep",
+    "paraphrase": false,
+    "topics": [
+     "outcome"
+    ],
+    "note": "Rep's lesson is price only, despite the value gaps described."
+   }
+  ],
+  "contradictions": [
+   {
+    "evidence": [
+     "E16",
+     "E38",
+     "E45"
+    ],
+    "what": "Rep says the deal was lost on price, then concedes 'maybe not only the rate', then reverts to 'we win this' with more room on the rate."
+   },
+   {
+    "evidence": [
+     "E35",
+     "E36"
+    ],
+    "what": "Rep says a price match would have won ('Yes. Probably.'), then describes IT nervousness about moving before spring and the CFO still seeing 'same rate, so why move'."
+   },
+   {
+    "evidence": [
+     "E16",
+     "E17",
+     "E25"
+    ],
+    "what": "Rep says 'nothing bombed', but the decider concluded we were 'the same thing', so the differentiation message failed with him."
+   },
+   {
+    "evidence": [
+     "E28",
+     "E32",
+     "E39"
+    ],
+    "what": "Rep says Lucy 'got it' and 'was sold', yet Lucy asked for something to hand Martin and never got a business case."
+   },
+   {
+    "evidence": [
+     "E18",
+     "E6",
+     "E17"
+    ],
+    "what": "Lucy said approval was 'a formality' right before the CFO said no."
+   },
+   {
+    "evidence": [
+     "E29",
+     "E41"
+    ],
+    "what": "Rep admits there was no Fernbrook value figure, but presents customer stories and average uplift as the business case in the deck."
+   },
+   {
+    "evidence": [
+     "E17",
+     "E25"
+    ],
+    "what": "Rep says Martin's words are 'what I told you', but the two versions differ: 'he's not going to pay more for the same thing' vs 'Why would I pay more for the same thing'."
+   }
+  ],
+  "dodges": [
+   {
+    "question": "Which part of our pitch got a reaction, and which got silence?",
+    "turn": 14,
+    "what": "Answered 'nothing bombed' and pivoted to price, ignoring that the value message never reached or convinced the decider."
+   },
+   {
+    "question": "Did we put a figure on the value they'd get?",
+    "turn": 28,
+    "what": "Answered with the generic uplift slide; admitted only when pressed that there was no Fernbrook figure."
+   },
+   {
+    "question": "So what did Martin have in front of him about what one in twelve orders was costing?",
+    "turn": 32,
+    "what": "Hesitated, said 'Nothing from us', then deflected with an assumption that Lucy told him."
+   },
+   {
+    "question": "If we had matched the price, would we have won?",
+    "turn": 34,
+    "what": "Hedged yes, listed non-price obstacles, then reasserted that the rate killed it."
+   },
+   {
+    "question": "Was there a business case in the deck?",
+    "turn": 38,
+    "what": "Did not answer yes or no; named customer stories and average uplift."
+   },
+   {
+    "question": "If you ran it again?",
+    "turn": 42,
+    "what": "Answered only about price room, skipping the value analysis and the business case he had just described as missing."
+   }
+  ],
+  "skipped": [],
+  "language_pairs": [
+   {
+    "theirs": "orders dying at the last step",
+    "ours": "declines / improvement in acceptance",
+    "evidence": [
+     "E42",
+     "E12",
+     "E27"
+    ]
+   },
+   {
+    "theirs": "the big baskets",
+    "ours": "big-ticket orders",
+    "evidence": [
+     "E43",
+     "E15"
+    ]
+   },
+   {
+    "theirs": "the card says no",
+    "ours": "knocked back / declines",
+    "evidence": [
+     "E44",
+     "E15"
+    ]
+   },
+   {
+    "theirs": "the same thing",
+    "ours": "uplift / average improvement in acceptance",
+    "evidence": [
+     "E25",
+     "E27"
+    ]
+   },
+   {
+    "theirs": "a one-page business case",
+    "ours": "the deck and the pricing proposal",
+    "evidence": [
+     "E39",
+     "E40"
+    ]
+   }
+  ],
+  "outcome_signals": [
+   {
+    "evidence": [
+     "E6",
+     "E17",
+     "E25"
+    ],
+    "what": "Lost: the CFO said no because he saw no reason to pay more for 'the same thing'."
+   },
+   {
+    "evidence": [
+     "E10",
+     "E13",
+     "E19"
+    ],
+    "what": "The customer stayed with the incumbent bank/Fiserv after the bank sharpened its rate; the decision was made on a rate-only comparison."
+   },
+   {
+    "evidence": [
+     "E16",
+     "E45"
+    ],
+    "what": "Rep frames the loss as price."
+   },
+   {
+    "evidence": [
+     "E36",
+     "E38",
+     "E29",
+     "E33"
+    ],
+    "what": "Other factors: IT's pre-spring migration risk, and no quantified value was put in front of the decider."
+   },
+   {
+    "evidence": [
+     "E6"
+    ],
+    "what": "No indication that any part of the business moved; the whole deal was lost."
+   }
+  ]
+ },
+ "ms": 70926,
+ "cost": 0.1837992,
+ "in_tokens": 4494,
+ "out_tokens": 8842,
+ "model": "claude-opus-5-5"
+}

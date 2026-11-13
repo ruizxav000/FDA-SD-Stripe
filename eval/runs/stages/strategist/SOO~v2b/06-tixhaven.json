@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M5\",\"current_line\":\"Support plans with tiered response times, up to 24/7 coverage.\",\"type\":\"replace\",\"change\":\"For the operations owner (e.g. COO) in ticketing and peak-event deals: \\\"A name, not a queue.\\\" Lead with the named people on the account, such as [solutions engineer] and [account lead], and the escalation path we commit to for the customer's major events. Do not open with tiers or response times; mention them only if asked.\",\"evidence\":[\"E17\",\"E18\",\"E28\",\"E32\"],\"why\":\"When Halima asked \\\"who's my person,\\\" the rep walked her through the support plans and she dismissed them as \\\"a queue with a faster timer,\\\" so M5's tiered-response framing answered a who question with a how-fast answer.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a written on-sale morning plan as a proof asset for peak-event buyers, built with the solutions engineer before the decider meeting. It should cover who's watching, who you call, and what we do at minute one, minute four and minute ten of a payment failure.\",\"evidence\":[\"E21\",\"E22\",\"E23\",\"E1\"],\"why\":\"The decider wanted to see on paper \\\"what we do on an on-sale morning\\\" down to \\\"what happens at minute four,\\\" the moment her own payments failed, and the rep says we don't have that as a thing.\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"replace\",\"change\":\"For ticketing and peak-event deals, open with the outage moment rather than global growth: \\\"I don't buy uptime, I buy what happens when it's down.\\\" Then state what we do in the first minutes of a failure on on-sale morning. Keep M2 for the technical evaluator.\",\"evidence\":[\"E30\",\"E1\",\"E2\",\"E4\",\"E27\"],\"why\":\"The trigger was a public on-sale failure with no human reply until it was over, and the decider explicitly said she buys what happens when it's down; the technical story got only a \\\"good\\\" from her.\",\"strength\":\"Test this\"},{\"target\":\"M8\",\"current_line\":\"Trusted by leading businesses; see our customer stories.\",\"type\":\"replace\",\"change\":\"For peak-event operations buyers, swap logo stories for a reference customer who will speak directly to how we responded during an incident, including who picked up and what happened next.\",\"evidence\":[\"E26\",\"E28\"],\"why\":\"The rep said \\\"I had logos. I didn't have a person,\\\" and the buyer wanted a name, so brand proof did not answer her question. Whether she explicitly asked for a reference is still unconfirmed.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M5",
+    "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+    "type": "replace",
+    "change": "For the operations owner (e.g. COO) in ticketing and peak-event deals: \"A name, not a queue.\" Lead with the named people on the account, such as [solutions engineer] and [account lead], and the escalation path we commit to for the customer's major events. Do not open with tiers or response times; mention them only if asked.",
+    "evidence": [
+     "E17",
+     "E18",
+     "E28",
+     "E32"
+    ],
+    "why": "When Halima asked \"who's my person,\" the rep walked her through the support plans and she dismissed them as \"a queue with a faster timer,\" so M5's tiered-response framing answered a who question with a how-fast answer.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a written on-sale morning plan as a proof asset for peak-event buyers, built with the solutions engineer before the decider meeting. It should cover who's watching, who you call, and what we do at minute one, minute four and minute ten of a payment failure.",
+    "evidence": [
+     "E21",
+     "E22",
+     "E23",
+     "E1"
+    ],
+    "why": "The decider wanted to see on paper \"what we do on an on-sale morning\" down to \"what happens at minute four,\" the moment her own payments failed, and the rep says we don't have that as a thing.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "replace",
+    "change": "For ticketing and peak-event deals, open with the outage moment rather than global growth: \"I don't buy uptime, I buy what happens when it's down.\" Then state what we do in the first minutes of a failure on on-sale morning. Keep M2 for the technical evaluator.",
+    "evidence": [
+     "E30",
+     "E1",
+     "E2",
+     "E4",
+     "E27"
+    ],
+    "why": "The trigger was a public on-sale failure with no human reply until it was over, and the decider explicitly said she buys what happens when it's down; the technical story got only a \"good\" from her.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M8",
+    "current_line": "Trusted by leading businesses; see our customer stories.",
+    "type": "replace",
+    "change": "For peak-event operations buyers, swap logo stories for a reference customer who will speak directly to how we responded during an incident, including who picked up and what happened next.",
+    "evidence": [
+     "E26",
+     "E28"
+    ],
+    "why": "The rep said \"I had logos. I didn't have a person,\" and the buyer wanted a name, so brand proof did not answer her question. Whether she explicitly asked for a reference is still unconfirmed.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 20573,
+ "cost": 0.080724,
+ "in_tokens": 5769,
+ "out_tokens": 1729,
+ "model": "claude-opus-5-5"
+}

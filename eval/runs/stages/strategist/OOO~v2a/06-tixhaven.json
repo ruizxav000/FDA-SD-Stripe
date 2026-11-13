@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M5\",\"current_line\":\"Support plans with tiered response times, up to 24/7 coverage.\",\"type\":\"replace\",\"change\":\"For operations executives at businesses with on-sales or peak events: \\\"A name, not a queue.\\\" Lead with who picks up: your named solutions engineer and account lead, how you reach them (a shared channel and a direct escalation path), and who covers when they're out. Mention tiers and response times only as backup detail, and promise on-sale coverage only where we can actually staff it.\",\"evidence\":[\"E19\",\"E20\",\"E30\",\"E34\",\"E10\",\"E11\"],\"why\":\"The decider heard our tiers and response times as \\\"a queue with a faster timer\\\", while the competitor won by naming the people on the account, and the customer's own word was \\\"who\\\", not support.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For on-sale and peak-event buyers: an on-sale morning runbook, built with our solutions engineer before the decision meeting. It sets out on paper who is watching, who you call, and \\\"what happens at minute four\\\", with real names in it.\",\"evidence\":[\"E23\",\"E24\",\"E31\",\"E1\"],\"why\":\"The decider asked to see on paper what we do on an on-sale morning, and the rep says we had nothing to show though it could have been built with our solutions engineer.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Whenever we show uptime or load-test results to an operations decider, pair them with an incident story: when it goes down, here is who is on the line and what they do. Use her framing: \\\"I don't buy uptime, I buy what happens when it's down.\\\"\",\"evidence\":[\"E33\",\"E16\",\"E25\",\"E29\"],\"why\":\"The sandbox load test went well with the CTO's team, but the decider said outright that uptime was not what she was buying.\",\"strength\":\"Test this\"},{\"target\":\"M8\",\"current_line\":\"Trusted by leading businesses; see our customer stories.\",\"type\":\"replace\",\"change\":\"For peak-event buyers, back logos with a person: offer a reference customer who will describe who picked up and what happened during their own peak or on-sale.\",\"evidence\":[\"E27\"],\"why\":\"The rep says he had logos but not a person, and that matches a buyer whose whole question was who answers. The transcript doesn't confirm she asked for a reference, so this needs checking against other deals.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M5",
+    "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+    "type": "replace",
+    "change": "For operations executives at businesses with on-sales or peak events: \"A name, not a queue.\" Lead with who picks up: your named solutions engineer and account lead, how you reach them (a shared channel and a direct escalation path), and who covers when they're out. Mention tiers and response times only as backup detail, and promise on-sale coverage only where we can actually staff it.",
+    "evidence": [
+     "E19",
+     "E20",
+     "E30",
+     "E34",
+     "E10",
+     "E11"
+    ],
+    "why": "The decider heard our tiers and response times as \"a queue with a faster timer\", while the competitor won by naming the people on the account, and the customer's own word was \"who\", not support.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For on-sale and peak-event buyers: an on-sale morning runbook, built with our solutions engineer before the decision meeting. It sets out on paper who is watching, who you call, and \"what happens at minute four\", with real names in it.",
+    "evidence": [
+     "E23",
+     "E24",
+     "E31",
+     "E1"
+    ],
+    "why": "The decider asked to see on paper what we do on an on-sale morning, and the rep says we had nothing to show though it could have been built with our solutions engineer.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Whenever we show uptime or load-test results to an operations decider, pair them with an incident story: when it goes down, here is who is on the line and what they do. Use her framing: \"I don't buy uptime, I buy what happens when it's down.\"",
+    "evidence": [
+     "E33",
+     "E16",
+     "E25",
+     "E29"
+    ],
+    "why": "The sandbox load test went well with the CTO's team, but the decider said outright that uptime was not what she was buying.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M8",
+    "current_line": "Trusted by leading businesses; see our customer stories.",
+    "type": "replace",
+    "change": "For peak-event buyers, back logos with a person: offer a reference customer who will describe who picked up and what happened during their own peak or on-sale.",
+    "evidence": [
+     "E27"
+    ],
+    "why": "The rep says he had logos but not a person, and that matches a buyer whose whole question was who answers. The transcript doesn't confirm she asked for a reference, so this needs checking against other deals.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 18867,
+ "cost": 0.07700000000000001,
+ "in_tokens": 5696,
+ "out_tokens": 1572,
+ "model": "claude-opus-5-5"
+}

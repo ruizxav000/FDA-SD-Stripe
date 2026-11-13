@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":0},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":1,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"Value proof is named as the underlying cause behind the No decision tag\",\"pass\":true},{\"item\":\"\\\"Nothing we could have done\\\" is labeled opinion and challenged\",\"pass\":false},{\"item\":\"The payback request one month before the freeze is surfaced as the turning point\",\"pass\":true},{\"item\":\"The revenue framing is reported as pushed back\",\"pass\":true}],\n \"fails\":[\"Language insight presents an altered quote, 'no one told her what it was costing'; the transcript says \\\"I don't think anyone told her what it was costing\\\"\"],\n \"notes\":\"The report correctly identifies the unanswered payback request, made a month before the freeze, as the real turning point, and challenges the rep's 'nothing we could have done'. Its four messaging changes match the key's direction closely. It mis-tags the deal as Value proof instead of No decision. It also never puts the rep's 'It's timing... nothing we could have done' into evidence as a labelled opinion, and the close does not list the unquantified cost of the homegrown system as the key not-covered question.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 0
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 1,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "Value proof is named as the underlying cause behind the No decision tag",
+    "pass": true
+   },
+   {
+    "item": "\"Nothing we could have done\" is labeled opinion and challenged",
+    "pass": false
+   },
+   {
+    "item": "The payback request one month before the freeze is surfaced as the turning point",
+    "pass": true
+   },
+   {
+    "item": "The revenue framing is reported as pushed back",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Language insight presents an altered quote, 'no one told her what it was costing'; the transcript says \"I don't think anyone told her what it was costing\""
+  ],
+  "notes": "The report correctly identifies the unanswered payback request, made a month before the freeze, as the real turning point, and challenges the rep's 'nothing we could have done'. Its four messaging changes match the key's direction closely. It mis-tags the deal as Value proof instead of No decision. It also never puts the rep's 'It's timing... nothing we could have done' into evidence as a labelled opinion, and the close does not list the unquantified cost of the homegrown system as the key not-covered question."
+ },
+ "ms": 30782,
+ "cost": 0.138088,
+ "in_tokens": 9717,
+ "out_tokens": 3018,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,51 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":1},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":1,\n \"must_catch\":[{\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},{\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},{\"item\":\"Customer language is marked Not covered\",\"pass\":true},{\"item\":\"'A third of the churn' is labeled unverified or opinion\",\"pass\":true},{\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report gets the hard parts right. Won is scoped to online billing, with the front desk still on Global and no date for phase two. It surfaces the Maya-chose and Greg-decided contradiction and keeps customer language marked not covered. It misses in three places: it picks 'Approval rates' as the tag and leaves the key's 'Value proof' as runner-up, the rep takeaway leaves out treating the front desk as a live deal, and the messaging works around the missing in-store proof instead of naming a live reader inside the customer's studio software as proof to add. There are also minor attribution slips: excerpts the rep relayed are credited to Maya, and the speaker of 'is that the readers?' is left null.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 1
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 1,
+  "must_catch": [
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": true
+   },
+   {
+    "item": "'A third of the churn' is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the hard parts right. Won is scoped to online billing, with the front desk still on Global and no date for phase two. It surfaces the Maya-chose and Greg-decided contradiction and keeps customer language marked not covered. It misses in three places: it picks 'Approval rates' as the tag and leaves the key's 'Value proof' as runner-up, the rep takeaway leaves out treating the front desk as a live deal, and the messaging works around the missing in-store proof instead of naming a live reader inside the customer's studio software as proof to add. There are also minor attribution slips: excerpts the rep relayed are credited to Maya, and the speaker of 'is that the readers?' is left null."
+ },
+ "ms": 25366,
+ "cost": 0.123664,
+ "in_tokens": 9694,
+ "out_tokens": 2306,
+ "model": "claude-opus-5-5"
+}

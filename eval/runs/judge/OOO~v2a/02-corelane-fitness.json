@@ -1,0 +1,51 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},{\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},{\"item\":\"Customer language is marked Not covered\",\"pass\":true},{\"item\":\"\\\"A third of the churn\\\" is labeled unverified or opinion\",\"pass\":true},{\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report scopes the win to memberships and online billing, with the front desk still on Global and no date for phase two. It surfaces the Maya-chose/Greg-decided contradiction and correctly ties the win to the failed-renewals analysis on the customer's own file. Its weaknesses are minor: the close labels 'who made the final call' as dodged when the rep answered it after correcting himself, the header scope omits that phase two depends on the partner integration, and the messaging changes recast 'unified commerce' rather than dropping the term outright (the drop appears only in the message section).\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": true
+   },
+   {
+    "item": "\"A third of the churn\" is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report scopes the win to memberships and online billing, with the front desk still on Global and no date for phase two. It surfaces the Maya-chose/Greg-decided contradiction and correctly ties the win to the failed-renewals analysis on the customer's own file. Its weaknesses are minor: the close labels 'who made the final call' as dodged when the rep answered it after correcting himself, the header scope omits that phase two depends on the partner integration, and the messaging changes recast 'unified commerce' rather than dropping the term outright (the drop appears only in the message section)."
+ },
+ "ms": 20632,
+ "cost": 0.11799599999999999,
+ "in_tokens": 9628,
+ "out_tokens": 2049,
+ "model": "claude-opus-5-5"
+}

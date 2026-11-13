@@ -1,0 +1,50 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The decision-maker contradiction (Raj vs. Angela) is surfaced.\",\"pass\":true},\n  {\"item\":\"\\\"that's a diagram\\\" is tied to a messaging change.\",\"pass\":true},\n  {\"item\":\"The question shift (11 of 14 about stores) is reported as a fact.\",\"pass\":true},\n  {\"item\":\"The rep's \\\"better product online\\\" is treated as opinion, not used as a reason.\",\"pass\":true}\n ],\n \"fails\":[\n  \"Language insight lists 'one throat to choke' as something the customer said. That phrase is not in the transcript.\",\n  \"Trigger insight says checkout was 'a problem nobody had brought to us'. T8 says the early questions were all web (conversion, checkout, wallets), so the transcript contradicts this.\"\n ],\n \"notes\":\"The report surfaces the Raj/Angela decision-maker contradiction clearly. It ties 'that's a diagram' to a live till-return demo, and all four messaging changes match the key's direction and rest on real evidence. It leaves the incumbent null and lists it as unknown, even though the transcript shows separate store and web systems. It mislabels the Angela December 27 story as opinion instead of secondhand fact. The close misses the key's not-covered items (Adyen's commercial terms, whether a named rollout plan would have been accepted) and the follow-up to get Raj's list of 14 questions. It never explicitly addresses Tom's 'better product online' remark, passing that check only implicitly.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The decision-maker contradiction (Raj vs. Angela) is surfaced.",
+    "pass": true
+   },
+   {
+    "item": "\"that's a diagram\" is tied to a messaging change.",
+    "pass": true
+   },
+   {
+    "item": "The question shift (11 of 14 about stores) is reported as a fact.",
+    "pass": true
+   },
+   {
+    "item": "The rep's \"better product online\" is treated as opinion, not used as a reason.",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Language insight lists 'one throat to choke' as something the customer said. That phrase is not in the transcript.",
+   "Trigger insight says checkout was 'a problem nobody had brought to us'. T8 says the early questions were all web (conversion, checkout, wallets), so the transcript contradicts this."
+  ],
+  "notes": "The report surfaces the Raj/Angela decision-maker contradiction clearly. It ties 'that's a diagram' to a live till-return demo, and all four messaging changes match the key's direction and rest on real evidence. It leaves the incumbent null and lists it as unknown, even though the transcript shows separate store and web systems. It mislabels the Angela December 27 story as opinion instead of secondhand fact. The close misses the key's not-covered items (Adyen's commercial terms, whether a named rollout plan would have been accepted) and the follow-up to get Raj's list of 14 questions. It never explicitly addresses Tom's 'better product online' remark, passing that check only implicitly."
+ },
+ "ms": 29289,
+ "cost": 0.13369599999999998,
+ "in_tokens": 9753,
+ "out_tokens": 2784,
+ "model": "claude-opus-5-5"
+}

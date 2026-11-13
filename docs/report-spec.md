@@ -25,16 +25,16 @@ The tags are **neutral topics**. The outcome gives the direction: on a loss, the
 
 | Tag | Use when the deciding factor was… |
 |---|---|
-| **Value proof** | Whether we showed value in the customer's own terms and numbers (a customer-specific business case, ROI, cost of doing nothing) |
+| **Value proof** | The decider compared *money*: price against value, payback, ROI, the cost of doing nothing, and whether we showed it in the customer's own numbers. Applies even when the underlying problem is declines. |
 | **Product fit** | A capability we did or didn't have |
 | **Developer experience** | Docs, sandbox, APIs, how fast their engineers could build |
-| **Approval rates** | Approval/decline performance, by market, card type or issuer |
+| **Approval rates** | The decider compared *approval performance itself*: rates by market, card type or issuer, a competitor's test results, the customer's own approval data |
 | **In-store and online together** | One platform across tills and web: returns, customer records, rollout |
 | **Migration effort** | The cost, risk or timing of switching (re-collecting cards, staged moves, freeze periods) |
 | **Existing relationship or bundle** | The incumbent's bank relationship, bundled services or contract lock-in |
 | **Support and service** | Named people, escalation, rollout teams, on-call coverage |
 | **Champion or access** | A champion leaving, or never reaching the person who decided |
-| **No decision** | Nobody switched: freeze, stall, status quo |
+| **No decision** | Nobody switched: freeze, stall, status quo. Always the tag when the outcome is No decision; the underlying cause goes in the runner-up. |
 | **Not established** | The interview never got to the reason |
 
 Changes from the original list:
@@ -47,7 +47,7 @@ The first two renames are so the tags work for wins too.
 
 **There is no "Price" tag, on purpose.** When a rep says "we lost on price," the report has to find what was really behind it. Usually it's **Value proof** (the buyer compared rates, not value) or **Existing relationship or bundle** (the incumbent matched the rate).
 
-If two tags are close, the report picks one and names the runner-up in the "What decided it" section.
+If two tags are close, the report picks one and names the runner-up. To choose, it asks what the decider was comparing at the moment of decision.
 
 ### 2. Messaging changes (shown first; written last)
 
@@ -122,6 +122,18 @@ If a question was never answered, the section says **"Not covered,"** points to 
 
 ---
 
+## Workflow and models (decided by testing; see `eval/REPORT.md`)
+
+| Step | Done by |
+|---|---|
+| Read the whole interview into an evidence ledger | Sonnet |
+| Drop any excerpt that isn't word for word | Code |
+| Analyze: header, seven sections, close | Opus |
+| Plan messaging changes | Opus |
+| Re-check every excerpt; remove quotation marks from paraphrases | Code |
+
+The steps run in a fixed order under code. On the test set: same outcome and tag across independent runs, every deal tagged as the answer key expects, about 110 seconds per review.
+
 ## Still needed
 
-- **Messaging ingredients:** current messaging word for word, proof points, product facts (can and can't), competitors and incumbents, segments, and company and product names.
+- **Messaging ingredients:** the page currently uses a provisional library reconstructed from the test transcripts (`MESSAGING` in `app/core.js`). Needed: current messaging word for word, proof points, product facts (can and can't), competitors and incumbents, segments, and company and product names.

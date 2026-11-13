@@ -1,0 +1,66 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M5\",\"current_line\":\"Support plans with tiered response times, up to 24/7 coverage.\",\"type\":\"replace\",\"change\":\"For operations decision-makers at event-driven merchants: lead with the person, not the plan. 'A name, not a queue.' Introduce the named solutions engineer and account lead who will own the account and pick up on peak days, then show the escalation path. Bring the response-time tiers in only as backup detail, if at all.\",\"evidence\":[\"E18\",\"E19\",\"E28\",\"E29\"],\"why\":\"When the COO asked who her person was, we answered with the tiers and response times. She dismissed that as 'a queue with a faster timer', while the customer's own words were 'A name, not a queue.' and 'Someone who picks up.'\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For merchants whose revenue spikes on scheduled events: add a written peak-event runbook as a standard proof point and offer it before anyone asks. It is our plan for an 'on-sale morning' and covers who is watching, who you call, and what happens in the first minutes of a failure. Build it with a solutions engineer. It does not exist today.\",\"evidence\":[\"E21\",\"E22\",\"E23\"],\"why\":\"The decider asked to see on paper what we do on an on-sale morning. The rep said 'We don't have that as a thing' and that he could have built one with our solutions engineer but didn't.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For COO and operations buyers after an incident: open with what happens when payments fail, not with uptime or load-test results. Use her framing: 'I don't buy uptime, I buy what happens when it's down.' Keep the technical proof (sandbox load test, docs, uptime history) for the technical team, as the entry ticket rather than the closing argument.\",\"evidence\":[\"E30\",\"E16\",\"E17\",\"E27\"],\"why\":\"The uptime and load-test story won over the CTO's team, but the decider gave it only 'good' and framed her purchase as what happens when it's down.\",\"strength\":\"Test this\"},{\"target\":\"M8\",\"current_line\":\"Trusted by leading businesses; see our customer stories.\",\"type\":\"replace\",\"change\":\"For peak-event buyers: replace logo proof with a reference customer who can describe who picked up during a live incident on a big event day, and offer the introduction proactively.\",\"evidence\":[\"E25\"],\"why\":\"The rep said 'I had logos. I didn't have a person.' Logo-style proof did not answer the decider's question of who responds.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M5",
+    "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+    "type": "replace",
+    "change": "For operations decision-makers at event-driven merchants: lead with the person, not the plan. 'A name, not a queue.' Introduce the named solutions engineer and account lead who will own the account and pick up on peak days, then show the escalation path. Bring the response-time tiers in only as backup detail, if at all.",
+    "evidence": [
+     "E18",
+     "E19",
+     "E28",
+     "E29"
+    ],
+    "why": "When the COO asked who her person was, we answered with the tiers and response times. She dismissed that as 'a queue with a faster timer', while the customer's own words were 'A name, not a queue.' and 'Someone who picks up.'",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For merchants whose revenue spikes on scheduled events: add a written peak-event runbook as a standard proof point and offer it before anyone asks. It is our plan for an 'on-sale morning' and covers who is watching, who you call, and what happens in the first minutes of a failure. Build it with a solutions engineer. It does not exist today.",
+    "evidence": [
+     "E21",
+     "E22",
+     "E23"
+    ],
+    "why": "The decider asked to see on paper what we do on an on-sale morning. The rep said 'We don't have that as a thing' and that he could have built one with our solutions engineer but didn't.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For COO and operations buyers after an incident: open with what happens when payments fail, not with uptime or load-test results. Use her framing: 'I don't buy uptime, I buy what happens when it's down.' Keep the technical proof (sandbox load test, docs, uptime history) for the technical team, as the entry ticket rather than the closing argument.",
+    "evidence": [
+     "E30",
+     "E16",
+     "E17",
+     "E27"
+    ],
+    "why": "The uptime and load-test story won over the CTO's team, but the decider gave it only 'good' and framed her purchase as what happens when it's down.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M8",
+    "current_line": "Trusted by leading businesses; see our customer stories.",
+    "type": "replace",
+    "change": "For peak-event buyers: replace logo proof with a reference customer who can describe who picked up during a live incident on a big event day, and offer the introduction proactively.",
+    "evidence": [
+     "E25"
+    ],
+    "why": "The rep said 'I had logos. I didn't have a person.' Logo-style proof did not answer the decider's question of who responds.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 18695,
+ "cost": 0.07649600000000001,
+ "in_tokens": 5733,
+ "out_tokens": 1532,
+ "model": "claude-opus-5-5"
+}

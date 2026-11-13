@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":0,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":1,\"language\":2},\n \"close\":2,\"messaging\":2,\n \"must_catch\":[{\"item\":\"\\\"so it's a queue with a faster timer\\\" is tied to a messaging change\",\"pass\":true},{\"item\":\"\\\"Over-promised\\\" is labeled opinion\",\"pass\":true},{\"item\":\"The champion (Ben) and the decider (Halima) are distinguished\",\"pass\":true},{\"item\":\"The passing remark that failures had happened twice before is surfaced in the trigger\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report gets the core of the deal right. It separates champion Ben from decider Halima, ties \\\"a queue with a faster timer\\\" to a rewrite of the support message, labels \\\"over-promised\\\" as unverified opinion, and surfaces the two earlier failures. It misses two things. First, its gaps insight calls the on-sale plan a product gap, while the key says neither gap was a product gap and both could have been closed by the team. Second, it does not name Checkout.com or the in-house bank gateway. Those names are not in the transcript, so leaving them unnamed avoided inventing anything, but the header still scores 0 against the key.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 0,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 1,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "\"so it's a queue with a faster timer\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "\"Over-promised\" is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The champion (Ben) and the decider (Halima) are distinguished",
+    "pass": true
+   },
+   {
+    "item": "The passing remark that failures had happened twice before is surfaced in the trigger",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core of the deal right. It separates champion Ben from decider Halima, ties \"a queue with a faster timer\" to a rewrite of the support message, labels \"over-promised\" as unverified opinion, and surfaces the two earlier failures. It misses two things. First, its gaps insight calls the on-sale plan a product gap, while the key says neither gap was a product gap and both could have been closed by the team. Second, it does not name Checkout.com or the in-house bank gateway. Those names are not in the transcript, so leaving them unnamed avoided inventing anything, but the header still scores 0 against the key."
+ },
+ "ms": 26638,
+ "cost": 0.12446800000000001,
+ "in_tokens": 9177,
+ "out_tokens": 2553,
+ "model": "claude-opus-5-5"
+}

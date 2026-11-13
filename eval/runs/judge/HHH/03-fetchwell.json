@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":1,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":1,\"decided\":2,\"gaps\":2,\"language\":1},\n \"close\":1,\"messaging\":1,\n \"must_catch\":[{\"item\":\"The gaps section shows the rep's \\\"nothing\\\" being contradicted (PayPal/Venmo, saved cards).\",\"pass\":true},{\"item\":\"The Braintree theory is labeled opinion.\",\"pass\":true},{\"item\":\"The approval-rate slide is reported as silence in a win.\",\"pass\":true},{\"item\":\"The CFO's one question is surfaced as a messaging signal.\",\"pass\":true}],\n \"fails\":[\"Message section states 'The marketplace pitch is mentioned but has no recorded reaction', which contradicts the transcript. Priya lists the marketplace piece (sitter onboarding, identity checks, local-currency payouts) explicitly under 'Reaction' in T10.\"],\n \"notes\":\"The report correctly shows the rep's 'Nothing, really. It was a clean one' being contradicted by the open PayPal/Venmo and saved-card asks. It labels the Braintree theory as Priya's guess, and it catches the approval-rate silence against the $38 booking. Its biggest misses are these: it leaves the incumbent null and adds a scope caveat the key says isn't warranted, with a spurious 'Canada and UK only?' unknown. It also misreports the marketplace pitch as drawing no reaction. And its messaging changes drop the 'use their words' and 'finance message is payout timing' directions, which appear only at section level.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 1,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 1,
+   "decided": 2,
+   "gaps": 2,
+   "language": 1
+  },
+  "close": 1,
+  "messaging": 1,
+  "must_catch": [
+   {
+    "item": "The gaps section shows the rep's \"nothing\" being contradicted (PayPal/Venmo, saved cards).",
+    "pass": true
+   },
+   {
+    "item": "The Braintree theory is labeled opinion.",
+    "pass": true
+   },
+   {
+    "item": "The approval-rate slide is reported as silence in a win.",
+    "pass": true
+   },
+   {
+    "item": "The CFO's one question is surfaced as a messaging signal.",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Message section states 'The marketplace pitch is mentioned but has no recorded reaction', which contradicts the transcript. Priya lists the marketplace piece (sitter onboarding, identity checks, local-currency payouts) explicitly under 'Reaction' in T10."
+  ],
+  "notes": "The report correctly shows the rep's 'Nothing, really. It was a clean one' being contradicted by the open PayPal/Venmo and saved-card asks. It labels the Braintree theory as Priya's guess, and it catches the approval-rate silence against the $38 booking. Its biggest misses are these: it leaves the incumbent null and adds a scope caveat the key says isn't warranted, with a spurious 'Canada and UK only?' unknown. It also misreports the marketplace pitch as drawing no reaction. And its messaging changes drop the 'use their words' and 'finance message is payout timing' directions, which appear only at section level."
+ },
+ "ms": 34059,
+ "cost": 0.13777999999999999,
+ "in_tokens": 8966,
+ "out_tokens": 3303,
+ "model": "claude-opus-5-5"
+}

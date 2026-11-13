@@ -1,0 +1,379 @@
+{
+ "version": "2026-11-13.3",
+ "header": {
+  "deal": "Kestrel Learning",
+  "outcome": "Lost",
+  "scope": "Lost: international business moved to local acquiring after the customer asked to split the contract; the US stayed with us.",
+  "competitor": "Adyen",
+  "incumbent": "Stripe (us)",
+  "tag": "Approval rates",
+  "runner_up": "Support and service",
+  "tag_why": "A new head of payments started by pulling declines by country, judged international markets weak, and asked for his own approval rates by market, card type and issuer; Adyen answered with a country-level test on his traffic while we answered with an average uplift, and our own analysis arrived three weeks later, after the test was finished, with no named person watching his numbers."
+ },
+ "messaging_changes": [
+  {
+   "target": "M4",
+   "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For payments leaders at renewal or evaluation, open with their own numbers rather than our average: 'Here are your approvals by market, card type and issuer, the reasons behind the declines, the money left on the table, and what we would fix.' Use 'approvals', not 'authorization'. Use the average uplift only as supporting context after their own numbers.",
+   "evidence": [
+    "E12",
+    "E13",
+    "E14",
+    "E31",
+    "E34"
+   ],
+   "evidence_found": true,
+   "why": "We pitched the average uplift and the buyer rejected it outright ('that's an average. What's mine?', 'I can't take an average to my CFO.'), and he talks about 'approvals' and 'Money left on the table', not authorization rates.",
+   "strength": "Test this"
+  },
+  {
+   "target": null,
+   "current_line": null,
+   "line_matches": true,
+   "type": "add",
+   "change": "Proof offer for any customer who questions performance or is weighing local acquiring: 'We'll run your approval analysis on your own traffic, by country, card type and issuer, with the reasons, and deliver it in days.' Confirm the turnaround the payments performance team can commit to before using a specific number of days.",
+   "evidence": [
+    "E8",
+    "E11",
+    "E26",
+    "E27"
+   ],
+   "evidence_found": true,
+   "why": "Adyen won with a country-level test on the customer's own traffic, and our equivalent market-by-market analysis held fixable findings but arrived three weeks after he asked, when the test was already finished.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M5",
+   "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For accounts with a payments leader: 'A named person at Stripe who looks at your approval rates by market every month, plus support plans with tiered response times, up to 24/7 coverage.'",
+   "evidence": [
+    "E28",
+    "E23",
+    "E24"
+   ],
+   "evidence_found": true,
+   "why": "The buyer asked 'who at Stripe looks at his numbers every month' and the rep had no name, after nine to ten months without a review on an account counted healthy because it had 'no tickets', so reactive response times did not answer his concern.",
+   "strength": "Test this"
+  }
+ ],
+ "no_change_reason": null,
+ "sections": {
+  "trigger": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E1",
+     "excerpt": "A new head of payments. Stefan. They'd never had one.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E2",
+     "excerpt": "Payments sat under an engineering manager, the guy who originally bought us, and he left last year.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E3",
+     "excerpt": "the first thing he did was pull declines by country",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E5",
+     "excerpt": "I don't know exactly. He mentioned Brazil and a couple in Europe. I never saw his analysis.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The trigger was a change in who owned payments, not a product failure. The buyer went from an engineering manager who valued the integration to a payments specialist whose first act was to audit declines by country. We sold to the first kind of buyer and never re-sold to the second. The customer ran the decline analysis that started this on our data, and we never saw it.",
+   "messaging": "Build a 'new payments leader' play: when a customer hires a payments head, lead with their own approval rates by country in the first conversation, before they pull the numbers themselves."
+  },
+  "decider": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E6",
+     "excerpt": "Stefan recommended it and the CFO approved.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E7",
+     "excerpt": "this went to the CFO two weeks ago.",
+     "label": "quote",
+     "speaker": "Stefan",
+     "verified": true
+    },
+    {
+     "id": "E14",
+     "excerpt": "I can't take an average to my CFO.",
+     "label": "quote",
+     "speaker": "Stefan",
+     "verified": true
+    },
+    {
+     "id": "E25",
+     "excerpt": "No. I knew the engineering manager had left. I didn't know they'd hired a head of payments.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "Stefan built the case and the CFO approved it. The transcript does not say that anyone from our side ever reached the CFO. Stefan told us exactly what the CFO needed, which was account-specific numbers and not an average. We learned the decision had gone up only after it had already gone to the CFO.",
+   "messaging": "Give the payments lead a CFO-ready artifact built on their own numbers (a market-by-market approval view and what it is worth), because the person approving is reading a business case, not a product deck."
+  },
+  "competitor": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E8",
+     "excerpt": "Adyen ran a test on a slice of their international traffic and came back with results by country.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E9",
+     "excerpt": "local acquiring",
+     "label": "quote",
+     "speaker": "Stefan",
+     "verified": true
+    },
+    {
+     "id": "E10",
+     "excerpt": "I can't tell you what the test showed. He wouldn't share it.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E11",
+     "excerpt": "They got very specific. What's our approval rate in this country, on this card type, by issuer. And why.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "Adyen did not win on a claim. They won on a live test that returned results by country, which matched exactly how Stefan framed his problem. After that test, Stefan's questions became the same test applied to us: by country, by card type, by issuer, and why. We answered a measurement with a marketing average. We do not know what the test actually showed.",
+   "messaging": "Against local acquiring, offer an equal proof on the customer's own traffic: country, card-type and issuer approval breakdowns with reasons, delivered in days, instead of arguing the concept."
+  },
+  "message": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E12",
+     "excerpt": "The Authorization Boost deck. The average uplift customers see.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E13",
+     "excerpt": "that's an average. What's mine?",
+     "label": "quote",
+     "speaker": "Stefan",
+     "verified": true
+    },
+    {
+     "id": "E15",
+     "excerpt": "It's a renewal, so we weren't really pitching.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E19",
+     "excerpt": "I offered a roadmap session and he didn't take it.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The rep says the uplift number met silence and that we weren't pitching. In fact we pitched M4, and it got an explicit rejection: Stefan said an average is not his number. The roadmap offer failed for the same reason, because it was about the future and he was asking about his present data. Developer love and billing (M2, M7) may explain why the US stayed, but that is the rep's read. Nothing customer-sourced shows those messages mattered to Stefan.",
+   "messaging": "Rework M4 for renewals and evaluations so it leads with 'here are your approval rates by market and what we'd fix', with the average uplift as supporting context only."
+  },
+  "decided": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E20",
+     "excerpt": "I don't think there was a moment. It was kind of decided before we got in the room.",
+     "label": "opinion",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E22",
+     "excerpt": "When the renewal notice went out and Stefan replied asking to split the contract.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E27",
+     "excerpt": "Our payments performance team did a proper analysis. But that landed three weeks after he asked, and by then the test was finished.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E29",
+     "excerpt": "Real findings. Things we could have fixed.",
+     "label": "opinion",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The rep says there was no moment and nothing to do. Her own account contradicts this. She says our analysis held fixable findings, Stefan called it the most useful thing we had sent, and it arrived after Adyen's test was done. The real turning points were the request to split the contract, which was the first signal we saw, and a three-week gap while the competitor's test ran. The transcript does not establish whether our analysis landed before or after the decision went to the CFO.",
+   "messaging": "Make 'your approval analysis in under a week' a committed response whenever a customer questions performance, because the evidence suggests speed of proof decided this deal."
+  },
+  "gaps": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E26",
+     "excerpt": "A market-by-market view of their own approval rates, with reasons.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E28",
+     "excerpt": "He asked who at Stripe looks at his numbers every month, and I didn't have a name.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E23",
+     "excerpt": "Before I took the account. So nine months? Ten.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E24",
+     "excerpt": "It was a healthy account. Growing, no tickets. It wasn't on anybody's list.",
+     "label": "opinion",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "We could produce the proof. We just didn't have it when it was asked for, and we had no named person who owned it. The rep counted 'no tickets' as health, but a payments leader losing money to declines does not file tickets. He goes and runs a competitor test. There had been no business review for roughly nine to ten months, and the gap he named was a person who looks at his numbers every month. M5's tiered response times are reactive and do not answer that.",
+   "messaging": "Add proactive coverage to M5: a named person who reviews each customer's approval rates by market on a regular cadence, not just tiered response times for tickets."
+  },
+  "language": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E31",
+     "excerpt": "Money left on the table.",
+     "label": "quote",
+     "speaker": "Stefan",
+     "verified": true
+    },
+    {
+     "id": "E32",
+     "excerpt": "Local cards, local rails.",
+     "label": "quote",
+     "speaker": "Stefan",
+     "verified": true
+    },
+    {
+     "id": "E33",
+     "excerpt": "what's mine",
+     "label": "quote",
+     "speaker": "Stefan",
+     "verified": true
+    },
+    {
+     "id": "E34",
+     "excerpt": "He doesn't say 'authorization,' he says 'approvals.'",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "Stefan talks in lost revenue (\"Money left on the table\") and approvals. Our vocabulary is authorization, uplift and machine learning. \"Local cards, local rails\" is a mechanism story he could repeat to his CFO, and we had no equivalent plain-language story; the rep says she did not know what she would have pitched against it. His other line, \"I heard from Stripe when I said I was leaving\", is ambiguous. Its most plausible reading is that we only engaged once he moved to leave.",
+   "messaging": "Rewrite M4 in the buyer's terms: 'approvals', 'your markets', and the money left on the table, plus a plain explanation of how we handle local cards in each market."
+  }
+ },
+ "close": {
+  "gaps": [
+   {
+    "question": "Which international markets looked bad, and what did his decline analysis show?",
+    "kind": "unknown",
+    "follow_up": "Ask the payments performance team which markets and issuers their analysis flagged (Brazil? which European markets?), and ask Stefan whether those match his own analysis."
+   },
+   {
+    "question": "What did the Adyen test show?",
+    "kind": "unknown",
+    "follow_up": "Ask Stefan, now that the decision is made, which countries showed a gap in the test and by how much."
+   },
+   {
+    "question": "When did you first feel this was lost, and what happened right before?",
+    "kind": "dodged",
+    "follow_up": "Ask the rep for exact dates: the split request, Stefan's request for approval data, the date our analysis landed, and the last call. This sets the three-week delay against the CFO decision."
+   },
+   {
+    "question": "Which part of our pitch got a reaction?",
+    "kind": "dodged",
+    "follow_up": "Ask the rep what Stefan said, in his own words, about developers and billing, and whether that is why the US stayed or just her assumption."
+   },
+   {
+    "question": "Did our analysis reach Stefan before or after his recommendation went to the CFO?",
+    "kind": "skipped",
+    "follow_up": "Ask the rep to compare the delivery date of the analysis with the CFO approval date, and ask Stefan whether it could still have changed the outcome."
+   },
+   {
+    "question": "What did Stefan mean by 'I heard from Stripe when I said I was leaving'?",
+    "kind": "skipped",
+    "follow_up": "Ask the rep whether this referred to the split request, and what outreach (if any) Stefan had from us before it."
+   },
+   {
+    "question": "Did international actually move to Adyen, and how much of the business left?",
+    "kind": "skipped",
+    "follow_up": "Ask the rep or deal desk who signed the international business and what share of volume moved."
+   }
+  ],
+  "rep_takeaway": "'No tickets' is not the same as healthy. When the buyer changes, re-qualify the account immediately, and when a customer asks for their own numbers, treat the turnaround time as part of the deal. Here we had fixable findings and lost the race to deliver them."
+ },
+ "confidence": "medium",
+ "checks": {
+  "quotes_total": 28,
+  "quotes_failed": 0,
+  "failed": [],
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5",
+   "strategist": "claude-opus-5-5"
+  },
+  "ms": 120012,
+  "cost": 0.3508533,
+  "stage_ms": {
+   "reader": 52949,
+   "analyst": 48227,
+   "strategist": 18836
+  },
+  "stage_cost": {
+   "reader": 0.0854253,
+   "analyst": 0.18568,
+   "strategist": 0.079748
+  },
+  "reader_items": 37,
+  "reader_verbatim": 37
+ }
+}

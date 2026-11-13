@@ -1,0 +1,71 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M7\",\"current_line\":\"Billing that helps you grow revenue.\",\"type\":\"replace\",\"change\":\"For buyers replacing a homegrown billing system, lead with roadmap time returned instead of revenue growth: 'Stop billing being a tax on the roadmap.' Back it with a live price change in the demo, framed in the buyer's terms: what used to take a quarter now takes minutes ('a quarter of roadmap in five minutes').\",\"evidence\":[\"E22\",\"E34\",\"E17\",\"E16\",\"E3\"],\"why\":\"The VP of Product rejected the revenue framing outright ('we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap'), and the moment that landed was the demo showing a quarter of roadmap coming back.\",\"strength\":\"Test this\"},{\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"replace\",\"change\":\"When a champion asks for payback, do not send the independent study as the answer. Offer to build 'a number that's ours' with them in a working session: engineering hours per pricing change, billing errors, and subscriptions lapsing on failed cards. Use the study only as background to that number.\",\"evidence\":[\"E26\",\"E25\",\"E14\",\"E29\",\"E30\"],\"why\":\"The rep sent 'the general one, with the study', and the champion said he couldn't get it past the CFO 'without a number that's ours'. That number was never built, and it was the missing proof when the deal died.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a finance-facing 'what it costs you to wait' line for CFOs when the deal is a billing replacement, and give it to the champion as a one-pager from the first meeting. Example: 'Every pricing change takes your team a quarter, and subscriptions lapse when cards fail and nobody chases them. Here is what one more year on the current system costs you.' Where failed-card lapses come up, size them with our recovery story (M10).\",\"evidence\":[\"E35\",\"E36\",\"E30\",\"E10\",\"E20\"],\"why\":\"Finance saw the project as 'a nice to have' under an 'if it isn't on fire, it isn't funded' rule. We only ever spoke to product and engineering, and an unpriced money leak (lapsed subscriptions that 'we never added it up') was left on the table.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For buyers replacing homegrown billing, add a migration proof point that answers their questions directly: can existing subscriptions move without asking customers for their card details again, and can the move happen in stages? Back it with an offer to speak with a customer who has done the migration, rather than a document alone. Only use this if a suitable reference exists.\",\"evidence\":[\"E31\",\"E33\"],\"why\":\"The champion's open questions were about moving subscriptions without re-collecting cards and doing it in stages. He was sent a doc, but 'he wanted to talk to someone who'd done it'.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M7",
+    "current_line": "Billing that helps you grow revenue.",
+    "type": "replace",
+    "change": "For buyers replacing a homegrown billing system, lead with roadmap time returned instead of revenue growth: 'Stop billing being a tax on the roadmap.' Back it with a live price change in the demo, framed in the buyer's terms: what used to take a quarter now takes minutes ('a quarter of roadmap in five minutes').",
+    "evidence": [
+     "E22",
+     "E34",
+     "E17",
+     "E16",
+     "E3"
+    ],
+    "why": "The VP of Product rejected the revenue framing outright ('we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap'), and the moment that landed was the demo showing a quarter of roadmap coming back.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "replace",
+    "change": "When a champion asks for payback, do not send the independent study as the answer. Offer to build 'a number that's ours' with them in a working session: engineering hours per pricing change, billing errors, and subscriptions lapsing on failed cards. Use the study only as background to that number.",
+    "evidence": [
+     "E26",
+     "E25",
+     "E14",
+     "E29",
+     "E30"
+    ],
+    "why": "The rep sent 'the general one, with the study', and the champion said he couldn't get it past the CFO 'without a number that's ours'. That number was never built, and it was the missing proof when the deal died.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a finance-facing 'what it costs you to wait' line for CFOs when the deal is a billing replacement, and give it to the champion as a one-pager from the first meeting. Example: 'Every pricing change takes your team a quarter, and subscriptions lapse when cards fail and nobody chases them. Here is what one more year on the current system costs you.' Where failed-card lapses come up, size them with our recovery story (M10).",
+    "evidence": [
+     "E35",
+     "E36",
+     "E30",
+     "E10",
+     "E20"
+    ],
+    "why": "Finance saw the project as 'a nice to have' under an 'if it isn't on fire, it isn't funded' rule. We only ever spoke to product and engineering, and an unpriced money leak (lapsed subscriptions that 'we never added it up') was left on the table.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For buyers replacing homegrown billing, add a migration proof point that answers their questions directly: can existing subscriptions move without asking customers for their card details again, and can the move happen in stages? Back it with an offer to speak with a customer who has done the migration, rather than a document alone. Only use this if a suitable reference exists.",
+    "evidence": [
+     "E31",
+     "E33"
+    ],
+    "why": "The champion's open questions were about moving subscriptions without re-collecting cards and doing it in stages. He was sent a doc, but 'he wanted to talk to someone who'd done it'.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 22288,
+ "cost": 0.08788,
+ "in_tokens": 6056,
+ "out_tokens": 1972,
+ "model": "claude-opus-5-5"
+}

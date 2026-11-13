@@ -1,0 +1,50 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The outcome carries the international-only scope note\",\"pass\":true},{\"item\":\"\\\"Decided before we got in the room\\\" is challenged with the coverage facts\",\"pass\":true},{\"item\":\"\\\"that's an average. What's mine?\\\" is tied to a messaging change\",\"pass\":true},{\"item\":\"The Adyen test results stay unknown\",\"pass\":true}],\n \"fails\":[\"Decider insight states as fact that 'the rep never spoke to the CFO'. The transcript never says this, and the report's own close lists CFO contact as unknown.\",\"Trigger insight says 'nobody on our side noticed for about a year'. That is unsupported: Elena says she knew the engineering manager had left (T24) and only missed the new hire, and no one-year gap is stated.\"],\n \"notes\":\"The report gets the core finding right: it challenges 'nothing to do' with the late analysis, the 9–10 months without a review and learning of the evaluation from the renewal notice, and it ties 'what's mine' to replacing average-uplift messaging. It keeps Adyen's results unknown. It mislabels the unverified 'Brazil and a couple in Europe' as fact and asserts that the rep never spoke to the CFO. Its close misses the dodged 'when did you feel it was lost' question, the Stefan debrief, and the action of using the analysis findings to protect the US and position a win-back. It also names 'Support and service' instead of 'Champion or access' as runner-up.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the international-only scope note",
+    "pass": true
+   },
+   {
+    "item": "\"Decided before we got in the room\" is challenged with the coverage facts",
+    "pass": true
+   },
+   {
+    "item": "\"that's an average. What's mine?\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "The Adyen test results stay unknown",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Decider insight states as fact that 'the rep never spoke to the CFO'. The transcript never says this, and the report's own close lists CFO contact as unknown.",
+   "Trigger insight says 'nobody on our side noticed for about a year'. That is unsupported: Elena says she knew the engineering manager had left (T24) and only missed the new hire, and no one-year gap is stated."
+  ],
+  "notes": "The report gets the core finding right: it challenges 'nothing to do' with the late analysis, the 9–10 months without a review and learning of the evaluation from the renewal notice, and it ties 'what's mine' to replacing average-uplift messaging. It keeps Adyen's results unknown. It mislabels the unverified 'Brazil and a couple in Europe' as fact and asserts that the rep never spoke to the CFO. Its close misses the dodged 'when did you feel it was lost' question, the Stefan debrief, and the action of using the analysis findings to protect the US and position a win-back. It also names 'Support and service' instead of 'Champion or access' as runner-up."
+ },
+ "ms": 37195,
+ "cost": 0.152592,
+ "in_tokens": 9125,
+ "out_tokens": 3980,
+ "model": "claude-opus-5-5"
+}

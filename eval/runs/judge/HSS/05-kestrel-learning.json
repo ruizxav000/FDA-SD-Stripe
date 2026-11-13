@@ -1,0 +1,50 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":1,\"competitor\":2,\"message\":2,\"decided\":1,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the international-only scope note\",\"pass\":true},\n  {\"item\":\"\\\"Decided before we got in the room\\\" is challenged with the coverage facts\",\"pass\":false},\n  {\"item\":\"\\\"that's an average. What's mine?\\\" is tied to a messaging change\",\"pass\":true},\n  {\"item\":\"The Adyen test results stay unknown\",\"pass\":true}\n ],\n \"fails\":[\n  \"Decider insight says the CFO 'was never met'. The transcript never says whether Elena met the CFO.\",\n  \"Gaps insight states as fact that Stefan's praise for the analysis 'came after the decision'. The transcript doesn't establish when he gave it, and the report's own Decided section says the sequence is not established.\"\n ],\n \"notes\":\"The report gets the core messaging story right. It ties 'that's an average. What's mine?' to replacing averages with the customer's own approval numbers, adopts 'approvals', 'local acquiring' and a named monthly owner, keeps Adyen's results unknown, and carries the US-stayed scope note. Its biggest miss is the key finding: it calls 'decided before we got in the room' a theory and blames speed, when the transcript shows it was true because the account had no coverage. Both the Decider and Decided sections miss this: the CFO approval came two weeks before the last call, and there was no business review for 9–10 months, no contact with Stefan, and we learned of the evaluation only from the renewal notice. Smaller misses: the runner-up tag is 'Support and service' instead of 'Champion or access', and the close mislabels the dodged question and omits acting on the analysis findings to protect the US and position a win-back.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 1,
+   "competitor": 2,
+   "message": 2,
+   "decided": 1,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the international-only scope note",
+    "pass": true
+   },
+   {
+    "item": "\"Decided before we got in the room\" is challenged with the coverage facts",
+    "pass": false
+   },
+   {
+    "item": "\"that's an average. What's mine?\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "The Adyen test results stay unknown",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Decider insight says the CFO 'was never met'. The transcript never says whether Elena met the CFO.",
+   "Gaps insight states as fact that Stefan's praise for the analysis 'came after the decision'. The transcript doesn't establish when he gave it, and the report's own Decided section says the sequence is not established."
+  ],
+  "notes": "The report gets the core messaging story right. It ties 'that's an average. What's mine?' to replacing averages with the customer's own approval numbers, adopts 'approvals', 'local acquiring' and a named monthly owner, keeps Adyen's results unknown, and carries the US-stayed scope note. Its biggest miss is the key finding: it calls 'decided before we got in the room' a theory and blames speed, when the transcript shows it was true because the account had no coverage. Both the Decider and Decided sections miss this: the CFO approval came two weeks before the last call, and there was no business review for 9–10 months, no contact with Stefan, and we learned of the evaluation only from the renewal notice. Smaller misses: the runner-up tag is 'Support and service' instead of 'Champion or access', and the close mislabels the dodged question and omits acting on the analysis findings to protect the US and position a win-back."
+ },
+ "ms": 36555,
+ "cost": 0.148256,
+ "in_tokens": 9598,
+ "out_tokens": 3574,
+ "model": "claude-opus-5-5"
+}

@@ -12,9 +12,9 @@ const avg = (a) => (a.length ? a.reduce((x, y) => x + y, 0) / a.length : NaN);
 const f1 = (x, d = 1) => (Number.isFinite(x) ? x.toFixed(d) : "–");
 const pct = (x) => (Number.isFinite(x) ? Math.round(x * 100) + "%" : "–");
 const NAMES = { H: "Haiku", S: "Sonnet", O: "Opus" };
-const label = (c) => (c.startsWith("single") ? `Single prompt, ${NAMES[c.split("-")[1]]}` : c.split("~")[0].split("").map((k) => NAMES[k]).join(" → ") + (c.includes("~") ? ` (repeat ${c.split("~")[1]})` : ""));
+const label = (c) => (c.startsWith("single") ? `Single prompt, ${NAMES[c.split("-")[1]]}` : c.split("~")[0].split("").map((k) => NAMES[k]).join(" → ") + (c.includes("~") ? ` · ${c.split("~")[1]}` : " · v1"));
 
-const configs = ls(path.join(RUNS, "reports")).filter((c) => !c.includes("~"));
+const configs = ls(path.join(RUNS, "reports"));
 const rows = [];
 for (const cfg of configs) {
   const per = [];
@@ -93,20 +93,24 @@ md += "\n### Score by deal (/24)\n\n| Setup | " + deals.map((d) => d.slice(0, 2)
 for (const r of rows) md += `| ${r.label} | ` + deals.map((d) => { const p = r.per.find((x) => x.deal === d); return p ? `${p.total}${p.fails ? "*" : ""}` : "–"; }).join(" | ") + " |\n";
 md += "\n`*` = the judge flagged invented content in that report.\n";
 
-// Consistency: repeats
-const reps = ls(path.join(RUNS, "reports")).filter((c) => c.includes("~"));
-if (reps.length) {
-  md += "\n### Consistency (same setup, independent runs)\n\n| Setup | Deal | Outcome per run | Tag per run |\n|---|---|---|---|\n";
-  const base = [...new Set(reps.map((c) => c.split("~")[0]))];
-  for (const b of base) {
-    const runs = [b, ...reps.filter((c) => c.startsWith(b + "~")).sort()];
-    const ds = [...new Set(runs.flatMap((c) => ls(path.join(RUNS, "reports", c))))].sort();
-    for (const d of ds) {
-      const hs = runs.map((c) => { const f = path.join(RUNS, "reports", c, d); return fs.existsSync(f) ? read(f).header : null; }).filter(Boolean);
-      if (hs.length < 2) continue;
-      md += `| ${label(b)} | ${d.replace(".json", "")} | ${hs.map((x) => x.outcome).join(" / ")} | ${hs.map((x) => x.tag).join(" / ")} |\n`;
-    }
+// Consistency: independent runs of the same setup and instructions ("SOO~v2a", "SOO~v2b", ...)
+const groups = {};
+for (const c of ls(path.join(RUNS, "reports")).filter((c) => /~.+[a-z]$/.test(c))) (groups[c.slice(0, -1)] = groups[c.slice(0, -1)] || []).push(c);
+for (const [g, runs] of Object.entries(groups)) {
+  if (runs.length < 2) continue;
+  runs.sort();
+  md += `\n### Consistency: ${label(g)} (${runs.length} independent runs)\n\n| Deal | Outcome per run | Tag per run | Score per run |\n|---|---|---|---|\n`;
+  const ds = [...new Set(runs.flatMap((c) => ls(path.join(RUNS, "reports", c))))].sort();
+  let same = 0, n = 0;
+  for (const d of ds) {
+    const hs = runs.map((c) => { const f = path.join(RUNS, "reports", c, d); return fs.existsSync(f) ? read(f).header : null; });
+    const sc = runs.map((c) => { const r = rows.find((x) => x.cfg === c); const p = r && r.per.find((x) => x.deal + ".json" === d); return p ? p.total : "–"; });
+    const tags = hs.map((x) => (x ? x.tag : "–")), outs = hs.map((x) => (x ? x.outcome : "–"));
+    const done = hs.filter(Boolean);
+    if (done.length >= 2) { n++; if (new Set(done.map((x) => x.tag)).size === 1 && new Set(done.map((x) => x.outcome)).size === 1) same++; }
+    md += `| ${d.replace(".json", "")} | ${outs.join(" / ")} | ${tags.join(" / ")} | ${sc.join(" / ")} |\n`;
   }
+  md += `\nSame outcome and tag in every run: ${same} of ${n} deals run more than once.\n`;
 }
 fs.writeFileSync(path.join(__dirname, "results.json"), JSON.stringify(rows.map(({ per, ...r }) => ({ ...r, per: per.map(({ sections, notes, fails_list, stage_ms, stage_cost, ...p }) => ({ ...p, sections, notes, fails: fails_list })) })), null, 1));
 process.stdout.write(md);

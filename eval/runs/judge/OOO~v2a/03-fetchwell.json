@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The gaps section shows the rep's \\\"nothing\\\" being contradicted (PayPal/Venmo, saved cards)\",\"pass\":true},\n  {\"item\":\"The Braintree theory is labeled opinion\",\"pass\":true},\n  {\"item\":\"The approval-rate slide is reported as silence in a win\",\"pass\":true},\n  {\"item\":\"The CFO's one question is surfaced as a messaging signal\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"Strong report. It shows the rep's \\\"clean one\\\" claim contradicted by the PayPal/Venmo dodge and the unsent saved-card reference, labels the Braintree theory as opinion, and correctly attributes the win to the customer engineer's weekend prototype rather than the pitch. Its main miss is leaving the incumbent null and listing it as a skipped question, when the account-manager churn and the \\\"what do we lose\\\" shift make Braintree clearly the incumbent. A smaller miss: the CFO's payout-timing question appears only in the decider section's messaging, not as a top-level messaging change.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The gaps section shows the rep's \"nothing\" being contradicted (PayPal/Venmo, saved cards)",
+    "pass": true
+   },
+   {
+    "item": "The Braintree theory is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The approval-rate slide is reported as silence in a win",
+    "pass": true
+   },
+   {
+    "item": "The CFO's one question is surfaced as a messaging signal",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "Strong report. It shows the rep's \"clean one\" claim contradicted by the PayPal/Venmo dodge and the unsent saved-card reference, labels the Braintree theory as opinion, and correctly attributes the win to the customer engineer's weekend prototype rather than the pitch. Its main miss is leaving the incumbent null and listing it as a skipped question, when the account-manager churn and the \"what do we lose\" shift make Braintree clearly the incumbent. A smaller miss: the CFO's payout-timing question appears only in the decider section's messaging, not as a top-level messaging change."
+ },
+ "ms": 24341,
+ "cost": 0.126908,
+ "in_tokens": 10017,
+ "out_tokens": 2339,
+ "model": "claude-opus-5-5"
+}

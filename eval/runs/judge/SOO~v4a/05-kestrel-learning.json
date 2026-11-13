@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":1,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the international-only scope note\",\"pass\":true},\n  {\"item\":\"\\\"Decided before we got in the room\\\" is challenged with the coverage facts\",\"pass\":true},\n  {\"item\":\"\\\"that's an average. What's mine?\\\" is tied to a messaging change\",\"pass\":true},\n  {\"item\":\"The Adyen test results stay unknown\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report correctly turns 'decided before we got in the room' into the main finding. It backs this with the coverage facts: no business review in 9–10 months, Stefan never met, the evaluation learned of only from the split request, and an analysis that arrived three weeks late. Its messaging changes match all four expected directions, and it keeps Adyen's results unknown. Its biggest miss is in the decider section: it calls the timeline 'unclear' when T6–T8 show the CFO approved two weeks before the rep's last call, so it never says the decision was made before we engaged. Smaller problems: the close leaves out 'which analysis findings are fixable', the debrief follow-up, and the act-on-findings, protect-the-US and win-back follow-up. The close also mislabels the reaction/silence question as dodged, the message section says the uplift 'did not get silence' although the rep said it did, and the runner-up is 'Value proof' rather than the key's 'Champion or access'.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 1,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the international-only scope note",
+    "pass": true
+   },
+   {
+    "item": "\"Decided before we got in the room\" is challenged with the coverage facts",
+    "pass": true
+   },
+   {
+    "item": "\"that's an average. What's mine?\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "The Adyen test results stay unknown",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report correctly turns 'decided before we got in the room' into the main finding. It backs this with the coverage facts: no business review in 9–10 months, Stefan never met, the evaluation learned of only from the split request, and an analysis that arrived three weeks late. Its messaging changes match all four expected directions, and it keeps Adyen's results unknown. Its biggest miss is in the decider section: it calls the timeline 'unclear' when T6–T8 show the CFO approved two weeks before the rep's last call, so it never says the decision was made before we engaged. Smaller problems: the close leaves out 'which analysis findings are fixable', the debrief follow-up, and the act-on-findings, protect-the-US and win-back follow-up. The close also mislabels the reaction/silence question as dodged, the message section says the uplift 'did not get silence' although the rep said it did, and the runner-up is 'Value proof' rather than the key's 'Champion or access'."
+ },
+ "ms": 26723,
+ "cost": 0.130108,
+ "in_tokens": 9537,
+ "out_tokens": 2691,
+ "model": "claude-opus-5-5"
+}

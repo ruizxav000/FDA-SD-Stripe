@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":0,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"\\\"so it's a queue with a faster timer\\\" is tied to a messaging change\",\"pass\":true},\n  {\"item\":\"\\\"Over-promised\\\" is labeled opinion\",\"pass\":true},\n  {\"item\":\"The champion (Ben) and the decider (Halima) are distinguished\",\"pass\":true},\n  {\"item\":\"The passing remark that failures had happened twice before is surfaced in the trigger\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report gets the core of the deal right. It shows we won the technical evaluation and lost the decider. It ties Halima's \\\"a queue with a faster timer\\\" line to rewriting M5. Its four messaging changes match all four of the key's directions, and it labels \\\"over-promised\\\" as opinion. The header scores 0 because the report does not name Checkout.com or the in-house bank gateway. Neither name appears in the transcript, so the report was right not to invent them; this looks like a gap between the key and the transcript rather than a report error. The close misses two things. It omits commercial terms and the follow-up with the support team on named on-sale coverage. It also mislabels the rep's \\\"why didn't you build it\\\" answer as dodged, when he did answer: \\\"I thought the load test had won it.\\\"\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 0,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "\"so it's a queue with a faster timer\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "\"Over-promised\" is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The champion (Ben) and the decider (Halima) are distinguished",
+    "pass": true
+   },
+   {
+    "item": "The passing remark that failures had happened twice before is surfaced in the trigger",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core of the deal right. It shows we won the technical evaluation and lost the decider. It ties Halima's \"a queue with a faster timer\" line to rewriting M5. Its four messaging changes match all four of the key's directions, and it labels \"over-promised\" as opinion. The header scores 0 because the report does not name Checkout.com or the in-house bank gateway. Neither name appears in the transcript, so the report was right not to invent them; this looks like a gap between the key and the transcript rather than a report error. The close misses two things. It omits commercial terms and the follow-up with the support team on named on-sale coverage. It also mislabels the rep's \"why didn't you build it\" answer as dodged, when he did answer: \"I thought the load test had won it.\""
+ },
+ "ms": 30755,
+ "cost": 0.129368,
+ "in_tokens": 9062,
+ "out_tokens": 2844,
+ "model": "claude-opus-5-5"
+}

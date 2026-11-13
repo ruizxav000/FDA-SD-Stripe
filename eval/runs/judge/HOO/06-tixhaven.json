@@ -1,0 +1,50 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":0,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":1,\"gaps\":1,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"\\\"so it's a queue with a faster timer\\\" is tied to a messaging change\",\"pass\":true},{\"item\":\"\\\"Over-promised\\\" is labeled opinion\",\"pass\":true},{\"item\":\"The champion (Ben) and the decider (Halima) are distinguished\",\"pass\":true},{\"item\":\"The passing remark that failures had happened twice before is surfaced in the trigger\",\"pass\":true}],\n \"fails\":[\"Decider insight says we reached Halima 'mostly through Ben's slides'; the transcript says only that Ben presented the results and never mentions slides (minor embellishment)\",\"Close lists 'Why wasn't the on-sale plan built' as dodged, but the rep answered it at T18 ('I thought the load test had won it')\"],\n \"notes\":\"The report correctly identifies the core story: a support failure that leadership could see, a CTO champion versus a COO decider, the competitor selling people and a plan, and 'queue with a faster timer' driving well-aimed messaging changes, with 'over-promised' properly kept as opinion. It scores 0 on competitor/incumbent because it does not match the key (Checkout.com; an in-house bank gateway), but neither fact appears in the transcript, so the report's 'unnamed' answer is arguably more faithful and the key should be checked. Its real misses are in Gaps and the close: it frames the on-sale plan as partly a product gap instead of something the team could have closed, it omits the key's not-covered items (commercial terms; whether we could offer named on-sale coverage), and it misreads 'What decided it' as an earlier shift rather than technical proof failing to move the decider ('good.' and 'I thought the load test had won it').\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 0,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 1,
+   "gaps": 1,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "\"so it's a queue with a faster timer\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "\"Over-promised\" is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The champion (Ben) and the decider (Halima) are distinguished",
+    "pass": true
+   },
+   {
+    "item": "The passing remark that failures had happened twice before is surfaced in the trigger",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Decider insight says we reached Halima 'mostly through Ben's slides'; the transcript says only that Ben presented the results and never mentions slides (minor embellishment)",
+   "Close lists 'Why wasn't the on-sale plan built' as dodged, but the rep answered it at T18 ('I thought the load test had won it')"
+  ],
+  "notes": "The report correctly identifies the core story: a support failure that leadership could see, a CTO champion versus a COO decider, the competitor selling people and a plan, and 'queue with a faster timer' driving well-aimed messaging changes, with 'over-promised' properly kept as opinion. It scores 0 on competitor/incumbent because it does not match the key (Checkout.com; an in-house bank gateway), but neither fact appears in the transcript, so the report's 'unnamed' answer is arguably more faithful and the key should be checked. Its real misses are in Gaps and the close: it frames the on-sale plan as partly a product gap instead of something the team could have closed, it omits the key's not-covered items (commercial terms; whether we could offer named on-sale coverage), and it misreads 'What decided it' as an earlier shift rather than technical proof failing to move the decider ('good.' and 'I thought the load test had won it')."
+ },
+ "ms": 30649,
+ "cost": 0.133076,
+ "in_tokens": 9318,
+ "out_tokens": 2927,
+ "model": "claude-opus-5-5"
+}

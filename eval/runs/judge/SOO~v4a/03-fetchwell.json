@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The gaps section shows the rep's \\\"nothing\\\" being contradicted (PayPal/Venmo, saved cards)\",\"pass\":true},\n  {\"item\":\"The Braintree theory is labeled opinion\",\"pass\":true},\n  {\"item\":\"The approval-rate slide is reported as silence in a win\",\"pass\":true},\n  {\"item\":\"The CFO's one question is surfaced as a messaging signal\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report gets the central lessons right. The rep's 'clean' deal is shown to be contradicted twice, by the PayPal/Venmo dodge and the undelivered saved-card reference. The Braintree guess is labelled opinion, and the auth-rate silence and the CFO's payout-timing question both become messaging changes. Its main miss is leaving the incumbent null and listing it as an open question, when the three account-manager changes in two years show Braintree was the incumbent. It also reads the Braintree call itself as unconfirmed, though the rep states it happened. Its customer-language work omits 'the app' and sometimes falls back to 'sellers' instead of 'sitters'.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The gaps section shows the rep's \"nothing\" being contradicted (PayPal/Venmo, saved cards)",
+    "pass": true
+   },
+   {
+    "item": "The Braintree theory is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The approval-rate slide is reported as silence in a win",
+    "pass": true
+   },
+   {
+    "item": "The CFO's one question is surfaced as a messaging signal",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the central lessons right. The rep's 'clean' deal is shown to be contradicted twice, by the PayPal/Venmo dodge and the undelivered saved-card reference. The Braintree guess is labelled opinion, and the auth-rate silence and the CFO's payout-timing question both become messaging changes. Its main miss is leaving the incumbent null and listing it as an open question, when the three account-manager changes in two years show Braintree was the incumbent. It also reads the Braintree call itself as unconfirmed, though the rep states it happened. Its customer-language work omits 'the app' and sometimes falls back to 'sellers' instead of 'sitters'."
+ },
+ "ms": 26635,
+ "cost": 0.128636,
+ "in_tokens": 9713,
+ "out_tokens": 2547,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,51 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},\n  {\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},\n  {\"item\":\"Customer language is marked Not covered\",\"pass\":true},\n  {\"item\":\"\\\"A third of the churn\\\" is labeled unverified or opinion\",\"pass\":true},\n  {\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report got the scope right: it says plainly that 'Won' covers online billing only and that the front desk is still with Global. It also surfaces the Maya-versus-Greg contradiction and correctly marks customer language as not covered. Its biggest miss is the rep takeaway, which frames this as 'two things won this deal' and never tells the rep to treat the front desk as a live competitive deal. Minor issues: the reader-in-their-software proof appears only as a precondition, not as a proof to add; Greg 'asked to keep' the spreadsheet slightly overstates 'asked for'; and the relayed Global offer is attributed to Maya as the speaker when the words are the rep's.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": true
+   },
+   {
+    "item": "\"A third of the churn\" is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report got the scope right: it says plainly that 'Won' covers online billing only and that the front desk is still with Global. It also surfaces the Maya-versus-Greg contradiction and correctly marks customer language as not covered. Its biggest miss is the rep takeaway, which frames this as 'two things won this deal' and never tells the rep to treat the front desk as a live competitive deal. Minor issues: the reader-in-their-software proof appears only as a precondition, not as a proof to add; Greg 'asked to keep' the spreadsheet slightly overstates 'asked for'; and the relayed Global offer is attributed to Maya as the speaker when the words are the rep's."
+ },
+ "ms": 26372,
+ "cost": 0.1272,
+ "in_tokens": 9861,
+ "out_tokens": 2416,
+ "model": "claude-opus-5-5"
+}

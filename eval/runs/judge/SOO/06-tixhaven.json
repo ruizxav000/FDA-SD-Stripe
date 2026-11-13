@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":0,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"\\\"so it's a queue with a faster timer\\\" is tied to a messaging change\",\"pass\":true},{\"item\":\"\\\"Over-promised\\\" is labeled opinion\",\"pass\":true},{\"item\":\"The champion (Ben) and the decider (Halima) are distinguished\",\"pass\":true},{\"item\":\"The passing remark that failures had happened twice before is surfaced in the trigger\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report gets the core story right. It shows the deal was lost on a visible support failure and on a 'who' question answered with support tiers, it separates Ben as champion from Halima as decider, it labels 'over-promised' as opinion, and its messaging changes match all four directions in the key. It loses points on the header: competitor is null and the incumbent is an 'unnamed provider' instead of Checkout.com and a bank-merchant-services in-house gateway, although neither of those facts appears in the transcript, so the key may need checking. The close also misses commercial terms as an uncovered topic and mislabels 'Who was the competitor?' as dodged when it was never asked.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 0,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "\"so it's a queue with a faster timer\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "\"Over-promised\" is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The champion (Ben) and the decider (Halima) are distinguished",
+    "pass": true
+   },
+   {
+    "item": "The passing remark that failures had happened twice before is surfaced in the trigger",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core story right. It shows the deal was lost on a visible support failure and on a 'who' question answered with support tiers, it separates Ben as champion from Halima as decider, it labels 'over-promised' as opinion, and its messaging changes match all four directions in the key. It loses points on the header: competitor is null and the incumbent is an 'unnamed provider' instead of Checkout.com and a bank-merchant-services in-house gateway, although neither of those facts appears in the transcript, so the key may need checking. The close also misses commercial terms as an uncovered topic and mislabels 'Who was the competitor?' as dodged when it was never asked."
+ },
+ "ms": 28802,
+ "cost": 0.12540800000000002,
+ "in_tokens": 9012,
+ "out_tokens": 2666,
+ "model": "claude-opus-5-5"
+}

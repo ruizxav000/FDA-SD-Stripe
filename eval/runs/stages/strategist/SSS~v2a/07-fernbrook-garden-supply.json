@@ -1,0 +1,56 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For finance buyers (CFO, controller): a one-page, customer-specific business case built from the buyer's own decline export (a three-month export of their orders), showing what their failed orders are worth in dollars next to our rate. Headline it with the buyer's own numbers, e.g. 'One in twelve online orders failing at the payment step, worse on the big baskets: here is what that costs you.' It must work without us in the room, since some CFOs do not take vendor meetings.\",\"evidence\":[\"E37\",\"E28\",\"E8\",\"E19\"],\"why\":\"The champion asked for a one-page business case and the SE offered to build one from a decline export, but the CFO only saw a rate-versus-rate page, so the cost of failed orders never reached the person who signed.\",\"strength\":\"Test this\"},{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For buyers who describe failed payments in their own terms: 'Orders dying at the last step, especially the big baskets: we show you why they fail, using your own order data, and what they are costing you.' Pair it with the buyer's own failure rate rather than an average uplift across customers.\",\"evidence\":[\"E40\",\"E41\",\"E4\",\"E39\"],\"why\":\"The champion described the problem as 'orders dying at the last step' and 'the big baskets' and could not get an explanation from her processor, while the rep pointed to 'The average uplift' as what was presented, which did not help the CFO.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"When an incumbent counters with a lower rate, use a total-cost comparison page instead of matching the discount: rate, gateway fees, chargeback handling, and the value of the buyer's failed orders. The line for the CFO: 'Not the same thing: here is what the failed orders cost you at your current rate.'\",\"evidence\":[\"E10\",\"E11\",\"E13\",\"E24\"],\"why\":\"The bank's only move was 'a better rate' and the thread then became 'every email was the rate', while the CFO's question was 'Why would I pay more for the same thing.'\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For finance buyers (CFO, controller): a one-page, customer-specific business case built from the buyer's own decline export (a three-month export of their orders), showing what their failed orders are worth in dollars next to our rate. Headline it with the buyer's own numbers, e.g. 'One in twelve online orders failing at the payment step, worse on the big baskets: here is what that costs you.' It must work without us in the room, since some CFOs do not take vendor meetings.",
+    "evidence": [
+     "E37",
+     "E28",
+     "E8",
+     "E19"
+    ],
+    "why": "The champion asked for a one-page business case and the SE offered to build one from a decline export, but the CFO only saw a rate-versus-rate page, so the cost of failed orders never reached the person who signed.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For buyers who describe failed payments in their own terms: 'Orders dying at the last step, especially the big baskets: we show you why they fail, using your own order data, and what they are costing you.' Pair it with the buyer's own failure rate rather than an average uplift across customers.",
+    "evidence": [
+     "E40",
+     "E41",
+     "E4",
+     "E39"
+    ],
+    "why": "The champion described the problem as 'orders dying at the last step' and 'the big baskets' and could not get an explanation from her processor, while the rep pointed to 'The average uplift' as what was presented, which did not help the CFO.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "When an incumbent counters with a lower rate, use a total-cost comparison page instead of matching the discount: rate, gateway fees, chargeback handling, and the value of the buyer's failed orders. The line for the CFO: 'Not the same thing: here is what the failed orders cost you at your current rate.'",
+    "evidence": [
+     "E10",
+     "E11",
+     "E13",
+     "E24"
+    ],
+    "why": "The bank's only move was 'a better rate' and the thread then became 'every email was the rate', while the CFO's question was 'Why would I pay more for the same thing.'",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 7717,
+ "cost": 0.029828,
+ "in_tokens": 5598,
+ "out_tokens": 744,
+ "model": "claude-sonnet-5-5"
+}

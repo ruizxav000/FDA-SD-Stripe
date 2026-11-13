@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For buyers who question declines: stop leading with the average uplift. Lead with an offer to show their own numbers, in their words: \\\"Your approvals, market by market: your approval rate by country, card type and issuer, with the reasons.\\\" Use \\\"approvals\\\" instead of \\\"authorization\\\", and answer \\\"what's mine\\\" with their figures, not a customer average.\",\"evidence\":[\"E12\",\"E13\",\"E18\",\"E11\",\"E34\"],\"why\":\"The rep answered approval questions with the average-uplift deck, drew silence and the reply \\\"that's an average. What's mine?\\\", while the buyer asked for approval rates by country, card type and issuer with reasons.\",\"strength\":\"Test this\"},{\"target\":\"M5\",\"current_line\":\"Support plans with tiered response times, up to 24/7 coverage.\",\"type\":\"replace\",\"change\":\"Add to the response-time promise a named person and a regular cadence: \\\"A named person at Stripe reviews your approval performance with you on a regular schedule.\\\" Use this for customers whose payments owner wants someone accountable for their numbers, not only fast response times.\",\"evidence\":[\"E28\",\"E27\",\"E29\"],\"why\":\"The buyer asked who at Stripe looks at his numbers every month and the rep had no name, and the analysis that came three weeks late showed fixable findings, so the gap was ownership and speed rather than capability.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"New line for a newly arrived payments owner, for outreach and renewal conversations: \\\"New to owning payments here? Start with a market-by-market view of your own approval rates, with reasons.\\\" Use it when the original buyer has left and a new owner has taken over.\",\"evidence\":[\"E1\",\"E3\",\"E26\",\"E35\"],\"why\":\"A new head of payments pulled declines by country as his first move and heard from us only when he said he was leaving, so our first contact with a new owner should be the view he wants.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Proof point for the internal champion who must get approval from finance: \\\"Numbers you can take to your CFO: your own approval rate by market, with reasons.\\\" Use it in conversations with payments leads who report upward to a CFO.\",\"evidence\":[\"E14\",\"E6\",\"E7\"],\"why\":\"The head of payments said \\\"I can't take an average to my CFO\\\", and the recommendation went to the CFO for approval, so he needed account-specific numbers he could defend upward.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For buyers who question declines: stop leading with the average uplift. Lead with an offer to show their own numbers, in their words: \"Your approvals, market by market: your approval rate by country, card type and issuer, with the reasons.\" Use \"approvals\" instead of \"authorization\", and answer \"what's mine\" with their figures, not a customer average.",
+    "evidence": [
+     "E12",
+     "E13",
+     "E18",
+     "E11",
+     "E34"
+    ],
+    "why": "The rep answered approval questions with the average-uplift deck, drew silence and the reply \"that's an average. What's mine?\", while the buyer asked for approval rates by country, card type and issuer with reasons.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M5",
+    "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+    "type": "replace",
+    "change": "Add to the response-time promise a named person and a regular cadence: \"A named person at Stripe reviews your approval performance with you on a regular schedule.\" Use this for customers whose payments owner wants someone accountable for their numbers, not only fast response times.",
+    "evidence": [
+     "E28",
+     "E27",
+     "E29"
+    ],
+    "why": "The buyer asked who at Stripe looks at his numbers every month and the rep had no name, and the analysis that came three weeks late showed fixable findings, so the gap was ownership and speed rather than capability.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "New line for a newly arrived payments owner, for outreach and renewal conversations: \"New to owning payments here? Start with a market-by-market view of your own approval rates, with reasons.\" Use it when the original buyer has left and a new owner has taken over.",
+    "evidence": [
+     "E1",
+     "E3",
+     "E26",
+     "E35"
+    ],
+    "why": "A new head of payments pulled declines by country as his first move and heard from us only when he said he was leaving, so our first contact with a new owner should be the view he wants.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Proof point for the internal champion who must get approval from finance: \"Numbers you can take to your CFO: your own approval rate by market, with reasons.\" Use it in conversations with payments leads who report upward to a CFO.",
+    "evidence": [
+     "E14",
+     "E6",
+     "E7"
+    ],
+    "why": "The head of payments said \"I can't take an average to my CFO\", and the recommendation went to the CFO for approval, so he needed account-specific numbers he could defend upward.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 18648,
+ "cost": 0.040358000000000005,
+ "in_tokens": 5573,
+ "out_tokens": 1807,
+ "model": "claude-sonnet-5-5"
+}

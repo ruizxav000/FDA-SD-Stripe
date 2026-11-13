@@ -1,0 +1,78 @@
+# Which model should run which step?
+
+**Decision: Sonnet reads → Opus analyzes → Opus plans the messaging changes → code checks every quote. The steps run in a fixed order under code, not under an AI orchestrator.**
+
+Tested on the 8 fictional deal reviews in `test-set/`. Every report was graded by Opus (high effort) against that deal's answer key: 476 model calls, about $53 in API-equivalent usage. Full tables: `tables.md`. Raw outputs: `runs/`.
+
+## What each step does
+
+| Step | Job | Model | Why |
+|---|---|---|---|
+| **Read** | Pull every piece of evidence from the whole interview, word for word, labelled quote, fact or opinion. Also list contradictions, dodges, skipped questions, and the customer's words against ours. | **Sonnet** | As accurate as Opus (100% of excerpts word for word), finds about as many contradictions (5.1 vs 5.4 per interview), and is the fastest reader at 38s. |
+| **Check the ledger** | Drop any excerpt that isn't word for word in the transcript before analysis starts. | **Code** | A model can't be trusted to grade its own quotes. String matching can. |
+| **Analyze** | Header and reason tag, the seven sections (evidence, insight, messaging), and the close. | **Opus** | This is the planning and judgment step. Pipelines with an Opus analyst scored highest. |
+| **Plan messaging** | Concrete changes against our current messaging lines, each tied to evidence and marked "Test this". | **Opus** | It's the point of the report, and it's a short, cheap step (about 18s and $0.08 on Opus). |
+| **Check the report** | Re-verify every excerpt, remove quotation marks from any paraphrase dressed up as a quote, and confirm each change targets a real messaging line. | **Code** | Same reason as above. |
+
+### Testing your starting assumptions
+
+| Assumption | What the test showed |
+|---|---|
+| **Haiku is good at reading** | **Partly.** Haiku's excerpts were 100% word for word and it costs about 1/7 of Sonnet. But it was the *slowest* reader (80s against Sonnet's 38s, because it writes about 3× as much reasoning) and found fewer contradictions (3.3 vs 5.1). Reports built on a Haiku reader scored slightly lower and had the most invented content (10 flags across 8 reports). As the analyst, Haiku was clearly weakest: all-Haiku scored 19.0/24. |
+| **Sonnet is good at orchestrating** | **Orchestration works better as code here.** A fixed sequence makes every review identical in shape, which is what standardization needs. No model decides which steps to run. Sonnet's best job turned out to be the reader. |
+| **Opus is good at planning** | **Yes.** Opus as analyst and strategist gave the best results. It also writes the boldest insights, so at first it overreached the most. Tighter instructions and the code check fixed that (below). |
+
+## Results (round 1: all model combinations, same instructions)
+
+| Setup (read → analyze → plan) | Score /24 | Sections /14 | Invented content (reports flagged) | Time | API-equivalent cost |
+|---|---|---|---|---|---|
+| **Sonnet → Opus → Opus** | **22.0** | **13.3** | 7 | 108s | $0.34 |
+| Haiku → Opus → Opus | 21.8 | 13.0 | 10 | 155s | $0.29 |
+| Opus → Opus → Opus | 21.8 | 12.9 | 2 | 137s | $0.46 |
+| Single prompt, Opus | 21.4 | 12.8 | 9 | 56s | $0.15 |
+| Single prompt, Sonnet | 21.0 | 12.6 | 0 | 54s | $0.09 |
+| Sonnet → Sonnet → Sonnet | 20.9 | 12.8 | 4 | 76s | $0.19 |
+| Haiku → Sonnet → Opus | 20.6 | 12.3 | 5 | 128s | $0.17 |
+| Haiku → Sonnet → Sonnet | 20.4 | 12.1 | 4 | 120s | $0.12 |
+| Haiku → Haiku → Haiku | 19.0 | 11.0 | 11 | 132s | $0.02 |
+
+Every setup quoted 100% of its evidence word for word, because the code check guarantees it. The "invented content" flags came from the *insight prose*, not the evidence. Examples: stating "we never reached the CFO" when the transcript doesn't say so, putting a paraphrase in quotation marks, or calling a customer "mid-market" with no basis.
+
+## Improving the winner (rounds 2–4: Sonnet → Opus → Opus)
+
+| Round | What changed | Result |
+|---|---|---|
+| 2 | Insight rules: no claim the transcript doesn't support; quotation marks only around exact words; don't describe the customer beyond the transcript; evidence never comes from the interviewer's questions. Plus a code check that removes quotation marks from paraphrases. | Invented content fell from 7 flagged reports to 1–4 per run. Outcome and tag were identical across 3 runs on 8 of 8 deals, but two tags were wrong every time (Kestrel, Pikeview). |
+| 3 | Tag rules: "No decision" is always the tag when nobody switched; "Value proof" narrowed. | Kestrel and Pikeview fixed. Fernbrook overcorrected to "Approval rates". |
+| 4 | One rule for close calls: ask what the decider was comparing at the moment of decision (money → Value proof; approval performance → Approval rates). | **All 8 deals get the answer key's tag. Both runs agree on every deal run twice. Header scores 5.5 and 6.0 out of 6. 1 minor flag per run.** |
+
+Round 4 scores: 21.5 and 22.5 out of 24, at about 110s and $0.33 per review.
+
+## Why several steps instead of one prompt
+
+The single-prompt Sonnet baseline is strong: 21.0, no invented content, half the time, a quarter of the cost. On score alone the multi-step design wins by about 1 point, which is close to the judge's own noise: the same setup scored anywhere from 18 to 24 on one deal across runs. The steps are kept for reasons the score doesn't capture:
+
+- **Evidence is checked before analysis.** The analyst only sees excerpts that passed the word-for-word check.
+- **A failure costs one step, not the whole review.** The page keeps finished steps and offers "Retry from this step".
+- **Each step can be tuned and measured on its own**, as rounds 2–4 did.
+
+Revisit this after calibration on real deals. If real reviews show no gap, the single-prompt Sonnet version is the faster, cheaper fallback, and it's already written (`singlePrompt` in `app/core.js`).
+
+## Reliability fixes found during testing
+
+- About 1 reply in 20 came back as JSON that wouldn't parse. The causes were an unescaped quotation mark inside a string and a stray quote after a number (`"turn":20",`). The page now parses replies itself and repairs both. All 337 good replies still parse identically, and every captured failure now parses.
+- The shipped reader setting (low effort) didn't match what was tested (medium). Fixed.
+
+## Limits
+
+- **The judge is also a model.** Expect ±1–2 points per deal between runs. Read differences under about 1 point as ties.
+- **The test transcripts are fictional, and shorter than real ones** (550–820 words against 4,000+).
+- **The messaging library is provisional**, reconstructed from how reps describe the pitch. Messaging changes can't be fully judged until the real messaging is in.
+- **Next step:** calibrate on 5–10 real reviews, with you grading each one against the rubric in `test-set/README.md`.
+
+## Re-running
+
+```bash
+node eval/run.js --configs "SOO~v5a" --concurrency 10   # one setup, fresh cache
+node eval/summarize.js > eval/tables.md
+```

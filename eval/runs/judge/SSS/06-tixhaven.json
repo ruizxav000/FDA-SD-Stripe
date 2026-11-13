@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":0,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"\\\"so it's a queue with a faster timer\\\" is tied to a messaging change\",\"pass\":true},{\"item\":\"\\\"Over-promised\\\" is labeled opinion\",\"pass\":true},{\"item\":\"The champion (Ben) and the decider (Halima) are distinguished\",\"pass\":true},{\"item\":\"The passing remark that failures had happened twice before is surfaced in the trigger\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report gets the core story right: a visible support failure was the trigger, Ben championed us while Halima decided, and we won the technical evaluation but lost the buyer. Its four messaging changes all follow the key: names instead of tiers, response instead of uptime, an on-sale plan, and a ticketing reference. It scores 0 on competitor/incumbent because it names neither Checkout.com nor the in-house bank gateway, although the transcript names neither and the report correctly declines to invent them. The close misses the 'could we offer named on-sale coverage' follow-up with the support team and mislabels the unnamed competitor as 'dodged' when Jordan was never asked. 'Over-promised' is passed because the insight calls it a guess Jordan can't back up, but it is never formally labeled opinion. The trigger insight's claim that the two earlier failures passed 'without action' is not stated in the transcript.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 0,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "\"so it's a queue with a faster timer\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "\"Over-promised\" is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The champion (Ben) and the decider (Halima) are distinguished",
+    "pass": true
+   },
+   {
+    "item": "The passing remark that failures had happened twice before is surfaced in the trigger",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core story right: a visible support failure was the trigger, Ben championed us while Halima decided, and we won the technical evaluation but lost the buyer. Its four messaging changes all follow the key: names instead of tiers, response instead of uptime, an on-sale plan, and a ticketing reference. It scores 0 on competitor/incumbent because it names neither Checkout.com nor the in-house bank gateway, although the transcript names neither and the report correctly declines to invent them. The close misses the 'could we offer named on-sale coverage' follow-up with the support team and mislabels the unnamed competitor as 'dodged' when Jordan was never asked. 'Over-promised' is passed because the insight calls it a guess Jordan can't back up, but it is never formally labeled opinion. The trigger insight's claim that the two earlier failures passed 'without action' is not stated in the transcript."
+ },
+ "ms": 33533,
+ "cost": 0.13491199999999998,
+ "in_tokens": 8975,
+ "out_tokens": 3156,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":1,\n \"must_catch\":[\n  {\"item\":\"The gaps section shows the rep's \\\"nothing\\\" being contradicted (PayPal/Venmo, saved cards)\",\"pass\":true},\n  {\"item\":\"The Braintree theory is labeled opinion\",\"pass\":true},\n  {\"item\":\"The approval-rate slide is reported as silence in a win\",\"pass\":true},\n  {\"item\":\"The CFO's one question is surfaced as a messaging signal\",\"pass\":true}\n ],\n \"fails\":[\"Decider insight asserts 'the rep never met her during the evaluation', which the transcript does not establish (Priya only says she didn't know about the prototype until Daniel told her).\"],\n \"notes\":\"The report catches all four must-catch items. It shows Priya's 'clean one' contradicted by the PayPal/Venmo and saved-card gaps, labels the Braintree theory as opinion, and reports the auth-rate slide as silence in a win. It misses Braintree as the incumbent, hedging it as 'unclear'. Its messaging changes leave out payout timing as the finance message and steer away from the customer's 'paid by Friday' language instead of adopting it.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 1,
+  "must_catch": [
+   {
+    "item": "The gaps section shows the rep's \"nothing\" being contradicted (PayPal/Venmo, saved cards)",
+    "pass": true
+   },
+   {
+    "item": "The Braintree theory is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The approval-rate slide is reported as silence in a win",
+    "pass": true
+   },
+   {
+    "item": "The CFO's one question is surfaced as a messaging signal",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Decider insight asserts 'the rep never met her during the evaluation', which the transcript does not establish (Priya only says she didn't know about the prototype until Daniel told her)."
+  ],
+  "notes": "The report catches all four must-catch items. It shows Priya's 'clean one' contradicted by the PayPal/Venmo and saved-card gaps, labels the Braintree theory as opinion, and reports the auth-rate slide as silence in a win. It misses Braintree as the incumbent, hedging it as 'unclear'. Its messaging changes leave out payout timing as the finance message and steer away from the customer's 'paid by Friday' language instead of adopting it."
+ },
+ "ms": 21313,
+ "cost": 0.12095600000000001,
+ "in_tokens": 10068,
+ "out_tokens": 2021,
+ "model": "claude-opus-5-5"
+}
