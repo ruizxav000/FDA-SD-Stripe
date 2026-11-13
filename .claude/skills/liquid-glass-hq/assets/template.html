@@ -1367,6 +1367,8 @@ function boot() {
     render();
   });
   store.seed(DEMO);
+  // shared links and back/forward land on the tab in the hash
+  addEventListener("hashchange", () => { const h = location.hash.slice(1); if (h && h !== state.tab) setTab(h, { scroll: false }); });
 }
 
 boot();

@@ -23,7 +23,7 @@ A single-file HTML page system distilled from a production "HQ" page and retheme
 
 ## Workflow
 
-1. **Copy** `assets/template.html`, `assets/bg.jpg` and `assets/bg-blur.jpg` into the project (keep the three side by side; the CSS loads the images by relative path). For a claude.ai artifact, publish the images through `files`.
+1. **Copy** `assets/template.html`, `assets/bg.jpg` and `assets/bg-blur.jpg` into the project (keep the three side by side; the CSS loads the images by relative path). For a claude.ai artifact, remove the outer `<!doctype>`, `<html>`, `<head>` and `<body>` tags (the viewer supplies its own; keep everything from `<title>` down) and publish the two images through `files`.
 2. **Edit CONFIG** at the top of the script: `BRAND_HTML`, `OWNERS`, `ME_CHOICES`, `SECTIONS` (dated milestones; each becomes a tab with a countdown panel), `STATUSES`, `TABS`, `HERO_LINES` / `TAB_LINES`, `REMINDER`, `PHOTOS`, `DEMO`. Rename things to the project's words (the template says "Spend" and "Contacts"; a different project might say "Budget" and "Vendors").
 3. **Map the data.** The `store` object is an in-memory stand-in with async writes and a change feed. Keep it for a static prototype. For shared, durable data in a claude.ai artifact, load the `artifact-capabilities` skill and back the same five methods (`add`, `update`, `set`, `remove`, `setSettings`, plus `onChange`) with the `db` capability. In a real app, back them with the app's API. Views never touch storage directly, so only `store` changes.
 4. **Add or remove views** with the components in `references/components.md`. A view is a function returning an HTML string; register it in `render()`'s `views` map and in `TABS`. Escape every piece of data with `esc()`.
