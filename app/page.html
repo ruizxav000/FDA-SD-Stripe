@@ -1,0 +1,1030 @@
+<title>Deal Reviews</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<style>
+/* Layout: glass-ui shell — fixed frosted nav with three tabs (Submit · Feed · Dashboard),
+   a light-weight hero per tab, then a main column + side column (Feed, Submit) or a wide grid (Dashboard). */
+:root{
+  color-scheme:light;
+  --page:#F6F9FC;
+  --scrim:linear-gradient(180deg,rgba(246,249,252,.18),rgba(246,249,252,.30));
+  --bg-img:url("assets/bg.jpg"); --bg-blur:url("assets/bg-blur.jpg");
+  --strong:#0A2540; --ink:#30313D; --mute:#697386; --mute-faint:#8792A2; --hero-ink:#0A2540;
+  --accent:#635BFF; --on-accent:#FFFFFF; --label:#425466;
+  --c1:#0570DE; --c2:#D6007A; --c3:#1EA672; --alert:#DF1B41;
+  /* outcome series (validated: CVD-safe, light surface) — fixed order Won, Lost, No decision */
+  --won:#0570DE; --lost:#D6007A; --nd:#C27A00;
+  --glass:rgba(255,255,255,.80); --glass-accent:rgba(246,245,255,.86); --glass-quiet:rgba(255,255,255,.62);
+  --glass-low:rgba(10,37,64,.045); --glass-hi:rgba(255,255,255,.92); --field:#FFFFFF; --chrome:rgba(255,255,255,.74);
+  --hair:rgba(10,37,64,.10); --hair-faint:rgba(10,37,64,.06); --track:#E3E8EE;
+  --tooltip:rgba(10,37,64,.96); --tooltip-ink:#FFFFFF; --tooltip-mute:#ADBDCC;
+  --edge-glow:rgba(99,91,255,.6);
+  --shadow:0 2px 5px -1px rgba(50,50,93,.18),0 1px 3px -1px rgba(0,0,0,.12);
+  --shadow-lg:0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3);
+  --blur:20px; --r-box:12px; --r-ctl:8px; --r-btn:99px;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:32px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark; --page:#0A1A2F; --scrim:linear-gradient(180deg,rgba(6,14,26,.55),rgba(6,14,26,.72));
+  --bg-img:url("assets/bg-dark.jpg"); --bg-blur:url("assets/bg-dark-blur.jpg");
+  --strong:#FFFFFF; --ink:#E6EBF1; --mute:#A3ACB9; --mute-faint:#8592A3; --hero-ink:#FFFFFF;
+  --accent:#8C85FF; --on-accent:#FFFFFF; --label:#C1C9D2;
+  --c1:#6EC3F4; --c2:#FF7AC6; --c3:#3ECF8E; --alert:#FF6B81;
+  --won:#3D8FE0; --lost:#E0458F; --nd:#B5821A;
+  --glass:rgba(255,255,255,.09); --glass-accent:rgba(140,133,255,.14); --glass-quiet:rgba(255,255,255,.06);
+  --glass-low:rgba(255,255,255,.06); --glass-hi:rgba(255,255,255,.14); --field:rgba(255,255,255,.08); --chrome:rgba(6,14,26,.6);
+  --hair:rgba(255,255,255,.12); --hair-faint:rgba(255,255,255,.07); --track:rgba(255,255,255,.14);
+  --edge-glow:rgba(255,255,255,.8); --shadow:none; --shadow-lg:0 10px 40px rgba(0,0,0,.45);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark; --page:#0A1A2F; --scrim:linear-gradient(180deg,rgba(6,14,26,.55),rgba(6,14,26,.72));
+  --bg-img:url("assets/bg-dark.jpg"); --bg-blur:url("assets/bg-dark-blur.jpg");
+  --strong:#FFFFFF; --ink:#E6EBF1; --mute:#A3ACB9; --mute-faint:#8592A3; --hero-ink:#FFFFFF;
+  --accent:#8C85FF; --on-accent:#FFFFFF; --label:#C1C9D2;
+  --c1:#6EC3F4; --c2:#FF7AC6; --c3:#3ECF8E; --alert:#FF6B81;
+  --won:#3D8FE0; --lost:#E0458F; --nd:#B5821A;
+  --glass:rgba(255,255,255,.09); --glass-accent:rgba(140,133,255,.14); --glass-quiet:rgba(255,255,255,.06);
+  --glass-low:rgba(255,255,255,.06); --glass-hi:rgba(255,255,255,.14); --field:rgba(255,255,255,.08); --chrome:rgba(6,14,26,.6);
+  --hair:rgba(255,255,255,.12); --hair-faint:rgba(255,255,255,.07); --track:rgba(255,255,255,.14);
+  --edge-glow:rgba(255,255,255,.8); --shadow:none; --shadow-lg:0 10px 40px rgba(0,0,0,.45);
+}
+
+/* ---------- base ---------- */
+*{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased}
+body{margin:0;min-height:100%;background:var(--page);color:var(--ink);font:400 15px/1.6 var(--f-body);font-feature-settings:"ss01","cv11"}
+h1,h2,h3,p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+[hidden]{display:none!important}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:101;background:var(--page)}
+
+/* ---------- backdrop + glass (glass-ui) ---------- */
+.bg-scene{position:fixed;inset:0;z-index:-1;background:var(--scrim),var(--bg-img) center/cover}
+.glass{--tint:var(--glass);position:relative;border-radius:var(--r-box);box-shadow:var(--shadow);
+  background:linear-gradient(var(--tint),var(--tint)) fixed,var(--scrim) fixed,var(--bg-blur) center/cover no-repeat fixed,var(--page)}
+.glass.accent{--tint:var(--glass-accent)}
+.glass.quiet{--tint:var(--glass-quiet);box-shadow:none}
+.box{padding:18px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.box.tight{padding:14px 16px}
+.box.flush{padding:0;overflow:hidden}
+.glass::before,.tab::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;z-index:2;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),var(--edge-glow) 0%,transparent 45%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:0;transition:opacity .25s ease}
+.glow::before{opacity:1}
+
+/* ---------- nav ---------- */
+.chrome{position:fixed;top:0;left:0;right:0;z-index:100;transition:box-shadow .3s ease}
+.chrome.scrolled{box-shadow:0 1px 0 var(--hair)}
+.chrome-bg{position:absolute;inset:0;opacity:0;transition:opacity .3s ease;pointer-events:none;
+  background:linear-gradient(var(--chrome),var(--chrome)) fixed,var(--scrim) fixed,var(--bg-blur) center/cover no-repeat fixed,var(--page)}
+.chrome.scrolled .chrome-bg{opacity:1}
+.chrome-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding-top:calc(16px + env(safe-area-inset-top,0px));padding-bottom:16px;
+  padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.brand{font:700 1.4rem/1 var(--f-body);letter-spacing:-.03em;color:var(--hero-ink);white-space:nowrap}
+.brand span{color:var(--accent)}
+.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{position:relative;padding:8px 15px;font-size:13.5px;font-weight:500;color:var(--hero-ink);opacity:.78;text-decoration:none;border-radius:var(--r-ctl);white-space:nowrap;transition:opacity .15s,background .15s}
+.tab:hover{opacity:1;background:var(--glass-low)}
+.tab[aria-current="page"]{opacity:1;font-weight:600;background:var(--glass-hi)}
+.tab .count{margin-left:6px;font-size:11.5px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
+
+/* ---------- page shell ---------- */
+.view{animation:viewIn .25s ease}
+@keyframes viewIn{from{opacity:0}to{opacity:1}}
+.hero{max-width:1200px;margin:70px auto 0;padding-block:24px 6px;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.headline{max-width:22em;font-size:clamp(2rem,5vw,3rem);font-weight:300;line-height:1.1;letter-spacing:-.035em;color:var(--hero-ink);text-wrap:balance}
+.headline strong{font-weight:600}
+.deck{margin-top:10px;max-width:38em;font-size:1.04rem;line-height:1.45;color:var(--hero-ink);opacity:.84;text-wrap:pretty}
+.page{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start;padding-block:24px 80px;
+  padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.page.wide{grid-template-columns:minmax(0,1fr)}
+main{min-width:0;display:flex;flex-direction:column;gap:12px}
+.side{position:sticky;top:calc(92px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:10px;min-width:0}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:14px;flex-wrap:wrap}
+.sh-label{font-size:15px;font-weight:600;letter-spacing:.02em;color:var(--accent)}
+.sh-meta{font-size:12px;color:var(--mute)}
+
+/* ---------- inside boxes ---------- */
+.lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--label)}
+.box-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.title{font-size:15px;font-weight:600;line-height:1.35;color:var(--strong);text-wrap:balance}
+.text{font-size:13px;color:var(--mute)}
+.text b{color:var(--ink);font-weight:600}
+.big{font-size:1.9rem;font-weight:600;line-height:1.05;letter-spacing:-.02em;color:var(--strong);font-variant-numeric:tabular-nums;white-space:nowrap}
+.divide > * + *{border-top:1px solid var(--hair-faint);padding-top:8px}
+.pair{display:flex;justify-content:space-between;gap:16px;font-size:12.5px}
+.pair > :first-child{color:var(--mute)}
+.pair > :last-child{color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{font-size:13.5px;font-weight:600;padding:8px 18px;border:0;border-radius:var(--r-btn);background:var(--accent);color:var(--on-accent);cursor:pointer;transition:filter .15s}
+.btn:hover{filter:brightness(.94)}
+.btn:disabled{opacity:.5;cursor:not-allowed;filter:none}
+.btn.ghost{background:var(--glass-hi);color:var(--strong);box-shadow:inset 0 0 0 1px var(--hair)}
+.btn.small{font-size:12.5px;padding:5px 12px}
+.btn.danger{background:var(--alert)}
+.linkish{border:0;background:none;padding:0;color:var(--accent);font-size:12.5px;font-weight:500;cursor:pointer}
+.linkish:hover{text-decoration:underline}
+.chip{font-size:12.5px;color:var(--label);background:var(--glass-low);border:1px solid var(--hair);border-radius:99px;padding:4px 12px;cursor:pointer}
+.chip[aria-pressed="true"],.chip[aria-checked="true"]{background:var(--strong);color:var(--page);border-color:transparent}
+.status{font-weight:600;white-space:nowrap;color:color-mix(in srgb,var(--c,var(--accent)) 78%,var(--strong))}
+.field{height:38px;font-size:13.5px;color:var(--ink);background:var(--field);border:1px solid var(--hair);border-radius:var(--r-ctl);padding:0 11px;min-width:0;width:100%}
+textarea.field{height:auto;min-height:120px;padding:9px 11px;resize:vertical;line-height:1.45}
+select.field{padding-right:28px}
+.field::placeholder{color:var(--mute-faint)}
+.field:focus{outline:none;border-color:color-mix(in srgb,var(--accent) 60%,transparent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.form-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.form-item{display:flex;flex-direction:column;gap:6px;min-width:0}
+.form-item label,.form-item .label{font-size:12.5px;font-weight:500;color:var(--strong)}
+.hint{font-size:12px;color:var(--mute)}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.switch{flex:none;width:38px;height:22px;border-radius:99px;border:0;padding:2px;background:var(--track);cursor:pointer;transition:background .15s}
+.switch::after{content:"";display:block;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:var(--shadow);transition:margin .15s}
+.switch[aria-checked="true"]{background:var(--accent)}
+.switch[aria-checked="true"]::after{margin-left:16px}
+.table-wrap{overflow-x:auto}
+.table{width:100%;border-collapse:collapse;font-size:12.5px}
+.table th{padding:10px 16px;text-align:left;font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute-faint);border-bottom:1px solid var(--hair-faint);white-space:nowrap}
+.table td{padding:10px 16px;border-bottom:1px solid var(--hair-faint);vertical-align:top}
+.table tr:last-child td{border-bottom:0}
+.table .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.table .sub{color:var(--mute)}
+.table .wrap{min-width:16em;max-width:30em}
+.table.lines{min-width:820px}
+.note{font-size:12.5px;color:var(--mute);padding:10px 14px;border-radius:var(--r-ctl);background:var(--glass-low)}
+.note.warn{color:var(--ink);box-shadow:inset 3px 0 0 var(--nd)}
+.note.err{color:var(--ink);box-shadow:inset 3px 0 0 var(--alert)}
+
+/* ---------- submit ---------- */
+.drop{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:132px;padding:18px;border:1.5px dashed var(--hair);border-radius:var(--r-box);text-align:center;cursor:pointer;transition:border-color .15s,background .15s}
+.drop:hover,.drop.over{border-color:var(--accent);background:var(--glass-low)}
+.drop .title{font-size:14px}
+.file-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;font-size:13px}
+.file-line b{color:var(--strong);font-weight:600;overflow-wrap:anywhere}
+.speakers{display:flex;flex-wrap:wrap;gap:6px}
+.steps{display:flex;flex-direction:column;gap:2px;margin:0;padding:0;list-style:none}
+.step{display:grid;grid-template-columns:20px minmax(0,1fr) auto;gap:10px;align-items:center;padding:7px 0;font-size:13px;color:var(--mute)}
+.step .dot{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--mute-faint);justify-self:center}
+.step.active{color:var(--strong)}
+.step.active .dot{border-color:var(--accent);background:var(--accent);animation:pulse 1.2s ease-in-out infinite}
+.step.done .dot{border-color:var(--c3);background:var(--c3)}
+.step .t{font-variant-numeric:tabular-nums;font-size:12px;color:var(--mute)}
+.step small{display:block;font-size:11.5px;color:var(--mute)}
+@keyframes pulse{50%{opacity:.35}}
+
+/* ---------- report ---------- */
+.report{display:flex;flex-direction:column;gap:12px}
+.rp-head{display:flex;flex-direction:column;gap:10px}
+.rp-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.rp-title h2{font-size:1.5rem;font-weight:600;letter-spacing:-.02em;color:var(--strong);line-height:1.15}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 18px}
+.fact{display:flex;flex-direction:column;gap:2px;min-width:0}
+.fact .v{font-size:13.5px;color:var(--ink);overflow-wrap:anywhere}
+.fact .v.tag{font-weight:600;color:var(--strong)}
+.meta-line{font-size:12px;color:var(--mute)}
+.change{display:flex;flex-direction:column;gap:8px;padding:14px 0}
+.change + .change{border-top:1px solid var(--hair-faint)}
+.change .from{font-size:12.5px;color:var(--mute)}
+.change .from q{font-style:italic}
+.change .to{font-size:15px;line-height:1.45;color:var(--strong);font-weight:500}
+.change .why{font-size:13px;color:var(--ink)}
+.kind{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.strength{font-size:11.5px;font-weight:600;color:var(--nd)}
+.sec{display:flex;flex-direction:column;gap:10px}
+.sec-q{font-size:12.5px;color:var(--mute);font-style:italic}
+.ev{display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px;font-size:13.5px;line-height:1.45}
+.ev .lab{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding-top:3px}
+.ev .lab.quote{color:var(--c1)} .ev .lab.fact{color:color-mix(in srgb,var(--c3) 80%,var(--strong))} .ev .lab.opinion{color:var(--c2)}
+.ev .x{color:var(--ink)}
+.ev .x.q::before{content:"\201C"} .ev .x.q::after{content:"\201D"}
+.ev .who{color:var(--mute);font-size:12px}
+.ev .unv{color:var(--alert);font-size:11.5px;font-weight:600;margin-left:6px}
+.layer{display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px;font-size:13.5px;line-height:1.5}
+.layer .lab{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--label);padding-top:3px}
+.layer .v{color:var(--ink)}
+.layer.msg .v{color:var(--strong);font-weight:500}
+.not-covered{font-size:13px;color:var(--mute)}
+.find-actions{display:flex;gap:14px;justify-content:flex-end}
+.gaps{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.gaps li{display:flex;flex-direction:column;gap:2px;font-size:13.5px}
+.gaps .k{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--label)}
+.gaps .f{color:var(--mute);font-size:13px}
+.takeaway{font-size:15px;line-height:1.5;color:var(--strong);font-weight:500}
+
+/* ---------- feed ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters .field{width:auto;height:32px;font-size:12.5px;max-width:100%}
+.filters input.field{min-width:12em;flex:1}
+.new-pill{align-self:center;border:0;border-radius:99px;padding:6px 14px;font-size:12.5px;font-weight:600;background:var(--accent);color:var(--on-accent);cursor:pointer;box-shadow:var(--shadow)}
+.card{display:flex;flex-direction:column;gap:8px;cursor:pointer}
+.card-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 14px}
+.card-top .title{font-size:16px}
+.card-tags{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--mute)}
+.card-tags b{font-weight:600;color:var(--strong)}
+.card .first{font-size:13.5px;line-height:1.45;color:var(--ink)}
+.card .first .kind{margin-right:6px}
+.card[aria-expanded="true"]{cursor:default}
+.example-flag{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--nd)}
+.empty{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.edit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+
+/* ---------- dashboard ---------- */
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--mute)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.sbars{display:flex;flex-direction:column;gap:9px}
+.sbar{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr) 3.4em;align-items:center;gap:10px;font-size:12.5px}
+.sbar > span:first-child{color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sbar b{font-weight:600;color:var(--strong);text-align:right;font-variant-numeric:tabular-nums}
+.strack{display:flex;gap:2px;height:14px;min-width:0}
+.strack i{display:block;height:100%;min-width:3px;border-radius:2px}
+.strack i:first-child{border-radius:4px 2px 2px 4px} .strack i:last-child{border-radius:2px 4px 4px 2px} .strack i:only-child{border-radius:4px}
+.sbar:hover .strack i{filter:brightness(1.1)}
+.quotes{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
+.quotes li{font-size:13.5px;line-height:1.45;color:var(--ink)}
+.quotes li::before{content:"\201C"} .quotes li span{display:block;font-size:12px;color:var(--mute)}
+.ready{color:color-mix(in srgb,var(--accent) 85%,var(--strong));font-weight:600}
+#tooltip{position:fixed;z-index:300;pointer-events:none;min-width:120px;padding:8px 12px;border-radius:var(--r-ctl);background:var(--tooltip);color:var(--tooltip-ink);font-size:12.5px;box-shadow:var(--shadow-lg)}
+#tooltip b{display:block;font-weight:600}
+#tooltip span{display:block;color:var(--tooltip-mute);font-variant-numeric:tabular-nums}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  :root{--gutter:16px}
+  .chrome-inner{flex-wrap:wrap;gap:8px;padding-bottom:10px}
+  .tabs{width:100%}
+  .hero{margin-top:104px}
+  .page{grid-template-columns:minmax(0,1fr)}
+  .side{position:static}
+  .grid2,.form-row,.edit-grid{grid-template-columns:minmax(0,1fr)}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sbar{grid-template-columns:minmax(0,8em) minmax(0,1fr) 2.6em}
+  .ev,.layer{grid-template-columns:minmax(0,1fr);gap:2px}
+}
+@media (hover:none) and (pointer:coarse){
+  .glass{background:linear-gradient(var(--tint),var(--tint));backdrop-filter:blur(var(--blur)) saturate(160%);-webkit-backdrop-filter:blur(var(--blur)) saturate(160%)}
+  .chrome-bg{background:var(--chrome);backdrop-filter:blur(var(--blur)) saturate(160%);-webkit-backdrop-filter:blur(var(--blur)) saturate(160%)}
+}
+@media (prefers-reduced-motion:reduce){ *,*::before{transition:none!important;animation:none!important} }
+</style>
+
+<div class="bg-scene"></div>
+
+<header class="chrome" id="chrome">
+  <div class="chrome-bg" aria-hidden="true"></div>
+  <div class="chrome-inner">
+    <span class="brand">Deal Reviews<span>.</span></span>
+    <nav class="tabs" aria-label="Pages">
+      <a class="tab" href="#submit">Submit</a>
+      <a class="tab" href="#feed">Feed<span class="count" id="feed-count"></span></a>
+      <a class="tab" href="#dashboard">Dashboard</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ TAB 1: Submit ============ -->
+<section class="view" id="view-submit">
+  <div class="hero">
+    <h1 class="headline">Turn an AE interview into <strong>sharper messaging.</strong></h1>
+    <p class="deck">Upload the transcript of your deal review. The same four-step review runs for everyone and posts a report to the team feed. The transcript itself is never saved.</p>
+  </div>
+  <div class="page">
+    <main>
+      <form id="submit-form" autocomplete="off" style="display:flex;flex-direction:column;gap:12px">
+        <div class="glass box">
+          <div class="box-head"><p class="title">1. Transcript</p><button type="button" class="linkish" id="load-example">Use an example transcript</button></div>
+          <label class="drop" id="drop" for="file">
+            <span class="title">Drop a transcript here, or choose a file</span>
+            <span class="hint">Zoom or Teams exports: .vtt, .txt or .docx</span>
+            <input id="file" type="file" accept=".vtt,.txt,.docx,.md,text/plain,text/vtt" hidden>
+          </label>
+          <details id="paste-wrap"><summary class="text" style="cursor:pointer">Or paste the transcript</summary>
+            <div style="margin-top:8px"><textarea id="paste" class="field" placeholder="Name: what they said&#10;Name: what they said"></textarea></div>
+          </details>
+          <div id="parsed" hidden style="display:flex;flex-direction:column;gap:10px">
+            <div class="file-line"><b id="parsed-name"></b><span class="text" id="parsed-stats"></span><button type="button" class="linkish" id="clear-file">Remove</button></div>
+            <div class="form-item"><span class="label" id="ae-label">Which speaker is the AE?</span><div class="speakers" id="ae-pick" role="radiogroup" aria-labelledby="ae-label"></div>
+              <span class="hint" id="ae-hint">We guessed from who talks most and who asks the standard questions. Change it if that's wrong.</span></div>
+          </div>
+          <p class="note err" id="file-error" hidden></p>
+        </div>
+
+        <div class="glass box">
+          <p class="title">2. Deal</p>
+          <div class="form-row">
+            <div class="form-item"><label for="deal">Deal or account name</label><input id="deal" class="field" placeholder="e.g. Fernbrook Garden Supply" required></div>
+            <div class="form-item"><label for="rep">Account executive</label><input id="rep" class="field" placeholder="Name"></div>
+          </div>
+          <div class="toggle-row"><span class="text">Post the report to the team feed</span><button type="button" class="switch" id="post-switch" role="switch" aria-checked="true" aria-label="Post the report to the team feed"></button></div>
+        </div>
+
+        <div class="btns" style="justify-content:flex-end">
+          <span class="text" id="run-hint"></span>
+          <button type="button" class="btn ghost" id="stop" hidden>Stop</button>
+          <button class="btn" id="run" type="submit">Run the review</button>
+        </div>
+      </form>
+
+      <div class="glass box" id="progress" hidden>
+        <div class="box-head"><p class="title" id="progress-title">Reviewing</p><span class="text" id="progress-time"></span></div>
+        <ol class="steps" id="steps"></ol>
+        <p class="note err" id="run-error" hidden></p>
+      </div>
+
+      <div id="result" class="report" hidden></div>
+    </main>
+
+    <aside class="side" aria-label="How it works">
+      <div class="glass accent box tight divide">
+        <p class="lbl">How the review runs</p>
+        <div id="how-steps" style="display:flex;flex-direction:column;gap:8px"></div>
+        <p class="text">Every person's review runs these same steps, with the same models and instructions, so reports are comparable across the team.</p>
+      </div>
+      <div class="glass box tight">
+        <p class="lbl">What's kept</p>
+        <p class="text">The transcript is read in your browser and discarded. Only the finished report is saved, with short quotes as evidence. Runs use your own Claude usage.</p>
+      </div>
+      <div class="glass quiet box tight">
+        <p class="lbl">Interview questions</p>
+        <ol class="text" id="q-list" style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"></ol>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ TAB 2: Feed ============ -->
+<section class="view" id="view-feed" hidden>
+  <div class="hero">
+    <h1 class="headline">What the team is hearing, <strong>deal by deal.</strong></h1>
+    <p class="deck">Every posted review, newest first. Open one to see the evidence behind each finding, and comment on any part of it.</p>
+  </div>
+  <div class="page">
+    <main>
+      <div class="filters" role="group" aria-label="Filter reviews">
+        <button type="button" class="chip" data-outcome="" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-outcome="Won" aria-pressed="false">Won</button>
+        <button type="button" class="chip" data-outcome="Lost" aria-pressed="false">Lost</button>
+        <button type="button" class="chip" data-outcome="No decision" aria-pressed="false">No decision</button>
+        <select class="field" id="f-tag" aria-label="Reason tag"><option value="">All reasons</option></select>
+        <select class="field" id="f-comp" aria-label="Competitor"><option value="">All competitors</option></select>
+        <select class="field" id="f-rep" aria-label="Account executive"><option value="">All AEs</option></select>
+        <input class="field" id="f-q" type="search" placeholder="Search deals, quotes, changes" aria-label="Search">
+      </div>
+      <button type="button" class="new-pill" id="new-pill" hidden></button>
+      <p class="note warn" id="examples-note" hidden></p>
+      <div id="feed-list" style="display:flex;flex-direction:column;gap:12px"></div>
+    </main>
+    <aside class="side" aria-label="Feed summary">
+      <div class="glass box tight"><p class="lbl">Reviews shown</p><p class="big" id="s-count">0</p><p class="text" id="s-sub"></p></div>
+      <div class="glass box tight divide" id="s-outcomes"><p class="lbl">By outcome</p></div>
+      <div class="glass quiet box tight"><p class="lbl">Reading a review</p><p class="text"><b>Quote</b> is the customer's own words, relayed by the AE. <b>Fact</b> is something that happened. <b>Opinion</b> is the AE's read. Every quote is checked word for word against the transcript before posting.</p></div>
+      <div class="glass quiet box tight"><div class="toggle-row"><span class="text">Show example reviews</span><button type="button" class="switch" id="ex-switch" role="switch" aria-checked="false" aria-label="Show example reviews"></button></div></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ TAB 3: Dashboard ============ -->
+<section class="view" id="view-dashboard" hidden>
+  <div class="hero">
+    <h1 class="headline">Patterns across deals, <strong>and what to change.</strong></h1>
+    <p class="deck">Reasons, competitors and messaging lines across every posted review. A line challenged in three or more deals is ready for a decision.</p>
+  </div>
+  <div class="page wide">
+    <main>
+      <div class="filters" role="group" aria-label="Time range">
+        <button type="button" class="chip" data-days="0" aria-pressed="true">All time</button>
+        <button type="button" class="chip" data-days="90" aria-pressed="false">Last 90 days</button>
+        <button type="button" class="chip" data-days="30" aria-pressed="false">Last 30 days</button>
+      </div>
+      <p class="note warn" id="dash-note" hidden></p>
+      <div class="grid4">
+        <div class="glass box tight"><p class="lbl">Reviews</p><p class="big" id="k-reviews">0</p><p class="text" id="k-reviews-sub"></p></div>
+        <div class="glass box tight"><p class="lbl">Win rate</p><p class="big" id="k-win">–</p><p class="text">Won ÷ (won + lost)</p></div>
+        <div class="glass box tight"><p class="lbl">No decision</p><p class="big" id="k-nd">–</p><p class="text">Share of reviews where nobody switched</p></div>
+        <div class="glass box tight"><p class="lbl">Lines ready to decide</p><p class="big" id="k-ready">0</p><p class="text">Challenged in 3+ deals</p></div>
+      </div>
+      <div class="grid2">
+        <div class="glass box">
+          <div class="box-head"><p class="lbl">Why deals are won and lost</p><span class="text">reviews by reason tag</span></div>
+          <div class="legend" id="leg-1"></div>
+          <div class="sbars" id="chart-tags" role="img"></div>
+        </div>
+        <div class="glass box">
+          <div class="box-head"><p class="lbl">Who we're up against</p><span class="text">reviews by competitor</span></div>
+          <div class="legend" id="leg-2"></div>
+          <div class="sbars" id="chart-comp" role="img"></div>
+        </div>
+      </div>
+      <div class="sh"><h2 class="sh-label">Messaging lines under pressure</h2><span class="sh-meta">Every change starts as "Test this". A person decides when to change the line.</span></div>
+      <div class="glass box flush table-wrap">
+        <table class="table lines"><thead><tr><th>Current line</th><th class="num">Deals</th><th class="num">Won · Lost · ND</th><th>Latest suggestion</th><th>Status</th></tr></thead>
+          <tbody id="lines-body"></tbody></table>
+      </div>
+      <div class="grid2">
+        <div class="glass box">
+          <div class="box-head"><p class="lbl">The customer's own words</p><span class="text">verified quotes</span></div>
+          <ul class="quotes" id="quotes"></ul>
+        </div>
+        <div class="glass box">
+          <div class="box-head"><p class="lbl">Reasons, as a table</p><span class="text">same data as the chart</span></div>
+          <div class="table-wrap"><table class="table"><thead><tr><th>Reason</th><th class="num">Won</th><th class="num">Lost</th><th class="num">ND</th></tr></thead><tbody id="tags-table"></tbody></table></div>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<div id="tooltip" hidden></div>
+
+<script>
+/*__CORE__*/
+</script>
+<script>
+window.EXAMPLES = /*__EXAMPLES__*/[];
+window.EXAMPLE_TRANSCRIPT = /*__EXAMPLE_TRANSCRIPT__*/"";
+</script>
+<script>
+"use strict";
+const DR = window.DealReview;
+const $ = (id) => document.getElementById(id);
+function h(tag, attrs, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v == null || v === false) continue;
+    if (k === "class") el.className = v;
+    else if (k === "text") el.textContent = v;
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v === true ? "" : v);
+  }
+  for (const k of kids.flat()) if (k != null && k !== false) el.append(k instanceof Node ? k : String(k));
+  return el;
+}
+const fmtDate = (iso) => { try { return new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }); } catch { return ""; } };
+const OUTCOME_VAR = { Won: "--won", Lost: "--lost", "No decision": "--nd" };
+const outcomeEl = (o) => h("span", { class: "status", style: `--c:var(${OUTCOME_VAR[o] || "--accent"})`, text: o || "Unknown" });
+const MODEL_NAME = (m) => (/haiku/.test(m) ? "Haiku" : /sonnet/.test(m) ? "Sonnet" : /opus/.test(m) ? "Opus" : m);
+const LIB = Object.fromEntries(DR.MESSAGING.map((m) => [m.id, m]));
+
+/* ---------- capabilities (light up as they arrive) ---------- */
+const caps = { sample: null, db: null, user: null, comments: null };
+const me = { id: null, isOwner: false };
+const ready = (async () => {
+  if (!window.claude || !window.claude.use) return;
+  const [s, d, u, c] = await Promise.all(["sample", "db", "user", "comments"].map((n) => window.claude.use(n).catch(() => null)));
+  Object.assign(caps, { sample: s, db: d, user: u, comments: c });
+  if (u) { me.id = await u.id(); me.isOwner = await u.isOwner(); }
+})();
+
+/* ---------- routing ---------- */
+const VIEWS = ["submit", "feed", "dashboard"];
+function route() {
+  const id = VIEWS.includes(location.hash.slice(1)) ? location.hash.slice(1) : "submit";
+  VIEWS.forEach((v) => { $("view-" + v).hidden = v !== id; });
+  document.querySelectorAll(".tab").forEach((t) => (t.getAttribute("href") === "#" + id ? t.setAttribute("aria-current", "page") : t.removeAttribute("aria-current")));
+  if (id === "dashboard") renderDashboard();
+  scrollTo({ top: 0 });
+}
+addEventListener("hashchange", route);
+
+/* ---------- nav frost + rim light ---------- */
+const chrome = $("chrome"); let ticking = false;
+addEventListener("scroll", () => { if (ticking) return; ticking = true; requestAnimationFrame(() => { chrome.classList.toggle("scrolled", scrollY > 10); ticking = false; }); }, { passive: true });
+let glowEl = null;
+document.addEventListener("pointermove", (e) => {
+  if (e.pointerType !== "mouse") return;
+  const el = e.target.closest(".glass,.tab");
+  if (glowEl && glowEl !== el) glowEl.classList.remove("glow");
+  glowEl = el; if (!el) return;
+  const r = el.getBoundingClientRect();
+  el.style.setProperty("--mx", ((e.clientX - r.left) / r.width * 100).toFixed(1) + "%");
+  el.style.setProperty("--my", ((e.clientY - r.top) / r.height * 100).toFixed(1) + "%");
+  el.classList.add("glow");
+}, { passive: true });
+
+/* ---------- tooltip ---------- */
+const tip = $("tooltip");
+function showTip(title, lines, x, y) {
+  tip.replaceChildren(h("b", { text: title }), ...lines.map((l) => h("span", { text: l })));
+  tip.hidden = false;
+  const w = tip.offsetWidth;
+  tip.style.left = (x + 14 + w > innerWidth ? x - 14 - w : x + 14) + "px";
+  tip.style.top = y - 12 + "px";
+}
+const hideTip = () => { tip.hidden = true; };
+
+/* ════════════════════ SUBMIT ════════════════════ */
+const sub = { parsed: null, roles: null, name: "", running: null };
+$("how-steps").append(...[
+  ["Read", "reader", "Pulls every piece of evidence from the whole conversation, word for word, and labels it quote, fact or opinion."],
+  ["Analyze", "analyst", "Works out the outcome, the real reason, and the insight behind each of the seven questions."],
+  ["Plan messaging", "strategist", "Turns the findings into concrete changes to our current messaging lines."],
+  ["Check", null, "Code, not AI: every quote must appear word for word in the transcript."],
+].map(([n, k, d]) => h("div", { style: "display:flex;flex-direction:column;gap:2px" },
+  h("div", { class: "pair" }, h("span", { style: "color:var(--strong);font-weight:600", text: n }), h("span", { class: "text", text: k ? MODEL_NAME(DR.STAGE_MODELS[k].model) : "Code" })),
+  h("span", { class: "text", text: d }))));
+$("q-list").append(...DR.SECTIONS.map(([, , q]) => h("li", { text: q })));
+
+async function readFile(file) {
+  if (/\.docx$/i.test(file.name)) return docxText(await file.arrayBuffer());
+  return file.text();
+}
+async function docxText(buf) {
+  const dv = new DataView(buf); let eocd = -1;
+  for (let i = buf.byteLength - 22; i >= Math.max(0, buf.byteLength - 65557); i--) if (dv.getUint32(i, true) === 0x06054b50) { eocd = i; break; }
+  if (eocd < 0) throw new Error("This doesn't look like a Word document.");
+  const cdSize = dv.getUint32(eocd + 12, true), cdOff = dv.getUint32(eocd + 16, true);
+  for (let p = cdOff; p < cdOff + cdSize;) {
+    if (dv.getUint32(p, true) !== 0x02014b50) break;
+    const method = dv.getUint16(p + 10, true), csize = dv.getUint32(p + 20, true), nlen = dv.getUint16(p + 28, true), elen = dv.getUint16(p + 30, true), clen = dv.getUint16(p + 32, true), lho = dv.getUint32(p + 42, true);
+    const name = new TextDecoder().decode(new Uint8Array(buf, p + 46, nlen));
+    if (name === "word/document.xml") {
+      const start = lho + 30 + dv.getUint16(lho + 26, true) + dv.getUint16(lho + 28, true);
+      const data = new Uint8Array(buf, start, csize);
+      let xml;
+      if (method === 0) xml = new TextDecoder().decode(data);
+      else xml = new TextDecoder().decode(await new Response(new Blob([data]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).arrayBuffer());
+      const doc = new DOMParser().parseFromString(xml, "application/xml");
+      const W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
+      return Array.from(doc.getElementsByTagNameNS(W, "p")).map((para) => {
+        let s = "";
+        for (const n of para.getElementsByTagNameNS(W, "*")) { if (n.localName === "t") s += n.textContent; else if (n.localName === "tab") s += " "; else if (n.localName === "br") s += "\n"; }
+        return s;
+      }).join("\n");
+    }
+    p += 46 + nlen + elen + clen;
+  }
+  throw new Error("Couldn't find the text inside this Word document.");
+}
+
+function showFileError(msg) { $("file-error").textContent = msg; $("file-error").hidden = !msg; }
+function loadText(text, name) {
+  showFileError("");
+  const parsed = DR.parseTranscript(text, name);
+  if (parsed.words < 80 || !parsed.turns.length) { showFileError("That file has too little text to review. Check it's the full transcript."); return; }
+  if (parsed.speakers.length < 2) { showFileError("We couldn't tell the speakers apart. Use an export that includes speaker names, or paste it as “Name: what they said” lines."); return; }
+  if (text.length > 200000) { showFileError("This transcript is very long. Trim small talk before and after the interview, then try again."); return; }
+  sub.parsed = parsed; sub.roles = DR.guessRoles(parsed); sub.name = name;
+  $("parsed").hidden = false; $("drop").hidden = true; $("paste-wrap").hidden = true;
+  $("parsed-name").textContent = name;
+  $("parsed-stats").textContent = `${parsed.turns.length} turns · ${parsed.words.toLocaleString()} words · ${parsed.speakers.length} speakers`;
+  renderSpeakers();
+  if (!$("rep").value && !/^Speaker \d+$|^Unknown$/.test(sub.roles.ae || "")) $("rep").value = sub.roles.ae || "";
+  updateRunState();
+}
+function renderSpeakers() {
+  $("ae-pick").replaceChildren(...sub.parsed.speakers.map((s) => h("button", {
+    type: "button", class: "chip", role: "radio", "aria-checked": String(s === sub.roles.ae),
+    onclick: () => {
+      const other = sub.parsed.speakers.find((x) => x !== s);
+      sub.roles = { ae: s, interviewer: sub.roles.interviewer === s ? other : sub.roles.interviewer };
+      if (!$("rep").dataset.touched && !/^Speaker \d+$/.test(s)) $("rep").value = s;
+      renderSpeakers();
+    },
+  }, s)));
+}
+function clearFile() {
+  Object.assign(sub, { parsed: null, roles: null, name: "" });
+  $("parsed").hidden = true; $("drop").hidden = false; $("paste-wrap").hidden = false; $("file").value = ""; $("paste").value = "";
+  updateRunState();
+}
+$("clear-file").onclick = clearFile;
+$("rep").addEventListener("input", () => { $("rep").dataset.touched = "1"; });
+$("file").addEventListener("change", async () => {
+  const f = $("file").files[0]; if (!f) return;
+  try { loadText(await readFile(f), f.name); } catch (e) { showFileError(e.message || "We couldn't read that file."); }
+});
+const drop = $("drop");
+["dragenter", "dragover"].forEach((ev) => drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.add("over"); }));
+["dragleave", "drop"].forEach((ev) => drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.remove("over"); }));
+drop.addEventListener("drop", async (e) => {
+  const f = e.dataTransfer.files[0]; if (!f) return;
+  try { loadText(await readFile(f), f.name); } catch (err) { showFileError(err.message || "We couldn't read that file."); }
+});
+let pasteTimer;
+$("paste").addEventListener("input", () => { clearTimeout(pasteTimer); pasteTimer = setTimeout(() => { if ($("paste").value.trim().length > 400) loadText($("paste").value, "Pasted transcript"); }, 600); });
+$("load-example").onclick = () => {
+  loadText(window.EXAMPLE_TRANSCRIPT, "Example: Fernbrook Garden Supply (fictional)");
+  $("deal").value = "Fernbrook Garden Supply (example)";
+  updateRunState();
+};
+$("deal").addEventListener("input", updateRunState);
+$("post-switch").onclick = (e) => e.currentTarget.setAttribute("aria-checked", String(e.currentTarget.getAttribute("aria-checked") !== "true"));
+function updateRunState() {
+  const missing = !sub.parsed ? "Add a transcript to start." : !$("deal").value.trim() ? "Name the deal to start." : !caps.sample ? "Open this page in Claude to run reviews." : "";
+  $("run").disabled = !!missing || !!sub.running;
+  $("run-hint").textContent = sub.running ? "" : missing;
+}
+ready.then(updateRunState);
+
+const STAGES = [["reader", "Reading the whole conversation"], ["analyst", "Analyzing what really happened"], ["strategist", "Planning messaging changes"], ["checks", "Checking every quote against the transcript"]];
+const ERR = {
+  not_granted: "Claude access wasn't allowed for this page, so the review can't run. You can allow it from the page's permissions.",
+  sampling_disabled: "Claude isn't available on your account here.",
+  rate_limited: "You've hit a usage limit. Try again in a little while.",
+  session_expired: "Your session expired. Sign in again, then run the review.",
+  prompt_too_large: "The transcript is too long for one review. Trim small talk at the start and end, then try again.",
+  refused: "Claude declined this transcript. Check the file is the deal-review interview.",
+  invalid_json: "A step returned a malformed answer. Run the review again.",
+  empty_completion: "A step came back empty. Run the review again.",
+  bad_stage: "A step returned an incomplete answer. Run the review again.",
+  upstream_error: "The connection to Claude dropped. Run the review again.",
+};
+$("submit-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if ($("run").disabled) return;
+  const ctl = new AbortController();
+  sub.running = ctl; updateRunState();
+  $("stop").hidden = false; $("stop").onclick = () => ctl.abort();
+  $("result").hidden = true; $("run-error").hidden = true; $("progress").hidden = false;
+  $("progress-title").textContent = "Reviewing " + $("deal").value.trim();
+  const t0 = Date.now(), times = {}; let cur = null;
+  const draw = () => {
+    $("steps").replaceChildren(...STAGES.map(([k, label]) => {
+      const st = times[k] && times[k].end ? "done" : cur === k ? "active" : "";
+      const m = DR.STAGE_MODELS[k];
+      const secs = times[k] ? Math.round(((times[k].end || Date.now()) - times[k].start) / 1000) + "s" : "";
+      return h("li", { class: "step " + st }, h("span", { class: "dot" }), h("span", {}, label, h("small", { text: m ? MODEL_NAME(m.model) : "Code" })), h("span", { class: "t", text: secs }));
+    }));
+    $("progress-time").textContent = Math.round((Date.now() - t0) / 1000) + "s";
+  };
+  const tick = setInterval(draw, 1000);
+  const onStage = (k) => { if (cur && times[cur]) times[cur].end = Date.now(); cur = k; times[k] = { start: Date.now() }; draw(); };
+  const call = (stage, prompt, m) => caps.sample.json(prompt, {
+    model: m.model, effort: m.effort, signal: ctl.signal,
+    modelTier: /opus/.test(m.model) ? "complex" : /haiku/.test(m.model) ? "quick" : "default",
+  });
+  try {
+    const report = await DR.runPipeline({ deal: $("deal").value.trim(), parsed: sub.parsed, roles: sub.roles, call, onStage });
+    times.checks.end = Date.now(); cur = null; draw();
+    report.rep = $("rep").value.trim() || null;
+    report.authorId = me.id; report.createdAt = new Date().toISOString();
+    let posted = null;
+    if ($("post-switch").getAttribute("aria-checked") === "true") posted = await postReview(report);
+    $("progress-title").textContent = "Review finished";
+    showResult(report, posted);
+  } catch (err) {
+    cur = null; draw();
+    const code = err && err.code;
+    $("progress-title").textContent = code === "cancelled" ? "Review stopped" : "Review didn't finish";
+    if (code !== "cancelled") { $("run-error").textContent = ERR[code] || (err && err.message) || ERR.upstream_error; $("run-error").hidden = false; }
+  } finally {
+    clearInterval(tick); sub.running = null; $("stop").hidden = true; updateRunState();
+  }
+});
+
+function showResult(report, posted) {
+  const box = $("result");
+  const status = posted === true ? h("p", { class: "note", text: "Posted to the team feed." })
+    : posted ? h("p", { class: "note err", text: posted })
+    : h("p", { class: "note", text: "Not posted. Only you can see this report, until you leave the page." });
+  box.replaceChildren(status, renderReport(report, { canEdit: false }));
+  box.hidden = false;
+  box.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+}
+
+/* ════════════════════ STORAGE ════════════════════
+   reviews/<uid>                → { owner, cards: { <rid>: card } }   (the feed index; everyone reads)
+   reviews/<uid>/items/<rid>    → the full report                     (author writes; owner moderates) */
+async function postReview(report) {
+  if (!caps.db || !me.id) return "Not posted: saving isn't available for you on this page.";
+  const rid = "r" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+  const card = DR.toCard(report, { rep: report.rep, authorId: me.id, createdAt: report.createdAt, models: report.meta.models });
+  try {
+    await caps.db.doc(`reviews/${me.id}/items/${rid}`).set(JSON.parse(JSON.stringify(Object.assign({}, report, { card }))));
+    const idx = caps.db.doc(`reviews/${me.id}`);
+    const snap = await idx.get();
+    if (snap.exists) await idx.update({ cards: { [rid]: card } });
+    else await idx.set({ owner: me.id, cards: { [rid]: card } });
+    return true;
+  } catch (e) {
+    return e && e.code === "quota_exceeded" ? "Not posted: the feed's storage is full. Ask the page owner to remove old reviews." : "Not posted: saving failed. Your report is below; run it again to post.";
+  }
+}
+
+/* ════════════════════ REPORT RENDERER ════════════════════ */
+function evidenceRow(e) {
+  const x = h("span", { class: "x" + (e.label === "quote" ? " q" : ""), text: e.excerpt });
+  return h("div", { class: "ev" }, h("span", { class: "lab " + e.label, text: e.label }),
+    h("span", {}, x, e.speaker && e.label === "quote" ? h("span", { class: "who", text: " — " + e.speaker }) : null,
+      e.verified === false ? h("span", { class: "unv", text: "Not found in transcript" }) : null));
+}
+function commentBtn(target, label) {
+  if (!caps.comments) return null;
+  return h("button", { type: "button", class: "linkish", text: label || "Comment", onclick: (ev) => { ev.stopPropagation(); caps.comments.openComposer({ element: target }).catch(() => {}); } });
+}
+function withComments(box) {
+  const acts = h("div", { class: "find-actions" }, commentBtn(box), commentBtn(box, "Flag a mistake"));
+  if (acts.childElementCount) box.append(acts);
+  return box;
+}
+function renderReport(r, opts) {
+  opts = opts || {};
+  const H = r.header || {};
+  const wrap = h("div", { class: "report" });
+
+  const head = h("div", { class: "glass accent box rp-head" },
+    h("div", { class: "rp-title" }, h("h2", { text: H.deal || "Untitled deal" }), outcomeEl(H.outcome), opts.example ? h("span", { class: "example-flag", text: "Example · fictional deal" }) : null),
+    H.scope ? h("p", { class: "text", text: H.scope }) : null,
+    h("div", { class: "facts" },
+      fact("Reason", H.tag, "tag"), fact("Runner-up", H.runner_up), fact("Competitor", H.competitor), fact("Incumbent", H.incumbent)),
+    H.tag_why ? h("p", { class: "text", text: H.tag_why }) : null,
+    h("p", { class: "meta-line", text: [r.rep ? "AE: " + r.rep : null, opts.authorName ? "Reviewed by " + opts.authorName : null, r.createdAt ? fmtDate(r.createdAt) : null,
+      r.meta && r.meta.models ? "Models: " + Object.values(r.meta.models).map(MODEL_NAME).join(" → ") : null, r.editedAt ? "Edited " + fmtDate(r.editedAt) : null].filter(Boolean).join(" · ") }));
+  wrap.append(head);
+  if (opts.canEdit && opts.onEdit) head.append(editControls(r, opts));
+
+  const ch = r.messaging_changes || [];
+  const changes = h("div", { class: "glass box" }, h("div", { class: "box-head" }, h("p", { class: "title", text: "Messaging changes" }), h("span", { class: "text", text: ch.length ? "Most important first" : "" })));
+  if (!ch.length) changes.append(h("p", { class: "text", text: r.no_change_reason || "No change suggested: the interview doesn't support one." }));
+  for (const c of ch) {
+    const el = h("div", { class: "change", "data-comment-target": "" },
+      h("div", { class: "box-head" }, h("span", { class: "kind", text: c.type === "add" ? "Add" : c.type === "drop" ? "Stop leading with" : "Replace" }), h("span", { class: "strength", text: c.strength || "Test this" })),
+      c.current_line ? h("p", { class: "from" }, (c.target ? c.target + " · " : "") + "Now: ", h("q", { text: c.current_line })) : h("p", { class: "from", text: "New line, nothing in our current messaging covers this." }),
+      h("p", { class: "to", text: c.change }),
+      c.why ? h("p", { class: "why", text: c.why }) : null,
+      c.evidence && c.evidence.length ? h("p", { class: "meta-line", text: "Evidence: " + c.evidence.join(", ") }) : null);
+    changes.append(withComments(el));
+  }
+  wrap.append(changes);
+
+  for (const [k, name, q] of DR.SECTIONS) {
+    const s = (r.sections || {})[k] || { covered: false };
+    const box = h("div", { class: "glass box sec", "data-comment-target": "" }, h("div", { class: "box-head" }, h("p", { class: "title", text: name })), h("p", { class: "sec-q", text: q }));
+    if (!s.covered) box.append(h("p", { class: "not-covered", text: "Not covered in this interview. See the follow-ups below." }));
+    for (const e of s.evidence || []) box.append(evidenceRow(e));
+    if (s.covered && s.insight) box.append(h("div", { class: "layer" }, h("span", { class: "lab", text: "Insight" }), h("span", { class: "v", text: s.insight })));
+    if (s.covered && s.messaging) box.append(h("div", { class: "layer msg" }, h("span", { class: "lab", text: "Messaging" }), h("span", { class: "v", text: s.messaging })));
+    wrap.append(withComments(box));
+  }
+
+  const close = r.close || {};
+  const closeBox = h("div", { class: "glass box", "data-comment-target": "" }, h("p", { class: "title", text: "What the review never covered" }));
+  if ((close.gaps || []).length) closeBox.append(h("ul", { class: "gaps" }, ...close.gaps.map((g) => h("li", {}, h("span", { class: "k", text: g.kind || "open" }), h("span", { text: g.question }), g.follow_up ? h("span", { class: "f", text: "Ask: " + g.follow_up }) : null))));
+  else closeBox.append(h("p", { class: "text", text: "Every question was covered." }));
+  if (close.rep_takeaway) closeBox.append(h("p", { class: "lbl", style: "margin-top:8px", text: "One takeaway for the AE" }), h("p", { class: "takeaway", text: close.rep_takeaway }));
+  wrap.append(withComments(closeBox));
+
+  if (r.checks && r.checks.quotes_total) wrap.append(h("p", { class: "meta-line", style: "padding:0 4px", text:
+    r.checks.quotes_failed ? `${r.checks.quotes_failed} of ${r.checks.quotes_total} evidence excerpts weren't found word for word in the transcript and are marked.` : `All ${r.checks.quotes_total} evidence excerpts were found word for word in the transcript.` }));
+  return wrap;
+}
+function fact(label, v, cls) { return h("div", { class: "fact" }, h("span", { class: "lbl", text: label }), h("span", { class: "v " + (cls || ""), text: v || "—" })); }
+
+function editControls(r, opts) {
+  const H = r.header || {};
+  const wrapEl = h("div", { class: "btns", style: "justify-content:flex-end" });
+  const form = h("div", { hidden: true, style: "display:flex;flex-direction:column;gap:10px" });
+  const sel = (id, vals, cur) => h("select", { class: "field", id }, ...vals.map((v) => h("option", { value: v, selected: v === cur, text: v })));
+  const inp = (id, cur) => h("input", { class: "field", id, value: cur || "" });
+  const uid = "e" + Math.random().toString(36).slice(2, 7);
+  form.append(h("div", { class: "edit-grid" },
+    h("div", { class: "form-item" }, h("label", { for: uid + "o", text: "Outcome" }), sel(uid + "o", ["Won", "Lost", "No decision"], H.outcome)),
+    h("div", { class: "form-item" }, h("label", { for: uid + "t", text: "Reason tag" }), sel(uid + "t", DR.TAG_NAMES, H.tag)),
+    h("div", { class: "form-item" }, h("label", { for: uid + "c", text: "Competitor" }), inp(uid + "c", H.competitor)),
+    h("div", { class: "form-item" }, h("label", { for: uid + "i", text: "Incumbent" }), inp(uid + "i", H.incumbent))),
+    h("div", { class: "form-item" }, h("label", { for: uid + "s", text: "Scope note" }), inp(uid + "s", H.scope)));
+  const msg = h("span", { class: "text" });
+  const save = h("button", { type: "button", class: "btn small", text: "Save changes", onclick: async () => {
+    save.disabled = true; msg.textContent = "Saving…";
+    const v = (s) => form.querySelector("#" + uid + s).value.trim() || null;
+    const ok = await opts.onEdit({ outcome: v("o"), tag: v("t"), competitor: v("c"), incumbent: v("i"), scope: v("s") });
+    msg.textContent = ok ? "Saved." : "Couldn't save. Try again.";
+    save.disabled = false;
+  } });
+  let armed = false;
+  const del = h("button", { type: "button", class: "btn small ghost", text: "Delete review", onclick: async () => {
+    if (!armed) { armed = true; del.textContent = "Click again to delete"; del.className = "btn small danger"; setTimeout(() => { armed = false; del.textContent = "Delete review"; del.className = "btn small ghost"; }, 4000); return; }
+    del.disabled = true; msg.textContent = "Deleting…";
+    const ok = await opts.onDelete(); if (!ok) { msg.textContent = "Couldn't delete. Try again."; del.disabled = false; }
+  } });
+  form.append(h("div", { class: "btns", style: "justify-content:flex-end" }, msg, del, save));
+  const toggle = h("button", { type: "button", class: "linkish", text: "Edit header", onclick: () => { form.hidden = !form.hidden; toggle.textContent = form.hidden ? "Edit header" : "Close editing"; } });
+  wrapEl.append(toggle);
+  return h("div", { style: "display:flex;flex-direction:column;gap:10px" }, wrapEl, form);
+}
+
+/* ════════════════════ FEED ════════════════════ */
+const feed = { real: [], seen: new Set(), pending: [], loaded: false, showExamples: false, filter: { outcome: "", tag: "", comp: "", rep: "", q: "" }, open: new Set(), names: {} };
+const EXAMPLE_CARDS = (window.EXAMPLES || []).map((x, i) => Object.assign({}, x.card, { rid: "ex" + i, uid: "example", example: true }));
+
+function allCards() {
+  const list = feed.real.slice();
+  if (feed.showExamples) list.push(...EXAMPLE_CARDS);
+  return list.sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
+}
+function matches(c) {
+  const f = feed.filter;
+  if (f.outcome && c.outcome !== f.outcome) return false;
+  if (f.tag && c.tag !== f.tag) return false;
+  if (f.comp && (c.competitor || "None") !== f.comp) return false;
+  if (f.rep && (c.rep || "") !== f.rep) return false;
+  if (f.q) {
+    const hay = [c.deal, c.competitor, c.incumbent, c.tag, c.rep, c.scope, ...(c.language || []), ...(c.changes || []).map((x) => x.change)].join(" ").toLowerCase();
+    if (!hay.includes(f.q.toLowerCase())) return false;
+  }
+  return true;
+}
+function fillSelect(sel, values, label) {
+  const cur = sel.value;
+  sel.replaceChildren(h("option", { value: "", text: label }), ...[...new Set(values.filter(Boolean))].sort().map((v) => h("option", { value: v, text: v, selected: v === cur })));
+}
+async function resolveNames(ids) {
+  ids = [...new Set(ids.filter((x) => x && x !== "example"))];
+  if (!caps.user || !ids.length) return;
+  try { const ps = await caps.user.profiles(ids); for (const id of ids) feed.names[id] = (ps[id] && ps[id].name) || ""; } catch {}
+}
+async function renderFeed() {
+  const cards = allCards();
+  fillSelect($("f-tag"), cards.map((c) => c.tag), "All reasons");
+  fillSelect($("f-comp"), cards.map((c) => c.competitor || "None"), "All competitors");
+  fillSelect($("f-rep"), cards.map((c) => c.rep), "All AEs");
+  const shown = cards.filter(matches);
+  await resolveNames(shown.map((c) => c.authorId));
+  $("feed-count").textContent = feed.real.length ? String(feed.real.length) : "";
+  const note = $("examples-note");
+  note.hidden = !feed.showExamples;
+  note.textContent = feed.real.length ? "Example reviews from fictional test deals are mixed in. Turn them off in the side panel." : "No one has posted a review yet. These are example reviews from fictional test deals, so you can see what the feed looks like. They disappear when you turn them off.";
+  const list = $("feed-list");
+  if (!shown.length) {
+    list.replaceChildren(h("div", { class: "glass box empty" },
+      h("p", { class: "title", text: !feed.loaded && caps.db ? "Loading reviews…" : cards.length ? "No reviews match these filters." : "No reviews yet." }),
+      h("p", { class: "text", text: cards.length ? "Clear a filter to see more." : "Reviews appear here as soon as anyone on the team runs one. Run the first one from the Submit tab." }),
+      cards.length ? null : h("a", { class: "btn", href: "#submit", text: "Run a review" })));
+  } else list.replaceChildren(...shown.map(cardEl));
+  $("s-count").textContent = String(shown.length);
+  $("s-sub").textContent = feed.real.length ? `${feed.real.length} posted by the team` : "No team reviews posted yet";
+  const by = (o) => shown.filter((c) => c.outcome === o).length;
+  $("s-outcomes").replaceChildren(h("p", { class: "lbl", text: "By outcome" }), ...["Won", "Lost", "No decision"].map((o) => h("div", { class: "pair" }, outcomeEl(o), h("span", { text: String(by(o)) }))));
+}
+function cardEl(c) {
+  const key = c.uid + "/" + c.rid;
+  const open = feed.open.has(key);
+  const author = c.example ? "" : feed.names[c.authorId] || "";
+  const el = h("article", { class: "glass box card", "aria-expanded": String(open), tabindex: "0" },
+    h("div", { class: "card-top" }, h("p", { class: "title", text: c.deal || "Untitled deal" }), h("span", {}, c.example ? h("span", { class: "example-flag", text: "Example  " }) : null, outcomeEl(c.outcome))),
+    h("div", { class: "card-tags" }, h("span", {}, "Reason ", h("b", { text: c.tag || "—" })), h("span", {}, "vs ", h("b", { text: c.competitor || "—" })),
+      c.incumbent ? h("span", { text: "Incumbent: " + c.incumbent }) : null, c.rep ? h("span", { text: "AE: " + c.rep }) : null, author ? h("span", { text: "by " + author }) : null, c.createdAt ? h("span", { text: fmtDate(c.createdAt) }) : null),
+    c.scope ? h("p", { class: "text", text: c.scope }) : null,
+    c.first_change ? h("p", { class: "first" }, h("span", { class: "kind", text: "Top change" }), c.first_change.change) : null);
+  const detail = h("div", { hidden: !open });
+  el.append(detail);
+  const toggle = async () => {
+    if (feed.open.has(key)) { feed.open.delete(key); detail.hidden = true; el.setAttribute("aria-expanded", "false"); return; }
+    feed.open.add(key); el.setAttribute("aria-expanded", "true"); detail.hidden = false;
+    await loadDetail(c, detail);
+  };
+  el.addEventListener("click", (e) => { if (e.target.closest("button,a,input,select,textarea,.report")) return; toggle(); });
+  el.addEventListener("keydown", (e) => { if ((e.key === "Enter" || e.key === " ") && e.target === el) { e.preventDefault(); toggle(); } });
+  if (open) loadDetail(c, detail);
+  return el;
+}
+async function loadDetail(c, detail) {
+  detail.replaceChildren(h("p", { class: "text", text: "Loading the full report…" }));
+  let report = null;
+  if (c.example) report = (window.EXAMPLES[Number(c.rid.slice(2))] || {}).report;
+  else if (caps.db) { try { const s = await caps.db.doc(`reviews/${c.uid}/items/${c.rid}`).get(); report = s.exists ? s.data() : null; } catch {} }
+  if (!report) { detail.replaceChildren(h("p", { class: "note err", text: "This report couldn't be loaded. It may have been deleted." })); return; }
+  const canEdit = !c.example && caps.db && me.id && (me.id === c.uid || me.isOwner);
+  detail.replaceChildren(h("div", { style: "margin-top:10px" }, renderReport(report, {
+    example: c.example, authorName: feed.names[c.authorId] || "", canEdit,
+    onEdit: (patch) => editReview(c, report, patch), onDelete: () => deleteReview(c),
+  })));
+}
+async function editReview(c, report, patch) {
+  try {
+    const header = Object.assign({}, report.header, patch);
+    const editedAt = new Date().toISOString();
+    await caps.db.doc(`reviews/${c.uid}/items/${c.rid}`).update({ header, editedAt });
+    const cardPatch = { outcome: header.outcome, tag: header.tag, competitor: header.competitor, incumbent: header.incumbent, scope: header.scope, editedAt };
+    await caps.db.doc(`reviews/${c.uid}`).update({ cards: { [c.rid]: cardPatch } });
+    return true;
+  } catch { return false; }
+}
+async function deleteReview(c) {
+  try {
+    const idx = caps.db.doc(`reviews/${c.uid}`);
+    const snap = await idx.get();
+    const data = JSON.parse(JSON.stringify(snap.data() || {}));
+    delete (data.cards || {})[c.rid];
+    await idx.set(data);
+    await caps.db.doc(`reviews/${c.uid}/items/${c.rid}`).delete();
+    return true;
+  } catch { return false; }
+}
+
+document.querySelectorAll("[data-outcome]").forEach((b) => b.addEventListener("click", () => {
+  document.querySelectorAll("[data-outcome]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+  feed.filter.outcome = b.dataset.outcome; renderFeed();
+}));
+[["f-tag", "tag"], ["f-comp", "comp"], ["f-rep", "rep"]].forEach(([id, k]) => $(id).addEventListener("change", () => { feed.filter[k] = $(id).value; renderFeed(); }));
+let qTimer; $("f-q").addEventListener("input", () => { clearTimeout(qTimer); qTimer = setTimeout(() => { feed.filter.q = $("f-q").value.trim(); renderFeed(); }, 200); });
+$("ex-switch").onclick = () => setExamples(!feed.showExamples, true);
+function setExamples(on, byUser) {
+  feed.showExamples = on; if (byUser) feed.examplesTouched = true;
+  $("ex-switch").setAttribute("aria-checked", String(on));
+  renderFeed(); renderDashboard();
+}
+$("new-pill").onclick = () => { feed.real = feed.pending; feed.pendingCount = 0; $("new-pill").hidden = true; renderFeed(); renderDashboard(); };
+
+function subscribeFeed() {
+  if (!caps.db) { feed.loaded = true; if (!feed.examplesTouched) setExamples(true); return; }
+  const timer = setTimeout(() => { if (!feed.loaded) { feed.loaded = true; $("examples-note").hidden = false; $("examples-note").textContent = "The team feed can't be reached right now. Reviews will appear when the connection returns."; } }, 10000);
+  caps.db.collection("reviews").onSnapshot((snap) => {
+    const cards = [];
+    for (const d of snap.docs) { const data = d.data() || {}; for (const [rid, c] of Object.entries(data.cards || {})) cards.push(Object.assign({}, c, { rid, uid: d.id })); }
+    if (!snap.metadata.fromCache) clearTimeout(timer);
+    const fresh = cards.filter((c) => !feed.seen.has(c.uid + "/" + c.rid));
+    cards.forEach((c) => feed.seen.add(c.uid + "/" + c.rid));
+    const othersNew = feed.loaded ? fresh.filter((c) => c.uid !== me.id) : [];
+    if (othersNew.length && scrollY > 200 && location.hash === "#feed") {
+      feed.pending = cards; feed.pendingCount = (feed.pendingCount || 0) + othersNew.length;
+      $("new-pill").textContent = `${feed.pendingCount} new review${feed.pendingCount > 1 ? "s" : ""}`; $("new-pill").hidden = false;
+    } else { feed.real = cards; }
+    feed.loaded = true;
+    if (!feed.examplesTouched) feed.showExamples = feed.real.length === 0;
+    $("ex-switch").setAttribute("aria-checked", String(feed.showExamples));
+    renderFeed(); renderDashboard();
+  }, () => { feed.loaded = true; clearTimeout(timer); renderFeed(); });
+}
+
+/* ════════════════════ DASHBOARD ════════════════════ */
+const dash = { days: 0 };
+document.querySelectorAll("[data-days]").forEach((b) => b.addEventListener("click", () => {
+  document.querySelectorAll("[data-days]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+  dash.days = Number(b.dataset.days); renderDashboard();
+}));
+const SERIES = [["Won", "--won"], ["Lost", "--lost"], ["No decision", "--nd"]];
+function legend(el) { el.replaceChildren(...SERIES.map(([n, v]) => h("span", {}, h("i", { style: `background:var(${v})` }), n))); }
+function stackChart(el, rows, label) {
+  const max = Math.max(1, ...rows.map((r) => r.total));
+  el.setAttribute("aria-label", label + ": " + rows.map((r) => `${r.name} ${r.total} (${r.Won} won, ${r.Lost} lost, ${r["No decision"]} no decision)`).join("; "));
+  if (!rows.length) { el.replaceChildren(h("p", { class: "text", text: "Nothing to chart yet." })); return; }
+  el.replaceChildren(...rows.map((r) => {
+    const row = h("div", { class: "sbar" }, h("span", { text: r.name, title: r.name }),
+      h("span", { class: "strack", style: `width:${(r.total / max) * 100}%` }, ...SERIES.filter(([n]) => r[n]).map(([n, v]) => h("i", { style: `flex:${r[n]};background:var(${v})` }))),
+      h("b", { text: String(r.total) }));
+    row.addEventListener("pointermove", (e) => showTip(r.name, [`${r.Won} won · ${r.Lost} lost · ${r["No decision"]} no decision`], e.clientX, e.clientY));
+    row.addEventListener("pointerleave", hideTip);
+    return row;
+  }));
+}
+function countBy(cards, key) {
+  const m = {};
+  for (const c of cards) { const k = key(c) || "Unknown"; m[k] = m[k] || { name: k, Won: 0, Lost: 0, "No decision": 0, total: 0 }; if (m[k][c.outcome] != null) m[k][c.outcome]++; m[k].total++; }
+  return Object.values(m).sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
+}
+function renderDashboard() {
+  if ($("view-dashboard").hidden) return;
+  const cutoff = dash.days ? Date.now() - dash.days * 864e5 : 0;
+  const cards = allCards().filter((c) => !cutoff || new Date(c.createdAt).getTime() >= cutoff);
+  const note = $("dash-note");
+  note.hidden = !feed.showExamples;
+  note.textContent = feed.real.length ? "Includes example reviews from fictional test deals. Turn them off on the Feed tab." : "No team reviews yet, so this shows example reviews from fictional test deals. It fills with real data as the team posts.";
+  const n = cards.length, won = cards.filter((c) => c.outcome === "Won").length, lost = cards.filter((c) => c.outcome === "Lost").length, nd = cards.filter((c) => c.outcome === "No decision").length;
+  $("k-reviews").textContent = String(n);
+  $("k-reviews-sub").textContent = `${won} won · ${lost} lost · ${nd} no decision`;
+  $("k-win").textContent = won + lost ? Math.round((won / (won + lost)) * 100) + "%" : "–";
+  $("k-nd").textContent = n ? Math.round((nd / n) * 100) + "%" : "–";
+  legend($("leg-1")); legend($("leg-2"));
+  const tags = countBy(cards, (c) => c.tag);
+  stackChart($("chart-tags"), tags, "Reviews by reason tag");
+  stackChart($("chart-comp"), countBy(cards, (c) => c.competitor || "None"), "Reviews by competitor");
+  $("tags-table").replaceChildren(...(tags.length ? tags.map((r) => h("tr", {}, h("td", { text: r.name }), h("td", { class: "num", text: String(r.Won) }), h("td", { class: "num", text: String(r.Lost) }), h("td", { class: "num", text: String(r["No decision"]) })))
+    : [h("tr", {}, h("td", { colspan: "4", class: "sub", text: "No reviews in this range." }))]));
+
+  // Messaging lines under pressure: group suggested changes by the line they target.
+  const lines = {};
+  for (const c of cards) for (const ch of c.changes || []) {
+    const k = ch.target && LIB[ch.target] ? ch.target : "new";
+    const L = (lines[k] = lines[k] || { deals: new Set(), Won: 0, Lost: 0, "No decision": 0, latest: null, latestAt: "" });
+    if (!L.deals.has(c.rid)) { L.deals.add(c.rid); if (L[c.outcome] != null) L[c.outcome]++; }
+    if (String(c.createdAt) >= L.latestAt) { L.latestAt = String(c.createdAt); L.latest = ch.change; }
+  }
+  const rows = Object.entries(lines).sort((a, b) => b[1].deals.size - a[1].deals.size);
+  $("k-ready").textContent = String(rows.filter(([k, L]) => k !== "new" && L.deals.size >= 3).length);
+  $("lines-body").replaceChildren(...(rows.length ? rows.map(([k, L]) => h("tr", {},
+    h("td", { class: "wrap" }, k === "new" ? h("span", { text: "New lines (nothing in our messaging covers these yet)" }) : h("span", {}, h("b", { text: k + " " }), LIB[k].line)),
+    h("td", { class: "num", text: String(L.deals.size) }),
+    h("td", { class: "num", text: `${L.Won} · ${L.Lost} · ${L["No decision"]}` }),
+    h("td", { class: "wrap sub", text: L.latest || "" }),
+    h("td", {}, L.deals.size >= 3 && k !== "new" ? h("span", { class: "ready", text: "Ready to decide" }) : h("span", { class: "strength", text: "Test this" }))))
+    : [h("tr", {}, h("td", { colspan: "5", class: "sub", text: "No messaging changes in this range yet." }))]));
+
+  const qs = [];
+  for (const c of cards) for (const q of c.language || []) qs.push({ q, deal: c.deal, at: c.createdAt });
+  qs.sort((a, b) => String(b.at).localeCompare(String(a.at)));
+  $("quotes").replaceChildren(...(qs.length ? qs.slice(0, 8).map((x) => h("li", {}, x.q + "”", h("span", { text: x.deal }))) : [h("li", { class: "text", style: "list-style:none", text: "Customer quotes from the Customer language section appear here." })]));
+}
+
+/* ---------- boot ---------- */
+route();
+renderFeed();
+ready.then(() => { subscribeFeed(); renderFeed(); });
+</script>
