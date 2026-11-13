@@ -3,6 +3,7 @@
 **Input:** `07-fernbrook-garden-supply.txt` (plain text). The AE is **Sam**.
 
 ## Header
+- **ACV:** $95,000 per year, quoting the AE's words.
 - **Outcome:** Lost · **Scope note:** none
 - **Competitor:** Fiserv · **Incumbent:** Fiserv, through the customer's bank
 - **Tag:** **Value proof**, **not price**. Acceptable alternative: *Champion or access* (we never met the CFO).
@@ -50,6 +51,7 @@
 - **Rep takeaway:** when the champion asks for something to hand the CFO, build the customer's own number. That's the deal.
 
 ## Must catch
+- [ ] ACV is **$95,000** per year, and the close does **not** list deal size as a gap.
 - [ ] The tag is **Value proof**, and the report explicitly challenges "lost on price."
 - [ ] The rep's "more room on the rate" is labeled **opinion** and shown as contradicted.
 - [ ] The declined decline analysis is surfaced.

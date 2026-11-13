@@ -3,6 +3,7 @@
 **Input:** `03-fetchwell.vtt` (Teams). The AE is **Priya**.
 
 ## Header
+- **ACV:** $180,000 per year, quoting the AE's words.
 - **Outcome:** Won · **Scope note:** none
 - **Competitor:** Braintree · **Incumbent:** Braintree
 - **Tag:** **Developer experience**. A customer engineer built a working flow over a weekend. Acceptable alternative: *Product fit* (marketplace payouts).
@@ -54,6 +55,7 @@
 - **Rep takeaway:** close the loops you open. "I'll get back to you" is a commitment, and a "clean" deal can still hide risks.
 
 ## Must catch
+- [ ] ACV is **$180,000** per year, and the close does **not** list deal size as a gap.
 - [ ] The gaps section shows the rep's "nothing" being **contradicted** (PayPal/Venmo, saved cards).
 - [ ] The Braintree theory is labeled **opinion**.
 - [ ] The approval-rate slide is reported as **silence** in a win.

@@ -1,0 +1,386 @@
+{
+ "version": "2026-11-13.7",
+ "header": {
+  "deal": "Restaurant equipment and disposables distributor",
+  "ae": "Dana",
+  "acv": {
+   "amount": 140000,
+   "quote": "About a hundred and forty K a year."
+  },
+  "outcome": "Won",
+  "scope": null,
+  "competitor": "Fiserv (incumbent, through their bank)",
+  "incumbent": "Fiserv, through their bank",
+  "tag": "Value proof",
+  "runner_up": "Product fit",
+  "tag_why": "The deal turned, by the rep's account, at the meeting where Wen priced the manual matching hours and write-offs using the customer's own statements and costs, and the CFO accepted it as 'my number, not yours'; the reconciliation capability opened the door, but the dollar case built on her data is what she bought."
+ },
+ "messaging_changes": [
+  {
+   "target": "M9",
+   "current_line": "Every payout reconciles automatically to its transactions and your ERP.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For finance-led buyers, lead with this line and use their words: Know where every deposit is, and close month-end without 'a week of archaeology.' Say 'the deposits', not payouts or payments.",
+   "evidence": [
+    "E27",
+    "E28",
+    "E8",
+    "E43",
+    "E44"
+   ],
+   "evidence_found": true,
+   "why": "Reconciliation was the only message that got a reaction, strong enough that the CFO said 'go back', and she described it as an outcome ('I just want to know where my money is') in words like 'the deposits', never 'payments'.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M6",
+   "current_line": "Proven ROI, backed by an independent economic impact study.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "Send us one month of your statements and we'll price what manual deposit matching and unmatched-deposit write-offs cost you, built from your own data and your own costs.",
+   "evidence": [
+    "E30",
+    "E31",
+    "E33"
+   ],
+   "evidence_found": true,
+   "why": "The deal turned when the value case was built from the customer's own statements and hours, and the CFO accepted it as 'my number, not yours', which an external study cannot offer.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M1",
+   "current_line": "Financial infrastructure to grow globally, in every currency.",
+   "line_matches": true,
+   "type": "drop",
+   "change": "For finance-led buyers with no in-house build team and no cross-border need, stop opening the first-call deck with this line, and with M2 'Built for developers: launch payments fast with our APIs, docs and sandbox.' Open on M9 instead.",
+   "evidence": [
+    "E23",
+    "E26",
+    "E44"
+   ],
+   "evidence_found": true,
+   "why": "The standard opener landed in 'Silence' with a buyer whose IT team 'aren't building anything', and 'Nobody said 'infrastructure.''",
+   "strength": "Test this"
+  },
+  {
+   "target": "M5",
+   "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "Against bank-bundled incumbents: You'll get a named contact and always know who your person is. Don't lead with rates.",
+   "evidence": [
+    "E21",
+    "E18",
+    "E19"
+   ],
+   "evidence_found": true,
+   "why": "The incumbent's only known move was a rate offer the CFO rejected ('I didn't ask about my rates.'), and her one new question afterwards was whether she'd get a named contact, which response-time tiers don't answer.",
+   "strength": "Test this"
+  }
+ ],
+ "no_change_reason": null,
+ "sections": {
+  "trigger": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E4",
+     "excerpt": "The portal was the excuse.",
+     "label": "opinion",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E6",
+     "excerpt": "they had a new CFO. Ines. She'd been there about four months, and her first month-end close took nine days.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E7",
+     "excerpt": "two people in finance matching deposits from the bank against the processor statements against invoices in the ERP. By hand, in spreadsheets.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E8",
+     "excerpt": "month-end is a week of archaeology.",
+     "label": "quote",
+     "speaker": "Ines (CFO)",
+     "verified": true
+    }
+   ],
+   "insight": "The inbound said portal, but the real trigger was a new CFO whose first close took nine days because two people were matching deposits by hand. The rep's own portal story doesn't hold together: first they were 'building a portal', later it is 'off the shelf with a plugin'. The checkout opportunity was never the buying reason. It was the IT-side reason that happened to reach us first.",
+   "messaging": "For finance-led buyers, open on close time and manual deposit matching (lead with M9) instead of checkout, even when the inbound mentions a portal."
+  },
+  "decider": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E11",
+     "excerpt": "I can recommend, she decides.",
+     "label": "quote",
+     "speaker": "Paul (IT director)",
+     "verified": true
+    },
+    {
+     "id": "E12",
+     "excerpt": "And she's the one who signed.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E13",
+     "excerpt": "We sent the first proposal to Paul and it was all about the portal.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E15",
+     "excerpt": "Paul had forwarded it to her, she read the first page and said it wasn't her problem.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    }
+   ],
+   "insight": "Ines decided, and two things back that up: the IT director's own words and her signature. The first proposal was written for the recommender (checkout, APIs), so it died on the decider's first page and the deal stalled for three weeks. Our default proposal is built for the technical buyer, and here that buyer had no budget authority.",
+   "messaging": "Make page one of every proposal a finance-owner summary (days to close, unmatched deposits, hours spent matching), with APIs and checkout pushed to an appendix."
+  },
+  "competitor": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E17",
+     "excerpt": "I honestly don't know what Fiserv showed them, if anything. I never saw a deck.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E18",
+     "excerpt": "we can take a look at your rates.",
+     "label": "quote",
+     "speaker": "Ines's bank rep, relayed by Ines",
+     "verified": true
+    },
+    {
+     "id": "E19",
+     "excerpt": "I didn't ask about my rates.",
+     "label": "quote",
+     "speaker": "Ines (CFO)",
+     "verified": true
+    },
+    {
+     "id": "E21",
+     "excerpt": "She did ask us one new thing afterwards, whether she'd get a named contact.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    }
+   ],
+   "insight": "The only thing we know the incumbent said is a rate offer, and the CFO rejected it as an answer to a question she hadn't asked. That makes price the wrong battlefield against a bank-bundled incumbent here. The rep said 'not much' changed after the bank call, yet a new question appeared: a named contact, because her bank rep had changed and she didn't know who the new one was. That is the incumbent's real weakness, and our support message (tiered response times) doesn't speak to it.",
+   "messaging": "Against bank-bundled incumbents, don't lead with rates; position on 'you'll always know who your person is' and reframe M5 around a named contact, not response-time tiers."
+  },
+  "message": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E23",
+     "excerpt": "Silence was the whole opening. I ran the standard first-call deck.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E26",
+     "excerpt": "Paul's team is four people and they aren't building anything. The portal is off the shelf with a plugin.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E27",
+     "excerpt": "The reaction was the payout reconciliation.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E28",
+     "excerpt": "go back.",
+     "label": "quote",
+     "speaker": "Ines (CFO)",
+     "verified": true
+    }
+   ],
+   "insight": "M1 (global, every currency) and M2 (built for developers) landed in silence with a customer that sells to restaurants in three states and has a four-person IT team that isn't building anything. Only M9 got a reaction, and it was strong enough that the CFO interrupted the demo and asked to see it with their own data. Our standard deck leads with the two messages that are irrelevant to this buyer and hides the one that sells.",
+   "messaging": "Build a first-call variant for non-technical, domestic businesses that opens with M9 payout-to-ERP reconciliation and drops M1/M2 from the opening."
+  },
+  "decided": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E30",
+     "excerpt": "Wen asked for one month of their statements, the controller sent them over",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E31",
+     "excerpt": "It was something like 60 hours a month across two people.",
+     "label": "opinion",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E33",
+     "excerpt": "that's my number, not yours.",
+     "label": "quote",
+     "speaker": "Ines (CFO)",
+     "verified": true
+    },
+    {
+     "id": "E36",
+     "excerpt": "Dead, honestly. I had it at 20 percent.",
+     "label": "opinion",
+     "speaker": "Dana",
+     "verified": true
+    }
+   ],
+   "insight": "The deal turned when the value case was built from the customer's statements, hours and write-offs, so the CFO owned the number rather than discounting a vendor's claim. A generic 'independent economic impact study' (M6) is exactly the yours, not mine kind of number she would have dismissed. The rep had the deal at 20 percent even after the decider said 'go back' and asked for a demo on her own data, which was the clearest buying signal in the deal. The rep can't recall the exact figure, so the win's central artifact isn't preserved.",
+   "messaging": "Rework M6 from citing an external study to an offer: give us one month of statements and we'll price your manual matching and unmatched-deposit write-offs."
+  },
+  "gaps": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E37",
+     "excerpt": "She wanted to talk to another distributor. Wholesale, invoices, that kind of business.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E39",
+     "excerpt": "this is a company that sells sweaters.",
+     "label": "quote",
+     "speaker": "Ines (CFO)",
+     "verified": true
+    },
+    {
+     "id": "E40",
+     "excerpt": "We never got her a call. She signed anyway, but she brought it up twice.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    },
+    {
+     "id": "E42",
+     "excerpt": "Wen said yes and showed a slide. We didn't demo it. She let it go.",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    }
+   ],
+   "insight": "M8 ('trusted by leading businesses') failed in practice: we had no wholesale or distributor reference, and the retail story we sent was dismissed outright. She raised it twice, so we won despite the gap, not because it didn't matter. Branch counter reporting across 14 branches got only a slide, and the transcript doesn't say whether that part delivered. That makes it an unproven promise inside a deal that includes branch card processing.",
+   "messaging": "Source a wholesale/distributor reference (ideally this customer, once live) and add a live demo of counter and online payouts landing in one report to M3/M9 proof."
+  },
+  "language": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E8",
+     "excerpt": "month-end is a week of archaeology.",
+     "label": "quote",
+     "speaker": "Ines (CFO)",
+     "verified": true
+    },
+    {
+     "id": "E43",
+     "excerpt": "I just want to know where my money is.",
+     "label": "quote",
+     "speaker": "Ines (CFO)",
+     "verified": true
+    },
+    {
+     "id": "E44",
+     "excerpt": "She never once said 'payments.' She'd say 'the deposits.' Paul would say 'the processor.' Nobody said 'infrastructure.'",
+     "label": "fact",
+     "speaker": "Dana",
+     "verified": true
+    }
+   ],
+   "insight": "The buyer's vocabulary is deposits, month-end and knowing where the money is. Ours is infrastructure, payments and global growth. She describes our winning feature as an outcome (visibility, a shorter close), while we describe it as a mechanism (payouts reconcile to transactions).",
+   "messaging": "Rewrite M9 in the buyer's words, e.g. know where every deposit is and close month-end without the archaeology, and use 'deposits' rather than 'payouts' or 'payments' with finance buyers."
+  }
+ },
+ "close": {
+  "gaps": [
+   {
+    "question": "What was the exact dollar value of the business case Wen built?",
+    "kind": "unknown",
+    "follow_up": "Ask Wen for the model built from the customer's statements (hours, cost basis, write-offs) so it can become a reusable template and proof point."
+   },
+   {
+    "question": "What, if anything, did Fiserv or the bank show or offer beyond a rate review?",
+    "kind": "unknown",
+    "follow_up": "Ask Ines (or Paul) in a post-sale check-in whether the bank came back with anything beyond rates and what would have kept them."
+   },
+   {
+    "question": "What changed in their questions after they talked to the bank?",
+    "kind": "dodged",
+    "follow_up": "Ask Dana whether the named-contact request changed how she positioned support, and whether Ines raised any other new concerns after the bank call."
+   },
+   {
+    "question": "Did branch counter card readers actually land in the same report as the portal, and has branch volume moved?",
+    "kind": "skipped",
+    "follow_up": "Ask Wen or the implementation lead whether the 14 branches are live and reconciling in the same report, since this was only shown on a slide."
+   },
+   {
+    "question": "Is the distributor reference still owed, and would this customer become one?",
+    "kind": "skipped",
+    "follow_up": "Ask Dana whether Ines still expects the reference call and whether she would act as a distributor reference once month-end close improves."
+   }
+  ],
+  "rep_takeaway": "When the inbound names a project (like a portal), ask early who loses sleep over the money side and whose process is broken. Here the decider was in finance, and a portal-first proposal cost weeks. Treat a decider interrupting a demo with 'go back' and asking for her own data as a strong buying signal, not a 20-percent deal. Then save the value model you build with them, because it is the win's best proof."
+ },
+ "confidence": "high",
+ "checks": {
+  "quotes_total": 27,
+  "quotes_failed": 0,
+  "failed": [],
+  "prose_unquoted": [
+   {
+    "where": "decided",
+    "text": "yours, not mine"
+   }
+  ]
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5",
+   "strategist": "claude-opus-5-5"
+  },
+  "ms": 126563,
+  "cost": 0.389768,
+  "stage_ms": {
+   "reader": 53832,
+   "analyst": 51316,
+   "strategist": 21415
+  },
+  "stage_cost": {
+   "reader": 0.103024,
+   "analyst": 0.20218399999999997,
+   "strategist": 0.08456
+  },
+  "reader_items": 45,
+  "reader_verbatim": 45
+ }
+}

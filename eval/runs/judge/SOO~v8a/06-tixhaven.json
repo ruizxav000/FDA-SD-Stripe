@@ -1,0 +1,51 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":0,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":1,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"ACV is $250,000 per year, and the close does not list deal size as a gap\",\"pass\":true},\n  {\"item\":\"\\\"so it's a queue with a faster timer\\\" is tied to a messaging change\",\"pass\":true},\n  {\"item\":\"\\\"Over-promised\\\" is labeled opinion\",\"pass\":true},\n  {\"item\":\"The champion (Ben) and the decider (Halima) are distinguished\",\"pass\":true},\n  {\"item\":\"The passing remark that failures had happened twice before is surfaced in the trigger\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report gets the core story right. The trigger was a support failure the CEO could see, the champion (CTO Ben) and decider (COO Halima) are kept separate, and 'over-promised' is correctly labeled opinion. Its four messaging changes match the key's direction one for one. It misses the key's framing that both gaps were closable by the team rather than product gaps, and its close omits commercial terms and the follow-up with the support team on named on-sale coverage. Competitor/incumbent scored 0 strictly against the key, but the transcript never names Checkout.com or an in-house bank gateway, so the report's 'unnamed' answers are faithful to the source and the key should be checked.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 0,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 1,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "ACV is $250,000 per year, and the close does not list deal size as a gap",
+    "pass": true
+   },
+   {
+    "item": "\"so it's a queue with a faster timer\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "\"Over-promised\" is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The champion (Ben) and the decider (Halima) are distinguished",
+    "pass": true
+   },
+   {
+    "item": "The passing remark that failures had happened twice before is surfaced in the trigger",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core story right. The trigger was a support failure the CEO could see, the champion (CTO Ben) and decider (COO Halima) are kept separate, and 'over-promised' is correctly labeled opinion. Its four messaging changes match the key's direction one for one. It misses the key's framing that both gaps were closable by the team rather than product gaps, and its close omits commercial terms and the follow-up with the support team on named on-sale coverage. Competitor/incumbent scored 0 strictly against the key, but the transcript never names Checkout.com or an in-house bank gateway, so the report's 'unnamed' answers are faithful to the source and the key should be checked."
+ },
+ "ms": 26563,
+ "cost": 0.123808,
+ "in_tokens": 9122,
+ "out_tokens": 2542,
+ "model": "claude-opus-5-5"
+}

@@ -3,6 +3,7 @@
 *Mock transcript. The customer, the people and the conversation are invented for a demo. Nothing here is a real statement by or about any company.*
 
 - **Outcome:** Lost (renewal: international volume moved, US volume stayed)
+- **ACV:** $320,000 per year
 - **Competitor:** Adyen
 - **Incumbent:** Stripe
 - **Customer:** Online language-learning subscription with subscribers in more than 40 countries, a customer for four years
@@ -18,6 +19,10 @@
 **PMM:** Which ones?
 
 **Elena:** I don't know exactly. He mentioned Brazil and a couple in Europe. I never saw his analysis.
+
+**PMM:** Before that, how big was the deal?
+
+**Elena:** The account was worth about three hundred and twenty K a year. Roughly half of that was international.
 
 **PMM:** Who made the final call, and how do you know?
 

@@ -3,6 +3,7 @@
 *Mock transcript. The customer, the people and the conversation are invented for a demo. Nothing here is a real statement by or about any company.*
 
 - **Outcome:** Won
+- **ACV:** $210,000 per year
 - **Competitor:** Global Payments
 - **Incumbent:** Global Payments (through the customer's studio management software)
 - **Customer:** Boutique fitness chain, 62 studios, monthly memberships plus front-desk retail
@@ -18,6 +19,10 @@
 **PMM:** How big was that bucket?
 
 **Marcus:** I want to say a third of the churn? Don't quote me. It was in her board deck.
+
+**PMM:** Before that, how big was the deal?
+
+**Marcus:** Two hundred and ten K ACV. And that's memberships only, the front desks aren't in it.
 
 **PMM:** Who made the final call, and how do you know?
 

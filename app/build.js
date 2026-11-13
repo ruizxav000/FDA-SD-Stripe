@@ -15,10 +15,8 @@ const CONFIG = i > 0 ? process.argv[i + 1] : "SOO";
 
 const safe = (s) => s.replace(/<\/(script)/gi, "<\\/$1").replace(/<!--/g, "<\\!--");
 const rdir = path.join(ROOT, "eval/runs/reports", CONFIG);
-// 09 is 07 with the deal size stated; show it instead of 07 so one example carries an ACV.
-let files = fs.existsSync(rdir) ? fs.readdirSync(rdir).filter((f) => f.endsWith(".json")).sort() : [];
-if (files.some((f) => f.startsWith("09"))) files = files.filter((f) => !f.startsWith("07"));
-const REPS = { "01": "Dana", "02": "Marcus", "03": "Priya", "04": "Tom", "05": "Elena", "06": "Jordan", "07": "Sam", "08": "Renee", "09": "Sam" };
+const files = fs.existsSync(rdir) ? fs.readdirSync(rdir).filter((f) => f.endsWith(".json")).sort() : [];
+const REPS = { "01": "Dana", "02": "Marcus", "03": "Priya", "04": "Tom", "05": "Elena", "06": "Jordan", "07": "Sam", "08": "Renee" };
 const now = Date.now();
 const examples = files.map((f, n) => {
   const report = JSON.parse(fs.readFileSync(path.join(rdir, f), "utf8"));

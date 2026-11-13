@@ -1,0 +1,720 @@
+{
+ "ok": true,
+ "text": "{\"people\":[{\"name\":\"Renee\",\"role\":\"account executive (rep)\",\"side\":\"us\"},{\"name\":\"Owen\",\"role\":\"VP of Product at customer; champion who reached out\",\"side\":\"customer\"},{\"name\":\"Diane\",\"role\":\"CFO at customer; froze new vendor projects\",\"side\":\"customer\"},{\"name\":\"Unnamed engineering lead\",\"role\":\"customer engineering lead\",\"side\":\"customer\"},{\"name\":\"Unnamed former employee\",\"role\":\"built the homegrown billing system, has left\",\"side\":\"customer\"},{\"name\":\"PMM\",\"role\":\"interviewer\",\"side\":\"us\"}],\"competitors\":[],\"incumbent\":\"Homegrown billing system (built by a guy who left); effectively the customer's alternative was doing nothing\",\"evidence\":[{\"id\":\"E1\",\"turn\":2,\"excerpt\":\"Their VP of Product, Owen, had wanted to rebuild billing for a while.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Trigger was a long-standing champion desire, not a discrete event.\"},{\"id\":\"E2\",\"turn\":2,\"excerpt\":\"There wasn't one big thing.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Rep says no single triggering event.\"},{\"id\":\"E3\",\"turn\":2,\"excerpt\":\"The billing system is homegrown, built by a guy who left, and every pricing change takes them a quarter.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"trigger\",\"gaps\"],\"note\":\"Describes the pain of the incumbent: key-person loss, slow pricing changes.\"},{\"id\":\"E4\",\"turn\":2,\"excerpt\":\"He reached out to us.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Inbound from Owen.\"},{\"id\":\"E5\",\"turn\":4,\"excerpt\":\"He wanted it done before they launched a new pricing tier, but the tier didn't have a date either.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"No hard deadline; soft driver tied to an undated pricing tier.\"},{\"id\":\"E6\",\"turn\":6,\"excerpt\":\"It would have been about seventy-five K a year.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"outcome\"],\"note\":\"Deal size estimate, hedged with 'about'.\"},{\"id\":\"E7\",\"turn\":8,\"excerpt\":\"The CFO, I guess? Diane.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Decider named with uncertainty.\"},{\"id\":\"E8\",\"turn\":8,\"excerpt\":\"She froze it. Well, she froze everything.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"decided\",\"decider\"],\"note\":\"Freeze applied to all spend, relayed secondhand.\"},{\"id\":\"E9\",\"turn\":8,\"excerpt\":\"They missed their number in Q3 and she put a hold on all new vendor projects.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"decided\",\"outcome\"],\"note\":\"Cause of freeze: Q3 miss; all new vendor projects held.\"},{\"id\":\"E10\",\"turn\":8,\"excerpt\":\"So I don't know that you'd say she decided against us. She decided against everything.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"decided\",\"outcome\"],\"note\":\"Rep frames it as a blanket freeze, not a loss to us.\"},{\"id\":\"E11\",\"turn\":10,\"excerpt\":\"Owen told me. I never spoke to her.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"All knowledge of Diane and the freeze is secondhand via Owen.\"},{\"id\":\"E12\",\"turn\":12,\"excerpt\":\"No. Owen said he'd bring her in at the end.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Decider never in any meeting; planned late involvement.\"},{\"id\":\"E13\",\"turn\":14,\"excerpt\":\"There wasn't one. It was us against doing nothing.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"No competitor; status quo was the alternative.\"},{\"id\":\"E14\",\"turn\":14,\"excerpt\":\"Owen never looked at anybody else, as far as I know.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Hedged; rep cannot confirm Owen evaluated no others.\"},{\"id\":\"E15\",\"turn\":16,\"excerpt\":\"Toward the end Owen started asking for things for finance.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"gaps\",\"message\"],\"note\":\"Shift in customer questions toward finance justification.\"},{\"id\":\"E16\",\"turn\":16,\"excerpt\":\"\\\"do you have something that shows payback?\\\"\",\"label\":\"quote\",\"speaker\":\"Owen\",\"paraphrase\":false,\"topics\":[\"gaps\",\"language\"],\"note\":\"Owen asks for payback evidence.\"},{\"id\":\"E17\",\"turn\":16,\"excerpt\":\"That started maybe a month before the freeze.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Timing hedged with 'maybe'.\"},{\"id\":\"E18\",\"turn\":18,\"excerpt\":\"Reaction: the billing demo. Changing a price in a few clicks, trials, proration.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Demo of pricing changes drew the reaction.\"},{\"id\":\"E19\",\"turn\":18,\"excerpt\":\"\\\"that's a quarter of roadmap in five minutes.\\\"\",\"label\":\"quote\",\"speaker\":\"Owen\",\"paraphrase\":false,\"topics\":[\"message\",\"language\"],\"note\":\"Owen's reaction to the demo.\"},{\"id\":\"E20\",\"turn\":18,\"excerpt\":\"His engineers were into it.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Engineers responded positively to the demo.\"},{\"id\":\"E21\",\"turn\":18,\"excerpt\":\"I don't know that anything got silence.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Hedged on silence, then names revenue framing.\"},{\"id\":\"E22\",\"turn\":18,\"excerpt\":\"We only ever talked to product and engineering.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"decider\",\"gaps\"],\"note\":\"No contact with finance.\"},{\"id\":\"E23\",\"turn\":18,\"excerpt\":\"I guess the revenue framing.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Rep's guess at what got silence.\"},{\"id\":\"E24\",\"turn\":18,\"excerpt\":\"\\\"we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap.\\\"\",\"label\":\"quote\",\"speaker\":\"Owen\",\"paraphrase\":false,\"topics\":[\"message\",\"language\"],\"note\":\"Owen rejects the revenue-growth framing.\"},{\"id\":\"E25\",\"turn\":20,\"excerpt\":\"The freeze email.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"outcome\",\"decided\"],\"note\":\"A freeze email exists; moment rep felt it wouldn't close.\"},{\"id\":\"E26\",\"turn\":20,\"excerpt\":\"Before that we were in procurement. Well, we'd sent paper.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"outcome\"],\"note\":\"Self-corrected: paper sent, which is not the same as being in procurement.\"},{\"id\":\"E27\",\"turn\":22,\"excerpt\":\"I sent him the ROI deck. The general one, with the study.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Responded to payback request with a generic deck.\"},{\"id\":\"E28\",\"turn\":22,\"excerpt\":\"\\\"I can't get this past Diane without a number that's ours.\\\"\",\"label\":\"quote\",\"speaker\":\"Owen\",\"paraphrase\":false,\"topics\":[\"gaps\",\"decider\",\"language\"],\"note\":\"Owen needs a customer-specific number for Diane.\"},{\"id\":\"E29\",\"turn\":22,\"excerpt\":\"We were going to set up a session to build one. Then Q3 closed.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"gaps\",\"outcome\"],\"note\":\"Planned ROI-building session never happened before Q3 close.\"},{\"id\":\"E30\",\"turn\":24,\"excerpt\":\"About a month.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Approximate gap between payback ask and freeze.\"},{\"id\":\"E31\",\"turn\":26,\"excerpt\":\"The number. Their own. What the homegrown system costs them.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Main unmet ask: customer-specific cost of status quo.\"},{\"id\":\"E32\",\"turn\":26,\"excerpt\":\"he mentioned once that some landlord subscriptions lapse because the card fails and nobody chases it. We never added it up.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Churn from failed cards was mentioned but never quantified. Customers are landlords.\"},{\"id\":\"E33\",\"turn\":26,\"excerpt\":\"He also asked about migration.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Migration questions raised.\"},{\"id\":\"E34\",\"turn\":26,\"excerpt\":\"Moving the existing subscriptions over without asking landlords for their card details again, and whether they could do it in stages.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Specific migration requirements: no card re-entry, staged.\"},{\"id\":\"E35\",\"turn\":26,\"excerpt\":\"\\\"we don't touch billing before renewal season.\\\"\",\"label\":\"quote\",\"speaker\":\"customer engineering lead\",\"paraphrase\":false,\"topics\":[\"gaps\",\"trigger\"],\"note\":\"Timing constraint on migration.\"},{\"id\":\"E36\",\"turn\":26,\"excerpt\":\"We had a doc for that. He wanted to talk to someone who'd done it.\",\"label\":\"fact\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Doc existed; Owen wanted a reference customer, unclear if provided.\"},{\"id\":\"E37\",\"turn\":28,\"excerpt\":\"Owen's was \\\"a tax on the roadmap.\\\"\",\"label\":\"quote\",\"speaker\":\"Owen\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Owen's problem phrase.\"},{\"id\":\"E38\",\"turn\":28,\"excerpt\":\"\\\"if it isn't on fire, it isn't funded.\\\"\",\"label\":\"quote\",\"speaker\":\"Diane\",\"paraphrase\":false,\"topics\":[\"language\",\"decided\"],\"note\":\"Diane's words relayed through Owen.\"},{\"id\":\"E39\",\"turn\":28,\"excerpt\":\"Owen said finance saw it as a nice to have.\",\"label\":\"fact\",\"speaker\":\"Owen\",\"paraphrase\":false,\"topics\":[\"language\",\"decided\"],\"note\":\"Reported by Owen, not verbatim; finance's view.\"},{\"id\":\"E40\",\"turn\":30,\"excerpt\":\"For Owen, yeah. For Diane, no.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"decided\",\"language\"],\"note\":\"Rep's read on urgency by person.\"},{\"id\":\"E41\",\"turn\":30,\"excerpt\":\"I don't think anyone told her what it was costing.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"gaps\",\"decider\"],\"note\":\"Assumption Diane never saw cost of status quo.\"},{\"id\":\"E42\",\"turn\":32,\"excerpt\":\"It's timing. It'll come back next year.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"outcome\"],\"note\":\"Rep predicts revival; no evidence given.\"},{\"id\":\"E43\",\"turn\":32,\"excerpt\":\"I don't think there was anything we could have done.\",\"label\":\"opinion\",\"speaker\":\"Renee\",\"paraphrase\":false,\"topics\":[\"outcome\",\"gaps\"],\"note\":\"Contradicts the unmet ROI number and no finance access.\"}],\"contradictions\":[{\"evidence\":[\"E43\",\"E31\",\"E22\",\"E29\"],\"what\":\"Rep says nothing could have been done, yet describes an unmet ask for a customer-specific cost number, no contact with finance, and an ROI session never held.\"},{\"evidence\":[\"E7\",\"E10\",\"E11\",\"E12\"],\"what\":\"Diane is named decider with 'I guess', never met or in any meeting, and all knowledge is secondhand via Owen.\"},{\"evidence\":[\"E21\",\"E23\",\"E24\"],\"what\":\"Rep first says nothing got silence, then names the revenue framing, which Owen explicitly rejected.\"},{\"evidence\":[\"E26\",\"E25\"],\"what\":\"Rep says 'in procurement', then corrects to 'we'd sent paper', so procurement stage is overstated.\"},{\"evidence\":[\"E10\",\"E42\"],\"what\":\"Rep frames the freeze as not a decision against us, yet earlier says 'we' lost momentum when the payback ask went unmet and CFO saw it as nice to have.\"},{\"evidence\":[\"E42\",\"E35\"],\"what\":\"Rep says timing will resolve next year, but engineering lead says no billing changes before renewal season, and finance saw it as nice to have.\"}],\"dodges\":[{\"question\":\"Which part of our pitch got silence?\",\"turn\":18,\"what\":\"Started with 'I don't know that anything got silence', then guessed revenue framing.\"},{\"question\":\"Who made the final call, and how do you know?\",\"turn\":8,\"what\":\"Answered 'The CFO, I guess?' and reframed as a freeze on everything; basis was only Owen's report.\"},{\"question\":\"When did you first feel this wasn't going to close? What happened right before?\",\"turn\":20,\"what\":\"Gave only the freeze email at first; the payback ask came only after a follow-up.\"},{\"question\":\"Anything else?\",\"turn\":32,\"what\":\"Closed with 'nothing we could have done' despite earlier describing gaps.\"}],\"skipped\":[],\"language_pairs\":[{\"theirs\":\"a tax on the roadmap\",\"ours\":\"growing revenue\",\"evidence\":[\"E37\",\"E24\"]},{\"theirs\":\"a number that's ours / payback\",\"ours\":\"general ROI deck with the study\",\"evidence\":[\"E28\",\"E16\",\"E27\"]},{\"theirs\":\"nice to have / if it isn't on fire, it isn't funded\",\"ours\":\"revenue growth framing\",\"evidence\":[\"E38\",\"E39\",\"E24\"]},{\"theirs\":\"a quarter of roadmap in five minutes\",\"ours\":\"changing a price in a few clicks, trials, proration\",\"evidence\":[\"E19\",\"E18\"]}],\"outcome_signals\":[{\"evidence\":[\"E8\",\"E9\",\"E10\"],\"what\":\"Deal frozen by CFO's hold on all new vendor projects after Q3 miss; rep says not a loss to us. No signature.\"},{\"evidence\":[\"E25\",\"E26\"],\"what\":\"Freeze email arrived after paper was sent. Not closed-won; closer to no-decision.\"},{\"evidence\":[\"E6\"],\"what\":\"Deal would have been about 75K a year; none of it moved.\"},{\"evidence\":[\"E42\",\"E35\"],\"what\":\"Rep expects it to return next year; engineering lead's renewal-season caution and finance's nice-to-have view cut against that.\"}]}",
+ "data": {
+  "people": [
+   {
+    "name": "Renee",
+    "role": "account executive (rep)",
+    "side": "us"
+   },
+   {
+    "name": "Owen",
+    "role": "VP of Product at customer; champion who reached out",
+    "side": "customer"
+   },
+   {
+    "name": "Diane",
+    "role": "CFO at customer; froze new vendor projects",
+    "side": "customer"
+   },
+   {
+    "name": "Unnamed engineering lead",
+    "role": "customer engineering lead",
+    "side": "customer"
+   },
+   {
+    "name": "Unnamed former employee",
+    "role": "built the homegrown billing system, has left",
+    "side": "customer"
+   },
+   {
+    "name": "PMM",
+    "role": "interviewer",
+    "side": "us"
+   }
+  ],
+  "competitors": [],
+  "incumbent": "Homegrown billing system (built by a guy who left); effectively the customer's alternative was doing nothing",
+  "evidence": [
+   {
+    "id": "E1",
+    "turn": 2,
+    "excerpt": "Their VP of Product, Owen, had wanted to rebuild billing for a while.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Trigger was a long-standing champion desire, not a discrete event."
+   },
+   {
+    "id": "E2",
+    "turn": 2,
+    "excerpt": "There wasn't one big thing.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Rep says no single triggering event."
+   },
+   {
+    "id": "E3",
+    "turn": 2,
+    "excerpt": "The billing system is homegrown, built by a guy who left, and every pricing change takes them a quarter.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "trigger",
+     "gaps"
+    ],
+    "note": "Describes the pain of the incumbent: key-person loss, slow pricing changes."
+   },
+   {
+    "id": "E4",
+    "turn": 2,
+    "excerpt": "He reached out to us.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Inbound from Owen."
+   },
+   {
+    "id": "E5",
+    "turn": 4,
+    "excerpt": "He wanted it done before they launched a new pricing tier, but the tier didn't have a date either.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "No hard deadline; soft driver tied to an undated pricing tier."
+   },
+   {
+    "id": "E6",
+    "turn": 6,
+    "excerpt": "It would have been about seventy-five K a year.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "outcome"
+    ],
+    "note": "Deal size estimate, hedged with 'about'."
+   },
+   {
+    "id": "E7",
+    "turn": 8,
+    "excerpt": "The CFO, I guess? Diane.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Decider named with uncertainty."
+   },
+   {
+    "id": "E8",
+    "turn": 8,
+    "excerpt": "She froze it. Well, she froze everything.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "decider"
+    ],
+    "note": "Freeze applied to all spend, relayed secondhand."
+   },
+   {
+    "id": "E9",
+    "turn": 8,
+    "excerpt": "They missed their number in Q3 and she put a hold on all new vendor projects.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "outcome"
+    ],
+    "note": "Cause of freeze: Q3 miss; all new vendor projects held."
+   },
+   {
+    "id": "E10",
+    "turn": 8,
+    "excerpt": "So I don't know that you'd say she decided against us. She decided against everything.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "outcome"
+    ],
+    "note": "Rep frames it as a blanket freeze, not a loss to us."
+   },
+   {
+    "id": "E11",
+    "turn": 10,
+    "excerpt": "Owen told me. I never spoke to her.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "All knowledge of Diane and the freeze is secondhand via Owen."
+   },
+   {
+    "id": "E12",
+    "turn": 12,
+    "excerpt": "No. Owen said he'd bring her in at the end.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Decider never in any meeting; planned late involvement."
+   },
+   {
+    "id": "E13",
+    "turn": 14,
+    "excerpt": "There wasn't one. It was us against doing nothing.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "No competitor; status quo was the alternative."
+   },
+   {
+    "id": "E14",
+    "turn": 14,
+    "excerpt": "Owen never looked at anybody else, as far as I know.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Hedged; rep cannot confirm Owen evaluated no others."
+   },
+   {
+    "id": "E15",
+    "turn": 16,
+    "excerpt": "Toward the end Owen started asking for things for finance.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "message"
+    ],
+    "note": "Shift in customer questions toward finance justification."
+   },
+   {
+    "id": "E16",
+    "turn": 16,
+    "excerpt": "\"do you have something that shows payback?\"",
+    "label": "quote",
+    "speaker": "Owen",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "language"
+    ],
+    "note": "Owen asks for payback evidence."
+   },
+   {
+    "id": "E17",
+    "turn": 16,
+    "excerpt": "That started maybe a month before the freeze.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Timing hedged with 'maybe'."
+   },
+   {
+    "id": "E18",
+    "turn": 18,
+    "excerpt": "Reaction: the billing demo. Changing a price in a few clicks, trials, proration.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Demo of pricing changes drew the reaction."
+   },
+   {
+    "id": "E19",
+    "turn": 18,
+    "excerpt": "\"that's a quarter of roadmap in five minutes.\"",
+    "label": "quote",
+    "speaker": "Owen",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "language"
+    ],
+    "note": "Owen's reaction to the demo."
+   },
+   {
+    "id": "E20",
+    "turn": 18,
+    "excerpt": "His engineers were into it.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Engineers responded positively to the demo."
+   },
+   {
+    "id": "E21",
+    "turn": 18,
+    "excerpt": "I don't know that anything got silence.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Hedged on silence, then names revenue framing."
+   },
+   {
+    "id": "E22",
+    "turn": 18,
+    "excerpt": "We only ever talked to product and engineering.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "gaps"
+    ],
+    "note": "No contact with finance."
+   },
+   {
+    "id": "E23",
+    "turn": 18,
+    "excerpt": "I guess the revenue framing.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Rep's guess at what got silence."
+   },
+   {
+    "id": "E24",
+    "turn": 18,
+    "excerpt": "\"we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap.\"",
+    "label": "quote",
+    "speaker": "Owen",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "language"
+    ],
+    "note": "Owen rejects the revenue-growth framing."
+   },
+   {
+    "id": "E25",
+    "turn": 20,
+    "excerpt": "The freeze email.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "outcome",
+     "decided"
+    ],
+    "note": "A freeze email exists; moment rep felt it wouldn't close."
+   },
+   {
+    "id": "E26",
+    "turn": 20,
+    "excerpt": "Before that we were in procurement. Well, we'd sent paper.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "outcome"
+    ],
+    "note": "Self-corrected: paper sent, which is not the same as being in procurement."
+   },
+   {
+    "id": "E27",
+    "turn": 22,
+    "excerpt": "I sent him the ROI deck. The general one, with the study.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Responded to payback request with a generic deck."
+   },
+   {
+    "id": "E28",
+    "turn": 22,
+    "excerpt": "\"I can't get this past Diane without a number that's ours.\"",
+    "label": "quote",
+    "speaker": "Owen",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "decider",
+     "language"
+    ],
+    "note": "Owen needs a customer-specific number for Diane."
+   },
+   {
+    "id": "E29",
+    "turn": 22,
+    "excerpt": "We were going to set up a session to build one. Then Q3 closed.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "outcome"
+    ],
+    "note": "Planned ROI-building session never happened before Q3 close."
+   },
+   {
+    "id": "E30",
+    "turn": 24,
+    "excerpt": "About a month.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Approximate gap between payback ask and freeze."
+   },
+   {
+    "id": "E31",
+    "turn": 26,
+    "excerpt": "The number. Their own. What the homegrown system costs them.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Main unmet ask: customer-specific cost of status quo."
+   },
+   {
+    "id": "E32",
+    "turn": 26,
+    "excerpt": "he mentioned once that some landlord subscriptions lapse because the card fails and nobody chases it. We never added it up.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Churn from failed cards was mentioned but never quantified. Customers are landlords."
+   },
+   {
+    "id": "E33",
+    "turn": 26,
+    "excerpt": "He also asked about migration.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Migration questions raised."
+   },
+   {
+    "id": "E34",
+    "turn": 26,
+    "excerpt": "Moving the existing subscriptions over without asking landlords for their card details again, and whether they could do it in stages.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Specific migration requirements: no card re-entry, staged."
+   },
+   {
+    "id": "E35",
+    "turn": 26,
+    "excerpt": "\"we don't touch billing before renewal season.\"",
+    "label": "quote",
+    "speaker": "customer engineering lead",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "trigger"
+    ],
+    "note": "Timing constraint on migration."
+   },
+   {
+    "id": "E36",
+    "turn": 26,
+    "excerpt": "We had a doc for that. He wanted to talk to someone who'd done it.",
+    "label": "fact",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Doc existed; Owen wanted a reference customer, unclear if provided."
+   },
+   {
+    "id": "E37",
+    "turn": 28,
+    "excerpt": "Owen's was \"a tax on the roadmap.\"",
+    "label": "quote",
+    "speaker": "Owen",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Owen's problem phrase."
+   },
+   {
+    "id": "E38",
+    "turn": 28,
+    "excerpt": "\"if it isn't on fire, it isn't funded.\"",
+    "label": "quote",
+    "speaker": "Diane",
+    "paraphrase": false,
+    "topics": [
+     "language",
+     "decided"
+    ],
+    "note": "Diane's words relayed through Owen."
+   },
+   {
+    "id": "E39",
+    "turn": 28,
+    "excerpt": "Owen said finance saw it as a nice to have.",
+    "label": "fact",
+    "speaker": "Owen",
+    "paraphrase": false,
+    "topics": [
+     "language",
+     "decided"
+    ],
+    "note": "Reported by Owen, not verbatim; finance's view."
+   },
+   {
+    "id": "E40",
+    "turn": 30,
+    "excerpt": "For Owen, yeah. For Diane, no.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "language"
+    ],
+    "note": "Rep's read on urgency by person."
+   },
+   {
+    "id": "E41",
+    "turn": 30,
+    "excerpt": "I don't think anyone told her what it was costing.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "decider"
+    ],
+    "note": "Assumption Diane never saw cost of status quo."
+   },
+   {
+    "id": "E42",
+    "turn": 32,
+    "excerpt": "It's timing. It'll come back next year.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "outcome"
+    ],
+    "note": "Rep predicts revival; no evidence given."
+   },
+   {
+    "id": "E43",
+    "turn": 32,
+    "excerpt": "I don't think there was anything we could have done.",
+    "label": "opinion",
+    "speaker": "Renee",
+    "paraphrase": false,
+    "topics": [
+     "outcome",
+     "gaps"
+    ],
+    "note": "Contradicts the unmet ROI number and no finance access."
+   }
+  ],
+  "contradictions": [
+   {
+    "evidence": [
+     "E43",
+     "E31",
+     "E22",
+     "E29"
+    ],
+    "what": "Rep says nothing could have been done, yet describes an unmet ask for a customer-specific cost number, no contact with finance, and an ROI session never held."
+   },
+   {
+    "evidence": [
+     "E7",
+     "E10",
+     "E11",
+     "E12"
+    ],
+    "what": "Diane is named decider with 'I guess', never met or in any meeting, and all knowledge is secondhand via Owen."
+   },
+   {
+    "evidence": [
+     "E21",
+     "E23",
+     "E24"
+    ],
+    "what": "Rep first says nothing got silence, then names the revenue framing, which Owen explicitly rejected."
+   },
+   {
+    "evidence": [
+     "E26",
+     "E25"
+    ],
+    "what": "Rep says 'in procurement', then corrects to 'we'd sent paper', so procurement stage is overstated."
+   },
+   {
+    "evidence": [
+     "E10",
+     "E42"
+    ],
+    "what": "Rep frames the freeze as not a decision against us, yet earlier says 'we' lost momentum when the payback ask went unmet and CFO saw it as nice to have."
+   },
+   {
+    "evidence": [
+     "E42",
+     "E35"
+    ],
+    "what": "Rep says timing will resolve next year, but engineering lead says no billing changes before renewal season, and finance saw it as nice to have."
+   }
+  ],
+  "dodges": [
+   {
+    "question": "Which part of our pitch got silence?",
+    "turn": 18,
+    "what": "Started with 'I don't know that anything got silence', then guessed revenue framing."
+   },
+   {
+    "question": "Who made the final call, and how do you know?",
+    "turn": 8,
+    "what": "Answered 'The CFO, I guess?' and reframed as a freeze on everything; basis was only Owen's report."
+   },
+   {
+    "question": "When did you first feel this wasn't going to close? What happened right before?",
+    "turn": 20,
+    "what": "Gave only the freeze email at first; the payback ask came only after a follow-up."
+   },
+   {
+    "question": "Anything else?",
+    "turn": 32,
+    "what": "Closed with 'nothing we could have done' despite earlier describing gaps."
+   }
+  ],
+  "skipped": [],
+  "language_pairs": [
+   {
+    "theirs": "a tax on the roadmap",
+    "ours": "growing revenue",
+    "evidence": [
+     "E37",
+     "E24"
+    ]
+   },
+   {
+    "theirs": "a number that's ours / payback",
+    "ours": "general ROI deck with the study",
+    "evidence": [
+     "E28",
+     "E16",
+     "E27"
+    ]
+   },
+   {
+    "theirs": "nice to have / if it isn't on fire, it isn't funded",
+    "ours": "revenue growth framing",
+    "evidence": [
+     "E38",
+     "E39",
+     "E24"
+    ]
+   },
+   {
+    "theirs": "a quarter of roadmap in five minutes",
+    "ours": "changing a price in a few clicks, trials, proration",
+    "evidence": [
+     "E19",
+     "E18"
+    ]
+   }
+  ],
+  "outcome_signals": [
+   {
+    "evidence": [
+     "E8",
+     "E9",
+     "E10"
+    ],
+    "what": "Deal frozen by CFO's hold on all new vendor projects after Q3 miss; rep says not a loss to us. No signature."
+   },
+   {
+    "evidence": [
+     "E25",
+     "E26"
+    ],
+    "what": "Freeze email arrived after paper was sent. Not closed-won; closer to no-decision."
+   },
+   {
+    "evidence": [
+     "E6"
+    ],
+    "what": "Deal would have been about 75K a year; none of it moved."
+   },
+   {
+    "evidence": [
+     "E42",
+     "E35"
+    ],
+    "what": "Rep expects it to return next year; engineering lead's renewal-season caution and finance's nice-to-have view cut against that."
+   }
+  ]
+ },
+ "ms": 35112,
+ "cost": 0.07042799999999999,
+ "in_tokens": 4103,
+ "out_tokens": 5402,
+ "model": "claude-sonnet-5-5"
+}

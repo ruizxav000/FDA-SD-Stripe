@@ -3,6 +3,7 @@
 **Input:** `05-kestrel-learning.txt` (plain text). The AE is **Elena**. This is a renewal: **we are the incumbent.**
 
 ## Header
+- **ACV:** $320,000 per year, quoting the AE's words.
 - **Outcome:** Lost · **Scope note:** **renewal split. International volume moved to Adyen; US volume stayed.**
 - **Competitor:** Adyen · **Incumbent:** Stripe (us)
 - **Tag:** **Approval rates**. Acceptable alternative: *Champion or access* (the original buyer left, and there was no relationship with the new head of payments). The report should name the runner-up.
@@ -54,6 +55,7 @@
 - **Rep takeaway:** an account with no complaints still needs regular reviews. Know when the buyer changes.
 
 ## Must catch
+- [ ] ACV is **$320,000** per year, and the close does **not** list deal size as a gap.
 - [ ] The outcome carries the **international-only scope note**.
 - [ ] "Decided before we got in the room" is challenged with the coverage facts.
 - [ ] *"that's an average. What's mine?"* is tied to a messaging change.

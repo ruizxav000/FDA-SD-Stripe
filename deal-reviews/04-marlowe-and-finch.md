@@ -3,6 +3,7 @@
 *Mock transcript. The customer, the people and the conversation are invented for a demo. Nothing here is a real statement by or about any company.*
 
 - **Outcome:** Lost
+- **ACV:** $600,000 per year
 - **Competitor:** Adyen
 - **Incumbent:** Separate providers for stores and for online
 - **Customer:** Apparel retailer, about 120 stores plus ecommerce
@@ -14,6 +15,10 @@
 **PMM:** Thanks for doing this, Tom. I know it's not a fun one. What happened at the customer that started this evaluation?
 
 **Tom:** Returns. Last holiday season. Buy online, return in store. The store couldn't see the online order, so staff were refunding to gift cards or telling people to mail it back. And they'd just launched a loyalty program that was supposed to work everywhere and didn't, because store and web were two different customer records. Their COO, Angela, apparently stood in a store on December 27th watching the returns queue. That's the story everybody there tells.
+
+**PMM:** Before that, how big was the deal?
+
+**Tom:** We proposed six hundred K a year. Stores and online together, one contract.
 
 **PMM:** Who made the final call, and how do you know?
 

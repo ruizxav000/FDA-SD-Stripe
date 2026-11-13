@@ -3,6 +3,7 @@
 **Input:** `01-tallowfield-supply.vtt` (Zoom). The AE is **Dana**. The interviewer is labeled PMM.
 
 ## Header
+- **ACV:** $140,000 per year, quoting the AE's words.
 - **Outcome:** Won · **Scope note:** none
 - **Competitor:** Fiserv · **Incumbent:** Fiserv, through the customer's bank
 - **Tag:** **Value proof**. The win came from a dollar figure built on the customer's own data.
@@ -58,6 +59,7 @@
 - **Rep takeaway:** find the economic buyer before writing the first proposal. The rep already named this ("Find the CFO sooner").
 
 ## Must catch
+- [ ] ACV is **$140,000** per year, and the close does **not** list deal size as a gap.
 - [ ] The real trigger is the CFO's month-end close, not the portal.
 - [ ] No dollar figure is stated. The rep doesn't know it.
 - [ ] Fiserv's pitch stays **unknown**.

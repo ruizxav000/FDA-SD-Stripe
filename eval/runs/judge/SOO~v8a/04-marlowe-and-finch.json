@@ -1,0 +1,53 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":2,\"message\":1,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"ACV is $600,000 per year, and the close does not list deal size as a gap\",\"pass\":true},\n  {\"item\":\"The decision-maker contradiction (Raj vs. Angela) is surfaced\",\"pass\":true},\n  {\"item\":\"\\\"that's a diagram\\\" is tied to a messaging change\",\"pass\":true},\n  {\"item\":\"The question shift (11 of 14 about stores) is reported as a fact\",\"pass\":true},\n  {\"item\":\"The rep's \\\"better product online\\\" is treated as opinion, not used as a reason\",\"pass\":true}\n ],\n \"fails\":[\n  \"Message insight says M3 'was read out word for word'; the transcript only says Tom 'had the slide', so this detail is not in the transcript.\"\n ],\n \"notes\":\"The report gets the core story right. It surfaces the Raj-versus-Angela contradiction, reports the 11-of-14 store question shift as a fact, and ties 'that's a diagram' to a show-it-live messaging change that matches the key's direction. It misses the incumbent (separate store and online providers), labels Angela's December 27 returns-queue story as opinion when it is secondhand fact, and the message insight doesn't name the key point: the category claim failed exactly where proof was needed. The close omits Adyen's commercial terms and whether a named partner rollout plan would have been accepted, and never asks Raj for the list of 14 questions.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 2,
+   "message": 1,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "ACV is $600,000 per year, and the close does not list deal size as a gap",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction (Raj vs. Angela) is surfaced",
+    "pass": true
+   },
+   {
+    "item": "\"that's a diagram\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "The question shift (11 of 14 about stores) is reported as a fact",
+    "pass": true
+   },
+   {
+    "item": "The rep's \"better product online\" is treated as opinion, not used as a reason",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Message insight says M3 'was read out word for word'; the transcript only says Tom 'had the slide', so this detail is not in the transcript."
+  ],
+  "notes": "The report gets the core story right. It surfaces the Raj-versus-Angela contradiction, reports the 11-of-14 store question shift as a fact, and ties 'that's a diagram' to a show-it-live messaging change that matches the key's direction. It misses the incumbent (separate store and online providers), labels Angela's December 27 returns-queue story as opinion when it is secondhand fact, and the message insight doesn't name the key point: the category claim failed exactly where proof was needed. The close omits Adyen's commercial terms and whether a named partner rollout plan would have been accepted, and never asks Raj for the list of 14 questions."
+ },
+ "ms": 26039,
+ "cost": 0.12202400000000001,
+ "in_tokens": 9034,
+ "out_tokens": 2488,
+ "model": "claude-opus-5-5"
+}

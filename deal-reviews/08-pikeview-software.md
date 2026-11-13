@@ -3,6 +3,7 @@
 *Mock transcript. The customer, the people and the conversation are invented for a demo. Nothing here is a real statement by or about any company.*
 
 - **Outcome:** No decision
+- **ACV:** $75,000 per year
 - **Competitor:** None (stay as they are)
 - **Incumbent:** Homegrown billing system on their bank's processor
 - **Customer:** Software company selling to property managers, bills landlords on subscriptions
@@ -18,6 +19,10 @@
 **PMM:** Was there a date they had to hit?
 
 **Renee:** Not really. He wanted it done before they launched a new pricing tier, but the tier didn't have a date either.
+
+**PMM:** Before that, how big was the deal?
+
+**Renee:** It would have been about seventy-five K a year.
 
 **PMM:** Who made the final call, and how do you know?
 

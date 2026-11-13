@@ -3,6 +3,7 @@
 *Mock transcript. The customer, the people and the conversation are invented for a demo. Nothing here is a real statement by or about any company.*
 
 - **Outcome:** Lost
+- **ACV:** $95,000 per year
 - **Competitor:** Fiserv
 - **Incumbent:** Fiserv (through the customer's bank)
 - **Customer:** Online garden and outdoor equipment retailer (greenhouses, mowers, tools), spring peak season
@@ -18,6 +19,10 @@
 **PMM:** One in twelve. Was that her number?
 
 **Sam:** Her number. Off their own dashboard.
+
+**PMM:** Before that, how big was the deal?
+
+**Sam:** Around ninety-five thousand a year. Ninety-five K ACV, on a two-year term.
 
 **PMM:** Who made the final call, and how do you know?
 

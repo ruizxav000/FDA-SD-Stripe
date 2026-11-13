@@ -3,6 +3,7 @@
 **Input:** `04-marlowe-and-finch.txt` (plain text). The AE is **Tom**.
 
 ## Header
+- **ACV:** $600,000 per year, quoting the AE's words.
 - **Outcome:** Lost · **Scope note:** none
 - **Competitor:** Adyen · **Incumbent:** separate providers for stores and for online
 - **Tag:** **In-store and online together**. Acceptable alternative: *Support and service* (rollout team, installs).
@@ -52,6 +53,7 @@
 - **Rep takeaway:** show, don't describe, and sell to the person who owns the problem. "Better product online" didn't matter to the store-side decider.
 
 ## Must catch
+- [ ] ACV is **$600,000** per year, and the close does **not** list deal size as a gap.
 - [ ] The decision-maker contradiction (Raj vs. Angela) is surfaced.
 - [ ] *"that's a diagram"* is tied to a messaging change.
 - [ ] The question shift (11 of 14 about stores) is reported as a fact.

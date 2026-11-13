@@ -3,6 +3,7 @@
 **Input:** `02-corelane-fitness.txt`. **No speaker names:** Speaker 1 = interviewer, **Speaker 2 = the AE (Marcus)**.
 
 ## Header
+- **ACV:** $210,000 per year, quoting the AE's words.
 - **Outcome:** Won · **Scope note:** **online memberships only. The front desk is still on Global Payments, and phase two has no date (it depends on a partner integration).**
 - **Competitor:** Global Payments · **Incumbent:** Global Payments, through the studio management software
 - **Tag:** **Value proof** (failed-payment recovery shown on their own file). Acceptable alternative: *In-store and online together*, which explains why the win is only partial.
@@ -54,6 +55,7 @@
 - **Rep takeaway:** treat the front desk as a live deal, not a done one. Find the person whose signature is needed earlier.
 
 ## Must catch
+- [ ] ACV is **$210,000** per year, and the close does **not** list deal size as a gap.
 - [ ] The outcome carries the **online-only scope note**.
 - [ ] The decision-maker contradiction is surfaced (Maya chose, Greg decided).
 - [ ] Customer language is marked **Not covered**.

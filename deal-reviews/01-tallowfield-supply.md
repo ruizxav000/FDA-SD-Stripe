@@ -3,6 +3,7 @@
 *Mock transcript. The customer, the people and the conversation are invented for a demo. Nothing here is a real statement by or about any company.*
 
 - **Outcome:** Won
+- **ACV:** $140,000 per year
 - **Competitor:** Fiserv
 - **Incumbent:** Fiserv (through the customer's bank)
 - **Customer:** Regional restaurant-supply distributor, 14 branches, launching an online ordering portal
@@ -18,6 +19,10 @@
 **PMM:** And was it the portal?
 
 **Dana:** Kind of? The portal was the excuse. The real thing, and I didn't get this until maybe the third call, was they had a new CFO. Ines. She'd been there about four months, and her first month-end close took nine days. A chunk of that was two people in finance matching deposits from the bank against the processor statements against invoices in the ERP. By hand, in spreadsheets. She said, and I wrote this down, "month-end is a week of archaeology."
+
+**PMM:** Before that, how big was the deal?
+
+**Dana:** About a hundred and forty K a year. Card processing across the portal and the branch counters, plus the reconciliation piece.
 
 **PMM:** Who made the final call, and how do you know?
 

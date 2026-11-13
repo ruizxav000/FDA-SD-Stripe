@@ -1,0 +1,51 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":1,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"ACV is $320,000 per year, and the close does not list deal size as a gap\",\"pass\":true},\n  {\"item\":\"The outcome carries the international-only scope note\",\"pass\":true},\n  {\"item\":\"\\\"Decided before we got in the room\\\" is challenged with the coverage facts\",\"pass\":true},\n  {\"item\":\"\\\"that's an average. What's mine?\\\" is tied to a messaging change\",\"pass\":true},\n  {\"item\":\"The Adyen test results stay unknown\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report gets the core story right: we answered with averages while Adyen brought customer-specific proof, and the four messaging changes match the key's direction (own numbers, local acquiring, approvals, named owner). Its biggest miss is that the 'decided' section treats the three-week delay as 'the moment' instead of making the lack of coverage the finding, and it never uses the 9–10 months without a business review or the fact that the rep never met Stefan. Smaller issues: the runner-up is 'Support and service' instead of 'Champion or access'; the close wrongly lists the answered pitch-reaction question as dodged and omits protecting the US; several of Elena's paraphrases are attributed to Stefan as speaker.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 1,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "ACV is $320,000 per year, and the close does not list deal size as a gap",
+    "pass": true
+   },
+   {
+    "item": "The outcome carries the international-only scope note",
+    "pass": true
+   },
+   {
+    "item": "\"Decided before we got in the room\" is challenged with the coverage facts",
+    "pass": true
+   },
+   {
+    "item": "\"that's an average. What's mine?\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "The Adyen test results stay unknown",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core story right: we answered with averages while Adyen brought customer-specific proof, and the four messaging changes match the key's direction (own numbers, local acquiring, approvals, named owner). Its biggest miss is that the 'decided' section treats the three-week delay as 'the moment' instead of making the lack of coverage the finding, and it never uses the 9–10 months without a business review or the fact that the rep never met Stefan. Smaller issues: the runner-up is 'Support and service' instead of 'Champion or access'; the close wrongly lists the answered pitch-reaction question as dodged and omits protecting the US; several of Elena's paraphrases are attributed to Stefan as speaker."
+ },
+ "ms": 36253,
+ "cost": 0.149224,
+ "in_tokens": 9714,
+ "out_tokens": 3576,
+ "model": "claude-opus-5-5"
+}

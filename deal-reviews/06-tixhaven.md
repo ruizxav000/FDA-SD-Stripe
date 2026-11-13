@@ -3,6 +3,7 @@
 *Mock transcript. The customer, the people and the conversation are invented for a demo. Nothing here is a real statement by or about any company.*
 
 - **Outcome:** Lost
+- **ACV:** $250,000 per year
 - **Competitor:** Checkout.com
 - **Incumbent:** In-house gateway on their bank's merchant services
 - **Customer:** Live-event ticketing platform
@@ -18,6 +19,10 @@
 **PMM:** Had payments failed during an on-sale before?
 
 **Jordan:** Ben, their CTO, said twice. But this was the first time the CEO saw it.
+
+**PMM:** Before that, how big was the deal?
+
+**Jordan:** Two hundred and fifty K ACV. Their volume spikes hard around big on-sales.
 
 **PMM:** Who made the final call, and how do you know?
 

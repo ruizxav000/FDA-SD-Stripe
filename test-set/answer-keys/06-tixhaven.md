@@ -3,6 +3,7 @@
 **Input:** `06-tixhaven.txt` (Otter style). The AE is **Jordan**.
 
 ## Header
+- **ACV:** $250,000 per year, quoting the AE's words.
 - **Outcome:** Lost · **Scope note:** none
 - **Competitor:** Checkout.com · **Incumbent:** an in-house gateway on their bank's merchant services
 - **Tag:** **Support and service**
@@ -50,6 +51,7 @@
 - **Rep takeaway:** when the decider asks "who," answer with names and a plan. A technical win isn't the deal.
 
 ## Must catch
+- [ ] ACV is **$250,000** per year, and the close does **not** list deal size as a gap.
 - [ ] *"so it's a queue with a faster timer"* is tied to a messaging change.
 - [ ] "Over-promised" is labeled **opinion**.
 - [ ] The champion (Ben) and the decider (Halima) are distinguished.

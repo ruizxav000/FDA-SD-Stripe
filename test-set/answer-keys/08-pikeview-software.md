@@ -3,6 +3,7 @@
 **Input:** `08-pikeview-software.txt` (plain text). The AE is **Renee**.
 
 ## Header
+- **ACV:** $75,000 per year, quoting the AE's words.
 - **Outcome:** No decision · **Scope note:** none
 - **Competitor:** None (status quo) · **Incumbent:** a homegrown billing system on their bank's processor
 - **Tag:** **No decision**. The report should name **Value proof** as the underlying cause in "What decided it."
@@ -51,6 +52,7 @@
 - **Rep takeaway:** when the champion asks for something for finance, that's the deal turning. Build the customer's own number. "Nothing we could have done" isn't true.
 
 ## Must catch
+- [ ] ACV is **$75,000** per year, and the close does **not** list deal size as a gap.
 - [ ] **Value proof** is named as the underlying cause behind the No decision tag.
 - [ ] "Nothing we could have done" is labeled opinion and challenged.
 - [ ] The payback request one month before the freeze is surfaced as the turning point.
