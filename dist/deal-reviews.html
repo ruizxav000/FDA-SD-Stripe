@@ -210,7 +210,7 @@ select.field{padding-right:28px}
 .new-pill{align-self:center;border:0;border-radius:99px;padding:6px 14px;font-size:12.5px;font-weight:600;background:var(--accent);color:var(--on-accent);cursor:pointer;box-shadow:var(--shadow)}
 .card{display:flex;flex-direction:column;gap:6px;cursor:pointer}
 .card-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 14px}
-.card-top .title{font-size:16.5px;color:var(--accent)}
+.card > .title{font-size:16.5px;color:var(--accent)}
 .rp-title h2.acct{color:var(--accent)}
 .card-tags{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12.5px;color:var(--mute)}
 .card-tags b{font-weight:600;color:var(--strong)}
@@ -1398,8 +1398,8 @@ function cardEl(c) {
   const open = feed.open.has(key);
   const author = c.example ? "" : feed.names[c.authorId] || "";
   const el = h("article", { class: "glass box card", "aria-expanded": String(open), tabindex: "0" },
-    h("div", { class: "card-top" }, h("p", { class: "title", text: c.deal || "Unnamed deal" }), outcomeEl(c.outcome)),
-    h("div", { class: "card-tags" }, h("span", { class: "acv" }, "ACV ", h("b", { text: fmtACV(c.acv) })), h("span", {}, "Reason ", h("b", { text: c.tag || "—" })),
+    h("p", { class: "title", text: c.deal || "Unnamed deal" }),
+    h("div", { class: "card-tags" }, outcomeEl(c.outcome), h("span", { class: "acv" }, "ACV ", h("b", { text: fmtACV(c.acv) })), h("span", {}, "Reason ", h("b", { text: c.tag || "—" })),
       c.competitor ? h("span", { class: "vs", text: "vs " + c.competitor }) : null, c.rep ? h("span", { class: "meta", text: "AE: " + c.rep }) : null,
       author ? h("span", { class: "meta", text: "by " + author }) : null, c.createdAt ? h("span", { class: "meta", text: fmtDate(c.createdAt) }) : null),
     !open && c.reason ? h("p", { class: "reason", text: c.reason }) : null);
