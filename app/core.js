@@ -6,7 +6,7 @@
 (function (root) {
   "use strict";
 
-  const PIPELINE_VERSION = "2026-11-14.1";
+  const PIPELINE_VERSION = "2026-11-14.3";
 
   // ── Which model runs each stage (set from the model comparison; see eval/REPORT.md)
   const STAGE_MODELS = {
@@ -336,7 +336,18 @@ Reply with ONLY this JSON:
  "confidence":"high|medium|low"}`;
   }
 
-  // The report people read: account, ACV, outcome, reason, key findings.
+  // The six insights every review must answer (the seventh, the real reason, is the "reason" field).
+  const INSIGHTS = [
+    ["trigger", "What started it", "What happened at the customer that started the evaluation, and so what moment our messaging should aim at."],
+    ["decider", "Who decided", "Who made the final call and how we know. Say if the decider was not our champion. Say we never met or reached someone only if the transcript says so."],
+    ["competitor", "The competitor", "What the customer told us about the competitor, and how their questions changed after meeting them. This is secondhand: if it is only the AE's guess, write 'the AE thinks'. If the AE didn't know, say so."],
+    ["message", "Our message", "Which parts of our pitch landed and which got silence or pushback. Name the specific claims."],
+    ["proof", "Missing proof", "What they asked for that we couldn't show."],
+    ["words", "Their words", "The customer's own words for their problem, and how they differ from the words we use. The quote must be the customer's words."],
+  ];
+  const INSIGHT_KEYS = INSIGHTS.map((i) => i[0]);
+
+  // The report people read: account, ACV, outcome, reason, and the six insights.
   function reviewPrompt({ transcript, ledger }) {
     return `You are the ANALYST in a deal-review pipeline. Turn the interview into a short deal review a product marketer reads in one minute. Don't summarize the call: find what really decided the deal and what it teaches us about how we sell and message.
 
@@ -352,7 +363,14 @@ Write:
 - competitor: who we were up against, "None (status quo)" if no one, or null if unknown.
 - tag: exactly one reason tag from the list. The outcome gives the direction: on a win, the tag is why they picked us. There is no price tag on purpose: when the rep blames price, find what was really behind it. To choose between close tags, ask what the decider was comparing when it was decided. If the interview never got to the reason, use "Not established".
 - reason: one or two plain sentences on why the deal was really won or lost. If the rep's own explanation differs from what the evidence shows, say so briefly.
-- findings: the 3 to 5 most important things this deal teaches us, most important first. Each is one plain sentence a marketer can act on (what happened, and what it means for how we sell or message), plus one short supporting quote copied EXACTLY from the transcript, and who said it. When a finding rests only on the rep's opinion or guess, say so in the sentence ("the AE thinks...").
+- insights: one finding for each of these, in this order:
+${INSIGHTS.map(([k, n, d]) => `  - ${k} (${n}): ${d}`).join("\n")}
+  Each finding is one or two plain sentences: what happened, and what it suggests for our messaging or positioning. Plus one short supporting quote copied EXACTLY from the transcript, and who said it as "Name, role" (for example "Lucy, ecommerce director" or "Sam, AE").
+  If the interview never got to it, set covered to false and leave the rest empty. "I don't know" from the AE counts as covered: say the AE didn't know.
+  - Each finding makes its own point. Don't repeat another finding or the reason.
+  - Say what this deal suggests, not rules for every deal: one deal is one data point.
+  - Pick the quote that best proves the finding. Never use the AE's guess or hedge as the only support, unless the finding is about that guess.
+  - Never say someone reacted to something they never saw or heard.
 
 Reason tags:
 ${tagsBlock()}
@@ -374,7 +392,8 @@ ${JSON.stringify(ledger)}
 JSON safety: inside any string value, write double quotation marks as single quotation marks (') so the JSON stays valid. Quotes still count as word for word.
 
 Reply with ONLY this JSON:
-{"account":"","ae":null,"acv":null,"outcome":"Won|Lost|No decision","competitor":null,"tag":"","reason":"","findings":[{"finding":"","quote":"","who":""}]}`;
+{"account":"","ae":null,"acv":null,"outcome":"Won|Lost|No decision","competitor":null,"tag":"","reason":"",
+ "insights":{${INSIGHT_KEYS.map((k) => `"${k}":{"covered":true,"finding":"","quote":"","who":""}`).join(",")}}}`;
   }
 
   function strategistPrompt({ analysis, ledger }) {
@@ -477,12 +496,15 @@ Reply with ONLY this JSON:
       if (amount > 0 && r.acv.quote && verbatim(r.acv.quote)) acv = { amount: Math.round(amount), quote: String(r.acv.quote) };
       else acvRejected = r.acv;
     }
-    // A finding keeps its place only if its supporting quote is really in the transcript.
+    // One finding per insight. A finding stands only if its quote is really in the transcript;
+    // otherwise that insight shows as not covered.
     const findings = [], dropped = [];
-    for (const f of Array.isArray(r.findings) ? r.findings : []) {
-      if (!f || !f.finding) continue;
-      if (f.quote && verbatim(f.quote)) findings.push({ finding: uq(String(f.finding), "finding"), quote: String(f.quote), who: f.who || null });
-      else dropped.push(f);
+    const ins = r.insights || {};
+    for (const [k, label] of INSIGHTS) {
+      const f = ins[k] || {};
+      const ok = f.covered !== false && f.finding && f.quote && verbatim(f.quote);
+      if (f.covered !== false && f.finding && !ok) dropped.push(Object.assign({ key: k }, f));
+      findings.push(ok ? { key: k, label, covered: true, finding: uq(String(f.finding), k), quote: String(f.quote), who: f.who || null } : { key: k, label, covered: false });
     }
     const header = {
       deal: (r.account && String(r.account).replace(/\s*\((?:company|customer)[^)]*\)\s*$/i, "").trim()) || "Unnamed deal",
@@ -494,7 +516,7 @@ Reply with ONLY this JSON:
       reason: uq(String(r.reason || ""), "reason"),
     };
     return {
-      version: PIPELINE_VERSION, header, findings: findings.slice(0, 5),
+      version: PIPELINE_VERSION, header, findings,
       checks: { findings_dropped: dropped, acv_rejected: acvRejected, prose_unquoted: proseLog },
       meta: meta || {},
     };
@@ -603,7 +625,7 @@ Reply with ONLY this JSON:
     if (!S.review) {
       stage("analyst");
       const review = await call("analyst", reviewPrompt({ transcript, ledger: S.ledger }), M.analyst);
-      if (!review || !Array.isArray(review.findings)) throw fail("analyst", "Analyst returned no findings");
+      if (!review || !review.insights || typeof review.insights !== "object") throw fail("analyst", "Analyst returned no insights");
       S.review = review;
     }
     stage("checks");
@@ -662,7 +684,7 @@ Reply with ONLY this JSON:
   }
 
   const api = {
-    PIPELINE_VERSION, STAGE_MODELS, TAGS, TAG_NAMES, SECTIONS, SECTION_KEYS, MESSAGING,
+    PIPELINE_VERSION, STAGE_MODELS, INSIGHTS, TAGS, TAG_NAMES, SECTIONS, SECTION_KEYS, MESSAGING,
     parseTranscript, guessRoles, renderTranscript, makeVerifier, norm,
     readerPrompt, reviewPrompt, assembleReview, runPipeline, toCard, parseModelJSON,
     analystPrompt, strategistPrompt, singlePrompt, assemble, // earlier long-form report (kept for the eval history)

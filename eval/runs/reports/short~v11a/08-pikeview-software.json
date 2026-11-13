@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.2",
+ "header": {
+  "deal": "Pikeview Software",
+  "ae": "Renee",
+  "acv": {
+   "amount": 75000,
+   "quote": "It would have been about seventy-five K a year."
+  },
+  "outcome": "No decision",
+  "competitor": "None (status quo)",
+  "tag": "No decision",
+  "reason": "Nobody switched. The CFO froze all new vendor projects after Pikeview missed its Q3 number, and she had never seen a payback number built on Pikeview's own costs, so finance treated it as a 'nice to have'. Renee calls it timing that nothing could fix, but Owen asked for that number about a month before the freeze and it was never built."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "There was no triggering event. Owen, the VP of Product, had long wanted to replace a homegrown billing system whose builder had left, and his only target was a pricing tier that had no date. Our messaging could aim at the moment a pricing change gets stuck, but in this deal that pain never came with a deadline that forced a decision.",
+   "quote": "every pricing change takes them a quarter",
+   "who": "Renee, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Diane, the CFO, made the final call by freezing all new vendor projects. She was never our champion and we never reached her: everything Renee knows about her came through Owen, who planned to bring her in only at the end. In this deal, the person who held the budget saw none of our case.",
+   "quote": "Owen told me. I never spoke to her.",
+   "who": "Renee, AE"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "There was no rival vendor. As far as the AE knows, Owen looked at no one else and the real alternative was doing nothing. Late in the cycle, Owen's questions moved from features to what finance would need, which suggests the status quo has to be beaten with a cost case rather than a feature comparison.",
+   "quote": "do you have something that shows payback?",
+   "who": "Owen, VP of Product"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "The billing demo landed with Owen and his engineers: changing a price in a few clicks, trials and proration. The 'growing revenue' framing got pushback, so with a buyer like this, the roadmap-speed story looks stronger than a revenue story.",
+   "quote": "that's a quarter of roadmap in five minutes",
+   "who": "Owen, VP of Product"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Owen needed Pikeview's own cost of the homegrown system: engineering time, billing errors, and landlord subscriptions that lapse when cards fail. We sent the general ROI deck instead. He also wanted to talk to someone who had migrated without re-collecting cards, and we only had a doc. A customer-specific cost model and a migration reference were the missing pieces.",
+   "quote": "I can't get this past Diane without a number that's ours.",
+   "who": "Owen, VP of Product"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Owen called billing 'a tax on the roadmap', while we talked about growing revenue. Finance, through Owen, used 'nice to have' and 'if it isn't on fire, it isn't funded'. Our language could name the roadmap cost and make the hidden cost visible enough for finance to see it as a fire.",
+   "quote": "we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap.",
+   "who": "Owen, VP of Product"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 55248,
+  "cost": 0.1774249,
+  "stage_ms": {
+   "reader": 32097,
+   "analyst": 23151
+  },
+  "stage_cost": {
+   "reader": 0.055552899999999995,
+   "analyst": 0.12187200000000001
+  }
+ }
+}

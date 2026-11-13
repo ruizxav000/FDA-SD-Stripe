@@ -175,7 +175,7 @@ async function runShort(cfgFull, d) {
 
 function judgeShortPrompt(d, report) {
   const clean = { header: report.header, findings: report.findings };
-  return `You are grading a short AI-written deal review against an answer key written by a product-marketing lead. The review has only: account, ACV, outcome, competitor, a reason tag, a one-to-two sentence reason, and 3-5 key findings with supporting quotes. Ignore the answer key's section-by-section detail; use it to judge whether this short review got the essentials right. Be strict and consistent.
+  return `You are grading a short AI-written deal review against an answer key written by a product-marketing lead. The review has only: account, ACV, outcome, competitor, a reason tag, a one-to-two sentence reason, and six labelled findings (trigger, who decided, competitor, our message, missing proof, the customer's words), each with a supporting quote. Ignore the answer key's section-by-section detail; use it to judge whether this short review got the essentials right. Be strict and consistent.
 
 Scoring:
 - account: 1 = the account name (or, if the transcript never names it, a fair short description); 0 otherwise.
@@ -183,7 +183,8 @@ Scoring:
 - outcome: 1 = matches the key's outcome; 0 otherwise.
 - tag: 2 = the key's tag; 1 = the key's acceptable alternative; 0 otherwise.
 - reason: 2 = names the real reason the key gives (not the rep's framing where the key says they differ); 1 = partly; 0 = wrong or the rep's framing.
-- findings: 0-4 for how well the findings capture the key's most important insights (its "Must catch" items and expected messaging direction). 4 = all the big ones, specific and actionable; 2 = some; 0 = generic or wrong.
+- insights: for EACH of trigger, decider, competitor, message, proof, words, score 0-1: 1 = matches the key's corresponding section (its evidence and insight), with a quote that supports it; 0.5 = partly; 0 = wrong, generic, or "not covered" when the transcript had it. "Not covered" scores 1 only when the key says the interview didn't cover it.
+- repetitive: true if two findings make the same point.
 - fails: list every instance of invented content (a claim, figure, name or quote not supported by the transcript) and every "Fails if" condition the review triggers. Empty list if none.
 
 ANSWER KEY
@@ -198,7 +199,7 @@ REVIEW (JSON)
 ${JSON.stringify(clean)}
 
 Reply with ONLY this JSON:
-{"account":0,"acv":0,"outcome":0,"tag":0,"reason":0,"findings":0,"fails":[""],"notes":"2 sentences: what it got right, what it missed"}`;
+{"account":0,"acv":0,"outcome":0,"tag":0,"reason":0,"insights":{"trigger":0,"decider":0,"competitor":0,"message":0,"proof":0,"words":0},"repetitive":false,"fails":[""],"notes":"2 sentences: what it got right, what it missed"}`;
 }
 
 // ── Judge ──────────────────────────────────────────────────────────
@@ -216,6 +217,7 @@ Scoring:
 - close: 2 = lists the skipped/dodged questions the key names with sensible follow-ups AND the rep takeaway matches the key's theme; 1 = partly; 0 = misses.
 - messaging: 2 = the changes point the same direction as the key's "Messaging changes: expected direction" and each rests on real evidence; 1 = partly; 0 = off-target or unsupported.
 - must_catch: for EACH checkbox item in the key's "Must catch" list, pass true/false.
+- repetitive: true if two findings make the same point.
 - fails: list every instance of invented content (a quote or excerpt not in the transcript, a figure, name or result not in the transcript, a definite answer where the key says unknown) and every "Fails if" condition the report triggers. Empty list if none.
 
 ANSWER KEY
@@ -261,7 +263,7 @@ async function judge(cfg, d, report) {
         : await judge(cfg, d, report);
       if (j.data) report.meta.judge_cost = j.cost;
     }
-    const q = report.findings ? `findings ${report.findings.length} (dropped ${report.checks.findings_dropped.length})` : `quotes ${report.checks.quotes_total - report.checks.quotes_failed}/${report.checks.quotes_total}`;
+    const q = report.findings ? `covered ${report.findings.filter((f) => f.covered !== false).length}/${report.findings.length} (dropped ${report.checks.findings_dropped.length})` : `quotes ${report.checks.quotes_total - report.checks.quotes_failed}/${report.checks.quotes_total}`;
     console.log(`✓ ${cfg.padEnd(8)} ${d.deal.padEnd(28)} ${(report.meta.ms / 1000).toFixed(0).padStart(4)}s $${report.meta.cost.toFixed(3)}  ${report.header.outcome}/${report.header.tag}  ${q}${j && j.data ? "  judged" : ""}`);
   })());
   await Promise.all(jobs);

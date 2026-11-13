@@ -6,13 +6,13 @@ Each review has only:
 
 | Field | What it is |
 |---|---|
-| **Account** | The customer's name as said in the interview, or a short description if it's never said. Never invented. Editable after posting. |
-| **ACV** | Annual contract value, only if someone states it in the interview (the words are checked against the transcript). Editable after posting. |
+| **Account** | The customer's name as said in the interview, or a short description if it's never said. Never invented. |
+| **ACV** | Annual contract value, only if someone states it in the interview (the words are checked against the transcript). |
 | **Outcome** | Won, Lost or No decision. |
 | **Reason** | One reason tag (list below), plus one or two plain sentences on why the deal was really won or lost. If the AE's explanation differs from the evidence, it says so. |
-| **Key findings** | The 3–5 most important things the deal teaches us, each one plain sentence with a short supporting quote. A finding whose quote isn't word for word in the transcript is dropped. |
+| **Key findings** | One finding for each insight the team asked for: what started it, who decided, the competitor, our message, missing proof, and the customer's own words. Each is one or two plain sentences (what happened, and what it suggests) with a supporting quote. A finding whose quote isn't word for word in the transcript shows as not covered. |
 
-Workflow: Sonnet reads the interview into an evidence list, Opus writes the report, code checks every quote and the ACV. No comments or flags on the page.
+Workflow: Sonnet reads the interview into an evidence list, Opus writes the report, code checks every quote and the ACV. No comments, flags or editing on the page.
 
 ---
 

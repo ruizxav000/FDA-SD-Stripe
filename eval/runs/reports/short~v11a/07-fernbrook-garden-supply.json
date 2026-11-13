@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.2",
+ "header": {
+  "deal": "Fernbrook Garden Supply",
+  "ae": "Sam",
+  "acv": {
+   "amount": 95000,
+   "quote": "Around ninety-five thousand a year. Ninety-five K ACV, on a two-year term."
+  },
+  "outcome": "Lost",
+  "competitor": "Fiserv (through their bank)",
+  "tag": "Value proof",
+  "reason": "The CFO decided from a one-page side-by-side of per-transaction rates, and nothing from us put a figure on what Fernbrook's failed orders were costing, so he saw paying more for 'the same thing'. Sam blames the rate, but he chose to skip the decline analysis that would have shown that value."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lucy came inbound because about one in twelve online orders was failing at payment, worst on large orders, and the processor couldn't explain why. In this deal the moment to aim at was a digital leader watching expensive orders fail with no answers from her current processor.",
+   "quote": "She said about one in twelve online orders was failing at the payment step, and it was worse on the big baskets.",
+   "who": "Sam, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Martin, the CFO, made the call, and we only know this through Lucy. He was not our champion and we never reached him, because he refused vendor meetings and Lucy presented our case for us. Our message had to work without us in the room, carried by a champion to a finance reader.",
+   "quote": "Martin said no. Lucy told me. I never met him.",
+   "who": "Sam, AE"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Lucy told Sam that the incumbent bank, Fiserv, responded only by sharpening its rate, with no new product. After that, Lucy stopped asking about declines and asked only about rate, so the bank succeeded in reframing the deal as a price comparison.",
+   "quote": "After the bank came back, every email was the rate.",
+   "who": "Sam, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Farah's explanation of why big-ticket orders get declined and what we do about it landed with Lucy. The AE thinks Lucy also understood the generic acceptance-uplift slide. Sam named nothing that got silence, and nothing suggests the decline story ever reached Martin in a form he weighed.",
+   "quote": "When our solutions engineer, Farah, explained why big-ticket orders get knocked back and what we do about it, Lucy was nodding the whole way.",
+   "who": "Sam, AE"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Lucy asked for a one-page business case she could give Martin, and she got the deck and pricing proposal, which contained only customer stories and average uplift. Farah's offer to value Fernbrook's failed orders from a three-month export was dropped because of quarter-end timing. That left nothing on Martin's page beyond our quote.",
+   "quote": "Lucy asked once if we had something she could hand Martin. Like a one-page business case.",
+   "who": "Sam, AE"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Lucy described lost sales on expensive orders: 'orders dying at the last step,' 'the big baskets,' and the card saying no on a greenhouse. We talk about declines and acceptance uplift. Her framing, as lost revenue on specific orders, was a better bridge to a CFO than our rate-adjacent terms.",
+   "quote": "we do all the work to get someone to buy a four-thousand-dollar greenhouse and then the card says no.",
+   "who": "Lucy, ecommerce director"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 59643,
+  "cost": 0.1874597,
+  "stage_ms": {
+   "reader": 37180,
+   "analyst": 22463
+  },
+  "stage_cost": {
+   "reader": 0.0596757,
+   "analyst": 0.127784
+  }
+ }
+}

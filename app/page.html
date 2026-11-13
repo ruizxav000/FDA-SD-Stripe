@@ -193,13 +193,15 @@ select.field{padding-right:28px}
 .fact .v.strong{font-weight:600;color:var(--strong)}
 .why{font-size:15px;line-height:1.5;color:var(--strong)}
 .meta-line{font-size:12px;color:var(--mute)}
-.findings{display:flex;flex-direction:column;gap:14px;margin:0;padding:0;list-style:none;counter-reset:f}
-.findings li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:4px 10px;counter-increment:f}
-.findings li::before{content:counter(f);font-size:12px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:2px}
-.findings .f{font-size:14.5px;line-height:1.5;color:var(--strong)}
-.findings .q{grid-column:2;font-size:13px;line-height:1.45;color:var(--mute)}
-.findings .q::before{content:"\201C"} .findings .q .end::after{content:"\201D"}
-.edit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.findings{display:flex;flex-direction:column}
+.fi{display:grid;grid-template-columns:9.5em minmax(0,1fr);gap:4px 16px;padding:12px 0}
+.fi + .fi{border-top:1px solid var(--hair-faint)}
+.fi .k{font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--label);padding-top:3px}
+.fi .f{font-size:14.5px;line-height:1.5;color:var(--strong)}
+.fi .q{display:block;margin-top:4px;font-size:13px;line-height:1.45;color:var(--mute)}
+.fi .q::before{content:"\201C"} .fi .q .end::after{content:"\201D"}
+.fi.nc .f{color:var(--mute);font-size:13.5px}
+@media (max-width:860px){ .fi{grid-template-columns:minmax(0,1fr)} }
 
 /* ---------- feed ---------- */
 .filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
@@ -238,7 +240,7 @@ select.field{padding-right:28px}
   .hero{margin-top:104px}
   .page{grid-template-columns:minmax(0,1fr)}
   .side{position:static}
-  .grid2,.form-row,.edit-grid{grid-template-columns:minmax(0,1fr)}
+  .grid2,.form-row{grid-template-columns:minmax(0,1fr)}
   .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
   .sbar{grid-template-columns:minmax(0,8em) minmax(0,1fr) 2.6em}
 }
@@ -391,12 +393,6 @@ const fmtDate = (iso) => { try { return new Date(iso).toLocaleDateString(undefin
 const OUTCOME_VAR = { Won: "--won", Lost: "--lost", "No decision": "--nd" };
 const outcomeEl = (o) => h("span", { class: "status", style: `--c:var(${OUTCOME_VAR[o] || "--accent"})`, text: o || "Unknown" });
 const fmtACV = (n) => (n == null || !(n > 0) ? "—" : "$" + (n >= 1e6 ? +(n / 1e6).toFixed(1) + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : Math.round(n)));
-function parseACV(v) {
-  const m = String(v || "").replace(/[$,\s]/g, "").match(/^([0-9]*\.?[0-9]+)([kKmM]?)$/);
-  if (!m) return null;
-  const n = parseFloat(m[1]) * (/k/i.test(m[2]) ? 1e3 : /m/i.test(m[2]) ? 1e6 : 1);
-  return n > 0 ? Math.round(n) : null;
-}
 const MODEL_NAME = (m) => (/haiku/.test(m) ? "Haiku" : /sonnet/.test(m) ? "Sonnet" : /opus/.test(m) ? "Opus" : m);
 
 /* ---------- capabilities (light up as they arrive) ---------- */
@@ -640,50 +636,16 @@ function renderReport(r, opts) {
       fact("Up against", H.competitor)),
     H.reason ? h("p", { class: "why", text: H.reason }) : null,
     h("p", { class: "meta-line", text: [r.rep ? "AE: " + r.rep : null, opts.authorName ? "Reviewed by " + opts.authorName : null, r.createdAt ? fmtDate(r.createdAt) : null, r.editedAt ? "Edited " + fmtDate(r.editedAt) : null].filter(Boolean).join(" · ") }));
-  if (opts.canEdit) head.append(editControls(r, opts));
   wrap.append(head);
 
   const fs = r.findings || [];
   const findings = h("div", { class: "glass box" }, h("p", { class: "title", text: "Key findings" }));
-  if (!fs.length) findings.append(h("p", { class: "text", text: "No findings with a supporting quote." }));
-  else findings.append(h("ol", { class: "findings" }, ...fs.map((f) => h("li", {},
-    h("span", { class: "f", text: f.finding }),
-    f.quote ? h("span", { class: "q" }, h("span", { class: "end", text: f.quote }), f.who ? " — " + f.who : "") : null))));
+  findings.append(h("div", { class: "findings" }, ...fs.map((f) => h("div", { class: "fi" + (f.covered === false ? " nc" : "") },
+    h("span", { class: "k", text: f.label || "" }),
+    f.covered === false ? h("span", { class: "f", text: "Not covered in the interview." })
+      : h("span", { class: "f" }, f.finding, f.quote ? h("span", { class: "q" }, h("span", { class: "end", text: f.quote }), f.who ? " — " + f.who : "") : null)))));
   wrap.append(findings);
   return wrap;
-}
-
-function editControls(r, opts) {
-  const H = r.header || {};
-  const uid = "e" + Math.random().toString(36).slice(2, 7);
-  const sel = (id, vals, cur) => h("select", { class: "field", id }, ...vals.map((v) => h("option", { value: v, selected: v === cur, text: v })));
-  const inp = (id, cur) => h("input", { class: "field", id, value: cur || "" });
-  const form = h("div", { hidden: true, style: "display:flex;flex-direction:column;gap:10px" },
-    h("div", { class: "edit-grid" },
-      h("div", { class: "form-item" }, h("label", { for: uid + "d", text: "Account" }), inp(uid + "d", H.deal)),
-      h("div", { class: "form-item" }, h("label", { for: uid + "a", text: "ACV (e.g. 95K)" }), inp(uid + "a", H.acv ? String(H.acv.amount) : "")),
-      h("div", { class: "form-item" }, h("label", { for: uid + "o", text: "Outcome" }), sel(uid + "o", ["Won", "Lost", "No decision"], H.outcome)),
-      h("div", { class: "form-item" }, h("label", { for: uid + "t", text: "Reason" }), sel(uid + "t", DR.TAG_NAMES, H.tag))));
-  const msg = h("span", { class: "text" });
-  const save = h("button", { type: "button", class: "btn small", text: "Save", onclick: async () => {
-    const v = (s) => form.querySelector("#" + uid + s).value.trim() || null;
-    const acvIn = v("a"), acvNum = parseACV(acvIn);
-    if (acvIn && !acvNum) { msg.textContent = "ACV should be a number, like 95K or 95000."; return; }
-    save.disabled = true; msg.textContent = "Saving…";
-    const acv = acvNum == null ? null : H.acv && H.acv.amount === acvNum ? H.acv : { amount: acvNum, quote: null, entered: true };
-    const ok = await opts.onEdit({ deal: v("d") || H.deal, acv, outcome: v("o"), tag: v("t") });
-    msg.textContent = ok ? "Saved." : "Couldn't save. Try again.";
-    save.disabled = false;
-  } });
-  let armed = false;
-  const del = h("button", { type: "button", class: "btn small ghost", text: "Delete", onclick: async () => {
-    if (!armed) { armed = true; del.textContent = "Click again to delete"; del.className = "btn small danger"; setTimeout(() => { armed = false; del.textContent = "Delete"; del.className = "btn small ghost"; }, 4000); return; }
-    del.disabled = true; msg.textContent = "Deleting…";
-    const ok = await opts.onDelete(); if (!ok) { msg.textContent = "Couldn't delete. Try again."; del.disabled = false; }
-  } });
-  form.append(h("div", { class: "btns", style: "justify-content:flex-end" }, msg, del, save));
-  const toggle = h("button", { type: "button", class: "linkish", text: "Edit", onclick: () => { form.hidden = !form.hidden; toggle.textContent = form.hidden ? "Edit" : "Close"; } });
-  return h("div", { style: "display:flex;flex-direction:column;gap:10px" }, h("div", { class: "btns", style: "justify-content:flex-end" }, toggle), form);
 }
 
 /* ════════════════════ FEED ════════════════════ */
@@ -759,31 +721,7 @@ async function loadDetail(c, detail) {
   if (c.example) report = (window.EXAMPLES[Number(c.rid.slice(2))] || {}).report;
   else if (caps.db) { try { const s = await caps.db.doc(`reviews/${c.uid}/items/${c.rid}`).get(); report = s.exists ? s.data() : null; } catch {} }
   if (!report) { detail.replaceChildren(h("p", { class: "note err", text: "This report couldn't be loaded. It may have been deleted." })); return; }
-  const canEdit = !c.example && caps.db && me.id && (me.id === c.uid || me.isOwner);
-  detail.replaceChildren(h("div", { style: "margin-top:10px" }, renderReport(report, {
-    authorName: feed.names[c.authorId] || "", canEdit,
-    onEdit: (patch) => editReview(c, report, patch), onDelete: () => deleteReview(c),
-  })));
-}
-async function editReview(c, report, patch) {
-  try {
-    const header = Object.assign({}, report.header, patch);
-    const editedAt = new Date().toISOString();
-    await caps.db.doc(`reviews/${c.uid}/items/${c.rid}`).update({ header, editedAt });
-    await caps.db.doc(`reviews/${c.uid}`).update({ cards: { [c.rid]: { deal: header.deal, acv: header.acv ? header.acv.amount : null, outcome: header.outcome, tag: header.tag, editedAt } } });
-    return true;
-  } catch { return false; }
-}
-async function deleteReview(c) {
-  try {
-    const idx = caps.db.doc(`reviews/${c.uid}`);
-    const snap = await idx.get();
-    const data = JSON.parse(JSON.stringify(snap.data() || {}));
-    delete (data.cards || {})[c.rid];
-    await idx.set(data);
-    await caps.db.doc(`reviews/${c.uid}/items/${c.rid}`).delete();
-    return true;
-  } catch { return false; }
+  detail.replaceChildren(h("div", { style: "margin-top:10px" }, renderReport(report, { authorName: feed.names[c.authorId] || "" })));
 }
 document.querySelectorAll("[data-outcome]").forEach((b) => b.addEventListener("click", () => {
   document.querySelectorAll("[data-outcome]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));

@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.2",
+ "header": {
+  "deal": "Tixhaven",
+  "ae": "Jordan",
+  "acv": {
+   "amount": 250000,
+   "quote": "Two hundred and fifty K ACV."
+  },
+  "outcome": "Lost",
+  "competitor": null,
+  "tag": "Support and service",
+  "reason": "Halima, the COO, decided on who would pick up during an on-sale. The competitor brought named people and on-call cover for each on-sale, and our tiered support plans sounded to her like 'a queue with a faster timer'. Jordan says 'We were the better platform', but platform strength was not what she was comparing."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Payments failed minutes into a big arena on-sale, and the old provider answered by ticket form only after it ended. The CEO saw it on social, so the COO set a deadline to replace payments before the spring on-sales. This suggests our message should aim at the failed on-sale moment and the hours around it, not at general reliability.",
+   "quote": "payments started failing about four minutes in",
+   "who": "Jordan, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Halima, the COO, made the call alone in one meeting. We know this from Ben, the CTO, who was our champion and phoned Jordan to say he had lost. Our strongest relationship was with someone who did not hold the decision, so in this deal we needed to win the COO on her own terms.",
+   "quote": "it was Halima's call and she made it in one meeting.",
+   "who": "Ben, CTO"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "According to Ben, the competitor brought the actual account team, a named solutions engineer and an account lead, and promised a shared channel plus someone on call for every major on-sale. After that meeting the customer's questions moved from throughput, queueing and bots to names and escalation paths. The AE thinks they over-promised, but he admits he doesn't know.",
+   "quote": "Before that meeting it was throughput, queueing, bots. After, it was names.",
+   "who": "Jordan, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "The sandbox load test, uptime history, docs, and bot and fraud tooling landed with Ben's team, but Halima's only response to the load test results was 'good'. When she asked 'who's my person', Jordan answered with support tiers and response times, and she dismissed them. Here our technical claims won the engineers, while our support story read as a process instead of people.",
+   "quote": "so it's a queue with a faster timer.",
+   "who": "Halima, COO"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Halima asked for a written on-sale plan: who is watching, who she calls, and what happens at minute four. We have no such plan, and Jordan did not build one with our solutions engineer. He also lacked a ticketing reference who could vouch for who picked up during a big on-sale, which suggests an on-sale playbook and a person-to-person reference would have filled the gap.",
+   "quote": "I had logos. I didn't have a person.",
+   "who": "Jordan, AE"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "The customer talked about 'who', 'on-sale morning', 'a name, not a queue' and 'someone who picks up', and never said 'support'. We talked about uptime, support plans, tiers and response times. This suggests framing our offer around named people on on-sale morning rather than service levels.",
+   "quote": "I don't buy uptime, I buy what happens when it's down.",
+   "who": "Halima, COO"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 72823,
+  "cost": 0.19307910000000003,
+  "stage_ms": {
+   "reader": 53891,
+   "analyst": 18932
+  },
+  "stage_cost": {
+   "reader": 0.08193910000000001,
+   "analyst": 0.11114000000000002
+  }
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.3",
+ "header": {
+  "deal": "Tallowfield Supply",
+  "ae": "Dana",
+  "acv": {
+   "amount": 140000,
+   "quote": "About a hundred and forty K a year."
+  },
+  "outcome": "Won",
+  "competitor": "Fiserv",
+  "tag": "Value proof",
+  "reason": "The CFO, Ines, committed once our solutions engineer turned one month of their own statements into a yearly cost of manual reconciliation, covering staff hours plus write-offs from unmatched deposits. She called it 'my number, not yours', and the rep says 'After that it was paperwork.' The portal and checkout pitch had stalled the deal for weeks before that."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "The inbound was about an online ordering portal, but what started the evaluation was a new CFO whose first month-end close took nine days, partly because finance matched deposits by hand. In this deal the moment to aim at was a finance leader's painful close, not the ordering project that showed up in the inbound.",
+   "quote": "she'd been there about four months, and her first month-end close took nine days.",
+   "who": "Dana, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Ines, the CFO, made the call and signed. Paul, the IT director and the rep's day-to-day contact, said so directly. Our champion was not the decider, and a portal-focused proposal routed through him lost about three weeks when she read the first page and said it wasn't her problem.",
+   "quote": "I can recommend, she decides.",
+   "who": "Paul, IT director"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Fiserv was the incumbent through the customer's bank, and the AE didn't know what Fiserv showed, if anything. When Ines told the bank she was looking around, the bank offered to look at rates, which annoyed her. Afterwards her one new question to us was whether she'd get a named contact, because her bank rep had changed. That suggests a reconciliation story plus a named person beat a rate discussion here.",
+   "quote": "I didn't ask about my rates.",
+   "who": "Ines, CFO"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Several parts of the pitch got silence or went nowhere: the standard deck on financial infrastructure, global growth and all the currencies, the developer story, and the checkout and APIs proposal. The customer sells to restaurants in three states and has a four-person IT team that isn't building anything. Payout reconciliation, showing each payout tied back to its transactions and fed into the ERP, made Ines stop the demo and ask to see it with their own data.",
+   "quote": "Ines actually stopped him and said, 'go back.'",
+   "who": "Dana, AE"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Ines asked twice for a reference from another distributor with wholesale and invoice business, and we only had retail and software stories. She dismissed the retail case study. Her question about whether the 14 branches' counter card readers would land in the same report got a slide, not a demo. She signed anyway, but this deal points to a gap in distributor proof.",
+   "quote": "this is a company that sells sweaters.",
+   "who": "Ines, CFO"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Ines framed the problem as not knowing where her money is and called month-end 'a week of archaeology'. She said 'the deposits' and never 'payments', Paul said 'the processor', and nobody said 'infrastructure'. For a buyer like this, messaging in finance and close language may land better than our payments and infrastructure terms.",
+   "quote": "I just want to know where my money is.",
+   "who": "Ines, CFO"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 60496,
+  "cost": 0.205794,
+  "stage_ms": {
+   "reader": 35300,
+   "analyst": 25196
+  },
+  "stage_cost": {
+   "reader": 0.07501,
+   "analyst": 0.130784
+  }
+ }
+}

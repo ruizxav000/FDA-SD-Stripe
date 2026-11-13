@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.2",
+ "header": {
+  "deal": "Fetchwell",
+  "ae": "Priya",
+  "acv": {
+   "amount": 180000,
+   "quote": "A hundred and eighty K a year, on a three-year term."
+  },
+  "outcome": "Won",
+  "competitor": "Braintree",
+  "tag": "Developer experience",
+  "reason": "The deal turned when one of Fetchwell's engineers used our docs and sandbox to build a working sitter payment flow over a weekend. Before that it was a bake-off, and afterwards Daniel 'stopped saying if.' The rep agrees, saying their engineer sold it more than she did."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Fetchwell was launching in Canada and then the UK, where sitters must be paid locally. At the same time, two engineers spent most of their time keeping a fragile payments system running, and faster sitter pay had been pushed back three quarters in a row. In this deal, messaging aimed at the moment of international expansion and engineering overload, not at payment performance.",
+   "quote": "They were launching Canada, then the UK, and sitters have to get paid locally.",
+   "who": "Priya, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Daniel, the VP of Engineering, made the call and signed, and he was also our main contact. The CFO joined for ten minutes and asked only whether sitter pay timing would change. That suggests the finance story here is about when sitters get paid, not cost.",
+   "quote": "this is an engineering decision, finance will sign what I bring them.",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "The customer complained that the competitor's account manager had changed three times in two years. After a mid-evaluation call with Braintree, their questions shifted from build speed to what they would lose: PayPal, Venmo and saved cards. The AE thinks Braintree told them they'd lose things but says she doesn't know, so we need a ready answer on what carries over.",
+   "quote": "I've stopped learning their names.",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "The docs and sandbox landed, as did sitter onboarding, identity checks and paying out in local currency. The acceptance-rate slide on average improvement got silence and was dismissed, which suggests approval-rate claims carry little weight for a low-ticket business like this one.",
+   "quote": "our average booking is 38 dollars, I'm not losing sleep over auth rates.",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "The rep first said nothing was missing, but we had no clear answer on keeping Venmo. She also never sent the reference Daniel asked for: a customer their size who moved saved cards without losing any. The question was still open at kickoff, so a migration case study and a Venmo answer are gaps to close.",
+   "quote": "who's done this at our size without losing cards?",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "The customer talks about a 'haunted house' they want to 'stop babysitting,' and about sitters being 'paid by Friday.' They say 'the app' and 'sitter pay,' not 'marketplace' and 'payouts.' Pitching in terms of freeing the team and getting sitters paid on time may land better than our product terms.",
+   "quote": "Payments shouldn't be a team",
+   "who": "Daniel, VP of Engineering"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 53951,
+  "cost": 0.17531059999999998,
+  "stage_ms": {
+   "reader": 32131,
+   "analyst": 21820
+  },
+  "stage_cost": {
+   "reader": 0.0543106,
+   "analyst": 0.121
+  }
+ }
+}

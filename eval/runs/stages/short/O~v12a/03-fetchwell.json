@@ -1,0 +1,59 @@
+{
+ "ok": true,
+ "text": "{\"account\":\"Fetchwell\",\"ae\":\"Priya\",\"acv\":{\"amount\":180000,\"quote\":\"A hundred and eighty K a year, on a three-year term.\"},\"outcome\":\"Won\",\"competitor\":\"Braintree\",\"tag\":\"Developer experience\",\"reason\":\"The deal was won when one of Fetchwell's engineers built a working sitter payment flow in our sandbox over a weekend, which turned a bake-off into a decision for Daniel. The AE called it 'a clean one', but the PayPal/Venmo question and the saved-card reference request were never answered. Fetchwell signed despite those open questions, not because we resolved them.\",\"insights\":{\"trigger\":{\"covered\":true,\"finding\":\"Fetchwell was launching in Canada and then the UK and needed to pay sitters locally. At the same time, its payments code took two engineers almost full-time to keep running, and faster sitter pay had slipped three quarters in a row. For a company like this, our messaging could aim at the moment of entering a new country, when the existing payments setup becomes a drag on engineering.\",\"quote\":\"They were launching Canada, then the UK, and sitters have to get paid locally.\",\"who\":\"Priya, AE\"},\"decider\":{\"covered\":true,\"finding\":\"Daniel, the VP of Engineering, made the call and signed. He said early that finance would follow his lead, and the CFO joined only for ten minutes. The CFO's one question was whether this changes when sitters get paid, so in this deal finance cared about sitter pay timing, not cost.\",\"quote\":\"this is an engineering decision, finance will sign what I bring them.\",\"who\":\"Daniel, VP of Engineering\"},\"competitor\":{\"covered\":true,\"finding\":\"The customer complained that the competitor's account manager had changed three times in two years. They were also nervous about losing their PayPal and Venmo buttons. After a mid-evaluation call with Braintree, their questions moved from build speed to what they would lose. The AE thinks Braintree raised those fears but says she is only guessing, so we may need a clear answer on PayPal and Venmo before a competitor frames it.\",\"quote\":\"It went from 'how fast can we build this' to 'what do we lose.'\",\"who\":\"Priya, AE\"},\"message\":{\"covered\":true,\"finding\":\"The docs, the sandbox and the marketplace features landed: sitter onboarding, identity checks and paying out in local currency. The acceptance-rate slide got silence, and Daniel dismissed it because their bookings are small. For a low-ticket marketplace like this, the build speed and sitter pay story mattered more than acceptance-rate claims.\",\"quote\":\"our average booking is 38 dollars, I'm not losing sleep over auth rates.\",\"who\":\"Daniel, VP of Engineering\"},\"proof\":{\"covered\":true,\"finding\":\"At first the AE said nothing was missing. She then admitted we had no clear answer on keeping Venmo and never sent the reference Daniel asked for: a customer their size that moved saved cards without losing any. The saved-card worry came up again at kickoff, so a reference on saved-card migration at this scale and a clear PayPal/Venmo answer look like gaps worth closing.\",\"quote\":\"who's done this at our size without losing cards?\",\"who\":\"Daniel, VP of Engineering\"},\"words\":{\"covered\":true,\"finding\":\"Daniel talked about a 'haunted house', 'stop babysitting this' and 'paid by Friday'. They say 'the app' and 'sitter pay' where we say 'marketplace' and 'payouts'. Messaging for a buyer like this could lead with taking payments off the engineering team's plate and getting workers paid on time, in their own terms.\",\"quote\":\"Payments shouldn't be a team\",\"who\":\"Daniel, VP of Engineering\"}}}",
+ "data": {
+  "account": "Fetchwell",
+  "ae": "Priya",
+  "acv": {
+   "amount": 180000,
+   "quote": "A hundred and eighty K a year, on a three-year term."
+  },
+  "outcome": "Won",
+  "competitor": "Braintree",
+  "tag": "Developer experience",
+  "reason": "The deal was won when one of Fetchwell's engineers built a working sitter payment flow in our sandbox over a weekend, which turned a bake-off into a decision for Daniel. The AE called it 'a clean one', but the PayPal/Venmo question and the saved-card reference request were never answered. Fetchwell signed despite those open questions, not because we resolved them.",
+  "insights": {
+   "trigger": {
+    "covered": true,
+    "finding": "Fetchwell was launching in Canada and then the UK and needed to pay sitters locally. At the same time, its payments code took two engineers almost full-time to keep running, and faster sitter pay had slipped three quarters in a row. For a company like this, our messaging could aim at the moment of entering a new country, when the existing payments setup becomes a drag on engineering.",
+    "quote": "They were launching Canada, then the UK, and sitters have to get paid locally.",
+    "who": "Priya, AE"
+   },
+   "decider": {
+    "covered": true,
+    "finding": "Daniel, the VP of Engineering, made the call and signed. He said early that finance would follow his lead, and the CFO joined only for ten minutes. The CFO's one question was whether this changes when sitters get paid, so in this deal finance cared about sitter pay timing, not cost.",
+    "quote": "this is an engineering decision, finance will sign what I bring them.",
+    "who": "Daniel, VP of Engineering"
+   },
+   "competitor": {
+    "covered": true,
+    "finding": "The customer complained that the competitor's account manager had changed three times in two years. They were also nervous about losing their PayPal and Venmo buttons. After a mid-evaluation call with Braintree, their questions moved from build speed to what they would lose. The AE thinks Braintree raised those fears but says she is only guessing, so we may need a clear answer on PayPal and Venmo before a competitor frames it.",
+    "quote": "It went from 'how fast can we build this' to 'what do we lose.'",
+    "who": "Priya, AE"
+   },
+   "message": {
+    "covered": true,
+    "finding": "The docs, the sandbox and the marketplace features landed: sitter onboarding, identity checks and paying out in local currency. The acceptance-rate slide got silence, and Daniel dismissed it because their bookings are small. For a low-ticket marketplace like this, the build speed and sitter pay story mattered more than acceptance-rate claims.",
+    "quote": "our average booking is 38 dollars, I'm not losing sleep over auth rates.",
+    "who": "Daniel, VP of Engineering"
+   },
+   "proof": {
+    "covered": true,
+    "finding": "At first the AE said nothing was missing. She then admitted we had no clear answer on keeping Venmo and never sent the reference Daniel asked for: a customer their size that moved saved cards without losing any. The saved-card worry came up again at kickoff, so a reference on saved-card migration at this scale and a clear PayPal/Venmo answer look like gaps worth closing.",
+    "quote": "who's done this at our size without losing cards?",
+    "who": "Daniel, VP of Engineering"
+   },
+   "words": {
+    "covered": true,
+    "finding": "Daniel talked about a 'haunted house', 'stop babysitting this' and 'paid by Friday'. They say 'the app' and 'sitter pay' where we say 'marketplace' and 'payouts'. Messaging for a buyer like this could lead with taking payments off the engineering team's plate and getting workers paid on time, in their own terms.",
+    "quote": "Payments shouldn't be a team",
+    "who": "Daniel, VP of Engineering"
+   }
+  }
+ },
+ "ms": 23935,
+ "cost": 0.126468,
+ "in_tokens": 10147,
+ "out_tokens": 2265,
+ "model": "claude-opus-5-5"
+}

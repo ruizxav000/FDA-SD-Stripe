@@ -68,6 +68,20 @@ The report was cut to account, ACV, outcome, reason and 3-5 key findings, and th
 
 One finding was flagged as overstated across the 8 reports. About 50-70 seconds per review.
 
+## Round 11-12: findings follow the team's six insights
+
+Key findings became one per insight (what started it, who decided, the competitor, our message, missing proof, their words), with rules against repeating a point, over-generalizing from one deal, weak quotes, and claimed reactions to things people never saw. Graded per insight (max 13):
+
+| | Round 11 | Round 12 |
+|---|---|---|
+| Header (account, ACV, outcome, tag, reason) | — | 7.0 / 7 on every deal |
+| Six insights | 5.2 / 6 | 5.3 / 6 |
+| Total | 12.3 / 13 | 12.3 / 13 |
+| Reviews with repeated findings | 1 | 0 |
+| Invented-content flags | 4 | 1 |
+
+Round 12 also stopped the reviewer from claiming we never reached a decider unless the transcript says so.
+
 ## Why several steps instead of one prompt
 
 The single-prompt Sonnet baseline is strong: 21.0, no invented content, half the time, a quarter of the cost. On score alone the multi-step design wins by about 1 point, which is close to the judge's own noise: the same setup scored anywhere from 18 to 24 on one deal across runs. The steps are kept for reasons the score doesn't capture:

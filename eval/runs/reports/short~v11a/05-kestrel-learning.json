@@ -1,0 +1,86 @@
+{
+ "version": "2026-11-14.2",
+ "header": {
+  "deal": "Kestrel Learning",
+  "ae": "Elena",
+  "acv": {
+   "amount": 320000,
+   "quote": "The account was worth about three hundred and twenty K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "tag": "Approval rates",
+  "reason": "The international half of the account, about half its value, moved to Adyen's local acquiring, while the US stayed with us. The head of payments compared approval rates country by country: Adyen showed results from a test on his own traffic, and we answered with an average uplift. Elena says it was decided before we got in the room, but the evidence shows we were absent: there had been no business review for nine or ten months, and we had never met the new buyer."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "A new head of payments, a role the customer had never had, arrived and immediately pulled declines by country, and some international markets looked bad to him. In this deal, the opening was a new payments leader auditing declines by market, and we did not know he had been hired.",
+   "quote": "the first thing he did was pull declines by country. A few of their international markets looked bad to him.",
+   "who": "Elena, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Stefan recommended the move and the CFO approved it, two weeks before Elena's last call with Stefan. We know this only because Stefan told her. Stefan was never our champion: the engineering manager who bought us had left, Elena first met Stefan at renewal, and we never reached the CFO.",
+   "quote": "this went to the CFO two weeks ago.",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Stefan said Adyen tested a slice of his international traffic and returned results by country, and he kept saying 'local acquiring'. After that, his questions turned to our approval rate by country, card type and issuer, and why. Elena does not know what the test showed, and she had no counter to local acquiring.",
+   "quote": "Adyen ran a test on a slice of their international traffic and came back with results by country.",
+   "who": "Elena, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "The Authorization Boost average uplift met silence and then direct pushback, and Stefan declined the roadmap session. Adaptive Acceptance drew no reaction that Elena reported. Against a competitor showing his own numbers, a benchmark average lost credibility here.",
+   "quote": "that's an average. What's mine?",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "He asked for a market-by-market view of his own approval rates, with reasons, and for a named person who reviews his numbers every month. Our analysis arrived three weeks late, after the test had finished, though he called it the most useful thing we had sent him. We had no name to give him. This suggests that proactive, named performance ownership is something we could offer, not just a deck.",
+   "quote": "He asked who at Stripe looks at his numbers every month, and I didn't have a name.",
+   "who": "Elena, AE"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Stefan describes the problem as money lost and talks about 'approvals' and 'local cards, local rails', while we say 'authorization' and lead with product names like Authorization Boost. In this deal, speaking in money and his own approvals would have matched how he took the case to his CFO.",
+   "quote": "Money left on the table.",
+   "who": "Stefan, head of payments"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 53185,
+  "cost": 0.1671418,
+  "stage_ms": {
+   "reader": 29348,
+   "analyst": 23837
+  },
+  "stage_cost": {
+   "reader": 0.0479498,
+   "analyst": 0.119192
+  }
+ }
+}
