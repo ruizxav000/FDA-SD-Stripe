@@ -1,0 +1,59 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"In deals that start from failed payments, replace the average-uplift line with a figure built from the prospect's own decline data and a plain-language headline. Suggested headline: Stop big-basket orders dying at the last step. Suggested body: Your dashboard shows [N] in [X] online orders failing at payment, worst on the big baskets. On your own numbers, that costs you [$X] per quarter. Then explain the specific reason large orders get declined, before any average.\",\"evidence\":[\"E23\",\"E14\",\"E1\",\"E3\",\"E37\",\"E38\"],\"why\":\"The champion described the pain as \\\"orders dying at the last step\\\" on \\\"the big baskets\\\" with a number from her own dashboard, but the materials carried only the average-uplift slide, and the CFO concluded we were \\\"the same thing\\\".\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a standard offer and deliverable for champions who must sell to a CFO they cannot get in front of: Send us three months of your declines and we'll show you what the failed orders are worth. Turn the result into a one-page business case the champion can hand to finance. Put our rate, the cost of failed orders, and any gateway and chargeback-handling costs on the same page, so it arrives before the customer's own team builds a rate-only comparison.\",\"evidence\":[\"E34\",\"E35\",\"E26\",\"E16\",\"E6\"],\"why\":\"The champion asked for \\\"a one-page business case\\\" to hand the CFO and received the deck and pricing proposal instead, so the CFO decided on a controller's rate-only page (\\\"Our rate, their rate, side by side\\\").\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a counter-message for when an incumbent processor re-prices to keep the account: A lower rate doesn't fix the orders that still fail. Pair it with the prospect's decline cost shown next to the rate difference, and with the question the incumbent hasn't answered: why are your large orders being declined?\",\"evidence\":[\"E8\",\"E9\",\"E10\",\"E2\"],\"why\":\"The bank's only move was a better rate (\\\"No new product, nothing. Just a better rate.\\\"), and once it arrived the conversation moved from declines to price (\\\"every email was the rate\\\") even though the processor had never explained the declines.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "In deals that start from failed payments, replace the average-uplift line with a figure built from the prospect's own decline data and a plain-language headline. Suggested headline: Stop big-basket orders dying at the last step. Suggested body: Your dashboard shows [N] in [X] online orders failing at payment, worst on the big baskets. On your own numbers, that costs you [$X] per quarter. Then explain the specific reason large orders get declined, before any average.",
+    "evidence": [
+     "E23",
+     "E14",
+     "E1",
+     "E3",
+     "E37",
+     "E38"
+    ],
+    "why": "The champion described the pain as \"orders dying at the last step\" on \"the big baskets\" with a number from her own dashboard, but the materials carried only the average-uplift slide, and the CFO concluded we were \"the same thing\".",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a standard offer and deliverable for champions who must sell to a CFO they cannot get in front of: Send us three months of your declines and we'll show you what the failed orders are worth. Turn the result into a one-page business case the champion can hand to finance. Put our rate, the cost of failed orders, and any gateway and chargeback-handling costs on the same page, so it arrives before the customer's own team builds a rate-only comparison.",
+    "evidence": [
+     "E34",
+     "E35",
+     "E26",
+     "E16",
+     "E6"
+    ],
+    "why": "The champion asked for \"a one-page business case\" to hand the CFO and received the deck and pricing proposal instead, so the CFO decided on a controller's rate-only page (\"Our rate, their rate, side by side\").",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a counter-message for when an incumbent processor re-prices to keep the account: A lower rate doesn't fix the orders that still fail. Pair it with the prospect's decline cost shown next to the rate difference, and with the question the incumbent hasn't answered: why are your large orders being declined?",
+    "evidence": [
+     "E8",
+     "E9",
+     "E10",
+     "E2"
+    ],
+    "why": "The bank's only move was a better rate (\"No new product, nothing. Just a better rate.\"), and once it arrived the conversation moved from declines to price (\"every email was the rate\") even though the processor had never explained the declines.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 17044,
+ "cost": 0.07594400000000001,
+ "in_tokens": 5749,
+ "out_tokens": 1498,
+ "model": "claude-opus-5-5"
+}

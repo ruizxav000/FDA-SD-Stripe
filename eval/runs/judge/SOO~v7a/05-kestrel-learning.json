@@ -1,0 +1,50 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":0,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The outcome carries the international-only scope note\",\"pass\":true},{\"item\":\"\\\"Decided before we got in the room\\\" is challenged with the coverage facts\",\"pass\":false},{\"item\":\"\\\"that's an average. What's mine?\\\" is tied to a messaging change\",\"pass\":true},{\"item\":\"The Adyen test results stay unknown\",\"pass\":true}],\n \"fails\":[\"Messaging change 2 'why' says Adyen reported results 'by country, card type and issuer'. The transcript says Adyen's results were by country only. Card type and issuer were Stefan's later questions to us.\",\"Trigger insight says we 'lost exactly in the international markets, Brazil and \\\"a couple in Europe\\\"'. This treats the affected markets as established, but the key marks them as unverified (the rep 'never saw his analysis').\"],\n \"notes\":\"Strong on messaging: it replaces averages with the customer's own approvals, uses 'approvals' language, offers an answer to local acquiring and adds a named monthly owner. It also gets the scope note and the unknown Adyen results right. The biggest miss is the 'What decided it' section. It rejects 'decided before we got in the room' in favour of the three-week analysis gap, when the key's finding is that the claim is true because of no coverage: no business review in 9–10 months and the rep never met Stefan. The close also omits which analysis findings are fixable and the protect-US / win-back follow-up.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 0,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the international-only scope note",
+    "pass": true
+   },
+   {
+    "item": "\"Decided before we got in the room\" is challenged with the coverage facts",
+    "pass": false
+   },
+   {
+    "item": "\"that's an average. What's mine?\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "The Adyen test results stay unknown",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Messaging change 2 'why' says Adyen reported results 'by country, card type and issuer'. The transcript says Adyen's results were by country only. Card type and issuer were Stefan's later questions to us.",
+   "Trigger insight says we 'lost exactly in the international markets, Brazil and \"a couple in Europe\"'. This treats the affected markets as established, but the key marks them as unverified (the rep 'never saw his analysis')."
+  ],
+  "notes": "Strong on messaging: it replaces averages with the customer's own approvals, uses 'approvals' language, offers an answer to local acquiring and adds a named monthly owner. It also gets the scope note and the unknown Adyen results right. The biggest miss is the 'What decided it' section. It rejects 'decided before we got in the room' in favour of the three-week analysis gap, when the key's finding is that the claim is true because of no coverage: no business review in 9–10 months and the rep never met Stefan. The close also omits which analysis findings are fixable and the protect-US / win-back follow-up."
+ },
+ "ms": 42910,
+ "cost": 0.164648,
+ "in_tokens": 9537,
+ "out_tokens": 4418,
+ "model": "claude-opus-5-5"
+}

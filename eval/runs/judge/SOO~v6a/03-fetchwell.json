@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":1,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":1,\n \"must_catch\":[{\"item\":\"The gaps section shows the rep's 'nothing' being contradicted (PayPal/Venmo, saved cards)\",\"pass\":true},{\"item\":\"The Braintree theory is labeled opinion\",\"pass\":true},{\"item\":\"The approval-rate slide is reported as silence in a win\",\"pass\":true},{\"item\":\"The CFO's one question is surfaced as a messaging signal\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report's strongest work is the gaps section. It labels the rep's 'clean' claim as opinion, takes it apart with the Venmo, PayPal and saved-card evidence, and keeps the Braintree theory as opinion. It misses that Braintree was the incumbent and casts doubt on whose account manager churned, so it loses the key insight that the incumbent's weakness was the relationship. The finance payout-timing message also appears only in the decider section, not in the top-level messaging changes.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 1,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 1,
+  "must_catch": [
+   {
+    "item": "The gaps section shows the rep's 'nothing' being contradicted (PayPal/Venmo, saved cards)",
+    "pass": true
+   },
+   {
+    "item": "The Braintree theory is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The approval-rate slide is reported as silence in a win",
+    "pass": true
+   },
+   {
+    "item": "The CFO's one question is surfaced as a messaging signal",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report's strongest work is the gaps section. It labels the rep's 'clean' claim as opinion, takes it apart with the Venmo, PayPal and saved-card evidence, and keeps the Braintree theory as opinion. It misses that Braintree was the incumbent and casts doubt on whose account manager churned, so it loses the key insight that the incumbent's weakness was the relationship. The finance payout-timing message also appears only in the decider section, not in the top-level messaging changes."
+ },
+ "ms": 22871,
+ "cost": 0.117924,
+ "in_tokens": 9689,
+ "out_tokens": 2021,
+ "model": "claude-opus-5-5"
+}

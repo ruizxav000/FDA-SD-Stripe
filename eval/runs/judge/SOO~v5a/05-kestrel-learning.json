@@ -1,0 +1,50 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":1,\"competitor\":2,\"message\":2,\"decided\":0,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the international-only scope note\",\"pass\":true},\n  {\"item\":\"\\\"Decided before we got in the room\\\" is challenged with the coverage facts\",\"pass\":false},\n  {\"item\":\"\\\"that's an average. What's mine?\\\" is tied to a messaging change\",\"pass\":true},\n  {\"item\":\"The Adyen test results stay unknown\",\"pass\":true}\n ],\n \"fails\":[\n  \"Trigger insight says 'we missed both the departure and the new hire', but Elena said 'I knew the engineering manager had left' (T24). Only the new hire was missed.\",\n  \"Decider insight and close describe a 'CFO memo' or 'memo to the CFO'. The transcript only says 'this went to the CFO'; no memo is mentioned.\"\n ],\n \"notes\":\"The report is strong on the core messaging diagnosis. It ties 'that's an average. What's mine?' to replacing the average-uplift line with the customer's own approvals data, adopts 'approvals' and a named monthly owner, keeps the international/US scope note and leaves Adyen's results unknown. Its biggest miss is the 'What decided it' section: it argues the rep is wrong that the deal was decided before we engaged, and puts the deciding moment in the three-week delay, when the key's finding is that the rep is right and the cause was no coverage. The report never cites the 9–10 months without a business review or that Elena had never met Stefan. Smaller misses: the runner-up tag is 'Support and service' rather than 'Champion or access', the trigger omits the unverified Brazil/Europe markets, and the close lists the pitch-reaction question as dodged even though Elena answered it.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 1,
+   "competitor": 2,
+   "message": 2,
+   "decided": 0,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the international-only scope note",
+    "pass": true
+   },
+   {
+    "item": "\"Decided before we got in the room\" is challenged with the coverage facts",
+    "pass": false
+   },
+   {
+    "item": "\"that's an average. What's mine?\" is tied to a messaging change",
+    "pass": true
+   },
+   {
+    "item": "The Adyen test results stay unknown",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Trigger insight says 'we missed both the departure and the new hire', but Elena said 'I knew the engineering manager had left' (T24). Only the new hire was missed.",
+   "Decider insight and close describe a 'CFO memo' or 'memo to the CFO'. The transcript only says 'this went to the CFO'; no memo is mentioned."
+  ],
+  "notes": "The report is strong on the core messaging diagnosis. It ties 'that's an average. What's mine?' to replacing the average-uplift line with the customer's own approvals data, adopts 'approvals' and a named monthly owner, keeps the international/US scope note and leaves Adyen's results unknown. Its biggest miss is the 'What decided it' section: it argues the rep is wrong that the deal was decided before we engaged, and puts the deciding moment in the three-week delay, when the key's finding is that the rep is right and the cause was no coverage. The report never cites the 9–10 months without a business review or that Elena had never met Stefan. Smaller misses: the runner-up tag is 'Support and service' rather than 'Champion or access', the trigger omits the unverified Brazil/Europe markets, and the close lists the pitch-reaction question as dodged even though Elena answered it."
+ },
+ "ms": 37823,
+ "cost": 0.148216,
+ "in_tokens": 9328,
+ "out_tokens": 3680,
+ "model": "claude-opus-5-5"
+}

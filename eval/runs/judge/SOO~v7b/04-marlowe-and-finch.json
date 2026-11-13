@@ -1,0 +1,52 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The decision-maker contradiction (Raj vs. Angela) is surfaced.\",\"pass\":true},\n  {\"item\":\"\\\"that's a diagram\\\" is tied to a messaging change.\",\"pass\":true},\n  {\"item\":\"The question shift (11 of 14 about stores) is reported as a fact.\",\"pass\":true},\n  {\"item\":\"The rep's \\\"better product online\\\" is treated as opinion, not used as a reason.\",\"pass\":false}\n ],\n \"fails\":[\n  \"Language section's messaging puts 'one team accountable' among the customer's own words ('Use their words'), but that phrase does not appear in the transcript.\",\n  \"Trigger insight says 'We knew from day one that the problem lived at the till.' The transcript does not support when or whether the team knew this.\",\n  \"Competitor evidence attributes 'Raj forwarded me a list of 14 questions and 11 of them were about stores' to Raj as speaker, but Tom said it.\",\n  \"Message insight says the rep 'responded by describing the process again.' The word 'again' is an embellishment; the transcript only says 'I described it.'\"\n ],\n \"notes\":\"The report surfaces the core story: the Raj-vs-Angela decider contradiction, 'that's a diagram' turned into a demonstrated-till-return messaging change, the 11-of-14 store question shift, and store-rollout credibility as the deciding factor. It misses the incumbent (separate store and online providers), mislabels the secondhand December 27 story as opinion, and never addresses Tom's 'better product online' belief. Its close also omits the key's open questions: Adyen's commercial terms, what Bev wrote down, and whether a named rollout plan with partner installs would have been accepted.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The decision-maker contradiction (Raj vs. Angela) is surfaced.",
+    "pass": true
+   },
+   {
+    "item": "\"that's a diagram\" is tied to a messaging change.",
+    "pass": true
+   },
+   {
+    "item": "The question shift (11 of 14 about stores) is reported as a fact.",
+    "pass": true
+   },
+   {
+    "item": "The rep's \"better product online\" is treated as opinion, not used as a reason.",
+    "pass": false
+   }
+  ],
+  "fails": [
+   "Language section's messaging puts 'one team accountable' among the customer's own words ('Use their words'), but that phrase does not appear in the transcript.",
+   "Trigger insight says 'We knew from day one that the problem lived at the till.' The transcript does not support when or whether the team knew this.",
+   "Competitor evidence attributes 'Raj forwarded me a list of 14 questions and 11 of them were about stores' to Raj as speaker, but Tom said it.",
+   "Message insight says the rep 'responded by describing the process again.' The word 'again' is an embellishment; the transcript only says 'I described it.'"
+  ],
+  "notes": "The report surfaces the core story: the Raj-vs-Angela decider contradiction, 'that's a diagram' turned into a demonstrated-till-return messaging change, the 11-of-14 store question shift, and store-rollout credibility as the deciding factor. It misses the incumbent (separate store and online providers), mislabels the secondhand December 27 story as opinion, and never addresses Tom's 'better product online' belief. Its close also omits the key's open questions: Adyen's commercial terms, what Bev wrote down, and whether a named rollout plan with partner installs would have been accepted."
+ },
+ "ms": 32593,
+ "cost": 0.137688,
+ "in_tokens": 9412,
+ "out_tokens": 3120,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,57 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For buyers who come to us with their own checkout-failure numbers: 'Here's what your 'orders dying at the last step' are worth.' Put a dollar figure on their failed orders from their own decline data, starting with 'the big baskets', and use the average uplift as supporting detail only, never as the headline.\",\"evidence\":[\"E27\",\"E2\",\"E42\",\"E18\"],\"why\":\"We led with 'the average improvement in acceptance' while the champion's own data showed about one in twelve orders failing, mostly on big baskets, and the decider still read our offer as 'the same thing', so the claim needs to be the customer's lost revenue rather than our average.\",\"strength\":\"Test this\"},{\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"replace\",\"change\":\"Present ROI as something we calculate for them rather than cite: 'Send us three months of your declines and we'll give you a one-page business case you can hand to finance.' The page should show the value of their failed orders next to our price, and it becomes the default reply whenever a champion asks for something to give a CFO who won't take vendor meetings.\",\"evidence\":[\"E37\",\"E38\",\"E29\",\"E20\",\"X1\"],\"why\":\"The champion asked for 'a one-page business case' to give the CFO, and our SE offered to value the failed orders from a three-month export, but we sent the deck and pricing instead, so the CFO decided on a rate-only page with 'Nothing from us' on value.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a counter-line for deals where the incumbent bank answers with a rate cut: a lower rate doesn't fix the orders that still fail at checkout, so compare the rate saving with what those failed orders cost. Use it to bring the conversation back to declines, not to negotiate the rate.\",\"evidence\":[\"E11\",\"E13\",\"E14\",\"E5\"],\"why\":\"Before the bank 'sharpened the rate', the champion was asking why big orders fail, and afterward 'every email was the rate', even though the processor never explained the failures. We have no line that brings the conversation back to that unsolved problem.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For buyers who come to us with their own checkout-failure numbers: 'Here's what your 'orders dying at the last step' are worth.' Put a dollar figure on their failed orders from their own decline data, starting with 'the big baskets', and use the average uplift as supporting detail only, never as the headline.",
+    "evidence": [
+     "E27",
+     "E2",
+     "E42",
+     "E18"
+    ],
+    "why": "We led with 'the average improvement in acceptance' while the champion's own data showed about one in twelve orders failing, mostly on big baskets, and the decider still read our offer as 'the same thing', so the claim needs to be the customer's lost revenue rather than our average.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "replace",
+    "change": "Present ROI as something we calculate for them rather than cite: 'Send us three months of your declines and we'll give you a one-page business case you can hand to finance.' The page should show the value of their failed orders next to our price, and it becomes the default reply whenever a champion asks for something to give a CFO who won't take vendor meetings.",
+    "evidence": [
+     "E37",
+     "E38",
+     "E29",
+     "E20",
+     "X1"
+    ],
+    "why": "The champion asked for 'a one-page business case' to give the CFO, and our SE offered to value the failed orders from a three-month export, but we sent the deck and pricing instead, so the CFO decided on a rate-only page with 'Nothing from us' on value.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a counter-line for deals where the incumbent bank answers with a rate cut: a lower rate doesn't fix the orders that still fail at checkout, so compare the rate saving with what those failed orders cost. Use it to bring the conversation back to declines, not to negotiate the rate.",
+    "evidence": [
+     "E11",
+     "E13",
+     "E14",
+     "E5"
+    ],
+    "why": "Before the bank 'sharpened the rate', the champion was asking why big orders fail, and afterward 'every email was the rate', even though the processor never explained the failures. We have no line that brings the conversation back to that unsolved problem.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 16230,
+ "cost": 0.07302,
+ "in_tokens": 5836,
+ "out_tokens": 1317,
+ "model": "claude-opus-5-5"
+}

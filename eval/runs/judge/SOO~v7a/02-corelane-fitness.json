@@ -1,0 +1,51 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":2,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},\n  {\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},\n  {\"item\":\"Customer language is marked Not covered\",\"pass\":true},\n  {\"item\":\"\\\"A third of the churn\\\" is labeled unverified or opinion\",\"pass\":true},\n  {\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report gets the most important points right. It scopes the win to online memberships, with the front desk still on Global and phase two undated. It also surfaces the Maya-chose and Greg-decided contradiction and correctly marks customer language as not covered. Its main weaknesses are small labelling slips. The close lists 'Who made the final call' as dodged, but the question was answered. Some of the rep's own paraphrases, such as Global's counter-offer and the 'is that the readers?' excerpt, are attributed to Maya as speaker. The 'decided' section also leaves the online-only qualifier to other sections.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 2,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": true
+   },
+   {
+    "item": "\"A third of the churn\" is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the most important points right. It scopes the win to online memberships, with the front desk still on Global and phase two undated. It also surfaces the Maya-chose and Greg-decided contradiction and correctly marks customer language as not covered. Its main weaknesses are small labelling slips. The close lists 'Who made the final call' as dodged, but the question was answered. Some of the rep's own paraphrases, such as Global's counter-offer and the 'is that the readers?' excerpt, are attributed to Maya as speaker. The 'decided' section also leaves the online-only qualifier to other sections."
+ },
+ "ms": 24774,
+ "cost": 0.122456,
+ "in_tokens": 9618,
+ "out_tokens": 2276,
+ "model": "claude-opus-5-5"
+}

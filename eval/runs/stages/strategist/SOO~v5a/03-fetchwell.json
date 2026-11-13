@@ -1,0 +1,70 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M11\",\"current_line\":\"Onboard, verify and pay out to sellers worldwide, in their local currency.\",\"type\":\"replace\",\"change\":\"For apps that pay sitters or other service providers, lead with this in their words, not 'marketplace' or 'payouts': 'Get your sitters paid by Friday in every new country you launch, with onboarding and identity checks built in, so you can stop babysitting sitter pay.' Use it as the opener for these buyers instead of M1.\",\"evidence\":[\"E20\",\"E41\",\"E42\",\"E39\",\"X1\",\"E1\"],\"why\":\"The marketplace piece landed, but the customer says 'the app' and 'sitter pay' rather than marketplace and payouts, frames the problem as wanting to 'stop babysitting this', and the trigger was paying sitters locally in each new country.\",\"strength\":\"Test this\"},{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"drop\",\"change\":\"Stop leading with the authorization-rate slide for low-ticket, engineering-led buyers. Use that time on a hands-on sandbox session and the sitter onboarding and local sitter pay flow. Bring up acceptance only if the buyer raises it.\",\"evidence\":[\"E21\",\"E22\"],\"why\":\"The acceptance-rate slide drew silence, and the buyer dismissed it outright: 'our average booking is 38 dollars, I'm not losing sleep over auth rates.'\",\"strength\":\"Test this\"},{\"target\":\"M2\",\"current_line\":\"Built for developers: launch payments fast with our APIs, docs and sandbox.\",\"type\":\"replace\",\"change\":\"For engineering-led evaluations, turn the sandbox from a feature into an offered step: 'Have one engineer build a working payment flow in our sandbox over a weekend, and decide from that.' Reps should offer this explicitly and follow up on the result, not wait for it to happen unprompted.\",\"evidence\":[\"E18\",\"E26\",\"E17\",\"E19\"],\"why\":\"The deal turned when a customer engineer built a working sitter payment flow over a weekend, after which 'Daniel stopped saying 'if.'' The rep only learned about it afterward, so the step needs to be deliberate to be repeatable.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a 'what you keep' switching proof point for buyers whose customers pay with PayPal, Venmo or saved cards. Answer 'Do we lose PayPal, do we lose Venmo, what happens to the saved cards' before the buyer asks, and back it with a named reference who has migrated saved cards at a comparable size. Do not publish this until product confirms the Venmo answer and a reference is secured.\",\"evidence\":[\"E11\",\"E14\",\"E30\",\"E34\"],\"why\":\"Mid-evaluation the buyer's worry shifted to what they would lose, the rep had no Venmo answer, and the peer reference they asked for ('who's done this at our size without losing cards?') was never supplied. M8's generic customer stories don't cover this.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M11",
+    "current_line": "Onboard, verify and pay out to sellers worldwide, in their local currency.",
+    "type": "replace",
+    "change": "For apps that pay sitters or other service providers, lead with this in their words, not 'marketplace' or 'payouts': 'Get your sitters paid by Friday in every new country you launch, with onboarding and identity checks built in, so you can stop babysitting sitter pay.' Use it as the opener for these buyers instead of M1.",
+    "evidence": [
+     "E20",
+     "E41",
+     "E42",
+     "E39",
+     "X1",
+     "E1"
+    ],
+    "why": "The marketplace piece landed, but the customer says 'the app' and 'sitter pay' rather than marketplace and payouts, frames the problem as wanting to 'stop babysitting this', and the trigger was paying sitters locally in each new country.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "drop",
+    "change": "Stop leading with the authorization-rate slide for low-ticket, engineering-led buyers. Use that time on a hands-on sandbox session and the sitter onboarding and local sitter pay flow. Bring up acceptance only if the buyer raises it.",
+    "evidence": [
+     "E21",
+     "E22"
+    ],
+    "why": "The acceptance-rate slide drew silence, and the buyer dismissed it outright: 'our average booking is 38 dollars, I'm not losing sleep over auth rates.'",
+    "strength": "Test this"
+   },
+   {
+    "target": "M2",
+    "current_line": "Built for developers: launch payments fast with our APIs, docs and sandbox.",
+    "type": "replace",
+    "change": "For engineering-led evaluations, turn the sandbox from a feature into an offered step: 'Have one engineer build a working payment flow in our sandbox over a weekend, and decide from that.' Reps should offer this explicitly and follow up on the result, not wait for it to happen unprompted.",
+    "evidence": [
+     "E18",
+     "E26",
+     "E17",
+     "E19"
+    ],
+    "why": "The deal turned when a customer engineer built a working sitter payment flow over a weekend, after which 'Daniel stopped saying 'if.'' The rep only learned about it afterward, so the step needs to be deliberate to be repeatable.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a 'what you keep' switching proof point for buyers whose customers pay with PayPal, Venmo or saved cards. Answer 'Do we lose PayPal, do we lose Venmo, what happens to the saved cards' before the buyer asks, and back it with a named reference who has migrated saved cards at a comparable size. Do not publish this until product confirms the Venmo answer and a reference is secured.",
+    "evidence": [
+     "E11",
+     "E14",
+     "E30",
+     "E34"
+    ],
+    "why": "Mid-evaluation the buyer's worry shifted to what they would lose, the rep had no Venmo answer, and the peer reference they asked for ('who's done this at our size without losing cards?') was never supplied. M8's generic customer stories don't cover this.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 19297,
+ "cost": 0.08454800000000001,
+ "in_tokens": 5917,
+ "out_tokens": 1861,
+ "model": "claude-opus-5-5"
+}

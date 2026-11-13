@@ -1,0 +1,53 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":1,\n \"must_catch\":[\n  {\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},\n  {\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},\n  {\"item\":\"Customer language is marked Not covered\",\"pass\":true},\n  {\"item\":\"'A third of the churn' is labeled unverified or opinion\",\"pass\":true},\n  {\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}],\n \"fails\":[\"Message insight claims the 'average uplift' (M4) and 'study-backed ROI' (M6) claims 'are exactly what did not move them'. The transcript never says a study-backed ROI claim (or a specific average-uplift claim) was pitched, so this result is unsupported.\"],\n \"notes\":\"The report got the core right: Won is scoped to online memberships, with the front desk still on Global and phase two undated. It also surfaced the Maya-chose / Greg-decided contradiction and marked customer language as not covered. It missed the key's rep takeaway that the front desk is a live competitive deal, not a done one. Its 'staged path / front desks can stay where they are' messaging concedes in-store ground instead of making a live in-studio reader demo the proof to build for phase two. It also mislabels the answered decider question as 'dodged'.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 1,
+  "must_catch": [
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": true
+   },
+   {
+    "item": "'A third of the churn' is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Message insight claims the 'average uplift' (M4) and 'study-backed ROI' (M6) claims 'are exactly what did not move them'. The transcript never says a study-backed ROI claim (or a specific average-uplift claim) was pitched, so this result is unsupported."
+  ],
+  "notes": "The report got the core right: Won is scoped to online memberships, with the front desk still on Global and phase two undated. It also surfaced the Maya-chose / Greg-decided contradiction and marked customer language as not covered. It missed the key's rep takeaway that the front desk is a live competitive deal, not a done one. Its 'staged path / front desks can stay where they are' messaging concedes in-store ground instead of making a live in-studio reader demo the proof to build for phase two. It also mislabels the answered decider question as 'dodged'."
+ },
+ "ms": 32042,
+ "cost": 0.13328,
+ "in_tokens": 9486,
+ "out_tokens": 2870,
+ "model": "claude-opus-5-5"
+}

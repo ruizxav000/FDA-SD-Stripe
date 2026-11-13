@@ -120,7 +120,7 @@ async function runPipelineConfig(cfgFull, d) {
   const strat = await once(`strat:${kS}:${d.deal}`, () => limited(() => cached(stageFile("strategist", kS, d.deal),
     () => claude(D.strategistPrompt({ deal: d.name, analysis: analyst.data, ledger }), MODELS[s], EFFORT))));
 
-  const report = D.assemble({ deal: d.name, ledger, analysis: analyst.data, strategy: strat.data || { changes: [] }, turns: d.parsed.turns,
+  const report = D.assemble({ deal: undefined, ledger, analysis: analyst.data, strategy: strat.data || { changes: [] }, turns: d.parsed.turns,
     meta: { models: { reader: MODELS[r], analyst: MODELS[a], strategist: MODELS[s] } } });
   const stages = { reader, analyst, strategist: strat };
   report.meta.ms = reader.ms + analyst.ms + (strat.ms || 0);       // sequential wall time
@@ -146,7 +146,7 @@ async function runSingle(cfg, d) {
     analysis.sections[k] = { ...s, evidence: (s.evidence || []).map((e) => { const id = "S" + ++n; ledger.evidence.push({ id, ...e }); return { id, excerpt: e.excerpt, label: e.label }; }) };
   }
   const strategy = { changes: (x.messaging_changes || []).map((c) => ({ ...c, evidence: [] })) };
-  const report = D.assemble({ deal: d.name, ledger, analysis, strategy, turns: d.parsed.turns, meta: { models: { single: MODELS[m] } } });
+  const report = D.assemble({ deal: undefined, ledger, analysis, strategy, turns: d.parsed.turns, meta: { models: { single: MODELS[m] } } });
   report.messaging_changes.forEach((c, i) => (c.evidence_excerpts = (x.messaging_changes[i] || {}).evidence_excerpts || []));
   Object.assign(report.meta, { ms: r.ms, cost: r.cost, stage_ms: { single: r.ms }, stage_cost: { single: r.cost } });
   return report;

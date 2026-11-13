@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M2\",\"current_line\":\"Built for developers: launch payments fast with our APIs, docs and sandbox.\",\"type\":\"replace\",\"change\":\"For engineering-led buyers: 'Payments shouldn't be a team.' Get your engineers into our docs and sandbox and let them build a working payment flow themselves, then show it to their own team. Lead with a self-serve build story, not a feature list, and invite the buyer's engineers into the sandbox early in the evaluation.\",\"evidence\":[\"E17\",\"E22\",\"E23\",\"E16\",\"E35\"],\"why\":\"The docs and sandbox drew a reaction, and an engineer's weekend build is what ended the bake-off and made the decider stop saying 'if'; his own line 'Payments shouldn't be a team' says this more sharply than M2 does.\",\"strength\":\"Test this\"},{\"target\":\"M11\",\"current_line\":\"Onboard, verify and pay out to sellers worldwide, in their local currency.\",\"type\":\"replace\",\"change\":\"For app-based marketplaces paying individual providers (here, sitters): describe this in the buyer's words. 'Onboarding sitters, the identity checks, paying out in local currency' becomes sitter pay, not 'payouts'. Example: 'Onboard and verify your sitters, and handle sitter pay in their local currency as you launch new countries.' Mention timing promises like 'paid by Friday' only after product confirms our payout timing supports them.\",\"evidence\":[\"E19\",\"E39\",\"E37\",\"E1\"],\"why\":\"The marketplace piece landed, but the customer says 'sitter pay' and 'paid by Friday', not 'payouts' or 'sellers', and the transcript does not show whether our timing supports 'paid by Friday'.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a 'what you keep' proof point for switching buyers. List each item they fear losing (the PayPal button, the Venmo button, saved cards), give a confirmed answer for each, and name a saved-card migration reference they can check. Present it before the buyer asks 'what do we lose'. Do not publish until product confirms the PayPal and Venmo answers.\",\"evidence\":[\"E13\",\"E14\",\"E27\",\"E31\"],\"why\":\"The buyer's questions shifted to 'what do we lose', specifically PayPal, Venmo and saved cards; we had no crisp Venmo answer and no reference for 'who's done this at our size without losing cards?'\",\"strength\":\"Test this\"},{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"drop\",\"change\":\"For low-ticket marketplace buyers, take the acceptance-rate slide out of the core pitch. Keep it available only if the buyer raises authorization rates, and spend that time on the switching questions they actually raise.\",\"evidence\":[\"E20\",\"E21\"],\"why\":\"The acceptance-rate slide drew silence, and the decider dismissed it: 'our average booking is 38 dollars, I'm not losing sleep over auth rates.'\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M2",
+    "current_line": "Built for developers: launch payments fast with our APIs, docs and sandbox.",
+    "type": "replace",
+    "change": "For engineering-led buyers: 'Payments shouldn't be a team.' Get your engineers into our docs and sandbox and let them build a working payment flow themselves, then show it to their own team. Lead with a self-serve build story, not a feature list, and invite the buyer's engineers into the sandbox early in the evaluation.",
+    "evidence": [
+     "E17",
+     "E22",
+     "E23",
+     "E16",
+     "E35"
+    ],
+    "why": "The docs and sandbox drew a reaction, and an engineer's weekend build is what ended the bake-off and made the decider stop saying 'if'; his own line 'Payments shouldn't be a team' says this more sharply than M2 does.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M11",
+    "current_line": "Onboard, verify and pay out to sellers worldwide, in their local currency.",
+    "type": "replace",
+    "change": "For app-based marketplaces paying individual providers (here, sitters): describe this in the buyer's words. 'Onboarding sitters, the identity checks, paying out in local currency' becomes sitter pay, not 'payouts'. Example: 'Onboard and verify your sitters, and handle sitter pay in their local currency as you launch new countries.' Mention timing promises like 'paid by Friday' only after product confirms our payout timing supports them.",
+    "evidence": [
+     "E19",
+     "E39",
+     "E37",
+     "E1"
+    ],
+    "why": "The marketplace piece landed, but the customer says 'sitter pay' and 'paid by Friday', not 'payouts' or 'sellers', and the transcript does not show whether our timing supports 'paid by Friday'.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a 'what you keep' proof point for switching buyers. List each item they fear losing (the PayPal button, the Venmo button, saved cards), give a confirmed answer for each, and name a saved-card migration reference they can check. Present it before the buyer asks 'what do we lose'. Do not publish until product confirms the PayPal and Venmo answers.",
+    "evidence": [
+     "E13",
+     "E14",
+     "E27",
+     "E31"
+    ],
+    "why": "The buyer's questions shifted to 'what do we lose', specifically PayPal, Venmo and saved cards; we had no crisp Venmo answer and no reference for 'who's done this at our size without losing cards?'",
+    "strength": "Test this"
+   },
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "drop",
+    "change": "For low-ticket marketplace buyers, take the acceptance-rate slide out of the core pitch. Keep it available only if the buyer raises authorization rates, and spend that time on the switching questions they actually raise.",
+    "evidence": [
+     "E20",
+     "E21"
+    ],
+    "why": "The acceptance-rate slide drew silence, and the decider dismissed it: 'our average booking is 38 dollars, I'm not losing sleep over auth rates.'",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 19361,
+ "cost": 0.07802,
+ "in_tokens": 5781,
+ "out_tokens": 1589,
+ "model": "claude-opus-5-5"
+}

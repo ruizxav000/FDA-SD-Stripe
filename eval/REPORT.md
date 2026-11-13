@@ -2,7 +2,7 @@
 
 **Decision: Sonnet reads → Opus analyzes → Opus plans the messaging changes → code checks every quote. The steps run in a fixed order under code, not under an AI orchestrator.**
 
-Tested on the 8 fictional deal reviews in `test-set/`. Every report was graded by Opus (high effort) against that deal's answer key: 476 model calls, about $53 in API-equivalent usage. Full tables: `tables.md`. Raw outputs: `runs/`.
+Tested on the fictional deal reviews in `test-set/` (8 deals, plus a 9th variant that states the deal size). Every report was graded by Opus (high effort) against that deal's answer key: 476 model calls, about $53 in API-equivalent usage. Full tables: `tables.md`. Raw outputs: `runs/`.
 
 ## What each step does
 
@@ -46,7 +46,11 @@ Every setup quoted 100% of its evidence word for word, because the code check gu
 | 3 | Tag rules: "No decision" is always the tag when nobody switched; "Value proof" narrowed. | Kestrel and Pikeview fixed. Fernbrook overcorrected to "Approval rates". |
 | 4 | One rule for close calls: ask what the decider was comparing at the moment of decision (money → Value proof; approval performance → Approval rates). | **All 8 deals get the answer key's tag. Both runs agree on every deal run twice. Header scores 5.5 and 6.0 out of 6. 1 minor flag per run.** |
 
-Round 4 scores: 21.5 and 22.5 out of 24, at about 110s and $0.33 per review.
+| 5 | No deal-name input: the review reads the customer's name from the transcript, or writes a short description when the name is never said. Never invents a name. | Names found where said ("Fernbrook"), with short descriptions elsewhere. Tags unchanged. |
+| 6 | Deal size (ACV): recorded only if stated, with the exact words checked against the transcript; otherwise listed as a follow-up. New test deal 09 (07 plus a stated ACV) with a $4,000 product price as a trap. | ACV $95,000 on deal 09, blank and listed as a follow-up on the other 8. Must-catch 97%. One tag drifted (Marlowe & Finch), caused by two tag definitions that both mentioned "rollout". |
+| 7 | Separated those two tags: store rollout belongs to "In-store and online together"; "Support and service" is post-sale help. | **All 9 deals tagged as the key expects; repeat runs agree on the boundary deals; 21.9/24; ACV correct on every deal.** |
+
+Rounds 4–7 score 21.1–22.5 out of 24 at about 105–120s and $0.32–0.37 per review.
 
 ## Why several steps instead of one prompt
 

@@ -6,7 +6,7 @@
 (function (root) {
   "use strict";
 
-  const PIPELINE_VERSION = "2026-11-13.4";
+  const PIPELINE_VERSION = "2026-11-13.7";
 
   // ── Which model runs each stage (set from the model comparison; see eval/REPORT.md)
   const STAGE_MODELS = {
@@ -21,10 +21,10 @@
     ["Product fit", "A capability we did or didn't have."],
     ["Developer experience", "Docs, sandbox, APIs, how fast their engineers could build."],
     ["Approval rates", "The decider compared APPROVAL PERFORMANCE itself: approval/decline rates by market, card type or issuer, a competitor's test results, the customer's own approval data."],
-    ["In-store and online together", "One platform across tills and web: returns, customer records, rollout."],
+    ["In-store and online together", "One platform across tills and web: in-store returns of online orders, one customer record, and the store rollout itself (installs, rollout plan, store-operations credibility)."],
     ["Migration effort", "Cost, risk or timing of switching (re-collecting cards, staged moves, freeze periods)."],
     ["Existing relationship or bundle", "The incumbent's bank relationship, bundled services or contract lock-in."],
-    ["Support and service", "Named people, escalation, rollout teams, on-call coverage."],
+    ["Support and service", "Who helps after the sale: named people, escalation paths, on-call coverage for critical moments. Not store rollouts (that is In-store and online together)."],
     ["Champion or access", "A champion leaving, or never reaching the person who decided."],
     ["No decision", "Nobody switched: freeze, stall, status quo. Whenever the outcome is No decision, this is the tag, and the underlying cause goes in runner_up."],
     ["Not established", "The review never got to the reason."],
@@ -222,7 +222,7 @@
 
   const CONTEXT = `Context: after a deal closes, a product marketer (the interviewer) interviews the account executive (the rep) to learn what really happened, in order to sharpen our messaging and positioning. Everything about the customer reaches us secondhand through the rep. When the rep says "we/us/our" or names their own company, that means us. Each transcript line is "[T<n>] <Speaker> (<role>): text", where role is rep, interviewer or other.`;
 
-  function readerPrompt({ deal, transcript }) {
+  function readerPrompt({ transcript }) {
     return `You are the READER in a deal-review pipeline. Read the WHOLE interview transcript and build an evidence ledger. Extract; do not analyze or recommend.
 
 ${CONTEXT}
@@ -241,8 +241,6 @@ Also record:
 - skipped: which of the seven standard questions were never asked or never answered. Use these keys: trigger, decider, competitor, message, decided, gaps, language.
 - language_pairs: where the customer's words differ from the words we use (in the pitch or the rep's own words).
 - outcome_signals: what the transcript says about won / lost / no decision, and whether only part of the business moved.
-
-Deal: ${deal}
 
 TRANSCRIPT
 ${transcript}
@@ -269,7 +267,7 @@ Reply with ONLY this JSON (no prose):
     return MESSAGING.map((m) => `- ${m.id} [${m.pillar}] "${m.line}"`).join("\n");
   }
 
-  function analystPrompt({ deal, transcript, ledger }) {
+  function analystPrompt({ transcript, ledger }) {
     return `You are the ANALYST in a deal-review pipeline. We are not summarizing the call. Dig into the conversation, pull out the insights, and work out what they mean for our messaging and positioning.
 
 ${CONTEXT}
@@ -280,6 +278,9 @@ You get the transcript and an evidence ledger built by a reader. Use ledger ids 
 
 Write:
 1. HEADER
+   - deal: the customer's company name exactly as said in the transcript. If the company is never named, a short plain description of the customer from the transcript, at most 6 words, with no notes or brackets (for example "Regional restaurant-supply distributor"). Never invent a name.
+   - acv: the deal's annual contract value, ONLY if the rep or customer states it: {"amount": number in US dollars per year, "quote": the exact words from the transcript that state it}. Not product prices, fees, savings, the value we estimated for them, or a competitor's price. Never estimate or convert a range into a number. If it is not stated, null, and list "What was the deal size (ACV)?" in the close as skipped.
+   - ae: the account executive's first name if the transcript gives it, else null.
    - outcome: exactly one of "Won", "Lost", "No decision". Decide from the evidence, not from the rep's framing. If nobody actually chose a competitor and the deal stalled or was frozen, it is "No decision".
    - scope: one short sentence when the outcome is only partly true (for example "Won: online only; in-store still with the incumbent"), else null.
    - competitor (who we were up against; "None (status quo)" if no one) and incumbent (what they used before). Use null if unknown.
@@ -313,8 +314,6 @@ Hard rules:
 Our current messaging (provisional), for reference:
 ${libraryBlock()}
 
-Deal: ${deal}
-
 TRANSCRIPT
 ${transcript}
 END TRANSCRIPT
@@ -325,13 +324,13 @@ ${JSON.stringify(ledger)}
 JSON safety: inside any string value, write double quotation marks as single quotation marks (') so the JSON stays valid. Excerpts still count as word for word.
 
 Reply with ONLY this JSON:
-{"header":{"outcome":"Won|Lost|No decision","scope":null,"competitor":null,"incumbent":null,"tag":"","runner_up":null,"tag_why":""},
+{"header":{"deal":"","ae":null,"acv":null,"outcome":"Won|Lost|No decision","scope":null,"competitor":null,"incumbent":null,"tag":"","runner_up":null,"tag_why":""},
  "sections":{${SECTION_KEYS.map((k) => `"${k}":{"covered":true,"evidence":[{"id":"E1","excerpt":"","label":"quote|fact|opinion"}],"insight":"","messaging":""}`).join(",")}},
  "close":{"gaps":[{"question":"","kind":"skipped|dodged|unknown","follow_up":""}],"rep_takeaway":""},
  "confidence":"high|medium|low"}`;
   }
 
-  function strategistPrompt({ deal, analysis, ledger }) {
+  function strategistPrompt({ analysis, ledger }) {
     const pairs = (ledger && ledger.language_pairs) || [];
     return `You are the MESSAGING STRATEGIST in a deal-review pipeline. An analyst has turned a post-deal interview into findings. Your job is the part of the report that matters most: concrete changes to our messaging.
 
@@ -350,8 +349,6 @@ Give 1-4 changes, most important first. Only propose what the evidence supports.
 Our current messaging (PROVISIONAL library):
 ${libraryBlock()}
 
-Deal: ${deal}
-
 ANALYSIS (JSON)
 ${JSON.stringify(analysis)}
 
@@ -365,14 +362,14 @@ Reply with ONLY this JSON:
   }
 
   // Single-call baseline (for comparison only): one prompt does everything.
-  function singlePrompt({ deal, transcript }) {
+  function singlePrompt({ transcript }) {
     return `You turn a post-deal interview into a deal review. We are not summarizing the call: dig into the conversation, pull out the insights, and work out what they change in our messaging and positioning.
 
 ${CONTEXT}
 
 ${LABELS}
 
-Header: outcome (exactly "Won", "Lost" or "No decision"; decide from evidence, not the rep's framing), scope (when only partly true, else null), competitor, incumbent, one reason tag from the list (neutral topics; no price tag on purpose; "Not established" if the review never got to the reason), runner_up, tag_why.
+Header: deal (the customer's company name as said in the transcript, else a short description of the customer, at most 6 words; never invent a name), acv ({"amount": US dollars per year, "quote": exact words} only if the deal size is stated, else null), ae (the AE's first name if given, else null), outcome (exactly "Won", "Lost" or "No decision"; decide from evidence, not the rep's framing), scope (when only partly true, else null), competitor, incumbent, one reason tag from the list (neutral topics; no price tag on purpose; "Not established" if the review never got to the reason), runner_up, tag_why.
 
 Reason tags:
 ${tagsBlock()}
@@ -389,8 +386,6 @@ Never invent names, numbers, quotes or outcomes.
 Our current messaging (provisional):
 ${libraryBlock()}
 
-Deal: ${deal}
-
 TRANSCRIPT
 ${transcript}
 END TRANSCRIPT
@@ -398,7 +393,7 @@ END TRANSCRIPT
 JSON safety: inside any string value, write double quotation marks as single quotation marks (') so the JSON stays valid. Excerpts still count as word for word.
 
 Reply with ONLY this JSON:
-{"header":{"outcome":"","scope":null,"competitor":null,"incumbent":null,"tag":"","runner_up":null,"tag_why":""},
+{"header":{"deal":"","ae":null,"acv":null,"outcome":"","scope":null,"competitor":null,"incumbent":null,"tag":"","runner_up":null,"tag_why":""},
  "messaging_changes":[{"target":"M1","current_line":"","type":"replace|add|drop","change":"","evidence_excerpts":[""],"why":"","strength":"Test this"}],
  "sections":{${SECTION_KEYS.map((k) => `"${k}":{"covered":true,"evidence":[{"excerpt":"","label":"quote|fact|opinion"}],"insight":"","messaging":""}`).join(",")}},
  "close":{"gaps":[{"question":"","kind":"skipped|dodged|unknown","follow_up":""}],"rep_takeaway":""}}`;
@@ -465,8 +460,17 @@ Reply with ONLY this JSON:
     });
 
     const h = analysis.header || {};
+    // ACV counts only when its stating words are really in the transcript.
+    let acv = null;
+    if (h.acv && typeof h.acv === "object") {
+      const amount = Number(String(h.acv.amount).replace(/[^0-9.]/g, ""));
+      if (amount > 0 && h.acv.quote && verbatim(h.acv.quote)) acv = { amount: Math.round(amount), quote: String(h.acv.quote) };
+      else checks.acv_rejected = h.acv;
+    }
     const header = {
-      deal,
+      deal: deal || (h.deal && String(h.deal).replace(/\s*\((?:company|customer)[^)]*\)\s*$/i, "").trim()) || "Unnamed deal",
+      ae: h.ae || null,
+      acv,
       outcome: ["Won", "Lost", "No decision"].includes(h.outcome) ? h.outcome : "No decision",
       scope: h.scope || null,
       competitor: h.competitor || null,
@@ -477,7 +481,9 @@ Reply with ONLY this JSON:
     };
     const ac = analysis.close || {};
     const close = {
-      gaps: (ac.gaps || []).map((g) => ({ question: g.question || "", kind: g.kind || "unknown", follow_up: g.follow_up || "" })),
+      gaps: (ac.gaps || []).map((g) => ({ question: g.question || "", kind: g.kind || "unknown", follow_up: g.follow_up || "" }))
+        .concat(!acv && !(ac.gaps || []).some((g) => /deal size|acv|contract value/i.test((g.question || "") + " " + (g.follow_up || "")))
+          ? [{ question: "What was the deal size (ACV)?", kind: "skipped", follow_up: "Ask the AE for the annual contract value, or check the CRM, and add it to this review." }] : []),
       rep_takeaway: uq(ac.rep_takeaway || "", "close"),
     };
     checks.prose_unquoted = proseLog;
@@ -506,7 +512,7 @@ Reply with ONLY this JSON:
 
     if (!S.ledger) {
       stage("reader");
-      const ledger = await call("reader", readerPrompt({ deal, transcript }), M.reader);
+      const ledger = await call("reader", readerPrompt({ transcript }), M.reader);
       if (!ledger || !Array.isArray(ledger.evidence)) throw fail("reader", "Reader returned no evidence");
       // Drop ledger items that are not verbatim before the analyst sees them.
       const verbatim = makeVerifier(parsed.turns);
@@ -516,13 +522,13 @@ Reply with ONLY this JSON:
     }
     if (!S.analysis) {
       stage("analyst");
-      const analysis = await call("analyst", analystPrompt({ deal, transcript, ledger: S.ledger }), M.analyst);
+      const analysis = await call("analyst", analystPrompt({ transcript, ledger: S.ledger }), M.analyst);
       if (!analysis || !analysis.sections) throw fail("analyst", "Analyst returned no sections");
       S.analysis = analysis;
     }
     if (!S.strategy) {
       stage("strategist");
-      const strategy = await call("strategist", strategistPrompt({ deal, analysis: S.analysis, ledger: S.ledger }), M.strategist);
+      const strategy = await call("strategist", strategistPrompt({ analysis: S.analysis, ledger: S.ledger }), M.strategist);
       if (!strategy || !Array.isArray(strategy.changes)) throw fail("strategist", "Strategist returned no changes list");
       S.strategy = strategy;
     }
@@ -579,7 +585,7 @@ Reply with ONLY this JSON:
     const ch = report.messaging_changes || [];
     const lang = ((report.sections || {}).language || {}).evidence || [];
     return Object.assign({
-      deal: h.deal || "", outcome: h.outcome || null, scope: h.scope || null, tag: h.tag || null, runner_up: h.runner_up || null,
+      deal: h.deal || "", acv: h.acv ? h.acv.amount : null, outcome: h.outcome || null, scope: h.scope || null, tag: h.tag || null, runner_up: h.runner_up || null,
       competitor: h.competitor || null, incumbent: h.incumbent || null,
       first_change: ch[0] ? { target: ch[0].target, type: ch[0].type, change: String(ch[0].change).slice(0, 400) } : null,
       changes: ch.map((c) => ({ target: c.target, type: c.type, change: String(c.change).slice(0, 400) })),

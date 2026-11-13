@@ -1,0 +1,57 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":1,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"ACV is $95,000 per year, quoting the AE's words ('Ninety-five K ACV'); the $4,000 greenhouse is not the deal size\",\"pass\":true},\n  {\"item\":\"The close does not list deal size as a gap\",\"pass\":true},\n  {\"item\":\"Tag is Value proof and the report explicitly challenges 'lost on price'\",\"pass\":true},\n  {\"item\":\"Rep's 'more room on the rate' labeled opinion and shown as contradicted\",\"pass\":true},\n  {\"item\":\"The declined decline analysis is surfaced\",\"pass\":true},\n  {\"item\":\"Rate-vs-rate (not total cost) on the CFO's page is identified\",\"pass\":true}\n ],\n \"fails\":[\n  \"Asserts as fact that the average uplift slide and customer stories 'went to the CFO' (message insight and the M4 messaging 'why'). The transcript only shows the deck was sent to Lucy. What reached Martin is unknown beyond the controller's rate one-pager with our quote, and the key treats what Lucy told Martin as unknown.\"\n ],\n \"notes\":\"Strong report. It extracts the ACV correctly with the AE's words, tags Value proof, and reframes 'the same thing' as missing proof of value rather than price. It also surfaces the declined three-month decline analysis and the rate-only one-pager. It misses two things. First, it claims without evidence that the generic uplift deck reached the CFO; the key's point is that only the rate traveled. Second, the close omits the never-calculated value of the failed orders and the key's follow-up of offering the decline analysis now, ahead of spring. The rep's 'more room on the rate' line is never quoted directly; the pass rests on 'We lost on price' being labeled opinion and the rep's own concession.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 1,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "ACV is $95,000 per year, quoting the AE's words ('Ninety-five K ACV'); the $4,000 greenhouse is not the deal size",
+    "pass": true
+   },
+   {
+    "item": "The close does not list deal size as a gap",
+    "pass": true
+   },
+   {
+    "item": "Tag is Value proof and the report explicitly challenges 'lost on price'",
+    "pass": true
+   },
+   {
+    "item": "Rep's 'more room on the rate' labeled opinion and shown as contradicted",
+    "pass": true
+   },
+   {
+    "item": "The declined decline analysis is surfaced",
+    "pass": true
+   },
+   {
+    "item": "Rate-vs-rate (not total cost) on the CFO's page is identified",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Asserts as fact that the average uplift slide and customer stories 'went to the CFO' (message insight and the M4 messaging 'why'). The transcript only shows the deck was sent to Lucy. What reached Martin is unknown beyond the controller's rate one-pager with our quote, and the key treats what Lucy told Martin as unknown."
+  ],
+  "notes": "Strong report. It extracts the ACV correctly with the AE's words, tags Value proof, and reframes 'the same thing' as missing proof of value rather than price. It also surfaces the declined three-month decline analysis and the rate-only one-pager. It misses two things. First, it claims without evidence that the generic uplift deck reached the CFO; the key's point is that only the rate traveled. Second, the close omits the never-calculated value of the failed orders and the key's follow-up of offering the decline analysis now, ahead of spring. The rep's 'more room on the rate' line is never quoted directly; the pass rests on 'We lost on price' being labeled opinion and the rep's own concession."
+ },
+ "ms": 26857,
+ "cost": 0.134256,
+ "in_tokens": 10323,
+ "out_tokens": 2584,
+ "model": "claude-opus-5-5"
+}

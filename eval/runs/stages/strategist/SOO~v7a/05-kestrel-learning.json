@@ -1,0 +1,59 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For payments leaders reviewing performance by market, replace the average-uplift claim with an offer built on their own traffic: 'Your approvals in every market: where you're declining, why, and what we'd fix.' Use 'approvals', not 'authorization rates'. Name the cost the way the customer did ('Money left on the table'). Make the deliverable something they can take to their CFO: their own approval rates by market, with the money attached.\",\"evidence\":[\"E14\",\"E15\",\"E16\",\"E35\",\"E36\",\"E33\",\"E32\"],\"why\":\"Stefan rejected the average-uplift deck with 'that's an average. What's mine?' and said 'I can't take an average to my CFO', while the analysis of his own data was the most useful thing we sent him.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"When a buyer raises 'local acquiring' or 'Local cards, local rails', do not argue the mechanism. Offer a fast readout on their own international traffic: approval rate by country, card type and issuer, with the reason for each decline. Deliver it before any competitor test finishes. Suggested line: 'Before you decide, let's look at your approvals country by country, card by card, issuer by issuer, and why.'\",\"evidence\":[\"E10\",\"E11\",\"E13\",\"E34\",\"E29\"],\"why\":\"Adyen won by testing the customer's own international traffic and reporting results by country, card type and issuer. Our equivalent analysis arrived three weeks after Stefan asked, when the test had already finished.\",\"strength\":\"Test this\"},{\"target\":\"M5\",\"current_line\":\"Support plans with tiered response times, up to 24/7 coverage.\",\"type\":\"add\",\"change\":\"For accounts with a dedicated payments owner, add a named person to the support story alongside the response-time tiers: 'A named person at Stripe reviews your approvals by market with you every month.' Use this only once a recurring, named review actually exists for that kind of account.\",\"evidence\":[\"E30\",\"E37\",\"E28\"],\"why\":\"Stefan asked 'who at Stripe looks at his numbers every month' and the rep had no name. He also said 'I heard from Stripe when I said I was leaving'. Response-time tiers did not answer that question.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For payments leaders reviewing performance by market, replace the average-uplift claim with an offer built on their own traffic: 'Your approvals in every market: where you're declining, why, and what we'd fix.' Use 'approvals', not 'authorization rates'. Name the cost the way the customer did ('Money left on the table'). Make the deliverable something they can take to their CFO: their own approval rates by market, with the money attached.",
+    "evidence": [
+     "E14",
+     "E15",
+     "E16",
+     "E35",
+     "E36",
+     "E33",
+     "E32"
+    ],
+    "why": "Stefan rejected the average-uplift deck with 'that's an average. What's mine?' and said 'I can't take an average to my CFO', while the analysis of his own data was the most useful thing we sent him.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "When a buyer raises 'local acquiring' or 'Local cards, local rails', do not argue the mechanism. Offer a fast readout on their own international traffic: approval rate by country, card type and issuer, with the reason for each decline. Deliver it before any competitor test finishes. Suggested line: 'Before you decide, let's look at your approvals country by country, card by card, issuer by issuer, and why.'",
+    "evidence": [
+     "E10",
+     "E11",
+     "E13",
+     "E34",
+     "E29"
+    ],
+    "why": "Adyen won by testing the customer's own international traffic and reporting results by country, card type and issuer. Our equivalent analysis arrived three weeks after Stefan asked, when the test had already finished.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M5",
+    "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+    "type": "add",
+    "change": "For accounts with a dedicated payments owner, add a named person to the support story alongside the response-time tiers: 'A named person at Stripe reviews your approvals by market with you every month.' Use this only once a recurring, named review actually exists for that kind of account.",
+    "evidence": [
+     "E30",
+     "E37",
+     "E28"
+    ],
+    "why": "Stefan asked 'who at Stripe looks at his numbers every month' and the rep had no name. He also said 'I heard from Stripe when I said I was leaving'. Response-time tiers did not answer that question.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 24523,
+ "cost": 0.093164,
+ "in_tokens": 5954,
+ "out_tokens": 2277,
+ "model": "claude-opus-5-5"
+}

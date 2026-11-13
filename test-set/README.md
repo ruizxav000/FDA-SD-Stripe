@@ -1,6 +1,6 @@
 # Test Set
 
-Eight fictional deal-review interviews, with answer keys, for testing the synthesizer before it touches real deals.
+Nine fictional deal-review interviews (eight deals, plus a variant of one that states the deal size), with answer keys, for testing the synthesizer before it touches real deals.
 The originals are in [`../deal-reviews/`](../deal-reviews/). This folder holds the versions the synthesizer is tested on.
 
 > **Never give the answer keys, or the headers of the original files, to the synthesizer.** They are for scoring only.
@@ -21,6 +21,7 @@ The originals are in [`../deal-reviews/`](../deal-reviews/). This folder holds t
 | 06 | `06-tixhaven.txt` | Otter-style `.txt` | |
 | 07 | `07-fernbrook-garden-supply.txt` | Plain text | |
 | 08 | `08-pikeview-software.txt` | Plain text | |
+| 09 | `09-fernbrook-acv-stated.txt` | Plain text | 07 plus two lines stating the deal size |
 
 When the synthesizer runs a test, the **deal name** is entered the way a user would enter it, not taken from the file.
 
@@ -36,6 +37,7 @@ When the synthesizer runs a test, the **deal name** is entered the way a user wo
 | 06 | Tixhaven | Lost | Support and service | The technical win convinced the wrong person. Support tiers answered "who's my person?" with a queue. |
 | 07 | Fernbrook Garden Supply | Lost | Value proof | The rep says price. The transcript shows no value case ever reached the CFO, and the rep turned down the analysis. |
 | 08 | Pikeview Software | No decision | No decision | The rep says "nothing we could have done," but the payback number was asked for a month before the freeze. |
+| 09 | Fernbrook (ACV stated) | Lost | Value proof | Same as 07; ACV must be $95,000/year, not the $4,000 greenhouse price. |
 
 ## How to score a run
 

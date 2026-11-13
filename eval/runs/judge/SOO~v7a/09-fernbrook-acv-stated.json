@@ -1,0 +1,55 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":1,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"ACV is $95,000 per year, quoting the AE's words ('Ninety-five K ACV'); greenhouse not treated as deal size\",\"pass\":true},\n  {\"item\":\"The close does not list deal size as a gap\",\"pass\":true},\n  {\"item\":\"Tag is Value proof and the report explicitly challenges 'lost on price'\",\"pass\":true},\n  {\"item\":\"The rep's 'more room on the rate' is labeled opinion and shown as contradicted\",\"pass\":false},\n  {\"item\":\"The declined decline analysis is surfaced\",\"pass\":true},\n  {\"item\":\"Rate-vs-rate (not total cost) on the CFO's page is identified\",\"pass\":true}\n ],\n \"fails\":[],\n \"notes\":\"The report gets the core story right. It extracts the $95K ACV correctly, tags the deal Value proof, and shows that a rate-only one-pager reached a CFO who never saw a Fernbrook-specific value case, even though Farah's three-month decline analysis had been offered and turned down. Its main miss is the rep's 'If we'd had more room on the rate, we win this.' That line is never cited or labelled as opinion, and the report never shows how Sam undercuts it himself in T36 (the IT lead's worry about moving before spring, and 'same rate, so why move'). Worse, the close calls that answer 'dodged'. The close also leaves out the value of the failed orders as an open question and the follow-up of offering the decline analysis ahead of spring.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 1,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "ACV is $95,000 per year, quoting the AE's words ('Ninety-five K ACV'); greenhouse not treated as deal size",
+    "pass": true
+   },
+   {
+    "item": "The close does not list deal size as a gap",
+    "pass": true
+   },
+   {
+    "item": "Tag is Value proof and the report explicitly challenges 'lost on price'",
+    "pass": true
+   },
+   {
+    "item": "The rep's 'more room on the rate' is labeled opinion and shown as contradicted",
+    "pass": false
+   },
+   {
+    "item": "The declined decline analysis is surfaced",
+    "pass": true
+   },
+   {
+    "item": "Rate-vs-rate (not total cost) on the CFO's page is identified",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core story right. It extracts the $95K ACV correctly, tags the deal Value proof, and shows that a rate-only one-pager reached a CFO who never saw a Fernbrook-specific value case, even though Farah's three-month decline analysis had been offered and turned down. Its main miss is the rep's 'If we'd had more room on the rate, we win this.' That line is never cited or labelled as opinion, and the report never shows how Sam undercuts it himself in T36 (the IT lead's worry about moving before spring, and 'same rate, so why move'). Worse, the close calls that answer 'dodged'. The close also leaves out the value of the failed orders as an open question and the follow-up of offering the decline analysis ahead of spring."
+ },
+ "ms": 29809,
+ "cost": 0.137436,
+ "in_tokens": 10063,
+ "out_tokens": 2847,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,395 @@
+{
+ "version": "2026-11-13.6",
+ "header": {
+  "deal": "Company with landlord subscriptions, homegrown billing",
+  "ae": "Renee",
+  "acv": null,
+  "outcome": "No decision",
+  "scope": null,
+  "competitor": "None (status quo)",
+  "incumbent": "Homegrown billing system built by an employee who left",
+  "tag": "No decision",
+  "runner_up": "Value proof",
+  "tag_why": "A Q3 miss led the CFO to freeze all new vendor projects; underneath that, the champion had told us he 'can't get this past Diane without a number that's ours', and we never built that number."
+ },
+ "messaging_changes": [
+  {
+   "target": "M7",
+   "current_line": "Billing that helps you grow revenue.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For product and engineering leaders replacing homegrown billing, lead with roadmap time instead of revenue: 'Stop billing being a tax on the roadmap. Price changes, trials and proration in minutes, not a quarter of engineering work.' Use the demo moment as the proof, since the champion called it 'a quarter of roadmap in five minutes.'",
+   "evidence": [
+    "E21",
+    "E34",
+    "E17",
+    "E16"
+   ],
+   "evidence_found": true,
+   "why": "The champion rejected the revenue-growth framing outright ('we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap'), and the moment that landed was the pricing-change demo, which he described in roadmap time.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M6",
+   "current_line": "Proven ROI, backed by an independent economic impact study.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For finance approvers (CFO) on billing replacements, offer to build payback in the customer's own numbers rather than pointing to our study: 'We'll build your payback case with you, from what your current billing costs you today: engineering time per pricing change, billing errors, and subscriptions lost to failed cards.' Offer it as a working session the champion can take to finance.",
+   "evidence": [
+    "E25",
+    "E14",
+    "E24",
+    "E28",
+    "E30"
+   ],
+   "evidence_found": true,
+   "why": "When the champion asked 'do you have something that shows payback?', he got the general ROI deck with the study. He had already said he 'can't get this past Diane without a number that's ours', and that number was never built.",
+   "strength": "Test this"
+  },
+  {
+   "target": null,
+   "current_line": null,
+   "line_matches": true,
+   "type": "add",
+   "change": "For inbound deals where the alternative is doing nothing and there is no deadline, add a cost-of-status-quo message aimed at finance's fire test: 'What keeping your homegrown billing costs you every quarter', backed by a fill-in figure so the problem reads as urgent spend, not a 'nice to have'.",
+   "evidence": [
+    "E35",
+    "E36",
+    "E11",
+    "E2"
+   ],
+   "evidence_found": true,
+   "why": "The competitor was doing nothing. Finance saw the project as a nice to have under a rule of 'if it isn't on fire, it isn't funded', and nothing in our messaging put a cost on the status quo.",
+   "strength": "Test this"
+  },
+  {
+   "target": null,
+   "current_line": null,
+   "line_matches": true,
+   "type": "add",
+   "change": "For prospects migrating off homegrown billing, pair the migration claims (no re-collection of cards, staged moves, working around renewal-season blackouts) with a peer reference: a named customer who moved off homegrown billing and will take a call.",
+   "evidence": [
+    "E33"
+   ],
+   "evidence_found": true,
+   "why": "On migration the rep said 'We had a doc for that. He wanted to talk to someone who'd done it.', so a written claim alone did not answer the buyer's risk question.",
+   "strength": "Test this"
+  }
+ ],
+ "no_change_reason": null,
+ "sections": {
+  "trigger": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E1",
+     "excerpt": "Their VP of Product, Owen, had wanted to rebuild billing for a while.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E2",
+     "excerpt": "The billing system is homegrown, built by a guy who left, and every pricing change takes them a quarter.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E5",
+     "excerpt": "He wanted it done before they launched a new pricing tier, but the tier didn't have a date either.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E3",
+     "excerpt": "He reached out to us.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "There was no trigger event. This was one product leader's long-standing frustration, with a deadline tied to a pricing tier that had no date. A deal driven by a champion with no forcing event is exactly the kind a CFO freezes first. The urgency we needed was the cost of the status quo, and nobody turned it into a figure.",
+   "messaging": "For inbound deals with no deadline, lead with the cost of the homegrown system: engineering quarters lost per pricing change and subscriptions lost to failed cards. That cost becomes the forcing event."
+  },
+  "decider": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E6",
+     "excerpt": "The CFO, I guess? Diane.",
+     "label": "opinion",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E9",
+     "excerpt": "Owen told me. I never spoke to her.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E10",
+     "excerpt": "No. Owen said he'd bring her in at the end.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E25",
+     "excerpt": "'I can't get this past Diane without a number that's ours.'",
+     "label": "quote",
+     "speaker": "Owen",
+     "verified": true
+    }
+   ],
+   "insight": "The person who controlled funding never met us. We accepted Owen's plan to bring her in at the end, even after he told us outright that he needed a specific artifact to get past her. Everything we know about Diane's view comes through Owen. Whether she ever saw our proposal or any cost figure is unclear.",
+   "messaging": "Write a CFO-facing message and asset (payback in their own numbers) that the champion can carry. Ask for finance access as soon as the champion names a budget gatekeeper."
+  },
+  "competitor": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E11",
+     "excerpt": "There wasn't one. It was us against doing nothing.",
+     "label": "opinion",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E12",
+     "excerpt": "Owen never looked at anybody else, as far as I know.",
+     "label": "opinion",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E13",
+     "excerpt": "Toward the end Owen started asking for things for finance.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E14",
+     "excerpt": "'do you have something that shows payback?'",
+     "label": "quote",
+     "speaker": "Owen",
+     "verified": true
+    }
+   ],
+   "insight": "The real competitor was the status quo, and it won on the CFO's rule that only fires get funded. The clearest change in the questions came late: Owen moved from product capability to finance justification. That was the buying signal to switch from demo mode to business-case mode. Whether other vendors were considered is unconfirmed.",
+   "messaging": "Position against doing nothing with a quantified 'cost of keeping homegrown billing' message, not against other vendors."
+  },
+  "message": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E16",
+     "excerpt": "Reaction: the billing demo. Changing a price in a few clicks, trials, proration.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E17",
+     "excerpt": "'that's a quarter of roadmap in five minutes.'",
+     "label": "quote",
+     "speaker": "Owen",
+     "verified": true
+    },
+    {
+     "id": "E21",
+     "excerpt": "'we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap.'",
+     "label": "quote",
+     "speaker": "Owen",
+     "verified": true
+    },
+    {
+     "id": "E19",
+     "excerpt": "I don't know that anything got silence. We only ever talked to product and engineering.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The revenue-growth framing (M7) did more than fall flat: the champion explicitly rejected it. What landed was speed of pricing changes, measured in roadmap time. Owen even did the translation for us ('a quarter of roadmap in five minutes'). That is a cost-avoidance story, and it never reached finance in finance's terms.",
+   "messaging": "For replacing homegrown billing, swap 'Billing that helps you grow revenue' (M7) for an engineering-capacity message: pricing changes in minutes instead of a quarter of roadmap."
+  },
+  "decided": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E25",
+     "excerpt": "'I can't get this past Diane without a number that's ours.'",
+     "label": "quote",
+     "speaker": "Owen",
+     "verified": true
+    },
+    {
+     "id": "E26",
+     "excerpt": "We were going to set up a session to build one. Then Q3 closed.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E27",
+     "excerpt": "About a month.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E7",
+     "excerpt": "They missed their number in Q3 and she put a hold on all new vendor projects.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "The freeze was the visible moment. The deal was already exposed a month earlier, when the payback request got a generic deck and the session to build their number was still unscheduled when Q3 closed. The rep's framing that nothing could have been done ignores that month. A customer-specific cost case might not have survived a blanket freeze, but it was the only thing that could have made this look 'on fire'.",
+   "messaging": "When a champion asks for payback, the next step is a custom business-case session within days, positioned as the tool the champion needs to get budget."
+  },
+  "gaps": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E24",
+     "excerpt": "I sent him the ROI deck. The general one, with the study.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E28",
+     "excerpt": "The number. Their own. What the homegrown system costs them.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E30",
+     "excerpt": "We never added it up.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    },
+    {
+     "id": "E33",
+     "excerpt": "We had a doc for that. He wanted to talk to someone who'd done it.",
+     "label": "fact",
+     "speaker": "the rep",
+     "verified": true
+    }
+   ],
+   "insight": "Two gaps. First, the proven ROI, independent study message (M6) failed exactly when it was needed, because the customer wanted their own number, not ours. The raw inputs were already on the table: engineering time, billing errors, and landlord subscriptions lapsing on failed cards. Second, on migration (no re-collection of cards, staged moves, the renewal-season blackout), a doc wasn't enough; Owen wanted a peer reference. Whether we offered one is unclear.",
+   "messaging": "Back M6 with a fill-in cost-of-status-quo calculator (engineering time, errors, failed-card lapses that M10 recovers), and pair migration claims with a named reference customer who moved off homegrown billing."
+  },
+  "language": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E34",
+     "excerpt": "Owen's was 'a tax on the roadmap.'",
+     "label": "quote",
+     "speaker": "Owen",
+     "verified": true
+    },
+    {
+     "id": "E35",
+     "excerpt": "'if it isn't on fire, it isn't funded.'",
+     "label": "quote",
+     "speaker": "Diane, via Owen",
+     "verified": true
+    },
+    {
+     "id": "E17",
+     "excerpt": "'that's a quarter of roadmap in five minutes.'",
+     "label": "quote",
+     "speaker": "Owen",
+     "verified": true
+    },
+    {
+     "id": "E36",
+     "excerpt": "Owen said finance saw it as a nice to have.",
+     "label": "fact",
+     "speaker": "Owen",
+     "verified": true
+    }
+   ],
+   "insight": "Product speaks in roadmap time ('tax on the roadmap'), while finance applies a fire test ('if it isn't on fire, it isn't funded'). Our vocabulary of revenue growth, ROI and studies matched neither. The deal died in the gap between a product pain and a finance threshold that nobody bridged.",
+   "messaging": "Use 'a tax on the roadmap' as the problem statement for homegrown-billing prospects, and pair it with a dollar figure so it passes the CFO's fire test."
+  }
+ },
+ "close": {
+  "gaps": [
+   {
+    "question": "What was the deal size (ACV)?",
+    "kind": "skipped",
+    "follow_up": "Ask Renee for the ACV on the paper that was sent."
+   },
+   {
+    "question": "Who made the final call, and how do you know?",
+    "kind": "dodged",
+    "follow_up": "Ask Owen whether Diane ever saw our proposal or any cost figure, and what she would need to see to fund it after the freeze."
+   },
+   {
+    "question": "Did Owen consider any other vendor or a rebuild in-house?",
+    "kind": "unknown",
+    "follow_up": "Ask Owen directly whether any alternative, including rebuilding internally, was ever on the table."
+   },
+   {
+    "question": "Did we offer Owen a reference customer for the migration?",
+    "kind": "unknown",
+    "follow_up": "Ask Renee whether a reference call was offered or scheduled, and if not, why."
+   },
+   {
+    "question": "When does the freeze lift, and when is renewal season?",
+    "kind": "unknown",
+    "follow_up": "Ask Owen when the vendor hold is expected to lift and which months the engineering lead's renewal-season blackout covers, to see whether 'next year' is realistic."
+   },
+   {
+    "question": "How far had the deal got before the freeze?",
+    "kind": "dodged",
+    "follow_up": "Ask Renee whether the paper ever reached the customer's procurement or stopped with Owen."
+   }
+  ],
+  "rep_takeaway": "'It's timing' was the outcome, not the cause. When the champion said he 'can't get this past Diane without a number that's ours', that was the deal telling you what it needed, and a generic ROI deck plus a session never scheduled left him empty-handed for a month. When a champion asks for payback, build the number with them that week from their own pains (here: engineering time, billing errors, lapsed subscriptions), and use it to earn a seat in front of the person who funds it."
+ },
+ "confidence": "medium",
+ "checks": {
+  "quotes_total": 28,
+  "quotes_failed": 0,
+  "failed": [],
+  "prose_unquoted": [
+   {
+    "where": "gaps",
+    "text": "proven ROI, independent study"
+   }
+  ]
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5",
+   "strategist": "claude-opus-5-5"
+  },
+  "ms": 97447,
+  "cost": 0.31688059999999996,
+  "stage_ms": {
+   "reader": 34577,
+   "analyst": 43679,
+   "strategist": 19191
+  },
+  "stage_cost": {
+   "reader": 0.056260599999999994,
+   "analyst": 0.179724,
+   "strategist": 0.080896
+  },
+  "reader_items": 40,
+  "reader_verbatim": 40
+ }
+}

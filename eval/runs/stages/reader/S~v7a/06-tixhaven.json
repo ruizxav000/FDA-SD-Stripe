@@ -1,0 +1,581 @@
+{
+ "ok": true,
+ "text": "{\"people\":[{\"name\":\"Jordan\",\"role\":\"account executive (rep)\",\"side\":\"us\"},{\"name\":\"Halima\",\"role\":\"COO, final decision maker\",\"side\":\"customer\"},{\"name\":\"Ben\",\"role\":\"CTO, wanted us, lost the decision\",\"side\":\"customer\"},{\"name\":\"CEO (unnamed)\",\"role\":\"saw the on-sale failure screenshots on social\",\"side\":\"customer\"},{\"name\":\"Solutions engineer (unnamed)\",\"role\":\"our solutions engineer Jordan could have used to build an on-sale plan\",\"side\":\"us\"},{\"name\":\"Competitor solutions engineer and account lead (unnamed)\",\"role\":\"attended the customer meeting\",\"side\":\"competitor\"}],\"competitors\":[],\"incumbent\":\"Their existing payments provider (unnamed), whose support was a ticket form\",\"evidence\":[{\"id\":\"E1\",\"turn\":2,\"excerpt\":\"tickets went live at 10am on a Friday, and payments started failing about four minutes in\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Trigger: payments failed minutes into a big arena on-sale.\"},{\"id\":\"E2\",\"turn\":2,\"excerpt\":\"Their provider's support was a ticket form. They got a reply after the on-sale was over.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"trigger\",\"gaps\"],\"note\":\"Incumbent support failure during the on-sale drove the pain.\"},{\"id\":\"E3\",\"turn\":2,\"excerpt\":\"The CEO was getting screenshots on social.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Public visibility escalated the issue to the CEO.\"},{\"id\":\"E4\",\"turn\":2,\"excerpt\":\"So Monday morning the COO, Halima, says they're replacing payments before the spring on-sales.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"trigger\",\"decider\"],\"note\":\"Halima started the replacement with a spring deadline.\"},{\"id\":\"E5\",\"turn\":4,\"excerpt\":\"Ben, their CTO, said twice.\",\"label\":\"fact\",\"speaker\":\"Ben (CTO), relayed by the rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"Earlier on-sale payment failures happened twice, per Ben.\"},{\"id\":\"E6\",\"turn\":4,\"excerpt\":\"But this was the first time the CEO saw it.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"trigger\"],\"note\":\"CEO visibility, not the failure itself, was new.\"},{\"id\":\"E7\",\"turn\":6,\"excerpt\":\"Halima. Ben wanted us.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"decider\"],\"note\":\"Decider was Halima; the technical champion Ben wanted us.\"},{\"id\":\"E8\",\"turn\":6,\"excerpt\":\"He told me that, and he told me he lost.\",\"label\":\"fact\",\"speaker\":\"Ben, relayed by the rep\",\"paraphrase\":false,\"topics\":[\"decider\",\"outcome\"],\"note\":\"Ben told the rep directly that he lost the internal decision.\"},{\"id\":\"E9\",\"turn\":6,\"excerpt\":\"it was Halima's call and she made it in one meeting.\",\"label\":\"quote\",\"speaker\":\"Ben (CTO)\",\"paraphrase\":false,\"topics\":[\"decider\",\"decided\"],\"note\":\"Ben says Halima decided alone in a single meeting.\"},{\"id\":\"E10\",\"turn\":8,\"excerpt\":\"They showed up with the people who'd actually be on the account.\",\"label\":\"fact\",\"speaker\":\"Ben, relayed by the rep\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Competitor brought the real account team, per Ben.\"},{\"id\":\"E11\",\"turn\":8,\"excerpt\":\"A named solutions engineer and an account lead, in the room.\",\"label\":\"fact\",\"speaker\":\"Ben, relayed by the rep\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Competitor put named people in the room.\"},{\"id\":\"E12\",\"turn\":8,\"excerpt\":\"they said there'd be a shared channel and someone on call for every major on-sale\",\"label\":\"fact\",\"speaker\":\"Ben, relayed by the rep\",\"paraphrase\":false,\"topics\":[\"competitor\",\"decided\"],\"note\":\"Competitor's promise as reported by Ben.\"},{\"id\":\"E13\",\"turn\":8,\"excerpt\":\"I think they over-promised. I don't think anybody staffs every on-sale.\",\"label\":\"opinion\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Rep's own theory about the competitor, not customer evidence.\"},{\"id\":\"E14\",\"turn\":8,\"excerpt\":\"But I don't know that.\",\"label\":\"opinion\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"competitor\"],\"note\":\"Rep admits the over-promising claim is unverified.\"},{\"id\":\"E15\",\"turn\":10,\"excerpt\":\"Before that meeting it was throughput, queueing, bots. After, it was names.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"decided\",\"language\"],\"note\":\"Customer questions shifted from technical topics to people after the meeting.\"},{\"id\":\"E16\",\"turn\":12,\"excerpt\":\"Ben's team ran a load test in the sandbox and it went great.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Load test succeeded for the technical team.\"},{\"id\":\"E17\",\"turn\":12,\"excerpt\":\"Reaction: the technical story.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Technical story got a reaction.\"},{\"id\":\"E18\",\"turn\":12,\"excerpt\":\"The bot and fraud tooling got a good reaction too.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"message\"],\"note\":\"Bot and fraud tooling also landed.\"},{\"id\":\"E19\",\"turn\":12,\"excerpt\":\"who's my person\",\"label\":\"quote\",\"speaker\":\"Halima (COO)\",\"paraphrase\":false,\"topics\":[\"message\",\"language\"],\"note\":\"Halima asked for a person, met with silence on our side.\"},{\"id\":\"E20\",\"turn\":12,\"excerpt\":\"I walked her through the support plans. The tiers, the response times.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"message\",\"gaps\"],\"note\":\"Rep answered a who question with plan tiers.\"},{\"id\":\"E21\",\"turn\":12,\"excerpt\":\"so it's a queue with a faster timer.\",\"label\":\"quote\",\"speaker\":\"Halima (COO)\",\"paraphrase\":false,\"topics\":[\"message\",\"decided\",\"language\"],\"note\":\"Halima's dismissal of our support answer.\"},{\"id\":\"E22\",\"turn\":14,\"excerpt\":\"Right before it we were the favourite.\",\"label\":\"opinion\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"decided\",\"outcome\"],\"note\":\"Rep's read that we led until Halima's sentence.\"},{\"id\":\"E23\",\"turn\":14,\"excerpt\":\"Ben had basically told his team to start planning the integration.\",\"label\":\"fact\",\"speaker\":\"Ben, relayed by the rep\",\"paraphrase\":false,\"topics\":[\"decided\",\"decider\"],\"note\":\"Hedged with basically; Ben was ahead of Halima's decision.\"},{\"id\":\"E24\",\"turn\":16,\"excerpt\":\"She wanted to see, on paper, what we do on an on-sale morning.\",\"label\":\"fact\",\"speaker\":\"Halima, relayed by the rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Halima asked for a written on-sale plan.\"},{\"id\":\"E25\",\"turn\":16,\"excerpt\":\"We don't have that as a thing.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"No on-sale plan existed as an asset.\"},{\"id\":\"E26\",\"turn\":16,\"excerpt\":\"I could have built something with our solutions engineer, and I didn't.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Rep admits not building a plan he could have.\"},{\"id\":\"E27\",\"turn\":18,\"excerpt\":\"I thought the load test had won it.\",\"label\":\"opinion\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"gaps\",\"decided\"],\"note\":\"Rep's misjudgment of what would decide the deal.\"},{\"id\":\"E28\",\"turn\":18,\"excerpt\":\"I had logos. I didn't have a person.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"gaps\"],\"note\":\"Lacked a ticketing reference who could speak to on-sale support.\"},{\"id\":\"E29\",\"turn\":20,\"excerpt\":\"Ben presented them to her.\",\"label\":\"fact\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"message\",\"decider\"],\"note\":\"Halima saw load test results via Ben.\"},{\"id\":\"E30\",\"turn\":20,\"excerpt\":\"good\",\"label\":\"quote\",\"speaker\":\"Halima (COO)\",\"paraphrase\":false,\"topics\":[\"message\",\"decided\"],\"note\":\"Halima's whole reaction to the load test.\"},{\"id\":\"E31\",\"turn\":22,\"excerpt\":\"A name, not a queue.\",\"label\":\"quote\",\"speaker\":\"customer (relayed by the rep)\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer's own framing of the need.\"},{\"id\":\"E32\",\"turn\":22,\"excerpt\":\"On-sale morning\",\"label\":\"quote\",\"speaker\":\"customer (relayed by the rep)\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer frames everything around on-sale morning.\"},{\"id\":\"E33\",\"turn\":22,\"excerpt\":\"Someone who picks up.\",\"label\":\"quote\",\"speaker\":\"customer (relayed by the rep)\",\"paraphrase\":false,\"topics\":[\"language\"],\"note\":\"Customer wants a human answering.\"},{\"id\":\"E34\",\"turn\":22,\"excerpt\":\"I don't buy uptime, I buy what happens when it's down.\",\"label\":\"quote\",\"speaker\":\"Halima (COO)\",\"paraphrase\":false,\"topics\":[\"language\",\"decided\",\"message\"],\"note\":\"Halima rejects uptime as the buying criterion.\"},{\"id\":\"E35\",\"turn\":24,\"excerpt\":\"We were the better platform. Ben would tell you that today.\",\"label\":\"opinion\",\"speaker\":\"the rep\",\"paraphrase\":false,\"topics\":[\"outcome\",\"decided\"],\"note\":\"Rep's view; Ben's current view is the rep's assumption.\"}],\"contradictions\":[{\"evidence\":[\"E27\",\"E30\"],\"what\":\"Rep thought the load test had won it, but Halima's only reaction was good and it did not move her.\"},{\"evidence\":[\"E22\",\"E23\",\"E7\",\"E8\"],\"what\":\"Rep says we were the favourite and Ben told his team to plan the integration, yet Halima was the decider and Ben lost.\"},{\"evidence\":[\"E35\",\"E34\",\"E21\"],\"what\":\"Rep calls us the better platform, but the decider said she buys what happens when it's down, not uptime.\"},{\"evidence\":[\"E13\",\"E14\",\"E12\"],\"what\":\"Rep says the competitor over-promised, then admits not knowing; the claim itself came from Ben.\"}],\"dodges\":[],\"skipped\":[],\"language_pairs\":[{\"theirs\":\"A name, not a queue / Someone who picks up / who's my person\",\"ours\":\"support plans, the tiers, the response times\",\"evidence\":[\"E31\",\"E33\",\"E19\",\"E20\"]},{\"theirs\":\"I don't buy uptime, I buy what happens when it's down\",\"ours\":\"the uptime history, the docs; technical story\",\"evidence\":[\"E34\",\"E17\"]},{\"theirs\":\"an on-sale plan, on paper, what happens at minute four\",\"ours\":\"logos and support tiers; no on-sale plan existed\",\"evidence\":[\"E24\",\"E25\",\"E28\"]},{\"theirs\":\"On-sale morning\",\"ours\":\"throughput, queueing, bots\",\"evidence\":[\"E32\",\"E15\"]}],\"outcome_signals\":[{\"evidence\":[\"E8\",\"E9\"],\"what\":\"Lost: Halima chose the competitor and Ben told the rep he lost.\"},{\"evidence\":[\"E4\"],\"what\":\"Customer was replacing payments before spring on-sales; no sign that only part of the business moved.\"},{\"evidence\":[\"E21\",\"E24\",\"E25\"],\"what\":\"Deal turned on the absence of a named person and an on-sale plan, not on platform capability.\"}]}",
+ "data": {
+  "people": [
+   {
+    "name": "Jordan",
+    "role": "account executive (rep)",
+    "side": "us"
+   },
+   {
+    "name": "Halima",
+    "role": "COO, final decision maker",
+    "side": "customer"
+   },
+   {
+    "name": "Ben",
+    "role": "CTO, wanted us, lost the decision",
+    "side": "customer"
+   },
+   {
+    "name": "CEO (unnamed)",
+    "role": "saw the on-sale failure screenshots on social",
+    "side": "customer"
+   },
+   {
+    "name": "Solutions engineer (unnamed)",
+    "role": "our solutions engineer Jordan could have used to build an on-sale plan",
+    "side": "us"
+   },
+   {
+    "name": "Competitor solutions engineer and account lead (unnamed)",
+    "role": "attended the customer meeting",
+    "side": "competitor"
+   }
+  ],
+  "competitors": [],
+  "incumbent": "Their existing payments provider (unnamed), whose support was a ticket form",
+  "evidence": [
+   {
+    "id": "E1",
+    "turn": 2,
+    "excerpt": "tickets went live at 10am on a Friday, and payments started failing about four minutes in",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Trigger: payments failed minutes into a big arena on-sale."
+   },
+   {
+    "id": "E2",
+    "turn": 2,
+    "excerpt": "Their provider's support was a ticket form. They got a reply after the on-sale was over.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger",
+     "gaps"
+    ],
+    "note": "Incumbent support failure during the on-sale drove the pain."
+   },
+   {
+    "id": "E3",
+    "turn": 2,
+    "excerpt": "The CEO was getting screenshots on social.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Public visibility escalated the issue to the CEO."
+   },
+   {
+    "id": "E4",
+    "turn": 2,
+    "excerpt": "So Monday morning the COO, Halima, says they're replacing payments before the spring on-sales.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger",
+     "decider"
+    ],
+    "note": "Halima started the replacement with a spring deadline."
+   },
+   {
+    "id": "E5",
+    "turn": 4,
+    "excerpt": "Ben, their CTO, said twice.",
+    "label": "fact",
+    "speaker": "Ben (CTO), relayed by the rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "Earlier on-sale payment failures happened twice, per Ben."
+   },
+   {
+    "id": "E6",
+    "turn": 4,
+    "excerpt": "But this was the first time the CEO saw it.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "trigger"
+    ],
+    "note": "CEO visibility, not the failure itself, was new."
+   },
+   {
+    "id": "E7",
+    "turn": 6,
+    "excerpt": "Halima. Ben wanted us.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "decider"
+    ],
+    "note": "Decider was Halima; the technical champion Ben wanted us."
+   },
+   {
+    "id": "E8",
+    "turn": 6,
+    "excerpt": "He told me that, and he told me he lost.",
+    "label": "fact",
+    "speaker": "Ben, relayed by the rep",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "outcome"
+    ],
+    "note": "Ben told the rep directly that he lost the internal decision."
+   },
+   {
+    "id": "E9",
+    "turn": 6,
+    "excerpt": "it was Halima's call and she made it in one meeting.",
+    "label": "quote",
+    "speaker": "Ben (CTO)",
+    "paraphrase": false,
+    "topics": [
+     "decider",
+     "decided"
+    ],
+    "note": "Ben says Halima decided alone in a single meeting."
+   },
+   {
+    "id": "E10",
+    "turn": 8,
+    "excerpt": "They showed up with the people who'd actually be on the account.",
+    "label": "fact",
+    "speaker": "Ben, relayed by the rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Competitor brought the real account team, per Ben."
+   },
+   {
+    "id": "E11",
+    "turn": 8,
+    "excerpt": "A named solutions engineer and an account lead, in the room.",
+    "label": "fact",
+    "speaker": "Ben, relayed by the rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Competitor put named people in the room."
+   },
+   {
+    "id": "E12",
+    "turn": 8,
+    "excerpt": "they said there'd be a shared channel and someone on call for every major on-sale",
+    "label": "fact",
+    "speaker": "Ben, relayed by the rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor",
+     "decided"
+    ],
+    "note": "Competitor's promise as reported by Ben."
+   },
+   {
+    "id": "E13",
+    "turn": 8,
+    "excerpt": "I think they over-promised. I don't think anybody staffs every on-sale.",
+    "label": "opinion",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Rep's own theory about the competitor, not customer evidence."
+   },
+   {
+    "id": "E14",
+    "turn": 8,
+    "excerpt": "But I don't know that.",
+    "label": "opinion",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "competitor"
+    ],
+    "note": "Rep admits the over-promising claim is unverified."
+   },
+   {
+    "id": "E15",
+    "turn": 10,
+    "excerpt": "Before that meeting it was throughput, queueing, bots. After, it was names.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "language"
+    ],
+    "note": "Customer questions shifted from technical topics to people after the meeting."
+   },
+   {
+    "id": "E16",
+    "turn": 12,
+    "excerpt": "Ben's team ran a load test in the sandbox and it went great.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Load test succeeded for the technical team."
+   },
+   {
+    "id": "E17",
+    "turn": 12,
+    "excerpt": "Reaction: the technical story.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Technical story got a reaction."
+   },
+   {
+    "id": "E18",
+    "turn": 12,
+    "excerpt": "The bot and fraud tooling got a good reaction too.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "message"
+    ],
+    "note": "Bot and fraud tooling also landed."
+   },
+   {
+    "id": "E19",
+    "turn": 12,
+    "excerpt": "who's my person",
+    "label": "quote",
+    "speaker": "Halima (COO)",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "language"
+    ],
+    "note": "Halima asked for a person, met with silence on our side."
+   },
+   {
+    "id": "E20",
+    "turn": 12,
+    "excerpt": "I walked her through the support plans. The tiers, the response times.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "gaps"
+    ],
+    "note": "Rep answered a who question with plan tiers."
+   },
+   {
+    "id": "E21",
+    "turn": 12,
+    "excerpt": "so it's a queue with a faster timer.",
+    "label": "quote",
+    "speaker": "Halima (COO)",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "decided",
+     "language"
+    ],
+    "note": "Halima's dismissal of our support answer."
+   },
+   {
+    "id": "E22",
+    "turn": 14,
+    "excerpt": "Right before it we were the favourite.",
+    "label": "opinion",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "outcome"
+    ],
+    "note": "Rep's read that we led until Halima's sentence."
+   },
+   {
+    "id": "E23",
+    "turn": 14,
+    "excerpt": "Ben had basically told his team to start planning the integration.",
+    "label": "fact",
+    "speaker": "Ben, relayed by the rep",
+    "paraphrase": false,
+    "topics": [
+     "decided",
+     "decider"
+    ],
+    "note": "Hedged with basically; Ben was ahead of Halima's decision."
+   },
+   {
+    "id": "E24",
+    "turn": 16,
+    "excerpt": "She wanted to see, on paper, what we do on an on-sale morning.",
+    "label": "fact",
+    "speaker": "Halima, relayed by the rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Halima asked for a written on-sale plan."
+   },
+   {
+    "id": "E25",
+    "turn": 16,
+    "excerpt": "We don't have that as a thing.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "No on-sale plan existed as an asset."
+   },
+   {
+    "id": "E26",
+    "turn": 16,
+    "excerpt": "I could have built something with our solutions engineer, and I didn't.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Rep admits not building a plan he could have."
+   },
+   {
+    "id": "E27",
+    "turn": 18,
+    "excerpt": "I thought the load test had won it.",
+    "label": "opinion",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps",
+     "decided"
+    ],
+    "note": "Rep's misjudgment of what would decide the deal."
+   },
+   {
+    "id": "E28",
+    "turn": 18,
+    "excerpt": "I had logos. I didn't have a person.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "gaps"
+    ],
+    "note": "Lacked a ticketing reference who could speak to on-sale support."
+   },
+   {
+    "id": "E29",
+    "turn": 20,
+    "excerpt": "Ben presented them to her.",
+    "label": "fact",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "decider"
+    ],
+    "note": "Halima saw load test results via Ben."
+   },
+   {
+    "id": "E30",
+    "turn": 20,
+    "excerpt": "good",
+    "label": "quote",
+    "speaker": "Halima (COO)",
+    "paraphrase": false,
+    "topics": [
+     "message",
+     "decided"
+    ],
+    "note": "Halima's whole reaction to the load test."
+   },
+   {
+    "id": "E31",
+    "turn": 22,
+    "excerpt": "A name, not a queue.",
+    "label": "quote",
+    "speaker": "customer (relayed by the rep)",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer's own framing of the need."
+   },
+   {
+    "id": "E32",
+    "turn": 22,
+    "excerpt": "On-sale morning",
+    "label": "quote",
+    "speaker": "customer (relayed by the rep)",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer frames everything around on-sale morning."
+   },
+   {
+    "id": "E33",
+    "turn": 22,
+    "excerpt": "Someone who picks up.",
+    "label": "quote",
+    "speaker": "customer (relayed by the rep)",
+    "paraphrase": false,
+    "topics": [
+     "language"
+    ],
+    "note": "Customer wants a human answering."
+   },
+   {
+    "id": "E34",
+    "turn": 22,
+    "excerpt": "I don't buy uptime, I buy what happens when it's down.",
+    "label": "quote",
+    "speaker": "Halima (COO)",
+    "paraphrase": false,
+    "topics": [
+     "language",
+     "decided",
+     "message"
+    ],
+    "note": "Halima rejects uptime as the buying criterion."
+   },
+   {
+    "id": "E35",
+    "turn": 24,
+    "excerpt": "We were the better platform. Ben would tell you that today.",
+    "label": "opinion",
+    "speaker": "the rep",
+    "paraphrase": false,
+    "topics": [
+     "outcome",
+     "decided"
+    ],
+    "note": "Rep's view; Ben's current view is the rep's assumption."
+   }
+  ],
+  "contradictions": [
+   {
+    "evidence": [
+     "E27",
+     "E30"
+    ],
+    "what": "Rep thought the load test had won it, but Halima's only reaction was good and it did not move her."
+   },
+   {
+    "evidence": [
+     "E22",
+     "E23",
+     "E7",
+     "E8"
+    ],
+    "what": "Rep says we were the favourite and Ben told his team to plan the integration, yet Halima was the decider and Ben lost."
+   },
+   {
+    "evidence": [
+     "E35",
+     "E34",
+     "E21"
+    ],
+    "what": "Rep calls us the better platform, but the decider said she buys what happens when it's down, not uptime."
+   },
+   {
+    "evidence": [
+     "E13",
+     "E14",
+     "E12"
+    ],
+    "what": "Rep says the competitor over-promised, then admits not knowing; the claim itself came from Ben."
+   }
+  ],
+  "dodges": [],
+  "skipped": [],
+  "language_pairs": [
+   {
+    "theirs": "A name, not a queue / Someone who picks up / who's my person",
+    "ours": "support plans, the tiers, the response times",
+    "evidence": [
+     "E31",
+     "E33",
+     "E19",
+     "E20"
+    ]
+   },
+   {
+    "theirs": "I don't buy uptime, I buy what happens when it's down",
+    "ours": "the uptime history, the docs; technical story",
+    "evidence": [
+     "E34",
+     "E17"
+    ]
+   },
+   {
+    "theirs": "an on-sale plan, on paper, what happens at minute four",
+    "ours": "logos and support tiers; no on-sale plan existed",
+    "evidence": [
+     "E24",
+     "E25",
+     "E28"
+    ]
+   },
+   {
+    "theirs": "On-sale morning",
+    "ours": "throughput, queueing, bots",
+    "evidence": [
+     "E32",
+     "E15"
+    ]
+   }
+  ],
+  "outcome_signals": [
+   {
+    "evidence": [
+     "E8",
+     "E9"
+    ],
+    "what": "Lost: Halima chose the competitor and Ben told the rep he lost."
+   },
+   {
+    "evidence": [
+     "E4"
+    ],
+    "what": "Customer was replacing payments before spring on-sales; no sign that only part of the business moved."
+   },
+   {
+    "evidence": [
+     "E21",
+     "E24",
+     "E25"
+    ],
+    "what": "Deal turned on the absence of a named person and an on-sale plan, not on platform capability."
+   }
+  ]
+ },
+ "ms": 48836,
+ "cost": 0.0757072,
+ "in_tokens": 3902,
+ "out_tokens": 7224,
+ "model": "claude-sonnet-5-5"
+}

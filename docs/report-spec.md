@@ -12,7 +12,8 @@ The decisions made so far, in one place. Nothing here is built yet.
 
 | Field | Values |
 |---|---|
-| Deal | Name entered by the person submitting |
+| Deal | Read from the transcript: the customer's name if it's said, otherwise a short description (never an invented name). The author can edit it after posting. |
+| ACV | Annual contract value, only if stated in the interview (the stating words are checked against the transcript). If not stated, the close lists it as a follow-up; the author can add it after posting. |
 | Outcome | **Won**, **Lost** or **No decision** |
 | Scope note | Optional. Used when the outcome is only partly true, e.g. *"Won: online memberships only; front desk still with Global Payments."* |
 | Competitor | Who we were up against; "None (status quo)" if no one |
@@ -29,10 +30,10 @@ The tags are **neutral topics**. The outcome gives the direction: on a loss, the
 | **Product fit** | A capability we did or didn't have |
 | **Developer experience** | Docs, sandbox, APIs, how fast their engineers could build |
 | **Approval rates** | The decider compared *approval performance itself*: rates by market, card type or issuer, a competitor's test results, the customer's own approval data |
-| **In-store and online together** | One platform across tills and web: returns, customer records, rollout |
+| **In-store and online together** | One platform across tills and web: in-store returns of online orders, one customer record, and the store rollout itself |
 | **Migration effort** | The cost, risk or timing of switching (re-collecting cards, staged moves, freeze periods) |
 | **Existing relationship or bundle** | The incumbent's bank relationship, bundled services or contract lock-in |
-| **Support and service** | Named people, escalation, rollout teams, on-call coverage |
+| **Support and service** | Who helps after the sale: named people, escalation, on-call coverage. Not store rollouts. |
 | **Champion or access** | A champion leaving, or never reaching the person who decided |
 | **No decision** | Nobody switched: freeze, stall, status quo. Always the tag when the outcome is No decision; the underlying cause goes in the runner-up. |
 | **Not established** | The interview never got to the reason |
@@ -99,7 +100,7 @@ If a question was never answered, the section says **"Not covered,"** points to 
 
 - **One artifact, shared by link** with everyone in the organization. Each run uses the viewer's own Claude access, with the same built-in workflow for everyone.
 - **Tabs:**
-  - **New review:** upload a transcript and pick which speaker is the AE
+  - **Submit:** upload a transcript and confirm which speaker is the AE. No other input: deal, AE name, outcome and ACV come from the conversation.
   - **Feed:** everyone's reviews
   - **Test mode:** owner only
 - **Transcripts are never stored.** The file is read in the browser and discarded. Only the finished report, including its short evidence quotes, is saved.

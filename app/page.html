@@ -108,6 +108,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 main{min-width:0;display:flex;flex-direction:column;gap:12px}
 .side{position:sticky;top:calc(92px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:10px;min-width:0}
 .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .sh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:14px;flex-wrap:wrap}
 .sh-label{font-size:15px;font-weight:600;letter-spacing:.02em;color:var(--accent)}
@@ -160,7 +161,6 @@ select.field{padding-right:28px}
 .table .wrap{min-width:16em;max-width:30em}
 .table.lines{min-width:820px}
 .note{font-size:12.5px;color:var(--mute);padding:10px 14px;border-radius:var(--r-ctl);background:var(--glass-low)}
-.note.warn{color:var(--ink);box-shadow:inset 3px 0 0 var(--nd)}
 .note.err{color:var(--ink);box-shadow:inset 3px 0 0 var(--alert)}
 
 /* ---------- submit ---------- */
@@ -232,7 +232,6 @@ select.field{padding-right:28px}
 .card .first{font-size:13.5px;line-height:1.45;color:var(--ink)}
 .card .first .kind{margin-right:6px}
 .card[aria-expanded="true"]{cursor:default}
-.example-flag{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--nd)}
 .empty{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
 .edit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 
@@ -264,7 +263,7 @@ select.field{padding-right:28px}
   .page{grid-template-columns:minmax(0,1fr)}
   .side{position:static}
   .grid2,.form-row,.edit-grid{grid-template-columns:minmax(0,1fr)}
-  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4,.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
   .sbar{grid-template-columns:minmax(0,8em) minmax(0,1fr) 2.6em}
   .ev,.layer{grid-template-columns:minmax(0,1fr);gap:2px}
 }
@@ -293,13 +292,12 @@ select.field{padding-right:28px}
 <section class="view" id="view-submit">
   <div class="hero">
     <h1 class="headline">Turn an AE interview into <strong>sharper messaging.</strong></h1>
-    <p class="deck">Upload the transcript of your deal review. The same four-step review runs for everyone and posts a report to the team feed. The transcript itself is never saved.</p>
   </div>
   <div class="page">
     <main>
       <form id="submit-form" autocomplete="off" style="display:flex;flex-direction:column;gap:12px">
         <div class="glass box">
-          <div class="box-head"><p class="title">1. Transcript</p><button type="button" class="linkish" id="load-example">Use an example transcript</button></div>
+          <div class="box-head"><p class="title">Transcript</p><button type="button" class="linkish" id="load-example">Use an example transcript</button></div>
           <label class="drop" id="drop" for="file">
             <span class="title">Drop a transcript here, or choose a file</span>
             <span class="hint">Zoom or Teams exports: .vtt, .txt or .docx</span>
@@ -316,19 +314,11 @@ select.field{padding-right:28px}
           <p class="note err" id="file-error" hidden></p>
         </div>
 
-        <div class="glass box">
-          <p class="title">2. Deal</p>
-          <div class="form-row">
-            <div class="form-item"><label for="deal">Deal or account name</label><input id="deal" class="field" placeholder="e.g. Fernbrook Garden Supply" required></div>
-            <div class="form-item"><label for="rep">Account executive</label><input id="rep" class="field" placeholder="Name"></div>
-          </div>
-          <div class="toggle-row"><span class="text">Post the report to the team feed</span><button type="button" class="switch" id="post-switch" role="switch" aria-checked="true" aria-label="Post the report to the team feed"></button></div>
-        </div>
-
-        <div class="btns" style="justify-content:flex-end">
-          <span class="text" id="run-hint"></span>
+        <div class="btns" style="justify-content:space-between">
+          <div class="toggle-row" style="gap:10px"><button type="button" class="switch" id="post-switch" role="switch" aria-checked="true" aria-label="Post the report to the team feed"></button><span class="text">Post to the team feed</span></div>
+          <div class="btns"><span class="text" id="run-hint"></span>
           <button type="button" class="btn ghost" id="stop" hidden>Stop</button>
-          <button class="btn" id="run" type="submit">Run the review</button>
+          <button class="btn" id="run" type="submit">Run the review</button></div>
         </div>
       </form>
 
@@ -347,14 +337,6 @@ select.field{padding-right:28px}
         <p class="lbl">How the review runs</p>
         <div id="how-steps" style="display:flex;flex-direction:column;gap:8px"></div>
         <p class="text">Every person's review runs these same steps, with the same models and instructions, so reports are comparable across the team.</p>
-      </div>
-      <div class="glass box tight">
-        <p class="lbl">What's kept</p>
-        <p class="text">The transcript is read in your browser and discarded. Only the finished report is saved, with short quotes as evidence. Runs use your own Claude usage.</p>
-      </div>
-      <div class="glass quiet box tight">
-        <p class="lbl">Interview questions</p>
-        <ol class="text" id="q-list" style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"></ol>
       </div>
     </aside>
   </div>
@@ -379,14 +361,12 @@ select.field{padding-right:28px}
         <input class="field" id="f-q" type="search" placeholder="Search deals, quotes, changes" aria-label="Search">
       </div>
       <button type="button" class="new-pill" id="new-pill" hidden></button>
-      <p class="note warn" id="examples-note" hidden></p>
       <div id="feed-list" style="display:flex;flex-direction:column;gap:12px"></div>
     </main>
     <aside class="side" aria-label="Feed summary">
       <div class="glass box tight"><p class="lbl">Reviews shown</p><p class="big" id="s-count">0</p><p class="text" id="s-sub"></p></div>
       <div class="glass box tight divide" id="s-outcomes"><p class="lbl">By outcome</p></div>
       <div class="glass quiet box tight"><p class="lbl">Reading a review</p><p class="text"><b>Quote</b> is the customer's own words, relayed by the AE. <b>Fact</b> is something that happened. <b>Opinion</b> is the AE's read. Every quote is checked word for word against the transcript before posting.</p></div>
-      <div class="glass quiet box tight"><div class="toggle-row"><span class="text">Show example reviews</span><button type="button" class="switch" id="ex-switch" role="switch" aria-checked="false" aria-label="Show example reviews"></button></div></div>
     </aside>
   </div>
 </section>
@@ -404,10 +384,11 @@ select.field{padding-right:28px}
         <button type="button" class="chip" data-days="90" aria-pressed="false">Last 90 days</button>
         <button type="button" class="chip" data-days="30" aria-pressed="false">Last 30 days</button>
       </div>
-      <p class="note warn" id="dash-note" hidden></p>
-      <div class="grid4">
+      <div class="grid3">
         <div class="glass box tight"><p class="lbl">Reviews</p><p class="big" id="k-reviews">0</p><p class="text" id="k-reviews-sub"></p></div>
-        <div class="glass box tight"><p class="lbl">Win rate</p><p class="big" id="k-win">–</p><p class="text">Won ÷ (won + lost)</p></div>
+        <div class="glass box tight"><p class="lbl">ACV won</p><p class="big" id="k-acv-won">–</p><p class="text" id="k-acv-won-sub"></p></div>
+        <div class="glass box tight"><p class="lbl">ACV lost</p><p class="big" id="k-acv-lost">–</p><p class="text" id="k-acv-lost-sub"></p></div>
+        <div class="glass box tight"><p class="lbl">Win rate</p><p class="big" id="k-win">–</p><p class="text">Won ÷ (won + lost), by count</p></div>
         <div class="glass box tight"><p class="lbl">No decision</p><p class="big" id="k-nd">–</p><p class="text">Share of reviews where nobody switched</p></div>
         <div class="glass box tight"><p class="lbl">Lines ready to decide</p><p class="big" id="k-ready">0</p><p class="text">Challenged in 3+ deals</p></div>
       </div>
@@ -425,7 +406,7 @@ select.field{padding-right:28px}
       </div>
       <div class="sh"><h2 class="sh-label">Messaging lines under pressure</h2><span class="sh-meta">Every change starts as "Test this". A person decides when to change the line.</span></div>
       <div class="glass box flush table-wrap">
-        <table class="table lines"><thead><tr><th>Current line</th><th class="num">Deals</th><th class="num">Won · Lost · ND</th><th>Latest suggestion</th><th>Status</th></tr></thead>
+        <table class="table lines"><thead><tr><th>Current line</th><th class="num">Deals</th><th class="num">Won · Lost · ND</th><th class="num">ACV in those deals</th><th>Latest suggestion</th><th>Status</th></tr></thead>
           <tbody id="lines-body"></tbody></table>
       </div>
       <div class="grid2">
@@ -469,6 +450,13 @@ function h(tag, attrs, ...kids) {
 }
 const fmtDate = (iso) => { try { return new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }); } catch { return ""; } };
 const OUTCOME_VAR = { Won: "--won", Lost: "--lost", "No decision": "--nd" };
+const fmtACV = (n) => (n == null || !(n > 0) ? "—" : "$" + (n >= 1e6 ? +(n / 1e6).toFixed(1) + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : Math.round(n)));
+function parseACV(v) {
+  const m = String(v || "").replace(/[$,\s]/g, "").match(/^([0-9]*\.?[0-9]+)([kKmM]?)$/);
+  if (!m) return null;
+  const n = parseFloat(m[1]) * (/k/i.test(m[2]) ? 1e3 : /m/i.test(m[2]) ? 1e6 : 1);
+  return n > 0 ? Math.round(n) : null;
+}
 const outcomeEl = (o) => h("span", { class: "status", style: `--c:var(${OUTCOME_VAR[o] || "--accent"})`, text: o || "Unknown" });
 const MODEL_NAME = (m) => (/haiku/.test(m) ? "Haiku" : /sonnet/.test(m) ? "Sonnet" : /opus/.test(m) ? "Opus" : m);
 const LIB = Object.fromEntries(DR.MESSAGING.map((m) => [m.id, m]));
@@ -530,7 +518,6 @@ $("how-steps").append(...[
 ].map(([n, k, d]) => h("div", { style: "display:flex;flex-direction:column;gap:2px" },
   h("div", { class: "pair" }, h("span", { style: "color:var(--strong);font-weight:600", text: n }), h("span", { class: "text", text: k ? MODEL_NAME(DR.STAGE_MODELS[k].model) : "Code" })),
   h("span", { class: "text", text: d }))));
-$("q-list").append(...DR.SECTIONS.map(([, , q]) => h("li", { text: q })));
 
 async function readFile(file) {
   if (/\.docx$/i.test(file.name)) return docxText(await file.arrayBuffer());
@@ -576,7 +563,6 @@ function loadText(text, name) {
   $("parsed-name").textContent = name;
   $("parsed-stats").textContent = `${parsed.turns.length} turns · ${parsed.words.toLocaleString()} words · ${parsed.speakers.length} speakers`;
   renderSpeakers();
-  if (!$("rep").value && !/^Speaker \d+$|^Unknown$/.test(sub.roles.ae || "")) $("rep").value = sub.roles.ae || "";
   updateRunState();
 }
 function renderSpeakers() {
@@ -585,7 +571,6 @@ function renderSpeakers() {
     onclick: () => {
       const other = sub.parsed.speakers.find((x) => x !== s);
       sub.roles = { ae: s, interviewer: sub.roles.interviewer === s ? other : sub.roles.interviewer }; sub.state = null;
-      if (!$("rep").dataset.touched && !/^Speaker \d+$/.test(s)) $("rep").value = s;
       renderSpeakers();
     },
   }, s)));
@@ -596,7 +581,6 @@ function clearFile() {
   updateRunState();
 }
 $("clear-file").onclick = clearFile;
-$("rep").addEventListener("input", () => { $("rep").dataset.touched = "1"; });
 $("file").addEventListener("change", async () => {
   const f = $("file").files[0]; if (!f) return;
   try { loadText(await readFile(f), f.name); } catch (e) { showFileError(e.message || "We couldn't read that file."); }
@@ -611,14 +595,11 @@ drop.addEventListener("drop", async (e) => {
 let pasteTimer;
 $("paste").addEventListener("input", () => { clearTimeout(pasteTimer); pasteTimer = setTimeout(() => { if ($("paste").value.trim().length > 400) loadText($("paste").value, "Pasted transcript"); }, 600); });
 $("load-example").onclick = () => {
-  loadText(window.EXAMPLE_TRANSCRIPT, "Example: Fernbrook Garden Supply (fictional)");
-  $("deal").value = "Fernbrook Garden Supply (example)";
-  updateRunState();
+  loadText(window.EXAMPLE_TRANSCRIPT, "Example transcript");
 };
-$("deal").addEventListener("input", () => { sub.state = null; updateRunState(); });
 $("post-switch").onclick = (e) => e.currentTarget.setAttribute("aria-checked", String(e.currentTarget.getAttribute("aria-checked") !== "true"));
 function updateRunState() {
-  const missing = !sub.parsed ? "Add a transcript to start." : !$("deal").value.trim() ? "Name the deal to start." : !caps.sample ? "Open this page in Claude to run reviews." : "";
+  const missing = !sub.parsed ? "Add a transcript to start." : !caps.sample ? "Open this page in Claude to run reviews." : "";
   $("run").disabled = !!missing || !!sub.running;
   $("run-hint").textContent = sub.running ? "" : missing;
 }
@@ -640,14 +621,14 @@ const ERR = {
 $("submit-form").addEventListener("submit", (e) => { e.preventDefault(); sub.state = null; startRun(); });
 $("retry").onclick = () => startRun();
 async function startRun() {
-  if (!sub.parsed || !$("deal").value.trim() || !caps.sample || sub.running) return;
+  if (!sub.parsed || !caps.sample || sub.running) return;
   if (!sub.state) sub.state = {};
   $("retry-row").hidden = true;
   const ctl = new AbortController();
   sub.running = ctl; updateRunState();
   $("stop").hidden = false; $("stop").onclick = () => ctl.abort();
   $("result").hidden = true; $("run-error").hidden = true; $("progress").hidden = false;
-  $("progress-title").textContent = "Reviewing " + $("deal").value.trim();
+  $("progress-title").textContent = "Reviewing the interview";
   const t0 = Date.now(), times = {}; let cur = null;
   if (sub.state.ledger) times.reader = { start: 0, end: 0, kept: true };
   if (sub.state.analysis) times.analyst = { start: 0, end: 0, kept: true };
@@ -674,10 +655,11 @@ async function startRun() {
     return data;
   };
   try {
-    const report = await DR.runPipeline({ deal: $("deal").value.trim(), parsed: sub.parsed, roles: sub.roles, call, onStage, state: sub.state });
+    const report = await DR.runPipeline({ parsed: sub.parsed, roles: sub.roles, call, onStage, state: sub.state });
     sub.state = null;
     times.checks.end = Date.now(); cur = null; draw();
-    report.rep = $("rep").value.trim() || null;
+    // The AE's name: the speaker label when it's a real name, else what the analyst found.
+    report.rep = (sub.roles.ae && !/^(Speaker \d+|Unknown|AE|Rep)$/i.test(sub.roles.ae) ? sub.roles.ae : report.header.ae) || null;
     report.authorId = me.id; report.createdAt = new Date().toISOString();
     let posted = null;
     if ($("post-switch").getAttribute("aria-checked") === "true") posted = await postReview(report);
@@ -750,10 +732,11 @@ function renderReport(r, opts) {
   const wrap = h("div", { class: "report" });
 
   const head = h("div", { class: "glass accent box rp-head" },
-    h("div", { class: "rp-title" }, h("h2", { text: H.deal || "Untitled deal" }), outcomeEl(H.outcome), opts.example ? h("span", { class: "example-flag", text: "Example · fictional deal" }) : null),
+    h("div", { class: "rp-title" }, h("h2", { text: H.deal || "Untitled deal" }), outcomeEl(H.outcome)),
     H.scope ? h("p", { class: "text", text: H.scope }) : null,
     h("div", { class: "facts" },
-      fact("Reason", H.tag, "tag"), fact("Runner-up", H.runner_up), fact("Competitor", H.competitor), fact("Incumbent", H.incumbent)),
+      fact("ACV", H.acv ? fmtACV(H.acv.amount) : "Not stated", H.acv ? "tag" : ""), fact("Reason", H.tag, "tag"), fact("Runner-up", H.runner_up), fact("Competitor", H.competitor), fact("Incumbent", H.incumbent)),
+    H.acv && H.acv.quote ? h("p", { class: "meta-line", text: "Deal size from the interview: \u201C" + H.acv.quote + "\u201D" }) : H.acv && H.acv.entered ? h("p", { class: "meta-line", text: "Deal size added by the author." }) : null,
     H.tag_why ? h("p", { class: "text", text: H.tag_why }) : null,
     h("p", { class: "meta-line", text: [r.rep ? "AE: " + r.rep : null, opts.authorName ? "Reviewed by " + opts.authorName : null, r.createdAt ? fmtDate(r.createdAt) : null,
       r.meta && r.meta.models ? "Models: " + Object.values(r.meta.models).map(MODEL_NAME).join(" → ") : null, r.editedAt ? "Edited " + fmtDate(r.editedAt) : null].filter(Boolean).join(" · ") }));
@@ -806,6 +789,9 @@ function editControls(r, opts) {
   const inp = (id, cur) => h("input", { class: "field", id, value: cur || "" });
   const uid = "e" + Math.random().toString(36).slice(2, 7);
   form.append(h("div", { class: "edit-grid" },
+      h("div", { class: "form-item" }, h("label", { for: uid + "d", text: "Deal name" }), inp(uid + "d", H.deal)),
+      h("div", { class: "form-item" }, h("label", { for: uid + "a", text: "ACV (e.g. 95K)" }), inp(uid + "a", H.acv ? String(H.acv.amount) : ""))),
+    h("div", { class: "edit-grid" },
     h("div", { class: "form-item" }, h("label", { for: uid + "o", text: "Outcome" }), sel(uid + "o", ["Won", "Lost", "No decision"], H.outcome)),
     h("div", { class: "form-item" }, h("label", { for: uid + "t", text: "Reason tag" }), sel(uid + "t", DR.TAG_NAMES, H.tag)),
     h("div", { class: "form-item" }, h("label", { for: uid + "c", text: "Competitor" }), inp(uid + "c", H.competitor)),
@@ -815,7 +801,10 @@ function editControls(r, opts) {
   const save = h("button", { type: "button", class: "btn small", text: "Save changes", onclick: async () => {
     save.disabled = true; msg.textContent = "Saving…";
     const v = (s) => form.querySelector("#" + uid + s).value.trim() || null;
-    const ok = await opts.onEdit({ outcome: v("o"), tag: v("t"), competitor: v("c"), incumbent: v("i"), scope: v("s") });
+    const acvIn = v("a"), acvNum = parseACV(acvIn);
+    if (acvIn && !acvNum) { msg.textContent = "ACV should be a number, like 95K or 95000."; save.disabled = false; return; }
+    const acv = acvNum == null ? null : H.acv && H.acv.amount === acvNum ? H.acv : { amount: acvNum, quote: null, entered: true };
+    const ok = await opts.onEdit({ deal: v("d") || H.deal, acv, outcome: v("o"), tag: v("t"), competitor: v("c"), incumbent: v("i"), scope: v("s") });
     msg.textContent = ok ? "Saved." : "Couldn't save. Try again.";
     save.disabled = false;
   } });
@@ -869,28 +858,26 @@ async function renderFeed() {
   const shown = cards.filter(matches);
   await resolveNames(shown.map((c) => c.authorId));
   $("feed-count").textContent = feed.real.length ? String(feed.real.length) : "";
-  const note = $("examples-note");
-  note.hidden = !feed.showExamples;
-  note.textContent = feed.real.length ? "Example reviews from fictional test deals are mixed in. Turn them off in the side panel." : "No one has posted a review yet. These are example reviews from fictional test deals, so you can see what the feed looks like. They disappear when you turn them off.";
   const list = $("feed-list");
   if (!shown.length) {
     list.replaceChildren(h("div", { class: "glass box empty" },
-      h("p", { class: "title", text: !feed.loaded && caps.db ? "Loading reviews…" : cards.length ? "No reviews match these filters." : "No reviews yet." }),
+      h("p", { class: "title", text: feed.offline ? "The team feed can't be reached right now." : !feed.loaded && caps.db ? "Loading reviews…" : cards.length ? "No reviews match these filters." : "No reviews yet." }),
       h("p", { class: "text", text: cards.length ? "Clear a filter to see more." : "Reviews appear here as soon as anyone on the team runs one. Run the first one from the Submit tab." }),
       cards.length ? null : h("a", { class: "btn", href: "#submit", text: "Run a review" })));
   } else list.replaceChildren(...shown.map(cardEl));
   $("s-count").textContent = String(shown.length);
   $("s-sub").textContent = feed.real.length ? `${feed.real.length} posted by the team` : "No team reviews posted yet";
   const by = (o) => shown.filter((c) => c.outcome === o).length;
-  $("s-outcomes").replaceChildren(h("p", { class: "lbl", text: "By outcome" }), ...["Won", "Lost", "No decision"].map((o) => h("div", { class: "pair" }, outcomeEl(o), h("span", { text: String(by(o)) }))));
+  const acvBy = (o) => shown.filter((c) => c.outcome === o && c.acv > 0).reduce((a, c) => a + c.acv, 0);
+  $("s-outcomes").replaceChildren(h("p", { class: "lbl", text: "By outcome" }), ...["Won", "Lost", "No decision"].map((o) => h("div", { class: "pair" }, outcomeEl(o), h("span", { text: by(o) + (acvBy(o) ? " · " + fmtACV(acvBy(o)) : "") }))));
 }
 function cardEl(c) {
   const key = c.uid + "/" + c.rid;
   const open = feed.open.has(key);
   const author = c.example ? "" : feed.names[c.authorId] || "";
   const el = h("article", { class: "glass box card", "aria-expanded": String(open), tabindex: "0" },
-    h("div", { class: "card-top" }, h("p", { class: "title", text: c.deal || "Untitled deal" }), h("span", {}, c.example ? h("span", { class: "example-flag", text: "Example  " }) : null, outcomeEl(c.outcome))),
-    h("div", { class: "card-tags" }, h("span", {}, "Reason ", h("b", { text: c.tag || "—" })), h("span", {}, "vs ", h("b", { text: c.competitor || "—" })),
+    h("div", { class: "card-top" }, h("p", { class: "title", text: c.deal || "Untitled deal" }), outcomeEl(c.outcome)),
+    h("div", { class: "card-tags" }, h("span", {}, "ACV ", h("b", { text: fmtACV(c.acv) })), h("span", {}, "Reason ", h("b", { text: c.tag || "—" })), h("span", {}, "vs ", h("b", { text: c.competitor || "—" })),
       c.incumbent ? h("span", { text: "Incumbent: " + c.incumbent }) : null, c.rep ? h("span", { text: "AE: " + c.rep }) : null, author ? h("span", { text: "by " + author }) : null, c.createdAt ? h("span", { text: fmtDate(c.createdAt) }) : null),
     c.scope ? h("p", { class: "text", text: c.scope }) : null,
     c.first_change ? h("p", { class: "first" }, h("span", { class: "kind", text: "Top change" }), c.first_change.change) : null);
@@ -923,7 +910,7 @@ async function editReview(c, report, patch) {
     const header = Object.assign({}, report.header, patch);
     const editedAt = new Date().toISOString();
     await caps.db.doc(`reviews/${c.uid}/items/${c.rid}`).update({ header, editedAt });
-    const cardPatch = { outcome: header.outcome, tag: header.tag, competitor: header.competitor, incumbent: header.incumbent, scope: header.scope, editedAt };
+    const cardPatch = { deal: header.deal, acv: header.acv ? header.acv.amount : null, outcome: header.outcome, tag: header.tag, competitor: header.competitor, incumbent: header.incumbent, scope: header.scope, editedAt };
     await caps.db.doc(`reviews/${c.uid}`).update({ cards: { [c.rid]: cardPatch } });
     return true;
   } catch { return false; }
@@ -946,17 +933,12 @@ document.querySelectorAll("[data-outcome]").forEach((b) => b.addEventListener("c
 }));
 [["f-tag", "tag"], ["f-comp", "comp"], ["f-rep", "rep"]].forEach(([id, k]) => $(id).addEventListener("change", () => { feed.filter[k] = $(id).value; renderFeed(); }));
 let qTimer; $("f-q").addEventListener("input", () => { clearTimeout(qTimer); qTimer = setTimeout(() => { feed.filter.q = $("f-q").value.trim(); renderFeed(); }, 200); });
-$("ex-switch").onclick = () => setExamples(!feed.showExamples, true);
-function setExamples(on, byUser) {
-  feed.showExamples = on; if (byUser) feed.examplesTouched = true;
-  $("ex-switch").setAttribute("aria-checked", String(on));
-  renderFeed(); renderDashboard();
-}
+function setExamples(on) { feed.showExamples = on; renderFeed(); renderDashboard(); }
 $("new-pill").onclick = () => { feed.real = feed.pending; feed.pendingCount = 0; $("new-pill").hidden = true; renderFeed(); renderDashboard(); };
 
 function subscribeFeed() {
-  if (!caps.db) { feed.loaded = true; if (!feed.examplesTouched) setExamples(true); return; }
-  const timer = setTimeout(() => { if (!feed.loaded) { feed.loaded = true; $("examples-note").hidden = false; $("examples-note").textContent = "The team feed can't be reached right now. Reviews will appear when the connection returns."; } }, 10000);
+  if (!caps.db) { feed.loaded = true; setExamples(true); return; }
+  const timer = setTimeout(() => { if (!feed.loaded) { feed.loaded = true; feed.offline = true; renderFeed(); } }, 10000);
   caps.db.collection("reviews").onSnapshot((snap) => {
     const cards = [];
     for (const d of snap.docs) { const data = d.data() || {}; for (const [rid, c] of Object.entries(data.cards || {})) cards.push(Object.assign({}, c, { rid, uid: d.id })); }
@@ -968,9 +950,8 @@ function subscribeFeed() {
       feed.pending = cards; feed.pendingCount = (feed.pendingCount || 0) + othersNew.length;
       $("new-pill").textContent = `${feed.pendingCount} new review${feed.pendingCount > 1 ? "s" : ""}`; $("new-pill").hidden = false;
     } else { feed.real = cards; }
-    feed.loaded = true;
-    if (!feed.examplesTouched) feed.showExamples = feed.real.length === 0;
-    $("ex-switch").setAttribute("aria-checked", String(feed.showExamples));
+    feed.loaded = true; feed.offline = false;
+    feed.showExamples = feed.real.length === 0;
     renderFeed(); renderDashboard();
   }, () => { feed.loaded = true; clearTimeout(timer); renderFeed(); });
 }
@@ -1005,13 +986,15 @@ function renderDashboard() {
   if ($("view-dashboard").hidden) return;
   const cutoff = dash.days ? Date.now() - dash.days * 864e5 : 0;
   const cards = allCards().filter((c) => !cutoff || new Date(c.createdAt).getTime() >= cutoff);
-  const note = $("dash-note");
-  note.hidden = !feed.showExamples;
-  note.textContent = feed.real.length ? "Includes example reviews from fictional test deals. Turn them off on the Feed tab." : "No team reviews yet, so this shows example reviews from fictional test deals. It fills with real data as the team posts.";
   const n = cards.length, won = cards.filter((c) => c.outcome === "Won").length, lost = cards.filter((c) => c.outcome === "Lost").length, nd = cards.filter((c) => c.outcome === "No decision").length;
   $("k-reviews").textContent = String(n);
   $("k-reviews-sub").textContent = `${won} won · ${lost} lost · ${nd} no decision`;
   $("k-win").textContent = won + lost ? Math.round((won / (won + lost)) * 100) + "%" : "–";
+  for (const [o, id] of [["Won", "won"], ["Lost", "lost"]]) {
+    const all = cards.filter((c) => c.outcome === o), sized = all.filter((c) => c.acv > 0);
+    $("k-acv-" + id).textContent = sized.length ? fmtACV(sized.reduce((a, c) => a + c.acv, 0)) : "–";
+    $("k-acv-" + id + "-sub").textContent = all.length ? `${sized.length} of ${all.length} ${o.toLowerCase()} deals have a stated size` : `No ${o.toLowerCase()} deals yet`;
+  }
   $("k-nd").textContent = n ? Math.round((nd / n) * 100) + "%" : "–";
   legend($("leg-1")); legend($("leg-2"));
   const tags = countBy(cards, (c) => c.tag);
@@ -1024,8 +1007,8 @@ function renderDashboard() {
   const lines = {};
   for (const c of cards) for (const ch of c.changes || []) {
     const k = ch.target && LIB[ch.target] ? ch.target : "new";
-    const L = (lines[k] = lines[k] || { deals: new Set(), Won: 0, Lost: 0, "No decision": 0, latest: null, latestAt: "" });
-    if (!L.deals.has(c.rid)) { L.deals.add(c.rid); if (L[c.outcome] != null) L[c.outcome]++; }
+    const L = (lines[k] = lines[k] || { deals: new Set(), Won: 0, Lost: 0, "No decision": 0, acv: 0, latest: null, latestAt: "" });
+    if (!L.deals.has(c.rid)) { L.deals.add(c.rid); if (L[c.outcome] != null) L[c.outcome]++; if (c.acv > 0) L.acv += c.acv; }
     if (String(c.createdAt) >= L.latestAt) { L.latestAt = String(c.createdAt); L.latest = ch.change; }
   }
   const rows = Object.entries(lines).sort((a, b) => b[1].deals.size - a[1].deals.size);
@@ -1034,9 +1017,10 @@ function renderDashboard() {
     h("td", { class: "wrap" }, k === "new" ? h("span", { text: "New lines (nothing in our messaging covers these yet)" }) : h("span", {}, h("b", { text: k + " " }), LIB[k].line)),
     h("td", { class: "num", text: String(L.deals.size) }),
     h("td", { class: "num", text: `${L.Won} · ${L.Lost} · ${L["No decision"]}` }),
+    h("td", { class: "num", text: L.acv ? fmtACV(L.acv) : "—" }),
     h("td", { class: "wrap sub", text: L.latest || "" }),
     h("td", {}, L.deals.size >= 3 && k !== "new" ? h("span", { class: "ready", text: "Ready to decide" }) : h("span", { class: "strength", text: "Test this" }))))
-    : [h("tr", {}, h("td", { colspan: "5", class: "sub", text: "No messaging changes in this range yet." }))]));
+    : [h("tr", {}, h("td", { colspan: "6", class: "sub", text: "No messaging changes in this range yet." }))]));
 
   const qs = [];
   for (const c of cards) for (const q of c.language || []) qs.push({ q, deal: c.deal, at: c.createdAt });
