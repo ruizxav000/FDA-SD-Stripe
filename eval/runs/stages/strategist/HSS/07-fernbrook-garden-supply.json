@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For merchants selling big-ticket items: \\\"You do all the work to get someone to buy a four-thousand-dollar greenhouse, and then the card says no. We show you why your big baskets are getting declined, and what those orders dying at the last step are costing you, using your own numbers.\\\" Lead with the customer's failed-order rate and the unexplained declines, then bring in the average uplift only as supporting context.\",\"evidence\":[\"E41\",\"E43\",\"E42\",\"E28\",\"E4\"],\"why\":\"Lucy described the problem in terms of orders dying at the last step and the card saying no on big baskets, while our generic average-uplift slide gave her nothing to defend to a CFO.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a standard deliverable for deals with a finance decider who does not take vendor meetings: a one-page, CFO-readable value summary built from the prospect's own decline data (for example a three-month decline export). It states their failed-order rate, the value of the declined big baskets, and the total cost of acceptance (rate, gateway fee, failed orders, chargeback handling). It must make sense without us in the room, so a champion can hand it over.\",\"evidence\":[\"E30\",\"E38\",\"E9\",\"E21\"],\"why\":\"Lucy asked for something to hand Martin, a Fernbrook-specific decline analysis was offered but not run, and the CFO decided from a controller's one-pager built on our quote.\",\"strength\":\"Test this\"},{\"target\":\"M8\",\"current_line\":\"Trusted by leading businesses; see our customer stories.\",\"type\":\"drop\",\"change\":\"For deals where a champion asks for something to give a finance buyer, don't offer customer stories or the generic deck as the answer. Give the customer-specific value one-pager instead.\",\"evidence\":[\"E38\",\"E40\"],\"why\":\"When Lucy asked for something to hand Martin, she received customer stories and the average uplift, which did not answer her request.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a response for moments when an incumbent reprices: \\\"A better rate on the same setup doesn't fix the one in twelve orders failing at the payment step. Before comparing rates, let's compare what failed orders cost you today.\\\" Use it with buyers whose incumbent has answered with price alone.\",\"evidence\":[\"E11\",\"E12\",\"E13\",\"E19\"],\"why\":\"After the bank sharpened its rate with no new product, the conversation moved from Lucy's questions about declines to rate, and Martin concluded he wouldn't pay more for 'the same thing'.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For merchants selling big-ticket items: \"You do all the work to get someone to buy a four-thousand-dollar greenhouse, and then the card says no. We show you why your big baskets are getting declined, and what those orders dying at the last step are costing you, using your own numbers.\" Lead with the customer's failed-order rate and the unexplained declines, then bring in the average uplift only as supporting context.",
+    "evidence": [
+     "E41",
+     "E43",
+     "E42",
+     "E28",
+     "E4"
+    ],
+    "why": "Lucy described the problem in terms of orders dying at the last step and the card saying no on big baskets, while our generic average-uplift slide gave her nothing to defend to a CFO.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a standard deliverable for deals with a finance decider who does not take vendor meetings: a one-page, CFO-readable value summary built from the prospect's own decline data (for example a three-month decline export). It states their failed-order rate, the value of the declined big baskets, and the total cost of acceptance (rate, gateway fee, failed orders, chargeback handling). It must make sense without us in the room, so a champion can hand it over.",
+    "evidence": [
+     "E30",
+     "E38",
+     "E9",
+     "E21"
+    ],
+    "why": "Lucy asked for something to hand Martin, a Fernbrook-specific decline analysis was offered but not run, and the CFO decided from a controller's one-pager built on our quote.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M8",
+    "current_line": "Trusted by leading businesses; see our customer stories.",
+    "type": "drop",
+    "change": "For deals where a champion asks for something to give a finance buyer, don't offer customer stories or the generic deck as the answer. Give the customer-specific value one-pager instead.",
+    "evidence": [
+     "E38",
+     "E40"
+    ],
+    "why": "When Lucy asked for something to hand Martin, she received customer stories and the average uplift, which did not answer her request.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a response for moments when an incumbent reprices: \"A better rate on the same setup doesn't fix the one in twelve orders failing at the payment step. Before comparing rates, let's compare what failed orders cost you today.\" Use it with buyers whose incumbent has answered with price alone.",
+    "evidence": [
+     "E11",
+     "E12",
+     "E13",
+     "E19"
+    ],
+    "why": "After the bank sharpened its rate with no new product, the conversation moved from Lucy's questions about declines to rate, and Martin concluded he wouldn't pay more for 'the same thing'.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 10479,
+ "cost": 0.031566,
+ "in_tokens": 5580,
+ "out_tokens": 925,
+ "model": "claude-sonnet-5-5"
+}

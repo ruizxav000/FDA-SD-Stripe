@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For international merchants whose payments lead is reviewing their numbers: \\\"We show your approvals by country, card and issuer, with the reason behind each gap and what we would change in each market.\\\"\",\"evidence\":[\"E39\",\"E16\",\"E17\",\"E13\"],\"why\":\"The customer rejected the average-uplift figure twice ('that's an average. What's mine?') and asked for approval rates by country, card and issuer in his own vocabulary of 'approvals.'\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For every international renewal, commit to a named payments-performance owner who reviews the customer's approvals market by market within two weeks, and name that person to the customer's payments lead at kickoff.\",\"evidence\":[\"E33\",\"E30\",\"E32\",\"E34\"],\"why\":\"We had the per-market analysis but it arrived after the test had finished, and we could not name anyone who watched the customer's numbers each month.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For new payments leads who need to sell internally: a one-page, account-specific summary of approvals by market and projected cost impact, written so it can be forwarded to a CFO without edits.\",\"evidence\":[\"E7\",\"E8\",\"E17\",\"E29\"],\"why\":\"The CFO made the decision, and our only route to them was through the new payments lead, who needed numbers he could take upward.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Early-warning trigger: when a payments owner changes or a renewal notice draws a split-contract request, start a named-owner check and a per-country decline review within one week.\",\"evidence\":[\"E2\",\"E3\",\"E25\"],\"why\":\"The original buyer left with no successor, and our first signal was a split-contract request at renewal, while the new head of payments began by pulling country-level declines.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For international merchants whose payments lead is reviewing their numbers: \"We show your approvals by country, card and issuer, with the reason behind each gap and what we would change in each market.\"",
+    "evidence": [
+     "E39",
+     "E16",
+     "E17",
+     "E13"
+    ],
+    "why": "The customer rejected the average-uplift figure twice ('that's an average. What's mine?') and asked for approval rates by country, card and issuer in his own vocabulary of 'approvals.'",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For every international renewal, commit to a named payments-performance owner who reviews the customer's approvals market by market within two weeks, and name that person to the customer's payments lead at kickoff.",
+    "evidence": [
+     "E33",
+     "E30",
+     "E32",
+     "E34"
+    ],
+    "why": "We had the per-market analysis but it arrived after the test had finished, and we could not name anyone who watched the customer's numbers each month.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For new payments leads who need to sell internally: a one-page, account-specific summary of approvals by market and projected cost impact, written so it can be forwarded to a CFO without edits.",
+    "evidence": [
+     "E7",
+     "E8",
+     "E17",
+     "E29"
+    ],
+    "why": "The CFO made the decision, and our only route to them was through the new payments lead, who needed numbers he could take upward.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Early-warning trigger: when a payments owner changes or a renewal notice draws a split-contract request, start a named-owner check and a per-country decline review within one week.",
+    "evidence": [
+     "E2",
+     "E3",
+     "E25"
+    ],
+    "why": "The original buyer left with no successor, and our first signal was a split-contract request at renewal, while the new head of payments began by pulling country-level declines.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 10310,
+ "cost": 0.0018441000000000002,
+ "in_tokens": 5499,
+ "out_tokens": 1489,
+ "model": "claude-haiku-5-5"
+}

@@ -1,0 +1,372 @@
+{
+ "version": "2026-11-13.1",
+ "header": {
+  "deal": "Tixhaven",
+  "outcome": "Lost",
+  "scope": null,
+  "competitor": null,
+  "incumbent": "Unnamed existing payments provider; its support was a ticket form.",
+  "tag": "Support and service",
+  "runner_up": "Value proof",
+  "tag_why": "Halima chose the vendor that put named people and an on-call promise in the room, and dismissed our support tiers as 'a queue with a faster timer' despite our technical win with Ben."
+ },
+ "messaging_changes": [
+  {
+   "target": "M5",
+   "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For operations owners at high-stakes event buyers: 'A name, not a queue. A named solutions engineer and account lead, a shared channel, and someone who picks up on on-sale morning.' Lead with who answers when it breaks, not with tiers or response times.",
+   "evidence": [
+    "E26",
+    "E37",
+    "E39",
+    "E14",
+    "E13"
+   ],
+   "evidence_found": true,
+   "why": "The decider dismissed our tiered support as 'a queue with a faster timer' and chose the vendor that offered named people and an on-call promise, in the words 'a name, not a queue' and 'someone who picks up'.",
+   "strength": "Test this"
+  },
+  {
+   "target": null,
+   "current_line": null,
+   "line_matches": true,
+   "type": "add",
+   "change": "Add an on-sale readiness plan as a proof point for ticketing and event buyers: a one-page, on-paper plan of what we do on an on-sale morning (who is on call, how the shared channel works, what happens at minute four if payments fail), paired with a named ticketing reference who can say who picked up. Offer it in the first meeting with the operations owner.",
+   "evidence": [
+    "E30",
+    "E31",
+    "E32",
+    "E34"
+   ],
+   "evidence_found": true,
+   "why": "The decider asked to see on paper what we do on an on-sale morning, we had no such asset, and the rep admits it was buildable but offered logos instead.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M8",
+   "current_line": "Trusted by leading businesses; see our customer stories.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For event and ticketing buyers, replace generic logos and stories with a named reference: 'Talk to [name] at [ticketing customer] about who picked up on their on-sale morning.' Put a person, not a logo wall, in front of the operations owner.",
+   "evidence": [
+    "E34",
+    "E39",
+    "E31"
+   ],
+   "evidence_found": true,
+   "why": "The rep says 'I had logos. I didn't have a person', and the customer's language was about someone who picks up, which logos do not answer.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M2",
+   "current_line": "Built for developers: launch payments fast with our APIs, docs and sandbox.",
+   "line_matches": true,
+   "type": "drop",
+   "change": "Stop leading with the developer and sandbox or load-test story when the economic decider is an operations owner. Keep it for the technical evaluator, and for the COO use: 'I don't buy uptime, I buy what happens when it's down.' Answer what happens when it's down first.",
+   "evidence": [
+    "E20",
+    "E36",
+    "E40",
+    "E19"
+   ],
+   "evidence_found": true,
+   "why": "The load test won the CTO but drew only 'good.' from the decider, who said she does not buy uptime but what happens when it is down.",
+   "strength": "Test this"
+  }
+ ],
+ "no_change_reason": null,
+ "sections": {
+  "trigger": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E1",
+     "excerpt": "payments started failing about four minutes in.",
+     "label": "fact",
+     "speaker": "rep (relaying the on-sale event)",
+     "verified": true
+    },
+    {
+     "id": "E3",
+     "excerpt": "Their provider's support was a ticket form.",
+     "label": "fact",
+     "speaker": "rep (relaying customer situation)",
+     "verified": true
+    },
+    {
+     "id": "E4",
+     "excerpt": "They got a reply after the on-sale was over.",
+     "label": "fact",
+     "speaker": "rep (relaying customer situation)",
+     "verified": true
+    },
+    {
+     "id": "E2",
+     "excerpt": "The CEO was getting screenshots on social.",
+     "label": "fact",
+     "speaker": "rep (relaying customer situation)",
+     "verified": true
+    }
+   ],
+   "insight": "The failure itself wasn't new (Ben said it had happened twice before). What changed was that the CEO saw it publicly, and the incumbent's silence during the outage was the sore point. The buying trigger was 'nobody helped us when it broke', not 'payments are unreliable'. That framed the whole evaluation around outage response from day one.",
+   "messaging": "Open with the outage moment (minute four of an on-sale, who answers) instead of with platform capability."
+  },
+  "decider": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E10",
+     "excerpt": "it was Halima's call and she made it in one meeting.",
+     "label": "quote",
+     "speaker": "Ben (CTO)",
+     "verified": true
+    },
+    {
+     "id": "E8",
+     "excerpt": "Ben wanted us.",
+     "label": "fact",
+     "speaker": "Ben (CTO), reported by rep",
+     "verified": true
+    },
+    {
+     "id": "E9",
+     "excerpt": "he told me he lost.",
+     "label": "fact",
+     "speaker": "Ben (CTO), reported by rep",
+     "verified": true
+    }
+   ],
+   "insight": "Our champion was the CTO, but the decider was the COO, who owned the CEO-facing pain. Ben's preference was evidently not enough, and a one-meeting decision suggests Halima's criteria were set by the trigger, not by the technical evaluation. The rep's account shows we won the technical buyer and under-served the economic one.",
+   "messaging": "Build a separate COO/operations-owner track that answers 'what happens when it's down' rather than relying on the CTO to carry the case."
+  },
+  "competitor": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E13",
+     "excerpt": "A named solutions engineer and an account lead, in the room.",
+     "label": "fact",
+     "speaker": "rep (reporting Ben)",
+     "verified": true
+    },
+    {
+     "id": "E14",
+     "excerpt": "they said there'd be a shared channel and someone on call for every major on-sale.",
+     "label": "fact",
+     "speaker": "Ben (CTO), reported by rep",
+     "verified": true
+    },
+    {
+     "id": "E19",
+     "excerpt": "Before that meeting it was throughput, queueing, bots. After, it was names.",
+     "label": "fact",
+     "speaker": "rep (describing change in customer questions)",
+     "verified": true
+    },
+    {
+     "id": "E16",
+     "excerpt": "I don't think anybody staffs every on-sale. But I don't know that.",
+     "label": "opinion",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "The competitor won by showing up with the people, not by out-building us. The customer's questions shifted from technical to 'who' after that meeting. The rep's doubt that the competitor can actually staff every on-sale is unverified and irrelevant: the customer bought the promise and the faces. We don't know the competitor's name or whether the promise was kept.",
+   "messaging": "Stop treating named people and on-sale coverage as a support-plan detail; make a named team and a shared channel visible in the first meeting."
+  },
+  "message": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E20",
+     "excerpt": "Ben's team ran a load test in the sandbox and it went great.",
+     "label": "fact",
+     "speaker": "rep (reporting Ben's team)",
+     "verified": true
+    },
+    {
+     "id": "E36",
+     "excerpt": "good.",
+     "label": "quote",
+     "speaker": "Halima (COO)",
+     "verified": true
+    },
+    {
+     "id": "E23",
+     "excerpt": "I walked her through the support plans.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E26",
+     "excerpt": "so it's a queue with a faster timer.",
+     "label": "quote",
+     "speaker": "Halima (COO)",
+     "verified": true
+    }
+   ],
+   "insight": "The technical story landed with the technical buyer and was a non-event for the decider: her whole reaction to the load test was 'good.' Our support message (M5) got a clear rejection in her own words. The rep read the technical reaction as winning, but the reaction that mattered was the silence and then the dismissal.",
+   "messaging": "Demote M2 and uptime proof for operations buyers, and replace M5's tiers-and-response-times framing with a named team and a concrete on-sale plan."
+  },
+  "decided": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E29",
+     "excerpt": "Ben had basically told his team to start planning the integration.",
+     "label": "fact",
+     "speaker": "rep (reporting Ben)",
+     "verified": true
+    },
+    {
+     "id": "E26",
+     "excerpt": "so it's a queue with a faster timer.",
+     "label": "quote",
+     "speaker": "Halima (COO)",
+     "verified": true
+    },
+    {
+     "id": "E27",
+     "excerpt": "That sentence.",
+     "label": "opinion",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E28",
+     "excerpt": "Right before it we were the favourite.",
+     "label": "opinion",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "The rep says the loss crystallized at Halima's sentence, but 'favourite' is the rep's own read and rested on Ben's confidence, not Halima's. The deal was likely already tilting once the competitor met her with named staff, and the rep only noticed when she said it out loud. The team planned an integration before the decider had signaled anything.",
+   "messaging": "Treat the champion's enthusiasm as unconfirmed until the economic decider has said what she needs, and have sales ask for her criteria early."
+  },
+  "gaps": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E30",
+     "excerpt": "She wanted to see, on paper, what we do on an on-sale morning.",
+     "label": "fact",
+     "speaker": "rep (reporting Halima's request)",
+     "verified": true
+    },
+    {
+     "id": "E31",
+     "excerpt": "We don't have that as a thing.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E32",
+     "excerpt": "I could have built something with our solutions engineer, and I didn't.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E34",
+     "excerpt": "I had logos. I didn't have a person.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "The gap was a missing asset, not a missing product capability: an on-sale plan and a ticketing reference who could say who picked up. The rep admits it was buildable and chose not to, and the answer to 'why not' (the load test had won it) is a belief the customer's reaction didn't support. Logos (M8) were offered where a person was wanted.",
+   "messaging": "Create an on-sale readiness plan template and a named ticketing reference, and use them in place of generic customer logos for high-stakes event buyers."
+  },
+  "language": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E37",
+     "excerpt": "A name, not a queue.",
+     "label": "quote",
+     "speaker": "customer (speaker not named in transcript)",
+     "verified": true
+    },
+    {
+     "id": "E39",
+     "excerpt": "Someone who picks up.",
+     "label": "quote",
+     "speaker": "customer (speaker not named in transcript)",
+     "verified": true
+    },
+    {
+     "id": "E40",
+     "excerpt": "I don't buy uptime, I buy what happens when it's down.",
+     "label": "quote",
+     "speaker": "Halima (COO)",
+     "verified": true
+    },
+    {
+     "id": "E38",
+     "excerpt": "On-sale morning,",
+     "label": "quote",
+     "speaker": "customer (speaker not named in transcript)",
+     "verified": true
+    }
+   ],
+   "insight": "The customer's vocabulary is about people and moments ('a name', 'someone who picks up', 'on-sale morning'), and the rep notes nobody said 'support'. Our words (support plans, tiers, response times, uptime history) sit in a different frame, and Halima's line explicitly rejects uptime as the thing she's buying. Two of the quotes aren't attributed to a named speaker.",
+   "messaging": "Rewrite support copy in their terms, for example 'a named person who picks up on on-sale morning', and drop 'tiered response times' as the lead."
+  }
+ },
+ "close": {
+  "gaps": [
+   {
+    "question": "Who was the competitor, and was the replacement vendor actually signed?",
+    "kind": "unknown",
+    "follow_up": "Ask Jordan, and ask Ben if he's willing, who won and whether the whole payments stack moved."
+   },
+   {
+    "question": "Why was no on-sale plan built when the rep knew a solutions engineer could do it?",
+    "kind": "dodged",
+    "follow_up": "Ask Jordan directly what stopped them from asking the solutions engineer for a plan after Halima's request."
+   },
+   {
+    "question": "Did Halima see or ask about the support plans or any references beyond the one meeting?",
+    "kind": "unknown",
+    "follow_up": "Ask Ben what Halima said about us after the decision, and whether a reference or plan would have changed it."
+   },
+   {
+    "question": "Did the competitor actually deliver on-call coverage for on-sales?",
+    "kind": "unknown",
+    "follow_up": "Ask Ben, or check with the customer after the spring on-sales, whether the promise held."
+   }
+  ],
+  "rep_takeaway": "Don't read a happy champion as a won deal: find out what the person who decides is actually buying, and when she asks for something on paper, build it that week instead of leaning on the demo that impressed the engineers."
+ },
+ "confidence": "medium",
+ "checks": {
+  "quotes_total": 27,
+  "quotes_failed": 0,
+  "failed": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-haiku-5-5",
+   "analyst": "claude-sonnet-5-5",
+   "strategist": "claude-sonnet-5-5"
+  },
+  "ms": 107087,
+  "cost": 0.1106906,
+  "stage_ms": {
+   "reader": 73784,
+   "analyst": 23908,
+   "strategist": 9395
+  },
+  "stage_cost": {
+   "reader": 0.010086600000000001,
+   "analyst": 0.070728,
+   "strategist": 0.029876
+  },
+  "reader_items": 43,
+  "reader_verbatim": 43
+ }
+}

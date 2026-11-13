@@ -1,0 +1,389 @@
+{
+ "version": "2026-11-13.1",
+ "header": {
+  "deal": "Kestrel Learning",
+  "outcome": "Lost",
+  "scope": "Lost: international traffic moved to local acquiring after Adyen's test; the US business stayed with us.",
+  "competitor": "Adyen",
+  "incumbent": "Stripe (us)",
+  "tag": "Value proof",
+  "runner_up": "Approval rates",
+  "tag_why": "The approval-rate questions were winnable: Stefan rejected our average uplift with \"What's mine?\" and \"I can't take an average to my CFO.\" Adyen gave him per-country results on his own traffic, and our own per-market analysis, which he called the most useful thing we sent, arrived after their test had finished."
+ },
+ "messaging_changes": [
+  {
+   "target": "M4",
+   "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For heads of payments: \"See where you're leaving money on the table, market by market. We'll show you your own approvals by country, card type and issuer, the reason behind each decline, and the fixes we'd make.\" Use \"approvals\", not \"authorization\". Keep the average uplift and product names (Authorization Boost, Adaptive Acceptance) out of the opener and bring them in only as the fix for a specific market.",
+   "evidence": [
+    "E14",
+    "E15",
+    "E13",
+    "E32",
+    "E33",
+    "E35",
+    "E12"
+   ],
+   "evidence_found": true,
+   "why": "Stefan rejected the average-uplift deck with \"What's mine?\" and \"I can't take an average to my CFO\", called the per-market analysis of his own approvals the most useful thing we sent, and uses \"approvals\" and \"money left on the table\" himself.",
+   "strength": "Test this"
+  },
+  {
+   "target": null,
+   "current_line": null,
+   "line_matches": true,
+   "type": "add",
+   "change": "Counter for when a competitor proposes a test on the customer's traffic (for example a local-acquiring pitch): \"Before you move traffic, let us show you your approvals by country, card type and issuer, and why, from the traffic we already process.\" Only add a turnaround promise once the payments performance team confirms one they can meet; this deal's analysis took three weeks.",
+   "evidence": [
+    "E9",
+    "E10",
+    "E12",
+    "E29",
+    "E28"
+   ],
+   "evidence_found": true,
+   "why": "Adyen won by offering per-country results on Kestrel's own traffic, while our equivalent analysis already existed in-house but arrived three weeks after it was requested, after the test had finished.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M5",
+   "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "\"A named payments expert who reviews your approvals with you every month, market by market.\" Position the per-market approval review as a standing deliverable rather than something sales has to escalate for.",
+   "evidence": [
+    "E30",
+    "E36",
+    "E28",
+    "E29"
+   ],
+   "evidence_found": true,
+   "why": "Stefan asked who at Stripe looks at his numbers every month and we had no name, and he said he only heard from Stripe when he said he was leaving.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M6",
+   "current_line": "Proven ROI, backed by an independent economic impact study.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For deals a CFO approves on a head of payments' recommendation: offer a one-page business case in the customer's own numbers, e.g. \"Your money left on the table, by market, and what we'd recover\", instead of pointing to the generic economic impact study.",
+   "evidence": [
+    "E6",
+    "E7",
+    "E15",
+    "E33"
+   ],
+   "evidence_found": true,
+   "why": "The CFO approved on Stefan's recommendation, and Stefan said he couldn't take an average to his CFO, so the proof had to be specific to Kestrel.",
+   "strength": "Test this"
+  }
+ ],
+ "no_change_reason": null,
+ "sections": {
+  "trigger": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E1",
+     "excerpt": "A new head of payments. Stefan. They'd never had one.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E2",
+     "excerpt": "Payments sat under an engineering manager, the guy who originally bought us, and he left last year.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E3",
+     "excerpt": "the first thing he did was pull declines by country.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E26",
+     "excerpt": "I knew the engineering manager had left. I didn't know they'd hired a head of payments.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "The trigger was a change of buyer, not a product complaint. Our champion, a developer-minded buyer, was replaced by a payments specialist who judges providers by per-country decline data. We missed that change completely: we knew the champion had left but not that a new owner had arrived, so Stefan built his case against us before we ever met him.",
+   "messaging": "Write a messaging track for the new head of payments, starting from per-country approval performance on their own traffic rather than from developer speed (M2) or the global-currency opener (M1)."
+  },
+  "decider": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E6",
+     "excerpt": "Stefan recommended it and the CFO approved.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E7",
+     "excerpt": "this went to the CFO two weeks ago.",
+     "label": "quote",
+     "speaker": "Stefan (head of payments)",
+     "verified": true
+    },
+    {
+     "id": "E15",
+     "excerpt": "I can't take an average to my CFO.",
+     "label": "quote",
+     "speaker": "Stefan (head of payments)",
+     "verified": true
+    }
+   ],
+   "insight": "Stefan built the case and the CFO signed it. The CFO's test was a number specific to Kestrel, and nothing in the transcript shows we ever spoke to the CFO. The recommendation had already gone up before Elena's last call, so that call was not a decision meeting.",
+   "messaging": "Package acceptance proof as a one-page, CFO-ready business case in the customer's own numbers (\"money left on the table\" by market) instead of pointing to the generic economic impact study in M6."
+  },
+  "competitor": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E9",
+     "excerpt": "Adyen ran a test on a slice of their international traffic and came back with results by country.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E10",
+     "excerpt": "local acquiring",
+     "label": "quote",
+     "speaker": "Stefan (head of payments)",
+     "verified": true
+    },
+    {
+     "id": "E11",
+     "excerpt": "I can't tell you what the test showed. He wouldn't share it.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E12",
+     "excerpt": "They got very specific. What's our approval rate in this country, on this card type, by issuer. And why.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "Adyen won the format before anyone could judge the results: it offered a live test on Kestrel's own traffic, reported by country. That reset the standard of proof to country, card type, issuer and the reason behind each. We don't know what the test showed, so we can't claim local acquiring actually beat us. All we know is that Stefan treated it as the answer.",
+   "messaging": "Counter a competitor's traffic test with our own offer: \"We'll show you your approvals by country, card type and issuer, and why, within days.\" Arguing in general terms that our ML (Adaptive Acceptance) matches local acquiring will not land."
+  },
+  "message": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E13",
+     "excerpt": "The Authorization Boost deck. The average uplift customers see. Adaptive Acceptance, the machine learning piece.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E14",
+     "excerpt": "that's an average. What's mine?",
+     "label": "quote",
+     "speaker": "Stefan (head of payments)",
+     "verified": true
+    },
+    {
+     "id": "E20",
+     "excerpt": "I offered a roadmap session and he didn't take it.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E32",
+     "excerpt": "He said it was the most useful thing we'd sent him.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "Elena says \"we weren't really pitching\" and calls the uplift number \"silence\", but we did pitch: the Authorization Boost deck. M4 drew an explicit rejection, not silence. The roadmap offer also went nowhere because it talked about our future, not his numbers. The only thing that landed was the account-specific analysis. Her claim that developers and billing kept the US is her theory, not something Stefan said.",
+   "messaging": "Retire the average-uplift claim (M4) as the response to a head of payments. Lead with \"what's yours\": a per-market analysis of the customer's own approvals, with the fixes we would make."
+  },
+  "decided": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E23",
+     "excerpt": "When the renewal notice went out and Stefan replied asking to split the contract.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E29",
+     "excerpt": "But that landed three weeks after he asked, and by then the test was finished.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E21",
+     "excerpt": "I don't think there was a moment. It was kind of decided before we got in the room.",
+     "label": "opinion",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E24",
+     "excerpt": "Before I took the account. So nine months? Ten.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "Elena dodged this question (\"no moment\", \"nothing to do\"), but her later answers show when it turned. The deal was lost in roughly 9-10 months without a business review. Stefan's request to split the contract was the visible signal. Our analysis landed three weeks after he asked, after the test had finished. She herself calls its findings \"things we could have fixed\", which contradicts \"nothing to do\".",
+   "messaging": "No headline change is needed here. The gap is speed: make a fast per-market approval review part of what every at-risk renewal gets, and say so in the support story."
+  },
+  "gaps": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E27",
+     "excerpt": "A market-by-market view of their own approval rates, with reasons.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E28",
+     "excerpt": "We did get it to him. Our payments performance team did a proper analysis.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E30",
+     "excerpt": "He asked who at Stripe looks at his numbers every month, and I didn't have a name.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "Neither gap was missing capability. The analysis existed in-house; it simply arrived too late. The second gap was a named person who owns his numbers every month, and we had no name. Elena's \"I don't know what I'd have pitched against that\" overlooks that the per-market analysis was exactly what Stefan was asking for. Whether we can match local acquiring in Brazil and Europe was never addressed.",
+   "messaging": "Rewrite M5 from \"tiered response times\" to \"a named payments expert who reviews your approvals with you every month\", and make the per-market analysis a promised deliverable, not something sales has to escalate for."
+  },
+  "language": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E33",
+     "excerpt": "Money left on the table.",
+     "label": "quote",
+     "speaker": "Stefan (head of payments)",
+     "verified": true
+    },
+    {
+     "id": "E34",
+     "excerpt": "Local cards, local rails.",
+     "label": "quote",
+     "speaker": "Stefan (head of payments)",
+     "verified": true
+    },
+    {
+     "id": "E35",
+     "excerpt": "He doesn't say \"authorization,\" he says \"approvals.\"",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E36",
+     "excerpt": "I heard from Stripe when I said I was leaving.",
+     "label": "quote",
+     "speaker": "Stefan (head of payments)",
+     "verified": true
+    }
+   ],
+   "insight": "His vocabulary is a payments operator's: approvals, local rails, revenue lost. Ours is product-branded: authorization, uplift, Boost, adaptive. \"I heard from Stripe when I said I was leaving\" is the sharpest line in the review. He experienced us as absent until it was too late, which goes beyond a feature or proof gap.",
+   "messaging": "Use \"approvals\" and \"money left on the table\" in acceptance copy, for example \"See where you're leaving money on the table, market by market\", instead of \"authorization rate uplift\"."
+  }
+ },
+ "close": {
+  "gaps": [
+   {
+    "question": "Which markets looked bad, and what did Stefan's decline analysis show?",
+    "kind": "unknown",
+    "follow_up": "Ask our payments performance team which markets and causes their analysis found, and ask Stefan whether those matched his own view."
+   },
+   {
+    "question": "What did Adyen's test show, and who exactly took the international volume?",
+    "kind": "unknown",
+    "follow_up": "Ask Elena to confirm with Stefan whether Adyen won the international traffic and, if he'll share it, what uplift by country swayed the CFO."
+   },
+   {
+    "question": "When did you first feel this was lost? What happened right before?",
+    "kind": "dodged",
+    "follow_up": "Ask Elena for dated timestamps: renewal notice, split request, her request to the payments performance team, the end of the test, the CFO escalation and her last call."
+   },
+   {
+    "question": "Why did the per-market analysis take three weeks?",
+    "kind": "unknown",
+    "follow_up": "Ask Elena and the payments performance team when the request was logged, how it was prioritized, and what a realistic turnaround is."
+   },
+   {
+    "question": "Why did the US stay with us?",
+    "kind": "unknown",
+    "follow_up": "Ask Stefan directly. Elena's 'developers love us, billing works' is her theory, not his words."
+   },
+   {
+    "question": "What did the CFO weigh, and did we ever reach the CFO?",
+    "kind": "unknown",
+    "follow_up": "Ask Elena whether she had any contact with the CFO, and ask Stefan what the CFO needed to see to approve."
+   },
+   {
+    "question": "Could we have offered local acquiring or equivalent performance in Brazil and the European markets?",
+    "kind": "unknown",
+    "follow_up": "Ask the product/payments team what our local acquiring coverage is in Kestrel's international markets, so reps have a counter next time."
+   },
+   {
+    "question": "Why did a growing account go 9-10 months without a business review across an owner change?",
+    "kind": "unknown",
+    "follow_up": "Ask account management how coverage is handed over when an account changes owner, and how a customer-side buyer change gets flagged."
+   }
+  ],
+  "rep_takeaway": "\"Healthy, no tickets\" didn't mean safe here. A new head of payments meant a new deal, and he built his case before we met him. When a buyer asks \"what's mine?\", don't answer with an average deck. Get their own per-market analysis moving that day and bring a named owner. The analysis Stefan called the most useful thing we sent existed in-house; it just arrived after the test ended."
+ },
+ "confidence": "medium",
+ "checks": {
+  "quotes_total": 26,
+  "quotes_failed": 0,
+  "failed": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-opus-5-5",
+   "analyst": "claude-opus-5-5",
+   "strategist": "claude-opus-5-5"
+  },
+  "ms": 134563,
+  "cost": 0.454084,
+  "stage_ms": {
+   "reader": 65123,
+   "analyst": 54271,
+   "strategist": 15169
+  },
+  "stage_cost": {
+   "reader": 0.19036400000000003,
+   "analyst": 0.19074,
+   "strategist": 0.07298
+  },
+  "reader_items": 38,
+  "reader_verbatim": 38
+ }
+}

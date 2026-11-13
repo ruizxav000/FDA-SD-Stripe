@@ -1,0 +1,68 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M9\",\"current_line\":\"Every payout reconciles automatically to its transactions and your ERP.\",\"type\":\"replace\",\"change\":\"For finance buyers, lead with this instead of a feature line: \\\"Month-end shouldn't be a week of archaeology. Every deposit matches to its transactions and lands in your ERP, so you close faster and know where your money is.\\\" Use 'deposits' rather than 'payouts' or 'payments' in finance-facing copy.\",\"evidence\":[\"E26\",\"E5\",\"E40\",\"E41\"],\"why\":\"Payout reconciliation was the only pitch element that drew a reaction, and the CFO's own phrases ('week of archaeology', 'where my money is', 'the deposits') describe the need more sharply than our wording.\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"drop\",\"change\":\"Stop opening first-call decks and proposals with this line for finance-led, non-developer mid-market buyers (for example a multi-state distributor with a small IT team). Open on the slow close and cash visibility instead.\",\"evidence\":[\"E19\",\"E4\",\"E6\",\"E40\"],\"why\":\"The opener drew silence from a buyer whose real trigger was a nine-day first close from manual three-way matching, and neither she nor her IT director used 'payments' or 'infrastructure'.\",\"strength\":\"Test this\"},{\"target\":\"M2\",\"current_line\":\"Built for developers: launch payments fast with our APIs, docs and sandbox.\",\"type\":\"drop\",\"change\":\"Do not lead with the developer story when the IT team is small and building nothing, and when the decider is the CFO. Keep it for buyers who actually have developers building.\",\"evidence\":[\"E22\",\"E7\",\"E8\"],\"why\":\"The IT champion's four-person team isn't building anything, and the CFO who signed decides on the close, so the developer pitch was aimed at the wrong person and need.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a standard offer in finance-buyer proposals: \\\"We'll build the cost of your close from your own bank and processor statements and your own staff costs, and show it to you before you decide.\\\" Record the resulting figure in the deal file.\",\"evidence\":[\"E30\",\"E25\",\"E11\"],\"why\":\"After a three-week stall, a business case built from the customer's own data turned the deal ('that's my number, not yours'), though the figure itself is too uncertain to cite as proof yet.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M9",
+    "current_line": "Every payout reconciles automatically to its transactions and your ERP.",
+    "type": "replace",
+    "change": "For finance buyers, lead with this instead of a feature line: \"Month-end shouldn't be a week of archaeology. Every deposit matches to its transactions and lands in your ERP, so you close faster and know where your money is.\" Use 'deposits' rather than 'payouts' or 'payments' in finance-facing copy.",
+    "evidence": [
+     "E26",
+     "E5",
+     "E40",
+     "E41"
+    ],
+    "why": "Payout reconciliation was the only pitch element that drew a reaction, and the CFO's own phrases ('week of archaeology', 'where my money is', 'the deposits') describe the need more sharply than our wording.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "drop",
+    "change": "Stop opening first-call decks and proposals with this line for finance-led, non-developer mid-market buyers (for example a multi-state distributor with a small IT team). Open on the slow close and cash visibility instead.",
+    "evidence": [
+     "E19",
+     "E4",
+     "E6",
+     "E40"
+    ],
+    "why": "The opener drew silence from a buyer whose real trigger was a nine-day first close from manual three-way matching, and neither she nor her IT director used 'payments' or 'infrastructure'.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M2",
+    "current_line": "Built for developers: launch payments fast with our APIs, docs and sandbox.",
+    "type": "drop",
+    "change": "Do not lead with the developer story when the IT team is small and building nothing, and when the decider is the CFO. Keep it for buyers who actually have developers building.",
+    "evidence": [
+     "E22",
+     "E7",
+     "E8"
+    ],
+    "why": "The IT champion's four-person team isn't building anything, and the CFO who signed decides on the close, so the developer pitch was aimed at the wrong person and need.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a standard offer in finance-buyer proposals: \"We'll build the cost of your close from your own bank and processor statements and your own staff costs, and show it to you before you decide.\" Record the resulting figure in the deal file.",
+    "evidence": [
+     "E30",
+     "E25",
+     "E11"
+    ],
+    "why": "After a three-week stall, a business case built from the customer's own data turned the deal ('that's my number, not yours'), though the figure itself is too uncertain to cite as proof yet.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 9619,
+ "cost": 0.030317999999999998,
+ "in_tokens": 5483,
+ "out_tokens": 839,
+ "model": "claude-sonnet-5-5"
+}

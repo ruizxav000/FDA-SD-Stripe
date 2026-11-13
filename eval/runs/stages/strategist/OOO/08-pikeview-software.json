@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M7\",\"current_line\":\"Billing that helps you grow revenue.\",\"type\":\"replace\",\"change\":\"For prospects on homegrown or legacy billing (product/engineering buyers): \\\"Billing shouldn't be a tax on your roadmap. Ship pricing changes in minutes, not quarters.\\\" Keep revenue language for the failed-payment recovery story (M10), where it is concrete.\",\"evidence\":[\"E21\",\"E22\",\"E17\",\"E3\"],\"why\":\"The champion explicitly rejected our 'grow revenue' framing with 'we're trying to stop it being a tax on the roadmap,' while the demo landed when it showed 'a quarter of roadmap in five minutes' against a system where every pricing change takes a quarter.\",\"strength\":\"Test this\"},{\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"replace\",\"change\":\"For finance approvers and champions selling internally against the status quo: \\\"Your number, not ours: we build a cost-of-status-quo model from your own data (engineering quarters per pricing change, billing errors, subscriptions lost to failed cards) that you can forward to your CFO.\\\" Use the independent study only as backup, not as the answer to a payback request.\",\"evidence\":[\"E14\",\"E25\",\"E26\",\"E29\"],\"why\":\"When the champion asked for payback, we sent the generic study, and he said he couldn't get it past the CFO 'without a number that's ours'; the rep later named that customer-specific number as the missing proof.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For CFO and finance audiences evaluating a replacement for homegrown billing: \\\"Doing nothing isn't free. Here's what your current billing is costing you each quarter in roadmap time and lapsed subscriptions.\\\" Frame it in finance's terms of urgency (why it's 'on fire', not a 'nice to have'), and attach the M10 recovery estimate sized on the customer's failed-card lapses.\",\"evidence\":[\"E34\",\"E35\",\"E30\",\"E11\"],\"why\":\"The only competitor was doing nothing, finance funds only what is 'on fire', the deal was filed as a 'nice to have', and the customer pointed to a quantifiable leak ('subscriptions lapse because the card fails and nobody chases it. We never added it up') that we never sized.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For prospects migrating off an existing billing system: a migration proof point plus a named reference customer, along the lines of \\\"Move your existing subscriptions in stages, without asking your customers for their card details again. Talk to [reference] who did it.\\\" Confirm staged, no-re-collection migration is supported before publishing, and plan around the customer's renewal season.\",\"evidence\":[\"E31\",\"E33\",\"E32\"],\"why\":\"The champion's migration concern was moving subscriptions in stages without re-collecting landlord cards, a doc wasn't enough because he 'wanted to talk to someone who'd done it', and engineering won't touch billing before renewal season.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M7",
+    "current_line": "Billing that helps you grow revenue.",
+    "type": "replace",
+    "change": "For prospects on homegrown or legacy billing (product/engineering buyers): \"Billing shouldn't be a tax on your roadmap. Ship pricing changes in minutes, not quarters.\" Keep revenue language for the failed-payment recovery story (M10), where it is concrete.",
+    "evidence": [
+     "E21",
+     "E22",
+     "E17",
+     "E3"
+    ],
+    "why": "The champion explicitly rejected our 'grow revenue' framing with 'we're trying to stop it being a tax on the roadmap,' while the demo landed when it showed 'a quarter of roadmap in five minutes' against a system where every pricing change takes a quarter.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "replace",
+    "change": "For finance approvers and champions selling internally against the status quo: \"Your number, not ours: we build a cost-of-status-quo model from your own data (engineering quarters per pricing change, billing errors, subscriptions lost to failed cards) that you can forward to your CFO.\" Use the independent study only as backup, not as the answer to a payback request.",
+    "evidence": [
+     "E14",
+     "E25",
+     "E26",
+     "E29"
+    ],
+    "why": "When the champion asked for payback, we sent the generic study, and he said he couldn't get it past the CFO 'without a number that's ours'; the rep later named that customer-specific number as the missing proof.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For CFO and finance audiences evaluating a replacement for homegrown billing: \"Doing nothing isn't free. Here's what your current billing is costing you each quarter in roadmap time and lapsed subscriptions.\" Frame it in finance's terms of urgency (why it's 'on fire', not a 'nice to have'), and attach the M10 recovery estimate sized on the customer's failed-card lapses.",
+    "evidence": [
+     "E34",
+     "E35",
+     "E30",
+     "E11"
+    ],
+    "why": "The only competitor was doing nothing, finance funds only what is 'on fire', the deal was filed as a 'nice to have', and the customer pointed to a quantifiable leak ('subscriptions lapse because the card fails and nobody chases it. We never added it up') that we never sized.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For prospects migrating off an existing billing system: a migration proof point plus a named reference customer, along the lines of \"Move your existing subscriptions in stages, without asking your customers for their card details again. Talk to [reference] who did it.\" Confirm staged, no-re-collection migration is supported before publishing, and plan around the customer's renewal season.",
+    "evidence": [
+     "E31",
+     "E33",
+     "E32"
+    ],
+    "why": "The champion's migration concern was moving subscriptions in stages without re-collecting landlord cards, a doc wasn't enough because he 'wanted to talk to someone who'd done it', and engineering won't touch billing before renewal season.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 13598,
+ "cost": 0.066464,
+ "in_tokens": 5704,
+ "out_tokens": 1042,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,74 @@
+{
+ "ok": true,
+ "text": "```json\n{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For merchants with high-ticket orders who come to us about checkout failures: \\\"Stop losing your biggest orders at the last step. We'll show you why your big baskets get declined and what those lost orders cost you.\\\" Open with a diagnosis of the prospect's own declines (for example, their failed-order rate times their average basket). Use the average uplift from Authorization Boost and Adaptive Acceptance only as supporting proof.\",\"evidence\":[\"E13\",\"E25\",\"E37\",\"E38\",\"E39\",\"E16\"],\"why\":\"Lucy responded to Farah's explanation of why her big-ticket orders fail and describes the problem as 'orders dying at the last step' on 'the big baskets'; the generic average-uplift slide we carried forward is what let the CFO read us as 'the same thing'.\",\"strength\":\"Test this\"},{\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"replace\",\"change\":\"Replace the general ROI claim with a per-deal, CFO-facing one-page business case that the champion can hand to the economic buyer. It covers: your failed-order rate × average basket = revenue lost per month; total cost of payments, including gateway fees and chargeback labor, compared side by side with ours; and payback period. Send it with every pricing proposal so our quote never travels alone. Use it especially when the CFO won't take a vendor meeting.\",\"evidence\":[\"E34\",\"E35\",\"E18\",\"E28\",\"E29\",\"E7\"],\"why\":\"The champion asked for 'a one-page business case' to hand Martin, who we never met, and got a deck and a quote instead. The controller then built a rate-only side-by-side, even though Farah had offered the decline analysis that would have put a dollar figure on the failed orders.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Incumbent rate-cut response, for deals where the incumbent processor or bank lowers its rate mid-evaluation: \\\"A lower rate on orders that still fail isn't a saving. Here's the rate difference, and here's what one in twelve failed orders costs you every month.\\\" Put the cost of failed orders right next to the rate saving.\",\"evidence\":[\"E10\",\"E11\",\"E12\",\"E18\"],\"why\":\"The bank's only move was a sharper rate, with 'no new product, nothing'. That alone turned every email from declines to 'can you do better on the rate', and we had no line to pull the conversation back to lost orders.\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"drop\",\"change\":\"For inbound buyers who come to us with a checkout or decline problem (here, a domestic mid-market retailer), don't open with global growth or currencies. Open with their own failed-order number and the revenue it represents.\",\"evidence\":[\"E1\",\"E2\",\"E3\",\"E4\"],\"why\":\"Fernbrook came inbound because orders were failing at checkout, with a rate from their own dashboard and a processor that couldn't explain why, so the trigger was lost revenue, not global expansion. We don't know how M1 itself landed, because the rep dodged the 'silence' question.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}\n```",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For merchants with high-ticket orders who come to us about checkout failures: \"Stop losing your biggest orders at the last step. We'll show you why your big baskets get declined and what those lost orders cost you.\" Open with a diagnosis of the prospect's own declines (for example, their failed-order rate times their average basket). Use the average uplift from Authorization Boost and Adaptive Acceptance only as supporting proof.",
+    "evidence": [
+     "E13",
+     "E25",
+     "E37",
+     "E38",
+     "E39",
+     "E16"
+    ],
+    "why": "Lucy responded to Farah's explanation of why her big-ticket orders fail and describes the problem as 'orders dying at the last step' on 'the big baskets'; the generic average-uplift slide we carried forward is what let the CFO read us as 'the same thing'.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "replace",
+    "change": "Replace the general ROI claim with a per-deal, CFO-facing one-page business case that the champion can hand to the economic buyer. It covers: your failed-order rate × average basket = revenue lost per month; total cost of payments, including gateway fees and chargeback labor, compared side by side with ours; and payback period. Send it with every pricing proposal so our quote never travels alone. Use it especially when the CFO won't take a vendor meeting.",
+    "evidence": [
+     "E34",
+     "E35",
+     "E18",
+     "E28",
+     "E29",
+     "E7"
+    ],
+    "why": "The champion asked for 'a one-page business case' to hand Martin, who we never met, and got a deck and a quote instead. The controller then built a rate-only side-by-side, even though Farah had offered the decline analysis that would have put a dollar figure on the failed orders.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Incumbent rate-cut response, for deals where the incumbent processor or bank lowers its rate mid-evaluation: \"A lower rate on orders that still fail isn't a saving. Here's the rate difference, and here's what one in twelve failed orders costs you every month.\" Put the cost of failed orders right next to the rate saving.",
+    "evidence": [
+     "E10",
+     "E11",
+     "E12",
+     "E18"
+    ],
+    "why": "The bank's only move was a sharper rate, with 'no new product, nothing'. That alone turned every email from declines to 'can you do better on the rate', and we had no line to pull the conversation back to lost orders.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "drop",
+    "change": "For inbound buyers who come to us with a checkout or decline problem (here, a domestic mid-market retailer), don't open with global growth or currencies. Open with their own failed-order number and the revenue it represents.",
+    "evidence": [
+     "E1",
+     "E2",
+     "E3",
+     "E4"
+    ],
+    "why": "Fernbrook came inbound because orders were failing at checkout, with a rate from their own dashboard and a processor that couldn't explain why, so the trigger was lost revenue, not global expansion. We don't know how M1 itself landed, because the rep dodged the 'silence' question.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 17838,
+ "cost": 0.080148,
+ "in_tokens": 5922,
+ "out_tokens": 1639,
+ "model": "claude-opus-5-5"
+}

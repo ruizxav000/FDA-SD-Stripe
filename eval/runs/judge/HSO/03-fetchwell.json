@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":1,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":1,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The gaps section shows the rep's 'nothing' being contradicted (PayPal/Venmo, saved cards)\",\"pass\":true},{\"item\":\"The Braintree theory is labeled opinion\",\"pass\":true},{\"item\":\"The approval-rate slide is reported as silence in a win\",\"pass\":true},{\"item\":\"The CFO's one question is surfaced as a messaging signal\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report's strongest work is in gaps, message and decider. It shows the rep's 'Nothing, really' contradicted by PayPal, Venmo and the saved cards, flags the auth-rate slide's silence against the $38 booking, keeps the Braintree theory as the rep's guess, and turns the CFO's one question into a payout-timing message. Its biggest miss is the incumbent. It sets incumbent to null and says the account-manager complaint might not be about Braintree, but the transcript clearly answers both. That error weakens the competitor insight (the relationship weakness), adds a false unknown to the close, and comes with an unneeded scope caveat and a trigger insight that downplays the expansion deadline.\"}",
+ "data": {
+  "header": {
+   "outcome": 1,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 1,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The gaps section shows the rep's 'nothing' being contradicted (PayPal/Venmo, saved cards)",
+    "pass": true
+   },
+   {
+    "item": "The Braintree theory is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The approval-rate slide is reported as silence in a win",
+    "pass": true
+   },
+   {
+    "item": "The CFO's one question is surfaced as a messaging signal",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report's strongest work is in gaps, message and decider. It shows the rep's 'Nothing, really' contradicted by PayPal, Venmo and the saved cards, flags the auth-rate slide's silence against the $38 booking, keeps the Braintree theory as the rep's guess, and turns the CFO's one question into a payout-timing message. Its biggest miss is the incumbent. It sets incumbent to null and says the account-manager complaint might not be about Braintree, but the transcript clearly answers both. That error weakens the competitor insight (the relationship weakness), adds a false unknown to the close, and comes with an unneeded scope caveat and a trigger insight that downplays the expansion deadline."
+ },
+ "ms": 29890,
+ "cost": 0.134024,
+ "in_tokens": 9704,
+ "out_tokens": 2820,
+ "model": "claude-opus-5-5"
+}

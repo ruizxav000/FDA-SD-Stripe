@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "```json\n{\"changes\":[{\"target\":\"M2\",\"current_line\":\"Built for developers: launch payments fast with our APIs, docs and sandbox.\",\"type\":\"replace\",\"change\":\"For engineering-led buyers: \\\"Get a working payout flow running in our sandbox before you commit. One customer's engineer built theirs over a weekend and demoed it at Monday standup.\\\" Offer the sandbox build early in every engineering-led evaluation, not as a closing step.\",\"evidence\":[\"E18\",\"E19\",\"E25\"],\"why\":\"The docs and sandbox were what landed, and the decision-maker stopped saying \\\"if\\\" after an engineer's unprompted weekend prototype, so the proof point should be a working build rather than the claim of speed.\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"replace\",\"change\":\"For engineering-led companies maintaining their own payments code: \\\"Payments shouldn't be a team. Stop babysitting your payments code and get your engineers back on the roadmap.\\\"\",\"evidence\":[\"E3\",\"E4\",\"E36\",\"E37\",\"E2\"],\"why\":\"Expansion was only the occasion; the pain was two engineers tied up keeping payments alive and a feature slipping three quarters, and the customer described it as babysitting a \\\"haunted house\\\" (exact speaker attribution of some quotes is uncertain).\",\"strength\":\"Test this\"},{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"drop\",\"change\":\"Stop leading with the authorization-rate uplift for low-ticket marketplaces (for example, an average booking around $40). Keep it out of first-touch decks for this segment, and only bring it up if the buyer raises acceptance.\",\"evidence\":[\"E21\",\"E23\"],\"why\":\"The acceptance-rate slide met silence, and the buyer said that at a $38 average booking he was \\\"not losing sleep over auth rates\\\".\",\"strength\":\"Test this\"},{\"target\":\"M8\",\"current_line\":\"Trusted by leading businesses; see our customer stories.\",\"type\":\"replace\",\"change\":\"For buyers migrating from another provider or from in-house code, replace generic customer stories with two assets: (1) a named reference at a comparable size that migrated saved cards, stating how many cards were kept; (2) a one-page \\\"what you keep and what moves\\\" answer covering PayPal, Venmo and saved cards. Get both in front of the buyer before or right after their first competitor conversation.\",\"evidence\":[\"E32\",\"E33\",\"E28\",\"E29\",\"E15\"],\"why\":\"After the competitor call the buyer's question shifted to \\\"what do we lose\\\", and he asked who had done this at his size without losing cards, but that went unanswered, PayPal was deferred and Venmo still has no answer.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}\n```",
+ "data": {
+  "changes": [
+   {
+    "target": "M2",
+    "current_line": "Built for developers: launch payments fast with our APIs, docs and sandbox.",
+    "type": "replace",
+    "change": "For engineering-led buyers: \"Get a working payout flow running in our sandbox before you commit. One customer's engineer built theirs over a weekend and demoed it at Monday standup.\" Offer the sandbox build early in every engineering-led evaluation, not as a closing step.",
+    "evidence": [
+     "E18",
+     "E19",
+     "E25"
+    ],
+    "why": "The docs and sandbox were what landed, and the decision-maker stopped saying \"if\" after an engineer's unprompted weekend prototype, so the proof point should be a working build rather than the claim of speed.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "replace",
+    "change": "For engineering-led companies maintaining their own payments code: \"Payments shouldn't be a team. Stop babysitting your payments code and get your engineers back on the roadmap.\"",
+    "evidence": [
+     "E3",
+     "E4",
+     "E36",
+     "E37",
+     "E2"
+    ],
+    "why": "Expansion was only the occasion; the pain was two engineers tied up keeping payments alive and a feature slipping three quarters, and the customer described it as babysitting a \"haunted house\" (exact speaker attribution of some quotes is uncertain).",
+    "strength": "Test this"
+   },
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "drop",
+    "change": "Stop leading with the authorization-rate uplift for low-ticket marketplaces (for example, an average booking around $40). Keep it out of first-touch decks for this segment, and only bring it up if the buyer raises acceptance.",
+    "evidence": [
+     "E21",
+     "E23"
+    ],
+    "why": "The acceptance-rate slide met silence, and the buyer said that at a $38 average booking he was \"not losing sleep over auth rates\".",
+    "strength": "Test this"
+   },
+   {
+    "target": "M8",
+    "current_line": "Trusted by leading businesses; see our customer stories.",
+    "type": "replace",
+    "change": "For buyers migrating from another provider or from in-house code, replace generic customer stories with two assets: (1) a named reference at a comparable size that migrated saved cards, stating how many cards were kept; (2) a one-page \"what you keep and what moves\" answer covering PayPal, Venmo and saved cards. Get both in front of the buyer before or right after their first competitor conversation.",
+    "evidence": [
+     "E32",
+     "E33",
+     "E28",
+     "E29",
+     "E15"
+    ],
+    "why": "After the competitor call the buyer's question shifted to \"what do we lose\", and he asked who had done this at his size without losing cards, but that went unanswered, PayPal was deferred and Venmo still has no answer.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 20100,
+ "cost": 0.077132,
+ "in_tokens": 5565,
+ "out_tokens": 1631,
+ "model": "claude-opus-5-5"
+}

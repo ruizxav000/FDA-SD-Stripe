@@ -1,0 +1,77 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For ecommerce retailers with high-value online baskets: \\\"Stop losing your biggest orders at the last step. Send us your decline data and we'll show you what your failed orders are worth and how many we can recover.\\\" Express the result as recovered revenue, not authorization-rate points. Keep the average uplift as supporting proof, not the headline.\",\"evidence\":[\"E2\",\"E16\",\"E28\",\"E44\",\"E45\",\"E46\"],\"why\":\"Farah's specific explanation of why big-ticket orders get declined landed. The generic average-uplift slide gave the CFO nothing to use. The customer described the problem as 'orders dying at the last step' on 'the big baskets', not as an authorization metric.\",\"strength\":\"Test this\"},{\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"replace\",\"change\":\"For deals where the CFO or finance decides and we can't reach them: replace the independent study with a one-page 'What your declines cost you' business case. Build it from the customer's own three-month decline export, write it in finance language, and give it to the champion to hand to the CFO before the quote goes in.\",\"evidence\":[\"E41\",\"E42\",\"E31\",\"E32\",\"E8\",\"E9\"],\"why\":\"The champion asked for 'a one-page business case' she could hand the CFO, who never took a meeting. We sent the deck and pricing instead and skipped the decline analysis Farah had offered, so no value case reached the decider.\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"replace\",\"change\":\"For inbound ecommerce buyers whose problem is failed checkouts: open with \\\"You do all the work to get someone to buy a four-thousand-dollar order, and then the card says no. We'll show you why your big orders fail and what it's costing you.\\\" Do not open with global, every-currency positioning.\",\"evidence\":[\"E1\",\"E2\",\"E4\",\"E5\",\"E46\"],\"why\":\"The buyer came inbound because about one in twelve online orders was failing, measured on their own dashboard, and the processor couldn't explain why. Global, every-currency positioning had no bearing on that problem.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"When an incumbent bank re-prices against us, pair every quote with a 'cost per successful order' line instead of matching the rate. That line covers the rate plus the revenue lost to declined orders, and includes other fees only after the customer confirms them. The goal is that any side-by-side the customer builds has to include value: \\\"It's not the same thing if more of your big orders go through.\\\"\",\"evidence\":[\"E11\",\"E14\",\"E20\",\"E24\",\"E34\",\"E18\"],\"why\":\"The bank won by only sharpening its rate. The controller's one-pager compared rate against rate with 'nothing from us' on failed orders, so 'the same thing' was the only conclusion the CFO could reach.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For ecommerce retailers with high-value online baskets: \"Stop losing your biggest orders at the last step. Send us your decline data and we'll show you what your failed orders are worth and how many we can recover.\" Express the result as recovered revenue, not authorization-rate points. Keep the average uplift as supporting proof, not the headline.",
+    "evidence": [
+     "E2",
+     "E16",
+     "E28",
+     "E44",
+     "E45",
+     "E46"
+    ],
+    "why": "Farah's specific explanation of why big-ticket orders get declined landed. The generic average-uplift slide gave the CFO nothing to use. The customer described the problem as 'orders dying at the last step' on 'the big baskets', not as an authorization metric.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "replace",
+    "change": "For deals where the CFO or finance decides and we can't reach them: replace the independent study with a one-page 'What your declines cost you' business case. Build it from the customer's own three-month decline export, write it in finance language, and give it to the champion to hand to the CFO before the quote goes in.",
+    "evidence": [
+     "E41",
+     "E42",
+     "E31",
+     "E32",
+     "E8",
+     "E9"
+    ],
+    "why": "The champion asked for 'a one-page business case' she could hand the CFO, who never took a meeting. We sent the deck and pricing instead and skipped the decline analysis Farah had offered, so no value case reached the decider.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "replace",
+    "change": "For inbound ecommerce buyers whose problem is failed checkouts: open with \"You do all the work to get someone to buy a four-thousand-dollar order, and then the card says no. We'll show you why your big orders fail and what it's costing you.\" Do not open with global, every-currency positioning.",
+    "evidence": [
+     "E1",
+     "E2",
+     "E4",
+     "E5",
+     "E46"
+    ],
+    "why": "The buyer came inbound because about one in twelve online orders was failing, measured on their own dashboard, and the processor couldn't explain why. Global, every-currency positioning had no bearing on that problem.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "When an incumbent bank re-prices against us, pair every quote with a 'cost per successful order' line instead of matching the rate. That line covers the rate plus the revenue lost to declined orders, and includes other fees only after the customer confirms them. The goal is that any side-by-side the customer builds has to include value: \"It's not the same thing if more of your big orders go through.\"",
+    "evidence": [
+     "E11",
+     "E14",
+     "E20",
+     "E24",
+     "E34",
+     "E18"
+    ],
+    "why": "The bank won by only sharpening its rate. The controller's one-pager compared rate against rate with 'nothing from us' on failed orders, so 'the same thing' was the only conclusion the CFO could reach.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 16834,
+ "cost": 0.07602,
+ "in_tokens": 5896,
+ "out_tokens": 1443,
+ "model": "claude-opus-5-5"
+}

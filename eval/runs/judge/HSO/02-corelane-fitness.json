@@ -1,0 +1,53 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":2,\"message\":1,\"decided\":2,\"gaps\":2,\"language\":1},\n \"close\":2,\"messaging\":1,\n \"must_catch\":[{\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},{\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},{\"item\":\"Customer language is marked Not covered\",\"pass\":true},{\"item\":\"\\\"A third of the churn\\\" is labeled unverified or opinion\",\"pass\":true},{\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}],\n \"fails\":[\"Gaps insight states 'Global still holds the front desk with a bundle on a longer contract', which presents Global's offered terminal bundle and longer contract as accepted. The transcript only says Global offered them and still processes the front desk; whether the bundle was signed is unknown.\"],\n \"notes\":\"The report gets the core right: Won is scoped to online memberships with the front desk still on Global, and the Maya-chose/Greg-decided contradiction is clearly surfaced. Its biggest miss is that 'is that the readers?' is never used as evidence in the message section or the messaging changes, so it never concludes that 'unified commerce' meant nothing to this buyer. It also mislabels answered questions (who decided, what got silence) as dodged, cites the language-section quotes without marking them as incidental, and omits the 'members who never meant to leave' quote from the trigger section.\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 2,
+   "message": 1,
+   "decided": 2,
+   "gaps": 2,
+   "language": 1
+  },
+  "close": 2,
+  "messaging": 1,
+  "must_catch": [
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": true
+   },
+   {
+    "item": "\"A third of the churn\" is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Gaps insight states 'Global still holds the front desk with a bundle on a longer contract', which presents Global's offered terminal bundle and longer contract as accepted. The transcript only says Global offered them and still processes the front desk; whether the bundle was signed is unknown."
+  ],
+  "notes": "The report gets the core right: Won is scoped to online memberships with the front desk still on Global, and the Maya-chose/Greg-decided contradiction is clearly surfaced. Its biggest miss is that 'is that the readers?' is never used as evidence in the message section or the messaging changes, so it never concludes that 'unified commerce' meant nothing to this buyer. It also mislabels answered questions (who decided, what got silence) as dodged, cites the language-section quotes without marking them as incidental, and omits the 'members who never meant to leave' quote from the trigger section."
+ },
+ "ms": 36505,
+ "cost": 0.144788,
+ "in_tokens": 9527,
+ "out_tokens": 3429,
+ "model": "claude-opus-5-5"
+}

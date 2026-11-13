@@ -1,0 +1,67 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M2\",\"current_line\":\"Built for developers: launch payments fast with our APIs, docs and sandbox.\",\"type\":\"replace\",\"change\":\"Build a working payout flow in the sandbox before you commit. For engineering-led teams: one engineer, one weekend, a working payment flow you can show at Monday standup.\",\"evidence\":[\"E18\",\"E19\",\"E25\"],\"why\":\"An engineer's weekend prototype from our docs and sandbox is what ended the bake-off and made Daniel stop saying 'if', so the sandbox proof should be the lead claim and the evaluation motion.\",\"strength\":\"Test this\"},{\"target\":\"M11\",\"current_line\":\"Onboard, verify and pay out to sellers worldwide, in their local currency.\",\"type\":\"replace\",\"change\":\"For engineering-led teams paying out to a gig or sitter workforce: 'Sitter pay that lands by Friday, without a payments team.' Avoid 'marketplace' and 'payouts' in first-touch copy for this segment; say 'the app' and 'sitter pay'.\",\"evidence\":[\"E38\",\"E41\",\"E36\",\"E37\"],\"why\":\"The customer described the need as paid-by-Friday sitter pay and relief from babysitting payments, not marketplace payouts, and the product matched the problem (E20) once it was framed that way.\",\"strength\":\"Test this\"},{\"target\":\"M1\",\"current_line\":\"Financial infrastructure to grow globally, in every currency.\",\"type\":\"replace\",\"change\":\"For teams running in-house payments code: 'Stop spending engineers on keeping payments alive.' Name the cost of upkeep (for example, two engineers kept busy and a pay-faster feature pushed quarter after quarter) rather than leading with global reach.\",\"evidence\":[\"E3\",\"E4\",\"E2\",\"E37\"],\"why\":\"Expansion to Canada and the UK was the occasion, but the pain was maintenance of in-house payments code (a 'haunted house') that tied up engineers and stalled the roadmap.\",\"strength\":\"Test this\"},{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"drop\",\"change\":\"Stop leading with the authorization-rate uplift for low-ticket marketplace buyers. If it comes up, frame it in the buyer's own terms (auth rates on their average booking) instead of a generic average.\",\"evidence\":[\"E21\",\"E23\"],\"why\":\"The acceptance-rate slide met silence and the buyer said that with a $38 average booking he was 'not losing sleep over auth rates'.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M2",
+    "current_line": "Built for developers: launch payments fast with our APIs, docs and sandbox.",
+    "type": "replace",
+    "change": "Build a working payout flow in the sandbox before you commit. For engineering-led teams: one engineer, one weekend, a working payment flow you can show at Monday standup.",
+    "evidence": [
+     "E18",
+     "E19",
+     "E25"
+    ],
+    "why": "An engineer's weekend prototype from our docs and sandbox is what ended the bake-off and made Daniel stop saying 'if', so the sandbox proof should be the lead claim and the evaluation motion.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M11",
+    "current_line": "Onboard, verify and pay out to sellers worldwide, in their local currency.",
+    "type": "replace",
+    "change": "For engineering-led teams paying out to a gig or sitter workforce: 'Sitter pay that lands by Friday, without a payments team.' Avoid 'marketplace' and 'payouts' in first-touch copy for this segment; say 'the app' and 'sitter pay'.",
+    "evidence": [
+     "E38",
+     "E41",
+     "E36",
+     "E37"
+    ],
+    "why": "The customer described the need as paid-by-Friday sitter pay and relief from babysitting payments, not marketplace payouts, and the product matched the problem (E20) once it was framed that way.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M1",
+    "current_line": "Financial infrastructure to grow globally, in every currency.",
+    "type": "replace",
+    "change": "For teams running in-house payments code: 'Stop spending engineers on keeping payments alive.' Name the cost of upkeep (for example, two engineers kept busy and a pay-faster feature pushed quarter after quarter) rather than leading with global reach.",
+    "evidence": [
+     "E3",
+     "E4",
+     "E2",
+     "E37"
+    ],
+    "why": "Expansion to Canada and the UK was the occasion, but the pain was maintenance of in-house payments code (a 'haunted house') that tied up engineers and stalled the roadmap.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "drop",
+    "change": "Stop leading with the authorization-rate uplift for low-ticket marketplace buyers. If it comes up, frame it in the buyer's own terms (auth rates on their average booking) instead of a generic average.",
+    "evidence": [
+     "E21",
+     "E23"
+    ],
+    "why": "The acceptance-rate slide met silence and the buyer said that with a $38 average booking he was 'not losing sleep over auth rates'.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 8364,
+ "cost": 0.030976,
+ "in_tokens": 5575,
+ "out_tokens": 868,
+ "model": "claude-sonnet-5-5"
+}

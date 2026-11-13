@@ -1,0 +1,393 @@
+{
+ "version": "2026-11-13.1",
+ "header": {
+  "deal": "Marlowe & Finch",
+  "outcome": "Lost",
+  "scope": null,
+  "competitor": "Adyen",
+  "incumbent": null,
+  "tag": "In-store and online together",
+  "runner_up": "Champion or access",
+  "tag_why": "The evaluation started with a store-returns failure and ended at a store-ops workshop; we could not show a till return, a rollout plan or a store reference, while the COO, whom we met once, signed with Adyen."
+ },
+ "messaging_changes": [
+  {
+   "target": "M3",
+   "current_line": "Online and in-store on one platform; the line between them has pretty much disappeared.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For retail store-operations buyers (COO, head of store ops): \"One system for the tills and the website: one customer, one basket, one team accountable.\" In store-ops conversations, say \"the tills\" instead of \"point of sale\" or \"in-person payments\", and drop \"unified commerce\".",
+   "evidence": [
+    "E15",
+    "E16",
+    "E33",
+    "E35",
+    "E36"
+   ],
+   "evidence_found": true,
+   "why": "The head of store ops dismissed M3 as \"a diagram\", while the customer described what she wanted in sharper operator words: \"one system for the tills and the website\" and \"one customer, one basket\"; she never said \"unified commerce\" or \"point of sale\".",
+   "strength": "Test this"
+  },
+  {
+   "target": null,
+   "current_line": null,
+   "line_matches": true,
+   "type": "add",
+   "change": "Proof point for retail operations audiences: \"Watch an online order get returned at a store till, live, refunded to the original payment and on the same customer record.\" Show it step by step in the demo; do not describe it. Confirm the flow is demoable today before using this line.",
+   "evidence": [
+    "E2",
+    "E17",
+    "E32"
+   ],
+   "evidence_found": true,
+   "why": "The evaluation started because stores could not see online orders at return time, and the store-ops lead asked to see a till return live; we described it and never showed it.",
+   "strength": "Test this"
+  },
+  {
+   "target": null,
+   "current_line": null,
+   "line_matches": true,
+   "type": "add",
+   "change": "For retailers planning a store rollout: \"One team answerable for your store rollout: a named rollout lead and a plan with dates, who installs, and what happens to your old tills. No two vendors pointing at each other.\" Use this only where we can name the rollout lead and own install accountability; never answer \"who shows up\" with \"a partner\".",
+   "evidence": [
+    "E19",
+    "E20",
+    "E31",
+    "E34"
+   ],
+   "evidence_found": true,
+   "why": "The customer's stated fear was \"two vendors pointing at each other\", she asked for a rollout plan covering dates, installers and the old tills, and our \"we'd bring in a partner\" answer ended the store-ops lead's questions.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M8",
+   "current_line": "Trusted by leading businesses; see our customer stories.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For retail decision-makers: \"Talk to a retailer who runs our tills and website. We'll set up the call this week.\" Offer a live reference call, not a case study. Use this only once a standby list of omnichannel retail references is in place.",
+   "evidence": [
+    "E9",
+    "E29",
+    "E30"
+   ],
+   "evidence_found": true,
+   "why": "The decider asked \"can I talk to them?\" and we could not set up a call in time, while the competitor reportedly named retailers she knew.",
+   "strength": "Test this"
+  }
+ ],
+ "no_change_reason": null,
+ "sections": {
+  "trigger": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E1",
+     "excerpt": "Returns. Last holiday season. Buy online, return in store.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E2",
+     "excerpt": "The store couldn't see the online order, so staff were refunding to gift cards or telling people to mail it back.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E3",
+     "excerpt": "they'd just launched a loyalty program that was supposed to work everywhere and didn't, because store and web were two different customer records.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E4",
+     "excerpt": "Their COO, Angela, apparently stood in a store on December 27th watching the returns queue.",
+     "label": "opinion",
+     "speaker": "Tom",
+     "verified": true
+    }
+   ],
+   "insight": "This was a store-operations pain, not a web project: the trigger sat with the COO's side of the business, in the returns queue and the split customer records. We sold to the CTO and won on checkout, a problem nobody had brought to us. The origin story told the rep who owned the pain from day one, and he never acted on it.",
+   "messaging": "Lead retail conversations with the cross-channel return and the single customer record (\"buy online, return at the till, one loyalty profile\"), not with checkout conversion or the M1 global-currency opener."
+  },
+  "decider": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E6",
+     "excerpt": "The CTO, Raj. He ran the RFP, he was my contact the whole way.",
+     "label": "opinion",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E25",
+     "excerpt": "Angela.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E26",
+     "excerpt": "...Probably Angela. Raj wanted us. I think. He told me he did.",
+     "label": "opinion",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E27",
+     "excerpt": "Once. The kickoff.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    }
+   ],
+   "insight": "The rep confused his contact with the decision-maker. Angela signed, her team requested the workshop that decided the deal, and she was the one asking for a reference call, yet we met her once. Raj's support rests only on Raj saying so, and even the 'we were ahead' signal came from someone who did not sign.",
+   "messaging": "In retail deals, write a COO/operations-facing narrative (accountability, rollout, store continuity) and make access to the operations owner an explicit stage requirement, not an afterthought to the CTO pitch."
+  },
+  "competitor": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E7",
+     "excerpt": "This is secondhand. Raj told me afterwards.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E8",
+     "excerpt": "they came in with a retail team, people who'd done store rollouts, and they talked about one platform for the tills and the website, on one contract.",
+     "label": "fact",
+     "speaker": "Raj",
+     "verified": true
+    },
+    {
+     "id": "E9",
+     "excerpt": "And they named retailers Angela knew.",
+     "label": "fact",
+     "speaker": "Raj",
+     "verified": true
+    },
+    {
+     "id": "E11",
+     "excerpt": "Raj forwarded me a list of 14 questions and 11 of them were about stores.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    }
+   ],
+   "insight": "By Raj's after-the-fact account, Adyen's pitch matched Angela's words almost exactly: people who had done store rollouts, one platform for tills and web, one contract, and peers she knew. We cannot verify any of that directly. The verifiable part is the effect: the customer's questions swung from web to stores (11 of 14). That is the moment the evaluation criteria were rewritten, and we answered the new questions with descriptions and a partner.",
+   "messaging": "Counter with named store-rollout people and live peer retailers on one accountable contract, and treat a sudden swing to store questions as a signal to escalate retail resources immediately."
+  },
+  "message": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E13",
+     "excerpt": "Reaction: the online checkout demo. Their ecommerce lead loved it.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E15",
+     "excerpt": "Online and in-store on one platform, the line between them has pretty much disappeared.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E16",
+     "excerpt": "that's a diagram.",
+     "label": "quote",
+     "speaker": "Bev",
+     "verified": true
+    },
+    {
+     "id": "E17",
+     "excerpt": "Then she asked how a return works. Step by step. At the till.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    }
+   ],
+   "insight": "M3 failed in front of the exact buyer it was meant for. The head of store ops dismissed it as abstraction and asked for the operational proof the claim implies. Our applause came from the ecommerce lead, who was not the buyer, so the reaction we got was in the wrong room. The rep's \"I described it\" shows we answered a show-me question with more telling.",
+   "messaging": "Retire the M3 line \"the line between them has pretty much disappeared\" for operations audiences and replace it with a step-by-step live till-return demo of an online order."
+  },
+  "decided": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E23",
+     "excerpt": "They had six people from store operations.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E19",
+     "excerpt": "Nobody on our side had run a store rollout.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E20",
+     "excerpt": "When Bev asked who does the installs, I said we'd bring in a partner. She wrote something down and didn't ask another question.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E22",
+     "excerpt": "Right before that, honestly, we were ahead. Raj said so. We'd won the web side.",
+     "label": "opinion",
+     "speaker": "Tom",
+     "verified": true
+    }
+   ],
+   "insight": "The deal was lost in the workshop Angela's team requested. Six store-ops people met two of ours, nobody had done a rollout, and 'we'd bring in a partner' was effectively 'two vendors pointing at each other', the exact fear Angela had named. 'We were ahead' was measured on the web side, which the buyer had already moved past once the questions turned to stores.",
+   "messaging": "When a customer asks for a stores workshop, staff it with a named rollout lead and state single-vendor accountability for installs; never position a partner as the answer to 'who shows up'."
+  },
+  "gaps": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E29",
+     "excerpt": "can I talk to them?",
+     "label": "quote",
+     "speaker": "Angela",
+     "verified": true
+    },
+    {
+     "id": "E30",
+     "excerpt": "we couldn't set up a call in time.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E31",
+     "excerpt": "Then a rollout plan. Dates, who installs, what happens to the old tills.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    },
+    {
+     "id": "E32",
+     "excerpt": "They wanted to watch an online order get returned at a store till, live. We described it. We never showed it.",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    }
+   ],
+   "insight": "All three gaps are proof gaps, not proven product gaps. We have no evidence that the till return can't be done, only that it was never shown, along with a missing reference call and a missing rollout plan. A case study (M8) was offered where the decider wanted a phone call. Adyen reportedly brought peers Angela knew, and we could not produce one voice in time.",
+   "messaging": "Build a retail proof kit for M3/M8: a recorded and live-demoable cross-channel return, a template 100+ store rollout plan (dates, installer, old-till retirement), and a standby list of omnichannel retailer references who will take calls."
+  },
+  "language": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E33",
+     "excerpt": "One system for the tills and the website.",
+     "label": "quote",
+     "speaker": "Bev",
+     "verified": true
+    },
+    {
+     "id": "E34",
+     "excerpt": "I don't want two vendors pointing at each other.",
+     "label": "quote",
+     "speaker": "Angela",
+     "verified": true
+    },
+    {
+     "id": "E35",
+     "excerpt": "one customer, one basket.",
+     "label": "quote",
+     "speaker": "Angela",
+     "verified": true
+    },
+    {
+     "id": "E36",
+     "excerpt": "They never said \"unified commerce.\" We kept saying \"in-person payments\" and \"point of sale.\" They said \"the tills.\"",
+     "label": "fact",
+     "speaker": "Tom",
+     "verified": true
+    }
+   ],
+   "insight": "The customer described outcomes and accountability: one system, one customer, one basket, one throat to choke. We described product categories. 'Two vendors pointing at each other' is a support and accountability fear, which our partner-installs answer made real. Our vocabulary marked us as a web payments company talking about stores.",
+   "messaging": "Rewrite M3 in operator language, e.g. \"One system for the tills and the website: one customer, one basket, one team accountable,\" and drop \"unified commerce\" / \"point of sale\" in store-ops conversations."
+  }
+ },
+ "close": {
+  "gaps": [
+   {
+    "question": "What exactly did you say when Bev asked how a return works at the till, and why wasn't it demoed?",
+    "kind": "dodged",
+    "follow_up": "Ask Tom and the solutions engineer: what did the description cover, and is a live cross-channel till return demoable today? If not, what is missing?"
+   },
+   {
+    "question": "Who made the final call, and how do you know?",
+    "kind": "unknown",
+    "follow_up": "Ask Tom to ask Raj directly whether Angela made the call alone and what weight the web evaluation carried; offer Angela a short loss-review call."
+   },
+   {
+    "question": "Did any part of the business (e.g. web) come to us, or did Adyen take everything?",
+    "kind": "unknown",
+    "follow_up": "Ask Tom to confirm the scope of the Adyen contract with Raj, since he says 'we'd won the web side'."
+   },
+   {
+    "question": "What did they use before (incumbent)?",
+    "kind": "unknown",
+    "follow_up": "Ask Tom or Raj which provider(s) ran tills and web before, and what happens to the old tills."
+   },
+   {
+    "question": "Why couldn't we set up a reference call in time, and which retailers did Adyen name?",
+    "kind": "unknown",
+    "follow_up": "Ask Tom and the customer-marketing team what blocked the reference call and how long it took; ask Raj which peer retailers Adyen cited."
+   },
+   {
+    "question": "What did Bev write down after the partner answer on installs?",
+    "kind": "unknown",
+    "follow_up": "Ask Tom to ask Raj or Bev what concern the partner answer raised."
+   },
+   {
+    "question": "Why was Angela met only once after kickoff?",
+    "kind": "unknown",
+    "follow_up": "Ask Tom whether more access to Angela was requested or blocked, and by whom."
+   }
+  ],
+  "rep_takeaway": "Follow the pain to the person who owns it. The trigger story put Angela in a store on December 27th, so she was the buyer even though Raj ran the RFP. And when an operator asks you to show something step by step, show it live or bring the person who can; describing it is how 'that's a diagram' turns into a signature with someone else."
+ },
+ "confidence": "medium",
+ "checks": {
+  "quotes_total": 28,
+  "quotes_failed": 0,
+  "failed": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5",
+   "strategist": "claude-opus-5-5"
+  },
+  "ms": 93511,
+  "cost": 0.309318,
+  "stage_ms": {
+   "reader": 27714,
+   "analyst": 49013,
+   "strategist": 16784
+  },
+  "stage_cost": {
+   "reader": 0.06025,
+   "analyst": 0.174972,
+   "strategist": 0.074096
+  },
+  "reader_items": 37,
+  "reader_verbatim": 37
+ }
+}

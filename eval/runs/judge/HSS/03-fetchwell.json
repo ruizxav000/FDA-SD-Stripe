@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":1,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":2,\"competitor\":1,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The gaps section shows the rep's \\\"nothing\\\" being contradicted (PayPal/Venmo, saved cards)\",\"pass\":true},{\"item\":\"The Braintree theory is labeled opinion\",\"pass\":true},{\"item\":\"The approval-rate slide is reported as silence in a win\",\"pass\":true},{\"item\":\"The CFO's one question is surfaced as a messaging signal\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report got the core of the deal right. It shows the rep's 'Nothing, really' being contradicted by the open PayPal/Venmo and saved-card items, it reports the approval-rate silence against the $38 booking, and it keeps the Braintree theory as the rep's guess. Its biggest miss is treating the incumbent as unknown when Braintree was the incumbent. That error undercut the competitor insight (the account-manager churn was Braintree's relationship weakness), added a spurious close item, and came with an unneeded scope caveat where the key has none.\"}",
+ "data": {
+  "header": {
+   "outcome": 1,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 2,
+   "competitor": 1,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The gaps section shows the rep's \"nothing\" being contradicted (PayPal/Venmo, saved cards)",
+    "pass": true
+   },
+   {
+    "item": "The Braintree theory is labeled opinion",
+    "pass": true
+   },
+   {
+    "item": "The approval-rate slide is reported as silence in a win",
+    "pass": true
+   },
+   {
+    "item": "The CFO's one question is surfaced as a messaging signal",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report got the core of the deal right. It shows the rep's 'Nothing, really' being contradicted by the open PayPal/Venmo and saved-card items, it reports the approval-rate silence against the $38 booking, and it keeps the Braintree theory as the rep's guess. Its biggest miss is treating the incumbent as unknown when Braintree was the incumbent. That error undercut the competitor insight (the account-manager churn was Braintree's relationship weakness), added a spurious close item, and came with an unneeded scope caveat where the key has none."
+ },
+ "ms": 33292,
+ "cost": 0.13935599999999998,
+ "in_tokens": 9623,
+ "out_tokens": 3119,
+ "model": "claude-opus-5-5"
+}

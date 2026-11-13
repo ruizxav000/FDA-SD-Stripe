@@ -1,0 +1,387 @@
+{
+ "version": "2026-11-13.1",
+ "header": {
+  "deal": "Fetchwell",
+  "outcome": "Won",
+  "scope": null,
+  "competitor": "Braintree",
+  "incumbent": "Braintree (implied, not stated: the rotating account manager, the PayPal/Venmo buttons and the saved cards to move over all point to it)",
+  "tag": "Developer experience",
+  "runner_up": "Product fit",
+  "tag_why": "Daniel stopped saying \"if\" right after one of his engineers built a working sitter payment flow in our sandbox over a weekend, and the marketplace onboarding and local payouts gave her something real to build."
+ },
+ "messaging_changes": [
+  {
+   "target": "M2",
+   "current_line": "Built for developers: launch payments fast with our APIs, docs and sandbox.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For engineering-led buyers: \"Payments shouldn't be a team. Have one of your engineers build your own payment flow in our sandbox this week, and see it working before you decide.\" Put the sandbox build in the first meeting as the call to action, not behind the slides. For two-sided apps, name the flow with their word for their supply side (e.g. 'sitter pay').",
+   "evidence": [
+    "E17",
+    "E23",
+    "E16",
+    "E35"
+   ],
+   "evidence_found": true,
+   "why": "The deal turned when an engineer built a working sitter payment flow in the sandbox on her own (E17), after which the decider stopped saying 'if' (E23). The docs and sandbox were what got a reaction (E16), and 'Payments shouldn't be a team' (E35) is the customer's sharper version of our developer pitch.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M11",
+   "current_line": "Onboard, verify and pay out to sellers worldwide, in their local currency.",
+   "line_matches": true,
+   "type": "replace",
+   "change": "For two-sided apps such as pet care and services: \"Onboard and verify your sitters, and pay them locally in every country you launch, without babysitting the code.\" Swap 'sitters' for the customer's own name for their supply side. Avoid 'marketplace', 'sellers' and 'payouts'. Do not promise a payout timing like 'paid by Friday' until we have confirmed it.",
+   "evidence": [
+    "E19",
+    "E40",
+    "E1",
+    "E36"
+   ],
+   "evidence_found": true,
+   "why": "The marketplace onboarding, identity checks and local-currency payouts landed (E19) because expansion meant sitters had to be paid locally (E1). The customer never says 'payouts', they say 'sitter pay' (E40), and they describe the burden as 'babysitting' (E36). Whether sitter pay timing changes is still unconfirmed, so no timing claim is included.",
+   "strength": "Test this"
+  },
+  {
+   "target": "M4",
+   "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+   "line_matches": true,
+   "type": "drop",
+   "change": "For low-ticket, two-sided apps, stop leading with the authorization-rate slide. Use it only if the buyer raises acceptance, and then with their own numbers rather than our average.",
+   "evidence": [
+    "E20",
+    "E21"
+   ],
+   "evidence_found": true,
+   "why": "The acceptance-rate slide drew silence (E20), and the decider dismissed it outright: 'our average booking is 38 dollars, I'm not losing sleep over auth rates' (E21).",
+   "strength": "Test this"
+  },
+  {
+   "target": null,
+   "current_line": null,
+   "line_matches": true,
+   "type": "add",
+   "change": "For switch deals against an incumbent, add a 'What you keep' proof point to use before talking about speed. It should give a confirmed statement on PayPal and Venmo button continuity, plus a saved-card migration reference from a customer of comparable size. Do not publish this until product confirms the Venmo answer and a reference is sourced. The working line, once confirmed: \"Switch without losing what your customers use: keep PayPal and Venmo, and bring your saved cards with you.\"",
+   "evidence": [
+    "E11",
+    "E13",
+    "E27",
+    "E31"
+   ],
+   "evidence_found": true,
+   "why": "The evaluation shifted from 'how fast can we build this' to 'what do we lose' (E13) over wallets and saved cards (E11). The rep had no Venmo answer (E27) and no peer proof for 'who's done this at our size without losing cards?' (E31), and both questions are still open after signature.",
+   "strength": "Test this"
+  }
+ ],
+ "no_change_reason": null,
+ "sections": {
+  "trigger": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E1",
+     "excerpt": "They were launching Canada, then the UK, and sitters have to get paid locally.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E2",
+     "excerpt": "a haunted house.",
+     "label": "quote",
+     "speaker": "Daniel (VP Engineering)",
+     "verified": true
+    },
+    {
+     "id": "E3",
+     "excerpt": "Two engineers more or less full-time just keeping sitter payments working.",
+     "label": "opinion",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E4",
+     "excerpt": "There was also a roadmap item, faster pay for sitters, that had been pushed three quarters in a row.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "Expansion created the deadline, but the pain was engineering toil: a fragile codebase eating engineers while the sitter-pay roadmap slipped three quarters in a row. That slip is a real cost of doing nothing, and nobody turned it into a business case. The 'two engineers' figure is the rep's unsourced estimate, so it is not yet proof we can use.",
+   "messaging": "Open with the cost of keeping payments alive in-house (engineers tied up, sitter-pay roadmap stuck) and leave M1's 'every currency' as the supporting point, with local payouts in new countries treated as the trigger, not the headline."
+  },
+  "decider": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E5",
+     "excerpt": "Daniel. He signed.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E8",
+     "excerpt": "this is an engineering decision, finance will sign what I bring them.",
+     "label": "quote",
+     "speaker": "Daniel (VP Engineering)",
+     "verified": true
+    },
+    {
+     "id": "E6",
+     "excerpt": "The CFO joined one call for ten minutes, asked one question",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E7",
+     "excerpt": "does this change when sitters get paid?",
+     "label": "quote",
+     "speaker": "CFO",
+     "verified": true
+    }
+   ],
+   "insight": "The rep identified the decider correctly: the VP of Engineering said so early and then signed. Finance had one test only, whether sitter pay timing changes. That makes sitter pay timing a finance-level concern, and nothing in our pitch framed it that way. The interview never records what answer the CFO got.",
+   "messaging": "For engineering-led buyers, build the pitch for the engineering lead and give finance one ready line that answers 'does this change when sitters get paid?'"
+  },
+  "competitor": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E10",
+     "excerpt": "I've stopped learning their names.",
+     "label": "quote",
+     "speaker": "Daniel (VP Engineering)",
+     "verified": true
+    },
+    {
+     "id": "E11",
+     "excerpt": "A lot of pet owners pay with PayPal and Venmo, and they were nervous about what happens to those buttons.",
+     "label": "fact",
+     "speaker": "rep (reporting customer)",
+     "verified": true
+    },
+    {
+     "id": "E13",
+     "excerpt": "It went from \"how fast can we build this\" to \"what do we lose.\"",
+     "label": "fact",
+     "speaker": "rep (reporting customer questions)",
+     "verified": true
+    },
+    {
+     "id": "E15",
+     "excerpt": "I assume Braintree told them they'd lose things. I don't know that. That's me guessing.",
+     "label": "opinion",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "The customer was unhappy with the incumbent's rotating account managers and with nothing about its product. Its hold on them was fear of loss: wallets and saved cards. The shift from 'how fast' to 'what do we lose' is observed. That a Braintree call caused it, and what Braintree said, are both the rep's inference. Our M5 tiered response times does not answer 'I've stopped learning their names'; a named person would.",
+   "messaging": "Against an incumbent, lead with a 'what you keep' answer (PayPal, Venmo, saved cards) before speed, and promise a named contact instead of response-time tiers."
+  },
+  "message": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E16",
+     "excerpt": "Reaction: the docs and the sandbox.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E19",
+     "excerpt": "And the marketplace piece. Onboarding sitters, the identity checks, paying out in local currency.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E20",
+     "excerpt": "Silence: the acceptance-rate slide. I did the whole thing, the average improvement customers see.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E21",
+     "excerpt": "our average booking is 38 dollars, I'm not losing sleep over auth rates.",
+     "label": "quote",
+     "speaker": "Daniel (VP Engineering)",
+     "verified": true
+    }
+   ],
+   "insight": "M2 and M11 landed because they mapped straight onto the engineers' pain. M4 died because it was a generic average shown to a low-ticket business that had already done the math. The rep presented our average, not their numbers, which is the same value-proof gap as in the trigger section.",
+   "messaging": "For low-ticket, two-sided apps, drop the authorization-rate slide and lead with M2 plus M11 framed as sitter onboarding and sitter pay."
+  },
+  "decided": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E17",
+     "excerpt": "One of their engineers, on her own time, built a working sitter payment flow over a weekend and showed it at Monday standup.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E18",
+     "excerpt": "I didn't even know until Daniel told me.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E23",
+     "excerpt": "After that Daniel stopped saying \"if.\"",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E41",
+     "excerpt": "Only that I barely sold this. Their engineer did.",
+     "label": "opinion",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "The deciding proof was self-serve and unplanned, and it happened where the rep couldn't see it. We won on luck plus product quality, not on a motion we can repeat. The interview doesn't establish whether the prototype came before or after the suspected Braintree call, which matters for whether hands-on proof beat the fear of loss.",
+   "messaging": "Make 'have your engineers build your own sitter-pay flow in the sandbox' an explicit early call to action, not a nice-to-have behind the slides."
+  },
+  "gaps": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E24",
+     "excerpt": "Nothing, really. It was a clean one.",
+     "label": "opinion",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E27",
+     "excerpt": "I didn't have a crisp answer on Venmo in the room, and I still don't.",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    },
+    {
+     "id": "E31",
+     "excerpt": "who's done this at our size without losing cards?",
+     "label": "quote",
+     "speaker": "Daniel (VP Engineering)",
+     "verified": true
+    },
+    {
+     "id": "E34",
+     "excerpt": "we'll find out.",
+     "label": "quote",
+     "speaker": "customer engineer",
+     "verified": true
+    }
+   ],
+   "insight": "The rep first called it 'a clean one', but the follow-ups showed two open gaps that are still open after signature: no Venmo answer, and no peer proof of a saved-card migration at their size. The reference request came back at kickoff and was met with 'we'll find out'. That is an implementation and churn risk we created. M8's generic 'customer stories' did not cover the one story they asked for.",
+   "messaging": "Build a specific migration proof point: a reference or case study of a saved-card move at comparable scale, plus a clear wallet (PayPal/Venmo) continuity statement, ready for every switch deal."
+  },
+  "language": {
+   "covered": true,
+   "evidence": [
+    {
+     "id": "E35",
+     "excerpt": "Payments shouldn't be a team",
+     "label": "quote",
+     "speaker": "Daniel (VP Engineering)",
+     "verified": true
+    },
+    {
+     "id": "E36",
+     "excerpt": "We want to stop babysitting this.",
+     "label": "quote",
+     "speaker": "Daniel (VP Engineering)",
+     "verified": true
+    },
+    {
+     "id": "E37",
+     "excerpt": "paid by Friday",
+     "label": "quote",
+     "speaker": "customer",
+     "verified": true
+    },
+    {
+     "id": "E40",
+     "excerpt": "And nobody says \"payouts.\" They say \"sitter pay.\"",
+     "label": "fact",
+     "speaker": "rep",
+     "verified": true
+    }
+   ],
+   "insight": "They describe the problem as an operational burden ('babysitting', 'haunted house', 'shouldn't be a team') and the outcome as a brand promise ('paid by Friday'). Our words, 'marketplace' and 'payouts', are category labels they never use. Our messaging speaks infrastructure; they speak in terms of getting their team's time back and keeping a promise to sitters.",
+   "messaging": "Rewrite M11 and M2 in their words, e.g. 'Payments shouldn't be a team: pay your sitters by Friday in every country without babysitting the code,' and use the customer's own name for their supply side instead of 'sellers' or 'payouts'."
+  }
+ },
+ "close": {
+  "gaps": [
+   {
+    "question": "What is our actual answer on keeping Venmo (and PayPal) buttons after the switch?",
+    "kind": "unknown",
+    "follow_up": "Ask product/solutions engineering for a definitive answer, then have Priya send it to Daniel before implementation goes further."
+   },
+   {
+    "question": "Who has migrated saved cards at Fetchwell's size without losing cards?",
+    "kind": "dodged",
+    "follow_up": "Ask customer success/PMM to source a comparable reference now; Priya to send it to Daniel and his engineer, since they raised it again at kickoff."
+   },
+   {
+    "question": "Did Fetchwell actually meet Braintree mid-evaluation, and what did Braintree tell them?",
+    "kind": "unknown",
+    "follow_up": "Ask Daniel directly (or Priya to ask him) what prompted the shift to 'what do we lose' questions."
+   },
+   {
+    "question": "What answer did the CFO get to 'does this change when sitters get paid?'",
+    "kind": "unknown",
+    "follow_up": "Ask Priya what was said on that call and whether sitter pay timing changes under our setup."
+   },
+   {
+    "question": "Where does the 'two engineers full-time' figure come from?",
+    "kind": "unknown",
+    "follow_up": "Ask Daniel to confirm the engineering effort spent on sitter payments, so it can become a quantified value proof point."
+   },
+   {
+    "question": "Did the weekend prototype come before or after the suspected Braintree call?",
+    "kind": "unknown",
+    "follow_up": "Ask Priya to check the timeline with Daniel."
+   }
+  ],
+  "rep_takeaway": "Priya was candid about what she didn't know, and that made this review useful. Two lessons for all of us. First, the deal turned when an engineer got her hands on the sandbox, so make that happen on purpose and early instead of hoping for it. Second, 'clean' deals can still carry open promises: a reference you said you'd send and an unanswered Venmo question both followed this customer into kickoff, so close those loops before signature."
+ },
+ "confidence": "medium",
+ "checks": {
+  "quotes_total": 28,
+  "quotes_failed": 0,
+  "failed": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-opus-5-5",
+   "analyst": "claude-opus-5-5",
+   "strategist": "claude-opus-5-5"
+  },
+  "ms": 149034,
+  "cost": 0.48996399999999996,
+  "stage_ms": {
+   "reader": 75580,
+   "analyst": 51110,
+   "strategist": 22344
+  },
+  "stage_cost": {
+   "reader": 0.213172,
+   "analyst": 0.191012,
+   "strategist": 0.08578
+  },
+  "reader_items": 41,
+  "reader_verbatim": 41
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For heads of payments and finance buyers: \\\"See your own approval rate by country, card type and issuer, where you're leaving money on the table, and why.\\\" Say \\\"approvals\\\", not \\\"authorization\\\". Keep the average-uplift figure as supporting proof, not the opener.\",\"evidence\":[\"E16\",\"E17\",\"E38\",\"E39\",\"E36\"],\"why\":\"Stefan rejected the average uplift directly (\\\"that's an average. What's mine?\\\"), said he couldn't take an average to his CFO, and framed the problem in his own words as approvals and money left on the table.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For accounts with international volume, especially when a competitor is testing: \\\"We'll run a market-by-market approval review on your own traffic, with the reasons behind each decline, and deliver it within [X days — confirm with the payments performance team before publishing].\\\" Do not claim parity on local acquiring in specific markets (e.g. Brazil, Europe) until product confirms it.\",\"evidence\":[\"E10\",\"E30\",\"E32\",\"E34\"],\"why\":\"Adyen won with by-country results on a slice of Stefan's own traffic, while our market-level analysis had real findings but arrived three weeks after he asked, when the test was already finished.\",\"strength\":\"Test this\"},{\"target\":\"M5\",\"current_line\":\"Support plans with tiered response times, up to 24/7 coverage.\",\"type\":\"replace\",\"change\":\"For payments leaders: \\\"A named Stripe owner looks at your approval numbers every month, market by market, and tells you what to fix.\\\" Keep tiered response times as a secondary detail.\",\"evidence\":[\"E33\",\"E30\"],\"why\":\"Stefan asked who at Stripe looks at his numbers every month and the rep had no name, so response times did not answer what he was asking for.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Proof point for champions selling upward to a CFO: a one-page approvals summary showing the customer's own numbers in dollars (\\\"money left on the table, by country\\\"), built so the champion can forward it unchanged.\",\"evidence\":[\"E17\",\"E7\",\"E36\"],\"why\":\"Stefan recommended and the CFO approved, and Stefan said outright he couldn't take an average to his CFO, so the proof has to be customer-specific and in money terms.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For heads of payments and finance buyers: \"See your own approval rate by country, card type and issuer, where you're leaving money on the table, and why.\" Say \"approvals\", not \"authorization\". Keep the average-uplift figure as supporting proof, not the opener.",
+    "evidence": [
+     "E16",
+     "E17",
+     "E38",
+     "E39",
+     "E36"
+    ],
+    "why": "Stefan rejected the average uplift directly (\"that's an average. What's mine?\"), said he couldn't take an average to his CFO, and framed the problem in his own words as approvals and money left on the table.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For accounts with international volume, especially when a competitor is testing: \"We'll run a market-by-market approval review on your own traffic, with the reasons behind each decline, and deliver it within [X days — confirm with the payments performance team before publishing].\" Do not claim parity on local acquiring in specific markets (e.g. Brazil, Europe) until product confirms it.",
+    "evidence": [
+     "E10",
+     "E30",
+     "E32",
+     "E34"
+    ],
+    "why": "Adyen won with by-country results on a slice of Stefan's own traffic, while our market-level analysis had real findings but arrived three weeks after he asked, when the test was already finished.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M5",
+    "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+    "type": "replace",
+    "change": "For payments leaders: \"A named Stripe owner looks at your approval numbers every month, market by market, and tells you what to fix.\" Keep tiered response times as a secondary detail.",
+    "evidence": [
+     "E33",
+     "E30"
+    ],
+    "why": "Stefan asked who at Stripe looks at his numbers every month and the rep had no name, so response times did not answer what he was asking for.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Proof point for champions selling upward to a CFO: a one-page approvals summary showing the customer's own numbers in dollars (\"money left on the table, by country\"), built so the champion can forward it unchanged.",
+    "evidence": [
+     "E17",
+     "E7",
+     "E36"
+    ],
+    "why": "Stefan recommended and the CFO approved, and Stefan said outright he couldn't take an average to his CFO, so the proof has to be customer-specific and in money terms.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 15027,
+ "cost": 0.070412,
+ "in_tokens": 5620,
+ "out_tokens": 1273,
+ "model": "claude-opus-5-5"
+}

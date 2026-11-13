@@ -1,0 +1,51 @@
+{
+ "ok": true,
+ "text": "{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":1,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The decision-maker contradiction (Raj vs. Angela) is surfaced.\",\"pass\":true},{\"item\":\"\\\"that's a diagram\\\" is tied to a messaging change.\",\"pass\":true},{\"item\":\"The question shift (11 of 14 about stores) is reported as a fact.\",\"pass\":true},{\"item\":\"The rep's \\\"better product online\\\" is treated as opinion, not used as a reason.\",\"pass\":false}],\n \"fails\":[\"Trigger insight says 'Our pitch ... never mentioned returns', which the transcript does not support: Bev asked how a return works and Tom described it (T10-T12).\",\"Close follow-up places Tom's return explanation to Bev 'at the kickoff'. The transcript puts it in the pitch. The kickoff was Tom's only meeting with Angela, not Bev.\",\"Incumbent is left null and listed as an unknown, but the transcript shows separate store and web systems ('two different customer records').\"],\n \"notes\":\"The report surfaces the Raj-vs-Angela decision contradiction, ties 'that's a diagram' to a show-don't-describe messaging change, and its four messaging changes match the key's direction on evidence. It misses the incumbent and undersells Adyen's real advantage: a retail team that had done store rollouts and named retailers Angela knew. It never addresses Tom's 'better product online' opinion, omits Bev's notes and the partner-install question from the close, and adds a few unsupported details (pitch 'never mentioned returns', 'at the kickoff').\"}",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 1,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The decision-maker contradiction (Raj vs. Angela) is surfaced.",
+    "pass": true
+   },
+   {
+    "item": "\"that's a diagram\" is tied to a messaging change.",
+    "pass": true
+   },
+   {
+    "item": "The question shift (11 of 14 about stores) is reported as a fact.",
+    "pass": true
+   },
+   {
+    "item": "The rep's \"better product online\" is treated as opinion, not used as a reason.",
+    "pass": false
+   }
+  ],
+  "fails": [
+   "Trigger insight says 'Our pitch ... never mentioned returns', which the transcript does not support: Bev asked how a return works and Tom described it (T10-T12).",
+   "Close follow-up places Tom's return explanation to Bev 'at the kickoff'. The transcript puts it in the pitch. The kickoff was Tom's only meeting with Angela, not Bev.",
+   "Incumbent is left null and listed as an unknown, but the transcript shows separate store and web systems ('two different customer records')."
+  ],
+  "notes": "The report surfaces the Raj-vs-Angela decision contradiction, ties 'that's a diagram' to a show-don't-describe messaging change, and its four messaging changes match the key's direction on evidence. It misses the incumbent and undersells Adyen's real advantage: a retail team that had done store rollouts and named retailers Angela knew. It never addresses Tom's 'better product online' opinion, omits Bev's notes and the partner-install question from the close, and adds a few unsupported details (pitch 'never mentioned returns', 'at the kickoff')."
+ },
+ "ms": 30780,
+ "cost": 0.132104,
+ "in_tokens": 9099,
+ "out_tokens": 2966,
+ "model": "claude-opus-5-5"
+}

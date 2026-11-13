@@ -1,0 +1,51 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":2},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":2,\"message\":2,\"decided\":1,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The outcome carries the online-only scope note\",\"pass\":true},{\"item\":\"The decision-maker contradiction is surfaced (Maya chose, Greg decided)\",\"pass\":true},{\"item\":\"Customer language is marked Not covered\",\"pass\":true},{\"item\":\"'A third of the churn' is labeled unverified or opinion\",\"pass\":true},{\"item\":\"Speaker 2 is treated as the AE\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report gets the key things right: the online-only scope note, the Maya-chose/Greg-decided contradiction, value proof on the customer's own file as the tag, and an empty Not-covered language section. It falls short in a few places. The trigger insight never ties the board-level churn metric to why the controller cared. The 'decided' insight drops the 'only for online billing' caveat and adds an unsupported claim that the rep was 'misreading the buying signals'. The close wrongly marks the decider and silence questions as dodged when they were answered, and its rep takeaway ('don't mark Won') misses the key's theme of working the front desk as a live competitive deal. The messaging calls 'failed payments and retries' customer wording, but it is the rep's own paraphrase.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 2,
+   "message": 2,
+   "decided": 1,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The outcome carries the online-only scope note",
+    "pass": true
+   },
+   {
+    "item": "The decision-maker contradiction is surfaced (Maya chose, Greg decided)",
+    "pass": true
+   },
+   {
+    "item": "Customer language is marked Not covered",
+    "pass": true
+   },
+   {
+    "item": "'A third of the churn' is labeled unverified or opinion",
+    "pass": true
+   },
+   {
+    "item": "Speaker 2 is treated as the AE",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the key things right: the online-only scope note, the Maya-chose/Greg-decided contradiction, value proof on the customer's own file as the tag, and an empty Not-covered language section. It falls short in a few places. The trigger insight never ties the board-level churn metric to why the controller cared. The 'decided' insight drops the 'only for online billing' caveat and adds an unsupported claim that the rep was 'misreading the buying signals'. The close wrongly marks the decider and silence questions as dodged when they were answered, and its rep takeaway ('don't mark Won') misses the key's theme of working the front desk as a live competitive deal. The messaging calls 'failed payments and retries' customer wording, but it is the rep's own paraphrase."
+ },
+ "ms": 34457,
+ "cost": 0.13775199999999999,
+ "in_tokens": 9020,
+ "out_tokens": 3280,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,50 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":2,\"tag\":0},\n \"sections\":{\"trigger\":1,\"decider\":2,\"competitor\":1,\"message\":1,\"decided\":1,\"gaps\":1,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[\n  {\"item\":\"Value proof is named as the underlying cause behind the No decision tag.\",\"pass\":true},\n  {\"item\":\"\\\"Nothing we could have done\\\" is labeled opinion and challenged.\",\"pass\":false},\n  {\"item\":\"The payback request one month before the freeze is surfaced as the turning point.\",\"pass\":true},\n  {\"item\":\"The revenue framing is reported as pushed back.\",\"pass\":true}],\n \"fails\":[\n  \"Messaging change 3 calls the migration material a 'generic timing doc'; the transcript only says 'We had a doc for that'.\",\n  \"Messaging change 3 says the buyer 'ruled out touching billing outside renewal season', which inverts the engineering lead's quote 'we don't touch billing before renewal season'.\"],\n \"notes\":\"The report correctly identifies the generic ROI deck versus the customer's own number as the root cause, and it frames the unused month between the payback request and the freeze as the window that was lost. Its biggest miss is that it never cites or challenges the rep's \\\"It's timing... I don't think there was anything we could have done.\\\" It also uses Value proof as the tag instead of No decision, and the competitor and message sections leave out the key insights: the finance-question shift was the warning sign, and nothing was built for finance.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 2,
+   "tag": 0
+  },
+  "sections": {
+   "trigger": 1,
+   "decider": 2,
+   "competitor": 1,
+   "message": 1,
+   "decided": 1,
+   "gaps": 1,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "Value proof is named as the underlying cause behind the No decision tag.",
+    "pass": true
+   },
+   {
+    "item": "\"Nothing we could have done\" is labeled opinion and challenged.",
+    "pass": false
+   },
+   {
+    "item": "The payback request one month before the freeze is surfaced as the turning point.",
+    "pass": true
+   },
+   {
+    "item": "The revenue framing is reported as pushed back.",
+    "pass": true
+   }
+  ],
+  "fails": [
+   "Messaging change 3 calls the migration material a 'generic timing doc'; the transcript only says 'We had a doc for that'.",
+   "Messaging change 3 says the buyer 'ruled out touching billing outside renewal season', which inverts the engineering lead's quote 'we don't touch billing before renewal season'."
+  ],
+  "notes": "The report correctly identifies the generic ROI deck versus the customer's own number as the root cause, and it frames the unused month between the payback request and the freeze as the window that was lost. Its biggest miss is that it never cites or challenges the rep's \"It's timing... I don't think there was anything we could have done.\" It also uses Value proof as the tag instead of No decision, and the competitor and message sections leave out the key insights: the finance-question shift was the warning sign, and nothing was built for finance."
+ },
+ "ms": 37375,
+ "cost": 0.142316,
+ "in_tokens": 8443,
+ "out_tokens": 3739,
+ "model": "claude-opus-5-5"
+}

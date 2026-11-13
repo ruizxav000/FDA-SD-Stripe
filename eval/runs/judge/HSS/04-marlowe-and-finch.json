@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":1,\"competitor\":1,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":1,\n \"must_catch\":[{\"item\":\"The decision-maker contradiction (Raj vs. Angela) is surfaced.\",\"pass\":true},{\"item\":\"\\\"that's a diagram\\\" is tied to a messaging change.\",\"pass\":true},{\"item\":\"The question shift (11 of 14 about stores) is reported as a fact.\",\"pass\":false},{\"item\":\"The rep's \\\"better product online\\\" is treated as opinion, not used as a reason.\",\"pass\":true}],\n \"fails\":[],\n \"notes\":\"The report gets the core story right. It surfaces the Raj-vs-Angela contradiction, ties 'that's a diagram' to replacing M3 with a live till-return demo in the customer's own words, and frames every gap as missing proof about stores. It misses several things: it never reports the 11-of-14 store questions figure, and it labels the rep's retracted 'The CTO, Raj' claim as fact without citing Angela signing as evidence. It also leaves the incumbent null and lists it as unknown, although the transcript shows separate store and web systems. In the close, it skips 'what Bev wrote down,' 'whether a named rollout plan would have been accepted,' and the request for Raj's list of 14 questions. Its M1 'drop global infrastructure' change rests on no transcript evidence that we led with that line.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 1,
+   "competitor": 1,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 1,
+  "must_catch": [
+   {
+    "item": "The decision-maker contradiction (Raj vs. Angela) is surfaced.",
+    "pass": true
+   },
+   {
+    "item": "\"that's a diagram\" is tied to a messaging change.",
+    "pass": true
+   },
+   {
+    "item": "The question shift (11 of 14 about stores) is reported as a fact.",
+    "pass": false
+   },
+   {
+    "item": "The rep's \"better product online\" is treated as opinion, not used as a reason.",
+    "pass": true
+   }
+  ],
+  "fails": [],
+  "notes": "The report gets the core story right. It surfaces the Raj-vs-Angela contradiction, ties 'that's a diagram' to replacing M3 with a live till-return demo in the customer's own words, and frames every gap as missing proof about stores. It misses several things: it never reports the 11-of-14 store questions figure, and it labels the rep's retracted 'The CTO, Raj' claim as fact without citing Angela signing as evidence. It also leaves the incumbent null and lists it as unknown, although the transcript shows separate store and web systems. In the close, it skips 'what Bev wrote down,' 'whether a named rollout plan would have been accepted,' and the request for Raj's list of 14 questions. Its M1 'drop global infrastructure' change rests on no transcript evidence that we led with that line."
+ },
+ "ms": 37471,
+ "cost": 0.14577600000000002,
+ "in_tokens": 9563,
+ "out_tokens": 3464,
+ "model": "claude-opus-5-5"
+}

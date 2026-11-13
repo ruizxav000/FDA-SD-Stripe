@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M7\",\"current_line\":\"Billing that helps you grow revenue.\",\"type\":\"replace\",\"change\":\"For prospects replacing a homegrown billing system: \\\"Billing shouldn't be a tax on your roadmap. Change prices, add trials and handle proration in minutes, not a quarter of engineering work.\\\"\",\"evidence\":[\"E21\",\"E17\",\"E3\",\"X1\"],\"why\":\"The champion rejected the revenue framing outright ('we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap'), while the demo landed in roadmap-speed terms ('a quarter of roadmap in five minutes') against a system where every pricing change takes a quarter.\",\"strength\":\"Test this\"},{\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"replace\",\"change\":\"For finance and CFO audiences: \\\"Your number, not our study. We'll build your payback case with you from your own engineering hours, billing errors and failed-payment losses, ready to present to your CFO.\\\" Use the independent study as background only, not as the payback answer.\",\"evidence\":[\"E25\",\"E14\",\"E24\",\"E26\",\"E28\"],\"why\":\"The champion said he couldn't get the deal past the CFO 'without a number that's ours'. When he asked for payback, we sent the generic study deck, and the session to build their own number never happened.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For homegrown-billing prospects, lead with the cost of standing still: \\\"What is your current billing system costing you? A quarter of roadmap on every pricing change, a system only one person understood, and subscriptions that lapse when a card fails and nobody chases it.\\\" Pair it with M10 smart retries as the recovered-revenue line in the cost model.\",\"evidence\":[\"E3\",\"E29\",\"E30\",\"E35\",\"E36\"],\"why\":\"Finance treated the project as a 'nice to have' because 'if it isn't on fire, it isn't funded'. Yet the interview already contained the cost of inaction (a departed builder, quarter-long pricing changes, failed-card lapses) and we never added it up.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a migration proof point for subscription-billing switchers: a reference customer who moved off a homegrown or legacy billing system in stages without re-collecting cards, available for a peer call, not just a migration doc.\",\"evidence\":[\"E33\"],\"why\":\"We had a migration doc, but the champion wanted to talk to someone who had done it, and the interview does not show that he ever got that conversation.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M7",
+    "current_line": "Billing that helps you grow revenue.",
+    "type": "replace",
+    "change": "For prospects replacing a homegrown billing system: \"Billing shouldn't be a tax on your roadmap. Change prices, add trials and handle proration in minutes, not a quarter of engineering work.\"",
+    "evidence": [
+     "E21",
+     "E17",
+     "E3",
+     "X1"
+    ],
+    "why": "The champion rejected the revenue framing outright ('we're not trying to grow revenue with billing, we're trying to stop it being a tax on the roadmap'), while the demo landed in roadmap-speed terms ('a quarter of roadmap in five minutes') against a system where every pricing change takes a quarter.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "replace",
+    "change": "For finance and CFO audiences: \"Your number, not our study. We'll build your payback case with you from your own engineering hours, billing errors and failed-payment losses, ready to present to your CFO.\" Use the independent study as background only, not as the payback answer.",
+    "evidence": [
+     "E25",
+     "E14",
+     "E24",
+     "E26",
+     "E28"
+    ],
+    "why": "The champion said he couldn't get the deal past the CFO 'without a number that's ours'. When he asked for payback, we sent the generic study deck, and the session to build their own number never happened.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For homegrown-billing prospects, lead with the cost of standing still: \"What is your current billing system costing you? A quarter of roadmap on every pricing change, a system only one person understood, and subscriptions that lapse when a card fails and nobody chases it.\" Pair it with M10 smart retries as the recovered-revenue line in the cost model.",
+    "evidence": [
+     "E3",
+     "E29",
+     "E30",
+     "E35",
+     "E36"
+    ],
+    "why": "Finance treated the project as a 'nice to have' because 'if it isn't on fire, it isn't funded'. Yet the interview already contained the cost of inaction (a departed builder, quarter-long pricing changes, failed-card lapses) and we never added it up.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a migration proof point for subscription-billing switchers: a reference customer who moved off a homegrown or legacy billing system in stages without re-collecting cards, available for a peer call, not just a migration doc.",
+    "evidence": [
+     "E33"
+    ],
+    "why": "We had a migration doc, but the champion wanted to talk to someone who had done it, and the interview does not show that he ever got that conversation.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 17605,
+ "cost": 0.07459199999999999,
+ "in_tokens": 5770,
+ "out_tokens": 1422,
+ "model": "claude-opus-5-5"
+}

@@ -1,0 +1,47 @@
+{
+ "ok": true,
+ "text": "```json\n{\"header\":{\"outcome\":2,\"competitor_incumbent\":1,\"tag\":2},\n \"sections\":{\"trigger\":2,\"decider\":1,\"competitor\":1,\"message\":2,\"decided\":2,\"gaps\":2,\"language\":2},\n \"close\":1,\"messaging\":2,\n \"must_catch\":[{\"item\":\"The decision-maker contradiction (Raj vs. Angela) is surfaced.\",\"pass\":true},{\"item\":\"\\\"that's a diagram\\\" is tied to a messaging change.\",\"pass\":true},{\"item\":\"The question shift (11 of 14 about stores) is reported as a fact.\",\"pass\":false},{\"item\":\"The rep's \\\"better product online\\\" is treated as opinion, not used as a reason.\",\"pass\":false}],\n \"fails\":[],\n \"notes\":\"The report's best work is on the decider contradiction and the proof gaps. It shows we single-threaded through the CTO while the COO who owned stores decided, and it ties \\\"that's a diagram\\\" to a live till-return demo and the customer's own language. It misses several things: the 11-of-14 store-questions figure, the incumbent (separate store and web systems, left null), and the rep's \\\"better product online\\\" claim, which it never labels as opinion. Its decider evidence also labels the rep's initial \\\"The CTO, Raj\\\" claim as fact, and the close skips what Bev wrote down, whether a named rollout plan would have been accepted, and the request for Raj's list of 14 questions.\"}\n```",
+ "data": {
+  "header": {
+   "outcome": 2,
+   "competitor_incumbent": 1,
+   "tag": 2
+  },
+  "sections": {
+   "trigger": 2,
+   "decider": 1,
+   "competitor": 1,
+   "message": 2,
+   "decided": 2,
+   "gaps": 2,
+   "language": 2
+  },
+  "close": 1,
+  "messaging": 2,
+  "must_catch": [
+   {
+    "item": "The decision-maker contradiction (Raj vs. Angela) is surfaced.",
+    "pass": true
+   },
+   {
+    "item": "\"that's a diagram\" is tied to a messaging change.",
+    "pass": true
+   },
+   {
+    "item": "The question shift (11 of 14 about stores) is reported as a fact.",
+    "pass": false
+   },
+   {
+    "item": "The rep's \"better product online\" is treated as opinion, not used as a reason.",
+    "pass": false
+   }
+  ],
+  "fails": [],
+  "notes": "The report's best work is on the decider contradiction and the proof gaps. It shows we single-threaded through the CTO while the COO who owned stores decided, and it ties \"that's a diagram\" to a live till-return demo and the customer's own language. It misses several things: the 11-of-14 store-questions figure, the incumbent (separate store and web systems, left null), and the rep's \"better product online\" claim, which it never labels as opinion. Its decider evidence also labels the rep's initial \"The CTO, Raj\" claim as fact, and the close skips what Bev wrote down, whether a named rollout plan would have been accepted, and the request for Raj's list of 14 questions."
+ },
+ "ms": 26529,
+ "cost": 0.1256,
+ "in_tokens": 9606,
+ "out_tokens": 2438,
+ "model": "claude-opus-5-5"
+}

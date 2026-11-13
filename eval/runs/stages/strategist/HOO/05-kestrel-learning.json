@@ -1,0 +1,56 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For payments-led buyers (a head of payments or similar owner of approvals): \\\"Your approvals, market by market: where you're leaving money on the table, by country, card type and issuer, and what we'd fix.\\\" Keep Authorization Boost and Adaptive Acceptance as the mechanism behind the fixes, not the headline, and drop 'average uplift' for this buyer.\",\"evidence\":[\"E14\",\"E16\",\"E13\",\"E36\",\"E38\",\"E39\"],\"why\":\"The buyer rejected the Authorization Boost average outright ('that's an average. What's mine?'), asked for approvals by country, card type and issuer, and framed the problem in his own words as 'approvals' and 'money left on the table', so the line should use his words and his numbers.\",\"strength\":\"Test this\"},{\"target\":\"M5\",\"current_line\":\"Support plans with tiered response times, up to 24/7 coverage.\",\"type\":\"add\",\"change\":\"For growing international accounts with a dedicated payments owner, add: \\\"A named payments performance lead reviews your approvals by market with you every month, and tells you what to fix before you have to ask.\\\" Only use this where we can actually staff a named lead.\",\"evidence\":[\"E33\",\"E30\",\"E35\"],\"why\":\"The buyer asked who at Stripe looks at his numbers every month and we had no name, while the one thing he praised was a proactive market-by-market view of his own approvals. Reactive tiered response times don't answer that request.\",\"strength\":\"Test this\"},{\"target\":\"M6\",\"current_line\":\"Proven ROI, backed by an independent economic impact study.\",\"type\":\"replace\",\"change\":\"For deals where a payments owner must take a recommendation to the CFO: \\\"Your ROI in your numbers: a one-page case on your own approval data, with the revenue at stake in each market.\\\" Use the independent study as background only, not as the lead proof.\",\"evidence\":[\"E17\",\"E7\",\"E16\"],\"why\":\"The champion said 'I can't take an average to my CFO', and the CFO approved his recommendation, so benchmark-based ROI proof does not travel to the person who signs.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For payments-led buyers (a head of payments or similar owner of approvals): \"Your approvals, market by market: where you're leaving money on the table, by country, card type and issuer, and what we'd fix.\" Keep Authorization Boost and Adaptive Acceptance as the mechanism behind the fixes, not the headline, and drop 'average uplift' for this buyer.",
+    "evidence": [
+     "E14",
+     "E16",
+     "E13",
+     "E36",
+     "E38",
+     "E39"
+    ],
+    "why": "The buyer rejected the Authorization Boost average outright ('that's an average. What's mine?'), asked for approvals by country, card type and issuer, and framed the problem in his own words as 'approvals' and 'money left on the table', so the line should use his words and his numbers.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M5",
+    "current_line": "Support plans with tiered response times, up to 24/7 coverage.",
+    "type": "add",
+    "change": "For growing international accounts with a dedicated payments owner, add: \"A named payments performance lead reviews your approvals by market with you every month, and tells you what to fix before you have to ask.\" Only use this where we can actually staff a named lead.",
+    "evidence": [
+     "E33",
+     "E30",
+     "E35"
+    ],
+    "why": "The buyer asked who at Stripe looks at his numbers every month and we had no name, while the one thing he praised was a proactive market-by-market view of his own approvals. Reactive tiered response times don't answer that request.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M6",
+    "current_line": "Proven ROI, backed by an independent economic impact study.",
+    "type": "replace",
+    "change": "For deals where a payments owner must take a recommendation to the CFO: \"Your ROI in your numbers: a one-page case on your own approval data, with the revenue at stake in each market.\" Use the independent study as background only, not as the lead proof.",
+    "evidence": [
+     "E17",
+     "E7",
+     "E16"
+    ],
+    "why": "The champion said 'I can't take an average to my CFO', and the CFO approved his recommendation, so benchmark-based ROI proof does not travel to the person who signs.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 17933,
+ "cost": 0.08013600000000001,
+ "in_tokens": 5978,
+ "out_tokens": 1616,
+ "model": "claude-opus-5-5"
+}

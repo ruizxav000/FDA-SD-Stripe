@@ -1,0 +1,69 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M2\",\"current_line\":\"Built for developers: launch payments fast with our APIs, docs and sandbox.\",\"type\":\"replace\",\"change\":\"For engineering-led marketplace deals: 'Have one of your engineers build your sitter pay flow in our sandbox this weekend, and bring it to Monday standup.' Make the hands-on sandbox build an explicit early step in the evaluation instead of a passing claim.\",\"evidence\":[\"E16\",\"E17\",\"E22\",\"E18\"],\"why\":\"The deal went from bake-off to 'when' only after a customer engineer built a working sitter payment flow in the sandbox over a weekend, and the rep didn't know it had happened, so the proof should be offered on purpose rather than left to chance.\",\"strength\":\"Test this\"},{\"target\":\"M11\",\"current_line\":\"Onboard, verify and pay out to sellers worldwide, in their local currency.\",\"type\":\"replace\",\"change\":\"For gig and service apps: 'Keep your paid-by-Friday promise in every country, without a payments team.' Use their words: 'sitter pay' (or their name for their workers) instead of 'payouts', and 'the app' instead of 'marketplace'. Keep onboarding, identity checks and local-currency pay as the supporting detail.\",\"evidence\":[\"E19\",\"E34\",\"E36\",\"E32\",\"E33\",\"E7\"],\"why\":\"The marketplace capability landed on substance, but the customer describes it as 'sitter pay' and 'paid by Friday' and frames the pain as 'payments shouldn't be a team'; sitter pay timing was also the CFO's only question, so this is the phrase both buyers share.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Add a 'What you keep when you switch' line for buyers moving off Braintree, covering PayPal and Venmo buttons and saved-card migration. Get the confirmed answer from product/solutions engineering first, and pair it with a named customer of comparable size who migrated saved cards without losing them. Do not publish the line until both exist.\",\"evidence\":[\"E11\",\"E13\",\"E25\",\"E28\"],\"why\":\"After the incumbent's call, the questions shifted to 'what do we lose', and we had no answer on Venmo and no same-size saved-card migration reference, so the risk carried into implementation.\",\"strength\":\"Test this\"},{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"drop\",\"change\":\"For low-ticket marketplaces, stop leading with authorization-rate uplift. Move it to the appendix and use the sandbox build and sitter pay in its place.\",\"evidence\":[\"E21\"],\"why\":\"The buyer dismissed it outright ('our average booking is 38 dollars, I'm not losing sleep over auth rates') because their pain was paying sitters, not authorizing owners.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M2",
+    "current_line": "Built for developers: launch payments fast with our APIs, docs and sandbox.",
+    "type": "replace",
+    "change": "For engineering-led marketplace deals: 'Have one of your engineers build your sitter pay flow in our sandbox this weekend, and bring it to Monday standup.' Make the hands-on sandbox build an explicit early step in the evaluation instead of a passing claim.",
+    "evidence": [
+     "E16",
+     "E17",
+     "E22",
+     "E18"
+    ],
+    "why": "The deal went from bake-off to 'when' only after a customer engineer built a working sitter payment flow in the sandbox over a weekend, and the rep didn't know it had happened, so the proof should be offered on purpose rather than left to chance.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M11",
+    "current_line": "Onboard, verify and pay out to sellers worldwide, in their local currency.",
+    "type": "replace",
+    "change": "For gig and service apps: 'Keep your paid-by-Friday promise in every country, without a payments team.' Use their words: 'sitter pay' (or their name for their workers) instead of 'payouts', and 'the app' instead of 'marketplace'. Keep onboarding, identity checks and local-currency pay as the supporting detail.",
+    "evidence": [
+     "E19",
+     "E34",
+     "E36",
+     "E32",
+     "E33",
+     "E7"
+    ],
+    "why": "The marketplace capability landed on substance, but the customer describes it as 'sitter pay' and 'paid by Friday' and frames the pain as 'payments shouldn't be a team'; sitter pay timing was also the CFO's only question, so this is the phrase both buyers share.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Add a 'What you keep when you switch' line for buyers moving off Braintree, covering PayPal and Venmo buttons and saved-card migration. Get the confirmed answer from product/solutions engineering first, and pair it with a named customer of comparable size who migrated saved cards without losing them. Do not publish the line until both exist.",
+    "evidence": [
+     "E11",
+     "E13",
+     "E25",
+     "E28"
+    ],
+    "why": "After the incumbent's call, the questions shifted to 'what do we lose', and we had no answer on Venmo and no same-size saved-card migration reference, so the risk carried into implementation.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "drop",
+    "change": "For low-ticket marketplaces, stop leading with authorization-rate uplift. Move it to the appendix and use the sandbox build and sitter pay in its place.",
+    "evidence": [
+     "E21"
+    ],
+    "why": "The buyer dismissed it outright ('our average booking is 38 dollars, I'm not losing sleep over auth rates') because their pain was paying sitters, not authorizing owners.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 19317,
+ "cost": 0.080312,
+ "in_tokens": 5825,
+ "out_tokens": 1686,
+ "model": "claude-opus-5-5"
+}

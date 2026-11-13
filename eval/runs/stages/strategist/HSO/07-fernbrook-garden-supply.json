@@ -1,0 +1,76 @@
+{
+ "ok": true,
+ "text": "{\"changes\":[{\"target\":\"M4\",\"current_line\":\"Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.\",\"type\":\"replace\",\"change\":\"For online retailers with high-value baskets: \\\"You do all the work to win the customer, then the card says no. We show you which of your orders are dying at the last step, why the big baskets get declined, and what recovering them is worth, in your numbers, not an industry average.\\\" Follow with the prospect's own failed-order rate (e.g., 'one in twelve orders') once we have it.\",\"evidence\":[\"E2\",\"E3\",\"E4\",\"E41\",\"E42\",\"E43\",\"E28\",\"E40\"],\"why\":\"Lucy described the problem as orders failing at the payment step, worst on big baskets, with no explanation from the processor, while the generic average-uplift slide gave her nothing specific to defend.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"For deals where the incumbent bank counters on price: \\\"A lower rate on orders that still fail isn't a saving. Compare total cost of acceptance: rate, gateway fees, chargeback handling, and the revenue from orders the card said no to.\\\" Send it as a one-page side-by-side the moment the incumbent reprices, so the comparison never becomes rate versus rate.\",\"evidence\":[\"E11\",\"E12\",\"E13\",\"E14\",\"E19\",\"E25\"],\"why\":\"The bank won by repricing alone, the conversation shifted from declines to rate the moment it did, and the CFO's view that the offers were the same suggests he saw only a rate comparison against our quote.\",\"strength\":\"Test this\"},{\"target\":null,\"current_line\":null,\"type\":\"add\",\"change\":\"Proof point for champions selling to a finance buyer who won't take vendor meetings: \\\"Send us three months of your declines and we'll give you a one-page brief for your CFO showing how many orders failed, what they were worth, and what changes if they go through.\\\" Offer it early as the thing the champion carries into the room.\",\"evidence\":[\"E9\",\"E30\",\"E32\",\"E38\",\"E21\",\"E26\"],\"why\":\"Lucy asked for something to hand Martin, who decided without meeting us, and the decline analysis our engineer offered was skipped, so only the controller's one-pager reached him.\",\"strength\":\"Test this\"},{\"target\":\"M8\",\"current_line\":\"Trusted by leading businesses; see our customer stories.\",\"type\":\"drop\",\"change\":\"Stop answering a champion's request for a CFO-ready document with customer stories or the ROI study (M6). Those can go with the brief as background, but the lead should be the customer-specific failed-order figure.\",\"evidence\":[\"E38\",\"E40\"],\"why\":\"When Lucy asked for something she could hand Martin, we gave her the customer stories and the average uplift, which did not answer her request.\",\"strength\":\"Test this\"}],\"no_change_reason\":null}",
+ "data": {
+  "changes": [
+   {
+    "target": "M4",
+    "current_line": "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance.",
+    "type": "replace",
+    "change": "For online retailers with high-value baskets: \"You do all the work to win the customer, then the card says no. We show you which of your orders are dying at the last step, why the big baskets get declined, and what recovering them is worth, in your numbers, not an industry average.\" Follow with the prospect's own failed-order rate (e.g., 'one in twelve orders') once we have it.",
+    "evidence": [
+     "E2",
+     "E3",
+     "E4",
+     "E41",
+     "E42",
+     "E43",
+     "E28",
+     "E40"
+    ],
+    "why": "Lucy described the problem as orders failing at the payment step, worst on big baskets, with no explanation from the processor, while the generic average-uplift slide gave her nothing specific to defend.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "For deals where the incumbent bank counters on price: \"A lower rate on orders that still fail isn't a saving. Compare total cost of acceptance: rate, gateway fees, chargeback handling, and the revenue from orders the card said no to.\" Send it as a one-page side-by-side the moment the incumbent reprices, so the comparison never becomes rate versus rate.",
+    "evidence": [
+     "E11",
+     "E12",
+     "E13",
+     "E14",
+     "E19",
+     "E25"
+    ],
+    "why": "The bank won by repricing alone, the conversation shifted from declines to rate the moment it did, and the CFO's view that the offers were the same suggests he saw only a rate comparison against our quote.",
+    "strength": "Test this"
+   },
+   {
+    "target": null,
+    "current_line": null,
+    "type": "add",
+    "change": "Proof point for champions selling to a finance buyer who won't take vendor meetings: \"Send us three months of your declines and we'll give you a one-page brief for your CFO showing how many orders failed, what they were worth, and what changes if they go through.\" Offer it early as the thing the champion carries into the room.",
+    "evidence": [
+     "E9",
+     "E30",
+     "E32",
+     "E38",
+     "E21",
+     "E26"
+    ],
+    "why": "Lucy asked for something to hand Martin, who decided without meeting us, and the decline analysis our engineer offered was skipped, so only the controller's one-pager reached him.",
+    "strength": "Test this"
+   },
+   {
+    "target": "M8",
+    "current_line": "Trusted by leading businesses; see our customer stories.",
+    "type": "drop",
+    "change": "Stop answering a champion's request for a CFO-ready document with customer stories or the ROI study (M6). Those can go with the brief as background, but the lead should be the customer-specific failed-order figure.",
+    "evidence": [
+     "E38",
+     "E40"
+    ],
+    "why": "When Lucy asked for something she could hand Martin, we gave her the customer stories and the average uplift, which did not answer her request.",
+    "strength": "Test this"
+   }
+  ],
+  "no_change_reason": null
+ },
+ "ms": 18303,
+ "cost": 0.07338,
+ "in_tokens": 5576,
+ "out_tokens": 1439,
+ "model": "claude-opus-5-5"
+}
