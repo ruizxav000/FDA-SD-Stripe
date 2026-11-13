@@ -303,12 +303,6 @@ select.field{padding-right:28px}
       <div id="result" class="report" hidden></div>
     </main>
 
-    <aside class="side" aria-label="How it works">
-      <div class="glass accent box tight divide">
-        <p class="lbl">How the review runs</p>
-        <div id="how-steps" style="display:flex;flex-direction:column;gap:8px"></div>
-      </div>
-    </aside>
   </div>
 </section>
 
@@ -455,14 +449,6 @@ const hideTip = () => { tip.hidden = true; };
 
 /* ════════════════════ SUBMIT ════════════════════ */
 const sub = { parsed: null, roles: null, name: "", running: null, state: null };
-$("how-steps").append(...[
-  ["Read", "reader", "Pulls the evidence from the whole conversation, word for word."],
-  ["Analyze", "analyst", "Works out the account, ACV, outcome, the real reason, and the key findings."],
-  ["Check", null, "Every quote must appear word for word in the transcript, and ACV only counts if someone said it."],
-].map(([n, k, d]) => h("div", { style: "display:flex;flex-direction:column;gap:2px" },
-  h("div", { class: "pair" }, h("span", { style: "color:var(--strong);font-weight:600", text: n }), h("span", { class: "text", text: k ? MODEL_NAME(DR.STAGE_MODELS[k].model) : "Code" })),
-  h("span", { class: "text", text: d }))));
-
 async function readFile(file) {
   if (/\.docx$/i.test(file.name)) return docxText(await file.arrayBuffer());
   return file.text();
