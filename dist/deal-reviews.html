@@ -1261,7 +1261,7 @@ async function startRun() {
   // Plain-text call + our own tolerant JSON parser (repairs the occasional malformed reply).
   const call = async (stage, prompt, m) => {
     const { text } = await caps.sample(prompt, {
-      model: m.model, effort: m.effort, signal: ctl.signal,
+      model: m.model, effort: m.effort, signal: ctl.signal, cache: false, // every run is a fresh review
       modelTier: /opus/.test(m.model) ? "complex" : /haiku/.test(m.model) ? "quick" : "default",
     });
     const data = DR.parseModelJSON(text);
