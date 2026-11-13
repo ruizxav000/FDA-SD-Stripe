@@ -43,7 +43,7 @@ Each page is a `<section class="view" id="view-NAME">` with its own `.hero` and 
 - **Glass box:** `class="glass box"`. Variants: `.glass.accent` (faint accent tint, for the box to see first) and `.glass.quiet` (lighter, no shadow). Padding: `.box`, `.box.tight` (stats, side column), `.box.flush` (tables). Change a box's tint with `--tint`, never with `background`.
 - **Shell:** `.bg-scene` backdrop, `.chrome` nav (clear at the top, frosts in after 10px), `.hero` (`.headline` at weight 300 with a `<strong>` ending at 600, plus `.deck`), `.page` (add `.wide` to drop the side column; stacks under 860px).
 - **Grids:** `.grid2`, `.grid4` (2-up on phones), `.grid-2-1`, `.sh` section heading.
-- **In a box:** `.lbl`, `.box-head`, `.title`, `.text`, `.big`, `.delta`, `.pair` rows (add `.divide` to the box for hairlines), `.btn` / `.btn.ghost`, `.chip`, `.pill` (tint with `--c`), `.field`, `.switch`, `.table` (`.num`, `.sub`).
+- **In a box:** `.lbl`, `.box-head`, `.title`, `.text`, `.big`, `.delta`, `.pair` rows (add `.divide` to the box for hairlines), `.btn` / `.btn.ghost`, `.chip`, `.status` (status word in its colour via `--c`; no background or pill shape), `.field`, `.switch`, `.table` (`.num`, `.sub`).
 - **Charts:** `lineChart(el, labels, values)` draws a single-series area/line chart at the box's real width (redrawn by a `ResizeObserver`, so text stays 10.5px on phones) with a crosshair tooltip on hover. `barChart(el, rows)` draws labelled horizontal bars with hover tooltips. Both use theme tokens only. For more series or other chart types, follow the `dataviz` skill.
 
 ## Using it
@@ -57,8 +57,9 @@ Each page is a `<section class="view" id="view-NAME">` with its own `.hero` and 
 ## Style rules
 
 - One backdrop, many panes. Boxes differ by tint strength, not by new colours.
-- One job per colour: `--accent` for actions, headings and chart marks; `--c3` for good change, `--alert` for bad; `--c1..c3` for status tags.
+- One job per colour: `--accent` for actions, headings and chart marks; `--c3` for good change, `--alert` for bad; `--c1..c3` for status text.
 - Light headlines with a heavy ending. Big numbers at 600 with tight tracking and tabular figures.
 - One typeface: Inter, sans-serif only. No serif, slab or monospace faces, including for numbers, badges and charts.
 - Keep motion short (150–300ms); it switches off under `prefers-reduced-motion` (already in the CSS).
 - This is Stripe-*inspired*. Don't put Stripe's logo or name in the brand slot or make a page pass as Stripe's own.
+- Status is coloured text only (`.status`). Don't wrap it in tinted pill or badge shapes.

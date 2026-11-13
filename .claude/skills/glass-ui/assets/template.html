@@ -129,8 +129,8 @@ main{min-width:0;display:flex;flex-direction:column;gap:12px}
 .text{font-size:13px;color:var(--mute)}
 .big{font-size:1.9rem;font-weight:600;line-height:1.05;letter-spacing:-.02em;color:var(--strong);font-variant-numeric:tabular-nums;white-space:nowrap}
 .delta{font-size:12px;font-weight:500;font-variant-numeric:tabular-nums}
-.delta.up{color:var(--c3)}
-.delta.down{color:var(--alert)}
+.delta.up{color:color-mix(in srgb,var(--c3) 76%,var(--strong))}
+.delta.down{color:color-mix(in srgb,var(--alert) 76%,var(--strong))}
 .divide > * + *{border-top:1px solid var(--hair-faint);padding-top:8px}
 .pair{display:flex;justify-content:space-between;gap:16px;font-size:12.5px}
 .pair > :first-child{color:var(--mute)}
@@ -141,8 +141,8 @@ main{min-width:0;display:flex;flex-direction:column;gap:12px}
 .btn.ghost{background:var(--glass-hi);color:var(--strong);box-shadow:inset 0 0 0 1px var(--hair)}
 .chip{font-size:12.5px;color:var(--label);background:var(--glass-low);border:1px solid var(--hair);border-radius:99px;padding:4px 12px;cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--strong);color:var(--on-accent);border-color:transparent}
-.pill{display:inline-block;padding:1px 10px;border-radius:99px;font-size:11.5px;font-weight:500;white-space:nowrap;
-  background:color-mix(in srgb,var(--c,var(--accent)) 13%,transparent);color:color-mix(in srgb,var(--c,var(--accent)) 88%,var(--strong))}
+/* status: just the word in its colour (set --c), darkened a touch so it reads as text on white glass */
+.status{font-weight:500;white-space:nowrap;color:color-mix(in srgb,var(--c,var(--accent)) 76%,var(--strong))}
 .field{height:38px;font-size:13.5px;color:var(--ink);background:var(--field);border:1px solid var(--hair);border-radius:var(--r-ctl);padding:0 11px;min-width:0;width:100%}
 textarea.field{height:auto;min-height:88px;padding:9px 11px;resize:vertical}
 .field::placeholder{color:var(--mute-faint)}
@@ -248,10 +248,10 @@ textarea.field{height:auto;min-height:88px;padding:9px 11px;resize:vertical}
       <div class="glass box flush table-wrap">
         <table class="table"><thead><tr><th>Customer</th><th>Status</th><th>Date</th><th class="num">Amount</th></tr></thead>
           <tbody>
-            <tr><td>Customer name</td><td><span class="pill" style="--c:var(--c3)">Succeeded</span></td><td class="sub">Nov 13</td><td class="num">$1,240.00</td></tr>
-            <tr><td>Customer name</td><td><span class="pill" style="--c:var(--c1)">Pending</span></td><td class="sub">Nov 13</td><td class="num">$86.50</td></tr>
-            <tr><td>Customer name</td><td><span class="pill" style="--c:var(--alert)">Failed</span></td><td class="sub">Nov 12</td><td class="num">$310.00</td></tr>
-            <tr><td>Customer name</td><td><span class="pill" style="--c:var(--c3)">Succeeded</span></td><td class="sub">Nov 12</td><td class="num">$4,800.00</td></tr>
+            <tr><td>Customer name</td><td><span class="status" style="--c:var(--c3)">Succeeded</span></td><td class="sub">Nov 13</td><td class="num">$1,240.00</td></tr>
+            <tr><td>Customer name</td><td><span class="status" style="--c:var(--c1)">Pending</span></td><td class="sub">Nov 13</td><td class="num">$86.50</td></tr>
+            <tr><td>Customer name</td><td><span class="status" style="--c:var(--alert)">Failed</span></td><td class="sub">Nov 12</td><td class="num">$310.00</td></tr>
+            <tr><td>Customer name</td><td><span class="status" style="--c:var(--c3)">Succeeded</span></td><td class="sub">Nov 12</td><td class="num">$4,800.00</td></tr>
           </tbody></table>
       </div>
     </main>
@@ -272,12 +272,12 @@ textarea.field{height:auto;min-height:88px;padding:9px 11px;resize:vertical}
       <div class="glass box flush table-wrap">
         <table class="table"><thead><tr><th>Name</th><th>Status</th><th>Email</th><th>Date</th><th class="num">Amount</th></tr></thead>
           <tbody>
-            <tr><td>Record name</td><td><span class="pill" style="--c:var(--c3)">Succeeded</span></td><td class="sub">name@example.com</td><td class="sub">Nov 13</td><td class="num">$1,240.00</td></tr>
-            <tr><td>Record name</td><td><span class="pill" style="--c:var(--c1)">Pending</span></td><td class="sub">name@example.com</td><td class="sub">Nov 13</td><td class="num">$86.50</td></tr>
-            <tr><td>Record name</td><td><span class="pill" style="--c:var(--alert)">Failed</span></td><td class="sub">name@example.com</td><td class="sub">Nov 12</td><td class="num">$310.00</td></tr>
-            <tr><td>Record name</td><td><span class="pill" style="--c:var(--c3)">Succeeded</span></td><td class="sub">name@example.com</td><td class="sub">Nov 12</td><td class="num">$4,800.00</td></tr>
-            <tr><td>Record name</td><td><span class="pill" style="--c:var(--c3)">Succeeded</span></td><td class="sub">name@example.com</td><td class="sub">Nov 11</td><td class="num">$725.00</td></tr>
-            <tr><td>Record name</td><td><span class="pill" style="--c:var(--c1)">Pending</span></td><td class="sub">name@example.com</td><td class="sub">Nov 10</td><td class="num">$2,150.00</td></tr>
+            <tr><td>Record name</td><td><span class="status" style="--c:var(--c3)">Succeeded</span></td><td class="sub">name@example.com</td><td class="sub">Nov 13</td><td class="num">$1,240.00</td></tr>
+            <tr><td>Record name</td><td><span class="status" style="--c:var(--c1)">Pending</span></td><td class="sub">name@example.com</td><td class="sub">Nov 13</td><td class="num">$86.50</td></tr>
+            <tr><td>Record name</td><td><span class="status" style="--c:var(--alert)">Failed</span></td><td class="sub">name@example.com</td><td class="sub">Nov 12</td><td class="num">$310.00</td></tr>
+            <tr><td>Record name</td><td><span class="status" style="--c:var(--c3)">Succeeded</span></td><td class="sub">name@example.com</td><td class="sub">Nov 12</td><td class="num">$4,800.00</td></tr>
+            <tr><td>Record name</td><td><span class="status" style="--c:var(--c3)">Succeeded</span></td><td class="sub">name@example.com</td><td class="sub">Nov 11</td><td class="num">$725.00</td></tr>
+            <tr><td>Record name</td><td><span class="status" style="--c:var(--c1)">Pending</span></td><td class="sub">name@example.com</td><td class="sub">Nov 10</td><td class="num">$2,150.00</td></tr>
           </tbody></table>
       </div>
     </main>

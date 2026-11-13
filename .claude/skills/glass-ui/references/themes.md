@@ -31,7 +31,7 @@ These values come from third-party breakdowns of stripe.com and Stripe's commonl
 - **Colour:** blurple `#635BFF` for actions, navy `#0A2540` for headings, `#425466` slate, `#F6F9FC` page, `#E3E8EE` borders, `#30313D` body text, `#0570DE` info blue, `#DF1B41` danger. Some analyses give the current primary as `#533AFD`.
 - **Backdrop:** a band of magenta `#EF008F`, sky `#6EC3F4`, violet `#7038FF` and amber `#FFBA27` across the top with a slanted bottom edge. `scripts/make_mesh.py` recreates it (band 0.46, -12° skew, seed 5).
 - **Type:** Stripe uses Söhne (licensed), light and large for headlines. The kit uses Inter with `ss01`/`cv11` as the free stand-in, and nothing else: no serif, slab or monospace faces.
-- **Depth and shape:** soft layered blue-grey shadows instead of borders, pill buttons, 8px controls, 12px boxes, tinted badges.
+- **Depth and shape:** soft layered blue-grey shadows instead of borders, pill buttons, 8px controls, 12px boxes. Status is coloured text, never a tinted badge.
 
 **Brand use:** don't use Stripe's logo, wordmark or name as a page's brand, or make a page that passes as Stripe's own. Stripe's Marks Usage Terms allow noting that you use Stripe; anything more needs their permission (trademarks@stripe.com).
 
