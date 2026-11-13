@@ -1,0 +1,110 @@
+{
+ "version": "2026-11-14.7",
+ "header": {
+  "deal": "Corelane Fitness",
+  "ae": null,
+  "acv": {
+   "amount": 210000,
+   "quote": "Two hundred and ten K ACV"
+  },
+  "outcome": "Won",
+  "competitor": "Global Payments",
+  "tag": "Value proof",
+  "reason": "Won memberships only after Tobi showed which failed renewals in their own file could be recovered. Greg, the controller, then signed. The AE first credited Maya. Front desks stay with Global."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with how much churn is really failed cards.",
+   "line": {
+    "id": "B2",
+    "text": "AI-powered Smart Retries, card account updater, and cancellation surveys work together to keep revenue flowing"
+   },
+   "why": "Corelane's board churn rose two quarters, and the failed-card share was bigger than anyone expected.",
+   "quote": "The second bucket was a lot bigger than anyone expected.",
+   "who": "Speaker 2, account executive"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Show the controller recovered renewals in their own numbers.",
+   "line": null,
+   "why": "Greg, the controller, sat on the contract two weeks, then signed four days after seeing their own data.",
+   "quote": "Greg decided whether anybody got chosen.",
+   "who": "Speaker 2, account executive"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Answer contract length and the cost of leaving in plain terms.",
+   "line": null,
+   "why": "After Global's offer, which the rep only heard about from Maya, questions turned to contract terms and exit costs.",
+   "quote": "what's the contract term, what does it cost to get out",
+   "who": "Speaker 2, account executive"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Replace 'unified commerce' with plain words about front-desk readers.",
+   "line": {
+    "id": "S1",
+    "text": "Unify online and in-store commerce: the line between online and in-store has all but disappeared"
+   },
+   "why": "When the rep said 'unified commerce,' Maya, the head of digital, asked whether it just meant the readers.",
+   "quote": "is that the readers?",
+   "who": "Maya, head of digital"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add a customer story of our reader inside studio software.",
+   "line": {
+    "id": "S2",
+    "text": "Stripe Terminal is a point of sale system that unifies your online and offline channels"
+   },
+   "why": "Maya wanted check-in and sales on one screen, saw only a partner demo, and the front desks stayed with Global.",
+   "quote": "the studio managers will revolt.",
+   "who": "Maya, head of digital"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'members who never meant to leave' instead of 'reduce churn'.",
+   "line": {
+    "id": "B1",
+    "text": "Monetize faster with Stripe Billing. Manage pricing, reduce churn, and grow revenue on one platform"
+   },
+   "why": "Maya, the head of digital, used this phrase for members lost to failed cards.",
+   "quote": "members who never meant to leave.",
+   "who": "Maya, head of digital"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 72442,
+  "cost": 0.2088395,
+  "stage_ms": {
+   "reader": 46056,
+   "analyst": 26386
+  },
+  "stage_cost": {
+   "reader": 0.07428350000000002,
+   "analyst": 0.134556
+  }
+ }
+}

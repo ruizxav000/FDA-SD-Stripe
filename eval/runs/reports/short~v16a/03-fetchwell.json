@@ -1,0 +1,110 @@
+{
+ "version": "2026-11-14.7",
+ "header": {
+  "deal": "Fetchwell",
+  "ae": "Priya",
+  "acv": {
+   "amount": 180000,
+   "quote": "A hundred and eighty K a year, on a three-year term."
+  },
+  "outcome": "Won",
+  "competitor": "Braintree",
+  "tag": "Developer experience",
+  "reason": "A Fetchwell engineer built a working sitter pay flow over a weekend with our docs and sandbox. That turned a bake-off into a win. Priya called it clean, but PayPal, Venmo and saved-card questions stayed open."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with paying sitters locally without engineers babysitting the code.",
+   "line": {
+    "id": "H2",
+    "text": "Financial infrastructure for global growth"
+   },
+   "why": "Fetchwell was launching Canada and the UK while two engineers just kept sitter payments working.",
+   "quote": "Two engineers more or less full-time just keeping sitter payments working.",
+   "who": "Priya, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Speak to the engineering lead about build speed, not finance.",
+   "line": {
+    "id": "H3",
+    "text": "Programmable financial infrastructure"
+   },
+   "why": "Daniel, VP of Engineering, signed. The CFO joined for ten minutes and asked one question.",
+   "quote": "this is an engineering decision, finance will sign what I bring them.",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "State plainly what happens to PayPal, Venmo and saved cards.",
+   "line": null,
+   "why": "After a Braintree call, Daniel's team asked what they would lose. Priya only guesses Braintree caused it.",
+   "quote": "It went from 'how fast can we build this' to 'what do we lose.'",
+   "who": "Priya, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Cut the average acceptance-rate claim when bookings are small.",
+   "line": {
+    "id": "A1",
+    "text": "Authorization Boost increases acceptance rates by 3.8% on average"
+   },
+   "why": "Daniel waved off the acceptance-rate slide, while the docs and sandbox got the reaction.",
+   "quote": "our average booking is 38 dollars, I'm not losing sleep over auth rates.",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add a story of a similar-size company moving saved cards safely.",
+   "line": null,
+   "why": "Daniel asked for one, Priya never answered, and it came up again at kickoff unresolved.",
+   "quote": "who's done this at our size without losing cards?",
+   "who": "Daniel, VP of Engineering"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'sitter pay' and 'paid by Friday' instead of 'payouts'.",
+   "line": {
+    "id": "C2",
+    "text": "Instant payouts 24x7, including weekends and holidays"
+   },
+   "why": "Fetchwell says 'sitter pay' and 'the app', and the CFO only asked when sitters get paid.",
+   "quote": "paid by Friday",
+   "who": "Fetchwell team, as reported by Priya, AE"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 57463,
+  "cost": 0.1916026,
+  "stage_ms": {
+   "reader": 32131,
+   "analyst": 25332
+  },
+  "stage_cost": {
+   "reader": 0.0543106,
+   "analyst": 0.137292
+  }
+ }
+}

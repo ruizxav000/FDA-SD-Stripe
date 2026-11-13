@@ -1,0 +1,107 @@
+{
+ "version": "2026-11-14.7",
+ "header": {
+  "deal": "Fernbrook Garden Supply",
+  "ae": "Sam",
+  "acv": {
+   "amount": 95000,
+   "quote": "Ninety-five K ACV, on a two-year term."
+  },
+  "outcome": "Lost",
+  "competitor": "Fiserv (through their bank)",
+  "tag": "Value proof",
+  "reason": "Martin, the CFO, saw only a rate comparison and nothing showing what failed orders cost Fernbrook. Sam blames price, but we never put a Fernbrook figure in front of Martin."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with big orders failing at checkout, not average approval uplift.",
+   "line": {
+    "id": "A1",
+    "text": "Authorization Boost increases acceptance rates by 3.8% on average"
+   },
+   "why": "Lucy came to us because one in twelve online orders failed, and big baskets failed most.",
+   "quote": "about one in twelve online orders was failing at the payment step",
+   "who": "Sam, account executive"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Tell the CFO what failed orders cost, right beside our rate.",
+   "line": null,
+   "why": "Sam never met Martin, the CFO, who saw both offers as the same and judged on price.",
+   "quote": "he's not going to pay more for the same thing",
+   "who": "Martin, CFO"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Say what a lower rate leaves unfixed: big orders still failing.",
+   "line": null,
+   "why": "Lucy told Sam the bank only cut its rate, and her questions then switched to rate only.",
+   "quote": "After the bank came back, every email was the rate.",
+   "who": "Sam, account executive"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Swap the average uplift claim for why big orders get declined.",
+   "line": {
+    "id": "A1",
+    "text": "Authorization Boost increases acceptance rates by 3.8% on average"
+   },
+   "why": "Lucy nodded through Farah's big-order explanation, but only our quote reached Martin's page.",
+   "quote": "Lucy was nodding the whole way.",
+   "who": "Sam, account executive"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add a one-page case pricing failed orders in the customer's own numbers.",
+   "line": null,
+   "why": "Lucy asked for something to hand Martin and got the deck with average uplift.",
+   "quote": "something she could hand Martin. Like a one-page business case.",
+   "who": "Sam, account executive"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say orders dying at the last step, not acceptance rates.",
+   "line": {
+    "id": "A1",
+    "text": "Authorization Boost increases acceptance rates by 3.8% on average"
+   },
+   "why": "Lucy described lost greenhouse sales and the card saying no, never rates.",
+   "quote": "orders dying at the last step",
+   "who": "Lucy, ecommerce director"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 63428,
+  "cost": 0.20766769999999998,
+  "stage_ms": {
+   "reader": 37180,
+   "analyst": 26248
+  },
+  "stage_cost": {
+   "reader": 0.0596757,
+   "analyst": 0.14799199999999998
+  }
+ }
+}

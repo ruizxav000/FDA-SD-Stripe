@@ -1,0 +1,104 @@
+{
+ "version": "2026-11-14.7",
+ "header": {
+  "deal": "Tixhaven",
+  "ae": "Jordan",
+  "acv": {
+   "amount": 250000,
+   "quote": "Two hundred and fifty K ACV."
+  },
+  "outcome": "Lost",
+  "competitor": null,
+  "tag": "Support and service",
+  "reason": "Halima, the COO, picked the rival because it brought named people and on-call cover for on-sales. Our support tiers sounded like 'a queue with a faster timer.' Jordan thought the load test had won it."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with who answers when payments fail mid on-sale.",
+   "line": null,
+   "why": "Payments failed four minutes into an arena on-sale, and the old provider replied only after it ended.",
+   "quote": "They got a reply after the on-sale was over.",
+   "who": "Jordan, AE"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Speak to the COO about a failed on-sale, not load tests.",
+   "line": null,
+   "why": "Halima decided alone in one meeting. Ben, the CTO, wanted us, and her only answer to his load test was 'good.'",
+   "quote": "it was Halima's call and she made it in one meeting.",
+   "who": "Ben, CTO"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Name the people and on-call cover behind big launch days.",
+   "line": {
+    "id": "P3",
+    "text": "Enterprise support: a technical account manager embedded in your team, with a 15-minute response for critical issues"
+   },
+   "why": "Ben said the rival brought its real account team and promised on-call cover. Jordan's view that this over-promised is only his guess.",
+   "quote": "someone on call for every major on-sale",
+   "who": "Jordan, AE"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Replace tiers and response times with the named person who answers.",
+   "line": {
+    "id": "P2",
+    "text": "Premium support: a dedicated support manager who has ongoing context about your business"
+   },
+   "why": "When Halima asked who her person was, Jordan's walk through support tiers turned her against us.",
+   "quote": "so it's a queue with a faster timer.",
+   "who": "Halima, COO"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Show on paper who watches and answers on on-sale morning.",
+   "line": null,
+   "why": "Halima asked for an on-sale plan, and we had none. Jordan also had no ticketing customer to vouch for us.",
+   "quote": "She wanted to see, on paper, what we do on an on-sale morning.",
+   "who": "Jordan, AE"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'what happens when it's down,' not uptime history.",
+   "line": null,
+   "why": "Halima and her team never said 'support.' They asked 'who,' and she rejected uptime as the reason to buy.",
+   "quote": "I don't buy uptime, I buy what happens when it's down.",
+   "who": "Halima, COO"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 82630,
+  "cost": 0.2179271,
+  "stage_ms": {
+   "reader": 53891,
+   "analyst": 28739
+  },
+  "stage_cost": {
+   "reader": 0.08193910000000001,
+   "analyst": 0.135988
+  }
+ }
+}

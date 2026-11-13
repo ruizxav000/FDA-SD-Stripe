@@ -198,7 +198,10 @@ select.field{padding-right:28px}
 .fi + .fi{border-top:1px solid var(--hair-faint)}
 .fi .k{font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--label);padding-top:3px}
 .fi .f{font-size:15px;line-height:1.45;color:var(--strong);font-weight:500}
-.fi .q{display:block;margin-top:5px;font-size:13px;line-height:1.45;color:var(--mute);font-weight:400}
+.fi .ln{display:block;margin-top:3px;font-size:12.5px;line-height:1.4;color:var(--mute);font-weight:400}
+.fi .ln .lt{color:var(--accent)}
+.fi .w{display:block;margin-top:3px;font-size:14px;line-height:1.45;color:var(--ink);font-weight:400}
+.fi .q{display:block;margin-top:4px;font-size:12.5px;line-height:1.45;color:var(--mute);font-weight:400}
 .fi .q::before{content:"\201C"} .fi .q .end::after{content:"\201D"}
 .fi.nc .f{color:var(--mute);font-size:13.5px}
 @media (max-width:860px){ .fi{grid-template-columns:minmax(0,1fr)} }
@@ -654,7 +657,10 @@ function insightRows(r) {
   return h("div", { class: "findings" }, ...fs.map((f) => h("div", { class: "fi" + (f.covered === false ? " nc" : "") },
     h("span", { class: "k", text: f.label || "" }),
     f.covered === false ? h("span", { class: "f", text: "Not covered in the interview." })
-      : h("span", { class: "f" }, f.finding, f.quote ? h("span", { class: "q" }, h("span", { class: "end", text: f.quote }), f.who ? " — " + f.who : "") : null))));
+      : h("span", { class: "f" }, f.finding,
+          f.line ? h("span", { class: "ln" }, "Our line: ", h("span", { class: "lt", text: "\u201C" + f.line.text + "\u201D" })) : null,
+          f.why ? h("span", { class: "w", text: f.why }) : null,
+          f.quote ? h("span", { class: "q" }, h("span", { class: "end", text: f.quote }), f.who ? " — " + f.who : "") : null))));
 }
 
 /* ════════════════════ FEED ════════════════════ */
@@ -750,9 +756,7 @@ async function fillDetail(c, detail) {
   if (c.example) report = (window.EXAMPLES[Number(c.rid.slice(2))] || {}).report;
   else if (caps.db) { try { const s = await caps.db.doc(`reviews/${c.uid}/items/${c.rid}`).get(); report = s.exists ? s.data() : null; } catch {} }
   if (!report) { detail.replaceChildren(h("p", { class: "note err", text: "This report couldn't be loaded. It may have been deleted." })); return; }
-  const H = report.header || {};
   detail.replaceChildren(h("div", { class: "detail-inner" },
-    H.acv && H.acv.quote ? h("p", { class: "meta-line", text: "Deal size from the interview: \u201C" + H.acv.quote + "\u201D" }) : null,
     insightRows(report)));
 }
 document.querySelectorAll("[data-outcome]").forEach((b) => b.addEventListener("click", () => {

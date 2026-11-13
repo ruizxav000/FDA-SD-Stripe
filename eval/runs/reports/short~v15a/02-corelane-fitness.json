@@ -1,0 +1,92 @@
+{
+ "version": "2026-11-14.6",
+ "header": {
+  "deal": "Corelane Fitness",
+  "ae": null,
+  "acv": {
+   "amount": 210000,
+   "quote": "Two hundred and ten K ACV."
+  },
+  "outcome": "Won",
+  "competitor": "Global Payments",
+  "tag": "Value proof",
+  "reason": "Won memberships only, and the front desks stay with Global. Greg, the controller, signed four days after Tobi showed recoverable failed renewals in their own data. The rep first credited Maya."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Aim our message at churn caused by failed cards, not cancellations.",
+   "why": "Corelane split board-reported churn and found far more members lost to failed cards than expected.",
+   "quote": "The second bucket was a lot bigger than anyone expected.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Show the controller what failed payments cost, using the customer's own file.",
+   "why": "Maya chose us, but the contract sat with Greg for two weeks until he saw the data.",
+   "quote": "Maya chose us. Greg decided whether anybody got chosen.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Answer front-desk reader and exit-fee questions before the incumbent raises them.",
+   "why": "Per Maya, Global Payments offered a front-desk terminal bundle, then questions turned to readers and exit fees.",
+   "quote": "Greg asked about termination fees twice.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Lead with recovery shown on the customer's own failed renewals.",
+   "why": "Tobi's review of their failed renewals got Greg talking, while the global slide got silence.",
+   "quote": "Greg hadn't said a word in two meetings, and he asked for the spreadsheet.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a live demo of our reader inside their studio software.",
+   "why": "Corelane wanted check-in and sales on one screen, and only saw a partner demo later.",
+   "quote": "the studio managers will revolt.",
+   "who": "Maya, head of digital"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Call failed-card churn 'members who never meant to leave.'",
+   "why": "Maya used this phrase herself, while our phrase 'unified commerce' made her ask about readers.",
+   "quote": "members who never meant to leave.",
+   "who": "Maya, head of digital"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 70647,
+  "cost": 0.20074350000000002,
+  "stage_ms": {
+   "reader": 46056,
+   "analyst": 24591
+  },
+  "stage_cost": {
+   "reader": 0.07428350000000002,
+   "analyst": 0.12646000000000002
+  }
+ }
+}

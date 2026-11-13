@@ -1,0 +1,92 @@
+{
+ "version": "2026-11-14.6",
+ "header": {
+  "deal": "Kestrel Learning",
+  "ae": "Elena",
+  "acv": {
+   "amount": 320000,
+   "quote": "The account was worth about three hundred and twenty K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "tag": "Approval rates",
+  "reason": "The international half went to Adyen, whose test showed approval results by country, while we sent averages and our own analysis came late. Elena says nothing could be done, yet it had fixable findings."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Flag accounts when a new payments leader arrives, and meet them early.",
+   "why": "Stefan's first move was pulling declines by country, and Elena didn't know he'd been hired.",
+   "quote": "the first thing he did was pull declines by country",
+   "who": "Elena, rep"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Give the head of payments his own numbers to take to finance.",
+   "why": "Stefan recommended the switch and the CFO approved it, but we only gave Stefan averages.",
+   "quote": "I can't take an average to my CFO.",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Offer a test on the customer's own traffic before a competitor does.",
+   "why": "Adyen tested Kestrel's international traffic, and Elena never saw the results or had an answer to 'local acquiring.'",
+   "quote": "Adyen ran a test on a slice of their international traffic",
+   "who": "Elena, rep"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Replace the average uplift claim with the customer's own approval rates.",
+   "why": "The average uplift number from the Authorization Boost deck got silence, and Stefan asked for his own number.",
+   "quote": "that's an average. What's mine?",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Have a country-by-country approval analysis ready in days, not weeks.",
+   "why": "Stefan called our analysis the most useful thing we sent, but it arrived three weeks late.",
+   "quote": "that landed three weeks after he asked, and by then the test was finished",
+   "who": "Elena, rep"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'approvals' and 'money left on the table,' not 'authorization' or 'uplift.'",
+   "why": "Stefan's headline for the problem was money left on the table, and he says approvals.",
+   "quote": "Money left on the table.",
+   "who": "Stefan, head of payments"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 59675,
+  "cost": 0.18747779999999997,
+  "stage_ms": {
+   "reader": 29348,
+   "analyst": 30327
+  },
+  "stage_cost": {
+   "reader": 0.0479498,
+   "analyst": 0.13952799999999999
+  }
+ }
+}

@@ -175,7 +175,7 @@ async function runShort(cfgFull, d) {
 
 function judgeShortPrompt(d, report) {
   const clean = { header: report.header, findings: report.findings };
-  return `You are grading a short AI-written deal review against an answer key written by a product-marketing lead. The review has only: account, ACV, outcome, competitor, a reason tag, a one-to-two sentence reason, and six labelled insights (trigger, who decided, competitor, our message, missing proof, the customer's words), each an action with a supporting quote. Ignore the answer key's section-by-section detail; use it to judge whether this short review got the essentials right. Be strict and consistent.
+  return `You are grading a short AI-written deal review against an answer key written by a product-marketing lead. The review has only: account, ACV, outcome, competitor, a reason tag, a one-to-two sentence reason, and six labelled insights (trigger, who decided, competitor, our message, missing proof, the customer's words), each a messaging change (sometimes tied to one of our current messaging lines), a one-line why, and a supporting quote. Ignore the answer key's section-by-section detail; use it to judge whether this short review got the essentials right. Be strict and consistent.
 
 Scoring:
 - account: 1 = the account name (or, if the transcript never names it, a fair short description); 0 otherwise.
@@ -185,6 +185,8 @@ Scoring:
 - reason: 2 = names the real reason the key gives (not the rep's framing where the key says they differ); 1 = partly; 0 = wrong or the rep's framing.
 - insights: each of trigger, decider, competitor, message, proof, words is meant to be an ACTION for the product marketing team (a change to messaging, positioning, proof assets or what reps say), backed by a quote. Score each 0-1: 1 = a specific, actionable step that follows from the evidence and points the same way as the key's insight / expected messaging direction for that topic; 0.5 = actionable but generic, or right direction but mostly a description of what happened; 0 = a summary with no action, wrong, or "not covered" when the transcript had it.
 - repetitive: true if two findings make the same point.
+- messaging: 0-2. The readers are product marketers sharpening messaging. 2 = every action is a messaging change (what to lead with, say, stop saying, or which proof point to add), tied to the right current line where one applies; 1 = some actions are sales process or tactics rather than messaging; 0 = mostly not about messaging.
+- readable: 0-2. Read it as a busy marketer skimming a feed who was not in the call. 2 = every action and its why is understood in one quick read: short, plain words, no jargon. 1 = mostly clear but some items are dense, long or use sales jargon. 0 = hard to follow.
 - fails: list every instance of invented content (a claim, figure, name or quote not supported by the transcript) and every "Fails if" condition the review triggers. Empty list if none.
 
 ANSWER KEY
@@ -199,7 +201,7 @@ REVIEW (JSON)
 ${JSON.stringify(clean)}
 
 Reply with ONLY this JSON:
-{"account":0,"acv":0,"outcome":0,"tag":0,"reason":0,"insights":{"trigger":0,"decider":0,"competitor":0,"message":0,"proof":0,"words":0},"repetitive":false,"fails":[""],"notes":"2 sentences: what it got right, what it missed"}`;
+{"account":0,"acv":0,"outcome":0,"tag":0,"reason":0,"insights":{"trigger":0,"decider":0,"competitor":0,"message":0,"proof":0,"words":0},"repetitive":false,"readable":0,"messaging":0,"fails":[""],"notes":"2 sentences: what it got right, what it missed"}`;
 }
 
 // ── Judge ──────────────────────────────────────────────────────────
@@ -218,6 +220,8 @@ Scoring:
 - messaging: 2 = the changes point the same direction as the key's "Messaging changes: expected direction" and each rests on real evidence; 1 = partly; 0 = off-target or unsupported.
 - must_catch: for EACH checkbox item in the key's "Must catch" list, pass true/false.
 - repetitive: true if two findings make the same point.
+- messaging: 0-2. The readers are product marketers sharpening messaging. 2 = every action is a messaging change (what to lead with, say, stop saying, or which proof point to add), tied to the right current line where one applies; 1 = some actions are sales process or tactics rather than messaging; 0 = mostly not about messaging.
+- readable: 0-2. Read it as a busy marketer skimming a feed who was not in the call. 2 = every action and its why is understood in one quick read: short, plain words, no jargon. 1 = mostly clear but some items are dense, long or use sales jargon. 0 = hard to follow.
 - fails: list every instance of invented content (a quote or excerpt not in the transcript, a figure, name or result not in the transcript, a definite answer where the key says unknown) and every "Fails if" condition the report triggers. Empty list if none.
 
 ANSWER KEY

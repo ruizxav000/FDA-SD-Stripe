@@ -1,0 +1,104 @@
+{
+ "version": "2026-11-14.7",
+ "header": {
+  "deal": "Pikeview Software",
+  "ae": "Renee",
+  "acv": {
+   "amount": 75000,
+   "quote": "It would have been about seventy-five K a year."
+  },
+  "outcome": "No decision",
+  "competitor": "None (status quo)",
+  "tag": "No decision",
+  "reason": "Diane, the CFO, froze all new vendor projects after a missed Q3. Owen had no payback number of Pikeview's own to show her. Renee calls it timing, but that cost case was never built."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with how long a pricing change takes on homegrown billing.",
+   "line": {
+    "id": "B1",
+    "text": "Monetize faster with Stripe Billing. Manage pricing, reduce churn, and grow revenue on one platform"
+   },
+   "why": "Owen wanted a rebuild because every price change took a quarter, but nothing set a date.",
+   "quote": "every pricing change takes them a quarter",
+   "who": "Renee, account executive"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Show finance why homegrown billing is urgent, not a nice extra.",
+   "line": null,
+   "why": "Diane, the CFO, froze the deal and never met us. She only funds what is on fire.",
+   "quote": "if it isn't on fire, it isn't funded.",
+   "who": "Diane, CFO (relayed by Owen)"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Spell out what keeping homegrown billing costs each year.",
+   "line": null,
+   "why": "Renee says the only rival was doing nothing. Near the end, Owen's questions turned to payback for finance.",
+   "quote": "do you have something that shows payback?",
+   "who": "Owen, VP of Product"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Cut 'grow revenue' from the billing pitch.",
+   "line": {
+    "id": "B1",
+    "text": "Monetize faster with Stripe Billing. Manage pricing, reduce churn, and grow revenue on one platform"
+   },
+   "why": "Owen loved the price-change demo but pushed back when Renee talked about growing revenue.",
+   "quote": "we're not trying to grow revenue with billing",
+   "who": "Owen, VP of Product"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add a payback example built on one customer's own billing costs.",
+   "line": null,
+   "why": "Renee sent the general ROI deck, but Owen needed a Pikeview number to win over Diane.",
+   "quote": "I can't get this past Diane without a number that's ours.",
+   "who": "Owen, VP of Product"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Describe homegrown billing as 'a tax on the roadmap'.",
+   "line": null,
+   "why": "Owen used this phrase for his problem, and it ties to the demo he liked most.",
+   "quote": "stop it being a tax on the roadmap.",
+   "who": "Owen, VP of Product"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 59932,
+  "cost": 0.1949129,
+  "stage_ms": {
+   "reader": 32097,
+   "analyst": 27835
+  },
+  "stage_cost": {
+   "reader": 0.055552899999999995,
+   "analyst": 0.13936
+  }
+ }
+}

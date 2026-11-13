@@ -1,0 +1,92 @@
+{
+ "version": "2026-11-14.6",
+ "header": {
+  "deal": "Marlowe & Finch",
+  "ae": "Tom",
+  "acv": {
+   "amount": 600000,
+   "quote": "We proposed six hundred K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "tag": "In-store and online together",
+  "reason": "Angela, the COO, chose Adyen's store rollout team and one vendor for tills and web, while we only described till returns. Tom believed Raj decided and that we were ahead."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Aim store messaging at online orders that stores can't return.",
+   "why": "The story everyone there tells is Angela watching the returns queue on December 27th.",
+   "quote": "The store couldn't see the online order",
+   "who": "Tom, rep"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Get regular time with the COO who owns the stores.",
+   "why": "Angela signed with Adyen, but Tom treated Raj as the decider and met her only once.",
+   "quote": "Once. The kickoff.",
+   "who": "Tom, rep"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Bring people who have run store rollouts to store meetings.",
+   "why": "Raj told Tom that Adyen brought a store rollout team. Later, 11 of 14 questions were about stores.",
+   "quote": "they came in with a retail team, people who'd done store rollouts",
+   "who": "Tom, rep"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Replace the 'one platform' slide with a step-by-step till return.",
+   "why": "Bev dismissed our 'unified commerce' slide and asked how a return works at the till.",
+   "quote": "that's a diagram.",
+   "who": "Bev, head of store operations"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a live demo of an online order returned at a till.",
+   "why": "Angela's team asked to watch a return live at a till, and we only described it.",
+   "quote": "We described it. We never showed it.",
+   "who": "Tom, rep"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'the tills' and 'one customer, one basket', not 'unified commerce'.",
+   "why": "Bev and Angela never said 'unified commerce'. We said 'point of sale' while they said 'the tills'.",
+   "quote": "One system for the tills and the website.",
+   "who": "Bev, head of store operations"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 74467,
+  "cost": 0.204351,
+  "stage_ms": {
+   "reader": 50845,
+   "analyst": 23622
+  },
+  "stage_cost": {
+   "reader": 0.079851,
+   "analyst": 0.1245
+  }
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "version": "2026-11-14.7",
+ "header": {
+  "deal": "Kestrel Learning",
+  "ae": "Elena",
+  "acv": {
+   "amount": 320000,
+   "quote": "The account was worth about three hundred and twenty K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "tag": "Approval rates",
+  "reason": "Kestrel moved its international half to Adyen after a country-by-country test on its own traffic. Elena calls it decided early, but we offered averages and our useful country analysis came weeks late."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with declines by country, the first thing Stefan checked.",
+   "line": null,
+   "why": "Stefan, Kestrel's first head of payments, started by pulling declines by country and saw weak international markets.",
+   "quote": "the first thing he did was pull declines by country",
+   "who": "Elena, account executive"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Give the CFO a number for his own business, not an average.",
+   "line": {
+    "id": "A1",
+    "text": "Authorization Boost increases acceptance rates by 3.8% on average"
+   },
+   "why": "Stefan recommended the move and the CFO approved it. Stefan needed a figure he could defend there.",
+   "quote": "I can't take an average to my CFO.",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Explain where we stand on 'local acquiring', country by country.",
+   "line": null,
+   "why": "After Adyen's test, Stefan asked about approval rates by country, card type and issuer. Elena had no answer.",
+   "quote": "The phrase he kept using was 'local acquiring.'",
+   "who": "Elena, account executive"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Stop leading with the average uplift claim.",
+   "line": {
+    "id": "A1",
+    "text": "Authorization Boost increases acceptance rates by 3.8% on average"
+   },
+   "why": "Stefan pushed back on the average uplift, and Elena says the number got silence.",
+   "quote": "that's an average. What's mine?",
+   "who": "Stefan, head of payments"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Show a market-by-market view of the customer's own approvals, with reasons.",
+   "line": null,
+   "why": "Our analysis had fixable findings and Stefan called it most useful, but it arrived after Adyen's test.",
+   "quote": "A market-by-market view of their own approval rates, with reasons.",
+   "who": "Elena, account executive"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'approvals' and 'money left on the table', not 'authorization'.",
+   "line": {
+    "id": "A1",
+    "text": "Authorization Boost increases acceptance rates by 3.8% on average"
+   },
+   "why": "Stefan described his problem as lost money and says 'approvals', never our word 'authorization'.",
+   "quote": "Money left on the table.",
+   "who": "Stefan, head of payments"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 62334,
+  "cost": 0.1978738,
+  "stage_ms": {
+   "reader": 29348,
+   "analyst": 32986
+  },
+  "stage_cost": {
+   "reader": 0.0479498,
+   "analyst": 0.149924
+  }
+ }
+}

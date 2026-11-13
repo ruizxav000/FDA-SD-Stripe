@@ -1,0 +1,92 @@
+{
+ "version": "2026-11-14.6",
+ "header": {
+  "deal": "Fernbrook Garden Supply",
+  "ae": "Sam",
+  "acv": {
+   "amount": 95000,
+   "quote": "Around ninety-five thousand a year. Ninety-five K ACV, on a two-year term."
+  },
+  "outcome": "Lost",
+  "competitor": "Fiserv (through their bank)",
+  "tag": "Value proof",
+  "reason": "Martin, the CFO, saw only a side-by-side rate page. Nothing showed what failed orders cost Fernbrook. Sam blames price, but we never showed the value in their numbers."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Aim messaging at retailers losing big orders at checkout.",
+   "why": "Lucy came inbound because one in twelve online orders failed at payment, worse on big baskets.",
+   "quote": "one in twelve online orders was failing at the payment step",
+   "who": "Sam, rep"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Put the cost of failed orders in front of the finance decider.",
+   "why": "Martin decided from a rate-only page. Sam never met him, and Lucy carried our case alone.",
+   "quote": "Martin said no. Lucy told me. I never met him.",
+   "who": "Sam, rep"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Prepare buyers for their bank cutting its rate to keep them.",
+   "why": "Lucy said the bank offered only a better rate. After that her questions moved from declines to rate.",
+   "quote": "After the bank came back, every email was the rate.",
+   "who": "Sam, rep"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Keep explaining why big orders get declined and how we fix it.",
+   "why": "Farah's explanation of big-ticket declines had Lucy nodding, but it never reached Martin.",
+   "quote": "Lucy was nodding the whole way.",
+   "who": "Sam, rep"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a one-page business case a buyer can hand to finance.",
+   "why": "Lucy asked for one for Martin. Sam sent the deck, and Farah's decline analysis never ran.",
+   "quote": "something she could hand Martin. Like a one-page business case.",
+   "who": "Sam, rep"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'orders dying at the last step' instead of 'declines'.",
+   "why": "Lucy described losing big baskets, like a four-thousand-dollar greenhouse, when the card says no.",
+   "quote": "orders dying at the last step",
+   "who": "Lucy, ecommerce director"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 60783,
+  "cost": 0.1936357,
+  "stage_ms": {
+   "reader": 37180,
+   "analyst": 23603
+  },
+  "stage_cost": {
+   "reader": 0.0596757,
+   "analyst": 0.13396
+  }
+ }
+}

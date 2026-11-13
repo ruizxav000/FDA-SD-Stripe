@@ -6,7 +6,7 @@
 (function (root) {
   "use strict";
 
-  const PIPELINE_VERSION = "2026-11-14.4";
+  const PIPELINE_VERSION = "2026-11-14.7";
 
   // ── Which model runs each stage (set from the model comparison; see eval/REPORT.md)
   const STAGE_MODELS = {
@@ -41,20 +41,31 @@
   ];
   const SECTION_KEYS = SECTIONS.map((s) => s[0]);
 
-  // ── PROVISIONAL messaging library, reconstructed from how reps describe our pitch
-  // in the test transcripts. Replace with the real messaging when it arrives.
+  // ── Our messaging: the baseline in messaging-baseline.md (Stripe's public pages, 13 Nov 2026).
+  // Insights are written against these lines.
   const MESSAGING = [
-    { id: "M1", pillar: "Positioning opener", line: "Financial infrastructure to grow globally, in every currency." },
-    { id: "M2", pillar: "Developers", line: "Built for developers: launch payments fast with our APIs, docs and sandbox." },
-    { id: "M3", pillar: "Unified commerce", line: "Online and in-store on one platform; the line between them has pretty much disappeared." },
-    { id: "M4", pillar: "Acceptance", line: "Customers see an average uplift in authorization rates with Authorization Boost and Adaptive Acceptance." },
-    { id: "M5", pillar: "Support", line: "Support plans with tiered response times, up to 24/7 coverage." },
-    { id: "M6", pillar: "ROI", line: "Proven ROI, backed by an independent economic impact study." },
-    { id: "M7", pillar: "Billing", line: "Billing that helps you grow revenue." },
-    { id: "M8", pillar: "Proof", line: "Trusted by leading businesses; see our customer stories." },
-    { id: "M9", pillar: "Reconciliation", line: "Every payout reconciles automatically to its transactions and your ERP." },
-    { id: "M10", pillar: "Recovery", line: "Recover failed payments automatically with smart retries." },
-    { id: "M11", pillar: "Marketplaces", line: "Onboard, verify and pay out to sellers worldwide, in their local currency." },
+    { id: "H1", pillar: "Company headline", line: "Financial infrastructure to grow your revenue" },
+    { id: "H2", pillar: "Company headline", line: "Financial infrastructure for global growth" },
+    { id: "H3", pillar: "Company headline", line: "Programmable financial infrastructure" },
+    { id: "A1", pillar: "Approvals", line: "Authorization Boost increases acceptance rates by 3.8% on average" },
+    { id: "A2", pillar: "Approvals", line: "Businesses on custom interchange pricing can lower card processing costs by up to 3.3%" },
+    { id: "A3", pillar: "Approvals", line: "Adaptive Acceptance adjusts the payment request and retries declines in real time" },
+    { id: "A4", pillar: "Approvals", line: "Adaptive Acceptance recovered a record $6 billion in 2024" },
+    { id: "A5", pillar: "Approvals", line: "Twilio increases its authorization rates by 10% with Stripe" },
+    { id: "S1", pillar: "Stores and online", line: "Unify online and in-store commerce: the line between online and in-store has all but disappeared" },
+    { id: "S2", pillar: "Stores and online", line: "Stripe Terminal is a point of sale system that unifies your online and offline channels" },
+    { id: "S3", pillar: "Stores and online", line: "One customer profile and card fingerprint across online and in-person purchases" },
+    { id: "S4", pillar: "Stores and online", line: "URBN consolidates $5 billion in online and in-store revenue onto Stripe" },
+    { id: "F1", pillar: "Finance", line: "Stripe automates the tedious parts of revenue reporting and reconciliation, so teams spend less time closing the books" },
+    { id: "F2", pillar: "Finance", line: "Automatic reconciliation compares order-level data with Stripe transactions and bank deposits" },
+    { id: "F3", pillar: "Finance", line: "Shipt: a revenue accounting task that took eight hours now takes under an hour" },
+    { id: "B1", pillar: "Billing", line: "Monetize faster with Stripe Billing. Manage pricing, reduce churn, and grow revenue on one platform" },
+    { id: "B2", pillar: "Billing", line: "AI-powered Smart Retries, card account updater, and cancellation surveys work together to keep revenue flowing" },
+    { id: "C1", pillar: "Marketplaces", line: "Connect manages identity verifications, KYC, and sanctions checks while onboarding your users" },
+    { id: "C2", pillar: "Marketplaces", line: "Instant payouts 24x7, including weekends and holidays" },
+    { id: "P1", pillar: "Support", line: "All Stripe customers receive 24x7 phone, email, and chat help" },
+    { id: "P2", pillar: "Support", line: "Premium support: a dedicated support manager who has ongoing context about your business" },
+    { id: "P3", pillar: "Support", line: "Enterprise support: a technical account manager embedded in your team, with a 15-minute response for critical issues" },
   ];
 
   // ════════════════════════════════════════════════════════════════
@@ -338,11 +349,11 @@ Reply with ONLY this JSON:
 
   // The six insights every review must answer (the seventh, the real reason, is the "reason" field).
   const INSIGHTS = [
-    ["trigger", "What started it", "From what started the evaluation: the moment or event our messaging should aim at."],
-    ["decider", "Who decided", "From who made the final call: who our message has to convince, and what that person needs to see. Say we never met or reached someone only if the transcript says so."],
-    ["competitor", "The competitor", "From what the customer said about the competitor and how their questions changed after meeting them: what we have to counter or pre-empt. This is secondhand: if it rests only on the AE's guess, say so."],
-    ["message", "Our message", "From which parts of our pitch landed and which got silence or pushback: what to keep, cut or change. Name the claim."],
-    ["proof", "Missing proof", "From what they asked for that we couldn't show: the proof asset, demo or reference to build."],
+    ["trigger", "What started it", "From what started the evaluation: the moment or pain our messaging should speak to."],
+    ["decider", "Who decided", "From who made the final call: what our message has to say to that person. Say we never met or reached someone only if the transcript says so."],
+    ["competitor", "The competitor", "From what the customer said about the competitor and how their questions changed: what our messaging has to answer. This is secondhand: if it rests only on the AE's guess, say so."],
+    ["message", "Our message", "From which parts of our pitch landed and which fell flat: which of our lines to keep, cut or change."],
+    ["proof", "Missing proof", "From what they asked for that we couldn't show: the proof point, number or customer story our messaging needs."],
     ["words", "Their words", "From the customer's own words for their problem: the words to use in our messaging instead of ours. The quote must be the customer's words."],
   ];
   const INSIGHT_KEYS = INSIGHTS.map((i) => i[0]);
@@ -362,19 +373,29 @@ Write:
 - outcome: exactly "Won", "Lost" or "No decision". Decide from the evidence, not the rep's framing. If nobody actually chose a competitor and the deal stalled or was frozen, it is "No decision". If only part of the business moved, pick the outcome for the part that was decided and say so in the reason.
 - competitor: who we were up against, "None (status quo)" if no one, or null if unknown.
 - tag: exactly one reason tag from the list. The outcome gives the direction: on a win, the tag is why they picked us. There is no price tag on purpose: when the rep blames price, find what was really behind it. To choose between close tags, ask what the decider was comparing when it was decided. If the interview never got to the reason, use "Not established".
-- reason: one or two plain sentences on why the deal was really won or lost. If the rep's own explanation differs from what the evidence shows, say so briefly.
-- insights: one ACTION for each of these, in this order:
+- reason: why the deal was really won or lost, in one or two short sentences, at most 35 words in total, in plain words. If the AE's own explanation is different from what really happened, say so in a few words.
+- insights: one for each of these, in this order:
 ${INSIGHTS.map(([k, n, d]) => `  - ${k} (${n}): ${d}`).join("\n")}
-  An insight is not a summary of what happened. It is something the product marketing team can act on: a change to our messaging, positioning, proof assets, or what reps say. The quote carries what happened.
-  - One sentence, starting with a verb ("Lead with...", "Build...", "Stop opening with...", "Arm the champion with...", "Use..."). Ideally under 25 words.
-  - Specific: name the message, claim, proof asset, audience or words. "Improve our messaging" is not an insight.
-  - It must follow from this deal's evidence. Frame it as something to change or test; one deal is one data point, so no "always" or "every deal".
+  The readers are product marketers whose job is to sharpen our messaging. So every action is a MESSAGING change: what to lead with, what to say, what to stop saying, or which proof point to add. Not sales process (no meetings, outreach plays, templates for reps or deal tactics).
+  Each insight has these short parts:
+  - action: the messaging change, starting with a verb. At most 12 words. One idea. (For example: "Lead with what failed orders cost, not average approval uplift.")
+  - line: the id of our current messaging line this changes, keeps or cuts (from the list below), or null when it is a new message we don't have yet.
+  - why: what happened in this deal that makes it worth doing. One sentence, at most 20 words. Use people's names. (For example: "Martin, the CFO, only compared rates, so our uplift claim never reached him.")
+  - quote: the shortest exact words from the transcript that prove it, ideally under 15 words, and who said it as "Name, role".
+  Write for a busy marketer skimming a feed, who was not in the call:
+  - Plain, everyday words. No jargon or sales-speak (not "pre-empt", "anchor", "leverage", "motion", "value proof", "CFO-facing", "champion", "per-transaction"). Say "the person who pushed for us" or use their name.
+  - Short sentences. One idea each. No stacked clauses, no semicolons.
+  - Be specific to this deal, but don't cram in every detail.
+  - It must follow from this deal's evidence. One deal is one data point, so no "always" or "every deal".
   - Each insight is different from the others and from the reason.
-  - Plus one short supporting quote copied EXACTLY from the transcript that shows why, and who said it as "Name, role" (for example "Lucy, ecommerce director" or "Sam, AE"). Pick the quote that best proves it, never the AE's guess unless the insight is about that guess. Never claim someone reacted to something they never saw or heard.
-  - If the interview never got to the topic, set covered to false. If the AE didn't know, the action can be to find out (for example "Ask the customer what the competitor showed them").
+  - Pick the quote that best proves it, never the AE's guess unless the insight is about that guess. Never say someone reacted to something they never saw or heard.
+  - If the interview never got to the topic, set covered to false. If the AE didn't know, the action can be to find out.
 
 Reason tags:
 ${tagsBlock()}
+
+Our current messaging (ids for the "line" field):
+${libraryBlock()}
 
 Hard rules:
 - Never invent names, numbers, quotes or outcomes. Never state a competitor's claim as fact unless the customer said it.
@@ -394,7 +415,7 @@ JSON safety: inside any string value, write double quotation marks as single quo
 
 Reply with ONLY this JSON:
 {"account":"","ae":null,"acv":null,"outcome":"Won|Lost|No decision","competitor":null,"tag":"","reason":"",
- "insights":{${INSIGHT_KEYS.map((k) => `"${k}":{"covered":true,"action":"","quote":"","who":""}`).join(",")}}}`;
+ "insights":{${INSIGHT_KEYS.map((k) => `"${k}":{"covered":true,"action":"","line":null,"why":"","quote":"","who":""}`).join(",")}}}`;
   }
 
   function strategistPrompt({ analysis, ledger }) {
@@ -506,7 +527,9 @@ Reply with ONLY this JSON:
       const text = f.action || f.finding;
       const ok = f.covered !== false && text && f.quote && verbatim(f.quote);
       if (f.covered !== false && text && !ok) dropped.push(Object.assign({ key: k }, f));
-      findings.push(ok ? { key: k, label, covered: true, finding: uq(String(text), k), quote: String(f.quote), who: f.who || null } : { key: k, label, covered: false });
+      const lib = MESSAGING.find((m) => m.id === f.line);
+      findings.push(ok ? { key: k, label, covered: true, finding: uq(String(text), k), line: lib ? { id: lib.id, text: lib.line } : null,
+        why: f.why ? uq(String(f.why), k) : null, quote: String(f.quote), who: f.who || null } : { key: k, label, covered: false });
     }
     const header = {
       deal: (r.account && String(r.account).replace(/\s*\((?:company|customer)[^)]*\)\s*$/i, "").trim()) || "Unnamed deal",
@@ -681,6 +704,7 @@ Reply with ONLY this JSON:
     return Object.assign({
       deal: h.deal || "", acv: h.acv ? h.acv.amount : null, outcome: h.outcome || null, tag: h.tag || null,
       competitor: h.competitor || null, reason: String(h.reason || "").slice(0, 900),
+      lines: [...new Set((report.findings || []).map((f) => f.line && f.line.id).filter(Boolean))], // our messaging lines this deal challenges
       version: report.version || PIPELINE_VERSION,
     }, extra || {});
   }

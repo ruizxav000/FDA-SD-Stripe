@@ -1,0 +1,92 @@
+{
+ "version": "2026-11-14.6",
+ "header": {
+  "deal": "Tallowfield Supply",
+  "ae": "Dana",
+  "acv": {
+   "amount": 140000,
+   "quote": "About a hundred and forty K a year."
+  },
+  "outcome": "Won",
+  "competitor": "Fiserv (incumbent, through their bank)",
+  "tag": "Value proof",
+  "reason": "Won once Wen used Tallowfield's own statements to put a yearly cost on manual deposit matching, and Ines accepted it. Dana's early portal pitch had nearly stalled the deal."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Aim messaging at new CFOs stuck with a slow month-end close.",
+   "why": "Ines's first close took nine days, partly from hand-matching deposits. The portal Dana pitched was just the excuse.",
+   "quote": "her first month-end close took nine days",
+   "who": "Dana, rep"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Put the finance payoff on page one for the CFO.",
+   "why": "Paul forwarded a portal-focused proposal to Ines. She read the first page and said it wasn't her problem.",
+   "quote": "I can recommend, she decides.",
+   "who": "Paul, IT director"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Offer a named contact where the bank only talks about rates.",
+   "why": "Ines's bank offered to look at rates, then she asked us for a named contact. Dana never saw Fiserv's pitch.",
+   "quote": "I didn't ask about my rates.",
+   "who": "Ines, CFO"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Cut the global infrastructure opening and lead with payout reconciliation.",
+   "why": "The standard deck got silence. Ines stopped Wen mid-demo to see the reconciliation again.",
+   "quote": "Ines actually stopped him and said, 'go back.'",
+   "who": "Dana, rep"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a distributor reference customers can call.",
+   "why": "Ines asked twice to talk to another distributor. Dana only had a retail case study to send.",
+   "quote": "this is a company that sells sweaters.",
+   "who": "Ines, CFO"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'deposits' and 'where my money is', not 'payments'.",
+   "why": "Ines never said payments or infrastructure. She called month-end a week of archaeology.",
+   "quote": "I just want to know where my money is.",
+   "who": "Ines, CFO"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 54592,
+  "cost": 0.199926,
+  "stage_ms": {
+   "reader": 35300,
+   "analyst": 19292
+  },
+  "stage_cost": {
+   "reader": 0.07501,
+   "analyst": 0.124916
+  }
+ }
+}

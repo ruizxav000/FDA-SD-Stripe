@@ -1,0 +1,92 @@
+{
+ "version": "2026-11-14.6",
+ "header": {
+  "deal": "Tixhaven",
+  "ae": "Jordan",
+  "acv": {
+   "amount": 250000,
+   "quote": "Two hundred and fifty K ACV."
+  },
+  "outcome": "Lost",
+  "competitor": null,
+  "tag": "Support and service",
+  "reason": "Halima, the COO, picked the rival because it showed named people on call for on-sales. Our tiered support plans felt like 'a queue with a faster timer.' Jordan blames nothing but believes our platform was better."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Aim our message at the moment payments fail mid on-sale.",
+   "why": "Payments failed four minutes into a Friday on-sale, and the old provider only replied after it ended.",
+   "quote": "They got a reply after the on-sale was over.",
+   "who": "Jordan, rep"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Show the COO who picks up, not just how the tech performs.",
+   "why": "Halima made the call alone in one meeting, and Ben, who wanted us, lost.",
+   "quote": "it was Halima's call and she made it in one meeting.",
+   "who": "Ben, customer CTO"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Bring the real account team, by name, into the early meetings.",
+   "why": "Ben said the rival brought its own engineer and account lead. Jordan's 'over-promised' doubt is only his guess.",
+   "quote": "A named solutions engineer and an account lead, in the room.",
+   "who": "Jordan, rep"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Replace the support tiers pitch with named people for on-sales.",
+   "why": "Halima asked 'who's my person' and Jordan walked her through tiers and response times.",
+   "quote": "so it's a queue with a faster timer.",
+   "who": "Halima, COO"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Build a written plan for what we do on on-sale morning.",
+   "why": "Halima asked to see it on paper, and Jordan had nothing, though he could have built one.",
+   "quote": "She wanted to see, on paper, what we do on an on-sale morning.",
+   "who": "Jordan, rep"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'a name, not a queue' instead of 'support plans'.",
+   "why": "Halima talked about who picks up when things break, and nobody said 'support'.",
+   "quote": "I don't buy uptime, I buy what happens when it's down.",
+   "who": "Halima, COO"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 73919,
+  "cost": 0.19595510000000002,
+  "stage_ms": {
+   "reader": 53891,
+   "analyst": 20028
+  },
+  "stage_cost": {
+   "reader": 0.08193910000000001,
+   "analyst": 0.114016
+  }
+ }
+}

@@ -10,7 +10,7 @@ Each review has only:
 | **ACV** | Annual contract value, only if someone states it in the interview (the words are checked against the transcript). |
 | **Outcome** | Won, Lost or No decision. |
 | **Reason** | One reason tag (list below), plus one or two plain sentences on why the deal was really won or lost. If the AE's explanation differs from the evidence, it says so. |
-| **Insights** | One action for each insight area the team asked for: what started it, who decided, the competitor, our message, missing proof, and the customer's own words. Each is one sentence starting with a verb (a change to messaging, positioning, proof or what reps say), with the supporting quote underneath. An area the interview never reached shows as not covered. |
+| **Insights** | One messaging change for each area the team asked about: what started it, who decided, the competitor, our message, missing proof, and the customer's own words. Each is a short verb-first action (what to lead with, say, stop saying, or which proof point to add), the current messaging line it changes when there is one (from `messaging-baseline.md`), one plain sentence on why, and a short quote. |
 
 Workflow: Sonnet reads the interview into an evidence list, Opus writes the report, code checks every quote and the ACV. No comments, flags or editing on the page.
 
