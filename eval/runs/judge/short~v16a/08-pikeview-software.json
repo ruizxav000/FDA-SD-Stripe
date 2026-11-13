@@ -1,6 +1,6 @@
 {
  "ok": true,
- "text": "{\"account\":1,\"acv\":1,\"outcome\":1,\"tag\":2,\"reason\":2,\"insights\":{\"trigger\":0.5,\"decider\":0.5,\"competitor\":0.5,\"message\":1,\"proof\":0.5,\"words\":1},\"repetitive\":true,\"readable\":2,\"messaging\":2,\"fails\":[],\"notes\":\"It got the header right, cut the revenue framing tied to B1, used 'tax on the roadmap', and challenged Renee's timing view by naming the missing payback number as the real cause. It never flags the lack of a compelling event or the payback request a month before the freeze as the warning sign, and it misses the staged-migration reference; the decider, competitor and proof findings all repeat the same cost-of-doing-nothing point, and the proof finding's 'one customer's own' example blurs Owen's need for Pikeview's own number.\"}",
+ "text": "{\"account\":1,\"acv\":1,\"outcome\":1,\"tag\":2,\"reason\":2,\"insights\":{\"trigger\":1,\"decider\":0.5,\"competitor\":1,\"message\":1,\"proof\":1,\"words\":1},\"repetitive\":true,\"readable\":2,\"messaging\":2,\"fails\":[],\"notes\":\"The review gets the header right and challenges Renee's 'timing' view in the reason. It cuts 'grow revenue' from B1 and uses 'a tax on the roadmap'. The decider action asks for urgency in general rather than the cost of doing nothing, the competitor and proof findings overlap on payback, and it misses the lapsed-card (B2) and staged-migration proof.\"}",
  "data": {
   "account": 1,
   "acv": 1,
@@ -8,22 +8,22 @@
   "tag": 2,
   "reason": 2,
   "insights": {
-   "trigger": 0.5,
+   "trigger": 1,
    "decider": 0.5,
-   "competitor": 0.5,
+   "competitor": 1,
    "message": 1,
-   "proof": 0.5,
+   "proof": 1,
    "words": 1
   },
   "repetitive": true,
   "readable": 2,
   "messaging": 2,
   "fails": [],
-  "notes": "It got the header right, cut the revenue framing tied to B1, used 'tax on the roadmap', and challenged Renee's timing view by naming the missing payback number as the real cause. It never flags the lack of a compelling event or the payback request a month before the freeze as the warning sign, and it misses the staged-migration reference; the decider, competitor and proof findings all repeat the same cost-of-doing-nothing point, and the proof finding's 'one customer's own' example blurs Owen's need for Pikeview's own number."
+  "notes": "The review gets the header right and challenges Renee's 'timing' view in the reason. It cuts 'grow revenue' from B1 and uses 'a tax on the roadmap'. The decider action asks for urgency in general rather than the cost of doing nothing, the competitor and proof findings overlap on payback, and it misses the lapsed-card (B2) and staged-migration proof."
  },
- "ms": 20145,
- "cost": 0.085728,
- "in_tokens": 6392,
- "out_tokens": 1730,
+ "ms": 18841,
+ "cost": 0.07936399999999999,
+ "in_tokens": 6254,
+ "out_tokens": 1467,
  "model": "claude-opus-5-5"
 }

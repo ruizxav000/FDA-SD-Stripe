@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "text": "```json\n{\"account\":1,\"acv\":1,\"outcome\":1,\"tag\":2,\"reason\":2,\"insights\":{\"trigger\":1,\"decider\":1,\"competitor\":0.5,\"message\":0.5,\"proof\":1,\"words\":0},\"repetitive\":false,\"readable\":2,\"messaging\":1,\"fails\":[\"Customer-language section is marked covered:true and reads as if the question had been answered; the rep deferred it to Slack, and 'members who never meant to leave' comes from the trigger answer without being labeled that way\"],\"notes\":\"Strong header: correct ACV, Value proof tag, a reason that captures the Maya/Greg contradiction and the memberships-only scope, plus sharp decider and proof actions (though the outcome field itself is a bare 'Won', with the scope only in the reason). It treats customer language as answered, reads the competitor's move only as contract lock-in (missing the in-store hardware battleground, and the action is a sales tactic), and replaces 'unified commerce' with reader talk instead of simply dropping it for this buyer.\"}\n```",
+ "data": {
+  "account": 1,
+  "acv": 1,
+  "outcome": 1,
+  "tag": 2,
+  "reason": 2,
+  "insights": {
+   "trigger": 1,
+   "decider": 1,
+   "competitor": 0.5,
+   "message": 0.5,
+   "proof": 1,
+   "words": 0
+  },
+  "repetitive": false,
+  "readable": 2,
+  "messaging": 1,
+  "fails": [
+   "Customer-language section is marked covered:true and reads as if the question had been answered; the rep deferred it to Slack, and 'members who never meant to leave' comes from the trigger answer without being labeled that way"
+  ],
+  "notes": "Strong header: correct ACV, Value proof tag, a reason that captures the Maya/Greg contradiction and the memberships-only scope, plus sharp decider and proof actions (though the outcome field itself is a bare 'Won', with the scope only in the reason). It treats customer language as answered, reads the competitor's move only as contract lock-in (missing the in-store hardware battleground, and the action is a sales tactic), and replaces 'unified commerce' with reader talk instead of simply dropping it for this buyer."
+ },
+ "ms": 18599,
+ "cost": 0.086248,
+ "in_tokens": 6807,
+ "out_tokens": 1590,
+ "model": "claude-opus-5-5"
+}

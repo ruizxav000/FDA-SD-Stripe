@@ -91,6 +91,10 @@ Each of the six areas now asks for one action for the product marketing team (a 
 - **Round 15 (plain language):** each insight became a short action (12 words max), a one-sentence why, and a short quote, with no sales jargon. Actions went from 23 to 11 words on average, the reason line from 62 to 32 words, and readability scored 2.0/2.
 - **Round 16 (messaging focus):** the messaging library became the real baseline in `messaging-baseline.md` (Stripe's public lines), and every insight became a messaging change (what to lead with, say, stop saying, or which proof point to add), tied to the current line it changes where one exists (27 of 48). Scores: 11.9/13, messaging focus 1.6/2, readability 1.9/2. The answer keys were written before the baseline existed and include some sales-process directions, which costs a little on the insight score.
 
+## Round 17: answer keys rebuilt for the current report
+
+The answer keys were rewritten to match what the page shows: header (account, ACV, outcome, tag, real reason) plus one expected messaging change per insight area, tied to lines in `messaging-baseline.md`. Because a report gives one action per area and a key often lists several acceptable changes, matching any one counts. The same round-16 reports scored 11.6/13 if every listed change was required and 12.4/13 under the any-one rule, so about 0.8 of the gain is the fairer rule. Round 17 also told the review to say when an answer came from elsewhere in the call because the question was skipped: **12.8/13, header 7/7 on every deal, no invented content flagged.**
+
 ## Why several steps instead of one prompt
 
 The single-prompt Sonnet baseline is strong: 21.0, no invented content, half the time, a quarter of the cost. On score alone the multi-step design wins by about 1 point, which is close to the judge's own noise: the same setup scored anywhere from 18 to 24 on one deal across runs. The steps are kept for reasons the score doesn't capture:

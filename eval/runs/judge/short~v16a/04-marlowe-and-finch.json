@@ -1,6 +1,6 @@
 {
  "ok": true,
- "text": "```json\n{\"account\":1,\"acv\":1,\"outcome\":1,\"tag\":2,\"reason\":2,\"insights\":{\"trigger\":1,\"decider\":0.5,\"competitor\":1,\"message\":1,\"proof\":0.5,\"words\":1},\"repetitive\":true,\"readable\":1,\"messaging\":2,\"fails\":[],\"notes\":\"It got the header right, put the Raj-vs-Angela contradiction in the reason, and tied 'that's a diagram' to S1. It reported 11 of 14 questions as fact and swapped 'point of sale' for 'the tills'. But the trigger and message findings both say to show a till return, and neither says to show it live rather than describe it. The proof action asks for a retailer story instead of a reference they can call, the decider finding never says to sell to the COO who owned stores, and the phrasing in the message and decider items is a bit awkward.\"}\n```",
+ "text": "{\"account\":1,\"acv\":1,\"outcome\":1,\"tag\":2,\"reason\":2,\"insights\":{\"trigger\":1,\"decider\":1,\"competitor\":1,\"message\":1,\"proof\":1,\"words\":1},\"repetitive\":true,\"readable\":1,\"messaging\":2,\"fails\":[],\"notes\":\"It correctly names Angela (COO) as the real decider over Tom's framing of Raj. Each area points the right way: till return, store rollout story, replacing the 'line has disappeared' claim, a callable retailer with a rollout plan, and 'the tills'. It misses the single loyalty profile (S3) and keeping the online checkout message. The decider and competitor findings overlap on till outages and installs, and a couple of actions read awkwardly ('Replace the line has disappeared with...', 'not only payments').\"}",
  "data": {
   "account": 1,
   "acv": 1,
@@ -9,21 +9,21 @@
   "reason": 2,
   "insights": {
    "trigger": 1,
-   "decider": 0.5,
+   "decider": 1,
    "competitor": 1,
    "message": 1,
-   "proof": 0.5,
+   "proof": 1,
    "words": 1
   },
   "repetitive": true,
   "readable": 1,
   "messaging": 2,
   "fails": [],
-  "notes": "It got the header right, put the Raj-vs-Angela contradiction in the reason, and tied 'that's a diagram' to S1. It reported 11 of 14 questions as fact and swapped 'point of sale' for 'the tills'. But the trigger and message findings both say to show a till return, and neither says to show it live rather than describe it. The proof action asks for a retailer story instead of a reference they can call, the decider finding never says to sell to the COO who owned stores, and the phrasing in the message and decider items is a bit awkward."
+  "notes": "It correctly names Angela (COO) as the real decider over Tom's framing of Raj. Each area points the right way: till return, store rollout story, replacing the 'line has disappeared' claim, a callable retailer with a rollout plan, and 'the tills'. It misses the single loyalty profile (S3) and keeping the online checkout message. The decider and competitor findings overlap on till outages and installs, and a couple of actions read awkwardly ('Replace the line has disappeared with...', 'not only payments')."
  },
- "ms": 18744,
- "cost": 0.08462,
- "in_tokens": 6511,
- "out_tokens": 1627,
+ "ms": 16233,
+ "cost": 0.076808,
+ "in_tokens": 6262,
+ "out_tokens": 1336,
  "model": "claude-opus-5-5"
 }

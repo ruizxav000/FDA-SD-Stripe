@@ -6,7 +6,7 @@
 (function (root) {
   "use strict";
 
-  const PIPELINE_VERSION = "2026-11-14.7";
+  const PIPELINE_VERSION = "2026-11-14.8";
 
   // ── Which model runs each stage (set from the model comparison; see eval/REPORT.md)
   const STAGE_MODELS = {
@@ -390,6 +390,7 @@ ${INSIGHTS.map(([k, n, d]) => `  - ${k} (${n}): ${d}`).join("\n")}
   - Each insight is different from the others and from the reason.
   - Pick the quote that best proves it, never the AE's guess unless the insight is about that guess. Never say someone reacted to something they never saw or heard.
   - If the interview never got to the topic, set covered to false. If the AE didn't know, the action can be to find out.
+  - If the interviewer's question for an area was skipped or put off, but the answer came up elsewhere in the call, you may use it: say so in the why ("from earlier in the call").
 
 Reason tags:
 ${tagsBlock()}

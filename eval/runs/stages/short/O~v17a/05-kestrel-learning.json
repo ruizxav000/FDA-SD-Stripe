@@ -1,0 +1,71 @@
+{
+ "ok": true,
+ "text": "{\"account\":\"Kestrel Learning\",\"ae\":\"Elena\",\"acv\":{\"amount\":320000,\"quote\":\"The account was worth about three hundred and twenty K a year.\"},\"outcome\":\"Lost\",\"competitor\":\"Adyen\",\"tag\":\"Approval rates\",\"reason\":\"The US stayed, but the international half went to Adyen, whose test gave Stefan results by country. We answered with averages. Our analysis found fixable issues but arrived after the test ended.\",\n \"insights\":{\"trigger\":{\"covered\":true,\"action\":\"Lead with each customer's declines by country, not company-wide results.\",\"line\":null,\"why\":\"Stefan, the new head of payments, started by pulling declines by country and saw weak international markets.\",\"quote\":\"the first thing he did was pull declines by country\",\"who\":\"Elena, account executive\"},\"decider\":{\"covered\":true,\"action\":\"Show the customer's own approval gap in a number the CFO accepts.\",\"line\":null,\"why\":\"Stefan recommended the switch and the CFO approved it. Stefan said an average would not convince his CFO.\",\"quote\":\"I can't take an average to my CFO.\",\"who\":\"Stefan, head of payments\"},\"competitor\":{\"covered\":true,\"action\":\"Answer 'local acquiring' directly with our approvals by country.\",\"line\":null,\"why\":\"After Adyen tested his international traffic, Stefan asked our rates by country, card type and issuer. Adyen's results were never shared.\",\"quote\":\"What's our approval rate in this country, on this card type, by issuer.\",\"who\":\"Elena, account executive\"},\"message\":{\"covered\":true,\"action\":\"Replace the average uplift claim with the customer's own approval numbers.\",\"line\":\"A1\",\"why\":\"Stefan brushed off the Authorization Boost average, and the uplift number got only silence.\",\"quote\":\"that's an average. What's mine?\",\"who\":\"Stefan, head of payments\"},\"proof\":{\"covered\":true,\"action\":\"Promise a market-by-market view of their own approvals, with reasons.\",\"line\":null,\"why\":\"Stefan called our analysis the most useful thing we sent, but it came three weeks late.\",\"quote\":\"A market-by-market view of their own approval rates, with reasons.\",\"who\":\"Elena, account executive\"},\"words\":{\"covered\":true,\"action\":\"Say 'approvals' and 'money left on the table', not 'authorization' or 'uplift'.\",\"line\":\"A1\",\"why\":\"Stefan's headline for the problem was money left on the table, and he says approvals, not authorization.\",\"quote\":\"Money left on the table.\",\"who\":\"Stefan, head of payments\"}}}",
+ "data": {
+  "account": "Kestrel Learning",
+  "ae": "Elena",
+  "acv": {
+   "amount": 320000,
+   "quote": "The account was worth about three hundred and twenty K a year."
+  },
+  "outcome": "Lost",
+  "competitor": "Adyen",
+  "tag": "Approval rates",
+  "reason": "The US stayed, but the international half went to Adyen, whose test gave Stefan results by country. We answered with averages. Our analysis found fixable issues but arrived after the test ended.",
+  "insights": {
+   "trigger": {
+    "covered": true,
+    "action": "Lead with each customer's declines by country, not company-wide results.",
+    "line": null,
+    "why": "Stefan, the new head of payments, started by pulling declines by country and saw weak international markets.",
+    "quote": "the first thing he did was pull declines by country",
+    "who": "Elena, account executive"
+   },
+   "decider": {
+    "covered": true,
+    "action": "Show the customer's own approval gap in a number the CFO accepts.",
+    "line": null,
+    "why": "Stefan recommended the switch and the CFO approved it. Stefan said an average would not convince his CFO.",
+    "quote": "I can't take an average to my CFO.",
+    "who": "Stefan, head of payments"
+   },
+   "competitor": {
+    "covered": true,
+    "action": "Answer 'local acquiring' directly with our approvals by country.",
+    "line": null,
+    "why": "After Adyen tested his international traffic, Stefan asked our rates by country, card type and issuer. Adyen's results were never shared.",
+    "quote": "What's our approval rate in this country, on this card type, by issuer.",
+    "who": "Elena, account executive"
+   },
+   "message": {
+    "covered": true,
+    "action": "Replace the average uplift claim with the customer's own approval numbers.",
+    "line": "A1",
+    "why": "Stefan brushed off the Authorization Boost average, and the uplift number got only silence.",
+    "quote": "that's an average. What's mine?",
+    "who": "Stefan, head of payments"
+   },
+   "proof": {
+    "covered": true,
+    "action": "Promise a market-by-market view of their own approvals, with reasons.",
+    "line": null,
+    "why": "Stefan called our analysis the most useful thing we sent, but it came three weeks late.",
+    "quote": "A market-by-market view of their own approval rates, with reasons.",
+    "who": "Elena, account executive"
+   },
+   "words": {
+    "covered": true,
+    "action": "Say 'approvals' and 'money left on the table', not 'authorization' or 'uplift'.",
+    "line": "A1",
+    "why": "Stefan's headline for the problem was money left on the table, and he says approvals, not authorization.",
+    "quote": "Money left on the table.",
+    "who": "Stefan, head of payments"
+   }
+  }
+ },
+ "ms": 35838,
+ "cost": 0.154492,
+ "in_tokens": 10865,
+ "out_tokens": 3379,
+ "model": "claude-opus-5-5"
+}

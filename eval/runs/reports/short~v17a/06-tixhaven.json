@@ -1,0 +1,107 @@
+{
+ "version": "2026-11-14.8",
+ "header": {
+  "deal": "Tixhaven",
+  "ae": "Jordan",
+  "acv": {
+   "amount": 250000,
+   "quote": "Two hundred and fifty K ACV."
+  },
+  "outcome": "Lost",
+  "competitor": null,
+  "tag": "Support and service",
+  "reason": "Halima, the COO, picked the rival because it named who would pick up on on-sale morning. Our support tiers sounded like 'a queue with a faster timer.' Jordan thought the load test won it."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Speak to the moment payments fail and nobody answers.",
+   "line": null,
+   "why": "Payments failed four minutes into an arena on-sale. The old provider's ticket form replied after it ended.",
+   "quote": "Their provider's support was a ticket form.",
+   "who": "Jordan, account executive"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Tell the COO exactly who answers when payments break.",
+   "line": {
+    "id": "P2",
+    "text": "Premium support: a dedicated support manager who has ongoing context about your business"
+   },
+   "why": "Halima, the COO, decided in one meeting. Ben, the CTO, wanted us but lost.",
+   "quote": "it was Halima's call and she made it in one meeting.",
+   "who": "Ben, CTO"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Answer 'who's my person' with named people, not support tiers.",
+   "line": {
+    "id": "P3",
+    "text": "Enterprise support: a technical account manager embedded in your team, with a 15-minute response for critical issues"
+   },
+   "why": "Per Ben, the rival brought its named account team. Then Tixhaven's questions turned from throughput to names.",
+   "quote": "Before that meeting it was throughput, queueing, bots. After, it was names.",
+   "who": "Jordan, account executive"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Stop pitching support tiers and response times to operations leaders.",
+   "line": {
+    "id": "P1",
+    "text": "All Stripe customers receive 24x7 phone, email, and chat help"
+   },
+   "why": "Jordan's walk through support tiers lost Halima. The load test Ben showed her only got 'good.'",
+   "quote": "so it's a queue with a faster timer.",
+   "who": "Halima, COO"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Show on paper what we do on an on-sale morning.",
+   "line": null,
+   "why": "Halima asked who's watching and who she calls at minute four. We had only logos, no plan.",
+   "quote": "She wanted to see, on paper, what we do on an on-sale morning.",
+   "who": "Jordan, account executive"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Swap 'uptime' and 'support' for 'what happens when it's down'.",
+   "line": null,
+   "why": "Nobody at Tixhaven said 'support'. Halima said she pays for what happens during an outage.",
+   "quote": "I don't buy uptime, I buy what happens when it's down.",
+   "who": "Halima, COO"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 81631,
+  "cost": 0.22198710000000002,
+  "stage_ms": {
+   "reader": 53891,
+   "analyst": 27740
+  },
+  "stage_cost": {
+   "reader": 0.08193910000000001,
+   "analyst": 0.140048
+  }
+ }
+}

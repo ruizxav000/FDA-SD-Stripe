@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "text": "{\"account\":1,\"acv\":1,\"outcome\":1,\"tag\":2,\"reason\":2,\"insights\":{\"trigger\":1,\"decider\":0.5,\"competitor\":1,\"message\":0.5,\"proof\":0.5,\"words\":1},\"repetitive\":true,\"readable\":2,\"messaging\":2,\"fails\":[\"Competitor 'why' says 'Elena had no answer' to the per-country questions, but the transcript shows she answered with the Authorization Boost deck and later sent a country analysis.\"],\"notes\":\"It got the header right, including that only the international half was lost, and it has the core reason: Adyen tested his own traffic by country while we offered averages and sent our analysis late. It aims the decider change at the CFO instead of arming Stefan, and the message change only says stop the average without saying to replace it. It also misses the named-person proof (P2/P3) and the A3 tie, and the decider and message findings overlap on 'not an average'.\"}",
+ "data": {
+  "account": 1,
+  "acv": 1,
+  "outcome": 1,
+  "tag": 2,
+  "reason": 2,
+  "insights": {
+   "trigger": 1,
+   "decider": 0.5,
+   "competitor": 1,
+   "message": 0.5,
+   "proof": 0.5,
+   "words": 1
+  },
+  "repetitive": true,
+  "readable": 2,
+  "messaging": 2,
+  "fails": [
+   "Competitor 'why' says 'Elena had no answer' to the per-country questions, but the transcript shows she answered with the Authorization Boost deck and later sent a country analysis."
+  ],
+  "notes": "It got the header right, including that only the international half was lost, and it has the core reason: Adyen tested his own traffic by country while we offered averages and sent our analysis late. It aims the decider change at the CFO instead of arming Stefan, and the message change only says stop the average without saying to replace it. It also misses the named-person proof (P2/P3) and the A3 tie, and the decider and message findings overlap on 'not an average'."
+ },
+ "ms": 21777,
+ "cost": 0.085216,
+ "in_tokens": 6168,
+ "out_tokens": 1794,
+ "model": "claude-opus-5-5"
+}

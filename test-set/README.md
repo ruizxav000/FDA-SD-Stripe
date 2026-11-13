@@ -42,28 +42,27 @@ When the synthesizer runs a test, the **deal name** is entered the way a user wo
 
 ## How to score a run
 
-**Header:** outcome, scope note, competitor, incumbent and tag. An acceptable alternative tag gets half credit.
+Each key matches the report the page shows: a header, then one expected **messaging change** for each of the six insight areas, with the line from `messaging-baseline.md` it should touch (ids below).
 
-**Each of the seven sections:**
-
-| Score | Meaning |
+| Item | Points |
 |---|---|
-| **2: Correct** | Cites the key evidence with the right label (quote / fact / opinion), and reaches the key insight |
-| **1: Partial** | Right evidence but a shallow insight, or a wrong label |
-| **0: Wrong or missing** | Wrong conclusion, or "not covered" when the transcript had the answer |
-| **Fail** | Invented content: a quote not in the transcript, a figure or name that isn't there, or an answer where the key says *Not covered* |
+| Account | 1 |
+| ACV | 1 |
+| Outcome | 1 |
+| Reason tag (the key's tag 2, its acceptable alternative 1) | 2 |
+| Real reason (not the AE's framing where they differ) | 2 |
+| Six insights: 1 each when the messaging change points the same way as one of the key's expected changes for that area (the key often lists several; any one counts), 0.5 when partly | 6 |
+| **Total** | **13** |
 
-**Close:** does it list the skipped or dodged questions the key names, and is the rep takeaway on the key's theme?
+Also checked: **must catch** items, **fails if** conditions, whether every insight is a messaging change (not sales process), readability for someone skimming the feed, and whether two insights repeat each other.
 
-**Must catch:** pass/fail items in each key.
-
-**Messaging changes:** each one must point to evidence in a section and quote a real current line. Until the messaging ingredients arrive, the keys give only the **direction** each change should take.
+**Messaging line ids** (`messaging-baseline.md`): H1-H3 company headline · A1-A5 approvals · S1-S4 stores and online · F1-F3 finance · B1-B2 billing · C1-C2 marketplaces · P1-P3 support. The full list is `MESSAGING` in `app/core.js`.
 
 **Suggested bar before piloting with the team:**
-- No **Fail** scores on any scenario.
+- No **fails if** triggered and no invented content.
 - All **must catch** items pass.
-- An average of **1.6 or higher out of 2** across the 56 section scores.
-- Each transcript run **3 times** gives the same outcome, tag and decision maker.
+- 11 or more out of 13 on average.
+- Repeat runs give the same outcome and reason tag.
 
 ## Limits
 

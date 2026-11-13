@@ -1,0 +1,113 @@
+{
+ "version": "2026-11-14.8",
+ "header": {
+  "deal": "Corelane Fitness",
+  "ae": null,
+  "acv": {
+   "amount": 210000,
+   "quote": "Two hundred and ten K ACV."
+  },
+  "outcome": "Won",
+  "competitor": "Global Payments",
+  "tag": "Value proof",
+  "reason": "Won membership billing only, front desks stay with Global. Greg, the controller, signed after seeing which of their own failed renewals could be recovered, not just Maya's choice, as the rep first said."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with failed cards hiding inside the churn numbers boards see.",
+   "line": {
+    "id": "B2",
+    "text": "AI-powered Smart Retries, card account updater, and cancellation surveys work together to keep revenue flowing"
+   },
+   "why": "Board-reported churn rose two quarters, and splitting it showed failed cards were a bigger share than expected.",
+   "quote": "The second bucket was a lot bigger than anyone expected.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Show the controller recovered revenue in their own renewal data, not averages.",
+   "line": {
+    "id": "A4",
+    "text": "Adaptive Acceptance recovered a record $6 billion in 2024"
+   },
+   "why": "Greg, the controller, sat on the contract two weeks, then signed four days after seeing their own failed renewals.",
+   "quote": "Maya chose us. Greg decided whether anybody got chosen.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Say plainly what leaving the current processor costs, including contract exit fees.",
+   "line": null,
+   "why": "After Global Payments' offer, as Maya relayed it, questions turned to contract terms and Greg asked about termination fees twice.",
+   "quote": "Greg asked about termination fees twice.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Cut the global growth headline for a mostly US customer.",
+   "line": {
+    "id": "H2",
+    "text": "Financial infrastructure for global growth"
+   },
+   "why": "The rep opened with the global slide for a business with US studios and a few in Canada, and got silence.",
+   "quote": "Silence. I opened with the global slide.",
+   "who": "Speaker 2, rep"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add proof our reader works inside studio software on one screen.",
+   "line": {
+    "id": "S2",
+    "text": "Stripe Terminal is a point of sale system that unifies your online and offline channels"
+   },
+   "why": "Maya asked to see check-in and a sale on one screen, we couldn't show it live, and front desks stayed with Global.",
+   "quote": "the studio managers will revolt.",
+   "who": "Maya, head of digital"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say 'members who never meant to leave' instead of failed payment recovery.",
+   "line": {
+    "id": "B2",
+    "text": "AI-powered Smart Retries, card account updater, and cancellation surveys work together to keep revenue flowing"
+   },
+   "why": "Maya's own phrase from earlier in the call. The wording question itself was put off to Slack.",
+   "quote": "members who never meant to leave.",
+   "who": "Maya, head of digital"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 75106,
+  "cost": 0.21547550000000004,
+  "stage_ms": {
+   "reader": 46056,
+   "analyst": 29050
+  },
+  "stage_cost": {
+   "reader": 0.07428350000000002,
+   "analyst": 0.141192
+  }
+ }
+}

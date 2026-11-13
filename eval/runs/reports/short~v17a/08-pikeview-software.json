@@ -1,0 +1,107 @@
+{
+ "version": "2026-11-14.8",
+ "header": {
+  "deal": "Pikeview Software",
+  "ae": "Renee",
+  "acv": {
+   "amount": 75000,
+   "quote": "It would have been about seventy-five K a year."
+  },
+  "outcome": "No decision",
+  "competitor": "None (status quo)",
+  "tag": "No decision",
+  "reason": "Diane, the CFO, froze all new vendor projects after a missed Q3. Nobody showed her what homegrown billing cost, so it looked 'nice to have'. Renee calls it timing alone."
+ },
+ "findings": [
+  {
+   "key": "trigger",
+   "label": "What started it",
+   "covered": true,
+   "finding": "Lead with how long pricing changes take, not billing features.",
+   "line": {
+    "id": "B1",
+    "text": "Monetize faster with Stripe Billing. Manage pricing, reduce churn, and grow revenue on one platform"
+   },
+   "why": "Owen reached out because every pricing change on their homegrown billing took a quarter.",
+   "quote": "every pricing change takes them a quarter",
+   "who": "Renee, account executive"
+  },
+  {
+   "key": "decider",
+   "label": "Who decided",
+   "covered": true,
+   "finding": "Tell finance what keeping homegrown billing costs them each year.",
+   "line": null,
+   "why": "Diane, the CFO, froze the deal, and Renee never spoke to her.",
+   "quote": "Owen told me. I never spoke to her.",
+   "who": "Renee, account executive"
+  },
+  {
+   "key": "competitor",
+   "label": "The competitor",
+   "covered": true,
+   "finding": "Name the cost of doing nothing, since no rival vendor was involved.",
+   "line": null,
+   "why": "Renee says Owen looked at no one else, but late on his questions turned to payback.",
+   "quote": "do you have something that shows payback?",
+   "who": "Owen, VP of Product"
+  },
+  {
+   "key": "message",
+   "label": "Our message",
+   "covered": true,
+   "finding": "Change billing pitch from growing revenue to freeing roadmap time.",
+   "line": {
+    "id": "B1",
+    "text": "Monetize faster with Stripe Billing. Manage pricing, reduce churn, and grow revenue on one platform"
+   },
+   "why": "Owen loved the demo but pushed back when Renee said billing would grow revenue.",
+   "quote": "we're not trying to grow revenue with billing",
+   "who": "Owen, VP of Product"
+  },
+  {
+   "key": "proof",
+   "label": "Missing proof",
+   "covered": true,
+   "finding": "Add a cost model: engineering time, billing errors, failed-card lapses.",
+   "line": null,
+   "why": "Renee sent the general ROI deck, and Owen said it would not get past Diane.",
+   "quote": "I can't get this past Diane without a number that's ours.",
+   "who": "Owen, VP of Product"
+  },
+  {
+   "key": "words",
+   "label": "Their words",
+   "covered": true,
+   "finding": "Say billing stops being 'a tax on the roadmap'.",
+   "line": {
+    "id": "H1",
+    "text": "Financial infrastructure to grow your revenue"
+   },
+   "why": "This was Owen's own phrase for what homegrown billing does to his product team.",
+   "quote": "a tax on the roadmap",
+   "who": "Owen, VP of Product"
+  }
+ ],
+ "checks": {
+  "findings_dropped": [],
+  "acv_rejected": null,
+  "prose_unquoted": []
+ },
+ "meta": {
+  "models": {
+   "reader": "claude-sonnet-5-5",
+   "analyst": "claude-opus-5-5"
+  },
+  "ms": 56517,
+  "cost": 0.1930809,
+  "stage_ms": {
+   "reader": 32097,
+   "analyst": 24420
+  },
+  "stage_cost": {
+   "reader": 0.055552899999999995,
+   "analyst": 0.137528
+  }
+ }
+}
